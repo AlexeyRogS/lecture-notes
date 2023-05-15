@@ -1,0 +1,99 @@
+\documentclass[../real_analysis.tex]{subfiles}
+
+\begin{document}
+
+    \section{Introduction to Sets}
+        \paragraph{}
+        In modern mathematics, set theory is important as a foundation from which all of mathematics can be derived. All of the mathematical objects we deal with in analysis will be defined in terms of sets.
+        \begin{definition}
+            A \textbf{set} is an \textit{unordered} collection of objects. If an object $x$ is contained in a set $A$, we call $x$ an \textbf{element} or \textbf{member} of $A$ and write $x \in A$. Likewise if $x$ is \textit{not} contained in $A$ we can say $x$ \textbf{does not belong to} $A$ and write $x \notin A$. Sets are notated with curly braces \{\} around a comma-separated list of the elements.
+        \end{definition}
+        The elements of a set can be any mathematical object but most sets we will encounter will be sets of numbers, such as $\mathbb{N}=\{1, 2, 3, ...\}$, the set of \textbf{natural numbers}\footnote{Note that in this text, $0 \notin \mathbb{N}$. Generally there is no strong convention on whether 0 is included or not so it is important to check with every text.}; or $\mathbb{Z}=\{..., {-2} {-1}, 0, 1, 2, ...\}$, the set of \textbf{integers} (`...' means `and so on forever').
+
+        \begin{definition}
+            There is a set which has no elements, and this set is unique. We call it the \textbf{empty set} and denote it $\emptyset$. By definition for every object $x$ we have $x \notin \emptyset$. If we say a set $A$ is \textbf{non-empty}, then $\exists$ some object $x$ such that $x \in A$.
+        \end{definition}
+
+        \paragraph{}
+        It is useful to have the ability to define a set in terms of some kind of predicate, for example let $E$ be `the set of all even integers'. We can write this in a more compact and unambiguous way as $E = \{2k : k \in \mathbb{Z}\}$ (The colon, sometimes replaced with $|$, is read as `such that'). This is known as \textbf{set-builder notation}.
+
+        \begin{definition}
+            Two sets $A$ and $B$ are \textbf{equal} $\iff$
+            \[\forall x \in A, x \in B\ \text{and}\ \forall y \in B, y \in A.\]
+            Then we write $A = B$. In other words, both sets must have the same elements, but note that multiplicity and order do not matter, for example $\{1, 2, 3\} = \{3, 2, 1, 1\}$. Two sets defined using set-builder notation are equal if and only if their predicates are equivalent.
+        \end{definition}
+        \begin{definition}
+            Let $A$ be a set. Then a set $B$ is a \textbf{subset} of $A \iff$
+            \[\forall x \in B, x \in A.\]
+            Then we write $B \subseteq A$. Note that every set has two trivial subsets, itself and $\emptyset$.
+        \end{definition}
+        \begin{definition}
+            Let $A$ be a set. Then a set $B$ is a \textbf{proper subset} of $A \iff$
+            \[\forall x \in B, x \in A\ \text{and}\ A \neq B.\]
+            Then we write $B \subset A$.
+        \end{definition}
+
+    \section{Algebra of Sets}
+        \paragraph{}
+        There are operations that we can do on sets to form new sets. These operations can be interpreted as set-theoretic implementations of the Boolean operations and, or, \& not. They also have satisfying parallels with operations and relations that we are familiar with for numbers. For the next three definitions, let $A$ and $B$ be sets.
+        \begin{definition}
+            The \textbf{union} of $A$ and $B$, $A \cup B$, is defined as
+            \[\{x: x \in A\ \text{or}\ x \in B\}.\]
+            Where `or' is inclusive, so the union includes all elements of both $A$ and $B$.
+        \end{definition}
+        \begin{definition}
+            The \textbf{intersection} of $A$ and $B$, $A \cap B$, is defined as
+            \[\{x: x \in A\ \text{and}\ x \in B\}.\]
+            So the intersection includes only elements that are in both sets. $A$ and $B$ are said to be \textbf{disjoint} if and only if $A \cap B = \emptyset$, i.e. they have no elements in common.
+        \end{definition}
+        \begin{definition}
+            The \textbf{difference} of $A$ and $B$, $A \setminus B$, is defined as
+            \[\{x: x \in A\ \text{and}\ x \notin B\}.\]
+            We can also use this operation to define the complement of a set. For example, if $A$ is a subset of some set $X$, then the \textbf{complement} of $A$ in $X$ is given by $X \setminus A$, i.e. the elements of $X$ that are \textit{not} in $A$.
+        \end{definition}
+        \begin{definition}
+            The \textbf{Cartesian product} of $A$ and $B$, $A\times B$, is defined as
+            \[\{(a, b): a \in A\ \text{and}\ b \in B\}.\]
+            So in plain speech, the Cartesian product of two sets is the set of all ordered pairs where the first component is a member of the first set and the second component is a member of the second set. It can be seen as a generalisation of the notion of Cartesian coordinates in the plane. Sometimes the Cartesian product of a set $X$ with itself is noted as $X^2$ instead of $X \times X$, for example $\mathbb{Z}^2 = \mathbb{Z} \times \mathbb{Z}$ denoting the set of all integer points in the plane.
+        \end{definition}
+
+    \section{Ordering \& Bounding}
+        \begin{definition}
+            A \textbf{partially ordered set} is an ordered pair $(X, \leq)$, where $X$ is a set and $\leq$ is a binary relation which forms a \textbf{partial order} on $X$. For any two elements $x, y \in X$ we have either $x \leq y$, or $x \slashed{\leq} y$.
+        \end{definition}
+        \begin{example}
+            Let $S$ be a set, then let $P(S)$ be the set of subsets of $S$. Then $(P(S), \subseteq)$ is a partially ordered set. For any two elements $A, B \in P(S)$ we have either $A \subseteq B$ or $A \slashed{\subseteq} B$.
+        \end{example}
+        \begin{definition}
+            A \textbf{totally ordered set} is an ordered pair $(X, \leq)$, where $X$ is a set and $\leq$ is a binary relation which forms a \textbf{total order} on $X$. So for any two elements $x, y \in X$ we have $x \leq y$, or $y \leq x$, or both (never neither)\footnote{This is known as the \textbf{trichotomy law}}. It is possible for a subset of a partially ordered set to be totally ordered (under the same relation).
+        \end{definition}
+        \begin{example}
+            $(\mathbb{N}, \leq)$ --- the set of natural numbers with the greater than or equal to relation --- forms a totally ordered set. For any $m, n \in \mathbb{N}$ we have $m \leq n$, or $n \leq m$, or both ($m=n$). Any subset of $\mathbb{N}$ is also totally ordered under $\leq$.
+        \end{example}
+        The key difference between partial orders and total orders is that partial orders are only useful for comparing some elements with each other whereas total orders can compare all elements with each other.
+
+        \paragraph{}
+        There are several different ways we can create definitions for different kinds of `extreme' elements in a set, all with subtle differences between them. We will go through some of these now.
+        \begin{definition}
+            Let $(P, \leq)$ be a partially ordered set and let $S \subseteq P$.
+            \begin{itemize}
+                \item An element $g \in S$ is the \textbf{greatest element} of $S$ if $\forall s \in S,\, s \leq g$. If a greatest element exists, clearly it is unique (due to the trichotomy law).
+                In other words, a greatest element is an element that is greater than \textit{all} other elements. However, note that greatest elements may not necessarily exist.
+                \item An element $m \in S$ is a \textbf{maximal element} of $S$ if there does \textit{not} exist any $s \in S$ with $(s \neq m)$ such that $m \leq s$. A set may have multiple maximal elements, and they may exist without there being a greatest element. Maximal elements also may not necessarily exist.
+                In simple terms, a maximal element is one that is not smaller than any other element. Notice how this definition is subtly different to the definition of the greatest element.
+                \item An element $u \in P$ is an \textbf{upper bound} for $S$ in $P$ $\iff \forall s \in S,\, s \leq u$.
+                Note that if $P=S$, then the definition of a greatest element of $S$ becomes equivalent to the definition of an upper bound of $S$ in $S$, therefore an element $g \in S$ is the greatest element of $S$ if and only if $g$ is an upper bound for $S$ and $g \in S$. It is also plausible that $S$ may \textit{not} have a greatest element while also having an upper bound in $P$ (that's a tricky one to get your head around).
+                \item Let $T$ be a \textit{totally ordered} subset of $P$. Then the greatest element of $T$ and the maximal element of $T$ are the same, in which case this element is called the \textbf{maximum} of $T$.
+                \item Let $U(S) \subseteq P$ be the set of all upper bounds for $S$ in $P$. Then $l \in U(S)$ is the \textbf{supremum} (or \textbf{least upper bound}) of $S$ if $\forall u \in U(S),\, l \leq u$.
+                Basically the supremum of $S$ is the least element of $U(S)$. Thus if suprema exist, they are unique. If a greatest element or maximum exists, then it is the supremum, and this is the only case where the supremum of a set will lie in the set itself.
+                \item If we switch the elements around the $\leq$ sign in all the above definitions, we obtain the definitions for the dual notions of all those just defined: the \textbf{least element}, \textbf{minimal element}, \textbf{lower bound}, \textbf{minimum}, and \textbf{infimum} (or \textbf{greatest lower bound}).
+            \end{itemize}
+        \end{definition}
+        % TODO: say that we define suprema because maxima may not exist (def 1.3 in notes)
+        % also remove unnecessary stuff from this pls
+
+        %TODO: prove that if a maxima exists, then it is the supremum (lemma 1.3 in notes)
+
+        %TODO: include definition of a bounded set
+
+\end{document}

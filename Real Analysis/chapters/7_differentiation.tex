@@ -1,0 +1,331 @@
+\documentclass[../real_analysis.tex]{subfiles}
+
+\begin{document}
+
+    \section{The Derivative}
+        \paragraph{}
+        The derivative is an extremely important concept in applied mathematics, as it allows us to model real life situations with mathematical functions and their rates of change. For this reason, the derivative is the most interesting part of analysis for applied mathematicians and physicists. The purpose of this chapter is to establish what a derivative is, what its properties are, and what we can do with derivatives.
+
+        \paragraph{}
+        You probably have an intuition that the derivative of a function is the gradient of the tangent line at every point along the function's domain, and that in order for a function to have a derivative defined everywhere it must have no sharp corners or cusps. This is the basic idea, but of course in analysis we must be extra careful with our definitions. How do we know if we can even define a tangent line? To make a definition of the derivative that we can work with we will use equipment that we have developed in the last chapter.
+        \begin{definition}
+            Let $I\subseteq\RR$ be an open interval and let $f: I\to\RR$ be a function. Let $c\in I$. Then $f$ is \textbf{differentiable} at $c$ if
+            \begin{equation*}
+                \lim_{x\to c}\frac{f(x)-f(c)}{x-c}\,\text{exists.}
+            \end{equation*}
+            If this limit exists, then we denote it $f^\prime(c)$, the \textbf{derivative} of $f$ at $c$. We say $f$ is \textbf{differentiable} if $f$ is differentiable at all $c\in I$. Then $f^\prime:I\to\RR$ is also a function, called the \textbf{derivative} of $f$ (also denoted $\frac{\mathrm{d}f}{\mathrm{d}x}$).
+        \end{definition}
+        % TODO: figure for this
+        \begin{example}
+            Let $f:\RR\to\RR$ be given by $f(x)=x^2$. Claim: $f$ is differentiable at $x=3$ with $f^\prime(3)=6$.\\
+            \textit{Proof}: Let $c=3, x\neq3$. Then
+            \begin{equation*}
+                \frac{f(x)-f(3)}{x-3}=\frac{x^2-3^2}{x-3}=\frac{(x+3)(x-3)}{x-3}=x+3.
+            \end{equation*}
+            Hence,
+            \begin{equation*}
+                f^\prime(3)=\lim_{x\to3}\frac{f(x)-f(3)}{x-3}=\lim_{x\to3}x+3=6.
+            \end{equation*}
+            So $f$ is differentiable at $x=3$ with derivative 6. In fact, if $c\neq x$,
+            \begin{equation*}
+                \lim_{x\to c}\frac{f(x)-f(c)}{x-c}=\lim_{x\to c}x+c=2c.
+            \end{equation*}
+            So $f$ is differentiable everywhere with derivative $f^\prime:\RR\to\RR$ given by $f^\prime(x)=2x$.
+        \end{example}
+        \begin{example}
+            Let $f:(0,\infty)\to\RR$ be given by $f(x)=\sqrt{x}$. Claim: $f$ is differentiable.\\
+            \textit{Proof}: Let $c\neq x$, then
+            \begin{equation*}
+                \frac{f(x)-f(c)}{x-c}=\frac{\sqrt{x}-\sqrt{c}}{x-c}\left(\frac{\sqrt{x}+\sqrt{c}}{\sqrt{x}+\sqrt{c}}\right)=\frac{x-c}{(x-c)(\sqrt{x}+\sqrt{c})}=\frac{1}{\sqrt{x}+\sqrt{c}}.
+            \end{equation*}
+            Hence $f^\prime:(0,\infty)\to\RR$ is given by
+            \begin{equation*}
+                f^\prime(c)=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}=\lim_{x\to c}\frac{1}{\sqrt{x}+\sqrt{c}}=\frac{1}{2\sqrt{c}}.
+            \end{equation*}
+        \end{example}
+        \begin{example}
+            Let $f:\RR\to\RR$ be given by $f(x)=x^n$ for some $n\in\RR$. Claim: $f$ is differentiable with derivative $f^\prime:\RR\to\RR$ given by $f(x)=nx^{n-1}$.\\
+            \textit{Proof}: Let $c\neq x$, then
+            \begin{equation*}
+                \frac{f(x)-f(c)}{x-c}=\frac{x^n-c^n}{x-c}=\frac{x-c}{x-c}(x^{n-1}+cx^{n-2}+c^2x^{n-3}+\dots+c^{n-2}x+c^{n-1}).
+            \end{equation*}
+            Hence $f^\prime(c)$ is given by
+            \begin{equation*}
+                f^\prime(c)=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}=\lim_{x\to c}(x^{n-1}+cx^{n-2}+c^2x^{n-3}+\dots+c^{n-2}x+c^{n-1})=nc^{n-1}.
+            \end{equation*}
+        \end{example}
+        Now that we have defined strictly what a derivative is, we will explore some properties of them. Firstly, we will note that our notion of differentiability is \textbf{stronger} than the definition of continuity.
+        \begin{theorem}\label{diff-cts}
+            Let $I\subseteq\RR$ be an open interval, let $f:I\to\RR$ be a function and let $c\in I$. Then if $f$ is differentiable at $c$, then $f$ is continuous at $c$.
+        \end{theorem}
+        \begin{proof}
+            Since $f$ is differentiable, $f^\prime(c)=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}$. Hence
+            \begin{align*}
+                \lim_{x\to c}(f(x)-f(c))&=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}(x-c)\\
+                &=\left(\lim_{x\to c}\frac{f(x)-f(c)}{x-c}\right)\left(\lim_{x-c}(x-c)\right)\tag{By theorem \ref{}}\\ % TODO: limit product theorem
+                &=f^\prime(c)\cdot0=0.
+            \end{align*}
+            Therefore,
+            \begin{equation*}
+                \lim_{x\to c}f(x)=f(c).
+            \end{equation*}
+            So by theorem \ref{}, $f$ is continuous. % TOOD: limit => continuity theorem
+        \end{proof}
+        Note that the converse of this theorem is not true. Continuity does not imply differentiability (although ).
+        \begin{example}
+            Let $f:(-1,1)\to\RR$ be given by $f(x)=\abs{x}$. Claims:
+            \begin{enumerate}[\upshape(i)]
+                \item $f$ is continuous.
+                \item $f$ is not differentiable at $x=0$.
+            \end{enumerate}
+            \textit{Proof}:
+            \begin{enumerate}[\upshape(i)]
+                \item This is true by theorem \ref{cts-func-props}.
+                \item Consider $x\neq 0$, then
+                \begin{equation*}
+                    \frac{f(x)-f(0)}{x-0}=\frac{\abs{x}}{x}=\begin{cases}
+                        1\,&x>0\\
+                        -1\,&x<0.
+                    \end{cases}
+                \end{equation*}
+                Thus $f^\prime(0)$ is not defined since the limit does not exist at $x=0$, so $f$ is not differentiable at $x=0$.
+            \end{enumerate}
+        \end{example}
+        Now we will prove some properties of derivatives under arithmetic operations similarly to how we have done with every concept we have covered so far. These will be familiar are they are the same rules for derivatives that you will have learned in school.
+        \begin{theorem}\label{diff-func-props}
+            Let $I\subseteq\RR$, let $f,g:I\to\RR$ be two functions, differentiable at $c\in I$.
+            \begin{enumerate}[\upshape(i)]
+                \item $(f+g):I\to\RR$ is differentiable at $c$ and $(f+g)^\prime(c)=f^\prime(c)+g^\prime(c)$.
+                \item Given $\lambda\in\RR$, $(\lambda f):I\to\RR$ is differentiable at $c$ and $(\lambda f)^\prime(c)=\lambda f^\prime(c)$.
+                \item $(fg):I\to\RR$ is differentiable at $c$ and $(fg)^\prime(c)=f(c)g^\prime(c)+f^\prime(c)g(c)$.
+                \item If $g(c)\neq0$, then $\left(\frac{1}{g}\right):I\to\RR$ is differentiable at $c$ and $\left(\frac{1}{g}\right)^\prime(c)=\frac{-g^\prime(c)}{g(c)^2}$.
+            \end{enumerate}
+        \end{theorem}
+        \begin{proof}
+            In all cases below, let $x\in I$ with $x\neq c$.
+            \begin{enumerate}[\upshape(i)]
+                \item
+                \begin{align*}
+                    (f+g)^\prime(c)&=\lim_{x\to c}\frac{(f+g)(x)-(f+g)(c)}{x-c}\\
+                    &=\lim_{x\to c}\frac{f(x)+g(x)-f(c)-g(c)}{x-c}\\
+                    &=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}+\lim_{x\to c}\frac{g(x)-g(c)}{x-c}\tag{By theorem \ref{}}\\ % TODO: reference limit theorem
+                    &=f^\prime(c)+g^\prime(c).
+                \end{align*}
+                \item
+                \begin{equation*}
+                    (\lambda f)^\prime(c)=\lim_{x\to c}\frac{(\lambda f)(x)-(\lambda f)(c)}{x-c}=\lambda\lim_{x\to c}\frac{f(x)-f(c)}{x-c}=\lambda f^\prime(c).
+                \end{equation*}
+                \item Note that since $f$ and $g$ are differentiable at $c$, they are continuous at $c$ by theorem \ref{diff-cts}. So $\lim_{x\to c}f(x)=f(c)$.
+                \begin{align*}
+                    (fg)^\prime(c)&=\lim_{x\to c}\frac{(fg)(x)-(fg)(c)}{x-c}=\lim_{x\to c}\frac{f(x)g(x)-f(c)g(c)}{x-c}\\
+                    &=\lim_{x\to c}\frac{f(x)g(x)+f(x)g(c)-f(x)g(c)-f(c)g(c)}{x-c}\\
+                    &=\lim_{x\to c}f(x)\frac{g(x)-g(c)}{x-c}+\lim_{x\to c}g(c)\frac{f(x)-f(c)}{x-c}\\
+                    &=f(c)g^\prime(c)+g(c)f^\prime(c).
+                \end{align*}
+                \item Since $g(c)\neq0$ and $g$ is continuous at $c$, there exists $\delta>0$ so that $x\in(c-\delta,c+\delta)\implies g(x)\neq0$.
+                \begin{align*}
+                    \left(\frac{1}{g}\right)^\prime(c)=\lim_{x\to c}\frac{\left(\frac{1}{g}\right)(x)-\left(\frac{1}{g}\right)(c)}{x-c}&=\lim_{x\to c}\left(\frac{1}{x-c}\right)\left(\frac{1}{g(x)}-\frac{1}{g(c)}\right)\\
+                    &=\lim_{x\to c}\left(\frac{1}{x-c}\right)\left(\frac{g(c)-g(x)}{g(x)g(c)}\right)\\
+                    &=\lim_{x\to c}\left(\frac{-1}{g(x)g(c)}\right)\frac{g(x)-g(c)}{x-c}\\
+                    &=\frac{-g^\prime(c)}{g(c)^2}.
+                \end{align*}
+            \end{enumerate}
+        \end{proof}
+        Part (iii) of this theorem is the well-known product rule for derivatives. We can prove the quotient rule as a corollary.
+        \begin{corollary}[Quotient Rule]
+            If $g(c)\neq0$, $\left(\frac{f}{g}\right):I\to\RR$ is differentiable at $c$ and ${\left(\frac{f}{g}\right)^\prime(c)=\frac{g(c)f^\prime(c)-g^\prime(c) f(c)}{g(c)^2}}$.
+        \end{corollary}
+        \begin{proof}
+            Since $\frac{f}{g}=f\cdot\frac{1}{g}$,
+            \begin{align*}
+                \left(f\cdot\frac{1}{g}\right)^\prime(c)&=\frac{f^\prime(c)}{g(c)}+f(c)\left(\frac{1}{g}\right)^\prime(c)\tag{By theorem \ref{diff-func-props} (iii)}\\
+                &=\frac{f^\prime(c)}{g(c)}-\frac{f(c)g^\prime(c)}{g(c)^2}\tag{By theorem \ref{diff-func-props} (iv)}\\
+                &=\frac{g(c)f^\prime(c)-g^\prime(c)f(c)}{g(c)^2}.
+            \end{align*}
+        \end{proof}
+        Other corollaries of this theorem are that all polynomials are differentiable, and all rational functions are differentiable except where the denominator is zero.
+        \begin{theorem}[Chain Rule]
+            Let $I,J\subseteq\RR$ be intervals, $f:I\to\RR$ a function differentiable at some $c\in I$ with $f(I)\subseteq J$, $g:J\to\RR$ a function differentiable at $f(c)\in J$. Then $(g\circ f):I\to\RR$ is differentiable at $c$ and $(g\circ f)^\prime(c)=g^\prime(f(c))f^\prime(c)$.
+        \end{theorem}
+        % TODO: proof
+
+    \section{Important Theorems about Derivatives}
+        \paragraph{}
+        The following theorems about the properties of differential functions are among the most important results in real analysis for applied mathematics and physics. The first theorem we will look at is Rolle's theorem, which essentially states that if a function is differentiable and has the same value at two points, then the derivative must be zero somewhere between those two points.
+        \begin{theorem}[Rolle's Theorem]\label{rolles-thm}
+            Let $a,b\in\RR$ with $a<b$, let $f:[a,b]\to\RR$ be a continuous function which is differentiable on $(a,b)$ with $f(a)=f(b)$. Then there exists $\theta\in(a,b)$ such that $f^\prime(\theta)=0$.
+        \end{theorem}
+        \begin{proof}
+            Firstly, we will prove that the derivative of a function is zero at the maximum or minimum points of a function. This is a fact that we are used to from school, and we will need it when proving this theorem.
+            \begin{lemma}
+                Let $I\subseteq\RR$ be an open interval and $f:I\to\RR$ be a differentiable function.
+                \begin{enumerate}[\upshape(i)]
+                    \item If $f$ attains its maximum at some $c\in I$, then $f^\prime(c)=0$.
+                    \item If $f$ attains its minimum at some $c\in I$, then $f^\prime(c)=0$.
+                \end{enumerate}
+            \end{lemma}
+            \begin{proof}\\
+                \begin{enumerate}[\upshape(i)]
+                    \item Since $f$ has reached its maximum, $f(x)\leq f(c)\ \forall x\in I$. Hence
+                    \begin{equation*}
+                        f(x)-f(c)\leq 0\ \forall x\in I.
+                    \end{equation*}
+                    Now, if $x<c$, then $x-c<0$ and
+                    \begin{equation*}
+                        \frac{f(x)-f(c)}{x-c}\geq0,\ \text{therefore}\ \lim_{x\to c^-}\frac{f(x)-f(c)}{x-c}\geq0.
+                    \end{equation*}
+                    On the other hand, if $x>c$, then $x-c>0$ and
+                    \begin{equation*}
+                        \frac{f(x)-f(c)}{x-c}\leq0,\ \text{therefore}\ \lim_{x\to c^+}\frac{f(x)-f(c)}{x-c}\leq0.
+                    \end{equation*}
+                    Since $f$ is differentiable, $f^\prime(c)$ is defined and so the left and right limits at $c$ must be equal, which can only be true if
+                    \begin{equation*}
+                        f^\prime(c)=\lim_{x\to c}\frac{f(x)-f(c)}{x-c}=0.
+                    \end{equation*}
+                    \item follows similarly.
+                \end{enumerate}
+            \end{proof}
+            Now there are three cases to consider. The first is the case where the function is a horizontal line between $a$ and $b$, the second is the case where the function has a maximum between $a$ and $b$, and the third is the case where there is a minimum.
+            \begin{enumerate}[\upshape(i)]
+                \item Suppose $\forall x\in[a,b]$, $f(x)=f(a)$. Then $\forall\theta\in(a,b)$, $f^\prime(\theta)=0$.
+                \item Suppose there exists some $y\in[a,b]$ with $f(y)>f(a)=f(b)$. Since $f$ is continuous on $[a,b]$, the Extreme Value Theorem (\ref{evt}) says that $f$ attains a maximum at some $\theta\in[a,b]$, therefore
+                \begin{equation*}
+                    f(x)\leq f(\theta)\ \forall x\in[a,b].
+                \end{equation*}
+                However since $f(y)>f(a)=f(b)$, $\theta$ must be at least $y$, i.e. $\theta\neq a$, $\theta\neq b$. So $\theta\in(a,b)$ and hence by the part (i)) of the lemma above, $f^\prime(\theta)=0$.
+                \item Suppose there exists some $y\in[a,b]$ with $f(y)<f(a)=f(b)$. Then this case follows similarly to (ii) in that $f$ must attain a minimum in $(a,b)$.
+            \end{enumerate}
+        \end{proof}
+        The next theorem is a generalisation of Rolle's theorem. It states that between two points of a function, there must be a least one point where the tangent to the function is parallel to a straight line between the two points.
+        % TODO: figure
+        \begin{theorem}[Mean Value Theorem]\label{mvt}
+            Let $a,b\in\RR$ with $a<b$ and let $f:[a,b]\to\RR$ be a continuous function which is differentiable on $(a,b)$. Then $\exists\theta\in(a,b)$ such that
+            \begin{equation*}
+                f^\prime(\theta)=\frac{f(b)-f(a)}{b-a}.
+            \end{equation*}
+        \end{theorem}
+        \begin{proof}
+            This theorem is very easy to prove using Rolle's theorem (\ref{rolles-thm}). Let $g(x)=f(x)-\lambda x$, where $\lambda$ is chosen so that $g(a)=g(b)$. So
+            \begin{align*}
+                f(a)-\lambda a&=f(b)-\lambda b\\
+                \lambda(b-a)&=f(b)-f(a)\\
+                \lambda&=\frac{f(b)-f(a)}{b-a}.
+            \end{align*}
+            Then by Rolle's theorem, there exists $\theta\in(a,b)$ such that $g^\prime(\theta)=0$. By theorem \ref{diff-func-props},
+            \begin{align*}
+                g^\prime(\theta)&=f^\prime(\theta)-\lambda=0\\
+                \implies f^\prime(\theta)&=\lambda=\frac{f(b)-f(a)}{b-a}.
+            \end{align*}
+        \end{proof}
+        Another way of writing the Mean Value theorem is that there exists $\theta\in(a,b)$ so that $f(b)=f(a)+(b-a)f^\prime(\theta)$. This is another way of expressing what it means for a function to be differentiable. If we replace $b$ with some point $x$ in the interior of the domain of $f$ then we get
+        \begin{equation*}
+            f(x)=f(a)+f^\prime(\theta)(x-a).
+        \end{equation*}
+        This is a linear function, so we say that if a function is differentiable at a point then it has a good linear approximation at that point. This fact could be used to calculate the value of the function at lots of points if we know the value of the function at a few points and we know information about the derivative. We will touch on this in the last part of this chapter.
+        % TODO: feature x^2sin(1/x) as a counterexample as to why derivative of differentiable function is not always continuous
+        % TODO: l'hopital's rule
+        \begin{example}
+            Suppose $f:\RR\to\RR$ is a differentiable function with $f(0)=0,f(1)=1,f(2)=2$. Show that $f^\prime(x)$ takes the values 0 and $\frac{1}{2}$ for some $x\in(0,2)$.\\
+            \textit{Proof}: Note that $f(1)=f(2)$, so by Rolle's theorem there exists some $\theta\in(1,2)\subseteq(0,2)$ with $f^\prime(\theta)=0$. Also, by the Mean Value theorem there exists $\theta\in(0,2)$ such that
+            \begin{equation*}
+                f^\prime(\theta)=\frac{f(2)-f(0)}{2-0}=\frac{1-0}{2-0}=\frac{1}{2}.
+            \end{equation*}
+        \end{example}
+
+    \section{Higher Derivatives}
+        \paragraph{}
+        If the derivative of a differentiable function can be considered a function in its own right, then we can investigate the differentiability of it as well. If the derivative $f^\prime$ of a function $f$ is differentiable, then we can define another function $f^{\prime\prime}$ or $\frac{\mathrm{d}^2f}{\mathrm{d}x^2}$ as the \textbf{second derivative}, and we say that $f$ is \textbf{twice differentiable}. We can carry on this way if the derivatives carry on being differentiable, and once the prime notation becomes unwieldy, we can write the $n$\ts{th} \textbf{derivative} of $f$ as $f^{(n)}$ or $\frac{\mathrm{d}^nf}{\mathrm{d}x^n}$.
+        \begin{theorem}\label{2-diff-func-props}
+            Let $I\subseteq\RR$ and let $f,g:I\to\RR$ be two functions which are twice differentiable at some point $c\in I$.
+            \begin{enumerate}[\upshape(i)]
+                \item $(f+g)^{\prime\prime}(c)=f^{\prime\prime}(c)+g^{\prime\prime}(c)$.
+                \item Given $\lambda\in\RR$, $(\lambda f)^{\prime\prime}(c)=\lambda f^{\prime\prime}(c)$.
+                \item $(fg)^{\prime\prime}(c)=f^{\prime\prime}(c)g(c)+2f^\prime(c)g^\prime(c)+f(c)g^{\prime\prime}(c)$.
+            \end{enumerate}
+        \end{theorem}
+        \begin{proof}\\
+            \begin{enumerate}[\upshape(i)]
+                \item By theorem \ref{diff-func-props} (i), $(f+g)^\prime(c)=f^\prime(c)+g^\prime(c)$. Therefore,
+                \begin{equation*}
+                    (f+g)^{\prime\prime}(c)=(f^\prime+g^\prime)^\prime(c)=f^{\prime\prime}(c)+g^{\prime\prime}(c).
+                \end{equation*}
+                \item By theorem \ref{diff-func-props} (ii), $(\lambda f)^\prime(c)=\lambda f^\prime(c)$. So,
+                \begin{equation*}
+                    (\lambda f)^{\prime\prime}(c)=(\lambda f^\prime)^\prime(c)=\lambda f^{\prime\prime}(c).
+                \end{equation*}
+                \item By theorem \ref{diff-func-props} (iii), $(fg)^\prime(c)=f(c)g^\prime(c)+f^\prime(c)g(c)$. So,
+                \begin{align*}
+                    (fg)^{\prime\prime}(c)&=(f(c)g^\prime(c)+f^\prime(c)g(c))^\prime\\
+                    &=(f(c)g^\prime(c))^\prime+(f^\prime(c)g(c))^\prime\\
+                    &=(f(c)g^{\prime\prime}(c)+f^\prime(c)g^\prime(c))+(f^\prime(c)g^\prime(c)+f^{\prime\prime}(c)g(c))\\
+                    &=f^{\prime\prime}(c)g(c)+2f^\prime(c)g^\prime(c)+f(c)g^{\prime\prime}(c).
+                \end{align*}
+            \end{enumerate}
+        \end{proof}
+        The first two parts of this theorem generalise very easily by induction to all higher derivatives. The final part is more involved.
+        \begin{theorem}[General Leibniz Rule]
+            Let $I\subseteq\RR$ and let $f,g:I\to\RR$ be two $n$-times differentiable functions at some point $c\in I$. Then the $n$\ts{th} derivative of the product $(fg):I\to\RR$ at $c$ takes the value
+            \begin{equation*}
+                (fg)^{(n)}(c)=\sum_{k=0}^n\binom{n}{k}f^{(n-k)}(c)g^{(k)}(c).
+            \end{equation*}
+        \end{theorem}
+        % TODO: prove
+        The last theorem of this chapter is a generalisation of the Mean Value theorem. It allows us to approximate the value of a function at a point as a polynomial with the derivatives of the function as coefficients.
+        \begin{theorem}[Taylor's Theorem]\label{taylors-thm}
+            Let $I$ be some open interval and let $a,b\in I$. Let $f:I\to\RR$ be a continuous function which is $(n+1)$-times differentiable at $a$. Then there exists $\theta$ between $a$ and $b$ such that
+            \begin{equation*}
+                f(b)=f(a)+(b-a)f^\prime(a)+\frac{(b-a)^2}{2!}f^{\prime\prime}(a)+\dots+\frac{(b-a)^n}{n!}f^{(n)}(a)+\frac{(b-a)^{n+1}}{(n+1)!}f^{(n+1)}(\theta).
+            \end{equation*}
+        \end{theorem}
+        \begin{proof}
+            First we define $F:[a,b]\to\RR$ to be given by
+            \begin{equation*}
+                F(t)=f(b)-f(t)-(b-t)f^\prime(t)-\frac{(b-t)^2}{2!}f^{\prime\prime}(t)-\dots-\frac{(b-t)^n}{n!}f^{(n)}(t).
+            \end{equation*}
+            Since the first $n$ derivatives of $f$ are continuous on $[a,b]$ and differentiable on $(a,b)$, $F$ inherits these properties by theorem \ref{diff-func-props}. The derivative of $F$ is then
+            \begin{align*}
+                F^\prime(t)&=-f^\prime(t)+[f^\prime(t)-(b-t)f^{\prime\prime}(t)]+\left[(b-t)f^{\prime\prime}(t)-\frac{(b-t)^2}{2!}f^{\prime\prime\prime}(t)\right]\\
+                &\quad\,+\dots+\left[\frac{(b-t)^{n-1}}{(n-1)!}f^{(n)}(t)-\frac{(b-t)^n}{n!}f^{(n+1)}(t)\right]\\
+                &=-\frac{(b-t)^n}{n!}f^{(n+1)}(t).
+            \end{align*}
+            Now, define $G:[a,b]\to\RR$ to be given by
+            \begin{equation*}
+                G(t)=F(t)-\left(\frac{b-t}{b-a}\right)^{n+1}F(a).
+            \end{equation*}
+            Notice that $G(a)=G(b)=0$, so by Rolle's theorem (\ref{rolles-thm}) there exists $\theta\in(a,b)$ such that $G^\prime(\theta)=0$. Specifically,
+            \begin{align*}
+                G^\prime(\theta)&=F^\prime(\theta)+(n+1)\frac{(b-\theta)^n}{(b-a)^{n+1}}F(a)\\
+                &=-\frac{(b-\theta)^n}{n!}f^{(n+1)}(\theta)+(n+1)\frac{(b-\theta)^n}{(b-a)^{n+1}}F(a)\\
+                &=(n+1)\frac{(b-\theta)^n}{(b-a)^{n+1}}\left[F(a)-\frac{(b-a)^{n+1}}{(n+1)!}f^{(n+1)}(\theta)\right]=0.
+            \end{align*}
+            The prefactor is never zero, hence the term in square brackets must be zero, so
+            \begin{equation*}
+                F(a)=\frac{(b-a)^{n+1}}{(n+1)!}f^{(n+1)}(\theta),
+            \end{equation*}
+            \begin{align*}
+                \implies f(b)=&f(a)+(b-a)f^\prime(a)+\frac{(b-a)^2}{2!}f^{\prime\prime}(a)\\
+                &+\dots+\frac{(b-a)^n}{n!}f^{(n)}(a)+\frac{(b-a)^{n+1}}{(n+1)!}f^{(n+1)}(\theta).
+            \end{align*}
+        \end{proof}
+        Taylor's theorem allows us to make approximations that are much better than linear ones. If, like before, we replace $b$ any point $x$ in the interior of the domain of $f$, we get
+        \begin{align*}
+            f(x)&=f(a)+(x-a)f^\prime(a)+\frac{(x-a)^2}{2!}f^{\prime\prime}(a)\\
+            &+\dots+\frac{(x-
+            a)^n}{n!}f^{(n)}(a)+\frac{(x-a)^{n+1}}{(n+1)!}f^{(n+1)}(\theta),
+        \end{align*}
+        where $\theta$ is now between $x$ and $a$. This polynomial representation of $f$ is known as the $n$\ts{th} \textbf{Taylor Polynomial} of $f$ about $a$ and the last term is known as the error or remainder, sometimes denoted $R_n(x)$. The idea is that for well-behaved functions, the remainder will get smaller as $n$ gets larger.
+        % TODO: figure showing this
+        \begin{corollary}[Maclaurin's Theorem]
+            Suppose $0\in I$. Let $x\in I$, then if $f:I\to\RR$ is an $(n+1)$-times differentiable function at 0, then there exists $\theta$ between $x$ and 0 such that
+            \begin{equation*}
+                f(x)=f(0)+xf^\prime(0)+\frac{x^2}{2!}f^{\prime\prime}(0)+\dots+\frac{x^n}{n!}f^{(n)}(0)+R_n(x),
+            \end{equation*}
+            where $R_n(x)=\frac{x^{n+1}}{(n+1)!}f^{(n+1)}(\theta)$.
+        \end{corollary}
+        \begin{proof}
+            This is easily shown by using Taylor's theorem with $a=0$.
+        \end{proof}
+        Taylor's theorem and Maclaurin's theorem have very important consequences that we will explore in more detail in later chapters.
+        % TODO: example on taylor/maclaruin series e.g. 1/x, exp(x)
+
+\end{document}
