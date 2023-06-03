@@ -1,2 +1,3 @@
 # LaTeX files
 **/*.synctex.gz
+*/chapters/*.pdf
