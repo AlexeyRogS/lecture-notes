@@ -99,19 +99,20 @@
         \end{equation}
         Equations \ref{suvat-1}, \ref{suvat-2}, and \ref{suvat-3} are known as the SUVAT equations, you probably learned them in school. They are the \textbf{equations of motion} for a object under constant acceleration, i.e. all problems involving constant acceleration in a straight line are solved by them.
         \begin{example}
-            Ball thrown in the air
+            Ball thrown in the air % TODO: write this
         \end{example}
 
         Now let's do some examples where we do not have constant acceleration.
         % TODO: add example for intuition with graphs, (how do tell if something is accelerating/ increaasing acceleration, etc.)
+        % inflection points => curvature = acceleration = 0
         \begin{example}
-            Car accelerating then decelerating
+            Car accelerating then decelerating % TODO: write this
             \begin{equation*}
                 v(t)=-\frac{1}{2}t^4+3t^3
             \end{equation*}
         \end{example}
         \begin{example}
-            Block sliding down a hill (no friction)
+            Block sliding down a hill (no friction) % TODO: write this
         \end{example}
 
     \section{Forces}
@@ -131,7 +132,7 @@
         \begin{definition}[Newton's Second Law]
             The net force on the object is equal to the object's mass times the object's acceleration.
             \begin{equation}
-                F(t)=ma(t).
+                F=ma.
             \end{equation}
             Note that force is always parallel to acceleration.
         \end{definition}
@@ -160,9 +161,12 @@
             \end{equation}
             These two forces are then known as a ``Newton (III) pair''.
         \end{definition}
+        % TODO: talk about gravity and normal force
+        % TODO: talk about free-body diagrams
         We can now solve any problem in classical mechanics.
 
     \section{Motion in Two and Three Dimensions}
+        % TODO: move this to before forces
         \paragraph{}
         Armed with the principles of Newtonian mechanics for one dimension, we will now generalise everything we have learned to two and three dimensions. It turns out that this will be very simple because the set of all points in 3D space forms a \textbf{vector space}, $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span our space. In \textbf{cartesian} coordinates, which are the most commonly used system to label points in 3D space, we label the axes $x$, $y$ and $z$, and choose the unit vectors $\ihat$, $\jhat$ and $\khat$ to point along each axis respectively.
         %TODO: figure of cartesian coordinate system
@@ -213,5 +217,63 @@
         The key insight is that motion in 3D Cartesian coordinates is simply a superposition of three one-dimensional motions.
 
     \section{Projectile Motion}
+        \paragraph{}
+        Let's now look at a concrete example of an experiment which will bring together everything we have looked at in this chapter.
+        Suppose we have a cannon situated at the origin which shoots a projectile with a fixed initial velocity $\vec{v}_0$ which makes an initial angle $\theta$ relatitive to the ground.
+        Can we work out how far the projectile will fly and what its flight time is?
+        % TODO: add diagram
+        \paragraph{}
+        This is going to be a 2D problem as we have two axes of motion.
+        We shall label the horizontal direction that the cannon is shooting along the $x$ axis and the vertical direction the $y$ axis.
+        As stated in the problem, the cannon is located at the origin.
+        We can now write the initial velocity as
+        \begin{equation}
+            \vec{v}_0 = v_0\cos(\theta)\ihat + v_0\sin(\theta)\jhat,
+        \end{equation}
+        where $v_0=\abs{\vec{v}_0}$.
+        Ignoring air resistance, there are no forces acting on the projectile in the $x$ direction.
+        By Newton's second law this means that $a_x=0$ and we can immediately write
+        \begin{equation}
+            x(t) = v_0\cos(\theta)t,
+        \end{equation}
+        using the SUVAT equation \ref{suvat-2}.
+        In the $y$ direction, the only force acting on the projectile is the constant force of gravity, so Newton's second law tells us
+        \begin{equation}
+            F_y = -mg = ma_y.
+        \end{equation}
+        Hence, we have
+        \begin{equation}
+            y(t) = v_0\sin(\theta)t - \frac{1}{2}gt^2,
+        \end{equation}
+        again by equation \ref{suvat-2}.
 
+        \paragraph{}
+        Now, the time of flight $t_f$ will be given when $y(t_f)=0$.
+        Solving for this, we get
+        \begin{align}
+            y(t_f) = &v_0\sin(\theta)t_f - \frac{1}{2}gt_f^2 = 0\\
+            &v_0\sin(\theta)t_f = \frac{1}{2}gt_f^2\\
+            &t_f = \frac{2v_0\sin(\theta)}{g}.
+        \end{align}
+        Let's consider briefly if this answer makes physical sense.
+        If the initial speed of the projectile $v_0$ was higher, then the flight time would be longer.
+        Additionally, for a fixed initial speed, a projectile fired at a higher angle would have a longer flight time because more of the initial velocity was aimed along the vertical direction.
+        On the other hand, if gravity was stronger, the projectile would fall to the ground faster and the flight time would be shorter.
+
+        \paragraph{}
+        Finally, the range of the projectile is given by
+        \begin{align}
+            x_f = x(t_f) &= v_0\cos(\theta)t_f\\
+            &= \frac{2v_0^2\sin(2\theta)}{g}.
+        \end{align}
+        So the maximum range is given when $\theta=\frac{\pi}{4}$.
+
+        % TODO: include a discussion of drag
+
+        \begin{example}
+            A motorcyclist is doing a stunt jump between two buildings.
+            If the buildings are separated by a distance $d$ and have a vertical height difference $h$, what is the minimum velocity the motorcyclist needs to make the jump?
+            % TODO: complete this example
+        \end{example}
+        
 \end{document}

@@ -1,3 +1,168 @@
-% Chapter 2: Linear Momentum
-% - collisions
-% - center of mass
+\documentclass[../newtonian_mechanics.tex]{subfiles}
+
+\begin{document}
+
+    \section{Conservation of Momentum}
+        \paragraph{}
+        Consider two objects interacting with each other via some forces.
+        They could be two electrons repelling each other because of the electrostatic force or two planets falling together due to gravity.
+        By Newton's third law,
+        % TODO: include diagram for this
+        \begin{equation}
+            \vec{F}_{A\to B}(t)=-\vec{F}_{B\to A}(t),
+        \end{equation}
+        and so by Newton's second law we can write
+        \begin{equation}\label{eq-COM-acc}
+            m_A\vec{a}_A(t)+m_B\vec{a}_B(t)=0.
+        \end{equation}
+        We can integrate this equation over some arbitrary time period $t_1<t_2$ to get
+        \begin{align}
+            \int_{t_1}^{t_2}\left(m_A\vec{a}_A(t)+m_B\vec{a}_B(t)\right)\mathrm{d}t &= m_A\left(\vec{v}_A(t_2)-\vec{v}_A(t_1)\right) + m_B\left(\vec{v}_B(t_2)-\vec{v}_B(t_1)\right)\\
+            &=0\\
+            \implies m_A\vec{v}_A(t_1) + m_B\vec{v}_B(t_1) &= m_A\vec{v}_A(t_2) + m_B\vec{v}_B(t_2).
+        \end{align}
+        Thus, we have discovered that Newton's third law implies that the quantity $m_A\vec{v}_A+m_B\vec{v}_B$ is \textbf{conserved}.
+        This means it is constant for all time. We call this quantity the \textbf{linear momentum}.
+
+    \section{Centre of Mass}
+        \paragraph{}
+        Some times it is useful to consider the \textbf{centre of mass} of a system, which is defined as the \textit{average} position of all the objects in the system.
+        For the system of two objects, this is calculated as
+        \begin{equation}
+            \vec{r}_\text{COM}=\frac{m_A\vec{r}_A + m_B\vec{r}_B}{m_A + m_B}.
+        \end{equation}
+        This defines a position vector which points to the centre of mass of the system.
+        By differentiating this vector with respect to time, we can get the velocity of the centre of mass
+        \begin{equation}
+            \vec{v}_\text{COM}=\frac{\mathrm{d}\vec{r}_\text{COM}}{\mathrm{d}t}=\frac{m_A\frac{\mathrm{d}\vec{r}_A}{\mathrm{d}t} + m_B\frac{\mathrm{d}\vec{r}_B}{\mathrm{d}t}}{m_A + m_B}=\frac{m_A\vec{v}_A + m_B\vec{v}_B}{m_A + m_B}.
+        \end{equation}
+        Hence the conserved quantity that we found before is the centre of mass momentum,
+        \begin{equation}
+            M\vec{v}_\text{COM}=m_A\vec{v}_A+m_B\vec{v}_B=\text{constant}.
+        \end{equation}
+        From these definitions we can see that equation \ref{eq-COM-acc} is the accleration of the centre of mass multiplied by the total mass, which by Newton's second law is the force on the centre of mass.
+        This implies that if the resultant force on the centre of mass is 0, then the centre of mass moves with constant velocity, just like a single object following Newton's first law, and the total linear momentum is conserved.
+        \begin{example}
+            For a system of two objects, show that the centre of mass is always located on the line that connects the two objects.
+            % TODO: write this
+        \end{example}
+
+        \paragraph{}
+        For a general system of $N$ objects, we define the centre of mass position, velocity and acceleration as follows.
+        \begin{definition}
+            Consider a system of $N$ objects.
+            Write the total mass of the system as $M=\sum_{i=1}^N m_i$, then the \textbf{centre of mass} is is a vector function defined as
+            \begin{equation}
+                \vec{r}_\text{COM} = \frac{1}{M}\sum_{i=1}^N m_i\vec{r}_i.
+            \end{equation}
+            The \textbf{centre of mass velocity} is defined as
+            \begin{equation}
+                \vec{v}_\text{COM} = \frac{\mathrm{d}\vec{r}_\text{COM}}{\mathrm{d}t} = \frac{1}{M}\sum_{i=1}^N m_i\frac{\mathrm{d}\vec{r}_i}{\mathrm{d}t} = \frac{1}{M}\sum_{i=1}^N m_i\vec{v}_i,
+            \end{equation}
+            and the \textbf{centre of mass acceleration} is defined as
+            \begin{equation}
+                \vec{a}_\text{COM} = \frac{\mathrm{d}^2\vec{r}_\text{COM}}{\mathrm{d}t^2} = \frac{1}{M}\sum_{i=1}^N m_i\frac{\mathrm{d}^2\vec{r}_i}{\mathrm{d}t^2} = \frac{1}{M}\sum_{i=1}^N m_i\vec{a}_i,
+            \end{equation}
+        \end{definition}
+        
+        % TODO: maybe move definitions to after this next section
+        \paragraph{}
+        % TODO: include diagram for this
+        If we consider a system of $N$ objects, each under the influence of forces from every other object and also external forces, we can write the net force on each object as
+        \begin{equation}
+            \vec{F}_{i,\text{net}}=\vec{F}_{i,\text{ext}}+\sum_{j\neq i}^N\vec{F}_{j\to i}.
+        \end{equation}
+        Let's now add all the forces together to get the net force on the centre of mass:
+        \begin{equation}
+            \vec{F_\text{net}} = \sum_{i=1}^N\vec{F}_{i,\text{net}} = \underbrace{\sum_{i=1}^N\vec{F}_{i,\text{ext}}}_{=\vec{F}_\text{ext}}+\underbrace{\sum_{i=1}^N\sum_{j\neq i}^N\vec{F}_{j\to i}}_{=0}.
+        \end{equation}
+        The second term on the far right-hand side is 0 by Newton's third law (you can prove this by induction).
+        % TODO: write example to prove this 
+        Hence,
+        \begin{equation}\label{eq-NII-macroscopic}
+            M\vec{a}_\text{COM}=\vec{F}_\text{ext}.
+        \end{equation}
+        This result is actually quite profound because it is what allows us to treat systems of particles as point masses themselves while ignoring all of the internal forces between the particles since they all cancel out.
+        Without this equation, we could not apply the laws of mechanics as we have been learning them to macroscopic bodies!
+        
+        \paragraph{}
+        If $\vec{F}_\text{ext}=0$, i.e. the system is isolated and there are no external forces, then the centre of mass moves in a straight line with a constant velocity and the total linear momentum is conserved.
+        % TODO: write example of a projectile exploding while in the air with the COM following the trajectory 
+
+    \section{Impulse}
+        \paragraph{}
+        We have seen that an object has a linear momentum given by $\vec{p}=m\vec{v}$.
+        How does the momentum change under the action of a force?
+        Notice that
+        \begin{equation}
+            \frac{\mathrm{d}\vec{p}}{\mathrm{d}t}=\frac{\mathrm{d}(m\vec{v})}{\mathrm{d}t}=m\vec{a}=\vec{F},
+        \end{equation}
+        so we have a new way to write Newton's second law.
+        % TODO: remark that this is actually a more general version of F=ma
+        Let's now integrate this equation over an arbitrary time interval:
+        \begin{align}
+            \int_{t_1}^{t_2}\frac{\mathrm{d}\vec{p}}{\mathrm{d}t}\mathrm{d}t &= \vec{p}(t_2) - \vec{p}(t_1) \\
+            &= \Delta\vec{p} = \int_{t_1}^{t_2}\vec{F}(t)\mathrm{d}t.
+        \end{align}
+        We call the integral of a force over a time interval the \textbf{impulse}.
+        \begin{definition}
+            The \textbf{impulse} of a force $\vec{F}$ over a time interval $t_1\leq t_2$ is defined as
+            \begin{equation}
+                \vec{J}=\int_{t_1}^{t_2}\vec{F}(t)\mathrm{d}t.
+            \end{equation}
+            It has units of Newton second (N$\cdot$s). As we have seen, the impulse is equal to the change in momentum.
+            \begin{equation}
+                \Delta\vec{p}=\vec{J}.
+            \end{equation}
+            This result is sometimes called the \textbf{impulse-momentum theorem}.
+        \end{definition}
+
+        \paragraph{}
+        If we had a constant force, then the impulse would be $\vec{J}=\vec{F}\Delta t$ ($\Delta t=t_2-t_1$).
+        In most problems we want to solve this will not be the case. However, we can define the \textbf{average force} such that
+        \begin{equation}
+            \vec{J}=\int_{t_1}^{t_2}\vec{F}(t)\mathrm{d}t=\vec{F}_\text{avg}\Delta t.
+        \end{equation}
+        % TODO: add figure to illustrate this
+        This is quite useful because if we have a short interaction, we can simply consider the average force over the interval which is a good approximation.
+
+        \paragraph{}
+        For a general system of $N$ objects, the total impulse on the system over a time interval is
+        \begin{equation}
+            \vec{J}=\int_{t_1}^{t_2}\sum_{i=1}^N\vec{F}_i(t)\mathrm{d}t=\int_{t_1}^{t_2}\vec{F}_\text{ext}\mathrm{d}t.
+        \end{equation}
+        By equation \ref{eq-NII-macroscopic} in the previous section,
+        \begin{align}
+            \vec{J}=\int_{t_1}^{t_2}\vec{F}_\text{ext}\mathrm{d}t&=\int_{t_1}^{t_2}M\vec{a}_\text{COM}\mathrm{d}t\\
+            &=M\vec{v}_\text{COM}(t_2) - M\vec{v}_\text{COM}(t_1)\\
+            &=\sum_{i=1}^N\left(m_i\vec{v}_i(t_2) - m_i\vec{v}_i(t_1)\right)\\
+            &=\sum_{i=1}^N\left(\vec{p}_i(t_2) - \vec{p}_i(t_1)\right)\\
+            &=\vec{P}(t_2) - \vec{P}(t_1)=\Delta\vec{P},
+        \end{align}
+        where $\vec{P}$ denotes the total momentum of the system.
+        So the impulse-momentum theorem still holds for composite systems.
+        \begin{example}
+            Consider a baseball of mass $m=$0.3kg being thrown at a speed of 15ms$^{-1}$.
+            If the batter bats the ball at a speed of 25ms$^{-1}$ and the bat is in contact with the ball for 0.005s, what is the impulse imparted to the ball?
+            What is the average force exerted on the ball? What is the average acceleration of the ball?
+            % TODO: write this example and change it to tennis
+        \end{example}
+        % TODO: write another example with the same impulse but much longer time interval (crumple zones?)
+
+    \section{Transforming Between Reference Frames}
+        \paragraph{}
+        To transform between one frame of reference to another, we subtract the constant velocity between the frames from the position vector.
+        \begin{equation}
+            \vec{r}^\prime(t) = \vec{r}(t) - vt.
+        \end{equation}
+        We can then transform the velocity and acceleration as
+        \begin{align}
+            \vec{v}^\prime(t)&=\frac{\mathrm{d}\vec{r}^\prime(t)}{\mathrm{d}t}=\frac{\mathrm{d}\vec{r}(t)}{\mathrm{d}t}-v=\vec{v}(t)-v\\
+            \vec{a}^\prime(t)&=\frac{\mathrm{d}^2\vec{r}^\prime(t)}{\mathrm{d}t^2}=\frac{\mathrm{d}^2\vec{r}(t)}{\mathrm{d}t^2}=\vec{a}(t).
+        \end{align}
+        % TODO: put these in a definition?
+
+        \paragraph{}
+        One of the most useful reference frames to transform into is the centre of mass frame.
+
+\end{document}

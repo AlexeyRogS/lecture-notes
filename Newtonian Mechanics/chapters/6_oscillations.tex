@@ -1,8 +1,112 @@
-% Chapter 6: Oscillations
-% - oscillations (spring, linear approximation, show higher order terms)
-% - simple harmonic motion
-% - small angle pendulum
-% - physical pendula
-% - damping
-% - forced oscillations
-% - coupled oscillations / normal modes
+\documentclass[../newtonian_mechanics.tex]{subfiles}
+
+\begin{document}
+
+    \section{Simple Harmonic Motion}
+        \paragraph{}
+        Simple harmonic motion is defined as the motion determined by a force which is directly proportional to the displacement from some equilibrium position.
+        Consider a mass on a horizontal spring. This is a system which we have seen before, but we have not studied the full motion of the mass in detail.
+        The only force acting on the mass is the spring restoring force
+        % TODO: include diagram
+        \begin{equation}
+            F = -kx = ma,
+        \end{equation}
+        so by Newton II, we can write
+        \begin{equation}\label{eq-SHM-spring}
+            a = \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=-\frac{k}{m}x.
+        \end{equation}
+        The general solution to this differential equation is
+        \begin{equation}
+            x(t)=A\cos(\omega t) + B\sin(\omega t),
+        \end{equation}
+        where
+        \begin{equation}
+            \omega=\sqrt{\frac{k}{m}}.
+        \end{equation}
+        This can be rewritten as
+        \begin{equation}
+            x(t) = A\cos(\omega t + \phi),
+        \end{equation}
+        where $\phi$ is the initial phase at $t=0$.
+        Notice that $A$ is the maximum amplitude of the mass. 
+        Working out the derivatives of $x(t)$, We see that
+        \begin{align}
+            &\frac{\mathrm{d}x(t)}{\mathrm{d}t} = v(t) = -A\omega\sin(\omega t + \phi)\\
+            &\frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2} = a(t) = -A\omega^2\cos(\omega t + \phi) = -\omega^2x(t),
+        \end{align}
+        and so we have recovered the equation of motion.
+        % TODO: include graphs of position, velocity, acceleration and discussion of phase difference between them
+
+        \paragraph{}
+        % TODO: link to what has been covered earlier, should have been able to work out the period of oscillation by energy conservation previously
+        Let's work out the period of oscillation.
+        It should be equal to the time taken for the phase to change by $2\pi$.
+        Hence
+        \begin{align}
+            \omega t_0 + \phi &= \omega(t_0 + T) + \phi\\
+            \implies \omega T &= 2\pi\\
+            T &= \frac{2\pi}{\omega}.
+        \end{align}
+        Since $f=1/T$, the frequency of the oscillation is related to $\omega$, the \textbf{angular frequency}, by
+        \begin{equation}
+            \omega = 2\pi f.
+        \end{equation}
+        % TODO: note that this is the same definition as for angular velocity.
+
+        \paragraph{}
+        % TODO: move this to a new section? (energy in SHM?)
+        % TODO: make references for previous equations
+        Now consider the energy of the mass on the spring. From before, we know this is given by
+        \begin{align}
+            E &= K + U_s\\
+            &=\frac{1}{2}mv^2=\frac{1}{2}kx^2.
+        \end{align}
+        Since we now know that $x(t)=A\cos(\omega t+\phi)$ and $v(t)=-A\omega\sin(\omega t+\phi)$, we can show that
+        \begin{align}
+            E &=\frac{1}{2}m(-A\omega\sin(\omega t+\phi))^2+\frac{1}{2}k(A\cos(\omega t+\phi))^2\\
+            &=\frac{1}{2}mA^2\omega^2\sin^2(\omega t+\phi)+\frac{1}{2}kA^2\cos^2(\omega t+\phi)\\
+            &=\frac{1}{2}mA^2\left(\frac{k}{m}\right)\sin^2(\omega t+\phi)+\frac{1}{2}kA^2\cos^2(\omega t+\phi)\\
+            &=\frac{1}{2}kA^2\left(\sin^2(\omega t+\phi)+\cos^2(\omega t+\phi)\right)\\
+            &=\frac{1}{2}kA^2.
+        \end{align}
+        Where in the last line we have used the identity $\sin^2(\theta)+\cos^2(\theta)=1$.
+        Note that this is independent of time, so the total energy is conserved as we found before.
+
+        \paragraph{}
+        Let's look at a pendulum on a string of length $L$ now.
+        We are assuming that the string is massless and ignoring the effects of air resistance.
+        % TODO: include diagram and free=body diagram
+        % TODO: redo this with torques
+        Given that the arc length of the pendulum is related to the angular displacement by $s=L\theta$ and that the restoring force is $F=-mg\sin(\theta)$, we have the equation of motion:
+        \begin{equation}
+            F=m\frac{\mathrm{d}^2s}{\mathrm{d}t^2}=-mg\sin(\theta).
+        \end{equation}
+        This is a nonlinear differential equation. We will simplify this by assuming that the angle $\theta$ is small so $\sin(\theta)\approx\theta$ (small-angle approximation).
+        Then the equation of motion becomes
+        \begin{equation}
+            \frac{\mathrm{d}^2s}{\mathrm{d}t^2}=-g\theta=-\frac{g}{L}s.
+        \end{equation}
+        Note that this has the same form as equation \ref{eq-SHM-spring}, so the trajectory will have the same form!
+        \begin{equation}
+            s(t)=A\cos(\omega t+\phi),
+        \end{equation}
+        where $\omega$ in this case is given by
+        \begin{equation}
+            \omega = \sqrt{\frac{g}{L}}.
+        \end{equation}
+
+        \paragraph{}
+        As an aside, think back to uniform circular motion.
+        % TODO: include a diagram
+        An object moving with UCM has a trajectory of the form
+        \begin{equation}
+            \theta(t)=\omega t+\phi,
+        \end{equation}
+        where $\omega$ is the angular velocity and $\phi$ is the angular displacement at $t=0$.
+        If we describe this motion in cartesian coordinates, the horizontal motion takes the form
+        \begin{equation}
+            x(t) = r\cos(\omega t+\phi),
+        \end{equation}
+        which is exactly the same form as an object moving under SHM!
+
+\end{document}
