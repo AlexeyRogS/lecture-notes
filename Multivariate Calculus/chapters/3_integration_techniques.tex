@@ -1,0 +1,125 @@
+\documentclass[../multivariate_calculus.tex]{subfiles}
+
+\begin{document}
+
+    % TODO: write introduction to this chapter with recap of FTC amd integration by parts
+    % Let $u(x)$ and $v(x)$ be functions, then $(u(x)v(x))^\prime=u^\prime(x)v(x)+v^\prime(x)u(x)$.
+    % Integrating this equation, we get
+    % \begin{equation}
+    %     u(x)v(x)=\int u^\prime(x)v(x)\mathrm{d}x+\int u(x)v^\prime(x)\mathrm{d}x.
+    % \end{equation}
+    % So if we have a function of the form $f(x)=u(x)v^\prime(x)$, then
+    % \begin{equation}
+    %     \int f(x)\mathrm{d}x=u(x)v(x)-\int u(x)^\prime v(x)\mathrm{d}x.
+    % \end{equation}
+    % \paragraph{}
+    % Completing the square is also important.
+    % \begin{example}
+    %     \begin{equation*}
+    %         \int\frac{1}{x^2+bx+c}\,dx = \int\frac{1}{(x+k)^2+l^2}\,dx.
+    %     \end{equation*}
+    % \end{example}
+    % Rationalise the numerator (need to be careful as we can only split the roots if both quantities are non-negative).
+    % \begin{example}
+    %     Multiply the top and bottom by $\sqrt{u(x)}$.
+    %     \begin{equation*}
+    %         \int\sqrt{\frac{u(x)}{v(x)}}\,dx = \int\frac{u(x)}{\sqrt{u(x)v(x)}}\,dx.
+    %     \end{equation*}
+    % \end{example}
+
+    \section{Rational Functions and Square Roots of Rational Functions}
+    % TODO: split this section further into rational functions and then radicals of rational functions
+        \paragraph{}
+        The first thing to look for is if the denominator can be factorised. 
+        In this case, the first action should be to split the fraction up into partial fractions.
+        If $f(x)=\frac{p(x)}{q(x)}$ with $\deg(p)<\deg(q)$ and $q(x)=(x-a_1)(x-a_2)\dots(x-a_n)$, then
+        \begin{equation}
+            f(x)=\frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\dots+\frac{A_n}{x-a_n}.
+        \end{equation}
+        \begin{example}
+            \begin{equation}
+                \frac{1}{x^2-1} = \frac{A}{x-1}+\frac{B}{x+1}=\frac{1}{2(x-1)}+\frac{1}{2(x+1)}.
+            \end{equation}
+        \end{example}
+        \begin{example}
+            \begin{equation}
+                \frac{3x+10}{(x-2)(x^2+4)} = \frac{A}{x-2} + \frac{Bx+C}{x^2+4}
+            \end{equation}
+            \begin{align}
+                \int\frac{3x+10}{(x-2)(x^2+4)}\,dx &= \int\left(\frac{2}{x-2}+\frac{-2x-1}{x^2+4}\right)\,dx\\
+                &=\int\left(\frac{2}{x-2}-\frac{2x}{x^2+4}-\frac{1}{x^2+4}\right)\,dx\\
+                &=2\ln\abs{x-2}-\ln(x^2+4)-\frac{1}{2}\tan^{-1}\left(\frac{x}{2}\right)+c.
+            \end{align}
+        \end{example}
+
+    \section{Integration by Substitution}
+        \paragraph{}
+        If $f(x)=h(g(x))g^\prime(x)$ where $h(x)$ is a function we know the integral of, we can use the technique of substitution.
+        Note that
+        \begin{equation}
+            \frac{\mathrm{d}}{\mathrm{d}x}(H(g(x)))=h(g(x))g^\prime(x),
+        \end{equation}
+        therefore
+        \begin{equation}
+            \int f(x)\mathrm{d}x=H(g(x))+c.
+        \end{equation}
+        To solve, make the substitution $u=g(x)$ to use this formula.
+        \begin{center}
+            \[\begin{array}{|c|c|}
+                \hline
+                \text{Expression inside Integral} & \text{Suggested Substitution} \\
+                \hline
+                \sqrt{a^2-x^2} & x=a\sin\theta\ \text{or}\ a\cos\theta\\ 
+                a^2 + x^2 & x=a\tan\theta \\
+                \sqrt{x^2-a^2} & x=a\cosh\theta \\
+                \sqrt{x^2+a^2} & x=a\sinh\theta \\
+                a^2-x^2 & x=a\tan\theta \\
+                \hline
+            \end{array}\]
+        \end{center}
+
+    \section{Derivatives of Trigonometric Functions}
+        \paragraph{}
+        Some fractions integrate to inverse trigonometric formulae.
+        \begin{example}
+            Note that $\sqrt{1-x^2}$ is the equation for the unit circle.
+            \begin{equation*}
+                \int\frac{1}{\sqrt{1-x^2}}\,dx = \sin^{-1}x+c
+            \end{equation*}
+            \begin{equation*}
+                \int\frac{1}{1+x^2}\,dx = \tan^{-1}x+c
+            \end{equation*}
+        \end{example}
+        \begin{align*}
+            &\int\frac{f^\prime(x)}{\sqrt{a^2-\left[f(x)\right]^2}}\,d = \sin^{-1}\frac{f(x)}{a}+c \\
+            &\int\frac{f^\prime(x)}{a^2+\left[f(x)\right]^2}\,dx = \frac{1}{a}\tan^{-1}\frac{f(x)}{a}+c
+        \end{align*}
+        
+        \paragraph{}
+        Some other fractions integrate to logs.
+        \begin{example}
+            Possible substitution: let $x=\sqrt{k}\tan\theta$.
+            \begin{equation*}
+                \int\frac{1}{\sqrt{x^2\pm k}}\,dx = \ln\abs{x+\sqrt{x^2\pm k}}+c.
+            \end{equation*}
+        \end{example}
+
+
+    \section{Standard Antiderivatives}
+        \paragraph{}
+        Here are some standard antiderivatives.
+        \begin{align}
+            \int e^{ax}\mathrm{d}x&=\frac{1}{a}e^{ax}+c\\
+            \int\sin(ax)\mathrm{d}x&=-\frac{1}{a}\cos(ax)+c\\
+            \int\cos(ax)\mathrm{d}x&=\frac{1}{a}\sin(ax)+c\\
+            \int\tan(ax)\mathrm{d}x&=-\frac{1}{a}\ln\abs{\cos(ax)}+c\\
+            \int\sec^2(ax)\mathrm{d}&x=\frac{1}{a}\tan(ax)+c\\
+            \int\frac{1}{\sqrt{a^2-x^2}}dx&=\sin^{-1}\left(\frac{x}{\abs{a}}\right)+c \\
+            \int\frac{-1}{\sqrt{1-x^2}}dx&=\cos^{-1}(x)+c \\
+            \int\frac{1}{a^2+x^2}dx&=\frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+c \\
+            \int\frac{1}{\sqrt{a^2+x^2}}dx&=\sinh^{-1}\left(\frac{x}{\abs{a}}\right)+c \\
+            \int\frac{1}{\sqrt{x^2-1}}dx&=\cosh^{-1}(x)+c \\
+            \int\frac{1}{1-x^2}dx&=\tanh^{-1}(x)+c.
+        \end{align}
+
+\end{document}
