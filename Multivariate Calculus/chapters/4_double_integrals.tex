@@ -1,0 +1,186 @@
+\documentclass[../multivariate_calculus.tex]{subfiles}
+
+\begin{document}
+
+    \section{Multivariate Integration}
+        \paragraph{}
+        % TODO: add a section talking about the necessicity for Lebesgue integrals, etc.
+        When integrating over more that one variable, we integrate over an \textbf{area element} $\mathrm{d}A$ or \textbf{volume element} $\mathrm{d}V$ as opposed to a \textbf{line element} $\mathrm{d}x$ in 1D.
+        Just as an integral of a 1D function represents the \textit{area} under a curve, an integral of a 2D function represents the \textit{volume} under a surface.
+        % TODO: add diagram to illustrate this
+        We can also find the mean value of a function over a region by
+        \begin{equation}
+            \bar{f}(x,y)=\frac{\iint_A f(x,y)\mathrm{d}A}{\iint_A\mathrm{d}A}.
+        \end{equation}
+
+    \section{Integration over Rectangular Regions}
+        \paragraph{}
+        A rectangular region is bounded by four sets of cartesian coordinates.
+        % TODO: add diagram to illustrate this
+        The area element is given by $\mathrm{d}A=\mathrm{d}x\mathrm{d}y$.
+        \begin{equation}
+            I=\int_{y=b}^{y=d}\int_{x=a}^{x=c}f(x,y)\mathrm{d}x\mathrm{d}y.
+        \end{equation}
+        We can evaluate this integral by choosing one of the 1D integrals to evaluate first while keeping the other variable constant, just like we do when calculating partial derivatives.
+        If we can find $F(x,y)$ satisfying $\pder{F}{x}=f(x,y)$, then $g(y)=F(c,y)-F(a,y)=F(x,y)+c(y)$.
+        \begin{align}
+            &\int_a^c f(x,y)\mathrm{d}x=g(y)\\
+            &\implies I=\int_b^d g(y)\mathrm{d}y.
+        \end{align}
+        This is possible due to \textbf{Fubini's theorem}
+        % TODO: flesh out this discussion and include discussion of Fubini's theorem
+        \begin{example}
+            Calculate the integral of $f(x,y)=\sqrt{xy}$ over a rectangular region with opposite corners at $(1,4)$ and $(4,9)$.
+            \begin{equation}
+                I=\int_4^9\int_1^4\sqrt{xy}\mathrm{d}x\mathrm{d}y=\int_4^9\left.\frac{2}{3}\sqrt{x^3y}\right|_1^4\mathrm{d}y=\int_4^9\frac{14}{3}\sqrt{y}\mathrm{d}y=\left.\frac{37}{9}y^{\frac{3}{2}}\right|_4^9=\frac{532}{9}.
+            \end{equation}
+        \end{example}
+        \begin{example}
+            Calculate the integral of $f(x,y)=\frac{y}{(x+y^2)^2}$ over a rectangular region with opposite corners at $(1,4)$ and $(4,9)$.
+            \begin{equation}
+                I=\int_1^2\int_0^1\frac{y}{(x+y^2)^2}\mathrm{d}x\mathrm{d}y=\int_1^2\left.\frac{-y}{x+y^2}\right|_0^1\mathrm{d}y=\left.\ln y-\frac{1}{2}\ln(1+y^2)\right|_1^2=\frac{1}{2}\ln\frac{8}{5}.
+            \end{equation}
+        \end{example}
+        This second example is a non-seperable function, which influences which order it is easier to do the integrals in.
+
+    \section{Regions Bounded by Lines and Curves}
+        \paragraph{}
+        To integrate over a non-rectangular region in cartesian coordinates, the order in which we integrate matters.
+        This is because the limits of the inner integral will \textit{depend} on the value of the outer variable.
+        For example, say we want to calculate the area of a triangular region.
+        % TODO: add diagram to illustate this
+        Suppose the triangle has corners at the origin, $(1,0)$ and $(0,1)$.
+        The slope therefore is given by the equation $x+y=1$.
+        It doesn't change the difficulty which variable we choose to integrate over first here so let's pick $x$ as the inner integral.
+        The outer limits for $y$ are 0 to 1.
+        For a fixed value of $y$, $x$ goes from 0 to $1-y$.
+        \begin{equation}
+            \implies A=\int_0^1\int_0^{1-y}\mathrm{d}x\mathrm{d}y=\int_0^1(1-y)\mathrm{d}y=y-\left.\frac{1}{2}y^2\right|_0^1=\frac{1}{2}.
+        \end{equation}
+        \begin{example}
+            Now consider integrating the function $f(x,y)=\frac{1-y}{1-x}$ over the region above.
+            It will be easier if we switch the order of integration here, so we integrate over $y$ first:
+            \begin{align}
+                \int_0^1\int_0^{1-x}\frac{1-y}{1-x}\mathrm{d}y\mathrm{d}x&=\int_0^1\frac{1}{1-x}\left[y-\frac{1}{2}y^2\right]_0^{1-x}\mathrm{d}x\\
+                &=\int_0^1\frac{1}{2}(1+x)\mathrm{d}x=\left.\frac{1}{2}\left(x+\frac{1}{2}x^2\right)\right|_0^1=\frac{3}{4}.
+            \end{align}
+        \end{example}
+        \begin{example}
+            Find the integral of the function $f(x,y)=e^{-y^2}$ over a triangular region bounded by the lines $x=0$, $y=x$ and $y=1$.
+            % TODO: include diagram for this
+            This function has no antiderivative, so we need to do the $x$ integral first.
+            $y$ goes from 0 to 1 and $x$ goes from 0 to $y$ for a fixed value of $y$.
+            \begin{align}
+                \int_0^1\int_0^y e^{-y^2}\mathrm{d}x\mathrm{d}y&=\int_0^1\left.xe^{-y^2}\right|_0^y\mathrm{d}y\\
+                &=\int_0^1 ye^{-y^2}\mathrm{d}y=\frac{1}{2}\left(1-\frac{1}{e}\right).
+            \end{align}
+        \end{example}
+        \begin{example}
+            Find the mean value of $x$ and $y$ over a region bounded by $y=x$ and $y=4x(1-x)$.
+            % TODO: include diagram for this
+            To avoid having to split the region into two, make $x$ the outer variable.
+            Hence, $x$ goes from 0 to $\frac{3}{4}$ (show this) and $y$ goes from $x$ to $4x(1-x)$.
+            We have three integrals to evaluate: 1, $x$, and $y$ over the region.
+            \begin{align}
+                \int_0^\frac{3}{4}\int_x^{4x(1-x)}\mathrm{d}y\mathrm{d}x&=\int_0^\frac{3}{4}(3x-4x^2)\mathrm{d}x=\left[\frac{3}{2}x^2-\frac{4}{3}x^3\right]_0^\frac{3}{4}=\frac{9}{32}\\
+                \int_0^\frac{3}{4}\int_x^{4x(1-x)}x\mathrm{d}y\mathrm{d}x&=\int_0^\frac{3}{4}(3x^2-4x^3)\mathrm{d}x=\left[x^3-x^4\right]_0^\frac{3}{4}=\frac{27}{256}\\
+                \int_0^\frac{3}{4}\int_x^{4x(1-x)}y\mathrm{d}y\mathrm{d}x&=\int_0^\frac{3}{4}\left(8x^4-16x^3+\frac{15}{2}x^2\right)\mathrm{d}x=\left[\frac{8}{5}x^5-4x^4+\frac{15}{6}x^3\right]_0^\frac{3}{4}\\
+                &=\frac{27}{160}.
+            \end{align}
+            So using the formula from before, we have
+            % TODO: reference this formula and also justify it
+            \begin{equation}
+                \bar{x}=\frac{37/256}{9/32}=\frac{3}{8},\quad\bar{y}=\frac{27/160}{9/32}=\frac{3}{5}.
+            \end{equation}
+        \end{example}
+
+    \section{Integration using Plane Polar Coordinates}
+        \paragraph{}
+        Just like in 1D we can make a substitution to simplify the problem, in more than one dimension we can change the coordinate system to make things easier.
+        One of the most common changes in coordinates is into polar coordinates.
+        In order to change, we need to figure out what the area element, which is given by $\mathrm{d}A=\mathrm{d}x\mathrm{d}y$ in cartesian coordinates, is represented by in polar coordinates.
+        
+        \paragraph{}
+        % TODO: include a diagram to illustrate this
+        Consider an annulus of thickness $\mathrm{d}r$ and consider a section (is this the right word?) of the annulus with thickness $\mathrm{d}\theta$.
+        The area of the annulus is given by the difference in the area of two circles:
+        \begin{equation}
+            \pi[(r+\mathrm{d}r)^2-r^2]=\pi[2r\mathrm{d}r+\mathrm{d}r^2]=2\pi r\mathrm{d}r\text{ as }\mathrm{d}r\to 0.
+        \end{equation}
+        The fraction of a circle between $\theta$ and $\theta+\mathrm{d}\theta$ is given by $\frac{\mathrm{d}\theta}{2\pi}$, so the area of the infinitesimal area is
+        \begin{equation}
+            \mathrm{d}A=\frac{\mathrm{d}\theta}{2\pi}2\pi r\mathrm{d}r=r\mathrm{d}r\mathrm{d}\theta.
+        \end{equation}
+
+        \paragraph{}
+        % TODO: write an explanation and discussion of the Jacobian
+        The more general approach to calculating the new area element in another coordinate system is to use the \textbf{Jacobian}.
+        For a transformation between two cordinates $(x,y)\to(u,v)$, the area element $\mathrm{d}A$ is given by
+        \begin{equation}
+            \mathrm{d}A=J\mathrm{d}u\mathrm{d}v
+        \end{equation},
+        where
+        \begin{equation}
+            J=\begin{vmatrix}
+                \pder{x}{u} & \pder{x}{v} \\
+                \pder{y}{u} & \pder{y}{v}
+            \end{vmatrix}=\left|\pder{x}{u}\pder{y}{v}-\pder{x}{v}\pder{y}{u}\right|.
+        \end{equation}
+        Hence in polar coordinates $x=r\cos\theta$, $y=r\sin\theta$, we have
+        \begin{equation}
+            \mathrm{d}A=\left|\pder{x}{r}\pder{y}{\theta}-\pder{x}{\theta}\pder{y}{r}\right|\mathrm{d}r\mathrm{d}\theta=\left|r\cos^2\theta-(-r\sin^2\theta)\right|\mathrm{d}r\mathrm{d}\theta=r\mathrm{d}r\mathrm{d}\theta.
+        \end{equation}
+        \begin{example}
+            Find the integral of $\sqrt{x^2+y^2}$ over the sector between $\theta=\frac{\pi}{6}$ and $\theta=\frac{\pi}{3}$ for $r\leq a$.
+            This would be a very tricky integral to evaluate in cartesian coordinates but in polar coordinates the region is extremely simple.
+            The limits of the integrals don't depend on $r$ and $\theta$, $r$ goes from 0 to $a$ and $\theta$ goes from $\frac{\pi}{6}$ to $\frac{\pi}{3}$.
+            % TODO: include diagram for this
+            The function also has a very simple form in polar coordinates $\sqrt{x^2+y^2}=r$.
+            \begin{equation}
+                \int_\frac{\pi}{6}^\frac{\pi}{3}\int_0^a r^2\mathrm{d}r\mathrm{d}\theta=\frac{\pi}{6}\int_0^a r^2\mathrm{d}r=\frac{\pi a^3}{18}.
+            \end{equation}
+        \end{example}
+        \begin{example}
+            Calculate the integral of $x^2$ over a circular disc of radius $a$.
+            Here, $\theta$ goes from 0 to $2\pi$ and $r$ goes from 0 to $a$.
+            % TODO: include diagram for this
+            \begin{equation}
+                \int_0^{2\pi}\int_0^a r^2\cos^2\theta r\mathrm{d}r\mathrm{d}\theta=\int_0^{2\pi}\frac{a^4}{4}\cos^2\theta\mathrm{d}\theta=\frac{\pi}{4}a^4.
+            \end{equation}
+        \end{example}
+        \begin{example}
+            Find the area bounded by two spirals given by $r_1(\theta)=a\theta^\frac{1}{2}$ and $r_2(\theta)=b\theta^\frac{1}{2}$, where $b>a>0$.
+            % TODO: include diagram for this
+            This is no longer a circularly-symmetric area region, so the order in which we integrate matters because the inner and outer limits will depend on each other.
+            If we choose $r$ as the inner variable, then the calculation is easier because $r_1$ and $r_2$ are given purely in terms of $\theta$ and so they will be the inner limits for fixed $\theta$.
+            \begin{align}
+                A=\int_0^{2\pi}\int_{r_1(\theta)}^{r_2(\theta)}r\mathrm{d}r\mathrm{d}\theta&=\int_0^{2\pi}\left.\frac{1}{2}r^2\right|_{r_1(\theta)}^{r_2(\theta)}\mathrm{d}\theta\\
+                &=\frac{1}{2}\int_0^{2\pi}(b^2\theta-a^2\theta)\mathrm{d}\theta\\
+                &=\left.\frac{1}{4}(b^2-a^2)\theta^2\right|_0^{2\pi}=\frac{1}{4}(b^2-a^2)(4\pi^2)=\pi^2(b^2-a^2).
+            \end{align}
+        \end{example}
+        \begin{example}
+            Calculate the area of an ellipse.
+            The equation of an ellipse is $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$.
+            % TODO: include diagram for this
+            To do this, we will first simplify the equation using the change of variables $u=\frac{x}{a}$, $v=\frac{y}{b}$.
+            Then the equation of an ellipse becomes $u^2+v^2=1$, which is the equation of a circle.
+            Note that the area element is $\mathrm{d}A=ab\mathrm{d}u\mathrm{d}v$.
+            Now our integration region is a circle so we can use polar coordinates, $u=r\cos\theta$, $v=r\sin\theta$, and the area element is given by $\mathrm{d}A=abr\mathrm{d}r\mathrm{d}\theta$.
+            Hence,
+            \begin{equation}
+                A=\int_0^{2\pi}\int_0^1 abr\mathrm{d}r\mathrm{d}\theta=\left.2\pi ab\frac{1}{2}r^2\right|_0^1=\pi ab.
+            \end{equation}
+        \end{example}
+        \begin{example}
+            Consider the integral of the function $(x^2+y^2)$ over the ellipse from the last example.
+            Using the same coordinate transformation from last time, $x^2+y^2=a^2r^2\cos^2\theta+b^2r^2\sin^2\theta$.
+            The limits are the same as in the last example.
+            Hence,
+            \begin{align}
+                \int_0^{2\pi}\int_0^1 r^3(a^2\cos^2\theta+b^2\sin^2\theta)ab\mathrm{d}r\mathrm{d}\theta&=\int_0^{2\pi}\frac{ab}{4}(a^2\cos^2\theta+b^2\sin^2\theta)\mathrm{d}\theta\\
+                &=\frac{\pi ab}{4}(a^2+b^2).
+            \end{align}
+        \end{example}
+
+\end{document}
