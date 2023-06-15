@@ -104,6 +104,41 @@
             \end{equation*}
         \end{example}
 
+    \section{Solving Integrals Using Recurrence Relations}
+        \paragraph{}
+        The following technique is useful for evaluating integrals of functions raised to an arbitrary integer power.
+        Consider the integral of $\ln x$.
+        This can be found using integration by parts:
+        \begin{equation}
+            \int\ln x\mathrm{d}x=x\ln x-x+c.
+        \end{equation}
+        Similarly, the integral of $(\ln x)^2$ is
+        \begin{equation}
+            \int(\ln x)^2\mathrm{d}x=x(\ln x)^2-2\int\ln x\mathrm{d}x.
+        \end{equation}
+        Hence the integral of $(\ln x)^n$ is given by
+        \begin{equation}
+            I_n=\int(\ln x)^n\mathrm{d}x=x(\ln x)^n-n\int(\ln x)^{n-1}\mathrm{d}x=x(\ln x)^n-nI_{n-1}.
+        \end{equation}
+        \begin{example}
+            Let $I_n=\int x^ne^x\mathrm{d}x$.
+            Integrating by parts, we get
+            \begin{equation}
+                I_n=x^ne^x-\int nx^{n-1}e^x\mathrm{d}x=x^ne^x-nI_{n-1}.
+            \end{equation}
+        \end{example}
+        \begin{example}
+            Let $I_n=\int\sin^nx\mathrm{d}x$.
+            % TODO: write this example
+        \end{example}
+        Sometimes it is possible to use this technique without using integration by parts.
+        \begin{example}
+            Consider $I_n=\int\tan^nx\mathrm{d}x$.
+            % TODO: write this example
+        \end{example}
+
+        % TODO: write section on parametric integration
+
 
     \section{Standard Antiderivatives}
         \paragraph{}
