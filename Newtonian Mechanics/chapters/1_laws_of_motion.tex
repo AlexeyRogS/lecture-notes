@@ -275,5 +275,54 @@
             If the buildings are separated by a distance $d$ and have a vertical height difference $h$, what is the minimum velocity the motorcyclist needs to make the jump?
             % TODO: complete this example
         \end{example}
+
+    \section{Gravitation}
+        \paragraph{}
+        Aside from inventing classical mechanics and calculus, Isaac Newton's most well-known contribution to science is his discovery of the universal law of gravitation.
+        % TODO: write more about how it was derived
+        % TODO: include a proper definition
+        If we consider two objects, one of which is located at the origin, then the gravitational force between the two bodies has magnitude
+        \begin{equation}
+            F=\frac{Gm_1m_2}{r^2}.
+        \end{equation}
+        % TODO: include diagram for this
+        In vectorial form, these forces form a Newton III pair.
+        \begin{align}
+            \vect{F}_{1\to2}&=-\frac{Gm_1m_2}{\abs{\vect{r}_{1\to2}}^3}\vect{r}_{1\to2}\\
+            \vect{F}_{2\to1}&=-\frac{Gm_1m_2}{\abs{\vect{r}_{2\to1}}^3}\vect{r}_{2\to1}=\frac{Gm_1m_2}{\abs{\vect{r}_{1\to2}}^3}\vect{r}_{1\to2}=-\vect{F}_{2\to1},
+        \end{align}
+        where $\vect{r}_{1\to2}=\vect{r}_{2\to1}=\vect{r}_2-\vect{r}_1$.
+        
+        \paragraph{}
+        Consider an object of mass $m$ near the surface on the Earth.
+        The radius of the Earth is very large so we can approximate the distance between the Earth and the object as simply the radius of the Earth.
+        The gravitational force which the Earth exerts on the object is given by
+        \begin{equation}
+            F_G\approx\frac{GM_\text{Earth}}{R_\text{Earth}^2}m=mg,
+        \end{equation}
+        where $g=\frac{GM_\text{Earth}}{R_\text{Earth}^2}$.
+        Thus we have recovered the weight force that we have been using for the force due to gravity.
+        If the height of the object is so large that the approximation no longer holds, then $g$ depends on the height $R_\text{Earth}+h=r$.
+        This is the same as the general case, the force only depends on the distance between the centre of the Earth and the object.
+        Now consider the case where the object is \textit{below} the surface of the Earth.
+        In this case, the mass of the Earth depends on the distance between the centre and the object.
+        The mass enclosed within a radius $r$ is given by the density multiplied by the enclosed volume:
+        \begin{equation}
+            M(r)=\frac{4}{3}\rho\pi r^3.
+        \end{equation}
+        If we assume that the density of the Earth is constant, then it is given by the total mass divided by total volume:
+        \begin{equation}
+            \rho=\frac{M_\text{Earth}}{\frac{4}{3}\pi R_\text{Earth}^3}.
+        \end{equation}
+        Thus, $g(r)$ is given by
+        \begin{align}
+            g(r)&=\frac{GM(r)}{r^2}=\frac{G}{r^2}\frac{M_\text{Earth}}{R_\text{Earth}^3}r^3\\
+            &=\frac{GM_\text{Earth}}{R_\text{Earth}^3}r.
+        \end{align}
+        % TODO: include diagram of g(r)
+        \begin{example}
+            Calculate $g$ at the surface of Earth.
+            % TODO: complete this example
+        \end{example}
         
 \end{document}

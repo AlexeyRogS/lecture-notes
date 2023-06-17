@@ -235,6 +235,31 @@
             % TODO: write this example
         \end{example}
 
+        \paragraph{}
+        % TODO: make this section more rigorous
+        Consider the work done by the the gravitational force between two bodies as we move them closer or further apart.
+        The gravitational force acts in the opposite direction to the displacement, so the infinitesimal amount of work done for an infinitesimal displacement is
+        \begin{align}
+            \mathrm{d}W&=\vect{F}_G\cdot\mathrm{d}\vect{r}\\
+            &=-F_G\mathrm{d}r\\
+            &=-\frac{Gm_1m_2}{r^2}\mathrm{d}r.
+        \end{align}
+        Then the total work done on an object by the gravitational force is
+        \begin{align}
+            W=\int\mathrm{d}W&=-\int_{r_1}^{r_2}\frac{Gm_1m_2}{r^2}\mathrm{d}r\\
+            &=\left.\frac{Gm_1m_2}{r}\right|_{r_1}^{r_2}=\frac{Gm_1m_2}{r_2}-\frac{Gm_1m_2}{r_1}.
+        \end{align}
+        Since this only depends on the initial and final positions, the law of universal gravitation is a conservative force and we can define the change in \textbf{gravitational potential energy} as
+        \begin{equation}
+            \Delta U_G=-W=\frac{Gm_1m_2}{r_1}-\frac{Gm_1m_2}{r_2}.
+        \end{equation}
+        If we choose $U_G$ to be 0 at $r=\infty$, then
+        \begin{equation}
+            U_G(r)=-\frac{Gm_1m_2}{r}.
+        \end{equation}
+        % TODO: include discussion of choosing zero-point
+        If we differentiate this with respect to $r$, we get the law of universal gravitation as expected.
+
     \section{Collisions}
         \paragraph{}
         A collision is an interaction between two objects over a short time interval.
