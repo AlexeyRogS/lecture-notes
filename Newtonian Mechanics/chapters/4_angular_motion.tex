@@ -1,7 +1,158 @@
-% Chapter 3: Angular Motion
-% - coordinate systems (cylindrical/spherical)
-% - circular motion
-% - angular kinematics
-% - torques
-% - gravitation
-% - central forces
+\documentclass[../newtonian_mechanics.tex]{subfiles}
+
+\begin{document}
+
+    \section{Circular Motion}
+        \paragraph{}
+        We have studied in great detail the mechanics of objects travelling in straight lines.
+        Now we want to extend this to more general situations where objects can move along curved paths.
+        The simplest case of a curved path is circular motion.
+        Suppose we have an object moving in a circular path.
+        Instead of describing its trajectory as a 2D vector in cartesian coordinates, it is much simpler to describe its trajectory in \textbf{polar coordinates}.
+        % TODO: include diagram for this
+        The position of the object in 2D space is described by the distance from the origin and the angle which the position vector makes with the $x$ axis.
+        In circular motion, the distance from the centre is constant so the 2D motion is reduced to a 1D problem.
+        We can then define an \textit{angular displacement} which is given in terms of the angle.
+        \begin{definition}
+            The \textbf{angular displacement} of an object is the difference in angle to the $x$ axis between two times $t_1$ and $t_2>t_1$.
+            \begin{equation}
+                \Delta\theta=\theta(t_2)-\theta(t_1)=\theta_2-\theta_1.
+            \end{equation}
+        \end{definition}
+        Now consider the velocity of the object, analogously to the linear case, we can define the angular velocity as the rate of change of angular displacement.
+        \begin{definition}
+            The \textbf{instananeous angular velocity} of an object is defined as the time derivative of angular displacement.
+            \begin{equation}
+                \omega(t)=\lim_{\Delta t\to0}\frac{\theta(t+\Delta t)-\theta(t)}{\Delta t}=\der{x(t)}{t}.
+            \end{equation}
+        \end{definition}
+        Likewise, the angular acceleration is given by the rate of change of angular velocity.
+        \begin{definition}
+            The \textbf{instaneous angular acceleration} of an object is defined as the time derivative of angular velocity.
+            \begin{equation}
+                \alpha(t)=\lim_{\Delta t\to0}\frac{\omega(t+\Delta t)-\omega(t)}{\Delta t}=\der{\omega(t)}{t}=\dertwo{\theta(t)}{t}.
+            \end{equation}
+        \end{definition}
+        Again analogously to the linear case, we define the average angular velocity and angular acceleration as an integral.
+        \begin{align}
+            \bar{\omega}(t)&=\frac{\Delta\theta}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\omega(t)\mathrm{d}t\\
+            \bar{\alpha}(t)&=\frac{\Delta\omega}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\alpha(t)\mathrm{d}t.
+        \end{align}
+
+    \section{Constant Angular Acceleration}
+        \paragraph{}
+        % TODO: make references to equations in same section in chapter 1
+        In the case where we have a constant angular acceleration, we can derive a set of equation analogous to the SUVAT equations for linear motion.
+        From the equation for average acceleration above, we get
+        \begin{equation}
+            \Delta\omega=\omega(t)-\omega_0=\alpha t.
+        \end{equation}
+        Then from the definition of angular displacement,
+        \begin{align}
+            \Delta\theta&=\int_{t_1}^{t_2}(\omega_0+\alpha t)\mathrm{d}t\\
+            &=\omega_0t+\frac{1}{2}\alpha t^2\\
+            \implies\theta(t)&=\theta_0+\omega_0t+\frac{1}{2}\alpha t^2.
+        \end{align}
+        Squaring the first equation and substituting it into the second gives the last equation:
+        \begin{equation}
+            \omega^2(t)=\omega_0^2+2\alpha\theta(t).
+        \end{equation}
+
+    \section{Relating Linear and Angular Quantities}
+        \paragraph{}
+        The arc length along a circle is given by $s=r\theta$, where $r$ is the radius of the circle and $\theta$ is the angle.
+        For an object travelling in a circular path, the arc length is the displacement $s(t)$.
+        Thus, the velocity along the path is given as
+        \begin{equation}
+            v=\der{s}{t}=r\der{\theta}{t}=r\omega.
+        \end{equation}
+        Similarly, the acceleration is given by
+        \begin{equation}
+            a=\der{v}{t}=r\der{\omega}{t}=r\alpha.
+        \end{equation}
+        % TODO: derive vector versions of these quantites
+        % TODO: rename this next section "Uniform Circular Motion"?
+        Let's look at things from a vector perspective in the case where the object is moving with a constant speed, i.e. $\alpha=0$.
+        In this case, $\omega$ is constant and so we have $\theta=\omega t$.
+        Using some trigonometry, we can see that the position vector, velocity and acceleration in cartesian coordinates is given by
+        \begin{align}
+            \vect{r}=r\cos(\omega t)\ihat+r\sin(\omega t)\jhat\\
+            \vect{v}=\der{\vect{r}}{t}=-r\omega\sin(\omega t)\ihat+r\omega\cos(\omega t)\jhat\\
+            \vect{a}=\der{\vect{v}}{t}=-r\omega^2\cos(\omega t)\ihat-r\omega^2\sin(\omega t)\jhat.
+        \end{align}
+        As a sanity check, we can see that
+        \begin{align}
+            \abs{\vect{v}}=\sqrt{v_x^2+v_y^2}&=\sqrt{(-r\omega\sin(\omega t))^2+(r\omega\cos(\omega t))^2}\\
+            &=\sqrt{r^2\omega^2(\sin^2(\omega t)+\cos^2(\omega t))}=r\omega,
+        \end{align}
+        which is what we found before.
+        Let's look at the dot product of the vectors.
+        \begin{align}
+            \vect{v}\cdot\vect{r}&=(-r\omega\sin(\omega t)\ihat+r\omega\cos(\omega t)\jhat)\cdot(r\cos(\omega t)\ihat+r\sin(\omega t)\jhat)\\
+            &=-r^2\omega\sin(\omega t)\cos(\omega t)+r^2\omega\sin(\omega t)\cos(\omega t)\\
+            &=0.
+        \end{align}
+        Hence the velocity and position vectors are perpendicular.
+        This makes sense because as we know from before, the velocity is always tangent to the trajectory, which corresponds to being perpendicular to the position vector in the case of a circle.
+        Finally, notice that
+        \begin{equation}
+            \vect{a}=-\omega^2\vect{r}.
+        \end{equation}
+        The acceleration is antiparallel to the position vector.
+        The magnitude of the acceleration is
+        \begin{align}
+            \abs{\vect{a}}=\sqrt{a_x^2+a_y^2}&=\sqrt{(-r\omega^2\cos(\omega t))^2+(-r\omega^2\sin(\omega t))^2}\\
+            &=\sqrt{r^2\omega^4(\sin^2(\omega t)+\cos^2(\omega t))}\\
+            &=r\omega^2=\frac{v^2}{r}.
+        \end{align}
+        Thus the magnitude of the acceleration does not change over time, but the direction constantly changes as the object moves on its circular path.
+        By Newton's second law, a nonzero acceleration implies an unbalanced force.
+        This force which has constant magnitude and constantly changing direction is what keeps the object moving on its circular path and is known as the \textbf{centripetal force}.
+        It is given by
+        \begin{equation}
+            \vect{F}_\text{centripetal}=m\vect{a}=-\frac{mv^2}{r}\hat{r}.
+        \end{equation}
+        \begin{example}
+            Consider a child on a merry-go-round.
+            If the platform is rotating at 60rpm and the child is holding on, what is the force on the child's arm?
+            % TODO: complete this example
+        \end{example}
+        \begin{example}
+            Consider a conical pendulum. 
+            If the bob of mass of 200g on a string of length 50cm is swinging around at a frequency of 1 rotation per second, what is the angle that the pendulum makes with the vertical?
+            % TODO: complete this example
+        \end{example}
+        \begin{example}
+            Consider a car going round a circular bend.
+            Find the maximum velocity that the car can take the bend at without skidding.
+            % TODO: complete this example
+        \end{example}
+        \begin{example}
+            Consider a ball rolling on a circular banked curve.
+            What is the speed required to maintain a constant height on the curve as a function on the banking angle?
+            % TODO: complete this example 
+        \end{example}
+        This next example uses the concept of energy conservation in combination with the traditional method of comparing forces to solve the problem.
+        \begin{example}
+            Consider a mass on a string.
+            The mass starts hanging vertically downwards, then it gets projected sideways at a speed $v_0$.
+            When the angle between the string and the vertical is $120^\circ$, the string becomes slack and the mass falls.
+            Find the initial speed $v_0$ in terms of the length of the string.
+            % TODO: complete this example
+            First use energy conservation to relate the change in kinetic energy to the change in gravitational potential energy.
+            % TODO: explain why this is valid since gravitational force is conservative and centripetal force doesn't change magnitude of velocity
+            Then evaluate the forces at the top of the path to get a formula for the final velocity.
+            Finally use the conservation of energy to solve for $v_0$.
+
+            \paragraph{}
+            How fast would the mass haves to be projected to get to the top of the loop?
+        \end{example}
+
+    \section{Non-uniform Angular Acceleration}
+        \paragraph{}
+        Suppose now that the angular acceleration $\alpha$ changes with time.
+        % TODO: include derivation of general motion in 2D formulae
+
+    % TODO: mechanics of a spool
+
+\end{document}
