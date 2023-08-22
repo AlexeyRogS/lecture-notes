@@ -1,0 +1,95 @@
+\documentclass[../abstract_algebra.tex]{subfiles}
+
+\begin{document}
+
+    \section{Divisors \& GCD}
+        \paragraph{}
+        Let $a,b$ be integers. Then we say that $a$ \textbf{divides} $b$, or $a$ is a \textbf{divisor} of $b$, if $b=ac$ for some other integer $c$.
+        We write $a|b$.
+        Assuming one of $a$ and $b$ is not zero, then the greatest common divisor $d=\gcd(a,b)$ is defined as the largest integer that divides both $a$ and $b$.
+        If $\gcd(a,b)=1$ then we say that $a$ and $b$ are coprime, meaning they have no common divisors (apart from 1).
+
+        \paragraph{}
+        Note that every integer divides 0, since $a\cdot0=0$, so if $b\neq0$ and $d|b$ then $\abs{d}\leq b$.
+        Thus if one of $a$ and $b$ are nonzero then there are finitely many common divisors and hence $\gcd(a,b)$ is well defined for any two integers.
+        Also note that the set of divisors of $b$ and $-b$ are the same since if $b=ac$, then $-b=a(-c)$.
+        So $a|b\iff a|(-b)$.
+        If $b\neq0$, then $\gcd(b,0)=\abs{b}$.
+        Finally note that $\gcd(a,b)=\gcd(b,a)$.
+
+    \section{Euclidean Algorithm}
+        \paragraph{}
+        We now describe a process for obtaining the greatest common divisor of two integers.
+        This is known as the \textbf{Euclidean algorithm}.
+        Let $a,b$ be integers with $a\geq b>0$.
+        \begin{enumerate}
+            \item Define $a_1=a,b_1=b$. Divide $a_1$ by $b_1$ to find quotient and remainder, $a_1=b_1q_1+r_1$.
+            \item Repeat this step by defining $a_n=b_{n-1},b_n=r_{n-1}$. Then once again divide $a_n$ by $b_1$ to get $a_n=b_nq_n+r_n$.
+            \item Once we get $r_k=0$ for some $k$, then $\gcd(a,b)=r_{k-1}$.
+        \end{enumerate}
+        % TODO: do these labels properly (step n not step 2)
+
+        \paragraph{}
+        Let's verify that this algorithm actually works and finishes in a finite amount of time.
+        First we will need a simple lemma.
+        \begin{lemma}
+            Let $a=bq+r$ with $a\neq0$. Then $\gcd(a,b)=\gcd(b,r)$.
+        \end{lemma}
+        \begin{proof}
+            Since $a\neq0$, $b$ and $r$ are not both zero.
+            Hence we can define $d_1=\gcd(a,b)$ and $d_2=\gcd(b,r)$.
+            Now we want to show that $d_1=d_2$.
+
+            \paragraph{}
+            Note that by definition, $d_1|a$ and $d_1|b$, so $a=xd_1$ and $b=yd_1$ for some integers $x$ and $y$.
+            Then $r=a-bq=xd_1-yd_1q=(x-yq)d_1$, so $d_1|r$ and $d_1\leq d_2$ since $d_2=\gcd(b,r)$.
+            Also $d_2|b$ and $d_2|r$, so $d_2|bq+r=a$.
+            Therefore $d_2\leq d_1=gcd(a,b)$.
+            Hence $d_1=d_2$.
+        \end{proof}
+        \begin{theorem}
+            The Euclidean algorithm works.
+        \end{theorem}
+        \begin{proof}
+            Let $a,b$ be integers with $a\geq b>0$. Now apply the Euclidean algorithm.
+            This generates a sequence of pairs of integers $a_n,b_n$ defined by $a_1=a$, $b_1=b$, $a_n=b_{n-1}$, $b_n=r_{n-1}$, where $a_{n-1}=b_{n-1}q_{n-1}+r_{n-1}$ and $0\leq r_{n-1}<b_{n-1}$.
+            Observe that $b_n<b_{n-1}$, so the sequence of $b_n$ is monotonically decreasing and since they are all positive, the sequence is finite.
+            By applying the lemma to $a_{n-1}$, we see that
+            \begin{align}
+                a_{n-1}=b_{n-1}q_{n-1}+r_{n-1}\implies\gcd(a_{n-1},b_{n-1})&=\gcd(b_{n-1},r_{n-1})\\
+                &=\gcd(a_n,b_n)
+            \end{align}
+            So $\gcd(a,b)=\gcd(a_1,b_1)=\dots=\gcd(a_k,b_k)$.
+            At step $k$, $r_k=0$, so $a_k=b_kq_k$ and hence any integer dividing $b_k$ will also divide $a_k$, therefore $\gcd(a_k,b_k)=b_k=r_{k-1}$.
+        \end{proof}
+
+    \section{Bezout's Identity}
+        \paragraph{}
+        We make the following claim.
+        Let $a,b\in\ZZ$, not both zero. Then there exists integers $u,v$ such that $\gcd(a,b)=ua+vb$.
+        If one of $a$ and $b$ is zero, say $b$, then $\gcd(a,b)=\gcd(a,0)=a=1\cdot a+0\cdot b$.
+        Also note that if $\gcd(a,b)=ua+vb$, then $\gcd(-a,b)=\gcd(a,b)=ua+vb=(-u)(-a)+vb$, and similarly for $b$, so we can assume without loss of generality that $a\geq b>0$.
+        \begin{lemma}
+            The integers $a_n$, $b_n$ that result from the Euclidean algorithm have the form $ua+vb$ for some integers $u$ and $v$.
+        \end{lemma}
+        \begin{proof}
+            We can prove this by induction on $n$.
+            
+            \paragraph{}
+            Let $n=1$. Then $a_1=a=1\cdot a+0\cdot b$ and $b_1=b=0\cdot a+1\cdot b$.
+
+            \paragraph{}
+            Now assume $a_{n-1}=ua+vb$ and $b_{n-1}=u^\prime a+v^\prime b$ with $u,v,u^\prime,v^\prime\in\ZZ$.
+            Then
+            \begin{align}
+                a_n&=b_{n-1}\\
+                b_n&=r_{n-1}=a_{n-1}-b_{n-1}q_{n-1}\\
+                &=(ua+vb)-(u^\prime a+v^\prime b)q_{n-1}\\
+                &=(u-u^\prime q_{n-1})a+(v-v^\prime q_{n-1})b.
+            \end{align}
+        \end{proof}
+        Using this lemma we can define a more powerful version of the Euclidean algorithm called the \textbf{Extended Euclidean algorithm}.
+        This algorithm not only finds the gcd, but also the integers $u$ and $v$ such that $\gcd(a,b)=ua+vb$.
+        % TODO: add this section
+
+\end{document}
