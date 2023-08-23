@@ -1,0 +1,152 @@
+\documentclass[../thermodynamics.tex]{subfiles}
+
+\begin{document}
+
+    \section{Thermal Equilibrium}
+        \paragraph{}
+        When two systems are in \textbf{thermal contact}, they are able to exchange energy with each other.
+        The one that loses energy is said to be hotter/higher temperature.
+        If two systems are in \textbf{thermal equilibrium}, it means that there is no \textit{net} energy transfer.
+
+    \section{The 0\textsuperscript{th} Law}
+        \begin{definition}[0\textsuperscript{th} Law of Thermodynamics]
+            If two systems are each in thermal equilibrium with a third system, then they must be in thermal equilibrium with each other.
+        \end{definition}
+        % TODO: include diagram of 0th law
+
+    \section{Measuring Temperature}
+        \paragraph{}
+        To measure temperature, we can make use of the fact that properties of materials are often a function of temperature.
+        We pick a property of a system, measure it, and compare to measurments made at other known temperatures.
+        For example, the Kelvin temperature scale uses the triple point of water (defined as 273.16K) and absolute zero to define a scale.
+        A good thermometer for calibrating is a fixed-volume gas thermometer, because there is a linear relationship between pressure and temperature (for an ideal gas).
+
+    \section{The 1\textsuperscript{st} Law}
+        \paragraph{}
+        We denote the \textbf{internal energy} of a system $U$.
+        Energy can be transfered into or out of the system by \textbf{heat} ($Q$) or \textbf{work} ($W$).
+        Heat is the energy transfered due to a difference in temperature, and work is the usable mechanical energy.
+        \begin{definition}[1\textsuperscript{st} Law of Thermodynamics]
+            The change in internal energy of a system is equal to the sum of the change in heat and the work done on the system.
+            \begin{equation}
+                \Delta U=Q+W
+            \end{equation}
+        \end{definition}
+        % TODO: note about sign convention
+
+        \paragraph{}
+        If $Q$ is positive, the system is being heated up, if $Q$ is negative, the system is heating something else.
+        Likewise, if $W$ is positive, then work is being done on the system and if $W$ is negative, then work is being done by the system.
+
+    \section{Crystal Structure \& Interatomic Forces}
+        \paragraph{}
+        Without interatomic forces, everything would be a gas.
+        In a solid, energy of the atomc is minimised by the bonding.
+        For example, in ionic bonding, an electron is transfered from one atom to another, and the pair are held together by Coulomb's law.
+        In covalent bonding, the energy of bonding electrons minimised by sharing between atoms.
+        There is also the van der Whaals interaction which is due to dipole-dipole interactions.
+
+        \paragraph{}
+        Consider two atoms in a solid. When they get very close, there must be a repulsive force (otherwise matter would be infinitely dense).
+        However, the force must become attractive further away (but still very close on a macroscopic scale).
+        A simple model of an intermolecular force like this is the \textbf{Lennard-Jones potential}.
+        It is given by
+        \begin{equation}
+            V(x)=4\alpha\left[\left(\frac{\beta}{x}\right)^{12}-\left(\frac{\beta}{x}\right)^6\right]
+        \end{equation}
+        % TODO: include diagram of potential
+        This potential only really describes bonding between electrically neutral atoms or molecules, however the same is very similar for all types of bonding.
+
+        \paragraph{}
+        Close to the equilibrium separation, we can describe the Lennard-Jones potential can be approximated with a parabola.
+        \begin{align}
+            V&\propto(x-x_0)^2\\
+            \implies F&\propto-(x-x_0).
+        \end{align}
+        When looking at the stretching of materials, we can define two quantities.
+        The \textbf{stress} is defined as the force per unit area.
+        \begin{equation}
+            \sigma=\frac{F}{A}.
+        \end{equation}
+        The \textbf{strain} is defined as the proportional deformation of the material.
+        \begin{equation}
+            \varepsilon=\frac{\Delta L}{L}.
+        \end{equation}
+        We can then define Young's modulus, which is a property that measures the stiffness of a solid material.
+        \begin{equation}
+            E=\frac{\sigma}{\varepsilon}.
+        \end{equation}
+
+    \section{Thermal Expansion}
+        \paragraph{}
+        Near absolute zero, the average spacing of atomcs is near $x_0$, but as energy is increased, more atoms will be sitting at higher energies so the average atomic separation will get larger (because of the asymmetry of the potential).
+        % TODO: include diagram of thermal expansion
+        Let $L_0$ be the length of a solid bar at a temperature $T$.
+        Suppose that the length of the bar increases linearly with temperature (first approximation).
+        If the temperature increases by $\Delta T$, the length increases by $\Delta L$ and we write
+        \begin{equation}
+            \frac{\Delta L}{L_0}=\alpha\Delta T.
+        \end{equation}
+        $\alpha$ is called the \textbf{coefficient of linear expansion} and may be different at different temperatures.
+        Analogously, if a volume $V_0$ increases by $\Delta V$, then we can write
+        \begin{equation}
+            \frac{\Delta V}{V_0}=\beta\Delta T,
+        \end{equation}
+        where $\beta$ is the \textbf{coefficient of volume expansion}.
+        How is $\beta$ related to $\alpha$?
+        \begin{align}
+            V_1&=V_0+\Delta V\\
+            &=(1+\beta\Delta T)V_0.
+        \end{align}
+        Similarly, $L_1=(1+\alpha\Delta T)L_0$, and using $V_1=L_1^3$, we get
+        \begin{align}
+            V_1&=L_0^3(1+\alpha\Delta T)^3\\
+            1+\beta\Delta T&=(1+\alpha\Delta T)^3\\
+            1+\beta\Delta T&\approx 1+3\alpha\Delta T\\
+            \beta&\approx 3\alpha.
+        \end{align}
+        Where in the third line we have used the approximation $(1+x)^n\approx 1+nx$ for small $x$.
+        \begin{example}
+            Consider a doughnut-shaped block of material which expands linearly with temperature.
+            It has an initial inner and outer diameter $r_0$ and $R_0$ respectively.
+            Find the new area of the block in terms of $r_0$ and $R_0$ after a temperature increase of $\Delta T$, and hence show that they increase linear with the change in temperature.
+            % TODO: include diagram
+            % TODO: complete this example
+        \end{example}
+
+    \section{Heat Transfer}
+        \paragraph{}
+        The transfer of energy by heating is always due to a temperature difference.
+        The specific mechanism depends on the the material properties.
+        For example, in a fluid the heating is caused by molecular collisions which transfer energy.
+        In solids, energy is transfered by electrons or lattice vibrations known as phonons, depending on whether the material is electrically insulating or not.
+        Fourier's heat conduction law states that
+        \begin{equation}
+            \frac{Q}{\Delta t}=P=-\kappa A\der{T}{x}.
+        \end{equation}
+        $P$ is the power transfered and $\kappa$ is the thermal conductivity (measured in W/m/K).
+        Under \textbf{steady state} conditions, meaning the temperature of the system and the surroundings at every point does not change with time (there may still be energy transfer), the law becomes
+        \begin{equation}
+            P=-\kappa A\frac{\Delta T}{\Delta x}.
+        \end{equation}
+        An object that is so big that its temperature can be assumed to remain constant, no matter how much we heat or cool it, is known as a \textbf{thermal reservoir}.
+        For example, a cup of tea will exchange heat with the air in the room that it sits in. It will cool down, but the room will not notically heat up.
+        \begin{example}
+            Consider three solid blocks between two thermal reservoirs which have temperatures $T_1$ and $T_2$ respectively.
+            % TODO: complete this example
+        \end{example}
+        \begin{example}
+            Consider two concentric cylinders.
+            % TODO: complete this example
+        \end{example}
+
+    \section{Radiation}
+        \paragraph{}
+        When it comes to heat transfer by radiation, the most important equation is the \textbf{Stefan-Boltzmann Law},
+        \begin{equation}
+            P=\sigma\varepsilon AT^4.
+        \end{equation}
+        $A$ is the surface area of the object, $T$ is the surface temperature, $\varepsilon$ is the emissivity, a dimensionless constant between 0 and 1 that determines how efficiently the object radiates energy, and $\sigma$ is the Stefan-Boltzmann constant.
+        A perfectly reflecting object has $\varepsilon=0$ and a perfectly absorbing and emitting object has $\varepsilon=1$.
+
+\end{document}
