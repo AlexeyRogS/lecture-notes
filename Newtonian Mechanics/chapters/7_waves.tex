@@ -4,7 +4,7 @@
 
     \section{The Wave Equation}
         \paragraph{}
-        A wave is a periodic variation in space and time.
+        A wave is a periodic variation or disturbance which travels at a well defined speed through space.
         How do we describe waves mathematically?
         Suppose $f(\chi)$ is some periodic function which takes a phase $\chi$ measured in radians (fractions of $2\pi$).
         Then we can describe the variation in space at a specific point in time as a snapshot:
@@ -41,9 +41,30 @@
             Note that this is different to the propagation speed of the wave itself, which is constant.
         \end{example}
 
+        \paragraph{}
+        For simplicity, let's consider a general right-travelling wave $f(x-vt)$. We can make a substitution $u=x-vt$.
+        Then we get
+        \begin{align}
+            \pder{f}{x}&=\pder{f}{u}\pder{u}{x}\\
+            &=\pder{f}{u}\\
+            \implies\pdertwo{f}{x}&=\pdertwo{f}{u},\\
+            \pder{f}{t}&=\pder{f}{u}\pder{u}{t}\\
+            &=-v\pder{f}{u}\\
+            \implies\pdertwo{f}{t}&=v^2\pdertwo{f}{u}.
+        \end{align}
+        If we do this same calculation with a left-travelling wave $f(x+vt)$, we get the same relation.
+        Thus, by construction, the general solution to the differential equation
+        \begin{equation}
+            \pdertwo{f}{t}=v^2\pdertwo{f}{x},
+        \end{equation}
+        is $f(x,t)=f_l(x+vt)+f_r(x-vt)$.
+        This linear differential equation is known as the \textbf{wave equation}.
+        All functions which satisfy our definition of a wave solve this equation.
+        % TODO: there are also non-periodic solutions
+
     \section{Superposition of Waves}
         \paragraph{}
-        The waves that we are studying follow the principle of \textbf{linear superposition}.
+        Since the wave equation is linear, the solutions follow the principle of \textbf{linear superposition}.
         This means that when multiple waves come together, the amplitude at every point in space and time is determined by the sum of all the waves at that point.
         \begin{example}
             Consider two sinusoidal waves with the travelling with the same frequency and direction.
@@ -103,5 +124,144 @@
             \lambda_\frac{2L}{p}, \quad f_p=p\frac{v}{2L}=pf_1,
         \end{equation}
         where $p\in\mathbb{Z}$.
-    
+
+        \paragraph{}
+        Note that sometimes it is more convenient to express waves in terms of complex exponential functions according to Euler's formula:
+        \begin{equation}
+            e^{i\theta}=\cos\theta+i\sin\theta,
+        \end{equation}
+        so a general sinusoidal wave like above would be written as
+        \begin{equation}
+            y(x,t)=Ae^{i(kx-\omega t+\phi)}.
+        \end{equation}
+        We recover the trigonometric form (cosine in this case) by taking the real part of this function.
+        \begin{example}
+            Given a periodic wave, what is the phase difference between two points on the wave separated by a distance $\Delta x$?
+            \begin{equation}
+                \Delta\phi=2\pi\frac{\Delta x}{\lambda}=k\Delta k.
+            \end{equation}
+            What is the phase difference between a single point over a interval of time $\Delta t$?
+            \begin{equation}
+                \Delta\phi=2\pi\frac{\Delta t}{T}=\omega\Delta t.
+            \end{equation}
+        \end{example}
+
+    \section{Phase Velocity \& Group Velocity}
+        \paragraph{}
+        As we have seen, the speed you need to keep up with a point of constant phase along the wave is given by
+        \begin{equation}
+            v_\phi=f\lambda=\frac{\omega}{k}.
+        \end{equation}
+        This is known as the \textbf{phase velocity}.
+        The dependence of $\omega$ on $k$ (or vice-versa) is called the \textbf{dispersion relation}.
+        If the relationship is linear, i.e. if $v_\phi$ is constant, the wave is said to be dispersionless.
+        Otherwise, the wave will undergo dispersion as different frequencies will travel at difference speeds.
+
+        \paragraph{}
+        The \textbf{group velocity} is defined as
+        \begin{equation}
+            v_g=\der{\omega}{k}.
+        \end{equation}
+        So if a wave is dispersionless, the phase velocity and group velocity will be the same.
+        In the case where $v_g\neq v_\phi$, the group velocity is the speed that the wave envelope propagates.
+
+    \section{Transverse Waves on a String}
+        \paragraph{}
+        Consider an infinite string under constant tension $T$.
+        We will now show that the equation of motion of the string is the wave equation and derive the wave speed.
+        Consider a short section of the string of length $\Delta x$.
+        % TODO: include diagram of this
+        We are assuming that the string has linear density $\mu$, zero stiffness, and we are ignoring the effects of gravity.
+        Then assuming that there are only small displacements on the string, then $\pder{y}{X}$ is small, so the angles $\theta_1$ and $\theta_2$ are also small.
+        Hence we use the small angle approximation and say that $\cos\theta_1\approx\cos\theta_2\approx 1$.
+        \begin{align}
+            \sum F_x&=-\abs{\vect{T}_1}\cos\theta_1+\abs{\vect{T}_2}\cos\theta_2=0\\
+            \implies\abs{T_{1,x}}&\approx\abs{T_{2,x}}\approx T.
+        \end{align}
+        From these we get that $T_{1,x}\approx -T$ and $T_{2,x}\approx T$.
+        
+        \paragraph{}
+        Now, using some trigonometry, notice that
+        \begin{align}
+            \left.\pder{y}{x}\right|_x&=\frac{T_{1,y}}{T_{1,x}}\approx -\frac{T_{1,y}}{T}\\
+            \left.\pder{y}{x}\right|_{x+\Delta x}&=\frac{T_{2,y}}{T_{2,y}}\approx\frac{T_{2,y}}{T}.
+        \end{align}
+        Thus the net force in the $y$-direction is given by
+        \begin{align}
+            F_y&=T_{1,y}+T_{2,y}\\
+            &=T\left(-\left.\pder{y}{x}\right|_x+\left.\pder{y}{x}\right|_{x+\Delta x}\right).
+        \end{align}
+        % TODO: replace this part with the better (in my opinion) derivation from Griffiths
+        Using Newton's second law, we get
+        \begin{align}
+            F_y&=ma_y\\
+            &=\mu\Delta xa_y\\
+            &=\mu\Delta x\left.\pdertwo{y}{t}\right|_{x+\frac{\Delta x}{2}}=\left(\left.\pder{y}{x}\right|_{x+\Delta x}-\left.\pder{y}{x}\right|_x\right)T.
+        \end{align}
+        Finally we divide by $\Delta x$ on both sides and take the limit as $\Delta x\to0$ to get
+        \begin{align}
+            \lim_{\Delta x\to0}\left(\mu\left.\pdertwo{y}{t}\right|_{x+\frac{\Delta x}{2}}\right)&=\lim_{\Delta x\to0}\left[\frac{\left(\left.\pder{y}{x}\right|_{x+\Delta x}-\left.\pder{y}{x}\right|_x\right)T}{\Delta x}\right]\\
+            \mu\pdertwo{y}{t}&=T\pdertwo{y}{x}\\
+            \implies\pdertwo{y}{t}&=\frac{T}{\mu}\pdertwo{y}{x}.
+        \end{align}
+        This is the wave equations and we can see that for waves on a string, $v=\sqrt{\frac{T}{\mu}}$.
+
+        \paragraph{}
+        What is the mechanical energy stored in a wave on a string?
+        It will have two contributions, potential energy which depends on the displacement of every point and kinetic energy which depends on the velocity of every point.
+        Consider a segment of the string of length $\mathrm{d}x$, mass $\mathrm{d}m=\mu\mathrm{d}x$.
+        The infinitesimal contribution to the kinetic energy of the wave is given by
+        \begin{equation}
+            \mathrm{d}K=\frac{1}{2}\mathrm{d}mv_y^2=\frac{1}{2}\mu\mathrm{d}x\left(\pder{y}{t}\right)^2.
+        \end{equation}
+        To get a value for this, we integrate it over some length $L$.
+        \begin{equation}
+            K=\frac{1}{2}\mu\int_{0}^{L}\left(\pder{y}{t}\right)^2\mathrm{d}x.
+        \end{equation}
+        The potential energy is due to the stretching of the string.
+        A segment of length $\mathrm{d}x$ stretches to a length $\mathrm{d}s$, and we can calculate the relationship between the two as follows:
+        \begin{align}
+            \mathrm{d}s&=\sqrt{\mathrm{d}x^2+\mathrm{d}y^2}\\
+            &=\sqrt{\mathrm{d}x^2+\mathrm{d}x^2\left(\pder{y}{x}\right)^2}\\
+            &=\mathrm{d}x\sqrt{1+\left(\pder{y}{x}\right)^2}\\
+            &\approx\mathrm{d}x\left(1+\frac{1}{2}\left(\pder{y}{x}\right)^2\right),
+        \end{align}
+        where in the last line we have used the Taylor expansion $\sqrt(1+u^2)\approx 1+\frac{1}{2}u^2$ when $u$ is small.
+        This means we can calculate the potential energy as
+        \begin{align}
+            \mathrm{d}U&=T(\mathrm{d}s-\mathrm{d}x)\\
+            &\approx\frac{1}{2}T\left(\pder{y}{x}\right)^2\mathrm{d}x\\
+            \implies U&=\frac{1}{2}T\int_{0}^{L}\left(\pder{y}{x}\right)^2\mathrm{d}x.
+        \end{align}
+        \begin{example}
+            Consider a sinusoidal wave $y=A\cos(kx-\omega t)$.
+            What is the energy per unit wavelength?
+            The partial derivatives are given by
+            \begin{align}
+                \pder{y}{t}&=A\omega\sin(kx-\omega t)\\
+                \pder{y}{x}&=-Ak\sin(kx-\omega t),
+            \end{align}
+            so the infinitesimal contribution to the total energy is
+            \begin{align}
+                \mathrm{d}E&=\mathrm{d}K+\mathrm{d}U\\
+                &=\frac{1}{2}\left[\mu\left(\pder{y}{t}\right)^2+T\left(\pder{y}{x}\right)^2\right]\mathrm{d}x\\
+                &=\frac{1}{2}A^2\sin^2(kx-\omega t)(\mu\omega^2+Tk^2)\mathrm{d}x.
+            \end{align}
+            Note that $v=\frac{\omega}{k}=\sqrt{T}{\mu}$, so $Tk^2=\mu\omega^2$.
+            Hence for a sinudoidal wave, the kinetic and potential energies are the same.
+            The energy per unit wavelength is then
+            \begin{align}
+                E_\lambda&=\mu A^2\omega^2\int_{0}^{\lambda}\sin^2(kx)\mathrm{d}x\\
+                &=\frac{1}{2}\lambda\mu A^2\omega^2.
+            \end{align}
+            Note that we choose to write the energy in terms of $\mu$ rather than $T$ because linear density is an easily measurable property whereas the tension is not.
+            One important thing to mention is that the dependence on $A^2$ is actually general to all forms of waves, not just sinusoidal.
+            We can calculate the power transmitted through a single point by the wave as
+            \begin{align}
+                P=E_\lambda f&=\frac{1}{2}\lambda f\mu A^2\omega^2\\
+                &=\frac{1}{2}v\mu A^2\omega^2\\
+                &=\frac{1}{2}\sqrt{\mu T}A^2\omega^2.
+            \end{align}
+        \end{example}
+        
 \end{document}
