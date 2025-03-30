@@ -1,0 +1,155 @@
+% provides useful macros for lecture notes
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{lecture-notes}
+
+\RequirePackage{etoolbox} % nice utilities for defining macros
+\RequirePackage{mathtools} % maths tools!
+\RequirePackage{amssymb} % extra maths symbols
+\RequirePackage{slashed} % slashed maths characters
+
+% ------ text macros ------ %
+
+\ExplSyntaxOn
+
+% shorthand for text superscript
+\newcommand*{\ts}{\textsuperscript}
+
+% ------ maths macros ------ %
+
+% --- analysis, sets --- %
+
+% set-builder notation, usage: \set{ elements \given condition }
+\providecommand*{\given}{}
+\newcommand*{\SetGiven}[1][]{\mathrel{}\mathclose{}#1\vert\allowbreak\mathopen{}\mathrel{}}
+\DeclarePairedDelimiterX{\set}[1]{\{}{\}}{
+    \renewcommand*{\given}{\SetGiven[\delimsize]}
+    #1
+}
+
+% probability
+\DeclarePairedDelimiterXPP{\prob}[1]{\operatorname{P}}{(}{)}{}{
+    \renewcommand*{\given}{\SetGiven[\delimsize]}
+    #1
+}
+
+% real and imaginary part
+\let\Re\relax
+\let\Im\relax
+\DeclareMathOperator{\Re}{\mathfrak{Re}}
+\DeclareMathOperator{\Im}{\mathfrak{Im}}
+
+% sets to do with functions
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\im}{im}
+
+% some shorthands for blackboard bold letters (\NN, \ZZ, \QQ, etc.)
+\renewcommand*{\do}[1]{\csdef{#1#1}{\mathbb{#1}}}
+\docsvlist{N, Z, Q, R, C, F, I}
+
+% absolute value
+\DeclarePairedDelimiterX{\abs}[1]{\lvert}{\rvert}{
+    \ifblank{#1}{\,\cdot\,}{#1}
+}
+
+% big O notation
+\DeclarePairedDelimiterXPP{\order}[1]{\operatorname{\mathcal{O}}}{(}{)}{}{#1}
+
+% --- vectors --- %
+
+% vector notation
+\NewCommandCopy{\defaultvec}{\vec}
+% \renewcommand*{\vec}[1]{\defaultvec{\boldsymbol{#1}}}
+\renewcommand*{\vec}[1]{\boldsymbol{#1}}
+
+% unit vectors
+\newcommand*{\unit}[1]{\hat{\boldsymbol{#1}}}
+
+\newcommand*{\ihat}{\unit{\imath}}
+\newcommand*{\jhat}{\unit{\jmath}}
+\newcommand*{\khat}{\unit{k}}
+\newcommand*{\xhat}{\unit{x}}
+\newcommand*{\yhat}{\unit{y}}
+\newcommand*{\zhat}{\unit{z}}
+\newcommand*{\eone}{\unit{e}\sb{1}}
+\newcommand*{\etwo}{\unit{e}\sb{2}}
+\newcommand*{\ethree}{\unit{e}\sb{3}}
+
+% norm
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{
+    \ifblank{#1}{\,\cdot\,}{#1}
+}
+
+% inner product
+\DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{
+    \ifblank{#1}{\,\cdot\,}{#1}
+    \mathclose{},\mathopen{}
+    \ifblank{#2}{\,\cdot\,}{#2}
+}
+
+% matrix operations
+\DeclareMathOperator{\trace}{\mathrm{tr}}
+
+% --- calculus --- %
+
+% differentials
+\newcommand*{\dd}[2][1]{
+    \operatorname{\mathrm{d}}\!
+    \ifstrequal{#1}{1}{}{\sp{#1}}
+    #2
+}
+\newcommand*{\dbar}[1]{ % inexact differential
+    \operatorname{d\mkern-7mu\mathchar"16\mkern-2mu}\!#1
+}
+
+% derivatives
+\newcommand*{\dv}[3][1]{
+    \frac{\dd[#1]{#2}}{\dd{#3}\ifstrequal{#1}{1}{}{\sp{#1}}}
+}
+
+\newcommand*{\pdv}[3][1]{
+    \frac{\partial\ifstrequal{#1}{1}{}{\sp{#1}}#2}{\partial#3\ifstrequal{#1}{1}{}{\sp{#1}}}
+}
+
+% vector calculus operators
+\DeclareMathOperator{\grad}{\nabla}
+\let\div\relax
+\DeclareMathOperator{\div}{\nabla\cdot}
+\DeclareMathOperator{\curl}{\nabla\times}
+\DeclareMathOperator{\laplace}{\nabla\sp{2}}
+
+% --- quantum mechanics, brakets etc. --- %
+
+% bras and kets
+\DeclarePairedDelimiter{\bra}{\langle}{\rvert}
+\DeclarePairedDelimiter{\ket}{\lvert}{\rangle}
+\DeclarePairedDelimiterX{\braket}[2]{\langle}{\rangle}{
+    #1\mathclose{}\delimsize\vert\mathopen{}#2
+}
+
+\DeclarePairedDelimiterX{\matrixelement}[3]{\langle}{\rangle}{
+    #1\mathclose{}\delimsize\vert\mathopen{}#2\mathclose{}\delimsize\vert\mathopen{}#3
+}
+
+% shorthand for expectation values
+\newcommand*{\expval}[2]{
+    \matrixelement{#2}{#1}{#2}
+}
+
+% commutators and anticommutators
+\DeclarePairedDelimiterX{\comm}[2]{[}{]}{
+    \ifblank{#1}{\,\cdot\,}{#1}
+    \mathclose{},\mathopen{}
+    \ifblank{#2}{\,\cdot\,}{#2}
+}
+\DeclarePairedDelimiterX{\acomm}[2]{\{}{\}}{
+    \ifblank{#1}{\,\cdot\,}{#1}
+    \mathclose{},\mathopen{}
+    \ifblank{#2}{\,\cdot\,}{#2}
+}
+\NewCommandCopy{\poisson}{\acomm} % poisson bracket
+
+\ExplSyntaxOff
+
+\endinput
