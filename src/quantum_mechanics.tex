@@ -1,0 +1,41 @@
+\documentclass{lecture-notes}
+
+\usepackage{lecture-notes}
+
+% colour styling
+\definecolor{darkteal}{rgb}{0.1, 0.35, 0.4}
+\definecolor{lightteal}{rgb}{0.85, 0.95, 0.95}
+\setfgcolour{darkteal}
+\setbgcolour{lightteal}
+
+% path for figures
+\graphicspath{
+    {quantum_mechanics/figures/}
+    {figures/}
+}
+
+% document metadata
+\title{Quantum Mechanics}
+\author{Lachlan Dufort-Kennett}
+
+% document structure
+\begin{document}
+
+    \frontmatter
+    \maketitle
+    \tableofcontents
+
+    \chapter{Preface}
+
+    \mainmatter
+    \chapter{Introduction}
+    \subfile{quantum_mechanics/1_principles.tex}
+    \chapter{1-Dimensional Quantum Mechanics}
+    \subfile{quantum_mechanics/2_1d_quantum_mechanics.tex}
+
+    \backmatter
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{quantum_mechanics/bibliography}
+
+\end{document}

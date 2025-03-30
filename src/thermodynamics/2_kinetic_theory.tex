@@ -1,0 +1,130 @@
+\documentclass[../thermodynamics.tex]{subfiles}
+
+\begin{document}
+
+    \section{The Ideal Gas Law}
+        \paragraph{}
+        An ideal gas it one where the particles can be considered point-like, meaning the average distance between particles is very large compared to particle size.
+        We also assume that the particles interact only in perfectly elastic collisions (there are no intermolecular forces).
+        This might sound like a very simplistic set of assumptions, but it turns out to be a very useful model.
+        From these assumptions, we get the ideal gas law:
+        \begin{equation}
+            PV=nRT,
+        \end{equation}
+        where $R$ is the gas constant, equal to $N_AK_B$. Using this we can write the physicists version of the ideal gas law:
+        \begin{equation}
+            PV=NK_BT.
+        \end{equation}
+        The ideal gas law is an example of an equation of state, one that relates state variables of a system to each other.
+        Due to the assumptions that we have made, this equation only holds in the real world for gases that are in equilibrium (or very close to it).
+        Note that a ``state variable'' is a property of the system that depends only on the current state, and not the past states.
+
+        \paragraph{}
+        Let's focus on a single particle in an ideal gas in a container.
+        If the particle hits the wall in the $y-z$ plane, only the $x$ component of the velocity will change since it is an elastic collision.
+        Thus the pressure on the wall is due to the $x$ component of the momentum.
+        The particle's momentum changes by $\Delta p_{x,i}=-2mv_{x,i}$ so due to conservation of momentum there is $\Delta p_{x,i}=2mv_{x,i}$ imparted to the wall.
+        The change in momentum is equal to the force multiplied by the time interval $\Delta p=F\Delta t$, so since pressure is defined as force per unit area, we get
+        \begin{equation}
+            \Delta p_{x,i}=P_iA\Delta t_i.
+        \end{equation}
+        $P_i$ is the pressure due to particle $i$ on the wall and $\Delta t_i$ is the time interval between collisions for particle $i$.
+        Now if we imagine the particle bouncing back and forth in the box of width $L$, then he time between collisions is given by
+        \begin{equation}
+            \Delta t_i=\frac{2L}{v_{x,i}}.
+        \end{equation}
+        Substituting this into the equation above we get
+        \begin{equation}
+            P_iV=mv_{x,i}^2,
+        \end{equation}
+        where $V=AL$.
+        The total pressure on the wall is simply equal to the sum of this quantity for all particles:
+        \begin{equation}
+            PV=\sum_{i=1}^{N}mv_{x,i}^2=m\underbrace{\sum_{i=1}^{N}v_{x,i}^2}_{N\bar{v_x^2}}
+        \end{equation}
+        The bar above the velocity denotes the mean.
+        Now, note that
+        \begin{equation}
+            \bar{v^2}=\bar{v_x^2}+\bar{v_y^2}+\bar{v_z^2},
+        \end{equation}
+        so assuming the velocity of the particles is \textbf{isotropic} (meaning there is not preferred direction),
+        \begin{equation}
+            \bar{v_x^2}=\frac{1}{3}\bar{v^2},
+        \end{equation}
+        and hence by using the ideal gas law,
+        \begin{align}
+            PV=\frac{1}{3}Nm\bar{v^2}&=Nk_BT\\
+            \implies\bar{v^2}&=\frac{3k_BT}{m}.
+        \end{align}
+        If we take the square root of both sides, we get the \textbf{root mean square velocity}:
+        \begin{equation}
+            v_\text{rms}=\sqrt{\frac{3k_BT}{m}}.
+        \end{equation}
+        % TODO: add diagrams for this section
+
+    \section{Equipartition Theorem}
+        \paragraph{}
+        The internal energy of a gas is a state variable.
+        It is the sum of all of the types of energy contained in the gas; kinetic, potential, mass, and chemical.
+        For a monatomic ideal gas, we only have kinetic energy, and moreover the kinetic energy is purely translational:
+        \begin{equation}
+            U=\frac{1}{2}Nm\bar{v^2}=\frac{3}{2}Nk_BT.
+        \end{equation}
+        Note that this is a constant times $N$, meaning that on average each atom has an energy of $\frac{3}{2}k_BT$, or $\frac{1}{2}k_BT$ for each translational degree of freedom.
+        This is known as the \textbf{equipartition theorem}.
+        In general, an ideal gas with $N$ particles and $f$ quadratic degrees of freedom will have an internal energy of
+        \begin{equation}
+            U=\frac{f}{2}Nk_BT.
+        \end{equation}
+        Note that a quadratic degree of freedom is one where the associated energy is proportional to the square of a position of momentum variable.
+        For example, translation motion $E=\frac{1}{2}mv^2$, elastic potential energy $E=\frac{1}{2}kx^2$, or rotational kinetic energy $E=\frac{1}{2}I\omega^2$.
+        A diatomic gas has 3 translational degrees of freedom, along with 2 rotational 2 vibrational (one for the kinetic energy and one for the potential energy).
+        This makes 7 in total, however at lower temperatures some of these modes will not be excited and the degrees of freedom will be ``frozen out''.
+        For example, at room temperature, diatomic oxygen and nitrogen have 5 degrees of freedom.
+
+        \paragraph{}
+        Let's look at the average distance between collisions, also known as the \textbf{mean free path}.
+        A collision between two particles occurs if a particle comes within a diameter $d$ of another.
+        Identically, we can consider a particle with cross-sectional area $2d$ and ask about the probability that a particle enters the volume traced out:
+        \begin{align}
+            \pi d^2\lambda\frac{N}{v}&=1\\
+            \implies\lambda&=\frac{V}{N\pi d^2}.
+        \end{align}
+        If we remember that all particles are moving, this gets reduced by a factor of $\frac{1}{\sqrt{2}}$:
+        \begin{equation}
+            \lambda=\frac{V}{\sqrt{2}N\pi d^2}=\frac{1}{\sqrt{2}n\pi d^2}.
+        \end{equation}
+        Note that we have defined the number density $n=\frac{N}{V}$.
+
+        \paragraph{}
+        It can be shown that in an ideal gas, the velocities are distributed according to the \textbf{Maxwell-Boltzmann Distribution}.
+        This takes the form
+        \begin{equation}
+            p(v)=\sqrt{\frac{2}{\pi}}\left(\frac{m}{k_BT}\right)^\frac{3}{2}v^2\exp\left(-\frac{mv^2}{2k_BT}\right),
+        \end{equation}
+        where $p(v)$ is the probability density of a single particle having speed $v$.
+        Note that this probability distribution is properly normalised so that $\int_{0}^{\infty}p(v)\mathrm{d}v=1$.
+        At higher temperatures, the tail drops off much less i.e. there are a much wider range of velocities.
+        % TODO: include diagram for this
+        From this distribution, we can measure some characteristic speeds.
+        The most probable speed is found at the peak of the distribution, which is found by differentiating:
+        \begin{align}
+            \dv{p}{v}&=0=2Ave^{-av^2}(1-av^2)\\
+            \implies av_\text{mp}^2&=1\\
+            v_\text{mp}&=\sqrt{\frac{1}{a}}=\sqrt{\frac{2k_BT}{m}}.
+        \end{align}
+        The mean speed will be to the right of the most probable speed since the distribution is asymmetric.
+        It is found by integrating the distribution multiplied by $v$:
+        \begin{align}
+            \bar{v}=\int_{0}^{\infty}vp(v)\mathrm{d}v&=A\int_{0}^{\infty}v^3e^{-av^2}\mathrm{d}v\\
+            &=\frac{1}{2}Aa^{-2}\\
+            &=\sqrt{\frac{8k_BT}{\pi m}}.
+        \end{align}
+        Finally, we can calculate the root mean square speed just to check our answer from before:
+        \begin{align}
+            v_\text{rms}=\sqrt{\int_{0}^{\infty}v^2p(v)\mathrm{d}v}&=\sqrt{A\int_{0}^{\infty}v^4e^{-av^2}\mathrm{d}v}\\
+            &=\sqrt{A\frac{3}{8}}\sqrt{\pi}a^{-\frac{5}{2}}\\
+            &=\sqrt{\frac{3k_BT}{m}}.
+        \end{align}
+
+\end{document}

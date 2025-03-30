@@ -1,0 +1,45 @@
+\documentclass{lecture-notes}
+
+\usepackage{lecture-notes}
+
+% path for figures
+\graphicspath{
+    {real_analysis/figures/}
+    {figures/}
+}
+
+% document metadata
+\title{Real Analysis}
+\author{Lachlan Dufort-Kennett}
+
+% document structure
+\begin{document}
+
+    \frontmatter
+    \maketitle
+    \tableofcontents
+
+    \chapter{Preface}
+
+    \mainmatter
+    \chapter{Introduction}
+    \subfile{real_analysis/1_introduction}
+    \chapter{Notions from Set Theory}
+    \subfile{real_analysis/2_set_theory}
+    \chapter{The Real Numbers}
+    \subfile{real_analysis/3_real_numbers}
+    \chapter{Sequences}
+    \subfile{real_analysis/4_sequences}
+    \chapter{Series}
+    \subfile{real_analysis/5_series}
+    \chapter{Continuous Functions}
+    \subfile{real_analysis/6_continuous_functions}
+    \chapter{Differentiation}
+    \subfile{real_analysis/7_differentiation}
+
+    \backmatter
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{real_analysis/bibliography}
+
+\end{document}

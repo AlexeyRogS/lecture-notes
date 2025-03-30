@@ -1,0 +1,495 @@
+\documentclass[../multivariate_calculus.tex]{subfiles}
+
+\begin{document}
+
+    \section{Introduction}
+        % TODO: move some of this intro and basic material into another intro chapter on ND euclidean space? Could also cover distances, vectors, etc.
+        \paragraph{}
+        % TODO: domain of function should be subset of R^n, not all of it
+        In single-variable calculus and real analysis, we study functions of the form $f:\RR\to\RR$.
+        These are functions which take a single variable $x$ and send it to a real number.
+        We explored this theory and defined concepts such as limits, continuity, derivatives, integrals, and power series.
+        In multivariate calculus, we use what we have learned to generalise these ideas to functions of the form $f:\RR^n\to\RR$, which send an \textbf{ordered n-tuple} $\vec{x}=(x_1,x_2,\dots,x_n)\in\RR^n$ to a real number $f(\vec{x})\in\RR$.
+
+        \paragraph{}
+        We will mostly be interested in \textit{bivariate} and \textit{trivariate} functions, that is functions from subsets of $\RR^2$ and $\RR^3$ to $\RR$.
+        This is both because they are the simplest case of multivariate functions and also because they have the most familiar applications in the real world.
+        Examples of these are equations for 3D surfaces, complex analysis, or many areas of physics such as classical mechanics.
+
+    \section{Functions of Two Variables}
+        \begin{definition}
+            A function of two variables takes an ordered pair $(x,y)$ and returns a real number $f(x,y)$.
+            \begin{equation}
+                f:\RR^2\to\RR\quad\text{or}\quad(x,y)\mapsto f(x,y).
+            \end{equation}
+            We can equivalently consider the ordered pair $(x,y)$ as a 2D vector $\vec{x}$, it makes no difference to the mathematics.
+        \end{definition}
+        \paragraph{}
+        How do we visualise these functions?
+        These functions define \textbf{surfaces} in 3D space with cartesian coordinates $(x,y,f(x,y))$.
+        Another way we can represent them is with a contour plot (contours are all the values of $x$ and $y$ which give a specific value of $f$).
+        % TODO: include figures for this
+        % TODO: talk about handedness of coordinate system
+        % TODO: introduce concept of level sets which are more general than contours
+        \begin{example}
+            Consider the function $f(x,y)=(1-x^2)(1+y^2)$.
+        \end{example}
+
+        \paragraph{}
+        There are many examples of surfaces which are commonly encountered in geometry.
+        We will go through some of these now.
+        \begin{example}
+            A \textbf{plane} is defined by the function $f(x,y)=c-ax-by$.
+            With $z=f(x,y)$, we get the equation
+            \begin{equation}
+                ax+by+z=c,
+            \end{equation}
+            which is a plane with normal vector $(a,b,1)$.
+            % TODO: include diagram
+        \end{example}
+        \begin{example}
+            Consider the function $f(x,y)=\sqrt{R^2-x^2-y^2}$. With $z=f(x,y)$, this gives
+            \begin{equation}
+                x^2+y^2+z^2=R^2,
+            \end{equation}
+            % TODO: generalise these examples
+            which is the equation for a \textbf{sphere} of radius $R$ centered at the origin.
+            Since $f$ is a real-valued function, it is only defined for $R^2-x^2-y^2\geq0$, so the domain of $f$ is
+            \begin{equation}
+                x^2+y^2\leq R,
+            \end{equation}
+            and the range of $f$ is
+            \begin{equation}
+                0\leq z\leq R.
+            \end{equation}
+            % TODO: include diagram
+        \end{example}
+        \begin{example}
+            Consider the function $f(x,y)=z=\sqrt{\frac{x^2}{2}+y^2}$.
+            In the $z$-$x$ plane, we get the equation $z=\pm\frac{x}{\sqrt{2}}$.
+            In the $z$-$y$ plane, we get $z=\pm y$.
+            These are both straight lines.
+            Now consider a contour for some $z=z_0$:
+            \begin{equation}
+                \frac{x^2}{2}+y^2=z_0^2.
+            \end{equation}
+            This is an ellipse.
+            Therefore, this function represents an \textbf{elliptical cone}.
+            % TODO: include diagram
+        \end{example}
+        \begin{example}
+            Now consider $f(x,y)=x^2+y^2$.
+            In this case, we get parabolas in the $x$-$z$ and $y$-$z$ planes and circles parallel to the $x$-$y$ plane.
+            This is called a \textbf{elliptic paraboloid}.
+            % TODO: include diagram
+        \end{example}
+        \begin{example}
+            Finally, consider $f(x,y)=x^2-y^2$.
+            This is a positive parabola in one direction but a negative parabola in the other.
+            In the $z=0$ plane we have $x=\pm y$, which are straight lines.
+            This is called a \textbf{hyperbolic paraboloid}.
+            % TODO: include diagram
+        \end{example}
+
+    \section{Limits and Continuity of Multivariate Functions}
+        \paragraph{}
+        Recall that for a limit to exist at a point for a single-variable function, it must be defined and have the same value when approaching from the positive and negative direction.
+        With more than one variable, we now have \textit{infinitely many} directions to approach a point from.
+        Thus, for a limit to exist at a point it has to have the same value when approaching from \textbf{every direction} and also be \textbf{path independent}.
+        If two paths do not give the same value for the limit, then the limit does not exist.
+        % TODO: provide a rigorous definition of limit?
+        \begin{example}
+            Does the function $f(x,y)=\frac{x^2-y^2}{x^2+y^2}$ have a limit as $(x,y)\to(0,0)$?
+
+            Consider the limit along the $x$-axis ($y=0$):
+            \begin{equation}
+                \lim_{x\to0}f(x,0)=\lim_{x\to0}\frac{x^2}{x^2}=1.
+            \end{equation}
+            Now look at the limit along the $y$-axis ($x=0$):
+            \begin{equation}
+                \lim_{y\to0}f(0,y)=lim_{y\to0}\frac{-y^2}{y^2}=-1
+            \end{equation}
+            So, since the limits along the different paths have different values, the limit does not exist.
+        \end{example}
+        \paragraph{}
+        Since there is no ordering on tuples like there is for real numbers, it is impossible to prove the existence of limits in general like we would in 1D.
+        Why can't we simply use the absolute value $\abs{(x,y)}=\sqrt{x^2+y^2}$? Because this corresponds to a straight line path towards the limit.
+        % TODO: include an example of esoteric thing where path to limit from all straight lines is the same but a curvy path provides a different limit (possibly xy/(x^2+y^2)).
+        One of the best strategies is to convert to \textbf{polar coordinates}, basically using trigonometry to relabeli every point in 2D space using the distance from the origin and the angle from the $x$-axis (like the polar form of complex numbers).
+        \begin{align}
+            x=r\cos\theta\quad&\quad r=\sqrt{x^2+y^2}\\
+            y=r\sin\theta\quad&\quad\theta=\tan^{-1}\left(\frac{y}{x}\right).
+        \end{align}
+        \begin{example}
+            Find the limit
+            \begin{equation}
+                \lim_{(x,y)\to(0,0)}\frac{x^2}{\sqrt{x^2+y^2}}.
+            \end{equation}
+            Using polar coordinates, we rewrite the function inside the limit as
+            \begin{equation}
+                \frac{x^2}{\sqrt{x^2+y^2}}=\frac{r^2\cos^2\theta}{r}=r\cos^2\theta.
+            \end{equation}
+            Now we can rewrite the limit as
+            \begin{equation}
+                \lim_{(x,y)\to(0,0)}\frac{x^2}{\sqrt{x^2+y^2}}=\lim_{r\to 0}r\cos^2\theta=0.
+            \end{equation}
+            Since the last limit does not depend on $\theta$, it is path-independent and so the limit is well-defined.
+        \end{example}
+
+        \paragraph{}
+        The property of continuity is defined completely analogously to how it is defined in 1D.
+        \begin{definition}
+            A function $f(x,y)$ is \textbf{continuous} at a point $(x_0,y_0)$ if
+            \begin{equation}
+                \lim_{(x,y)\to(x_0,y_0)}f(x,y)=f(x_0,y_0).
+            \end{equation}
+        \end{definition}
+        \begin{example}
+            If we define the function in the last exercise as
+            \begin{equation}
+                f(x,y)=\begin{cases}
+                    \frac{x^2}{\sqrt{x^2+y^2}} & (x,y)\neq(0,0)\\
+                    0 & x=y=0,
+                \end{cases}
+            \end{equation}
+            then $f$ is a continuous function.
+        \end{example}
+        % TODO: another weird example, x^2y/(x^4+y^2), limit the same along y=0, x=0, y=mx but different along y=x^2
+
+    \section{Partial Derivatives}
+        \paragraph{}
+        In 1D we only had one direction to define a slope, but in more than one dimension we now have infinitely many.
+        We can define the rate of change \textit{with respect to} one of the variables by defining the derivative in the same way we would have in 1D but keeping all of the other variables constant.
+        \begin{definition}
+            Consider a function of two variables $f(x,y)$.
+            The \textbf{partial derivative} with respect to $x$ at a point $(x_0,y_0)$ is defined as the limit
+            \begin{equation}
+                \left.\left(\frac{\partial f}{\partial x}\right)_y\right|_{(x_0,y_0)}=f_x(x_0,y_0)=\lim_{h\to 0}\frac{f(x_0+h,y_0)-f(x_0,y_0)}{h},
+            \end{equation}
+            if it exists.
+            Likewise, the partial derivative with respect to $y$ is defined as
+            \begin{equation}
+                \left.\left(\frac{\partial f}{\partial y}\right)_y\right|_{(x_0,y_0)}=f_y(x_0,y_0)=\lim_{h\to 0}\frac{f(x_0,y_0+h)-f(x_0,y_0)}{h}.
+            \end{equation}
+            % TODO: remark about different notations
+        \end{definition}
+        % TODO: insert diagram to illustrate partial derivatives
+        Most of the time the parentheses in the fractional notation are removed because they are there to show explicitly what variables are being kept constant.
+        In cases where there are variables which depend on each other such as thermodynamics or statistical mechanics, this can greatly increase clarity, but for simple calculus with independent variables it is not necessary.
+
+        \paragraph{}
+        Note that the partial derivatives $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ are still functions of two variables.
+        If they are both \textit{continuous}, then $f(x,y)$ is differentiable.
+        % TODO: prove this and write it in a theorem
+
+    \section{Higher Order Derivatives}
+        \paragraph{}
+        Just like in 1D we define higher order partial derivatives recursively as partial derivatives of partial derivatives.
+        We can also obtain \textbf{mixed partial derivative} by changing the variable we differentiate with respect to.
+        For example, the four possible second derivatives of a function of two variables are
+        \begin{align}
+            \frac{\partial^2 f}{\partial x^2}=f_{xx}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial x}\right),&\quad\frac{\partial^2 f}{\partial y\partial x}=f_{xy}=\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial x}\right)\\
+            \frac{\partial^2 f}{\partial y^2}=f_{yy}=\frac{\partial}{\partial y}\left(\frac{\partial f}{\partial y}\right),&\quad\frac{\partial^2 f}{\partial x\partial y}=f_{yx}=\frac{\partial}{\partial x}\left(\frac{\partial f}{\partial y}\right).
+        \end{align}
+        Under certain conditions (which are quite general for the functions that we will be studying), it can be shown that the two mixed derivatives are the same
+        \begin{equation}
+            \frac{\partial^2 f}{\partial y\partial x}=\frac{\partial^2 f}{\partial x\partial y},\quad f_{xy}=f_{yx}.
+        \end{equation}
+        I.e., the order of differentiation can be swapped.
+        % TODO: write a theorem for this and prove it
+        % https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives
+
+    \section{The Chain Rule}
+        \paragraph{}
+        Suppose we have two one-variable functions; $y(x)$ and $x(t)$.
+        Then using the 1D chain rule we can define
+        \begin{equation}
+            \frac{\mathrm{d}y}{\mathrm{d}t}=\frac{\mathrm{d}y}{\mathrm{d}x}\frac{\mathrm{d}x}{\mathrm{d}t}.
+        \end{equation}
+        % TODO: note tree structure y -> x -> t
+        Suppose now we have a two-variable function $f(x,y)$ where the variables $x$ and $y$ are themselves functions of another variable $x(t)$, $y(t)$.
+        %                               / -> x -> t
+        % TODO: note tree structure f <
+        %                               \ -> y -> t
+        How can we find $\frac{\mathrm{d}f}{\mathrm{d}t}$?
+        We could substitute in for $t$ but this could be very complicated.
+
+        \paragraph{}
+        If $t$ changes by a small amount $\Delta t$, $x$ will change by a small amount $\Delta x$.
+        \begin{equation}
+            x(t+\Delta t)=x(t)+\Delta x\implies\frac{\Delta x}{\Delta t}=\frac{x(t+\Delta t)-x(t)}{\Delta t}.
+        \end{equation}
+        This becomes $\frac{\mathrm{d}x}{\mathrm{d}t}$ in the limit $\Delta t\to0$.
+        The same thing happens to $y$.
+        Since both $x$ and $y$ change when $t$ changes, $f(x,y)$ will change by a value $\Delta f$ given by
+        \begin{align}
+            \Delta f&=f(x+\Delta x,y+\Delta y)-f(x,y)\\
+            &=\underbrace{f(x+\Delta x,y+\Delta y)-{f(x,y+\Delta y)}}_{\times\frac{\Delta x}{\Delta x}}+\underbrace{f(x,y+\Delta y)-f(x,y)}_{\times\frac{\Delta y}{\Delta y}}\\
+            \begin{split}
+                \implies\frac{\Delta f}{\Delta t}&=\frac{f(x+\Delta x,y+\Delta y)-f(x,y+\Delta y)}{\Delta x}\left(\frac{\Delta x}{\Delta t}\right)\\
+                &\quad+\frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}\left(\frac{\Delta y}{\Delta t}\right).
+            \end{split}
+        \end{align}
+        Now we take the limit as $\Delta t\to0$ and (if the limit exists) we get
+        \begin{equation}
+            \frac{\mathrm{d}f}{\mathrm{d}t}=\left(\frac{\partial f}{\partial x}\right)_y\frac{\mathrm{d}x}{\mathrm{d}t}+\left(\frac{\partial f}{\partial y}\right)_x\frac{\mathrm{d}y}{\mathrm{d}t}
+        \end{equation}
+        Note that this is an full derivative since both $x$ and $y$ are functions of $t$.
+        % TODO: make this proof rigorous
+        \begin{example}
+            Consider the surface $z(x,y)=x^2+y^2$ where $x=t^2$, $y=\sin t$.
+            Then
+            \begin{equation}
+                \left(\frac{\partial z}{\partial x}\right)_y=2x,\quad\left(\frac{\partial z}{\partial y}\right)_x=2y,\quad\frac{\mathrm{d}x}{\mathrm{d}t}=2t,\quad\frac{\mathrm{d}y}{\mathrm{d}t}=\cos t,
+            \end{equation}
+            so
+            \begin{align}
+                \frac{\mathrm{d}z}{\mathrm{d}t}&=(2x)(2t)+(2y)(\cos t)\\
+                &=4xt+2y\cos t\\
+                &=4t^3+2\sin t\cos t.
+            \end{align}
+        \end{example}
+        \begin{example}\label{ex-chain-rule}
+            Consider a two-variable function $z(x,y)$, where both $x$ and $y$ are themselves functions of two variables given by
+            \begin{equation}
+                x(s,t)=s+t,\quad y(s,t)=s-t.
+            \end{equation}
+            % TODO: include a diagram of variable tree structure
+            Then we can calculate the first derivatives of $x$ and $y$ as
+            \begin{equation}
+                \pdv{x}{s}=1,\quad\pdv{x}{t}=1,\quad\pdv{y}{s}=1,\quad\pdv{y}{t}=-1,
+            \end{equation}
+            and therefore we can find the partial derivatives of $z$ with respect to $s$ and $t$ using the chain rule:
+            \begin{align}
+                \pdv{z}{s}&=\pdv{z}{x}\pdv{x}{s}+\pdv{z}{y}\pdv{y}{s}=\pdv{z}{x}+\pdv{z}{y}\\
+                \pdv{z}{t}&=\pdv{z}{x}\pdv{x}{t}+\pdv{z}{y}\pdv{y}{t}=\pdv{z}{x}-\pdv{z}{y}.
+            \end{align}
+            Similarly, we can calculate the second derivatives by using the chain rule again.
+            \begin{align}
+                \pdv[2]{z}{s}=\frac{\partial}{\partial s}\left(\pdv{z}{s}\right)&=\frac{\partial}{\partial x}\left(\pdv{z}{s}\right)\pdv{x}{s}+\frac{\partial}{\partial y}\left(\pdv{z}{s}\right)\pdv{y}{s}\\
+                &=\frac{\partial}{\partial x}\left(\pdv{z}{x}+\pdv{z}{y}\right)+\frac{\partial}{\partial y}\left(\pdv{z}{x}+\pdv{z}{y}\right)\\
+                &=\pdv[2]{z}{x}+2\frac{\partial^2 z}{\partial x\partial y}+\pdv[2]{z}{y},\\
+                \pdv[2]{z}{t}=\frac{\partial}{\partial t}\left(\pdv{z}{t}\right)&=\frac{\partial}{\partial x}\left(\pdv{z}{t}\right)\pdv{x}{t}+\frac{\partial}{\partial y}\left(\pdv{z}{t}\right)\pdv{y}{t}\\
+                &=\frac{\partial}{\partial x}\left(\pdv{z}{x}-\pdv{z}{y}\right)-\frac{\partial}{\partial y}\left(\pdv{z}{x}-\pdv{z}{y}\right)\\
+                &=\pdv[2]{z}{x}-2\frac{\partial^2 z}{\partial x\partial y}+\pdv[2]{z}{y}.
+            \end{align}
+            This links to the wave equation because if we set $\pdv[2]{z}{t}=\pdv[2]{z}{s}$, we conclude that $\frac{\partial^2 z}{\partial x\partial y}=0$, which implies that $z=f(x)+g(y)=f(s+t)+g(s-t)$ is the general solution.
+        \end{example}
+
+    \section{Implicit Differentiation}
+        \paragraph{}
+        Implicit differentiation may be the most common concept in multivariate calculus to have been encountered before studying the subject.
+        
+        \paragraph{}
+        Suppose we have two single variable functions $x(t)$ and $y(t)$ which represent a path in 2D space and a two-variable function $z=f(x,y)$ representing the height of a surface. 
+        Then $z(x(t),y(t))$ represents the variation in height of the surface along the path.
+        If we choose this path to be a contour (where $z$ remains constant) then we have
+        \begin{equation}
+            \pdv{z}{x}\dv{x}{t}+\pdv{z}{y}\dv{y}{t}=0.
+        \end{equation}
+        So by using the 1D chain rule, we get
+        \begin{equation}
+            \dv{y}{x}=\dv{y}{t}\dv{t}{x}=-\frac{\left(\pdv{z}{x}\right)_y}{\left(\pdv{z}{y}\right)_x}.
+        \end{equation}
+        % TODO: is this well-defined, we didn't say that y was a function of x?
+        This allows us to calculate $\dv{y}{x}$ for an implicitly defined function.
+        \begin{example}
+            Consider the implicitly defined function
+            \begin{equation}
+                y^4+3y-4x^3-5x-1=0.
+            \end{equation}
+            If we consider this function as a contour of a two-variable function $z(x,y)=0$, then we can use the formula above to find
+            \begin{align}
+                &\pdv{z}{x}=-12x^2-5,\quad\pdv{z}{y}=4y^3+3\\
+                &\implies\dv{y}{x}=-\frac{-12x^2-5}{4y^3+3}=\frac{12x^2+5}{4y^3+3}.
+            \end{align}
+        \end{example}
+        % TODO: discuss how to find contours by solving the ODE
+        This technique readily generalises to $n$ dimensions for however many variables an implicit function may have.
+        For example, suppose we have an implicit function of three variables which defines a surface $w(x,y,z)=0$
+        Due to the constraint that $w=0$, we only really have 2 degrees of freedom, which we will denote $t$ and $s$.
+        Using the chain rule, we get
+        \begin{equation}
+            \dv{w}{t}=\pdv{w}{x}\dv{x}{t}+\pdv{w}{y}\dv{y}{t}+\pdv{w}{z}\dv{z}{t}=0.
+        \end{equation}
+        Suppose we want to find $\pdv{z}{x}$.
+        Without loss of generality, we can define $x=t$, $y=s$, $z=z(t,s)$ (choosing $x$ and $y$ determines the value of $z$ even if we can't solve for it analytically).
+        Then since $\pdv{x}{t}=1$ and $\pdv{y}{t}=0$, we get
+        \begin{align}
+            \pdv{w}{t}&=\pdv{w}{x}+\pdv{w}{z}\pdv{z}{x}=0\\
+            \implies\pdv{z}{x}&=-\frac{\pdv{w}{x}}{\pdv{w}{z}}.
+        \end{align}
+        % TODO: rewrite this properly using the general tree structure before defining s and t
+        % TODO: develop these formulae below in general before the example wchich derives them
+        \begin{align}
+            \pdv[2]{f}{s}&=\frac{\partial}{\partial s}\left(\pdv{f}{s}\right)=\frac{\partial}{\partial s}\left(\pdv{f}{x}\pdv{x}{s}+\pdv{f}{y}\pdv{y}{s}\right)\\
+            &=\frac{\partial}{\partial s}\left(\pdv{f}{x}\right)\pdv{x}{s}+\pdv{f}{x}\pdv[2]{x}{s}+\frac{\partial}{\partial s}\left(\pdv{f}{y}\right)\pdv{y}{s}+\pdv{f}{y}\pdv[2]{y}{s}\\
+            &=\left\{\pdv[2]{f}{x}\pdv{x}{s}+\frac{\partial^2 f}{\partial x\partial y}\pdv{y}{s}\right\}\pdv{x}{s}+\left\{\pdv[2]{f}{y}\pdv{y}{s}+\frac{\partial f}{\partial x\partial y}\pdv{x}{s}\right\}\pdv{y}{s}+\pdv{f}{x}\pdv[2]{x}{s}+\pdv{f}{y}\pdv[2]{y}{s}\\
+            &=\pdv[2]{f}{x}\left(\pdv{x}{s}\right)^2+2\frac{\partial^2 f}{\partial x\partial y}\pdv{x}{s}\pdv{y}{s}+\pdv[2]{f}{y}\left(\pdv{y}{s}\right)^2+\pdv{f}{x}\pdv[2]{x}{s}\pdv{f}{x}\pdv[2]{y}{s}.
+        \end{align}
+
+    \section{Change of Variables}
+        \paragraph{}
+        Say we have a bivariate function $f(x,y)$ where $x=x(s,t)$ and $y=y(s,t)$.
+        Here, we could express $f$ purely in terms of $s$ and $t$ by substituting in for $x$ and $y$, i.e. $f(x(s,t),y(s,t))=f(s,t)$.
+        \begin{example}
+            Let $f(x,y)=xy$, $x=s^2t$, $y=s\cos t$. Then
+            \begin{equation}
+                f(s,t)=(s^2t)(s\cos t)=s^3 t\cos t.
+            \end{equation}
+        \end{example}
+        If we want to evaluate partial derivatives, then we can use the chain rule using the fomulae in exercise \ref{ex-chain-rule}.
+
+        \paragraph{}
+        A common change of variables in two and three dimensions is to change into \textit{polar} coordinates.
+        \begin{definition}
+            % TODO: move definition of polar coordinates to the beginning?
+            In two dimensions, \textbf{plane polar coordinates} are defined as
+            \begin{align}
+                x=r\cos\theta\quad&\quad r=\sqrt{x^2+y^2}\\
+                y=r\sin\theta\quad&\quad\theta=\tan^{-1}\left(\frac{y}{x}\right).
+            \end{align}
+            % TODO: include diagrams to represent this
+        \end{definition}
+        Now any derivatives of a function with respect to cartesian coordinates can be transformed to derivatives with respect to polar coordinates using the formulae from before.
+        % TODO: reference these formulae
+        \begin{align}
+            \pdv{x}{r}&=\cos\theta,\quad\pdv{x}{\theta}=-r\sin\theta\\
+            \pdv{y}{r}&=\sin\theta,\quad\pdv{y}{\theta}=r\cos\theta\\
+            \implies\pdv{f}{r}&=\cos\theta\pdv{f}{x}+\sin\theta\pdv{z}{y}\\
+            \pdv{f}{\theta}&=r\cos\theta\pdv{f}{r}-r\sin\theta\pdv{f}{x}.
+        \end{align}
+        % TODO: include note about regarding these formulae as differential operators
+        The second derivatives can be written as
+        \begin{align}
+            \pdv[2]{f}{r}&=\cos^2\theta\pdv[2]{f}{x}+\sin^2\theta{f}{y}+2\cos\theta\sin\theta\frac{\partial^2 f}{\partial x\partial y}\\
+            \pdv[2]{f}{\theta}&=-r\pdv{f}{r}+r^2\left\{\sin^2\theta\pdv[2]{f}{x}+\cos^2\theta\pdv[2]{f}{y}-2\cos\theta\sin\theta\frac{\partial^2 f}{\partial x\partial y}\right\}.
+        \end{align}
+        % TODO: include discussion about how to use differential operator to calculate these
+        \begin{example}
+            Rewrite Laplace's equation, given in 2D cartesian coordinates as
+            \begin{equation}
+                \pdv[2]{f}{x}+\pdv[2]{f}{y}=0,
+            \end{equation}
+            in plane polar coordinates.
+            \begin{equation}
+                \pdv[2]{f}{r}+\frac{1}{r}\pdv{f}{r}+\frac{1}{r^2}\pdv[2]{f}{\theta}=0
+            \end{equation}
+            % TODO: write this example
+        \end{example}
+
+        \paragraph{}
+        These formulae generalise to any number of variables.
+        Suppose we have a function of $n$ variables $f(x_1,x_2,\dots,x_n)$ where each variable $x_i$ is itself a function of $m$ variables $x_i(t_1,t_2,\dots,t_m)$.
+        Then the partial derivative of $f$ with respect to $t_j$ is defined as
+        \begin{equation}
+            \pdv{f}{t_j}=\pdv{f}{x_1}\pdv{x_1}{t_j}+\pdv{f}{x_2}\pdv{x_2}{t_j}+\dots+\pdv{f}{x_n}\pdv{x_n}{t_j}=\sum_{i=1}^n\pdv{f}{x_i}\pdv{x_i}{t_j}.
+        \end{equation}
+        Some examples in 3 dimensions include \textbf{cylindrical polar coordinates}
+        \begin{align}
+            x=\rho\cos\phi\quad&\quad\rho=\sqrt{x^2+y^2}\\
+            y=\rho\sin\phi\quad&\quad\phi=\tan^{-1}\left(\frac{y}{x}\right)\\
+            z=z\quad&
+        \end{align}
+        and \textbf{spherical polar coordinates}
+        \begin{align}
+            x=r\sin\theta\cos\phi\quad&\quad r=\sqrt{x^2+y^2+z^2}\\
+            y=r\sin\theta\sin\phi\quad&\quad\theta=\tan^{-1}\left(\frac{\sqrt{x^2+y^2}}{z}\right)\\
+            z=r\cos\theta\quad&\quad\phi=\tan^{-1}\left(\frac{y}{x}\right).
+        \end{align}
+        % TODO: expand this section, define coordinates from diagram, write definitions for coordinates and calculate all derivatives
+
+    \section{Directional Derivative}
+        \paragraph{}
+        We have seen that for a function of $n$ variables, we can define partial derivatives in each of the $n$ directions given by the coordinate axes.
+        However, what if we want to define a rate of change along one of the infinitely many other directions not aligned with any coordinate axis?
+        Consider a function in 3D $f(x,y,z)$ and let $c_1$, $c_2$ be two real numbers such that $f(x,y,z)=c_1$ and $f(x,y,z)=c_2$ define two surfaces $\mathcal{S}_1$ and $\mathcal{S}_2$.
+        % TODO: include diagram illustrating this
+        Imagine we have two points $P$ and $Q$ on $\mathcal{S}_1$ and $\mathcal{S}_2$ respectively.
+        How does the function $f$ vary along the line joining $P$ and $Q$?
+        Let $P=(x_1,y_1,z_1)$, and let $\vec{\hat{u}}=l\ihat+m\jhat+n\khat$ be a unit vector in the direction of $\overrightarrow{PQ}$.
+        Then we can parameterise the points on the line through $P$ and $Q$ by some parameter $t$ as
+        \begin{equation}
+            x=x_1+tl,\quad y=y_1+tm,\quad z=z_1+tn.
+        \end{equation}
+        Now we can calculate the (full) derivative of $f$ with respect to $s$ using the chain rule:
+        \begin{align}
+            \dv{f}{t}&=\pdv{f}{x}\dv{x}{t}+\pdv{f}{y}\dv{y}{t}+\pdv{f}{z}\dv{z}{t}\\
+            &=\pdv{f}{x}l+\pdv{f}{y}m+\pdv{f}{z}n\\
+            &=\nabla f\cdot\vec{\hat{u}},
+        \end{align}
+        where we defined $\nabla f=\left(\pdv{f}{x},\pdv{f}{y},\pdv{f}{z}\right)$.
+        We call $\nabla f\cdot\vec{\hat{u}}$ the \textbf{directional derivative} of $f$ in the direction $\vec{\hat{u}}$ and most of the time denote it $\nabla_{\vec{\hat{u}}}f$.
+        $\nabla f$ is called the \textbf{gradient} of $f$.
+        It is a vector-valued derivative which defines a kind of ``slope field'' that gives the directional derivative in some direction when dotted with a unit vector.
+        As we can see from the definition, finding the dot product of $\nabla f$ with any of the cartesian unit vectors gives us the partial derivatives we were working with before.
+        % TODO: include example about the magnitude of the vector being analogous to velocity
+        % TODO: discuss the limit definition of directional derivative
+        % TODO: prove if function is differentiable at a point then directional derivative exists in every direction
+        \begin{example}
+            Condsider the function $f(x,y,z)=xy^2z^3$.
+            Find the directional derivative in the direction of the vector $\vec{u}=2\ihat+6\jhat+3\khat$ at the point $(1,1,1)$.
+            
+            Start by finding the gradient of $f$:
+            \begin{align}
+                \nabla f&=\pdv{f}{x}\ihat+\pdv{f}{y}\jhat+\pdv{f}{z}\khat\\
+                &=y^2z^3\ihat+2xyz^3\jhat+3xy^2z^2\khat.
+            \end{align}
+            Therefore, at the point $(1,1,1)$ the gradient has the value $\ihat+2\jhat+3\khat$.
+            Hence
+            \begin{align}
+                \left.\nabla_{\vec{\hat{u}}}f\right|_{(1,1,1)}&=(\ihat+2\jhat+3\khat)\cdot\left(\frac{2\ihat+6\jhat+3\khat}{\sqrt{2^2+6^2+3^2}}\right)\\
+                &=(\ihat+2\jhat+3\khat)\cdot\left(\frac{2}{7}\ihat+\frac{6}{7}\jhat+\frac{3}{7}\khat\right)\\
+                &=\frac{23}{7}.
+            \end{align}
+        \end{example}
+    
+    \section{Tangent Planes}
+        \paragraph{}
+        Let $\vec{t}$ be a tangent vector to the surface $f(x,y,z)=c$ at a point $P$.
+        Then the directional derivative of $f$ in the direction of $\vec{t}$ has to be 0.
+        % TODO: give more justification for this
+        \begin{equation}
+            \left.\nabla_{\vec{\hat{t}}}f\right|_P=\left.\nabla f\right|_P\cdot\vec{\hat{t}}=0
+        \end{equation}
+        This implies that the gradient $\nabla f$ is perpendicular to $\vec{t}$ at $P$, i.e. it is \textit{normal} to the surface.
+        Thus, the gradient is \textit{always} perpendicular to level sets.
+        % TODO: include diagram to illustrate gradient being perpendicular to contours
+        \begin{example}
+            Consider the surface $f(x,y,z)=x-y^2+xz=-1$.
+            Find a vector normal to the surface at $P=(1,2,2)$.
+
+            Calculate the gradient and evaluate it at $P$:
+            \begin{align}
+                \nabla f&=\pdv{f}{x}\ihat+\pdv{f}{y}\jhat+\pdv{f}{z}\khat=(1+z)\ihat-2y\jhat+x\khat\\
+                \implies\left.\nabla f\right|_P&=3\ihat-4\jhat+\khat.
+            \end{align}
+        \end{example}
+        Note that we for any vector $\vec{u}$ we have
+        \begin{equation}
+            \left.\nabla f\right|_P\cdot\vec{\hat{u}}=\abs{\left.\nabla f\right|_P}\abs{\vec{\hat{u}}}\cos\theta=\abs{\left.\nabla f\right|_P}\cos\theta,
+        \end{equation}
+        where $\theta$ is the angle between the two vectors.
+        This shows that the maximum rate of change of $f$ is in the direction of $\nabla f$ (perpendicular to the level sets).
+        We can also get tangent vectors by setting the above equation to 0 as we saw before.
+        It may seem like there is only one equation for 3 variables, but in fact there is only 1 degree of freedom because we are looking for a vector in a tangent plane.
+
+        \paragraph{}
+        For a surface $f(x,y,z)=c$ and a point $P=(x_0,y_0,z_0)$ on the surface, the tangent plane at $P$ is given by the equation
+        \begin{equation}
+            (x-x_0)\left.\pdv{f}{x}\right|_P+(y-y_0)\left.\pdv{f}{y}\right|_P+(z-z_0)\left.\pdv{f}{z}\right|_P=0
+        \end{equation}
+        \begin{example}
+            Consider the surface $f(x,y,z)=xy^2+x^2z=7$ and the point $P=(1,2,3)$.
+            \begin{align}
+                \nabla f&=(y^2+2xz)\ihat+2xy\jhat+x^2\khat\\
+                \implies\left.\nabla f\right|_P&=10\ihat+4\jhat+\khat.
+            \end{align}
+            Therefore the equation for the tangent plane at $P$ is given by
+            \begin{align}
+                &10(x-1)+4(y-2)+(z-1)=0\\
+                \implies&10x+4y+z=21.
+            \end{align}
+        \end{example}
+
+\end{document}

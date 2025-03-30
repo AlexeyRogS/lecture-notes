@@ -1,0 +1,45 @@
+\documentclass{lecture-notes}
+
+\usepackage{lecture-notes}
+
+% colour styling
+\definecolor{darkpurple}{rgb}{0.4, 0, 0.5}
+\definecolor{lightpurple}{rgb}{0.9, 0.7, 1}
+\setfgcolour{darkpurple}
+\setbgcolour{lightpurple}
+
+% path for figures
+\graphicspath{
+    {abstract_algebra/figures/}
+    {figures/}
+}
+
+% document metadata
+\title{Abstract Algebra}
+\author{Lachlan Dufort-Kennett}
+
+% document structure
+\begin{document}
+
+    \frontmatter
+    \maketitle
+    \tableofcontents
+
+    \chapter{Preface}
+
+    \mainmatter
+    \chapter{Rings}
+    \subfile{abstract_algebra/1_rings}
+    \chapter{Euclidean Domains \& Factorisation}
+    \subfile{abstract_algebra/2_euclidean_domains}
+    \chapter{Equivalence Relations}
+    \subfile{abstract_algebra/3_equivalence_relations}
+    \chapter{Groups}
+    \subfile{abstract_algebra/4_groups}
+
+    \backmatter
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{abstract_algebra/bibliography}
+
+\end{document}

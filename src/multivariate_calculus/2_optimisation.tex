@@ -1,0 +1,314 @@
+\documentclass[../multivariate_calculus.tex]{subfiles}
+
+\begin{document}
+
+    \section{Taylor Series of Multivariate Functions}
+        \paragraph{}
+        First we recap some facts about Taylor series for univariate functions.
+        If a single-variable function $f$ is \textbf{analytic}, then it can be represented around a point $x_0$ by its Taylor series:
+        \begin{equation}
+            f(x)=\sum_{n=0}^\infty\frac{(x-x_0)^n}{n!}\frac{\mathrm{d}^n f}{\mathrm{d}x^n}=f(x_0)+(x-x_0)\left.\dv{f}{x}\right|_{x_0}+\frac{(x-x_0)^2}{2}\left.\dv[2]{f}{x}\right|_{x_0}+\dots.
+        \end{equation}
+        % TODO: use Lagrange notation instead of Leibniz notation (would make it clearer that derivative is being evaluated at a specific point)
+        This power series is valid for any value of $x$ within the \textbf{radius of convergence}, given by
+        \begin{equation}
+            \abs{x-x_0}<\lim_{n\to\infty}\abs*{\frac{\frac{1}{n!}\frac{\mathrm{d}^n f}{\mathrm{d}x^n}}{\frac{1}{(n+1)!}\frac{\mathrm{d}^{n+1}f}{\mathrm{d}x^{n+1}}}}=\lim_{n\to\infty}\abs*{(n+1)\frac{\frac{\mathrm{d}^n f}{\mathrm{d}x^n}}{\frac{\mathrm{d}^{n+1}f}{\mathrm{d}x^{n+1}}}}=R.
+        \end{equation}
+        % TODO: add examples of calculating the radius of convergence
+        Recall that we can differentiate a power series without changing the radius of convergence.
+        If we truncate the power series after a finite numbers of terms $n=k$, then there is an error between the value of the power series and the actual function which is given by
+        \begin{equation}
+            R_{k+1}=\frac{(x-x_0)^{k+1}}{(k+1)!}\left.\frac{\mathrm{d}^{k+1}f}{\mathrm{d}x^{k+1}}\right|_c,
+        \end{equation} 
+        where $c$ is a real number between $x$ and $x_0$.
+        This is Taylor's theorem and it allows us to obtain bounds on the size of the error.
+        \begin{example}
+            What is the maximum possible error for the degree 4 Taylor polynomial for the function $e^x$ expanded about $x_0=0$ and used to approximate the function at $x=0.2$?
+        \end{example}
+        To examine a function at a point outside the radius of convergence, we have to change the expansion point $x_0$.
+        We can do this by substituting.
+        \begin{example}
+            The function $f(u)=\frac{1}{1-u}$ has a power series representation about the point $u_0=0$ which has a radius of convergence $R=1$.
+            \begin{equation}
+                \frac{1}{1+u}=1-u+u^2-u^3+\dots\quad-1<u<1.
+            \end{equation}
+            Suppose we want a series representation for this function which convergences for $-1<x<3$.
+            We make the substitution $u=\frac{x-1}{2}$ (equation of a straight line)
+            \begin{equation}
+                \frac{1}{1+\frac{x-1}{2}}=1-\left(\frac{x-1}{2}\right)+\left(\frac{x-1}{2}\right)^2-\left(\frac{x-1}{2}\right)^3+\dots\quad-1<\frac{x-1}{2}<1.
+            \end{equation}
+            Rearranging this equation gives
+            \begin{equation}
+                \frac{1}{1+x}=\frac{1}{2}\left[1-\left(\frac{x-1}{2}\right)+\left(\frac{x-1}{2}\right)^2-\left(\frac{x-1}{2}\right)^3+\dots\right].
+            \end{equation}
+        \end{example}
+        % TODO: include note about multiplying power series together
+
+        \paragraph{}
+        Lets now try to find a Taylor series for a function of two variables.
+        A taylor polynomial is the a polynomial approximation for a function $f(x,y)$ about a point $(x_0,y_0)$.
+        So we want to capture how $f$ \textit{varies} in a local area around $(x_0,y_0)$.
+        Consider a small line segment given by $x=x_0+ht$, $y=y_0+kt$.
+        Then the first and second derivatives with respect to the parameter $t$ is given by
+        \begin{align}
+            \dv{f}{t}&=\pdv{f}{x}\dv{x}{t}+\pdv{f}{y}\dv{y}{t}=h\pdv{f}{x}+k\pdv{f}{y}\\
+            \dv[2]{f}{t}&=\frac{\mathrm{d}}{\mathrm{d}t}\left(h\pdv{f}{x}+k\pdv{f}{y}\right)=h\left(\pdv[2]{f}{x}h+\frac{\partial^2 f}{\partial x\partial y}k\right)+k\left(\frac{\partial^2 f}{\partial x\partial y}h+\pdv[2]{f}{y}k\right)\\
+            &=h^2\pdv[2]{f}{x}+2kh\frac{\partial^2 f}{\partial x\partial y}+k^2\pdv[2]{f}{y}.
+        \end{align}
+        Now we can express $f(x(t),y(t))=z(t)$ and expand $z(t)$ in a Taylor series about $t=0$:
+        \begin{equation}
+            z(t)=\underbrace{z(0)}_{f(x_0,y_0)}+t\underbrace{\left.\dv{z}{t}\right|_{t=0}}_{f^\prime(x_0,y_0)}+\frac{t^2}{2}\underbrace{\left.\dv[2]{z}{t}\right|_{t=0}}_{f^{\prime\prime}(x_0,y_0)}+\dots.
+        \end{equation}
+        Note that $ht=x-x_0$, $kt=y-y_0$, so
+        \begin{align}
+            t\left.\dv{z}{t}\right|_{t=0}&=(x-x_0)\left.\pdv{f}{x}\right|_{(x_0,y_0)}+(y-y_0)\left.\pdv{f}{y}\right|_{(x_0,y_0)}\\
+            \frac{t^2}{2}\left.\dv[2]{z}{t}\right|_{t=0}&=\frac{(x-x_0)^2}{2}\left.\pdv[2]{f}{x}\right|_{(x_0,y_0)}+\frac{(y-y_0)^2}{2}\left.\pdv[2]{f}{y}\right|_{(x_0,y_0)}\\
+            &\quad+(x-x_0)(y-y_0)\left.\frac{\partial^2 f}{\partial x\partial y}\right|_{(x_0,y_0)}.
+        \end{align}
+        Hence our Taylor expansion for a function of two variables about a point $(x_0,y_0)$ is
+        \begin{align}\label{eq-taylor-series-2D}
+            f(x,y)&=f(x_0,y_0)+(x-x_0)\left.\pdv{f}{x}\right|_{(x_0,y_0)}+(y-y_0)\left.\pdv{f}{y}\right|_{(x_0,y_0)}+\frac{(x-x_0)^2}{2}\left.\pdv[2]{f}{x}\right|_{(x_0,y_0)}\\
+            &\quad+\frac{(y-y_0)^2}{2}\left.\pdv[2]{f}{y}\right|_{(x_0,y_0)}+(x-x_0)(y-y_0)\left.\frac{\partial^2 f}{\partial x\partial y}\right|_{(x_0,y_0)}
+        \end{align}
+        % TODO: this section needs some more formal proof
+        % TODO: include general formula
+        \begin{example}
+            Find a second-order Taylor approximation for the function $f(x,y)=\sin xe^y$ about the point $(0,0)$.
+            \begin{align}
+                f(0,0)=0&\quad f_{xx}(0,0)=0\\
+                f_x(0,0)=1&\quad f_{yy}(0,0)=0\\
+                f_y(0,0)=0&\quad f_{xy}(0,0)=1.
+            \end{align}
+            Hence by the formula above the Taylor expansion is
+            \begin{equation}
+                f(x,y)=x+xy+\dots
+            \end{equation}
+            % TODO: include diagram for this
+        \end{example}
+
+    \section{Stationary Points}
+        \paragraph{}
+        For functions of one variable the possible types of stationary points are minima, maxima, and inflection points.
+        For multivariate functions, we can have all of these as well as \textbf{saddle points}, which are like a minimum in one direction but a maximum in another.
+        % TODO: include diagram to illustrate this
+        To investigate the nature of stationary points for a 1D function, we look at the second derivative.
+        Consider the Taylor series of a 1D function:
+        \begin{equation}
+            f(x)=f(x_0)+(x-x_0)f^\prime(x_0)+\frac{(x-x_0)^2}{2}f^{\prime\prime}(x_0)+\dots
+        \end{equation}
+        If we set $f^\prime(x_0)=0$ (stationary point), then we have
+        \begin{equation}
+            f(x)-f(x_0)=\underbrace{\frac{(x-x_0)^2}{2}}_\text{alway positive}f^{\prime\prime}(x_0)+\dots.
+        \end{equation}
+        So if $f^{\prime\prime}(x_0)>0$, then $f(x)-f(x_0)>0$ and $f(x_0)$ is a \textbf{local minimum}.
+        Similarly if $f^{\prime\prime}(x_0)<0$, then $f(x_0)$ is a \textbf{local maximum}.
+        % TODO: this section needs more rigour
+        If $f^{\prime\prime}(x_0)=0$ but $f^{\prime\prime\prime}(x_0)\neq0$, then
+        \begin{equation}
+            f(x)-f(x_0)=f^{\prime\prime\prime}(x_0)\underbrace{\frac{(x-x_0)^3}{6}}_\text{changes sign depending on $x$}+\dots.
+        \end{equation}
+        % TODO: does this have consequences if f```=0?
+        This leads to an inflection point.
+
+        \paragraph{}
+        We can use the same technique to investigate stationary points of two-variable functions.
+        Using equation \ref{eq-taylor-series-2D}, if $(x_0,y_0)$ is a stationary point then $f_x(x_0,y_0)=f_y(x_0,y_0)=0$ and
+        \begin{align}
+            f(x,y)-f(x_0,y_0)&=\frac{(x-x_0)^2}{2}f_{xx}(x_0,y_0)+\frac{(y-y_0)^2}{2}f_{yy}(x_0,y_0)\\
+            &\quad+(x-x_0)(y-y_0)f_{xy}(x_0,y_0)+\dots.
+        \end{align}
+        % TODO: rewrite this section assuming that all derivatives are evaluated at (x_0,y_0)? Would get rid of a lot of unnecessary text
+
+        \paragraph{}
+        First consider the case where $f_{xx}(x_0,y_0)=f_{yy}(x_0,y_0)=0$.
+        Then we have
+        \begin{equation}
+            f(x,y)-f(x_0,y_0)=(x-x_0)(y-y_0)f_{xy}(x_0,y_0)+\dots.
+        \end{equation}
+        The sign varies since $x-x_0$ and $y-y_0$ can be positive or negative.
+        Therefore this is a \textbf{saddle point}.
+
+        \paragraph{}
+        Now consider the case where $f_{xx}(x_0,y_0)\neq0$.
+        In this case we can write
+        \begin{align}
+            \Delta f&=\frac{1}{f_{xx}}\left(\frac{\Delta x^2}{2}f_{xx}^2+\frac{\Delta y^2}{2}f_{yy}f_{xx}+\Delta x\Delta yf_{xy}f_{xx}\right)+\dots\\
+            &=\frac{1}{f_{xx}}\left(\frac{\Delta x^2}{2}f_{xx}^2+\Delta x\Delta yf_{xy}f_{xx}+\Delta y^2f_{xy}^2-\Delta y^2f_{xy}^2+\Delta y^2f_{yy}f_{xx}\right)+\dots\\
+            &=\frac{1}{f_{xx}}\left\{\left(\frac{\Delta x}{\sqrt{2}}f_{xx}+\frac{\Delta y}{\sqrt{2}}f_{yy}\right)^2+\frac{\Delta y^2}{2}(f_{xx}f_{yy}-f_{xy}^2)\right\}+\dots.
+        \end{align}
+        The quantity in the first set of parentheses is always positive, whereas the quantity in the second set, often called the \textbf{discriminant} $\Delta=f_{xx}f_{yy}-f{xy}^2$ can be positive or negative.
+        If $\Delta>0$ and $f_{xx}>0$, then the whole expression is $>0$ and we have a \textbf{local minimum}.
+        If $\Delta>0$ but $f_{xx}<0$, then $\Delta f<0$ and we have a \textbf{local maximum}.
+        Finally, if $\Delta<0$ then the sign can change (why?) and we have a \textbf{saddle point}.
+        The exact same analysis can be applied to the case $f_{yy}\neq0$.
+        % TODO: what happens in the case \Delta=0?
+        \begin{example}
+            Consider the function $f(x,y)=x^3-6xy+y^3$.
+            Stationary points occur when
+            \begin{align}
+                f_x&=3x^2-6y=0\\
+                f_y&=3y^2-6x=0.
+            \end{align}
+            These equations are satisfied at the points $(0,0)$ and $(2,2)$.
+            Let's calculate the discriminant and find the nature of the stationary points.
+            \begin{equation}
+                \Delta=f_{xx}f_{yy}-f_{xy}^2=(6x)(6y)-(-6)^2=36xy-36.
+            \end{equation}
+            Hence at $(0,0)$, $\Delta=-36$ so we have a saddle point.
+            At $(2,2)$, $\Delta=108$ and $f_{xx}=24$ so we have a local minimum.
+        \end{example}
+        \begin{example}
+            Consider $f(x,y)=x^4+y^4-2(x-y)^2$. We have stationary points when
+            \begin{align}
+                f_x&=4x^3-4(x-y)=0\\
+                f_y&=4y^3+4(x-y)=0.
+            \end{align}
+            Adding the two equations gives $x=-y$, then using one of the equations gives the solutions $(0,0)$, $(\sqrt{2},-\sqrt{2})$ and $(-\sqrt{2},\sqrt{2})$.
+            \begin{equation}
+                \Delta=f_{xx}f_{yy}-f_{xy}^2=(12x^2-4)(12y^2-4)-(4)^2=144x^2y^2-48x^2-48y^2.
+            \end{equation}
+            At $(\sqrt{2},-\sqrt{2})$, $\Delta=384>0$ and $f_{xx}=20>0$ so this is a local minimum.
+            By the same argument, there is also a local minimum at $(-\sqrt{2},\sqrt{2})$.
+            At $(0,0)$, $\Delta=0$ so we can't say anything about the nature of the stationary point using the discriminant.
+            Take $x=y$, then $f(x,y=x)=2x^4\geq0$.
+            But now consider small $x$ and $y$ such that $(x-y)^2>x^4+y^4$, then $f(x,y)<0$.
+            So since the sign can change, $(0,0)$ must be a saddle point.
+        \end{example}
+
+    \section{Optimisation Subject to Constraints}
+        \paragraph{}
+        Suppose we want to find the minimum or maximum of a functions along a certain path.
+        This is equivalent to optimising the function with a \textbf{constraint} on the variables.
+        There are many ways of solving these optimisation problems, but two of the most common are the \textbf{substitution method} and the \textbf{method of Lagrange multipliers}.
+        The substitution method works well for simple problems where we can separate the variables in the constraint.
+        For more complex problems, the method of Lagrange multipliers is very powerful.
+
+        \paragraph{}
+        Let's look at the substitution method first.
+        Suppose we have a bivariate function $f(x,y)$ and a constraint between the two variables $y=y(x)$.
+        Then we can substitution $f(x,y=y(x))$ which defines another function $g(x)$ that we can differentiate to get the extremum.
+        % TODO: make this section more general
+        \begin{example}
+            Minimise $f(x,y)=x^2+y^2$ subject to the constraint $y=1-x$.
+            % TODO: include diagram to illustrate this
+            We define the composite function $g(x)$ as
+            \begin{equation}
+                g(x)=f(x,y=1-x)=x^2+(1-x)^2=2x^2-2x+1.
+            \end{equation}
+            We can now find the derivative and set it equal to 0:
+            \begin{equation}
+                g^\prime(x)=4x-2=0.
+            \end{equation}
+            So the function $f(x,y)$ is minimised along the path at $x=\frac{1}{2}$, $y=1-\frac{1}{2}=\frac{1}{2}$.
+        \end{example}
+        \begin{example}
+            Minimise $f(x,y,z)=x^2+2y^2+z$ subject to the constraint $x+y^2-z=0$.
+            \begin{equation}
+                g(x,y)=f(x,y,z=x+y^2)=x^2+x+3y^2.
+            \end{equation}
+            \begin{equation}
+                \pdv{g}{x}=2x+1=0,\quad\pdv{g}{y}=6y=0,
+            \end{equation}
+            so $x=-\frac{1}{2}$ and $y=0$. 
+            It can be shown using the second derivatives that this is a minimum.
+            Hence the minimum of $f(x,y,z)$ subject to the constraint is $f(-\frac{1}{2},0,-\frac{1}{2})=-\frac{1}{4}$.
+        \end{example}
+
+    \section{Method of Lagrange Multipliers}
+        \paragraph{}
+        If we can't solve an optimisation problem using the substitution method then the method of Lagrange multipliers is the next best thing.
+        Suppose we have a function of three variables $f(x,y,z)$ and a constraint which we write in the general form $g(x,y,z)=0$.
+        At an stationary point on the constraint surface, the directional derivative of $f$ in a direction tangent to the surface will be 0.
+        % TODO: why is this?
+        Since $g(x,y,z)=0$ defines a level set, the gradient of $g$ is normal to the surface everywhere.
+        Thus, at a stationary point on the constraint surface, the gradient of $f$ is \textit{parallel} to the gradient of $g$.
+        \begin{equation}
+            \exists\lambda\in\RR\text{ such that }\nabla f=\lambda\nabla g.
+        \end{equation}
+        We call $\lambda$ the \textbf{Lagrange multiplier}.
+
+        \paragraph{}
+        In order to optimise a function subject to a constraint using this fact, we construct the function
+        \begin{equation}
+            F(x,y,z,\lambda)=f(x,y,z)-\lambda g(x,y,z).
+        \end{equation} 
+        Then setting all the first derivatives equal to 0 gives
+        \begin{align}
+            \pdv{F}{x}&=\pdv{f}{x}-\lambda\pdv{g}{x}=0\implies\pdv{f}{x}=\lambda\pdv{g}{x}\\
+            \pdv{F}{y}&=\pdv{f}{y}-\lambda\pdv{g}{y}=0\implies\pdv{f}{y}=\lambda\pdv{g}{y}\\
+            \pdv{F}{z}&=\pdv{f}{z}-\lambda\pdv{g}{z}=0\implies\pdv{f}{z}=\lambda\pdv{g}{z}\\
+            \pdv{F}{\lambda}&=-g(x,y,z)=0.
+        \end{align}
+        % TOOD: this section needs more explanation
+        Note that the first three equations are exactly the condition $\nabla f=\lambda\nabla g$.
+        \begin{example}
+            Minimise $f(x,y)=x^2+y^2$ subject to the constraint $g(x,y)=x+y-1=0$.
+            This is the same problem from before which we can solve using the substitution method, but let's now solve it with the method of Lagrange multipliers.
+            First we construct the function $F(x,y,\lambda)$, find the derivatives and set them equal to 0.
+            \begin{equation}
+                F(x,y,\lambda)=f(x,y)-\lambda g(x,y)=x^2-y^2-\lambda(x+y-1).
+            \end{equation}
+            \begin{align}
+                \pdv{F}{x}&=2x-\lambda=0\\
+                \pdv{F}{y}&=2y-\lambda=0\\
+                \pdv{F}{\lambda}&=x+y-1=0.
+            \end{align}
+            Now adding the first two equations and substituting the last gives
+            \begin{align}
+                2x+2y-2\lambda&=0\\
+                x+y&=\lambda\\
+                \implies\lambda&=1.
+            \end{align}
+            So using the first two equations gives $x=\frac{1}{2}$ and $y=\frac{1}{2}$ like we found before.
+        \end{example}
+        \begin{example}
+            Find and categorise the stationary points of the function $f(x,y,z)=x+y+z$ on the surface of a sphere centered at the origin with radius 5.
+            This constraint takes the form $g(x,y,z)=x^2+y^2+z^2-5^2=0$.
+            The function $F(x,y,z,\lambda)$ and its derivatives (set equal to 0) are:
+            \begin{align}
+                F(x,y,z,\lambda)&=x+y+z-\lambda(x^2+y^2+z^2-25)\\
+                &=\pdv{F}{x}=1-2x\lambda=0\\
+                &=\pdv{F}{y}=1-2y\lambda=0\\
+                &=\pdv{F}{z}=1-2z\lambda=0\\
+                &=\pdv{F}{\lambda}=x^2+y^2+z^2-25=0.
+            \end{align}
+            Thus, we have $x=y=z=\frac{1}{2\lambda}$ by the first three derivatives and $\frac{3}{4\lambda^2}=25$ by the last.
+            From this we we obtain $\lambda=\pm\frac{\sqrt{3}}{10}$ which gives $x=y=z=\pm\frac{5}{\sqrt{3}}$.
+            We therefore have two stationary points, $(\frac{5}{\sqrt{3}},\frac{5}{\sqrt{3}},\frac{5}{\sqrt{3}})$ and $(-\frac{5}{\sqrt{3}},-\frac{5}{\sqrt{3}},-\frac{5}{\sqrt{3}})$.
+            To find the nature of the stationary points, we expand about the stationary points (we will use the constraint to ensure we remain on the sphere):
+            \begin{align}
+                x&=\frac{5}{\sqrt{3}}+\varepsilon\\
+                y&=\frac{5}{\sqrt{3}}+\delta\\
+                z&=\sqrt{25-\left(\frac{5}{\sqrt{3}}+\varepsilon\right)^2-\left(\frac{5}{\sqrt{3}}+\delta\right)^2}\\
+                &=\frac{5}{\sqrt{3}}\sqrt{1-\frac{2\sqrt{3}}{5}(\varepsilon+\delta)-\frac{2}{25}(\varepsilon^2+\delta^2)}\\
+                &\approx\frac{5}{\sqrt{3}}(1-\frac{\sqrt{3}}{5}(\varepsilon+\delta)-\frac{3}{50}(\varepsilon^2+\delta^2)-\frac{\sqrt{3}}{20}(\varepsilon+\delta)^2)\\
+            \end{align}
+            Where in the last line we have used a Taylor series expansion.
+            % TODO: check this section and make it more rigorous
+            Hence
+            \begin{align}
+                f(x,y,z)&=x+y+z\\
+                &=\frac{5}{\sqrt{3}}+\varepsilon+\frac{5}{\sqrt{3}}+\delta+\frac{5}{\sqrt{3}}-(\varepsilon+\delta)-\frac{15}{50\sqrt{3}}(\varepsilon^2+\delta^2)-\frac{1}{4}(\varepsilon+\delta)^2\\
+                &=5\sqrt{3}-\text{something positive (and small?)}
+            \end{align}
+            This is $>0$, so we have a local maximum.
+        \end{example}
+        \begin{example}
+            Consider an ellipse $\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$.
+            What is the largest rectangle that can fit inside the ellipse?
+            % TODO: include diagram to illustrate this
+            To turn this into an optimisation problem that we can solve, consider the top right corner of the ellipse $(x,y)$.
+            Due to symmetry, the area of a rectangle with a corner at $(x,y)$ is $4xy$, and this is the function that we want to \textit{minimise} under the constraint that $x$ and $y$ lie on the ellipse.
+            Using the method of Lagrange multipliers:
+            \begin{align}
+                F(x,y,\lambda)&=4xy-\lambda\left(\frac{x^2}{a^2}+\frac{y^2}{b^2}-1\right)\\
+                \pdv{F}{x}&=4y-\frac{2x\lambda}{a^2}=0\\
+                \pdv{F}{y}&=4x-\frac{2y\lambda}{b^2}=0\\
+                \pdv{F}{\lambda}&=\frac{x^2}{a^2}+\frac{y^2}{b^2}-1=0.
+            \end{align}
+            From the $x$ and $y$ derivatives, we get $x=\frac{y\lambda}{2b^2}$ and $y=\frac{x\lambda}{2a^2}$.
+            Combining these equations with the last one, we find $\lambda=2ab$.
+            Hence by back-substitution we get $x=\frac{a}{\sqrt{2}}$ and $y=\frac{b}{\sqrt{2}}$, which implies $f(x,y)=2ab$.
+        \end{example}
+
+\end{document}

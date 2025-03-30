@@ -1,0 +1,143 @@
+\documentclass[../abstract_algebra.tex]{subfiles}
+
+\begin{document}
+
+    \section{Introduction}
+        \paragraph{}
+        The objective of the field of abstract algebra is to create a general theory of algebraic structures so we can study algebraic properties of mathematical objects we are familiar with.
+        Some examples of these are integers, real numbers, matrices, and polynomials.
+        But what is an algebraic structure?
+        An algebraic structure in its most basic form is a \textbf{set} of mathematical objects with some \textbf{operations} that act on the members of the set with some given constraints.
+        In abstract algebra there are three main types of algebraic structure: \textbf{groups}, \textbf{rings}, and \textbf{fields}.
+        These abstract structures generalise structures that we may be more familiar with such as the set of integers or matrices with addition and multiplication.
+        Abstraction helps us investigate similarities and relationships between more familiar structures.
+
+    \section{Binary relations}
+        \paragraph{}
+        Binary relations are how we formalise relationships between elements of sets.
+        \begin{definition}
+            Let $A$ and $B$ be sets. Then a \textbf{binary relation} $R$ over $A$ and $B$ is a subset of the Cartesian product of $A$ with $B$. Let $(a, b) \in A \times B$. Then we say $a$ is \textit{R-related} to $b$ and write $aRb \iff (a, b) \in R$. 
+        \end{definition}
+        \begin{example}
+            Let $D \subseteq \mathbb{N} \times \mathbb{P}$ be a binary relation on $\mathbb{N}$ and $\mathbb{P}$ - the set of prime numbers - given by $(n, p) \in D \iff n|p$. Clearly then, by definition the prime numbers, for any given prime $p$ we have $(p, p) \in D$ and $(1, p) \in D$ and nothing else. So $D = \{(p, p): p \in \mathbb{P}\} \cup \{(1, p): p \in \mathbb{P}\}.$
+            % TODO: explain this example more
+        \end{example}
+        Binary relations over a set and itself are called \textbf{homogeneous}. 
+        Homogeneous relations can be characterised by several different properties, of which we will now define some.
+        \begin{definition}\label{homogeneous-relation-types}
+            Let $X$ be a set, $R \subseteq X^2$ a binary relation.
+            \begin{itemize}
+                \item $R$ is \textbf{reflexive} $\iff \forall x \in X,\  xRx$.
+                \item $R$ is \textbf{symmetric} $\iff \forall x, y \in X,\ xRy \implies yRx$.
+                \item $R$ is \textbf{antisymmetric} $\iff \forall x, y \in X,\ xRy\ \text{and}\ yRx \implies x=y$.
+                \item $R$ is \textbf{transitive} $\iff \forall x, y, z \in X, xRy\ \text{and}\ yRz \implies xRz$.
+            \end{itemize}
+        \end{definition}
+        
+        \paragraph{}
+        A \textbf{function} (or \textbf{mapping}) is a type of binary relation and a \textbf{binary operation} is a type of function.
+        % TODO: discuss closure of binary operations
+
+    \section{Rings}
+        \paragraph{}
+        We now give the definition of a ring which is like a generalisation of the integers.
+        \begin{definition}
+            A \textbf{ring} is a set $R$ equipped with two binary operations denoted $+$ and $\cdot$ (which we usually call ``addition'' and ``multiplication'') which have the following properties:
+            \begin{enumerate}[label={\upshape(\roman*)}]
+                \item $(a+b)+c=a+(b+c)$\quad$\forall a,b,c\in R$\quad($+$ is associative)
+                \item There exists an element in $R$ denoted $0$ such that $0+a=a+0=a\quad\forall a\in R$\quad($+$ has an identity element)
+                \item $\forall a\in R$, there exists an element $-a\in R$ such that $a+(-a)=0$\quad(each element in $R$ has an additive inverse)
+                \item $a+b=b+a$\quad$\forall a,b\in R$\quad($+$ is commutative)
+                \item $(a\cdot b)\cdot c=a\cdot(b\cdot c)$\quad$\forall a,b,c\in R$\quad($\cdot$ is associative)
+                \item There exists an element in $R$ denoted $1$ such that $1\cdot a=a\cdot 1=a\quad\forall a\in R$\quad($\cdot$ has an identity element)
+                \item $a\cdot(b+c)=a\cdot b+a\cdot c$ and $(a+b)\cdot c=a\cdot c +b\cdot c\quad\forall a,b,c\in R$\quad($\cdot$ distributes over $+$)
+            \end{enumerate}
+        \end{definition}
+        % TODO: split these axioms into groups
+
+        \paragraph{}
+        A note on closure: binary operations are closed by default, meaning that a ring is automatically closed under both $+$ and $\cdot$.
+        This is the first thing we should check if we want to know if something is a ring.
+        An observation we can make from the definition is that rings are non-empty by definition (they contain 0 and 1).
+        % TODO: can 0=1?
+
+        \paragraph{}
+        Let's now look at some consequences of the axioms. Let $R$ be a ring and let $a_1$, $a_2$, $\dots,a_n\in R$.
+        Then $a_1+a_2+\dots+a_n$ is a well-defined element in $R$ through repeated use of the associativity axiom for addition (proof by induction).
+        Similarly, repeated use of the commutativity axiom allows us to rearrange the terms.
+        Brackets can also be removed in a product $a_1\cdot a_2\cdot\dots\cdot a_n$, although here we cannot rearrange the terms since multiplication is not necessarily commutative.
+        Often, we don't write $\cdot$ to denote a multiplication and simply write it as a juxtaposition i.e. $ab\in R$.
+
+        \begin{example}
+            Let $R$ be a ring and let $M_{n\times n}(R)$ be the set of $n\times n$ matrices with entries in $R$.
+            Let $A\in M_{n\times n}(R)$ be denoted $[a_{ij}]$, $B\in M_{n\times n}(R)=[b_{ij}]$.
+            Then we define two binary operations $+$ and $\cdot$ by
+            \begin{align}
+                A+B&=[a_{ij}+b_{ij}],\\
+                AB&=[c_{ij}]\text{, where } c_{ij}=\sum_{k=1}^{n}a_{ik}b_{kj}.
+            \end{align}
+            These are simply the familiar matrix addition and multiplication.
+            We can now show that $M_{n\times n}(R)$ forms a ring with these operations.
+            
+            \paragraph{}
+            First note that if $A$ and $B$ are $n\times n$ matrices over $R$, then $A+B$ and $AB$ are also $n\times n$ matrices over $R$, so $M_{n\times n}(R)$ is closed under these operations.
+            We can now verify each of the ring axioms:
+            % TODO: prove this
+        \end{example}
+
+        \paragraph{}
+        A commutative ring is a ring $R$ which satisfies
+        \begin{equation}
+            a\cdot b=b\cdot a\quad\forall a,b\in R\quad\text{($\cdot$ is commutative)}.
+        \end{equation}
+        % TODO: replace number with axiom label
+        So a matrix ring like $M_{n\times n}(R)$ is not a commutative ring, but $\ZZ$ is.
+
+        \begin{example}
+            Let $R$ be a ring. A \textbf{polynomial} over $R$ is an expression
+            \begin{equation}
+                \sum_{k=0}^{n}a_kx^k=a_0+a_1x+a_2x^2+\dots+a_nx^n,
+            \end{equation}
+            where $n\geq0$ and $a_1,a_2,\dots,a_n\in R$.
+            If $i$ is the largest number such that $a_i\neq0$, then we say that the polynomial has \textbf{degree} i.
+            Two polynomials $\sum_{k=0}^{n}a_kx^2,\sum_{k=0}^{m}b_kx^2$ are defined to be equal if $a_i=b_i$ $\forall i=0,\dots,\max\{n,m\}$.
+
+            \paragraph{}
+            We now define $R[x]$ to be the set of all polynomials over $R$.
+            We can define the sum and product of two polynomials in the normal way we would expect; if $f(x)=\sum_{k=0}^{n}a_kx^k$ and $g(x)=\sum_{k=0}^{m}b_kx^k$, then
+            \begin{align}
+                f(x)+g(x)&=\sum_{k=0}^{\max\{n,m\}}(a_k+b_k)x^k\\
+                f(x)\cdot g(x)&=\sum_{k=0}^{n+m}c_kx^k\text{, where } c_k=a_0b_k+a_1b_{k-1}+\dots+a_kb_0=\sum_{i=0}^{k}a_ib_{k-i}.
+            \end{align}
+            The last part comes from the distributive law.
+            % TODO: note about coefficients higher than n being defined to be 0
+            Just like matrices with entries in a ring, polynomials with coefficients in a ring also form a ring.
+            % TODO: show this
+        \end{example}
+
+    \section{Subrings}
+        \paragraph{}
+        Let $R$ be a ring and let $S\in R$ such that $S$ is a ring under the same operations on $R$.
+        Then $S$ is a \textbf{subring} of $R$.
+
+        \begin{example}
+            $\ZZ$ is a subring of $\QQ$, which is in turn a subring of $\RR$.
+            Similarly, $M_{n\times n}(\ZZ)$ is a subring of $M_{n\times n}(\QQ)$ which is a subring of $M_{n\times n}(\RR)$ and $\ZZ[x]$ is a subring of $\QQ[x]$ which is a subring of $\RR[x]$.
+        \end{example}
+        % TODO: subring test?
+
+    \section{Fields}
+        \paragraph{}
+        A field is simply an abstraction of the rational, real or complex numbers that we are used to, where we can add, substract, multiply and divide any numbers (except 0).
+        A field can therefore be considered as a commutative ring with two additional properties.
+        \begin{definition}
+            A \textbf{field} is a commutative ring $F$, with operations $+$ and $\cdot$, which also satisfies two additional properties:
+            \begin{enumerate}[label={\upshape(\roman*)}]
+                \item $1\neq0$
+                \item $\forall a\in F$ with $a\neq0$, there exists an element $a^{-1}\in F$ such that $a\cdot a^{-1}=a^{-1}\cdot a=1$ (each nonzero element in $F$ has a multiplicative inverse)
+            \end{enumerate}
+            % TODO: replace with labels
+        \end{definition}
+        % TODO: consequences of the axioms -a=(−1)a, if ab=0 then a or b must be 0
+
+\end{document}

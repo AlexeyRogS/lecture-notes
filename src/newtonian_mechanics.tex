@@ -1,0 +1,51 @@
+\documentclass{lecture-notes}
+
+\usepackage{lecture-notes}
+
+% colour styling
+\definecolor{darkred}{rgb}{0.6, 0.0, 0.2}
+\definecolor{lightred}{rgb}{1, 0.8, 0.9}
+\setfgcolour{darkred}
+\setbgcolour{lightred}
+
+% path for figures
+\graphicspath{
+    {newtonian_mechanics/figures/}
+    {figures/}
+}
+
+% document metadata
+\title{Newtonian Mechanics}
+\author{Lachlan Dufort-Kennett}
+
+% document structure
+\begin{document}
+
+    \frontmatter
+    \maketitle
+    \tableofcontents
+
+    \chapter{Preface}
+
+    \mainmatter
+    \chapter{Newton's Laws of Motion}
+    \subfile{newtonian_mechanics/1_laws_of_motion}
+    \chapter{Linear Momentum}
+    \subfile{newtonian_mechanics/2_linear_momentum}
+    \chapter{Energy \& Work}
+    \subfile{newtonian_mechanics/3_energy_and_work}
+    \chapter{Angular Motion}
+    \subfile{newtonian_mechanics/4_angular_motion}
+    \chapter{Angular Momentum}
+    \subfile{newtonian_mechanics/5_angular_momentum}
+    \chapter{Oscillations}
+    \subfile{newtonian_mechanics/6_oscillations}
+    \chapter{Waves}
+    \subfile{newtonian_mechanics/7_waves}
+
+    \backmatter
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{newtonian_mechanics/bibliography}
+
+\end{document}

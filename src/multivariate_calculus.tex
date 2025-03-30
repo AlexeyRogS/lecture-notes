@@ -1,0 +1,47 @@
+\documentclass{lecture-notes}
+
+\usepackage{lecture-notes}
+
+% colour styling
+\definecolor{darkorange}{rgb}{0.7, 0.3, 0.0}
+\definecolor{lightorange}{rgb}{1, 0.8, 0.5}
+\setfgcolour{darkorange}
+\setbgcolour{lightorange}
+
+% path for figures
+\graphicspath{
+    {multivariate_calculus/figures/}
+    {figures/}
+}
+
+% document metadata
+\title{Multivariate Calculus}
+\author{Lachlan Dufort-Kennett}
+
+% document structure
+\begin{document}
+
+    \frontmatter
+    \maketitle
+    \tableofcontents
+
+    \chapter{Preface}
+
+    \mainmatter
+    \chapter{Multivariate Functions}
+    \subfile{multivariate_calculus/1_multivariate_functions}
+    \chapter{Optimisation}
+    \subfile{multivariate_calculus/2_optimisation}
+    \chapter{Integration Techniques}
+    \subfile{multivariate_calculus/3_integration_techniques}
+    \chapter{Double Integrals}
+    \subfile{multivariate_calculus/4_double_integrals}
+    \chapter{Triple Integrals}
+    \subfile{multivariate_calculus/5_triple_integrals}
+
+    \backmatter
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{multivariate_calculus/bibliography}
+
+\end{document}

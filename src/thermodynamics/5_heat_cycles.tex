@@ -1,0 +1,111 @@
+\documentclass[../thermodynamics.tex]{subfiles}
+
+\begin{document}
+
+    \section{Heat Engines}
+        \paragraph{}
+        A heat engine is a generic name for a system that absorbs heat and converts some of it into useful work.
+        Heat engines contain a working substance which we do processes on.
+        The process in the engine must be cyclic to be practical.
+        Heat is added to the working substance, the entropy of the working substance increases, then we dump the extra entropy into a cold reservoir to return the substance to its original state.
+        % TODO: include digram
+
+        \paragraph{}
+        An alternative way of stating the second law is that no series of processes which transfer energy to a body as heat and the completely converts the energy to work is possible.
+        One of the most historically significant and well-known heat engines is the \textbf{Carnot cycle}.
+        \begin{enumerate}[label={\upshape(\roman*)}]
+            \item Isothermal expansion, gas is going work on outside world.
+            \item Adiabatic expansion, gas is doing work again.
+            \item Isothermal compression, outside world is doing work on the gas.
+            \item Adiabatic compression, outside world is doing work on the gas again.
+        \end{enumerate}
+        The work extracted from this cycle is given by the area enclosed by the process in a $P$-$V$ diagram.
+        % TODO include diagram
+        The isothermal expansion is propelled by absorption of heat.
+        In the second phase, the gas is allowed to expand, doing work and losing energy.
+        The the gas is cooled by the reservoir and compressed, which takes less energy to the expansion phase due to the gas being at lower pressure.
+        Finally, the gas is adiabatically compressed to bring its internal energy back to where it started.
+        Let's look at the change in entropy during the Carnot cycle.
+        We already know what the entropy change is from processes we have studied before.
+        In the isothermal expansion phase, the entropy change is
+        \begin{equation}
+            \Delta S_\text{gas}=\frac{Q_\text{hot}}{T_\text{hot}},\quad\Delta S_\text{hot}=-\frac{Q_\text{hot}}{T_\text{hot}},
+        \end{equation}
+        where $Q_\text{hot}$, is the heat transferred from the hot reservoir and $T_\text{hot}$ is the temperature of the hot reservoir.
+        In the next phase, the expansion is adiabatic so the entropy change is zero.
+        \begin{equation}
+            \Delta S_\text{gas}=0.
+        \end{equation}
+        Now in the isothermal compression phase, the gas is exchanging heat with the cold reservoir:
+        \begin{equation}
+            \Delta S_\text{gas}=-\frac{Q_\text{cold}}{T_\text{cold}},\quad\Delta S_\text{cold}=\frac{Q_\text{cold}}{T_\text{cold}}.
+        \end{equation}
+        Finally, in the last phase, the entropy change is once again zero since the compression is adiabatic.
+        \begin{equation}
+            \Delta S_\text{gas}=0.
+        \end{equation}
+        In total, since the gas starts and finishes in the exact same configuration, the entropy change over the whole cycle must be zero.
+        This implies that
+        \begin{equation}
+            \frac{Q_\text{hot}}{T_\text{hot}}=\frac{Q_\text{cold}}{T_\text{cold}}.
+        \end{equation}
+
+        \paragraph{}
+        We can define the efficiency of the Carnot cycle as the work done by the gas during phase 2 compared to the heat transferred from the hot reservoir to the gas.
+        \begin{equation}
+            \varepsilon=-\frac{W_\text{cycle}}{Q_\text{hot}}.
+        \end{equation}
+        By the first law of thermodynamics we have
+        \begin{equation}
+            Q_\text{hot}-Q_\text{cold}+W_\text{cycle}=0,
+        \end{equation}
+        since the total change in internal energy is zero.
+        By dividing this equation by $Q_\text{hot}$ and rearranging, we get
+        \begin{align}
+            \varepsilon&=1-\frac{Q_\text{cold}}{Q_\text{hot}}\\
+            &=1-\frac{T_\text{cold}}{T_\text{hot}}.
+        \end{align}
+        It can be proven that this is actually an upper limit on the efficiency of \textit{any} reversible process!
+
+    \section{Refrigerators}
+        \paragraph{}
+        We can also model thermodyamic cycles which \textit{remove} energy from a substance (i.e. a refrigerator) by looking at a heat engine in reverse.
+        For example, a simple model of a refrigerator is as a Carnot cycle in reverse.
+        The refrigerator remove energy from a cold reservoir and dumps it in a hot reservoir by using work.
+        A hypothetical perfect fridge would not need energy to run i.e. $W=0$.
+        In this case, the entropy changes of the hot and cold reservoirs are given by
+        \begin{equation}
+            \Delta S_\text{cold}=-\frac{Q}{T_\text{cold}},\quad\Delta S_\text{hot}=\frac{Q}{T_\text{hot}}.
+        \end{equation}
+        Note that $Q_\text{cold}=Q_\text{hot}=Q$ since $W=0$.
+        Then the total entropy change of the entire system is
+        \begin{align}
+            \Delta S_\text{total}&=\Delta S_\text{cold}+\Delta S_\text{hot}\\
+            &=\frac{Q}{T_\text{hot}}-\frac{Q}{T_\text{cold}}.
+        \end{align}
+        Since $T_\text{hot}>T_\text{cold}$, $\Delta S_\text{total}<0$ which is disallowed by the second law, so a perfect fridge \textit{cannot} exist.
+        In other words, the second law says that no series of processes that transfers energy from a cold body to a hot body purely by heat transfer is possible.
+
+        \paragraph{}
+        We can define a coefficient of performance analogously to the efficiency of a heat engine as the heat extracted from the cold reservoir divided by the work input to the cycle.
+        \begin{equation}
+            \kappa=\frac{Q_\text{cold}}{W_\text{cycle}}.
+        \end{equation}
+        Using the first law again just like before, we get
+        \begin{align}
+            W_\text{cycle}&=Q_\text{hot}-Q_\text{cold}\\
+            \kappa&=\frac{Q_\text{cold}}{Q_\text{hot}-Q_\text{cold}}.
+        \end{align}
+
+    \section{Heat Pumps}
+        \paragraph{}
+        For a heat pump, where the objective of the cycle is to take energy from a cold reservoir and ``pump'' it into a hot reservoir, the cycle is equivalent to that of a refrigerator.
+        We define the coefficient of performance differently to reflect the different purpose of the cycle.
+        \begin{align}
+            \text{C.O.P.}&=\frac{Q_\text{hot}}{W}\\
+            &=\frac{Q_\text{cold}+W}{W}\\
+            &=\frac{T_\text{hot}}{T_\text{hot}-T_\text{cold}}.
+        \end{align}
+        % TODO: include diagram for this
+
+\end{document}

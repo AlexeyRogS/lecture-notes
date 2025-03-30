@@ -1,0 +1,41 @@
+\documentclass{lecture-notes}
+
+\usepackage{lecture-notes}
+
+% colour styling
+\definecolor{darkorange}{rgb}{0.7, 0.3, 0.0}
+\definecolor{lightorange}{rgb}{1, 0.8, 0.5}
+\setfgcolour{darkorange}
+\setbgcolour{lightorange}
+
+% path for figures
+\graphicspath{
+    {computational_physics/figures/}
+    {figures/}
+}
+
+% document metadata
+\title{Computational Physics}
+\author{Lachlan Dufort-Kennett}
+
+% document structure
+\begin{document}
+
+    \frontmatter
+    \maketitle
+    \tableofcontents
+
+    \chapter{Preface}
+
+    \mainmatter
+    \chapter{Basics}
+    \subfile{computational_physics/1_basics.tex}
+    \chapter{Curve Fitting}
+    \subfile{computational_physics/2_curve_fitting.tex}
+
+    \backmatter
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{computational_physics/bibliography}
+
+\end{document}

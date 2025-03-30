@@ -1,0 +1,47 @@
+\documentclass{lecture-notes}
+
+\usepackage{lecture-notes}
+
+% colour styling
+\definecolor{darkpurple}{rgb}{0.4, 0, 0.5}
+\definecolor{lightpurple}{rgb}{0.9, 0.7, 1}
+\setfgcolour{darkpurple}
+\setbgcolour{lightpurple}
+
+% path for figures
+\graphicspath{
+    {thermodynamics/figures/}
+    {figures/}
+}
+
+% document metadata
+\title{Thermodynamics}
+\author{Lachlan Dufort-Kennett}
+
+% document structure
+\begin{document}
+
+    \frontmatter
+    \maketitle
+    \tableofcontents
+
+    \chapter{Preface}
+
+    \mainmatter
+    \chapter{Temperature \& Heat}
+    \subfile{thermodynamics/1_temperature_heat}
+    \chapter{Kinetic Theory}
+    \subfile{thermodynamics/2_kinetic_theory}
+    \chapter{Thermodynamic Processes}
+    \subfile{thermodynamics/3_thermodynamic_processes}
+    \chapter{Entropy}
+    \subfile{thermodynamics/4_entropy}
+    \chapter{Heat Cycles}
+    \subfile{thermodynamics/5_heat_cycles}
+
+    \backmatter
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{thermodynamics/bibliography}
+
+\end{document}
