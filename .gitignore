@@ -1,4 +1,11 @@
-# LaTeX files
+# LaTeX temporary files
+**/*.toc
+**/*.log
+**/*.fls
+**/*.aux
+**/*.fdb_latexmk
+
+# LaTeX output files
 **/*.bbl
 **/*.synctex.gz
-*/chapters/*.pdf
+pdf/*/*.pdf
