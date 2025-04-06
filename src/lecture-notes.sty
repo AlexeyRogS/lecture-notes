@@ -59,7 +59,8 @@
 % --- vectors --- %
 
 % vector notation
-\NewCommandCopy{\defaultvec}{\vec}
+\let\defaultvec\vec % reverted to earlier version of TeX Live so that LaTeXML will work, \NewCommandCopy not supported yet
+% \NewCommandCopy{\defaultvec}{\vec}
 % \renewcommand*{\vec}[1]{\defaultvec{\boldsymbol{#1}}}
 \renewcommand*{\vec}[1]{\boldsymbol{#1}}
 
@@ -148,7 +149,8 @@
     \mathclose{},\mathopen{}
     \ifblank{#2}{\,\cdot\,}{#2}
 }
-\NewCommandCopy{\poisson}{\acomm} % poisson bracket
+\let\poisson\acomm % reverted to earlier version of TeX Live so that LaTeXML will work, \NewCommandCopy not supported yet
+% \NewCommandCopy{\poisson}{\acomm} % poisson bracket 
 
 \ExplSyntaxOff
 
