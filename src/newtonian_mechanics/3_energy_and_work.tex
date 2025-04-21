@@ -117,6 +117,7 @@
         % TODO: mention the relation between NIII and sign of work
 
     \section{Friction}
+        % move this to an earlier chapter? this section does not need energy/work to introduce its ideas
         \paragraph{}
         Friction is a very complicated process which occurs on a miroscopic scale, so in order to model in on a macroscopic scale we must use simplified empirical laws.
         In general, friction is a force which opposes change in motion. Hence if a force is applied parallel to a surface, then the frictional force will be antiparallel to this, perpendicular to the normal force.
@@ -259,6 +260,37 @@
         \end{equation}
         % TODO: include discussion of choosing zero-point
         If we differentiate this with respect to $r$, we get the law of universal gravitation as expected.
+        % TODO: introduce power
+        \begin{example}
+            % TODO: provide justification for solution to this example
+            Consider four possible paths of an object falling that start and end at the same height.
+            Order the paths in terms of the final kinetic energy when there is no friction.
+            What changes if there is friction?
+            \begin{figure}[H]
+                \centering
+                \begin{tikzpicture}[scale=5]
+                    \draw[<-] (0,1) node[left] {$h$} |- (2, 0);
+
+                    \draw[shift={(0.2,0.9)}] (-0.06,-0.05) rectangle (0.06,0.05);
+                    \draw[->,dashed] (0.2,0.8) -- (0.2,0.5);
+                    \node[below] at (0.2,0) {A};
+                    
+                    \draw[shift={(0.56,0.9)},rotate=-68.2] (-0.06,-0.05) rectangle (0.06,0.05);
+                    \draw (0.45,1) -- (0.85,0);
+                    \node[below] at (0.65,0) {B};
+
+                    \draw[shift={(1,0.9)},rotate=-73.3] (-0.06,-0.05) rectangle (0.06,0.05);
+                    \draw (0.9,1) -- (1.2,0);
+                    \node[below] at (1.05,0) {C};
+
+                    \draw[shift={(1.33,0.9)},rotate=-83] (-0.06,-0.05) rectangle (0.06,0.05);
+                    \draw (1.25,1) parabola bend (1.6,-0.2) (1.8,0);
+                    \node[below] at (1.6,0) {D};
+                \end{tikzpicture}
+            \end{figure}
+            With no friction, the final velocity is the same for all paths because the change in gravitional potential energy $U_g$ is the same.
+            With friction, $v_A>v_B>v_C>v_D$.
+        \end{example}
 
     \section{Collisions}
         \paragraph{}

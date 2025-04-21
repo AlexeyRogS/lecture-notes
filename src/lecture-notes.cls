@@ -14,6 +14,7 @@
 \RequirePackage[nottoc]{tocbibind} % add bibliography to table of contents
 \RequirePackage{subfiles}
 \RequirePackage{enumitem}
+\RequirePackage{float}
 \RequirePackage{graphicx} % figures
 \RequirePackage{amsthm} % automatic numbering of theorem environments and the proof environment
 \RequirePackage{tcolorbox} % styling theorem and proof environments
