@@ -4,7 +4,7 @@ use warnings;
 
 my @notes = (
     "real_analysis",
-    "newtonian_mechanics",
+    "classical_mechanics",
     "abstract_algebra",
     "quantum_mechanics",
     "computational_physics",
