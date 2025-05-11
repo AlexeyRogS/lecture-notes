@@ -4,22 +4,37 @@
 
     \section{Introduction}
         \paragraph{}
-        Mechanics is the study of how things move; from the Earth orbiting the Sun, to a ball rolling down a hill, to an electron in a cathode ray tube. The modern formulation of classical mechanics was first developed in the 17\ts{th} and 18\ts{th} centuries by European natural philosophers like Galileo and Newton, who based their ideas on previous theories like those from ancient Greece. It was then reformulated in the 19\ts{th} century by French mathematicians such as Lagrange, Poisson and Liouville, as well as Hamilton, whose developments paved the way for the innovations of the 20\ts{th} century, when it was realised that classical mechanics cannot accurately describe objects travelling close to the speed of light or objects that are extremely small (on an atomic scale). These discoveries led to the development of relativistic mechanics and quantum mechanics, for which the advanced Lagrangian and Hamiltonian formalisms serve as a mathematical basis.
+        Mechanics is the study of how things move; from the Earth orbiting the Sun, to a ball rolling down a hill, to an electron in a cathode ray tube.
+        The modern formulation of classical mechanics was first developed in the 17\ts{th} and 18\ts{th} centuries by European natural philosophers like Galileo and Newton, who based their ideas on previous theories like those from ancient Greece.
+        It was then reformulated in the 19\ts{th} century by French mathematicians such as Lagrange, Poisson and Liouville, as well as Hamilton, whose developments paved the way for the innovations of the 20\ts{th} century, when it was realised that classical mechanics cannot accurately describe objects travelling close to the speed of light or objects that are extremely small (on an atomic scale).
+        These discoveries led to the development of relativistic mechanics and quantum mechanics, for which the advanced Lagrangian and Hamiltonian formalisms serve as a mathematical basis.
 
         \paragraph{}
-        In this text we will be studying the Newtonian formulation of classical mechanics, which is still used today not only as a teaching method, but also as a tool in research. The Lagrangian and Hamiltonian formalisms come into their own for advanced problems, but can be quite unwieldy for the simple systems that we will be describing the motion of. One may wonder why we still study classical mechanics if it has been proven to be obsolete in some areas. The answer is that there are still many real-life systems which are best described using a classical description. It is also a great opportunity to become familiar with the language of vector calculus while studying examples which are relevant to real life. Without further ado, let us dive in to how we describe the world in mechanics.
+        In this text we will be studying the Newtonian formulation of classical mechanics, which is still used today not only as a teaching method, but also as a tool in research.
+        The Lagrangian and Hamiltonian formalisms come into their own for advanced problems, but can be quite unwieldy for the simple systems that we will be describing the motion of.
+        One may wonder why we still study classical mechanics if it has been proven to be obsolete in some areas.
+        The answer is that there are still many real-life systems which are best described using a classical description.
+        It is also a great opportunity to become familiar with the language of vector calculus while studying examples which are relevant to real life.
+        Without further ado, let us dive in to how we describe the world in mechanics.
         % talk about predicting the future, determinism, reversibility
 
-    \section{Motion in One Dimension}
+    \section{Motion in One Dimension}\label{sec-motion-in-1d}
         \paragraph{}
-        No doubt you will have noticed that the world is three dimensional. However it is certainly beneficial to study motion in a simplified setting before extending our ideas to the full 3D application. In Newtonian mechanics, we label each point in space with a \textbf{continuous variable} $x$, and we define an origin where $x=0$. This defines our \textbf{coordinate system}. We can describe the motion of an object by writing its position $x$ as a function of a continuous parameter $t$, which describes the passage of time from a reference point $t=0$.
+        No doubt you will have noticed that the world is three dimensional.
+        However it is certainly beneficial to study motion in a simplified setting before extending our ideas to the full 3D application.
+        In Newtonian mechanics, we label each point in space with a \textbf{continuous variable} $x$, and we define an origin where $x=0$.
+        This defines our \textbf{coordinate system}.
+        We can describe the motion of an object by writing its position $x$ as a function of a continuous parameter $t$, which describes the passage of time from a reference point $t=0$.
         \begin{definition}
             The \textbf{trajectory} of an object is a function $x(t)$ where $t,x(t)\in\RR$. $x(t_0)=x_0$ describes the position of the object $x_0$ at some time $t_0$.
         \end{definition}
-        % TODO insert figure of real line
 
         \paragraph{}
-        In classical mechanics, time evolves as the same rate for the whole universe. Our choice of coordinate system together with our choice of reference point for time is called a \textbf{reference frame}. By choosing our reference frame cleverly, we can often simplify problems. For example, if we were studying a block sliding down a slope, we could simplify the problem by rotating our coordinate system so that the $x$ axis lies parallel to the slope. In general, it is often best to align the $x$ axis with the direction of motion.
+        In classical mechanics, time evolves as the same rate for the whole universe.
+        Our choice of coordinate system together with our choice of reference point for time is called a \textbf{reference frame}.
+        By choosing our reference frame cleverly, we can often simplify problems.
+        For example, if we were studying a block sliding down a slope, we could simplify the problem by rotating our coordinate system so that the $x$ axis lies parallel to the slope.
+        In general, it is often best to align the $x$ axis with the direction of motion.
         \begin{definition}
             The \textbf{displacement} of an object is the difference in positions between two times $t_1$ and $t_2>t_1$. In one dimension:
             \begin{equation}
@@ -34,14 +49,18 @@
         \begin{equation}
             \mathrm{distance}=\abs{\Delta x}=\abs{x(t_2)-x(t_1)}=\abs{x_2-x_1}.
         \end{equation}
-        In general, distance $\neq$ displacement. This is because displacement is a \textbf{vector} quantity, meaning it has direction and magnitude, whereas distance is a \textbf{scalar} quantity. In one dimension, the only difference between vector and scalar quantities is that vector quantities are \textbf{signed}. The distinction becomes greater in more dimensions when vector quantities are actually represented as vectors.
+        In general, distance $\neq$ displacement.
+        This is because displacement is a \textbf{vector} quantity, meaning it has direction and magnitude, whereas distance is a \textbf{scalar} quantity.
+        In one dimension, the only difference between vector and scalar quantities is that vector quantities are \textbf{signed}.
+        The distinction becomes greater in more dimensions when vector quantities are actually represented as vectors.
         \begin{definition}
             The \textbf{instantaneous velocity}, or just the \textbf{velocity} of an object is defined as the rate of change of the object's position with respect to time, or simply the derivative.
             \begin{equation}
-                v(t)=\lim_{\Delta t\to0}\frac{x(t+\Delta t)-x(t)}{\Delta t}=\frac{\mathrm{d}x(t)}{\mathrm{d}t}.
+                v(t)=\lim_{\Delta t\to0}\frac{x(t+\Delta t)-x(t)}{\Delta t}=\dv{x(t)}{t}.
             \end{equation}
         \end{definition}
-        Velocity is also a vector quantity. The corresponding scalar quantity is \textbf{speed}, defined as the magnitude of velocity,
+        Velocity is also a vector quantity.
+        The corresponding scalar quantity is \textbf{speed}, defined as the magnitude of velocity,
         \begin{equation}
             \mathrm{speed}=\abs{v(t)}.
         \end{equation}
@@ -64,7 +83,7 @@
         \begin{definition}
             The \textbf{instantaneous acceleration}, or just the \textbf{acceleration} of an object is defined as the rate of change of the object's velocity with respect to time.
             \begin{equation}
-                a(t)=\lim_{\Delta t\to0}\frac{v(t+\Delta t)-v(t)}{\Delta t}=\frac{\mathrm{d}v(t)}{\mathrm{d}t}=\frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2}.
+                a(t)=\lim_{\Delta t\to0}\frac{v(t+\Delta t)-v(t)}{\Delta t}=\dv{v(t)}{t}=\dv[2]{x(t)}{t}.
             \end{equation}
         \end{definition}
         Likewise, the \textbf{average acceleration} of an object in a time interval $\Delta t$ is
@@ -74,7 +93,8 @@
 
     \section{Constant Acceleration}
         \paragraph{}
-        When the acceleration of an object is constant, we can derive some useful equations for simple motion. Starting from equation \ref{av-acc} above,
+        When the acceleration of an object is constant, we can derive some useful equations for simple motion.
+        Starting from equation \ref{av-acc} above,
         \begin{align*}
             \Delta v&=\int_{t_1}^{t_2}a\mathrm{d}t\\
             \implies v_2-v_1&=a\cdot(t_2-t_1),
@@ -97,7 +117,8 @@
         \begin{equation}\label{suvat-3}
             v^2(t)=u^2+2as(t).
         \end{equation}
-        Equations \ref{suvat-1}, \ref{suvat-2}, and \ref{suvat-3} are known as the SUVAT equations, you probably learned them in school. They are the \textbf{equations of motion} for a object under constant acceleration, i.e. all problems involving constant acceleration in a straight line are solved by them.
+        Equations \ref{suvat-1}, \ref{suvat-2}, and \ref{suvat-3} are known as the SUVAT equations, you probably learned them in school.
+        They are the \textbf{equations of motion} for a object under constant acceleration, i.e. all problems involving constant acceleration in a straight line are solved by them.
         \begin{example}
             Ball thrown in the air % TODO: write this
         \end{example}
@@ -115,60 +136,11 @@
             Block sliding down a hill (no friction) % TODO: write this
         \end{example}
 
-    \section{Forces}
-        \paragraph{}
-        Now we know how to describe the motion of an object and changes in the motion (kinematics), but we still don't know how to describe \textit{why} the motion of an object changes (dynamics). This is the focus of this section.
-
-        \paragraph{}
-        A force is some influence on an object that changes the object's motion. In classical mechanics, we describe forces as vectors and denote a generic force with the symbol $F$. The exact dynamics of how forces affect motion are described in Newton's laws of motion, which we will write now. In the following the symbol $F$ stands for the sum of all forces acting on the object, otherwise known as the \textbf{net force}.
-        \begin{definition}[Newton's First Law]
-            An object moving with constant velocity $v$, will stay at the same constant velocity unless acted upon by a force. In other words:
-            \begin{equation}
-                v=\text{const.}\iff F=0.
-            \end{equation}
-            Note that this includes an object at rest, which has velocity $v=0$.
-        \end{definition}
-        Mass is defined as an objects resistance to acceleration. In order words, a more massive object will accelerate slower relative to a less massive object when under the influence of identical forces. This is quantified by Newton's Second Law.
-        \begin{definition}[Newton's Second Law]
-            The net force on the object is equal to the object's mass times the object's acceleration.
-            \begin{equation}
-                F=ma.
-            \end{equation}
-            Note that force is always parallel to acceleration.
-        \end{definition}
-        Since acceleration is the second derivative of position, we can write Newton's Second Law as
-        \begin{equation}
-            F(t)=m\frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2},
-        \end{equation}
-        which is a differential equation for $x(t)$. This is known as an \textbf{equation of motion}, and all classical mechanics problems boil down to solving the equation of motion to obtain the trajectory of the object.
-        \begin{example}
-            Suppose an object is acted upon by a constant force $F_0$, then we align the $x$ axis with the direction of the force and the equation of motion is
-            \begin{equation*}
-                \frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2}=\frac{F_0}{m}.
-            \end{equation*}
-            This is a very easy differential equation to solve. Integrating twice, we get
-            \begin{align*}
-                &\frac{\mathrm{d}x(t)}{\mathrm{d}t}=\int\frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2}=v_0+\frac{F_0}{m}t\\
-                &x(t)=\int\frac{\mathrm{d}x(t)}{\mathrm{d}t}=x_0+v_0t+\frac{F_0}{2m}t^2,
-            \end{align*}
-            where $v_0=v(0)$ and $x_0=x(0)$ as before. Note that comparing to equation \ref{suvat-2}, we can identify $a=\frac{F_0}{m}$ i.e. acceleration is constant, which is consistent with what we developed before.
-        \end{example}
-        It is important to note that Newton's Laws of Motion are only valid in \textbf{inertial reference frames}, which are reference frames travelling at a constant velocity $v$. If we are in a nonintertial reference frame, i.e. one that is accelerating, and we try to apply Newton's Laws, we will encounter odd things such as phantom forces which have no source. One way to test if we are in an inertial frame or not us by using Newton's First Law. If an object accelerates while under the influence of no forces, then our reference frame must be noninertial.
-        \begin{definition}[Newton's Third Law]
-            When two objects interact with each other, the forces on each object due to the other are \textbf{equal in magnitude} and \textbf{opposite in direction}. In other words, if object $A$ exerts a force $F_{A\to B}$ on object $B$, then object $B$ exerts a force $F_{B\to A}$ on object $A$ and we may write
-            \begin{equation}
-                F_{A\to B}=-F_{B\to A}.
-            \end{equation}
-            These two forces are then known as a ``Newton (III) pair''.
-        \end{definition}
-        % TODO: talk about gravity and normal force
-        % TODO: talk about free-body diagrams
-        We can now solve any problem in classical mechanics.
-
     \section{Motion in Two and Three Dimensions}
-        % TODO: move this to before forces
         \paragraph{}
-        Armed with the principles of Newtonian mechanics for one dimension, we will now generalise everything we have learned to two and three dimensions. It turns out that this will be very simple because the set of all points in 3D space forms a \textbf{vector space}, $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span our space. In \textbf{cartesian} coordinates, which are the most commonly used system to label points in 3D space, we label the axes $x$, $y$ and $z$, and choose the unit vectors $\ihat$, $\jhat$ and $\khat$ to point along each axis respectively.
+        As alluded to in section~\ref{sec-motion-in-1d} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
+        This is because the set of all points in 3D space forms a \textbf{vector space}, called $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span all of space.
+        In \textbf{cartesian} coordinates, which are the most commonly used system to label points in 3D space, we label the axes $x$, $y$ and $z$, and choose the unit vectors $\ihat$, $\jhat$ and $\khat$ to point along each axis respectively.
         %TODO: figure of cartesian coordinate system
 
         \paragraph{}
@@ -180,41 +152,113 @@
         \end{align*}
         If these results were not true, then some of the mathematics we will do later on (involving dot and cross products) would become much more complicated than it needs to be.
         \begin{definition}
-            The \textbf{trajectory} of an object in three dimensions is a vector-valued function $\vec{r}(t)$ where $t\in\RR$, $\vec{r}(t)\in\RR^3$. We write
+            The \textbf{trajectory} of an object in three dimensions is a vector-valued function $\vec{r}(t)$ where $t\in\RR$, $\vec{r}(t)\in\RR^3$.
+            We write
             \begin{equation}
                 \vec{r}(t)=x(t)\ihat+y(t)\jhat+z(t)\khat
             \end{equation}
-            in cartesian coordinates, where $x(t)$, $y(t)$ and $z(t)$ are the 1D trajectories of the object along each axis. For example, if $\vec{r}(t_0)=\vec{r}_0=x_0\ihat+y_0\jhat+z_0\khat$, then the object is located at position $x_0$ along the $x$ axis, $y_0$ along the $y$ axis and $z_0$ along the $z$ axis. $\vec{r}(t)$ is known as the \textbf{position vector}.
+            in cartesian coordinates, where $x(t)$, $y(t)$ and $z(t)$ are the 1D trajectories of the object along each axis.
+            For example, if $\vec{r}(t_0)=\vec{r}_0=x_0\ihat+y_0\jhat+z_0\khat$, then the object is located at position $x_0$ along the $x$ axis, $y_0$ along the $y$ axis and $z_0$ along the $z$ axis.
+            $\vec{r}(t)$ is known as the \textbf{position vector}.
         \end{definition}
-        At this point it is worth introducing a new notation which will simplify our expressions going forward. We will represent a time derivative of a quantity by simply writing a dot above the letter, and put two dots for a second derivative.
+        At this point it is worth introducing a new notation which will simplify our expressions going forward.
+        We will represent a time derivative of a quantity by simply writing a dot above the letter, and put two dots for a second derivative.
         \begin{equation*}
-            \dot{x}=\frac{\mathrm{d}x}{\mathrm{d}t},\quad\ddot{x}=\frac{\mathrm{d}^2x}{\mathrm{d}t^2},
+            \dot{x}=\dv{x}{t},\quad\ddot{x}=\dv[2]{x}{t},
         \end{equation*}
-        i.e. $\dot x$ represents velocity and $\ddot x$ represents acceleration. The notation is due to Newton and so it is fitting that we use it a lot in mechanics.
+        i.e. $\dot x$ represents velocity and $\ddot x$ represents acceleration.
+        The notation is due to Newton and so it is fitting that we use it a lot in mechanics.
+        We have also stopped notating dependence on time explicitly for brevity and to reduce clutter in the notation.
         \begin{definition}
-            Just as in one dimension. The velocity is defined as the time derivative of position.
+            Just as in one dimension.
+            The velocity is defined as the time derivative of position.
             \begin{equation}
-                \vec{v}=\dot{\vec{r}}=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}=\frac{\mathrm{d}x}{\mathrm{d}t}\ihat+\frac{\mathrm{d}y}{\mathrm{d}t}\jhat+\frac{\mathrm{d}z}{\mathrm{d}t}\khat=\dot{x}\ihat+\dot{y}\jhat+\dot{z}\khat.
+                \vec{v}=\dot{\vec{r}}=\dv{\vec{r}}{t}=\dv{x}{t}\ihat+\dv{y}{t}\jhat+\dv{z}{t}\khat=\dot{x}\ihat+\dot{y}\jhat+\dot{z}\khat.
             \end{equation}
             Sometimes we denote $\dot{x}$, $\dot{y}$ and $\dot{z}$ as $v_x$, $v_y$ and $v_z$ respectively.
         \end{definition}
         \begin{definition}
             Likewise, acceleration is the time derivative of velocity, or the second time derivative of position.
             \begin{equation}
-                \vec{a}=\ddot{\vec{r}}=\frac{\mathrm{d}\vec{v}}{\mathrm{d}t}=\frac{\mathrm{d}^2\vec{r}}{\mathrm{d}t^2}=\ddot{x}\ihat+\ddot{y}\jhat+\ddot{z}\khat.
+                \vec{a}=\ddot{\vec{r}}=\dv{v}{t}=\dv[2]{r}{t}=\ddot{x}\ihat+\ddot{y}\jhat+\ddot{z}\khat.
             \end{equation}
             Sometimes $\ddot{x}$, $\ddot{y}$ and $\ddot{z}$ are called $a_x$, $a_y$ and $a_z$.
         \end{definition}
-        Note that although we have stopped notating time dependence explicitly for brevity, all quantities will still depend on time in general.
+        The key insight is that motion in 3D Cartesian coordinates is simply a superposition of three one-dimensional motions.
+        
+    \section{Forces}
+        \paragraph{}
+        Now we know how to describe the motion of an object and changes in the motion (kinematics), but we still don't know how to describe \textit{why} the motion of an object changes (dynamics).
+        This is the focus of this section.
 
         \paragraph{}
-        Other vector quantities that we have defined are generalised to 3D in the same way, for example, Newton's Second Law becomes
+        A force is some influence on an object that changes the object's motion.
+        In classical mechanics, we describe forces as vectors and denote a generic force with the symbol $F$.
+        The exact dynamics of how forces affect motion are described in Newton's laws of motion, which we will write now.
+        In the following the symbol $F$ stands for the sum of all forces acting on the object, otherwise known as the \textbf{net force}.
+        \begin{definition}[Newton's First Law]
+            An object moving with constant velocity $v$, will stay at the same constant velocity unless acted upon by a force.
+            In other words:
+            \begin{equation}
+                v=\text{const.}\iff F=0.
+            \end{equation}
+            Note that this includes an object at rest, which has velocity $v=0$.
+        \end{definition}
+        Mass is defined as an objects resistance to acceleration.
+        In order words, a more massive object will accelerate slower relative to a less massive object when under the influence of identical forces.
+        This is quantified by Newton's Second Law.
+        \begin{definition}[Newton's Second Law]
+            The net force on the object is equal to the object's mass times the object's acceleration.
+            \begin{equation}
+                F=ma.
+            \end{equation}
+            Note that force is always parallel to acceleration.
+        \end{definition}
+        Since acceleration is the second derivative of position, we can write Newton's Second Law as
+        \begin{equation}
+            F(t)=m\dv[2]{x(t)}{t},
+        \end{equation}
+        which is a differential equation for $x(t)$.
+        This is known as an \textbf{equation of motion}, and all classical mechanics problems boil down to solving the equation of motion to obtain the trajectory of the object.
+        \begin{example}
+            Suppose an object is acted upon by a constant force $F_0$, then we align the $x$ axis with the direction of the force and the equation of motion is
+            \begin{equation*}
+                \dv[2]{x(t)}{t}=\frac{F_0}{m}.
+            \end{equation*}
+            This is a very easy differential equation to solve.
+            Integrating twice, we get
+            \begin{align*}
+                &\dv{x(t)}{t}=\int\dv[2]{x(t)}{t}=v_0+\frac{F_0}{m}t\\
+                &x(t)=\int\dv{x(t)}{t}=x_0+v_0t+\frac{F_0}{2m}t^2,
+            \end{align*}
+            where $v_0=v(0)$ and $x_0=x(0)$ as before.
+            Note that comparing to equation \ref{suvat-2}, we can identify $a=\frac{F_0}{m}$ i.e. acceleration is constant, which is consistent with what we developed before.
+        \end{example}
+        It is important to note that Newton's Laws of Motion are only valid in \textbf{inertial reference frames}, which are reference frames travelling at a constant velocity $v$.
+        If we are in a nonintertial reference frame, i.e. one that is accelerating, and we try to apply Newton's Laws, we will encounter odd things such as phantom forces which have no source.
+        One way to test if we are in an inertial frame or not us by using Newton's First Law.
+        If an object accelerates while under the influence of no forces, then our reference frame must be noninertial.
+        \begin{definition}[Newton's Third Law]
+            When two objects interact with each other, the forces on each object due to the other are \textbf{equal in magnitude} and \textbf{opposite in direction}.
+            In other words, if object $A$ exerts a force $F_{A\to B}$ on object $B$, then object $B$ exerts a force $F_{B\to A}$ on object $A$ and we may write
+            \begin{equation}
+                F_{A\to B}=-F_{B\to A}.
+            \end{equation}
+            These two forces are then known as a ``Newton (III) pair''.
+        \end{definition}
+
+        \paragraph{}
+        Force is a vector quantity, so in more than dimension it can be decomposed into multiple components which are the forces along each axis.
+        In three dimensions, Newton's Second Law is
         \begin{align*}
             \vec{F}(t)&=F_x(t)\ihat+F_y(t)\jhat+F_z(t)\khat\\
             &=ma_x(t)\ihat+ma_y(t)\jhat+ma_z(t)\khat \\
             &=m\vec{a}=m\ddot{\vec{r}}.
         \end{align*}
-        The key insight is that motion in 3D Cartesian coordinates is simply a superposition of three one-dimensional motions.
+
+        % TODO: talk about gravity and normal force
+        % TODO: talk about free-body diagrams
+        We can now solve any problem in classical mechanics.
 
     \section{Projectile Motion}
         \paragraph{}
