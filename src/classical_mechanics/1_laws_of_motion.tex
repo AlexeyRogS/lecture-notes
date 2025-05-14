@@ -136,7 +136,7 @@
             Block sliding down a hill (no friction) % TODO: write this
         \end{example}
 
-    \section{Motion in Two and Three Dimensions}
+    \section{Motion in More than One Dimension}
         \paragraph{}
         As alluded to in section~\ref{sec-motion-in-1d} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
         This is because the set of all points in 3D space forms a \textbf{vector space}, called $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span all of space.
@@ -185,6 +185,7 @@
             Sometimes $\ddot{x}$, $\ddot{y}$ and $\ddot{z}$ are called $a_x$, $a_y$ and $a_z$.
         \end{definition}
         The key insight is that motion in 3D Cartesian coordinates is simply a superposition of three one-dimensional motions.
+        Because of this, it is possible (and convenient) for simple problems to ignore the vector nature of the problem and just treat motion along each axis as a separate scalar problem.
         
     \section{Forces}
         \paragraph{}
@@ -318,6 +319,213 @@
             A motorcyclist is doing a stunt jump between two buildings.
             If the buildings are separated by a distance $d$ and have a vertical height difference $h$, what is the minimum velocity the motorcyclist needs to make the jump?
             % TODO: complete this example
+        \end{example}
+
+    \section{Friction}
+        \paragraph{}
+        Friction is a very complicated process which occurs on a miroscopic scale, so in order to model in on a macroscopic scale we must use simplified empirical laws.
+        In general, friction is a force which opposes change in motion. Hence if a force is applied parallel to a surface, then the frictional force will be antiparallel to this, perpendicular to the normal force.
+
+        \paragraph{}
+        Satic friction appears when two objects are motionless with respect to one another.
+        If a force is applied between the two objects and they don't move, there must be a frictional force opposing the motion.
+        % TODO: add a diagram
+        \begin{equation}
+            \vec{f}_s=-\vec{F}_{app}.
+        \end{equation}
+        As the applied force gets larger, the static friction must get larger to preserve equilibrium, until a maximum limit is reached and the object starts moving.
+        \begin{definition}
+            The maximum magnitude of \textbf{static friction} is given by
+            \begin{equation}
+                f_{s,max}=\mu_s\abs{\vec{N}}.
+            \end{equation}
+            Hence,
+            \begin{equation}
+                0\leq\abs{\vec{f}_s}\leq f_{s,max}.
+            \end{equation}
+        \end{definition}
+
+        \paragraph{}
+        Kinetic friction opposes the motion of two surfaces sliding against each other.
+        \begin{definition}
+            \textbf{Kinetic friction} is given by
+            \begin{equation}
+                \vec{f}_k=-\mu_k\abs{\vec{N}}\hat{v}.
+            \end{equation}
+        \end{definition}
+        % TODO: include discussion of critical angle
+        \begin{example}
+            Find the stopping distance of a block sliding down a slope.
+            % TODO: write this
+        \end{example}
+        \begin{example}
+            Three blocks --- A, B, and C --- are connected over a slope by massless inextensible ropes going through frictionless pulleys.
+            Blocks A and B both have a weight of $\qty{25}{\newton}$ a coefficient of kinetic friction of $\mu_k=0.35$.
+            The angle of the slope is $\ang{30}$ and block C is falling with constant velocity.
+            What is the weight of block C?
+            \begin{figure}[H]
+                \centering
+                \begin{tikzpicture}[scale=2]
+                    % triangle
+                    \draw (0,0) -- (6,0);
+                    \draw (2,0) -- (4,0) -- (4,1.155) -- cycle;
+                    \draw (2.5,0) arc [radius=0.5, start angle=0, end angle=30];
+                    \node[right] at (2.5,0.2) {$\theta=\ang{30}$}; 
+
+                    % blocks
+                    \draw[fill=black!20] (1,0) rectangle (1.5,0.3);
+                    \node at (1.25, 0.15) {A};
+                    \begin{scope}[shift={(2,0)},rotate=30]
+                        \draw[fill=black!20] (1,0) rectangle (1.5,0.3);
+                        \node at (1.25,0.15) {B};
+                    \end{scope}
+                    \draw[shift={(4.03,0.8)},fill=black!20] (0,0) rectangle (0.3,-0.5);
+                    \draw[shift={(4.03,0.8)}] (0.15,-0.25) node {C};
+                    \draw[->,thick] (4.5,0.7) -- (4.5,0.4);
+
+                    % ropes
+                    \draw[thick] (1.5,0.05) -- (1.95,0.05);
+                    \begin{scope}[shift={(2,0)},rotate=30]
+                        \draw[thick] (0,0.05) -- (1,0.05);
+                        \draw[thick] (1.5,0.05) -- (2.4,0.05);
+                    \end{scope}
+                    \draw[thick] (4.17,1.17) -- (4.17,0.8);
+
+                    % pulleys
+                    \draw[fill=black!30] (1.95,0.1) circle [radius=0.1];
+                    \draw[fill=black!30] (4.1,1.17) circle [radius=0.1];
+                    
+                \end{tikzpicture}
+            \end{figure}
+            
+            \paragraph{}
+            We will start to solve this problem by drawing free-body diagrams for all the blocks.
+            In each diagram, we will orient the $x$-axis along the direction of motion.
+            \begin{figure}[H]
+                \centering
+                \begin{tikzpicture}
+                    % block A
+                    \begin{scope}[shift={(-4,0)}]
+                        \fill (0,0) circle [radius=0.1];
+                        \node at (0,2) {A};
+                        \draw[<->,thick] (-0.5,0) -- (1,0);
+                        \draw[<->,thick] (0,-1) -- (0,1);
+                        \node[left] at (-0.5,0) {$f_A$};
+                        \node[right] at (1,0) {$T_{AB}$};
+                        \node[above] at (0,1) {$N_A$};
+                        \node[below] at (0,-1) {$W_A$};
+
+                        \begin{scope}[shift={(1,1)},scale=0.5,font=\small]
+                            \draw[<->] (0,1) -- (0,0) -- (1,0);
+                            \node[right] at (1,0) {$x$};
+                            \node[above] at (0,1) {$y$};    
+                        \end{scope}
+                    \end{scope}
+
+                    % block B
+                    \begin{scope}[shift={(0.5,0)}]
+                        \node at (0,2) {B};
+                        \begin{scope}[rotate=30]
+                            \fill (0,0) circle [radius=0.1];
+                            \draw[<->,thick] (0,1) -- (0,0) -- (1.2,0);
+                            \draw[<-,thick] (-0.5,0) -- (0,0);
+                            \draw[->,thick] (0,0) -- (-0.577,-1);
+                            \draw[->,dotted] (0,0) -- (0,-1);
+                            \draw[->,dotted] (0,-1) -- (-0.577,-1);
+                            \draw[dotted,rotate=-30] (0,0) -- (0,-1) -- (-1.732,-1) -- cycle;
+                            \draw (-1.532,0) arc [radius=0.5, start angle=0, end angle=-30];
+                            \node[font=\scriptsize] at (-1.432,-0.15) {$\theta$};
+                            \draw (0,-0.5) arc [radius=0.5, start angle=270, end angle=240];
+                            \node[font=\scriptsize] at (-0.2,-0.65) {$\theta$};
+                            \node[above] at (0,1) {$N_B$};
+                            \node[right] at (1.2,0) {$T_{BC}$};
+                            \node[left] at (-0.5,0) {$f_B+T_{AB}$};
+                            \node[below] at (-0.577,-1) {$W_B$};
+
+                            \begin{scope}[shift={(1,0.5)},scale=0.5,font=\small]
+                                \draw[<->] (0,1) -- (0,0) -- (1,0);
+                                \node[right] at (1,0) {$x$};
+                                \node[above] at (0,1) {$y$};    
+                            \end{scope}
+                        \end{scope}
+                    \end{scope}
+
+                    % block C
+                    \begin{scope}[shift={(4,0)}]
+                        \fill (0,0) circle [radius=0.1];
+                        \node at (0,2) {C};
+                        \draw[<->,thick] (0,1) -- (0,-1);
+                        \node[above] at (0,1) {$T_{BC}$};
+                        \node[below] at (0,-1) {$W_C$};
+
+                        \begin{scope}[shift={(1,0)},scale=0.5,rotate=-90,font=\small]
+                            \draw[<->] (0,1) -- (0,0) -- (1,0);
+                            \node[right] at (1,0) {$x$};
+                            \node[above] at (0,1) {$y$};    
+                        \end{scope}
+                    \end{scope}
+                \end{tikzpicture}
+            \end{figure}
+            Since the ropes are inextensible, the tension throughout them must be uniform.
+            Therefore all the blocks must be moving together at the same speed.
+            This speed is constant, so Newton's second law tells us that the resultant forces along both axes, $\Sigma F_x$ and $\Sigma F_y$, must be zero for all three blocks.
+            Looking at the diagram for block C, this tells us that $W_C$, the weight of block C, is equal in magnitude to $T_{BC}$, the tension in the rope connecting B and C.
+
+            From the diagram for block B we have
+            \begin{align}
+                \Sigma F_y&=N_B-W_B\cos\theta=0\\
+                \implies N_B&=W_B\cos\theta
+            \end{align}
+            and
+            \begin{align}
+                \Sigma F_x&=T_{BC}-(f_B+T_{AB})-W_B\sin\theta=0\\
+                \implies T_{BC}&=f_B+T_{AB}+W_B\sin\theta\\
+                &=\mu_k W_B\cos\theta+T_{AB}+W_B\sin\theta,
+            \end{align}
+            from block A we get
+            \begin{align}
+                \Sigma F_y&=N_A-W_A=0\\
+                \implies N_A&=W_A
+            \end{align}
+            and
+            \begin{align}
+                \Sigma F_x&=T_{AB}-f_A=0\\
+                \implies T_{AB}&=f_A=\mu_k N_A\\
+                &=\mu_k W_A.
+            \end{align}
+            Combining all these results, we get
+            \begin{align}
+                W_C&=T_{BC}\\
+                &=\mu_k W_B\cos\theta+W_B\sin\theta+\mu_k W_A\\
+                &=\qty{7.58}{\newton}+\qty{12.5}{\newton}+\qty{8.75}{\newton}\\
+                &=\qty{28.83}{\newton}.
+            \end{align}
+
+            \paragraph{}
+            Now, imagine if the rope between blocks A and B is cut.
+            What will happen to block C?
+
+            \paragraph{}
+            With both blocks A and B providing block C with enough friction to balance gravity, it seems that if we remove block A then there will no longer be enough resistance and block C will have to accelerate downwards.
+            We can try calculating the acceleration and find out if our hypothesis is correct.
+            The forces on blocks B and C are all the same except that we no longer have $T_{AB}$.
+            Thus for block C we get
+            \begin{align}
+                \Sigma F_x&=W_C-T_{BC}=\frac{W_C}{g}a,\\
+            \end{align}
+            and for block B we get
+            \begin{align}
+                \Sigma F_x&=T_{BC}-f_B-W_B\sin\theta=\frac{W_B}{g}a\\
+                \implies T_{BC}&=\mu_k W_B\cos\theta+W_B\sin\theta+\frac{W_B}{g}a.
+            \end{align}
+            Combining these, we get
+            \begin{align}
+                W_C-\frac{W_C}{g}a&=\mu_k W_B\cos\theta+W_B\sin\theta+\frac{W_B}{g}a\\
+                \frac{(W_C+W_B)}{g}a&=W_C-W_B\sin\theta-\mu_k W_B\cos\theta\\
+                a&=\frac{W_C-W_B(\sin\theta+\mu_k\cos\theta)}{W_C+W_B}g\\
+                &=\qty{1.59}{\metre\per\square\second}.
+            \end{align}
+            This acceleration is nonzero and positive, which indicates that block C does indeed accelerate downwards as we thought.
         \end{example}
 
     \section{Gravitation}

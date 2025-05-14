@@ -8,6 +8,7 @@
 \RequirePackage{amssymb} % extra maths symbols
 \RequirePackage{slashed} % slashed maths characters
 \RequirePackage{tikz} % drawing diagrams
+\RequirePackage{siunitx} % units
 
 % ------ text macros ------ %
 
@@ -66,17 +67,17 @@
 \renewcommand*{\vec}[1]{\boldsymbol{#1}}
 
 % unit vectors
-\newcommand*{\unit}[1]{\hat{\boldsymbol{#1}}}
+\newcommand*{\uvec}[1]{\hat{\boldsymbol{#1}}}
 
-\newcommand*{\ihat}{\unit{\imath}}
-\newcommand*{\jhat}{\unit{\jmath}}
-\newcommand*{\khat}{\unit{k}}
-\newcommand*{\xhat}{\unit{x}}
-\newcommand*{\yhat}{\unit{y}}
-\newcommand*{\zhat}{\unit{z}}
-\newcommand*{\eone}{\unit{e}\sb{1}}
-\newcommand*{\etwo}{\unit{e}\sb{2}}
-\newcommand*{\ethree}{\unit{e}\sb{3}}
+\newcommand*{\ihat}{\uvec{\imath}}
+\newcommand*{\jhat}{\uvec{\jmath}}
+\newcommand*{\khat}{\uvec{k}}
+\newcommand*{\xhat}{\uvec{x}}
+\newcommand*{\yhat}{\uvec{y}}
+\newcommand*{\zhat}{\uvec{z}}
+\newcommand*{\eone}{\uvec{e}\sb{1}}
+\newcommand*{\etwo}{\uvec{e}\sb{2}}
+\newcommand*{\ethree}{\uvec{e}\sb{3}}
 
 % norm
 \DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{
