@@ -136,20 +136,74 @@
             Block sliding down a hill (no friction) % TODO: write this
         \end{example}
 
-    \section{Motion in More than One Dimension}
+    \section{Motion in More than One Dimension}\label{sec-motion-in-2-3d}
         \paragraph{}
         As alluded to in section~\ref{sec-motion-in-1d} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
         This is because the set of all points in 3D space forms a \textbf{vector space}, called $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span all of space.
         In \textbf{cartesian} coordinates, which are the most commonly used system to label points in 3D space, we label the axes $x$, $y$ and $z$, and choose the unit vectors $\ihat$, $\jhat$ and $\khat$ to point along each axis respectively.
-        %TODO: figure of cartesian coordinate system
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=2]
+                \draw[<->] (0,1) |- (1,0);
+                \draw[->] (0,0) -- (0.8,0.4);
+                \node[right] at (1,0) {$x$};
+                \node[above right] at (0.8,0.4) {$y$};
+                \node[above] at (0,1) {$z$};
+
+                \draw[<->,thick] (0,0.4) |- (0.4,0);
+                \draw[->,thick] (0,0) -- (0.32,0.16);
+                \node[below right] at (0.4,0) {$\ihat$};
+                \node[above] at (0.32,0.16) {$\jhat$};
+                \node[above left] at (0,0.4) {$\khat$};
+            \end{tikzpicture}
+        \end{figure}
+
+        \paragraph{}
+        A general vector in 3D cartesian coordinates is represented by a sum of components along each direction.
+        \begin{equation}
+            \vec{A}=A_x\ihat+A_y\jhat+A_z\khat.
+        \end{equation}
+        In 2D (where we don't have a $z$ component), there is a simple way to calculate the components using the angle that the vector makes with the $x$ axis.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=2]
+                \draw[<->] (0,1) |- (1,0);
+                \node[above] at (0,1) {$x$};
+                \node[right] at (1,0) {$y$};
+
+                \draw[->,thick] (0,0) -- (0.8,0.5);
+                \node[above right] at (0.8,0.5) {$\vec{A}$};
+                \draw (0.2,0) arc [radius=0.2, start angle=0, end angle=32];
+                \node at (0.3,0.1) {$\theta$};
+
+                \draw[dotted] (0,0.5) -- (0.8,0.5) -- (0.8,0);
+                \node[left] at (0,0.5) {$A_y$};
+                \node[below] at (0.8,0) {$A_x$};
+            \end{tikzpicture}
+        \end{figure}
+        First, note that the length of the vector is given by Pythagoras' theorem:
+        \begin{equation}
+            \abs{\vec{A}}=\sqrt{A_x^2+A_y^2}.
+        \end{equation}
+        Then, using trigonometry, the components $A_x$ and $A_y$ are given by
+        \begin{align}
+            A_x&=\abs{\vec{A}}\cos\theta\\
+            A_y&=\abs{\vec{A}}\sin\theta.
+        \end{align}
+        We also have a relation for the angle:
+        \begin{equation}
+            \tan\theta=\frac{A_y}{A_x}.
+        \end{equation}
+        In 3D we need two angles to describe the direction of a vector, so the relations become slightly more complicated.
+        % TODO: write these
 
         \paragraph{}
         Note that it is important that our basis vectors are \textbf{orthonormal}, meaning both orthogonal and of unit length, as this means we have the relations
-        \begin{align*}
-            &\abs{\ihat}=\abs{\jhat}=\abs{\khat}=1\\
-            &\ihat\cdot\ihat=\jhat\cdot\jhat=\khat\cdot\khat=1\\
-            &\ihat\cdot\jhat=\jhat\cdot\khat=\khat\cdot\ihat=0.
-        \end{align*}
+        \begin{align}
+            &\abs{\ihat}=\abs{\jhat}=\abs{\khat}=1\label{eq-basis-vec-magnitude}\\
+            &\ihat\cdot\ihat=\jhat\cdot\jhat=\khat\cdot\khat=1\label{eq-basis-vec-normal}\\
+            &\ihat\cdot\jhat=\jhat\cdot\khat=\khat\cdot\ihat=0\label{eq-basis-vec-ortho}.
+        \end{align}
         If these results were not true, then some of the mathematics we will do later on (involving dot and cross products) would become much more complicated than it needs to be.
         \begin{definition}
             The \textbf{trajectory} of an object in three dimensions is a vector-valued function $\vec{r}(t)$ where $t\in\RR$, $\vec{r}(t)\in\RR^3$.
@@ -163,9 +217,9 @@
         \end{definition}
         At this point it is worth introducing a new notation which will simplify our expressions going forward.
         We will represent a time derivative of a quantity by simply writing a dot above the letter, and put two dots for a second derivative.
-        \begin{equation*}
+        \begin{equation}
             \dot{x}=\dv{x}{t},\quad\ddot{x}=\dv[2]{x}{t},
-        \end{equation*}
+        \end{equation}
         i.e. $\dot x$ represents velocity and $\ddot x$ represents acceleration.
         The notation is due to Newton and so it is fitting that we use it a lot in mechanics.
         We have also stopped notating dependence on time explicitly for brevity and to reduce clutter in the notation.
@@ -187,6 +241,22 @@
         The key insight is that motion in 3D Cartesian coordinates is simply a superposition of three one-dimensional motions.
         Because of this, it is possible (and convenient) for simple problems to ignore the vector nature of the problem and just treat motion along each axis as a separate scalar problem.
         
+        \paragraph{}
+        Suppose we want to take the dot product of two vectors.
+        We can compute it by writing each vector as a sum of components and then multiplying out the brackets.
+        Going through the steps in cartesian coordinates, we get
+        \begin{align}
+            \vec{A}\cdot\vec{B}&=(A_x\ihat+A_y\jhat+A_z\khat)\cdot(B_x\ihat+B_y\jhat+B_z\khat)\\
+            &\begin{aligned}
+                &=A_x\ihat\cdot B_x\ihat+A_x\ihat\cdot B_y\jhat+A_x\ihat\cdot B_z\khat+A_y\jhat\cdot B_x\ihat+A_y\jhat\cdot B_y\jhat+A_y\jhat\cdot B_z\khat\\
+                &\quad+A_z\khat\cdot B_x\ihat+A_z\khat\cdot B_y\jhat+A_z\khat\cdot B_z\khat
+            \end{aligned}\\
+            &=A_xB_x\ihat+A_yB_y\jhat+A_zB_z\khat.
+        \end{align}
+        The last step only follows because the basis vectors are \textbf{orthonormal}.
+        This is because the terms with two different basis vectors dotted together vanish (equation~\ref{eq-basis-vec-ortho}) and the terms with two of the same basis vector become just the coordinates multiplied together (equation~\ref{eq-basis-vec-normal}).
+        All the coordinate systems we have dealt with so far have an orthonormal basis because of this fact.
+
     \section{Forces}
         \paragraph{}
         Now we know how to describe the motion of an object and changes in the motion (kinematics), but we still don't know how to describe \textit{why} the motion of an object changes (dynamics).
@@ -416,7 +486,7 @@
                         \node[below] at (0,-1) {$W_A$};
 
                         \begin{scope}[shift={(1,1)},scale=0.5,font=\small]
-                            \draw[<->] (0,1) -- (0,0) -- (1,0);
+                            \draw[<->] (0,1) |- (1,0);
                             \node[right] at (1,0) {$x$};
                             \node[above] at (0,1) {$y$};    
                         \end{scope}
@@ -443,7 +513,7 @@
                             \node[below] at (-0.577,-1) {$W_B$};
 
                             \begin{scope}[shift={(1,0.5)},scale=0.5,font=\small]
-                                \draw[<->] (0,1) -- (0,0) -- (1,0);
+                                \draw[<->] (0,1) |- (1,0);
                                 \node[right] at (1,0) {$x$};
                                 \node[above] at (0,1) {$y$};    
                             \end{scope}
@@ -459,7 +529,7 @@
                         \node[below] at (0,-1) {$W_C$};
 
                         \begin{scope}[shift={(1,0)},scale=0.5,rotate=-90,font=\small]
-                            \draw[<->] (0,1) -- (0,0) -- (1,0);
+                            \draw[<->] (0,1) |- (1,0);
                             \node[right] at (1,0) {$x$};
                             \node[above] at (0,1) {$y$};    
                         \end{scope}
