@@ -18,7 +18,7 @@
         Without further ado, let us dive in to how we describe the world in mechanics.
         % talk about predicting the future, determinism, reversibility
 
-    \section{Motion in One Dimension}\label{sec-motion-in-1d}
+    \section{Motion in One Dimension}\label{sec:motion-in-1d}
         \paragraph{}
         No doubt you will have noticed that the world is three dimensional.
         However it is certainly beneficial to study motion in a simplified setting before extending our ideas to the full 3D application.
@@ -66,15 +66,15 @@
         \end{equation}
         The \textbf{average velocity} of an object in a time interval $\Delta t=t_2-t_1$ is given by the displacement over the time interval, or also the time average of the velocity (which must be computed with an integral since it is a continuous property).
         \begin{equation}
-            \bar{v}=\frac{\mathrm{total\ displacement}}{\mathrm{total\ time}}=\frac{\Delta x}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}v(t)\mathrm{d}t.
+            \bar{v}=\frac{\mathrm{total\ displacement}}{\mathrm{total\ time}}=\frac{\Delta x}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}v(t)\dd{t}.
         \end{equation}
         Meanwhile, the \textbf{average speed} is given by
         \begin{equation}
-            \overline{\mathrm{speed}}=\frac{\mathrm{total\ distance}}{\mathrm{total\ time}}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\abs{v(t)}\mathrm{d}t.
+            \overline{\mathrm{speed}}=\frac{\mathrm{total\ distance}}{\mathrm{total\ time}}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\abs{v(t)}\dd{t}.
         \end{equation}
         Here, we may identify
-        \begin{equation}\label{tot-disp}
-            \Delta x=\int_{t_1}^{t_2}v(t)\mathrm{d}t,\quad \mathrm{total\ distance}=\int_{t_1}^{t_2}\abs{v(t)}\mathrm{d}t.
+        \begin{equation}\label{eq:total-disp}
+            \Delta x=\int_{t_1}^{t_2}v(t)\mathrm{d}t,\quad \mathrm{total\ distance}=\int_{t_1}^{t_2}\abs{v(t)}\dd{t}.
         \end{equation}
         If the object is travelling at constant velocity, then the integral is trivial and we recover (setting $t_1=0$) the equation that you probably learned in school,
         \begin{equation}
@@ -87,37 +87,37 @@
             \end{equation}
         \end{definition}
         Likewise, the \textbf{average acceleration} of an object in a time interval $\Delta t$ is
-        \begin{equation}\label{av-acc}
-            \bar{a}=\frac{\Delta v}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}a(t)\mathrm{d}t.
+        \begin{equation}\label{eq:average-acc}
+            \bar{a}=\frac{\Delta v}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}a(t)\dd{t}.
         \end{equation}
 
     \section{Constant Acceleration}
         \paragraph{}
         When the acceleration of an object is constant, we can derive some useful equations for simple motion.
-        Starting from equation \ref{av-acc} above,
+        Starting from equation \ref{eq:average-acc} above,
         \begin{align*}
-            \Delta v&=\int_{t_1}^{t_2}a\mathrm{d}t\\
+            \Delta v&=\int_{t_1}^{t_2}a\dd{t}\\
             \implies v_2-v_1&=a\cdot(t_2-t_1),
         \end{align*}
         now setting $t_1=0,t_2=t,v_1=v(0)=u,v_2=v(t)$, we get
-        \begin{equation}\label{suvat-1}
+        \begin{equation}\label{eq:suvat-1}
             v(t)=u+at,
         \end{equation}
         where $u$ is the initial velocity of the object.
-        Now we substitute equation \ref{suvat-1} into equation \ref{tot-disp} to get
+        Now we substitute equation \ref{eq:suvat-1} into equation \ref{eq:total-disp} to get
         \begin{align*}
-            \Delta x&=\int_{t_1}^{t_2}(u+at)\mathrm{d}t\\
+            \Delta x&=\int_{t_1}^{t_2}(u+at)\dd{t}\\
             \implies x_2-x_1&=u\cdot(t_2-t_1)+\frac{1}{2}a\cdot(t_2^2-t_1^2).
         \end{align*}
         Setting $t_1=0,t_2=t,x_1=x(0)=x_0,x_2=x(t)$ like before and recalling $s(t)=x(t)-x_0$, we get
-        \begin{equation}\label{suvat-2}
+        \begin{equation}\label{eq:suvat-2}
             s(t)=ut+\frac{1}{2}at^2.
         \end{equation}
-        Finally, squaring equation \ref{suvat-1} and substituting in equation \ref{suvat-2} gives
-        \begin{equation}\label{suvat-3}
+        Finally, squaring equation \ref{eq:suvat-1} and substituting in equation \ref{eq:suvat-2} gives
+        \begin{equation}\label{eq:suvat-3}
             v^2(t)=u^2+2as(t).
         \end{equation}
-        Equations \ref{suvat-1}, \ref{suvat-2}, and \ref{suvat-3} are known as the SUVAT equations, you probably learned them in school.
+        Equations \ref{eq:suvat-1}, \ref{eq:suvat-2}, and \ref{eq:suvat-3} are known as the SUVAT equations, you probably learned them in school.
         They are the \textbf{equations of motion} for a object under constant acceleration, i.e. all problems involving constant acceleration in a straight line are solved by them.
         \begin{example}
             Ball thrown in the air % TODO: write this
@@ -136,9 +136,9 @@
             Block sliding down a hill (no friction) % TODO: write this
         \end{example}
 
-    \section{Motion in More than One Dimension}\label{sec-motion-in-2-3d}
+    \section{Motion in More than One Dimension}\label{sec:motion-in-2-3d}
         \paragraph{}
-        As alluded to in section~\ref{sec-motion-in-1d} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
+        As alluded to in section~\ref{sec:motion-in-1d} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
         This is because the set of all points in 3D space forms a \textbf{vector space}, called $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span all of space.
         In \textbf{cartesian} coordinates, which are the most commonly used system to label points in 3D space, we label the axes $x$, $y$ and $z$, and choose the unit vectors $\ihat$, $\jhat$ and $\khat$ to point along each axis respectively.
         \begin{figure}[H]
@@ -200,9 +200,9 @@
         \paragraph{}
         Note that it is important that our basis vectors are \textbf{orthonormal}, meaning both orthogonal and of unit length, as this means we have the relations
         \begin{align}
-            &\abs{\ihat}=\abs{\jhat}=\abs{\khat}=1\label{eq-basis-vec-magnitude}\\
-            &\ihat\cdot\ihat=\jhat\cdot\jhat=\khat\cdot\khat=1\label{eq-basis-vec-normal}\\
-            &\ihat\cdot\jhat=\jhat\cdot\khat=\khat\cdot\ihat=0\label{eq-basis-vec-ortho}.
+            &\abs{\ihat}=\abs{\jhat}=\abs{\khat}=1\label{eq:basis-vec-magnitude}\\
+            &\ihat\cdot\ihat=\jhat\cdot\jhat=\khat\cdot\khat=1\label{eq:basis-vec-normal}\\
+            &\ihat\cdot\jhat=\jhat\cdot\khat=\khat\cdot\ihat=0\label{eq:basis-vec-ortho}.
         \end{align}
         If these results were not true, then some of the mathematics we will do later on (involving dot and cross products) would become much more complicated than it needs to be.
         \begin{definition}
@@ -254,7 +254,7 @@
             &=A_xB_x\ihat+A_yB_y\jhat+A_zB_z\khat.
         \end{align}
         The last step only follows because the basis vectors are \textbf{orthonormal}.
-        This is because the terms with two different basis vectors dotted together vanish (equation~\ref{eq-basis-vec-ortho}) and the terms with two of the same basis vector become just the coordinates multiplied together (equation~\ref{eq-basis-vec-normal}).
+        This is because the terms with two different basis vectors dotted together vanish (equation~\ref{eq:basis-vec-ortho}) and the terms with two of the same basis vector become just the coordinates multiplied together (equation~\ref{eq:basis-vec-normal}).
         All the coordinate systems we have dealt with so far have an orthonormal basis because of this fact.
 
     \section{Forces}
@@ -303,7 +303,7 @@
                 &x(t)=\int\dv{x(t)}{t}=x_0+v_0t+\frac{F_0}{2m}t^2,
             \end{align*}
             where $v_0=v(0)$ and $x_0=x(0)$ as before.
-            Note that comparing to equation \ref{suvat-2}, we can identify $a=\frac{F_0}{m}$ i.e. acceleration is constant, which is consistent with what we developed before.
+            Note that comparing to equation \ref{eq:suvat-2}, we can identify $a=\frac{F_0}{m}$ i.e. acceleration is constant, which is consistent with what we developed before.
         \end{example}
         It is important to note that Newton's Laws of Motion are only valid in \textbf{inertial reference frames}, which are reference frames travelling at a constant velocity $v$.
         If we are in a nonintertial reference frame, i.e. one that is accelerating, and we try to apply Newton's Laws, we will encounter odd things such as phantom forces which have no source.
@@ -351,7 +351,7 @@
         \begin{equation}
             x(t) = v_0\cos(\theta)t,
         \end{equation}
-        using the SUVAT equation \ref{suvat-2}.
+        using the SUVAT equation \ref{eq:suvat-2}.
         In the $y$ direction, the only force acting on the projectile is the constant force of gravity, so Newton's second law tells us
         \begin{equation}
             F_y = -mg = ma_y.
@@ -360,7 +360,7 @@
         \begin{equation}
             y(t) = v_0\sin(\theta)t - \frac{1}{2}gt^2,
         \end{equation}
-        again by equation \ref{suvat-2}.
+        again by equation \ref{eq:suvat-2}.
 
         \paragraph{}
         Now, the time of flight $t_f$ will be given when $y(t_f)=0$.
