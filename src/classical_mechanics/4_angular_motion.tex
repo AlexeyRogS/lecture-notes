@@ -2,17 +2,91 @@
 
 \begin{document}
 
-    \section{Circular Motion}
+    \section{Polar Coordinates in 2D}
         \paragraph{}
         We have studied in great detail the mechanics of objects travelling in straight lines.
         Now we want to extend this to more general situations where objects can move along curved paths.
-        The simplest case of a curved path is circular motion.
-        Suppose we have an object moving in a circular path.
-        Instead of describing its trajectory as a 2D vector in cartesian coordinates, it is much simpler to describe its trajectory in \textbf{polar coordinates}.
-        % TODO: include diagram for this
-        The position of the object in 2D space is described by the distance from the origin and the angle which the position vector makes with the $x$ axis.
-        In circular motion, the distance from the centre is constant so the 2D motion is reduced to a 1D problem.
-        We can then define an \textit{angular displacement} which is given in terms of the angle.
+        We will first study motion in 2D as it is much simpler than 3D.
+        As we saw in section~\ref{sec:motion-in-2-3d}, vectors in 2D can be equivalently described by two cartesian components or their length together with the angle they make with the $x$-axis.
+        Depending on the type of motion in the problem, it is much simpler to describe the trajectory of an object the latter way.
+        These are known as \textbf{polar coordinates}.
+
+        \paragraph{}
+        To set up the coordinate system, we define two new coordinate axes relative to the position vector $\vec{r}$.
+        The first axis points along the direction of the position vector, and the second points one quarter turn anticlockwise from the first.
+        These axes get two orthonormal vectors to form a basis which we label $\uvec{r}$ and $\uvec{\theta}$ respectively.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=4]
+                \draw[<->] (0,1) |- (1,0);
+                \draw[<->,thick] (0,0.3) |- (0.3,0);
+                \node[below] at (0.3,0) {$\ihat$};
+                \node[left] at (0,0.3) {$\jhat$};
+
+                \coordinate (A) at (0.5,0.8);
+                \draw[->,thick] (0,0) -- (A);
+                \node[above right] at (A) {$\vec{A}$};
+                \draw[dotted] (0,0.8) -- (A) -- (0.5,0);
+                \node[below] at (0.5,0) {$A_x$};
+                \node[left] at (0,0.8) {$A_y$};
+
+                \begin{scope}[rotate=30]
+                    \draw[<->] (0,1) |- (1,0);
+                    \draw[<->,thick] (0,0.3) |- (0.3,0);
+                    \node[below] at (0.3,0) {$\uvec{r}$};
+                    \node[left] at (0,0.3) {$\uvec{\theta}$};
+
+                    \draw[dotted] (A) -- ++(180:0.817) node[left] {$A_\theta$};
+                    \draw[dotted] (A) -- ++(270:0.472) node[below] {$A_r$};
+                \end{scope}
+
+                \draw (0.7,0) arc [radius=0.7, start angle=0, end angle=30];
+                \node at (0.75,0.1) {$\theta$};
+            \end{tikzpicture}
+        \end{figure}
+
+        \paragraph{}
+        Then a 2D vector $\vec{A}$ has a cartesian representation $\vec{A}=A_x\ihat+A_y\ihat$ and a polar representation $\vec{A}=A_r\uvec{r}+A_\theta\uvec{\theta}$.
+        To find the components in one coordinate system using the components in the other, we have to know the relations between all the basis vectors.
+        Using trigonometry, we can see that
+        \begin{align}
+            \uvec{r}&=\cos\theta\ihat+\sin\theta\jhat\label{eq:2d-polar-uvec-r}\\
+            \uvec{\theta}&=-\sin\theta\ihat+\cos\theta\jhat\label{eq:2d-polar-uvec-theta}.
+        \end{align}
+        Substituting this into the polar coordinate representation of $\vec{A}$, we get
+        \begin{align}
+            \vec{A}&=A_r(\cos\theta\ihat+\sin\theta\jhat)+A_\theta(-\sin\theta\ihat+\cos\theta\jhat)\\
+            &=(A_r\cos\theta-A_\theta\sin\theta)\ihat+(A_r\sin\theta+A_\theta\cos\theta)\jhat.
+        \end{align}
+        Comparing coefficients with the cartesian representation, we see that
+        \begin{align}
+            A_x&=A_r\cos\theta-A_\theta\sin\theta\\
+            A_y&=A_r\sin\theta+A_\theta\cos\theta.
+        \end{align}
+        By doing the same procedure the other way around, we can deduce that
+        \begin{align}
+            A_r&=A_x\cos\theta+A_y\sin\theta\\
+            A_\theta&=-A_x\sin\theta+A_y\cos\theta.
+        \end{align}
+
+        \paragraph{}
+        The definition of the axes in polar coordinates may seem confusing at first as the position vector moves around over time.
+        This means that the axes and unit vectors also change over time, and we will see how this affects calculation of the motion of an object in the next section.
+
+        \paragraph{}
+        Once thing that doesn't change is the representation of the position vector itself, which is always given by $\vec{r}=r\uvec{r}$.
+        The conversion between representations of the trajectory in cartesian and polar coordinates is then given by equations~\ref{eq:2d-polar-length}, \ref{eq:2d-polar-x-component}, \ref{eq:2d-polar-y-component}, and \ref{eq:2d-polar-theta}.
+        \begin{align}
+            x&=r\cos\theta\\
+            y&=r\sin\theta\\
+            r&=\sqrt{x^2+y^2}\\
+            \tan\theta&=\frac{y}{x}.
+        \end{align}
+
+    \section{Angular Kinematics}
+        Similar to how we analysed motion along each axis seperately in cartesian coordinates in chapter~\ref{chap:1}, we can do the same thing in polar coordinates, except with some differences.
+        In the special case of circular motion, there is no motion in the radial direction and 2D motion is reduced to a 1D problem.
+        Displacement has units of length, but angles are unitless, so we will now examine how the angle of the position vector changes over time.
         \begin{definition}
             The \textbf{angular displacement} of an object is the difference in angle to the $x$ axis between two times $t_1$ and $t_2>t_1$.
             \begin{equation}
@@ -23,95 +97,261 @@
         \begin{definition}
             The \textbf{instananeous angular velocity} of an object is defined as the time derivative of angular displacement.
             \begin{equation}
-                \omega(t)=\lim_{\Delta t\to0}\frac{\theta(t+\Delta t)-\theta(t)}{\Delta t}=\dv{x(t)}{t}.
+                \omega(t)=\lim_{\Delta t\to0}\frac{\theta(t+\Delta t)-\theta(t)}{\Delta t}=\dv{\theta(t)}{t}=\dot{\theta}.
             \end{equation}
         \end{definition}
         Likewise, the angular acceleration is given by the rate of change of angular velocity.
         \begin{definition}
             The \textbf{instaneous angular acceleration} of an object is defined as the time derivative of angular velocity.
             \begin{equation}
-                \alpha(t)=\lim_{\Delta t\to0}\frac{\omega(t+\Delta t)-\omega(t)}{\Delta t}=\dv{\omega(t)}{t}=\dv[2]{\theta(t)}{t}.
+                \alpha(t)=\lim_{\Delta t\to0}\frac{\omega(t+\Delta t)-\omega(t)}{\Delta t}=\dv{\omega(t)}{t}=\dv[2]{\theta(t)}{t}=\dot{\omega}=\ddot{\theta}.
             \end{equation}
         \end{definition}
-        Again analogously to the linear case, we define the average angular velocity and angular acceleration as an integral.
+        Again analogously to the linear case, we define the average angular velocity and angular acceleration as integrals.
         \begin{align}
-            \bar{\omega}(t)&=\frac{\Delta\theta}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\omega(t)\mathrm{d}t\\
-            \bar{\alpha}(t)&=\frac{\Delta\omega}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\alpha(t)\mathrm{d}t.
+            \bar{\omega}(t)&=\frac{\Delta\theta}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\omega(t)\dd{t}\\
+            \bar{\alpha}(t)&=\frac{\Delta\omega}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\alpha(t)\dd{t}.
         \end{align}
+
+        \paragraph{}
+        Now, let us go back to the full 2D vectors and see how they change with time.
+        The velocity vector is the time derivative of the position vector:
+        \begin{equation}
+            \vec{v}=\dv{\vec{r}}{t}=\dv{}{t}(r\uvec{r}).
+        \end{equation}
+        We need to use the product rule for this since in general both $r$ (the length of the position vector) and $\uvec{r}$ (the direction that the position vector points) change over time.
+        What is the time derivative of $\uvec{r}$?
+        We can work it out using equation~\ref{eq:2d-polar-uvec-r}:
+        \begin{align}
+            \dv{\uvec{r}}{t}&=\dv{}{t}\cos\theta\ihat+\dv{}{t}\sin\theta\jhat\\
+            &=-\dot{\theta}\sin\theta\ihat+\dot{\theta}\cos\theta\jhat\\
+            &=\omega(-\sin\theta\ihat+\cos\theta\jhat)\\
+            &=\omega\uvec{\theta}\label{eq:2d-polar-uvec-r-dot},
+        \end{align}
+        where we have used equation~\ref{eq:2d-polar-uvec-theta} to substitute $\uvec{\theta}$ in the last line.
+        We can work out the time derivative of $\uvec{\theta}$ now as well, it is
+        \begin{align}
+            \dv{\uvec{\theta}}{t}&=-\dv{}{t}\sin\theta\ihat+\dv{}{t}\cos\theta\jhat\\
+            &=-\dot{\theta}\cos\theta\ihat-\dot{\theta}\sin\theta\jhat\\
+            &=-\omega\uvec{r}.\label{eq:2d-polar-uvec-theta-dot}
+        \end{align}
+        As an aside, think about why these two results make physical sense.
+        Why should the rate of change of $\uvec{r}$ be in the $\uvec{\theta}$ direction?
+
+        \paragraph{}
+        We can now finish off calculating the velocity vector:
+        \begin{align}
+            \vec{v}&=\dot{r}\uvec{r}+r\dv{\uvec{r}}{t}\\
+            &=\dot{r}\uvec{r}+r\omega\uvec{\theta}.\label{eq:2d-polar-velocity}
+        \end{align}
+        We label the component pointing along the radial direction $v_r=\dot{r}$ and call it the \textbf{radial velocity}, and the component pointing along $\uvec{\theta}$, $v_\theta=r\omega$, is the \textbf{tangential velocity}. 
+        
+        \paragraph{}
+        The benefit of using the $\uvec{r}-\uvec{\theta}$ axes with polar coordinates is immediately apparent.
+        Using the cartesian coordinate axes, the position vector is given by $\vec{r}=r\cos\theta\ihat+r\sin\theta\jhat$, so the time derivative is
+        \begin{align}
+            \vec{v}=\dv{\vec{r}}{t}&=(\dot{r}\cos\theta-r\omega\sin\theta)\ihat+(\dot{r}\sin\theta+r\omega\cos\theta)\jhat\label{eq:2d-polar-velocity-cartesian}\\
+            &=\dot{r}(\cos\theta\ihat+\sin\theta\jhat)+r\omega(-\sin\theta\ihat+\cos\theta\jhat)\\
+            &=\dot{r}\uvec{r}+r\omega\uvec{\theta}.
+        \end{align}
+        In the last two lines we have regrouped the terms to write $\vec{v}$ in the $\uvec{r}-\uvec{\theta}$ basis and recovered our previous result.
+        In the cartesian coordinate system, we get $v_x=\dot{r}\cos\theta-r\omega\sin\theta$ and $v_y=\dot{r}\sin\theta+r\omega\cos\theta$ which is rather opaque to interpretation.
+
+        \paragraph{}
+        Now, let's calculate the acceleration vector in polar coordinates.
+        \begin{align}
+            \vec{a}=\dv{\vec{v}}{t}&=\dv{}{t}(\dot{r}\uvec{r}+r\omega\uvec{\theta})\\
+            &=\ddot{r}\uvec{r}+\dot{r}\dv{\uvec{r}}{t}+\dot{r}\dot{\theta}\uvec{\theta}+r\ddot{\theta}\uvec{\theta}+r\dot{\theta}\dv{\uvec{\theta}}{t}\\
+            &=\ddot{r}\uvec{r}+\dot{r}\dot{\theta}\uvec{\theta}+\dot{r}\dot{\theta}\uvec{\theta}+r\ddot{\theta}\uvec{\theta}-r\dot{\theta}^2\uvec{\theta}\\
+            &=(\ddot{r}-r\dot{\theta}^2)\uvec{r}+(2\dot{r}\dot{\theta}+r\ddot{\theta})\uvec{\theta}.\label{eq:2d-polar-acceleration}
+        \end{align}
+        Therefore, the radial acceleration is $a_r=\ddot{r}-r\dot{\theta}^2$, and the tangential acceleration is $a_\theta= 2\dot{r}\dot{\theta}+r\ddot{\theta}$.
+
+        \paragraph{}
+        Here is an important thing to note about using polar coordinates.
+        Although the unit vectors change over time, the reference frame is inertial.
+        Our perspective is fixed, it does not move or co-rotate with the coordinate system.
+        This an lead to some, at first counterintuitive, results compared to cartesian coordinates.
+        One may assume that if there is no force in the radial direction, then there is no acceleration in the radial direction and $\ddot{r}=0$.
+        However, as we see above, the radial component of the acceleration vector, which takes into account the change of the unit vectors over time, is $a_r=\ddot{r}-r\dot{\theta}^2$.
+        The radial component of acceleration is \textit{not} the derivative of radial velocity, $\dot{r}$.
+        This can be confusing because it implies that if $F_r=0$ and so $a_r=0$ by Newton's second law, then there can still be motion in the radial direction $\ddot{r}\neq0$.
+        We will now look at an example to illustrate this.
+
+        \begin{example}
+            Consider a bead which is free to move along a frictionless rod.
+            The rod is anchored at one end and is rotating at constant angular velocity $\omega$.
+            As the rod rotates, the bead will swing out to the end of the rod.
+            Before it reaches the end, what does its motion look like?
+            \begin{figure}[H]
+                \centering
+                \begin{tikzpicture}[scale=3]
+                    \draw[<->] (0,1) |- (1,0);
+                    \draw[ultra thick,line cap=round] (0,0) -- (0.6,0.53);
+                    \fill (0.3,0.265) circle [radius=0.05];
+                    \draw[->,rotate=30] (1,0) arc [radius=1, start angle=0, end angle=20];
+                    \draw[->,shift={(0.3,0.265)}, rotate=39.8] (0,0) -- (0,0.2);
+                    \node[right] at (1,0) {$x$};
+                    \node[above] at (0,1) {$y$};
+                    \node at (0.3,0.5) {$F_\text{rod}$};
+                    \node[right] at (39.8:1.1) {$\omega$};
+
+                    \begin{scope}[shift={(0.8,0.8)},scale=0.25,rotate=39.8,font=\small]
+                        \draw[<->] (0,1) |- (1,0);
+                        \node[right] at (1,0) {$\uvec{r}$};
+                        \node[above] at (0,1) {$\uvec{\theta}$};    
+                    \end{scope}
+                \end{tikzpicture}
+            \end{figure}
+
+            \paragraph{}
+            Since the total force on the bead is $\vec{F}=F_\text{rod}\uvec{\theta}$, the instantaneous radial acceleration $a_r=\ddot{r}-r\dot{\theta}^2$ must be zero.
+            This is a differential equation that we can solve for the radial motion.
+            \begin{equation}
+                \dv[2]{r}{t}-\omega^2r=0.
+            \end{equation}
+            Using an ansatz of the form $r=Ae^{Bt}$, with two unknown constants $A$ and $B$, we get
+            \begin{align}
+                &\dv[2]{}{t}(Ae^{Bt})-\omega^2Ae^{Bt}=0\\
+                &AB^2e^{Bt}-\omega^2Ae^{Bt}=0\\
+                &B^2-\omega^2=0.
+            \end{align}
+            This gives $B=\pm\omega$, so we get the general solution
+            \begin{equation}
+                r=A_+e^{\omega t}+A_-e^{-\omega t}.
+            \end{equation}
+            When $t=0$, $r$ is some value $r_0$ and $\dot{r}=0$, so
+            \begin{align}
+                \dot{r}(0)&=\left.A_+\omega e^{\omega t}-A_-\omega e^{-\omega t}\right|_{t=0}\\
+                &=\omega(A_+-A_-)=0,
+            \end{align}
+            therefore $A_+=A_-=$, so we will relabel them both $A$.
+            Finally, $r(0)=2A=r_0$, so we have
+            \begin{align}
+                r&=\frac{1}{2}r_0(e^{\omega t}+e^{-\omega t})\\
+                &=r_0\cosh(\omega t).
+            \end{align}
+            % TODO: add plot of radial motion
+        \end{example}
 
     \section{Constant Angular Acceleration}
         \paragraph{}
-        % TODO: make references to equations in same section in chapter 1
-        In the case where we have a constant angular acceleration, we can derive a set of equation analogous to the SUVAT equations for linear motion.
+        In the case where we have a constant angular acceleration, we can derive a set of equations analogous to the SUVAT equations for linear motion derived in section~\ref{sec:suvat}.
         From the equation for average acceleration above, we get
-        \begin{equation}
-            \Delta\omega=\omega(t)-\omega_0=\alpha t.
-        \end{equation}
+        \begin{align}
+            \Delta\omega=\omega(t)-\omega_0&=\alpha t\\
+            \omega(t)&=\omega_0+\alpha t,\label{eq:ang-suvat-1}
+        \end{align}
+        which is analogous to equation~\ref{eq:suvat-1}.
         Then from the definition of angular displacement,
         \begin{align}
-            \Delta\theta&=\int_{t_1}^{t_2}(\omega_0+\alpha t)\mathrm{d}t\\
+            \Delta\theta&=\int_{t_1}^{t_2}(\omega_0+\alpha t)\dd{t}\\
             &=\omega_0t+\frac{1}{2}\alpha t^2\\
-            \implies\theta(t)&=\theta_0+\omega_0t+\frac{1}{2}\alpha t^2.
+            \implies\theta(t)&=\theta_0+\omega_0t+\frac{1}{2}\alpha t^2.\label{eq:ang-suvat-2}
         \end{align}
-        Squaring the first equation and substituting it into the second gives the last equation:
+        This is like equation~\ref{eq:suvat-2}
+        Finally, squaring equation~\ref{eq:ang-suvat-1} and substituting it into equation~\ref{eq:ang-suvat-2} gives the last equation:
         \begin{equation}
-            \omega^2(t)=\omega_0^2+2\alpha\theta(t).
+            \omega^2(t)=\omega_0^2+2\alpha\theta(t),\label{eq:ang-suvat-3}
         \end{equation}
+        which is an angular version of equation~\ref{eq:suvat-3}.
+        These equations are useful in solving problems where we don't have to worry (or don't care) about motion in the radial direction.
 
-    \section{Relating Linear and Angular Quantities}
+    \section{Uniform Circular Motion}
+        % TODO: move this section to the beginning of this chapter?
         \paragraph{}
-        The arc length along a circle is given by $s=r\theta$, where $r$ is the radius of the circle and $\theta$ is the angle.
-        For an object travelling in a circular path, the arc length is the displacement $s(t)$.
+        The simplest case of angular motion is where an object is moving in a circle, so there is no motion in the radial direction, and going at a constant speed.
+        This is called \textbf{uniform circular motion}, and objects moving this way can be analysed using 1D techniques we studied in section~\ref{sec:motion-in-1d}.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=3]
+                \draw[->] (-1,0) -- (1,0);
+                \draw[->] (0,-1) -- (0,1);
+                \draw[dashed] (0,0) circle [radius=0.8];
+                \draw[thick] (0,0) -- (0.6,0.53);
+                \fill (0.6,0.53) circle [radius=0.02];
+                \draw (0.2,0) arc [radius=0.2, start angle=0, end angle=39.8];
+                \draw[->,rotate=30] (1,0) arc [radius=1, start angle=0, end angle=20];
+                \node[right] at (1,0) {$x$};
+                \node[above] at (0,1) {$y$};
+                \node at (0.25,0.1) {$\theta$};
+                \node[above] at (0.3,0.265) {$r$};
+                \node[right] at (39.8:1.1) {$\dot{\theta}=\omega$};
+            \end{tikzpicture}
+        \end{figure}
+        First, note that the displacement is the arc length of the circular path, given by $s=r\theta$, where $\theta$ is the angular displacement in radians and $r$ is the radius of the circle.
         Thus, the velocity along the path is given as
-        \begin{equation}
+        \begin{equation}\label{eq:ucm-speed}
             v=\dv{s}{t}=r\dv{\theta}{t}=r\omega.
         \end{equation}
-        Similarly, the acceleration is given by
-        \begin{equation}
-            a=\dv{v}{t}=r\dv{\omega}{t}=r\alpha.
-        \end{equation}
-        % TODO: derive vector versions of these quantites
-        % TODO: rename this next section "Uniform Circular Motion"?
-        Let's look at things from a vector perspective in the case where the object is moving with a constant speed, i.e. $\alpha=0$.
-        In this case, $\omega$ is constant and so we have $\theta=\omega t$.
-        Using some trigonometry, we can see that the position vector, velocity and acceleration in cartesian coordinates is given by
+        Since the speed is constant, $\omega$ is constant as well.
+        Therefore, by equation~\ref{eq:ang-suvat-2}, we have $\theta=\omega t$.
+
+        \paragraph{}
+        Does this mean acceleration is zero?
+        No.
+        Since $\omega$ is constant, $\alpha=\dot{\omega}=0$, but this does not mean that the linear acceleration is zero.
+        Recall Newton's first law of motion, definition~\ref{def:newton-1}: if the \textit{velocity} is constant, the force (acceleration) is zero.
+        Since the path of motion is a circle, the velocity vector is constantly changing direction and is therefore \textit{not} constant.
+
+        \paragraph{}
+        We will calculate the velocity and accelearation in cartesian coordinates first.
+        Taking equation~\ref{eq:2d-polar-velocity-cartesian} and dropping the terms with $\dot{r}$, we get
         \begin{align}
-            \vec{r}=r\cos(\omega t)\ihat+r\sin(\omega t)\jhat\\
-            \vec{v}=\dv{\vec{r}}{t}=-r\omega\sin(\omega t)\ihat+r\omega\cos(\omega t)\jhat\\
-            \vec{a}=\dv{\vec{v}}{t}=-r\omega^2\cos(\omega t)\ihat-r\omega^2\sin(\omega t)\jhat.
+            \vec{v}&=-r\omega\sin(\omega t)\ihat+r\omega\cos(\omega t)\jhat\\
+            \vec{a}&=\dv{\vec{v}}{t}\\
+            &=-r\omega^2\cos(\omega t)\ihat-r\omega^2\sin(\omega t)\jhat.
         \end{align}
-        As a sanity check, we can see that
+        As a sanity check, we can see that the speed is given by
         \begin{align}
-            \abs{\vec{v}}=\sqrt{v_x^2+v_y^2}&=\sqrt{(-r\omega\sin(\omega t))^2+(r\omega\cos(\omega t))^2}\\
-            &=\sqrt{r^2\omega^2(\sin^2(\omega t)+\cos^2(\omega t))}=r\omega,
+            \abs{\vec{v}}&=\sqrt{(-r\omega\sin(\omega t))^2+(r\omega\cos(\omega t))^2}\\
+            &=\sqrt{r^2\omega^2(\sin^2(\omega t)+\cos^2(\omega t))}\\
+            &=r\omega,
         \end{align}
         which is what we found before.
-        Let's look at the dot product of the vectors.
+        It is not immediately clear in this coordinate system which direction the velocity points in, let's calculate the dot product with the position vector to find out.
         \begin{align}
             \vec{v}\cdot\vec{r}&=(-r\omega\sin(\omega t)\ihat+r\omega\cos(\omega t)\jhat)\cdot(r\cos(\omega t)\ihat+r\sin(\omega t)\jhat)\\
             &=-r^2\omega\sin(\omega t)\cos(\omega t)+r^2\omega\sin(\omega t)\cos(\omega t)\\
             &=0.
         \end{align}
         Hence the velocity and position vectors are perpendicular.
-        This makes sense because as we know from before, the velocity is always tangent to the trajectory, which corresponds to being perpendicular to the position vector in the case of a circle.
-        Finally, notice that
+        This makes sense because as we know from section~\ref{sec:motion-in-2-3d}, the velocity is always tangent to the trajectory, which corresponds to being perpendicular to the position vector in the case of a circle.
+
+        \paragraph{}
+        Finally, notice that since $\vec{r}=r\sin(\omega t)\ihat+r\cos(\omega t)\jhat$,
         \begin{equation}
             \vec{a}=-\omega^2\vec{r}.
         \end{equation}
-        The acceleration is antiparallel to the position vector.
+        The acceleration is antiparallel to the position vector, pointing in towards the centre of the circle.
         The magnitude of the acceleration is
         \begin{align}
-            \abs{\vec{a}}=\sqrt{a_x^2+a_y^2}&=\sqrt{(-r\omega^2\cos(\omega t))^2+(-r\omega^2\sin(\omega t))^2}\\
-            &=\sqrt{r^2\omega^4(\sin^2(\omega t)+\cos^2(\omega t))}\\
-            &=r\omega^2=\frac{v^2}{r}.
+            \abs{\vec{a}}&=\abs{-\omega^2}\abs{\vec{r}}\\
+            &=r\omega^2\\
+            &=\frac{v^2}{r},
         \end{align}
-        Thus the magnitude of the acceleration does not change over time, but the direction constantly changes as the object moves on its circular path.
+        where we have substituted equation~\ref{eq:ucm-speed} in the last line
+        Thus the magnitude of the acceleration is constant, but the direction changes as the object moves on its circular path.
         By Newton's second law, a nonzero acceleration implies an unbalanced force.
-        This force which has constant magnitude and constantly changing direction is what keeps the object moving on its circular path and is known as the \textbf{centripetal force}.
+        This force is what keeps the object moving on its circular path and is known as the \textbf{centripetal force}.
         It is given by
         \begin{equation}
-            \vec{F}_\text{centripetal}=m\vec{a}=-\frac{mv^2}{r}\hat{r}.
+            \vec{F}_\text{centripetal}=m\vec{a}=-mr\omega^2\uvec{r}=-\frac{mv^2}{r}\uvec{r}.
         \end{equation}
+
+        \paragraph{}
+        Let us see if we can reproduce these results using the 2D polar coordinate vectors.
+        Using equation~\ref{eq:2d-polar-velocity} and noting that $r$ is constant, we immediately recover
+        \begin{equation}
+            \vec{v}=r\omega\uvec{\theta}.
+        \end{equation}
+        Here it is immediately apparent that the velocity always points perpendicular to the position vector.
+        In equation~\ref{eq:2d-polar-acceleration}, any time derivatives of $r$ drop out, as well as $\ddot{\theta}$, leaving us with
+        \begin{equation}
+            \vec{a}=-r\dot{\theta}^2\uvec{r},
+        \end{equation}
+        which is the same as above.       
+        
         \begin{example}
             Consider a child on a merry-go-round.
             If the platform is rotating at 60rpm and the child is holding on, what is the force on the child's arm?
@@ -147,12 +387,5 @@
             \paragraph{}
             How fast would the mass haves to be projected to get to the top of the loop?
         \end{example}
-
-    \section{Non-uniform Angular Acceleration}
-        \paragraph{}
-        Suppose now that the angular acceleration $\alpha$ changes with time.
-        % TODO: include derivation of general motion in 2D formulae
-
-    % TODO: mechanics of a spool
 
 \end{document}
