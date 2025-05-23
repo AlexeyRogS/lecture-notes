@@ -2,39 +2,198 @@
 
 \begin{document}
 
-    \section{Rigid Body Rotation}
+    % TODO: add an interlude on 3D spherical and cylindrical coordinates
+
+    \section{Moments}
         \paragraph{}
-        A rigid body is a system of particles which are fixed together such that they move together, no matter the forces applied.
-        We have seen in previous chapters that it is possible to treat rigid bodies as point masses when considering linear motion.
-        However, when considering rotational effects as well, we need to consider the macroscopic extent of an object.
-        Consider a rigid body in motion and look at the total kinetic energy, which is given by the sum of kinetic energy of each constituent particle:
+        When dealing with problems involving rotation, we have mechanical quantities which are analogous to ones used to solve linear problems.
+        We have seen a few of these before: angular velocity $\omega=v_\theta/r$, angular acceleration $\alpha=a_\theta/r$ (for circular motion), and moment of inertia $I=mr^2$.
+        As we can see, the definitions of these quantities all involve the analogous linear quantity and the distance from the origin $r$.
+        Quantities that involve the \textit{product} of a linear quantity with the radius are called \textbf{moments}.
+        Moments we have seen already are the center of mass, which is the first moment of mass (sum of $mr$) normalised by the total mass, and the moment of inertia, which is the second moment of mass (mass multiplied by $r^2$)
+        In this chapter we will introduce two more moments: torque --- the moment of force --- and angular momentum --- the moment of momentum.
+        When vector quantities like force and momentum are involved, moments are defined using the cross product.
+        \begin{definition}
+            \textbf{Angular Momentum} is defined as the first moment of momentum.
+            \begin{equation}
+                \vec{L}=\vec{r}\times\vec{p}=m\vec{r}\times\vec{v}.
+            \end{equation}
+        \end{definition}
+        Note that because the cross product is antisymmetric, the order of $\vec{r}$ and $\vec{p}$ matters!
+        The motivation for introducing angular momentum will become clear in the next section. 
+
+    \section{Central Forces}
+        \paragraph{}
+        We will now examine a very special type of force.
+        These forces have many useful properties which make solving problems involving them a lot simpler.
+        \begin{definition}
+            A \textbf{central force} is a force which acts along the radial direction and only depends on the radial distance $r$.
+            Central forces thus have the form
+            \begin{equation}
+                \vec{F}=F(r)\uvec{r}.
+            \end{equation}
+            If $F(r)<0$, the force is attractive, and if $F(r)>0$, the force is repulsive.
+        \end{definition}
+        We have seen one example of a central force already, the universal law of gravitation.
+        Another example is Coulomb's law.
+
+        \paragraph{}
+        Motion under a central force obeys the following rules:
+        \begin{itemize}
+            \item The motion is confined to a plane.
+            \item The angular momentum is conserved ($\dv{\vec{L}}{t}=0$).
+            \item The position vector sweeps out equal area in equal time.
+        \end{itemize}
+        
+        \paragraph{}
+        Let's prove that angular momentum is conserved under the influence of a central force.
+        Looking at the derivative, we get
+        \begin{align}
+            \dv{\vec{L}}{t}&=\dv{}{t}(\vec{r}\times\vec{p})\\
+            &=\dv{\vec{r}}{t}\times\vec{p}+\vec{r}\times\dv{\vec{p}}{t}\\
+            &=\vec{v}\times m\vec{v}+\vec{r}\times F(R)\uvec{R}\\
+            &=0.
+        \end{align}
+        Therefore, $\vec{L}$ is constant over time, it is conserved.
+
+        \paragraph{}
+        By definition, $\vec{L}$ is perpendicular to $\vec{r}$.
+        We can also see this by taking the dot product of $\vec{L}$ with the position vector:
         \begin{equation}
-            K=\sum_i\frac{1}{2}m_iv_i^2.
+            \vec{r}\cdot\vec{L}=\vec{r}\cdot(\vec{r}\times\vec{p})=\vec{p}\cdot(\vec{r}\times\vec{r})=0.
         \end{equation}
-        We can split the velocity of each particle into the sum of velocity around the centre of rotation and velocity along the line of motion.
+        Since $\vec{L}$ is constant, this implies that $\vec{r}$ is confined to the plane perpendicular to $\vec{L}$.
+        
+        \paragraph{}
+        Because of this, it is convenient to use cylindrical coordinates with the plane $z=0$ as the plane of motion.
+        Using equation~\ref{} (note that $\dot{z}=0$) and the cross products between unit vectors, we get
+        % TODO: add reference to velocity in cylindrical coordinates here
         \begin{align}
-            K&=\sum_i\frac{1}{2}m_i(\vec{v}_{i,\text{rot}}+\vec{v}_{i,\text{tan}})^2\\
-            &=\sum_i\frac{1}{2}m_i(v_{i,\text{rot}}^2+v_{i,\text{tan}}^2+2\vec{v}_{i,\text{rot}}\cdot\vec{v}_{i,\text{tan}})\\
-            &=\underbrace{\sum_i\frac{1}{2}m_iv_{i,\text{rot}}^2}_{K_\text{rotational}}+\underbrace{\sum_i\frac{1}{2}m_iv_{i,\text{tan}}^2}_{K_\text{linear}}.
+            \vec{L}&=m\vec{r}\times\vec{v}\\
+            &=mR\uvec{R}\times(\dot{R}\uvec{R}+R\dot{\theta}\uvec{\theta})\\
+            &=mR^2\dot{\theta}\khat\label{eq:angular-momentum-theta-dot}\\
+            &=mh\khat.
         \end{align}
-        The cross-term in the square cancels out (why?).
-        % TODO: explain this fully
-        % TODO: include a diagram of this
-        This rotational kinetic energy can be written in terms of the angular velocity $\omega$ since it is the same for each particle in a rigid body.
-        \begin{align}
-            K_\text{rot}&=\sum_i\frac{1}{2}m_iv_{i,\text{rot}}^2=\sum_i\frac{1}{2}m_i(r_i\omega)^2\\
-            &=\frac{1}{2}\omega^2\sum_i m_ir_i^2\\
-            &=\frac{1}{2}I\omega^2.
-        \end{align}
-        $I$ is called the \textbf{moment of inertia}, and it is kind of an angular equivalent of mass.
-        Notice how it is calculated in a similar way to the centre of mass except with the square of $r$.
-        Also notice how in the formula for $K_\text{rot}$, $I$ and $\omega$ play the role of $m$ and $v$ respectively, which shows how they are analogous to the linear quantities.
-        However $I$, just like the centre of mass, depends on how the mass is distributed in an object.
-        For example, consider a solid disc and a hoop of the same mass.
-        % TODO: include a diagram for this
-        From the formula for $I$, we can see that since all of the mass in the hoop is concentrated further out, the moment of inertia will be larger than the disc.
-        This means that for the same angular velocity, the rotational kinetic energy of the hoop will be larger than the disc.
-        $I$ also depends on the axis of rotation.
+        In the last line we have defined $h=R^2\dot{\theta}$.
+        This is the \textbf{specific angular momentum} (angular momentum normalised by mass), and is useful in some problems.
+
+        Finally, we will prove the last fact about motion under central forces, the law of equal areas, which is a more general version of Kepler's second law of planetary motion.
+        Consider an object on a curved path at two points separated by a small time interval $\dd{t}$.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=5]
+                \fill[fill=black!10,rotate=8] (0,0) -- (1,0) arc [radius=1, start angle=0, end angle=10.1] -- cycle;
+                \draw[rotate=8] (0.3,0) arc [radius=0.3, start angle=0, end angle=10.1];
+                \draw (1,0) arc [radius=1, start angle=0, end angle=30];
+                \draw (0,0) -- (0.95,0.312) (0.99,0.141) -- (0,0);
+                \fill (0.95,0.312) circle [radius=0.01];
+                \fill (0.99,0.141) circle [radius=0.01];
+                \fill (0,0) circle [radius=0.01];
+                \node at (0.3,0.15) {$\dd{\theta}$};
+                \node at (0.5,0) {$R$};
+            \end{tikzpicture}
+        \end{figure}
+        The shaded arc is approximately a triangle, so the area get closer and closer to $A=\frac{1}{2}R^2\dd{\theta}$ as $\dd{t}\to0$.
+        Therefore, we have
+        \begin{equation}
+            \dv{A}{t}=\frac{1}{2}R^2\dv{\theta}{t}=\frac{1}{2}h=\text{const}.
+        \end{equation}
+        So the rate of area swept out over time is constant.
+
+        \paragraph{}
+        What does motion under a central force look like?
+        By Newton's second law, we know that
+        \begin{equation}\label{eq:central-force-eom}
+            a_R=\ddot{R}-R\dot{\theta}^2=\frac{F(R)}{m}.
+        \end{equation}
+        Substituting in the specific angular momentum, we get
+        \begin{equation}
+            \ddot{R}-\frac{h^2}{R^3}=\frac{F(R)}{m}.
+        \end{equation}
+        This is the differential equation we need to solve for any central force problem.
+        \begin{example}
+            Prove Kepler's third law: the square of a planet's orbital period is proportional to the cube of the semi-major axis of its orbit.
+
+            \paragraph{}
+            Planets move according to the universal law of gravitation, which is
+            \begin{equation}
+                \vec{F}=-\frac{GMm}{R^2}\uvec{R}.
+            \end{equation}
+            We will make an approximation and assume that the sun is fixed at the origin and the planets orbit in circular orbits.
+            In reality, the a given planet and the sun orbit their common centre of mass in elliptical paths, but the difference is very small making this approximation makes the problem much simpler.
+            Since $R=\text{const}$, then $\dot{R}=\ddot{R}=0$.
+            So $a_R=-R\dot{\theta}^2$.
+            Since angular momentum $L=mR^2\dot{\theta}$ is conserved, $\dot{\theta}=\omega$ is a constant.
+            Thus the equation of motion \ref{eq:central-force-eom} becomes
+            \begin{align}
+                -\frac{GMm}{R^2}&=-mR\omega^2\\
+                GM&=R^3\omega^2.
+            \end{align}
+            The period of the orbit is equal to the displacement divided by the speed, in this case $T=\frac{2\pi}{\omega}$, so rearranging for $R^3$ we get
+            \begin{equation}
+                R^3=\frac{GM}{4\pi^2}T^2.
+            \end{equation}
+        \end{example}
+        \begin{example}
+            Consider a central force of the form $\vec{F}=-\frac{mk^2}{r^3}\uvec{r}$.
+            If a particle under the influence of this force starts at a distance $r=r_0$ from the origin with no radial speed ($v_{r,0}=0$), what will its motion look like for different values of $k$?
+
+            \paragraph{}
+            Substituting in the force into equation~\ref{eq:central-force-eom}, we get
+            \begin{gather}
+                \ddot{r}-\frac{h}{r^3}=-\frac{k^2}{r^3}\\
+                \ddot{r}+\frac{k^2-h^2}{r^3}=0.
+            \end{gather}
+            For $k^2=h^2$, we get $\ddot{r}=0$, which can be integrated twice to give $r=r_0+v_{r,0}t$.
+            Since $v_{r,0}=0$, we have $r=r_0$ which is circular motion.
+            The angular speed is given by equation~\ref{eq:angular-momentum-theta-dot}, $\omega=\frac{L}{mr_0^2}=\frac{mvr_0}{mr_0^2}=\frac{v}{r_0}$.
+            This is just our familiar result from uniform circular motion, which makes sense because if we plug $k^2=h^2$ into the form of the force above, we get
+            \begin{equation}
+                \vec{F}=-\frac{mr^4\omega^2}{r^3}\uvec{r}=-mr\omega^2\uvec{r},
+            \end{equation}
+            which is just the formula for centripetal force.
+
+            \paragraph{}
+            What about the cases where $k^2\neq h^2$?
+            Unfortunately, the differential equation is not solvable analytically for any other case.
+            Luckily, there is another way to solve it!
+            What we have to do is parameterise the orbit in terms of the angular displacement $\theta$ instead of $t$ by making use of the relation $h=r^2\dot{\theta}$.
+            We will also make the substition $u=1/r$, which is a very useful substition when solving problems with central forces of the form $F(r)=\frac{\alpha}{r^n}$.
+            Therefore, the aim is to replace all time derivatives of $r$ with derivatives of $u$ with respect to $\theta$.
+            Using the chain rule, we get
+            \begin{align}
+                \dot{r}&=\dv{r}{u}\dot{u}=\dv{r}{u}\dv{u}{\theta}\dot{\theta}\\
+                &=-r^2\dot{\theta}\dv{u}{\theta}\\
+                &=-h\dv{u}{\theta}.
+            \end{align}
+            For $\ddot{r}$, we get
+            \begin{align}
+                \ddot{r}&=\dv{}{t}\left(-h\dv{u}{\theta}\right)=-h\dv[2]{u}{\theta}\dot{\theta}\\
+                &=-\frac{h^2}{r^2}\dv[2]{u}{\theta}\\
+                &=-h^2u^2\dv[2]{u}{\theta}.
+            \end{align}
+            Now, the equation of motion becomes
+            \begin{gather}
+                -h^2u^2\dv[2]{u}{\theta}+(k^2-h^2)u^3=0\\
+                \dv[2]{u}{\theta}-\frac{k^2-h^2}{h^2}u=0.
+            \end{gather}
+
+            \paragraph{}
+            Letting $\beta^2=\abs{\frac{k^2-h^2}{h^2}}$, if $k^2>h^2$ then the differential equation becomes
+            \begin{equation}
+                \dv[2]{u}{\theta}-\beta^2 u=0.
+            \end{equation}
+            The general solution is $u=Ae^{\beta\theta}+Be^{-\beta\theta}$.
+
+            \paragraph{}
+            For the opposite case $k^2<h^2$, the negative sign gets cancelled out and we get
+            \begin{equation}
+                \dv[2]{u}{\theta}+\beta^2 u=0.
+            \end{equation}
+            This has the general solution $u=A\cos(\beta\theta)+B\sin(\beta\theta)$.
+
+            % TODO: complete this example.
+        \end{example}
 
     \section{Torque}
         \paragraph{}

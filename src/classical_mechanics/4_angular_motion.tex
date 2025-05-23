@@ -388,4 +388,39 @@
             How fast would the mass haves to be projected to get to the top of the loop?
         \end{example}
 
+    \section{Rigid Body Rotation}
+        \paragraph{}
+        % TODO: introduce moment of inertia for a single particle first
+        A rigid body is a system of particles which are fixed together such that they move together, no matter the forces applied.
+        We have seen in previous chapters that it is possible to treat rigid bodies as point masses when considering linear motion.
+        However, when considering rotational effects as well, we need to consider the macroscopic extent of an object.
+        Consider a rigid body in motion and look at the total kinetic energy, which is given by the sum of kinetic energy of each constituent particle:
+        \begin{equation}
+            K=\sum_i\frac{1}{2}m_i\vec{v}_i\cdot\vec{v}_i.
+        \end{equation}
+        We can split the velocity of each particle into the sum of velocity around the centre of rotation and velocity along the line of motion.
+        \begin{align}
+            K&=\sum_i\frac{1}{2}m_i(\vec{v}_{i,\text{rot}}+\vec{v}_{i,\text{lin}})^2\\
+            &=\sum_i\frac{1}{2}m_i(v_{i,\text{rot}}^2+v_{i,\text{lin}}^2+2\vec{v}_{i,\text{rot}}\cdot\vec{v}_{i,\text{lin}})\\
+            &=\underbrace{\sum_i\frac{1}{2}m_iv_{i,\text{rot}}^2}_{K_\text{rotational}}+\underbrace{\sum_i\frac{1}{2}m_iv_{i,\text{lin}}^2}_{K_\text{linear}}.
+        \end{align}
+        The cross-term in the square cancels out (why?).
+        % TODO: explain this fully
+        % TODO: include a diagram of this
+        This rotational kinetic energy can be written in terms of the angular velocity $\omega$ since it is the same for each particle in a rigid body.
+        \begin{align}
+            K_\text{rot}&=\sum_i\frac{1}{2}m_iv_{i,\text{rot}}^2=\sum_i\frac{1}{2}m_i(r_i\omega)^2\\
+            &=\frac{1}{2}\omega^2\sum_i m_ir_i^2\\
+            &=\frac{1}{2}I\omega^2.
+        \end{align}
+        $I$ is called the \textbf{moment of inertia}, and it is kind of an angular equivalent of mass.
+        Notice how it is calculated in a similar way to the centre of mass except with the square of $r$.
+        Also notice how in the formula for $K_\text{rot}$, $I$ and $\omega$ play the role of $m$ and $v$ respectively, which shows how they are analogous to the linear quantities.
+        However $I$, just like the centre of mass, depends on how the mass is distributed in an object.
+        For example, consider a solid disc and a hoop of the same mass.
+        % TODO: include a diagram for this
+        From the formula for $I$, we can see that since all of the mass in the hoop is concentrated further out, the moment of inertia will be larger than the disc.
+        This means that for the same angular velocity, the rotational kinetic energy of the hoop will be larger than the disc.
+        $I$ also depends on the axis of rotation.
+
 \end{document}
