@@ -201,19 +201,150 @@
         % TODO: include a proper discussion of pivot points and what torque does
         In terms of vectors, this is given by the cross product
         \begin{equation}
-            \vec{\tau}=\vec{r}\times\vec{F}.
+            \vec{N}=\vec{r}\times\vec{F}.
         \end{equation}
-        The magnitude of $\vec{\tau}$ is given by
+        The magnitude of $\vec{N}$ is given by
         \begin{align}
-            \tau&=\abs{\vec{r}}\abs{\vec{F}}\sin\theta\\
+            N&=\abs{\vec{r}}\abs{\vec{F}}\sin\theta\\
             &=rF_\text{tan}.
         \end{align}
         % TODO: include diagram for this
         This formula tells us that for a fixed radius, the torque has maximum magnitude when $\theta=\pm\frac{\pi}{2}$ i.e. the force acts \textit{perpendicular} to the radius.
         It also tells us that if the force acts along the same line as the radius ($\theta=0$ or $\theta=\pi$), then the torque is equal to 0.
-        We can also see from the formula that the magnitude of torque depends on the radius.
-        For the same force, if it is applied further away from the centre, the torque will be greater.
-    
+        Since torque is defined as a moment like angular momentum, its value is relative to an arbitrary reference point.
+        Changing the reference point will change the value of the torque.
+        For a fixed reference point, if the same force is applied further away from the centre, the torque will be greater.
+        
+        \paragraph{}
+        Let's look at how changing the reference point changes the angular momentum and the torque.
+        Consider the following diagram.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=5]
+                \draw[<->] (0,1) |- (1,0);
+                \node[above] at (0,1) {$y$};
+                \node[right] at (1,0) {$x$};
+
+                \draw[->,thick] (0,0) -- (0.2,0.5);
+                \fill (0.2,0.5) circle [radius=0.01];
+                \node[above] at (0.1,0.3) {$\vec{r}$};
+                \draw[<->,very thick] (0.3,0.6) -- (0.2,0.5) -- (0.4,0.4);
+                \node[above] at (0.3,0.6) {$\vec{p}$};
+                \node[right] at (0.4,0.4) {$\vec{F}$};
+
+                \draw[->,thick] (0,0) -- (0.8,0.6);
+                \fill (0.8,0.6) circle [radius=0.01];
+                \node[above] at (0.8,0.6) {$\vec{A}$};
+                
+                \draw[->,thick] (0.8,0.6) -- (0.2,0.5);
+                \node[above] at (0.5,0.55) {$\vec{d}$};
+            \end{tikzpicture}
+        \end{figure}
+        The angular momentum and torque relative to the origin are $\vec{L}=\vec{r}\times\vec{p}$ and $\vec{N}=\vec{r}\times\vec{F}$ like before, but what are the angular momentum and torque relative to the point $\vec{A}$?
+        The radius vector or lever arm is now the vector $\vec{d}$ between the points $\vec{A}$ and $\vec{r}$, i.e.
+        \begin{align}
+            \vec{L}_{\vec{A}}&=\vec{d}\times\vec{p}\\
+            &=(\vec{r}-\vec{A})\times\vec{p}\\
+            \vec{N}_{\vec{A}}&=\vec{d}\times\vec{F}\\
+            &=(\vec{r}-\vec{A})\times\vec{F}.
+        \end{align}
+        \begin{example}
+            Consider a \qty{2}{\kilogram} particle at $y=\qty{3}{\meter}$ moving to the right with velocity $\vec{v}=\qty{5}{\meter\per\second}\ihat$.
+            What is its angular momentum relative to the origin and relative to the point $\vec{A}=\qty{3}{\meter}\jhat$.
+            \begin{figure}[H]
+                \centering
+                \begin{tikzpicture}[scale=3]
+                    \draw[<->] (0,1) |- (1,0);
+                    \node[above] at (0,1) {$y$};
+                    \node[right] at (1,0) {$x$};
+
+                    \fill (0,0.8) circle [radius=0.01];
+                    \node[above left] at (0,0.8) {$\vec{A}$};
+
+                    \fill (0.8,0.8) circle [radius=0.01];
+                    \draw[->,very thick] (0.7,0.85) -- (0.9,0.85);
+                    \node[above] at (0.8,0.85) {$\vec{v}$};
+
+                    \draw[->,thick] (0,0.8) -- (0.8,0.8);
+                    \node[above] at (0.4,0.8) {$\vec{d}$};
+                    \draw[->,thick] (0,0) -- (0.8,0.8);
+                    \node[above] at (0.4,0.4) {$\vec{r}$};
+                \end{tikzpicture}
+            \end{figure}
+            The position vector is $\vec{r}=x\ihat+\qty{3}{\meter}\jhat$ and the radius vector relative to $\vec{A}$ is $\vec{d}=x\ihat$.
+            The momentum vector is $\vec{p}=mv_x\ihat=\qty{10}{\kilogram\meter\per\second}$, so the angular momentum relative to the origin is
+            \begin{align}
+                \vec{L}&=\vec{r}\times\vec{p}=\begin{vmatrix}
+                    \ihat & \jhat & \khat \\
+                    x & 3 & 0 \\
+                    10 & 0 & 0
+                \end{vmatrix}\\
+                &=-\qty{30}{\kilogram\meter\squared\per\second}\khat,
+            \end{align}
+            at the angular momentum relative to $\vec{A}$ is
+            \begin{align}
+                \vec{L}_{\vec{A}}&=\vec{d}\times\vec{p}=\begin{vmatrix}
+                    \ihat & \jhat & \khat \\
+                    x & 0 & 0 \\
+                    10 & 0 & 0
+                \end{vmatrix}\\
+                &=0.
+            \end{align}
+            This makes sense because relative to $\vec{A}$ the motion is radial so there is no lever arm.
+        \end{example}
+        \begin{example}
+            Let's now look at a familiar example, uniform circular motion.
+            First, what is the angular momentum relative to the origin for a particle travelling with angular speed $\omega$?
+
+            \paragraph{}
+            Working in polar coordinates, the radius vector is $\vec{r}=r\uvec{r}$ and the velocity vector is $\vec{v}=r\omega\uvec{\theta}$.
+            Then the angular momentum is $\vec{L}=r\uvec{r}\times mr\omega\uvec{\theta}=mr^2\omega\khat$.
+            This is a constant, which we know to be the case since the centripetal force is a central force.
+
+            \paragraph{}
+            Now, suppose the particle is moving around a circle at $y=h$.
+            What is the angular momentum relative to the origin?
+            % TODO: include diagram for this
+
+            \paragraph{}
+            The position vector is now given by $\vec{r}=r\uvec{r}+h\khat$, so the angular momentum becomes
+            \begin{align}
+                \vec{L}&=m\begin{vmatrix}
+                    \uvec{r} & \uvec{\theta} & \khat \\
+                    r & 0 & h \\
+                    0 & r\omega & 0
+                \end{vmatrix}\\
+                &=-mhr\omega\uvec{r}+mr^2\omega\khat.
+            \end{align}
+            The unit vector $\uvec{r}$ changes over time, so $\vec{L}$ is not constant (its magnitude is constant but its direction changes).
+            This is because the centripetal force is no longer central relative to the origin.
+        \end{example}
+
+        \paragraph{}
+        Torque is measured in $\unit{\newton\meter}$.
+        This is dimensionally equivalent to Joules, but this does not mean that torque is a kind of energy.
+        Energy is a scalar quantity, whereas torque is a vector, so they are really different things.
+
+        \paragraph{}
+        In linear dynamics, we have Newton's second law which states $\vec{F}=\dot{\vec{p}}$.
+        We will now show that there is a rotational equivalent of Newton II that relates torque to angular momentum.
+        Using the product rule to differentiate $\vec{L}$, we find
+        \begin{align}
+            \dv{\vec{L}}{t}&=\dv{}{t}(\vec{r}\times\vec{p})\\
+            &=(\dot{\vec{r}}\times\vec{p})+(\vec{r}\times\dot{\vec{p}})\\
+            &=\left(\frac{1}{m}\vec{p}\times\vec{p}\right)+(\vec{r}\times\vec{F})\\
+            &=\vec{r}\times\vec{F}=\vec{N}.
+        \end{align}
+        This is the same calculation we did earlier for central forces.
+        We now have a shortcut to prove that angular momentum is conserved under the influence of a central force.
+        % TODO: add equation references
+        Since central forces are always parallel to the radius vector, the torque is zero.
+        \begin{equation}
+            \vec{N}=\vec{r}\times F(r)\uvec{r}=0.
+        \end{equation}
+        Then using the angular equivalent of Newton II, $\dot{\vec{L}}=\vec{N}=0$.
+        So central forces exert no torque and therefore angular momentum is conserved.
+
         \paragraph{}
         Using Newton's second law on the equation above, we can write the equation for torque above as
         \begin{equation}
@@ -230,7 +361,6 @@
             To do this, we have to analyse the forces acting on the blocks and also the torques acting on the pulley.
             % TODO: complete this example
         \end{example}
-        % TODO: discuss how torque depends on coordinate system
 
     \section{Static Equilibrium}
         \paragraph{}
