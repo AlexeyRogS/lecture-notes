@@ -355,6 +355,141 @@
         This implies that the gradient is always negative so the force is positive, indicating a repulsive force.
         % TODO: include diagram for this too
 
+    \section{Energy in a System of Multiple Particles}
+        \paragraph{}
+        Let's look at motion relative to a centre of mass.
+        Consider a macroscopic body composed of many particles with a centre of mass at $\vec{r}_\text{COM}$.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=5]
+                \draw[<->] (0,1) |- (1,0);
+                \node[above] at (0,1) {$y$};
+                \node[below] at (1,0) {$x$};
+
+                % TODO make this into a blob
+                \filldraw[fill=black!10] (0.7,0.7) circle [radius=0.5];
+                \fill (0.7,0.7) circle [radius=0.01];
+                \draw[->,very thick] (0,0) -- (0.7,0.7);
+                \node[above right] at (0.7,0.7) {COM};
+                \node[below right] at (0.4,0.4) {$\vec{r}_\text{COM}$};
+
+                \fill (0.5,0.8) circle [radius=0.005];
+                \draw[->,thick] (0,0) -- (0.5,0.8);
+                \node[above left] at (0.5,0.8) {$i$};
+                \node[below right] at (0.3,0.48) {$\vec{r}_i$};
+                \draw[->,thick] (0.7,0.7) -- (0.5,0.8);
+                \node[above] at (0.6,0.75) {$\vec{r}_i^\prime$};
+            \end{tikzpicture}
+        \end{figure}
+        We can label the position of particle $i$ inside the body as $\vec{r}_i$, and its position relative to the centre of mass at $\vec{r}_i^\prime$.
+        Then
+        \begin{equation}
+            \vec{r}_i=\vec{r}_\text{COM}+\vec{r}_i^\prime.
+        \end{equation}
+        If we differentiate this equation, we can find the velocity of particle $i$:
+        \begin{align}
+            \vec{v}_i=\dot{\vec{r}}_i&=\dot{\vec{r}}_\text{COM}+\dot{\vec{r}}_i^\prime\\
+            &=\vec{v}_\text{COM}+\vec{v}_i^\prime,
+        \end{align}
+        where $\vec{v}_i^\prime$ is the velocity of particle $i$ relative to the centre of mass.
+
+        \paragraph{}
+        Let's look at the total kinetic energy of the system.
+        It is the sum of the kinetic energy of all the constituent particles.
+        \begin{align}
+            K&=\frac{1}{2}\sum_{i=1}^N m_iv_i^2\\
+            &=\frac{1}{2}\sum_{i=1}^N m_i(\vec{v}_\text{COM}+\vec{v}_i^\prime)^2\\
+            &=\frac{1}{2}\sum_{i=1}^N m_i v_\text{COM}^2+\frac{1}{2}\sum_{i=1}^N m_i v_i^{\prime 2}+\frac{1}{2}\sum_{i=1}^N m_i(2\vec{v}_\text{COM}\cdot\vec{v}_i^\prime).
+        \end{align}
+        In the first term, $v_\text{COM}^2$ is constant and can be pulled out of sum, so the sum is simply the total mass $M$.
+        The second term is the total kinetic energy in the centre of mass frame of reference, we call this the kinetic energy \textit{in} the centre of mass.
+        Looking at the last term, we can once again take $\vec{v}_\text{COM}$ out of the sum, so the term becomes $\vec{v}_\text{COM}\cdot\sum_{i=1}^N m_i\vec{v}_i^\prime$.
+        The sum is the total momentum in the centre of mass frame, which is zero.
+        This can be justified by noting that in the centre of mass frame we have $\sum_{i=1}^N m_i\vec{r}_i^\prime=0$, so
+        \begin{equation}
+            \dv{}{t}\left(\sum_{i=1}^N m_i\vec{r}_i^\prime\right)=\sum_{i=1}^N m_i\vec{v}_i^\prime=0.
+        \end{equation}
+        Therefore the total expression for the kinetic energy of the system is
+        \begin{equation}
+            K=\frac{1}{2}M v_\text{COM}^2+\frac{1}{2}\sum_{i=1}^N m_i v_i^{\prime 2}.
+        \end{equation}
+        This is the kinetic energy associated with the total mass moving with speed $v_\text{COM}$ and the \textit{internal} kinetic energy from motion of particles relative to the centre of mass (the kinetic energy in the centre of mass).
+        % TODO: prove that changes in kinetic energy are independent from choice of reference frame
+        Depending on the problem, we can ignore the second term as it may not be relevant.
+        For example, if we are examining the acceleration of a train, for the most part we don't care about the kinetic energy of objects within the vehicle.
+        However, if we are looking at something that is rotating, like a flywheel for instance, we do care about the second term because there is a lot of motion relative to the centre of mass.
+
+        \paragraph{}
+        Consider a system of two particles.
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=5]
+                \draw[<->] (0,1) |- (1,0);
+                \draw[->] (0,0) -- (0.8,0.4);
+                \node[right] at (1,0) {$x$};
+                \node[above right] at (0.8,0.4) {$y$};
+                \node[above] at (0,1) {$z$};
+
+                \fill (0.2,0.8) circle [radius=0.02];
+                \node[above right] at (0.2,0.8) {$m_1$};
+                \fill (0.6,0.5) circle [radius=0.02];
+                \node[above right] at (0.6,0.5) {$m_2$};
+                \fill (0.36,0.68) circle [radius=0.01];
+                \draw[->,thick] (0,0) -- (0.36,0.68);
+                \node[right] at (0.216,0.408) {$\vec{r}_\text{COM}$};
+                \draw[->,thick] (0,0) -- (0.2,0.8);
+                \node[left] at (0.12,0.48) {$\vec{r}_1$};
+                \draw[->,thick] (0,0) -- (0.6,0.5);
+                \node[right] at (0.4,0.3) {$\vec{r}_2$};
+                \draw[->,thick] (0.36,0.68) -- (0.2,0.8);
+                \node[right] at (0.28,0.76) {$\vec{r}_1^\prime$};
+                \draw[->,thick] (0.36,0.68) -- (0.6,0.5);     
+                \node[right] at (0.43,0.66) {$\vec{r}_2^\prime$};
+            \end{tikzpicture}
+        \end{figure}
+        In the centre of mass frame we have that $\sum_{i=1}^N m_1\vec{r}_i=0$, which in this case implies that
+        \begin{equation}\label{eq:two-particle-momentum-relation}
+            m_1\vec{r}_1=-m_2\vec{r}_2.
+        \end{equation}
+        We can define a vector $\vec{r}$ that points from $m_1$ to $m_2$, given by either
+        \begin{gather}
+            \vec{r}=\vec{r}_2-\vec{r}_1,\\
+            \shortintertext{or equivalently,}
+            \vec{r}=\vec{r}_2^\prime-\vec{r}_1^\prime.
+        \end{gather}
+        Substituting these relations into equation~\ref{eq:two-particle-momentum-relation} above and rearranging, we get
+        \begin{equation}
+            \vec{r}_1^\prime=\frac{-m_2}{m_1+m_2}\vec{r},\quad\vec{r}_2^\prime=\frac{m_1}{m_1+m_2}\vec{r}.
+        \end{equation}
+
+        \paragraph{}
+        Now let's look at the kinetic energy.
+        In the centre of mass frame, it is
+        \begin{equation}
+            K^\prime=\frac{1}{2}m_1v_1^{\prime 2}+\frac{1}{2}m_2v_2^{\prime 2},
+        \end{equation}
+        were $\vec{v}_1^\prime=\dot{\vec{r}}_1^\prime$ and $\vec{v}_2^\prime=\dot{\vec{r}}_2^\prime$.
+        Using the relations for $\vec{r}_1^\prime$ and $\vec{r}_2^\prime$ above, we get
+        \begin{equation}
+            \vec{v}_1^\prime=\frac{-m_2}{m_1+m_2}\vec{v},\quad\vec{v}_2^\prime=\frac{m_1}{m_1+m_2}\vec{v},
+        \end{equation}
+        where $\vec{v}=\dot{\vec{r}}$ is the \textbf{relative velocity} between the two particles.
+        Therefore, the kinetic energy in the centre of mass frame becomes
+        \begin{align}
+            K^\prime&=\frac{1}{2}m_1\left(\frac{-m_2}{m_1+m_2}\vec{v}\right)^2+\frac{1}{2}m_2\left(\frac{m_1}{m_1+m_2}\vec{v}\right)^2\\
+            &=\frac{1}{2}\frac{m_1m_2^2+m_1^2m_2}{(m_1+m_2)^2}v^2\\
+            &=\frac{1}{2}\frac{m_1m_2(m_1+m_2)}{(m_1+m_2)^2}v^2\\
+            &=\frac{1}{2}\mu v^2,
+        \end{align}
+        where we have defined the \textbf{reduced mass} $\mu$ as
+        \begin{equation}
+            \mu=\frac{m_1m_2}{m_1+m_2}.
+        \end{equation}
+        In a general inertial reference frame, the total energy (under the action of a conservative force) is given by
+        \begin{equation}
+            E=\frac{1}{2}Mv_\text{COM}^2+\frac{1}{2}\mu v^2+V(\vec{r}).
+        \end{equation}
+
     \section{Non-conservative Forces}
         \paragraph{}
         Non-conservative forces are the opposite of conservative forces, that is they don't conserve energy.
