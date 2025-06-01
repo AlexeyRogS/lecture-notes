@@ -201,11 +201,11 @@
         % TODO: include a proper discussion of pivot points and what torque does
         In terms of vectors, this is given by the cross product
         \begin{equation}
-            \vec{N}=\vec{r}\times\vec{F}.
+            \vec{\tau}=\vec{r}\times\vec{F}.
         \end{equation}
-        The magnitude of $\vec{N}$ is given by
+        The magnitude of $\vec{\tau}$ is given by
         \begin{align}
-            N&=\abs{\vec{r}}\abs{\vec{F}}\sin\theta\\
+            \tau&=\abs{\vec{r}}\abs{\vec{F}}\sin\theta\\
             &=rF_\text{tan}.
         \end{align}
         % TODO: include diagram for this
@@ -240,12 +240,12 @@
                 \node[above] at (0.5,0.55) {$\vec{d}$};
             \end{tikzpicture}
         \end{figure}
-        The angular momentum and torque relative to the origin are $\vec{L}=\vec{r}\times\vec{p}$ and $\vec{N}=\vec{r}\times\vec{F}$ like before, but what are the angular momentum and torque relative to the point $\vec{A}$?
+        The angular momentum and torque relative to the origin are $\vec{L}=\vec{r}\times\vec{p}$ and $\vec{\tau}=\vec{r}\times\vec{F}$ like before, but what are the angular momentum and torque relative to the point $\vec{A}$?
         The radius vector or lever arm is now the vector $\vec{d}$ between the points $\vec{A}$ and $\vec{r}$, i.e.
         \begin{align}
             \vec{L}_{\vec{A}}&=\vec{d}\times\vec{p}\\
             &=(\vec{r}-\vec{A})\times\vec{p}\\
-            \vec{N}_{\vec{A}}&=\vec{d}\times\vec{F}\\
+            \vec{\tau}_{\vec{A}}&=\vec{d}\times\vec{F}\\
             &=(\vec{r}-\vec{A})\times\vec{F}.
         \end{align}
         \begin{example}
@@ -333,26 +333,98 @@
             \dv{\vec{L}}{t}&=\dv{}{t}(\vec{r}\times\vec{p})\\
             &=(\dot{\vec{r}}\times\vec{p})+(\vec{r}\times\dot{\vec{p}})\\
             &=\left(\frac{1}{m}\vec{p}\times\vec{p}\right)+(\vec{r}\times\vec{F})\\
-            &=\vec{r}\times\vec{F}=\vec{N}.
+            &=\vec{r}\times\vec{F}=\vec{\tau}.
         \end{align}
         This is the same calculation we did earlier for central forces.
         We now have a shortcut to prove that angular momentum is conserved under the influence of a central force.
         % TODO: add equation references
         Since central forces are always parallel to the radius vector, the torque is zero.
         \begin{equation}
-            \vec{N}=\vec{r}\times F(r)\uvec{r}=0.
+            \vec{\tau}=\vec{r}\times F(r)\uvec{r}=0.
         \end{equation}
-        Then using the angular equivalent of Newton II, $\dot{\vec{L}}=\vec{N}=0$.
+        Then using the angular equivalent of Newton II, $\dot{\vec{L}}=\vec{\tau}=0$.
         So central forces exert no torque and therefore angular momentum is conserved.
 
+    \section{Torque and Angular Momentum for Systems of Particles}
         \paragraph{}
-        Using Newton's second law on the equation above, we can write the equation for torque above as
+        In a system of many particles, each particle with a position $\vec{r}_i$ and momentum $\vec{p}_i$, the total angular momentum is the sum of each particle's angular momentum.
         \begin{equation}
-            \tau=\sum_i\tau_i=\sum_im_ir_ia_i=\sum_im_ir_i^2\alpha=I\alpha.
+            \vec{L}=\sum_i\vec{L}_i=\sum_i\vec{r}_i\times\vec{p}_i.
         \end{equation}
-        % TODO: include vector version of this
-        This works because for a rigid body, the angular acceleration is the same for all parts of the body, just like angular velocity.
-        We can see from this we have an perfect angular analogue of Newton's second law for torques.
+        If the particles are subject to some torques, their angular momenta will change.
+        The total angular momentum changes as
+        \begin{equation}
+            \dv{\vec{L}}{t}=\sum_i\dv{\vec{L}_i}{t}=\sum_i\dv{}{t}(\vec{r}_i\times\vec{p}_i)=\sum_i\vec{r}_i\times\vec{F}_i=\sum_i\vec{\tau}_i.
+        \end{equation}
+        Let's look at the individual torques $\vec{\tau}_i$ more closely.
+        The forces on each particle can be split into internal and external forces, $\vec{F}_i=\vec{F}_{i,\text{int}}+\vec{F}_{i,\text{ext}}$.
+        Internal forces are those from other particles, so $\vec{F}_{i,\text{int}}$ can be written as
+        \begin{equation}
+            \vec{F}_{i,\text{int}}=\sum_{j\neq i}\vec{F}_{j\to i}.
+        \end{equation}
+        So the torques become
+        \begin{align}
+            \sum_i\vec{\tau}_i&=\sum_i\vec{r}_i\times\left(\sum_{j\neq i}\vec{F}_{j\to i}+\vec{F}_{i,\text{ext}}\right)\\
+            &=\sum_i\sum_{j\neq i}\vec{r}_i\times\vec{F}_{j\to i}+\sum_i\vec{r}_i\times\vec{F}_{i,\text{ext}}.
+        \end{align}
+        Looking at the first term more closely, we can use a similar argument to back in chapter~\ref{chap:2} to show that it is zero.
+        % TODO: reference specific equation
+        The sum will pairs of terms of the form $\vec{r}_i\times\vec{F}_{j\to i}+\vec{r}_j\times\vec{F}_{i\to j}$.
+        By Newton III, these two forces are equal and opposite, $\vec{F}_{j\to i}=-\vec{F}_{i\to j}$, so the pair of terms becomes
+        \begin{align}
+            \vec{r}_i\times\vec{F}_{j\to i}+\vec{r}_j\times\vec{F}_{i\to j}&=\vec{r}_i\times\vec{F}_{j\to i}-\vec{r}_j\times\vec{F}_{j\to i}\\
+            &=(\vec{r}_i-\vec{r}_j)\times\vec{F}_{j\to i}.
+        \end{align}
+        The vector $\vec{r}_i-\vec{r}_j$ is a vector which points from particle $j$ to particle $i$, which is parallel to the force $\vec{F}_{j\to i}$, therefore the whole sum is zero.
+        Therefore the contribution to the torques comes \textit{only} from the external forces.
+        Internal forces do \textit{not} contribute to the change in angular momentum.
+        \begin{equation}
+            \dot{\vec{L}}=\sum_i\vec{\tau}_i=\sum_i\vec{r}_i\times\vec{F}_{i,\text{ext}}.
+        \end{equation}
+
+        \paragraph{}
+        Is $\dot{\vec{L}}=\tau_\text{ext}$?
+        Only in two situations: when we consider the torque about the origin of an inertial frame of reference, and when we consider the torque about the centre of mass (even if the centre of mass frame is \textit{not} inertial).
+        % TODO: prove this
+        This is very important because it allows us to use the angular equivalent of Newton II in many situations.
+        For example, if we are analysing a rigid body rolling down a hill, we can measure the angular momentum and torque from the centre of mass then we can still use $\dot{\vec{L}}=\vec{\tau}$.
+
+    \section{Dynamics of Rigid Bodies}
+        \paragraph{}
+        As stated in chapter~\ref{chap:4}, rigid bodies are distinguished by the fact that all mass elements have the same angular velocity $\omega$.
+        % TODO: insert figure, rigid body rotation
+        Each mass element is therefore moving in circles with speed $v_i=R_i\omega$, where $R_i$ is the distance from the axis of rotation.
+        The smart choice for a coordinate system would be to align the $z$-axis with the axis of rotation and use cylindrical coordinates $(R,\phi,z)$, but let's look at the angular momentum in cartesian coordinates.
+        The velocity of a mass element (assuming that the rigid body has no linear motion) is $\vec{v}_i=v_{x,i}\ihat+v_{y,i}\jhat=-\omega y_i\ihat+\omega x_i\jhat$.
+        Then the total angular momentum is
+        \begin{align}
+            \vec{L}=\sum_i\vec{L}_i&=\sum_i\vec{r}_i\times m_i\vec{v_i}\\
+            &=\sum_i m_i\begin{vmatrix}
+                \ihat & \jhat & \khat \\
+                x_i & y_i & z_i \\
+                -\omega y_i & \omega x_i & 0
+            \end{vmatrix}\\
+            &=\sum_i m_ix_iz_i\omega\ihat+\sum_i m_iy_iz_i\omega\jhat+\sum_i m_i(x_i^2+y_i^2)\omega\khat.
+        \end{align}
+        The last term can be simplified to $\sum_i m_iR_i^2\omega\khat=I_z\omega\khat$ where $I_z$ is the moment of inertia about the $z$ axis.
+        The first two terms are the \textbf{products of inertia} multiplied by $\omega$.
+        % TODO: do this in cylindrical coordinates
+        In the case where the products of inertia are zero, we have
+        \begin{equation}
+            \vec{L}=I_z\omega\khat,
+        \end{equation}
+        and the object is rotating around a \textbf{principle axis}.
+
+        \paragraph{}
+        Assuming this angular momentum is measured from the centre of mass of the rigid body, we can use $\vec{\tau}=\dot{\vec{L}}$ to get
+        % TODO: is it valid if angular momentum is measured from the origin
+        \begin{equation}
+            \vec{\tau}=\dot{\vec{L}}=I\dot{\omega}\khat=I\alpha\khat.
+        \end{equation}
+        This is an angular analogue of Newton II where moment of inertia takes the place of mass.
+        This derivation has also implicitly assumed that the torque is being applied around the axis of rotation and hence the direction of $\vec{L}$ does not change.
+        A torque in another direction would change the direction of angular momentum, which leads to \textit{precession}
+        In the case of constant torque around the axis of rotation, the equation above implies that $\alpha$ is constant, which means we can use the angular SUVAT equations from chapter~\ref{chap:4} to describe the motion. 
         \begin{example}
             Consider two connected masses on a massless pulley with $m_1>m_2$.
             Suppose the system starts from rest and assume the string is massless, inextensible, and lies vertically.
@@ -361,6 +433,8 @@
             To do this, we have to analyse the forces acting on the blocks and also the torques acting on the pulley.
             % TODO: complete this example
         \end{example}
+
+        % TODO: discuss angular equivalent of impulse momentum theorem
 
     \section{Static Equilibrium}
         \paragraph{}
