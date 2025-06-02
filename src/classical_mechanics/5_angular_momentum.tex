@@ -436,6 +436,131 @@
 
         % TODO: discuss angular equivalent of impulse momentum theorem
 
+    \section{Rolling Motion}
+        \paragraph{}
+        One of the most familiar examples of torques in everyday life are rolling objects.
+        Rolling motion is a superposition of a rotation about the centre of mass and a translation.
+        In this section we will study \textbf{rolling without slipping}, which is the easiest type of rolling motion to analyse.
+        We will also only look at circular rigid objects for now (wheels, balls, cylinders).
+        \begin{figure}[H]
+            \centering
+            \begin{tikzpicture}[scale=1.5]
+                \draw (-3,0) -- (3,0);
+                \draw (0,1) circle [radius=1];
+                \begin{scope}[shift={(0,1)}]
+                    \draw[->,dashed] (0,0) -- (120:1);
+                    \node[above right] at (120:0.5) {$R$};    
+                \end{scope}
+                
+                \draw[->,thick] (0,1) -- (0.5,1);
+                \node[above] at (0.25,1) {$\vec{v}_\text{COM}$};
+                \draw[->,thick] (0,0) -- (-0.5,0);
+                \node[below] at (-0.25,0) {$\vec{v}_\text{rim}$};
+            \end{tikzpicture}
+        \end{figure}
+        In this case, we have that the contact point with the ground has \textit{zero} instantaneous velocity.
+        For a circular rolling object, we can write
+        \begin{equation}
+            v_\text{COM}+v_\text{rim}=v_\text{COM}-R\omega=0.
+        \end{equation}
+        This implies that
+        \begin{equation}
+            v_\text{COM}=R\omega,
+        \end{equation}
+        which makes sense when we realise that for a circle that is rolling without slipping, its total distance travelled is $s=R\theta$ so $v_\text{COM}=\dot{s}=R\omega$.
+
+        \paragraph{}
+        For a disc (or a cylinder), its moment of inertia while rolling is $\frac{1}{2}mR^2$.
+        % TODO: reference last chapter
+        Then its total kinetic energy is
+        \begin{align}
+            K&=\frac{1}{2}mv_\text{COM}^2+\frac{1}{2}I\omega^2\\
+            &=\frac{1}{2}mv_\text{COM}^2+\frac{1}{4}(mR^2)\left(\frac{v_\text{COM}}{R}\right)^2\\
+            &=\frac{1}{2}mv_\text{COM}^2+\frac{1}{4}mv_\text{COM}^2=\frac{3}{4}mv_\text{COM}^2.
+        \end{align}
+        So the rotational energy is half of its translational energy, or to put it another way a third of its kinetic energy is stored in the rotational motion.
+
+        \paragraph{}
+        Let's look at the forces and torques involved in rolling.
+        On a flat surface, if we have $a_\text{COM}=0$ then $\alpha=a/R=0$.
+        This implies that the torque about the centre of mass is zero which means no force is acting on the rim of the object.
+        All this is to say that there is no tendency to slide.
+        If $a_\text{COM}\neq 0$, then there is a torque about the centre of mass and therefore there is a force.
+        This must be a friction force, specifically static friction in the case of rolling without slipping.
+        Thus we cannot have rolling without friction!
+
+        \paragraph{}
+        Which way does the static friction point?
+        We are used to having static friction point to the left if the object is moving to the right, but there is a subtle gotcha here.
+        In the case of rolling motion, the contact point wants to slip to the left, which means the static friction force must point to the right.
+        On an incline, the weight does not exert a torque because it acts on the centre of mass, and the normal force does not exert a torque because it acts parallel to the radius vector.
+        The only force which exerts a torque is the static friction, so $\tau_{f_s}=I\alpha$.
+        \begin{example}
+            A disc is rolling down an inclined plane.
+            Find an expression for its acceleration.
+            \begin{figure}[H]
+                \centering
+                \begin{tikzpicture}[scale=2]
+                    \draw (0,0) -- (3,0) -- (0,1) -- cycle;
+                    \draw (0.5,0.94) circle [radius=0.1];
+                    \draw (2.5,0) arc [radius=0.5, start angle=180, end angle=161.57];
+                    \node[above left] at (2.5,0) {$\theta$};
+
+                    \draw[->] (0.42,1.1) arc [radius=0.12, start angle=135, end angle=30];
+                    \draw[->,thick,rotate=-18.43,shift={(0.5,1.2)}] (0,0) -- (1,0);
+                    \node[above] at (1.3,0.9) {$\vec{a}_\text{COM}$};
+
+                    \begin{scope}[shift={(4,0.6)},scale=0.6]
+                        \fill (0,0) circle [radius=0.05];
+                        \draw[->,thick] (0,0) -- (0,-1);
+                        \node[below] at (0,-1) {$\vec{W}$};
+                        \begin{scope}[rotate=-18.43]
+                            \draw[->,thick] (0,0) -- (-1,0);
+                            \node[left] at (-1,0) {$\vec{f}_s$};
+                            \draw[->,thick] (0,0) -- (0,1);
+                            \node[above] at (0,1) {$\vec{N}$};
+                            \draw[dashed] (0,0) -- (1,0);
+
+                            \begin{scope}[shift={(0.5,0.5)},scale=0.5]
+                                \draw[<->] (0,1) |- (1,0);
+                                \node[above] at (0,1) {$y$};
+                                \node[right] at (1,0) {$x$};
+                            \end{scope}
+                        \end{scope}
+                    \end{scope}
+                \end{tikzpicture}
+            \end{figure}
+            
+            \paragraph{}
+            Looking at the forces in the $x$ direction, we get
+            \begin{align}
+                \sum F_x=m a_\text{COM}&=\abs{\vec{W}}\sin\theta-\abs{\vec{f}_s}\\
+                &=mg\sin\theta-f_s.
+            \end{align}
+            Now we need to find an expression for the magnitude of static friction $f_s$, which we can do by analysing the torques.
+            Since the only force which exerts a torque is static friction, we have $\tau_{f_s}=Rf_s=I\alpha$.
+            So using the moment of inertia for a disc $\frac{1}{2}mR^2$ and substituting $\alpha=a_\text{COM}/R$, we get
+            \begin{equation}
+                f_s=\frac{I a_\text{COM}}{R^2}=\frac{1}{2}ma_\text{COM}.
+            \end{equation}
+            Substituting this into the equation above, we get
+            \begin{align}
+                ma_\text{COM}&=mg\sin\theta-\frac{1}{2}ma_\text{COM}\\
+                &\implies a_\text{COM}=\frac{2}{3}g\sin\theta.
+            \end{align}
+            This result is somewhat interesting, the acceleration does not depend on the mass or radius of the disc, only the angle of the plane.
+            % TODO: compare to a block sliding down an incline plane
+            However, the acceleration does depend on the distribution of mass within the rolling object, i.e. the moment of inertia.
+            If we had left the moment of inertia unspecified, we would get
+            \begin{equation}
+                a_\text{COM}=\frac{mg\sin\theta}{\frac{I}{R^2}+m}.
+            \end{equation}
+            This is valid for all circular rolling objects.
+            As we have seen, the moment of inertia for most circular objects is proportional to $mR^2$, leading to a simplification with a different constant multiplying $g\sin\theta$.
+        \end{example}
+        % TODO: add example of sweet spot to hit a cue ball for perfect rolling
+        % TODO: rolling cylinder along a flat plane and falling yo-yo as exersises, answers are very similar
+
     \section{Static Equilibrium}
         \paragraph{}
         In the net force and the net torque on a rigid body are both 0, then it is in \textbf{static equilibrium}.
