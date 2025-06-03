@@ -53,6 +53,64 @@
             Consider a pendulum on the end of a string. What is the maximum speed that the pendulum attains as it swings?
             % TODO: write this
         \end{example}
+        \begin{example}[The Epitaph of Stevinus]
+            Consider a chain of uniform density draped over a trianglular block.
+            % TODO: add diagram for this
+            If the chain is free to move with no friction, will it fall to the left, right, or will it balance in place.
+
+            \paragraph{}
+            The answer is that the chain will not move.
+            We will prove this three different ways.
+            The first way by analysing the forces as we have learned in chapter~\ref{chap:1}, the second way using energy conservation, and the third way using a clever 16\ts{th} century thought experiment.
+
+            \paragraph{}
+            To prove that there is no movement using forces, we will look at the components of the weight parallel to the incline for the left and right halves of the chain separately and show that they are equal in magnitude --- therefore the total force must be zero.
+            First, note that if the total mass of the chain is $m$, then the magnitude of the weight force on the left side is $\frac{3}{7}mg$ and on the right it is $\frac{4}{7}mg$.
+            % TODO: add free body diagrams
+            On the left, the $x$-component of weight is $\frac{3}{7}mg\cos\theta$ and on the right it is $\frac{4}{7}mg\sin\theta$.
+            Using trigonometry, we have that
+            \begin{equation}
+                \cos\theta=\frac{4}{5},\quad\sin\theta=\frac{3}{5},
+            \end{equation}
+            and therefore
+            \begin{equation}
+                F_\text{left}-F_\text{right}=\frac{3}{7}mg(\frac{4}{5})-\frac{4}{7}mg(\frac{3}{5})=0.
+            \end{equation}
+
+            \paragraph{}
+            To use energy conservation, we will first restate the problem slightly.
+            Instead of a chain draped over the whole wedge, suppose that left and right sides of the chain are replaced with blocks of equivalent mass located at the centre of masses of each part.
+            The blocks are connected with a light inextensible string which runs over the top of the wedge via a frictionless pulley.
+            % TODO: include diagram for this
+            Now, we can calculate the total energy before the system starts moving, given by the sum of gravitational potential energy of each part (we set the zero point to be the bottom of the wedge):
+            \begin{align}
+                E_\text{before}=U_L+U_R&=\frac{3}{7}mgh_L+\frac{4}{7}mgh_R\\
+                &=\frac{3}{7}mg(\frac{3}{2}\cos\theta)+\frac{4}{7}mg(2\sin\theta)\\
+                &=\frac{18}{35}mg+\frac{24}{35}mg=\frac{6}{5}mg.
+            \end{align}
+            Suppose the system moves.
+            Then at a later instant the blocks will have a collective velocity $v$, the left block will have moved a distance $l$ along the incline, and the right block will have moved $-l$.
+            The total energy at this time is
+            \begin{align}
+                E_\text{after}=U_L^\prime+U_R^\prime+K&=\frac{3}{7}mgh_L^\prime+\frac{4}{7}mgh_R^\prime+\frac{1}{2}mv^2\\
+                &=\frac{3}{7}mg\left(\frac{3}{2}+l\right)\cos\theta+\frac{4}{7}mg(2-l)\sin\theta+\frac{1}{2}mv^2\\
+                &=\frac{18}{35}mg+\frac{12}{35}mgl+\frac{24}{35}mg-\frac{12}{35}mgl+\frac{1}{2}mv^2\\
+                &=\frac{6}{5}mg+\frac{1}{2}mv^2.
+            \end{align}
+            Since energy is conserved, we should have $E_\text{before}=E_\text{after}$, which implies that
+            \begin{equation}
+                \frac{1}{2}mv^2=0,\quad\implies v=0.
+            \end{equation}
+
+            \paragraph{}
+            Finally, we will prove this using a thought experiment by Flemish scientist Simon Stevin.
+            % TODO: include a diagram of this
+            Suppose we attach another length of chain to both ends such that it forms a closed loop, with the new section hanging freely below the wedge.
+            Since it hangs symmetrically, the forces on both sides (the tension at the lower vertices of the wedge) must be equal.
+            If the forces on the upper part of the wedge were unbalanced, the whole loop would begin to rotate around the wedge in perpetual motion.
+            This cannot happen, thus the forces on the upper part must be balanced.
+            This proof is known as the Epitaph of Stevinus.
+        \end{example}
 
     \section{Work}
         \paragraph{}
