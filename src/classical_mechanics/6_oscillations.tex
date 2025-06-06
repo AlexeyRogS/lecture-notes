@@ -1,112 +1,562 @@
 \documentclass[../classical_mechanics.tex]{subfiles}
 
 \begin{document}
-
     \section{Simple Harmonic Motion}
         \paragraph{}
-        Simple harmonic motion is defined as the motion determined by a force which is directly proportional to the displacement from some equilibrium position.
-        Consider a mass on a horizontal spring. This is a system which we have seen before, but we have not studied the full motion of the mass in detail.
-        The only force acting on the mass is the spring restoring force
-        % TODO: include diagram
+        Oscillations are periodic variations of a quantity about some equilibrium.
+        This could be an object moving back and forth, a voltage going up and down, or any other physical variable.
+        Let's look at a system we have seen before, a mass on a horizontal spring.
+        % TODO: include diagram for this
+        We are going to study the motion of the mass in much more detail than earlier.
+        The only force acting on the mass is the spring restoring force, which is given by Hooke's law:
         \begin{equation}
-            F = -kx = ma,
+            \vec{F}=-kx\ihat.
         \end{equation}
-        so by Newton II, we can write
-        \begin{equation}\label{eq-SHM-spring}
-            a = \frac{\mathrm{d}^2x}{\mathrm{d}t^2}=-\frac{k}{m}x.
+        By Newton II, we can write
+        \begin{equation}\label{eq:SHM-spring}
+            a_x=\dv[2]{x}{t}=-\frac{k}{m}x.
         \end{equation}
         The general solution to this differential equation is
         \begin{equation}
-            x(t)=A\cos(\omega t) + B\sin(\omega t),
+            x(t)=A_1\cos(\omega t)+A_2\sin(\omega t),
         \end{equation}
         where
         \begin{equation}
             \omega=\sqrt{\frac{k}{m}}.
         \end{equation}
-        This can be rewritten as
-        \begin{equation}
-            x(t) = A\cos(\omega t + \phi),
-        \end{equation}
-        where $\phi$ is the initial phase at $t=0$.
-        Notice that $A$ is the maximum amplitude of the mass. 
-        Working out the derivatives of $x(t)$, We see that
-        \begin{align}
-            &\frac{\mathrm{d}x(t)}{\mathrm{d}t} = v(t) = -A\omega\sin(\omega t + \phi)\\
-            &\frac{\mathrm{d}^2x(t)}{\mathrm{d}t^2} = a(t) = -A\omega^2\cos(\omega t + \phi) = -\omega^2x(t),
-        \end{align}
-        and so we have recovered the equation of motion.
-        % TODO: include graphs of position, velocity, acceleration and discussion of phase difference between them
 
         \paragraph{}
+        Systems where displacement is a sinusoidal function of time are said to exhibit \textbf{simple harmonic motion}.
+        This motion is characteristic of any system where the force is oppositely proportional to displacement.
+        We will see more examples of this later.
+
+        \paragraph{}
+        We can simplify the equation for $x(t)$ using a trigonometric addition formula.
+        If we let $A_1=x_m\cos\phi$, $A_2=x_m\sin\phi$, where $\phi$ is some angle.
+        Then we have
+        \begin{align}
+            x(t)&=x_m\cos\phi\cos(\omega t)+x_m\sin\phi\sin(\omega t)\\
+            &=x_m\cos(\omega t+\phi)\label{eq:SHM-displacement}.
+        \end{align}
+        We still have two constants $x_m$ and $\phi$ rather than $A_1$ and $A_2$ to specify the particular solution.
+        Since cosine has a maximum value of 1, $x_m$ must represent the maximum amplitude of the oscillation.
+        $\phi$ is the \textbf{initial phase} of the oscillation, i.e. the point on the cosine curve where the mass is at $t=0$.
+        Calculating the derivatives of $x(t)$, we find
+        \begin{align}
+            v(t)&=\dv{x}{t}=-x_m\omega\sin(\omega t+\phi)\label{eq:SHM-velocity}\\
+            a(t)&=\dv[2]{x}{t}=-x_m\omega^2\cos(\omega t+\phi)=-\omega^2x(t)\label{eq:SHM-acceleration}.
+        \end{align}
+        Thankfully we have recovered the equation of motion (\ref{eq-SHM-spring}) for the acceleration.
+        % TODO: include graphs of position, velocity, acceleration and discussion of phase difference between them
+        The two constants can be found using two initial conditions, usually $x(0)$ and $v(0)$.
+        For example, let's suppose $x(0)=0$ and $v(0)=v_0$, then we have
+        \begin{align}
+            x(0)=x_m\cos\phi=0\implies\phi=\pm\frac{\pi}{2}\\
+            v(0)=-x_m\omega\sin\phi=v_0\implies\phi<0,
+        \end{align}
+        so $x_m=\frac{v_0}{\omega}$, $\phi=\frac{\pi}{2}$.
+
+        \paragraph{}
+        $\omega$ has units of $\unit{\radian\per\second}$ (the same as angular velocity!), and we call it the \textbf{natural} or \textbf{resonant (angular) frequency}.
         % TODO: link to what has been covered earlier, should have been able to work out the period of oscillation by energy conservation previously
         Let's work out the period of oscillation.
         It should be equal to the time taken for the phase to change by $2\pi$.
-        Hence
         \begin{align}
-            \omega t_0 + \phi &= \omega(t_0 + T) + \phi\\
-            \implies \omega T &= 2\pi\\
-            T &= \frac{2\pi}{\omega}.
+            \omega t+\phi&=\omega(t+T)+\phi\\
+            \implies\omega T&=2\pi\\
+            T&=\frac{2\pi}{\omega}.
         \end{align}
-        Since $f=1/T$, the frequency of the oscillation is related to $\omega$, the \textbf{angular frequency}, by
+        Linear frequency $f$ is a more familiar unit, being measured in cycles per second or \unit{\hertz}.
+        It is related to the period by $f=1/T$, and therefore to angular frequency by
         \begin{equation}
-            \omega = 2\pi f.
+            \omega=2\pi f.
         \end{equation}
-        % TODO: note that this is the same definition as for angular velocity.
-
-        \paragraph{}
-        % TODO: move this to a new section? (energy in SHM?)
-        % TODO: make references for previous equations
-        Now consider the energy of the mass on the spring. From before, we know this is given by
-        \begin{align}
-            E &= K + U_s\\
-            &=\frac{1}{2}mv^2=\frac{1}{2}kx^2.
-        \end{align}
-        Since we now know that $x(t)=A\cos(\omega t+\phi)$ and $v(t)=-A\omega\sin(\omega t+\phi)$, we can show that
-        \begin{align}
-            E &=\frac{1}{2}m(-A\omega\sin(\omega t+\phi))^2+\frac{1}{2}k(A\cos(\omega t+\phi))^2\\
-            &=\frac{1}{2}mA^2\omega^2\sin^2(\omega t+\phi)+\frac{1}{2}kA^2\cos^2(\omega t+\phi)\\
-            &=\frac{1}{2}mA^2\left(\frac{k}{m}\right)\sin^2(\omega t+\phi)+\frac{1}{2}kA^2\cos^2(\omega t+\phi)\\
-            &=\frac{1}{2}kA^2\left(\sin^2(\omega t+\phi)+\cos^2(\omega t+\phi)\right)\\
-            &=\frac{1}{2}kA^2.
-        \end{align}
-        Where in the last line we have used the identity $\sin^2(\theta)+\cos^2(\theta)=1$.
-        Note that this is independent of time, so the total energy is conserved as we found before.
+        % TODO: include relationship between all linear and angular quantities
 
         \paragraph{}
         Let's look at a pendulum on a string of length $L$ now.
         We are assuming that the string is massless and ignoring the effects of air resistance.
         % TODO: include diagram and free=body diagram
-        % TODO: redo this with torques
         Given that the arc length of the pendulum is related to the angular displacement by $s=L\theta$ and that the restoring force is $F=-mg\sin(\theta)$, we have the equation of motion:
-        \begin{equation}
-            F=m\frac{\mathrm{d}^2s}{\mathrm{d}t^2}=-mg\sin(\theta).
+        \begin{equation}\label{eq:SHM-pendulum-s-analytic}
+            F=m\dv[2]{s}{t}=-mg\sin(\theta).
         \end{equation}
         This is a nonlinear differential equation. We will simplify this by assuming that the angle $\theta$ is small so $\sin(\theta)\approx\theta$ (small-angle approximation).
         Then the equation of motion becomes
         \begin{equation}
-            \frac{\mathrm{d}^2s}{\mathrm{d}t^2}=-g\theta=-\frac{g}{L}s.
+            \dv[2]{s}{t}=-g\theta=-\frac{g}{L}s.
         \end{equation}
         Note that this has the same form as equation \ref{eq-SHM-spring}, so the trajectory will have the same form!
+        What we have effectively done is assume that the displacement $s$ and the restoring force $F$ are pointing in a straight line, not along the arc of a circle, so that the force becomes identical to Hooke's law.
         \begin{equation}
-            s(t)=A\cos(\omega t+\phi),
+            s(t)=s_m\cos(\omega t+\phi),
         \end{equation}
         where $\omega$ in this case is given by
         \begin{equation}
-            \omega = \sqrt{\frac{g}{L}}.
+            \omega=\sqrt{\frac{g}{L}}.
         \end{equation}
+        \begin{example}
+            As an exercise, let's rederive this result by looking at the torques on the pendulum rather than the forces.
+
+            \paragraph{}
+            The pendulum, being a point mass, has a moment of inertia $I=mL^2$.
+            Then the torque on the pendulum is
+            \begin{eqnarray}
+                \tau=rF\sin\theta=-mgL\sin\theta\approx -mgL\theta.
+            \end{eqnarray}
+            Using $\tau=I\alpha$, we get
+            \begin{align}
+                \alpha=\dv[2]{\theta}{t}&=-\frac{mgL}{I}\theta\label{eq:SHM-pendulum-theta-moi}\\
+                \dv[2]{\theta}{t}&=-\frac{mgL}{mL^2}\theta\\
+                \dv[2]{\theta}{t}&=-\frac{g}{L}\theta.
+            \end{align}
+            Solving this, we get
+            \begin{eqnarray}
+                \theta(t)=\theta_m\cos(\omega t+\phi),
+            \end{eqnarray}
+            which is the same solution as before where $s_m=L\theta_m$ and $\omega=\sqrt{\frac{g}{L}}$.
+            Note that we have to be quite careful here, as the angular frequency $\omega$ is \textit{not} the angular velocity $\dot{\theta}$, since the latter changes with time.
+        \end{example}
 
         \paragraph{}
-        As an aside, think back to uniform circular motion.
+        What happens if we don't use the small-angle approximation?
+        Unfortunately, equation~\ref{eq:SHM-pendulum-s-analytic} cannot be solved analytically.
+        Fortunately, it is easy to solve numerically!
+        Analysing the solution is outside the scope of these notes, but to put it simply, as the maximum amplitude of the oscillation increase, the resonant frequency decreases.
+        I.e. $\omega$ becomes a function of $s_m$ (or $\theta_m$).
+
+        \paragraph{}
+        There is another example of simple harmonic motion that we have seen already.
+        Think back to uniform circular motion.
         % TODO: include a diagram
         An object moving with UCM has a trajectory of the form
         \begin{equation}
             \theta(t)=\omega t+\phi,
         \end{equation}
         where $\omega$ is the angular velocity and $\phi$ is the angular displacement at $t=0$.
-        If we describe this motion in cartesian coordinates, the horizontal motion takes the form
+        If we describe this motion in cartesian coordinates, the trajectory takes the form
         \begin{equation}
-            x(t) = r\cos(\omega t+\phi),
+            \vec{r}(t)=r\cos(\omega t+\phi)\ihat+r\sin(\omega t+\phi)\jhat,
         \end{equation}
-        which is exactly the same form as an object moving under SHM!
+        so we see that UCM is really SHM in two dimensions!
+        If we look at the object dead-on from the $y$ or $x$ direction, we would see identical motion to that of a mass on a spring.
+        For UCM, the motion in the two perpendicular directions are perfectly out of phase (out of phase by one quarter turn, or $\pi/2$).
+        \begin{example}
+            Consider a pendulum of mass $m$ and length $L$ which is swinging around in uniform circular motion.
+            % TODO: add diagram for this
+            What is the frequency of the oscillation?
+
+            \paragraph{}
+            The radial acceleration is $a_r=\dot{\theta}^2r=\omega^2L\sin\theta$.
+            Therefore, we have
+            \begin{gather}
+                mg\sin\theta=m\omega^2L\sin\theta\\
+                \implies\omega=\sqrt{\frac{g}{L}},
+            \end{gather}
+            which is the same frequency as a normal pendulum.
+            % TODO: complete this example
+        \end{example}
+
+    \section{Physical Pendula}
+        \paragraph{}
+        Let's now analyse the motion of a pendulum that is not a point mass.
+        % TODO: include diagram of bowling pin pendulum
+        In this case, the we will look at the torques to find the motion.
+        The weight force acts on the centre of mass, and the lever arm for the torque is the distance from the pivot point to the centre of mass.
+        We call this $h$, then the torque is
+        \begin{equation}
+            \tau=I\alpha=mgh\sin\theta\approx mgh\theta.
+        \end{equation}
+        If we write this as a differential equation using the small-angle approximation, we will get equation~\ref{eq:SHM-pendulum-theta-moi} for the pendulum above just without the moment of inertia specified.
+        A physical pendulum therefore also obeys SHM (under the small-angle approximation) with frequency and period
+        \begin{equation}\label{eq:SHM-physical-pendulum-frequency}
+            \omega=\sqrt{\frac{mgh}{I}},\quad T=2\pi\sqrt{\frac{I}{mgh}}.
+        \end{equation}
+        Here we use the small-angle approximation because it allows us to solve for the motion analytically for lots of physical pendula.
+        Of course, if we had some object with a moment of inertia that cannot be expressed analytically, we might as well do away with the small-angle approximation since we are going to have to solve the equation of motion numerically anyway!
+
+        \paragraph{}
+        Let's do some examples of physical pendula.
+        \begin{example}
+            Consider a long thin rod swinging about a pivot at one end.
+            If $m$ is the mass of the rod and $L$ is its length, what is its resonant frequency?
+            % TODO: include diagram
+
+            \paragraph{}
+            As we have seen, the moment of inertia of a thin rod rotating about its end is $\frac{1}{3}mL^2$.
+            The distance between the pivot and the centre of mass is $\frac{L}{2}$, so by equation~\ref{eq:SHM-physical-pendulum-frequency} the resonant frequency is
+            \begin{equation}
+                \omega=\sqrt{\frac{mg\frac{L}{2}}{\frac{1}{3}mL^2}}=\sqrt{\frac{3g}{2L}}.
+            \end{equation}
+            % TODO: reference previous equation for moment of inertia
+        \end{example}
+        \begin{example}
+            Consider a thin hoop pendulum of mass $m$ and radius $R$.
+            % TODO: add diagram for this
+            What is its resonant frequency?
+
+            \paragraph{}
+            The moment of inertia of a thin ring rotating about its centre is $mR^2$, so by the parallel axis theorem the moment of inertia about the pivot is $2mR^2$.
+            Therefore, the resonant frequency is
+            \begin{equation}
+                \omega=\sqrt{\frac{mgR}{2mR^2}}=\sqrt{\frac{g}{2R}}.
+            \end{equation}
+            % TODO: compare with annulus pendulum
+        \end{example}
+
+    \section{Energy in Simple Harmonic Motion}
+        \paragraph{}
+        % TODO: make references for previous equations
+        As we have seen back in chapter\ref{chap:3}, Hooke's law is a conservative force, so the total energy is conserved.
+        Let's show this explicitly for the mass on a spring.
+        From before, we know the total energy is given by
+        \begin{align}
+            E&=K+U_s\\
+            &=\frac{1}{2}mv^2+\frac{1}{2}kx^2.
+        \end{align}
+        Substituting equations~\ref{eq:SHM-displacement} and \ref{eq:SHM-velocity}, we get
+        \begin{align}
+            E&=\frac{1}{2}mx_m^2\omega^2\sin^2(\omega t+\phi)+\frac{1}{2}kx_m^2\cos^2(\omega t+\phi)\\
+            &=\frac{1}{2}mx_m^2\left(\frac{k}{m}\right)\sin^2(\omega t+\phi)+\frac{1}{2}kx_m^2\cos^2(\omega t+\phi)\\
+            &=\frac{1}{2}kx_m^2\left(\sin^2(\omega t+\phi)+\cos^2(\omega t+\phi)\right)\\
+            &=\frac{1}{2}kx_m^2.\label{eq:SHM-total-mech-energy}
+        \end{align}
+        Where in the last line we have used the identity $\sin^2A+\cos^2A=1$.
+        This is independent of time, so the total energy is conserved as we found before.
+        % TODO: include plot of energies
+        By using trigonometric identities for $\sin^2$ and $\cos^2$, we have
+        \begin{align}
+            K&=\frac{1}{2}kx_m^2\left(\frac{1}{2}-\frac{1}{2}\cos(2(\omega t+\phi))\right)\\
+            U&=\frac{1}{2}kx_m^2\left(\frac{1}{2}+\frac{1}{2}\cos(2(\omega t+\phi))\right).
+        \end{align}
+        This shows that the energies oscillate sinusoidally as well, but with a frequency that is twice the resonant frequency.
+        % TODO: include discussion of where each energies reaches maximum and minimum
+
+        \paragraph{}
+        In general, for an system exhibiting SHM in the quantity $A$, the equation of motion will be
+        \begin{equation}
+            \dv[2]{A}{t}=-\omega^2A,
+        \end{equation}
+        and the potential and kinetic energies will have the form
+        \begin{equation}\label{eq:SHM-general-energies}
+            U=\frac{1}{2}\alpha A^2,\quad K=\frac{1}{2}\beta\left(\dv{A}{t}\right)^2,
+        \end{equation}
+        where
+        \begin{equation}\label{eq:SHM-general-frequency}
+            \omega=\sqrt{\frac{\alpha}{\beta}}.
+        \end{equation}
+        \begin{example}
+            Let's solve the pendulum using the energy approach.
+            % TODO: include diagram
+
+            \paragraph{}
+            The rotational kinetic energy of a pendulum is given by
+            \begin{equation}
+                K=\frac{1}{2}I\omega^2=\frac{1}{2}mL^2\omega^2,
+            \end{equation}
+            and the gravitational potential energy is
+            \begin{equation}
+                U=mgL(1-\cos\theta)\approx mgL\frac{\theta^2}{2},
+            \end{equation}
+            where we have used the small-angle approximation $1-\cos\theta\approx\frac{\theta^2}{2}$.
+            Then using the formulae above (\ref{eq:SHM-general-energies} and \ref{eq:SHM-general-frequency}), we get
+            \begin{equation}
+                \omega=\sqrt{\frac{mgL}{mL^2}}=\sqrt{\frac{g}{L}},
+            \end{equation}
+            which is what we found before.
+        \end{example}
+        
+        \paragraph{}
+        The following example is more complicated than anything we have seen so far.
+        \begin{example}
+            Consider a small marble of mass $m$ and radius $r$ rolling without slipping in a large spherical dish of radius $R$.
+            Does the marble move with simple harmonic motion?
+            If so, find the resonant frequency.
+            % TODO: add diagram for this
+
+            \paragraph{}
+            We will analyse the motion of the marble using energies, which is much simpler than solving this problem using forces.
+            The height that the centre of mass changes by when it moves around in the dish is $h=(R-r)(1-\cos\theta)$, so the potential energy is
+            \begin{equation}
+                U=mgh=mg(R-r)(1-\cos\theta)\approx mg(R-r)\frac{\theta^2}{2}.
+            \end{equation}
+            The fact that $R\gg r$ justifies the use of the small-angle approximation.
+            The marble has two different kinetic energies, its translation (which is actually rotation of its centre of mass around the pivot) and rotation around its own centre of mass.
+            The marble is a solid sphere, so its moment of inertia about its centre is $\frac{2}{5}mr^2$ and the latter kinetic energy is given by
+            \begin{equation}
+                K_\text{rot}=\frac{1}{2}I\dot{\phi}^2=\frac{1}{2}\left(\frac{2}{5}mr^2\right)\dot{\phi}^2,
+            \end{equation}
+            where $\dot{\phi}$ is the angular velocity of the marble around its centre of mass.
+            The former kinetic energy is given by
+            \begin{equation}
+                K_\text{tran}=\frac{1}{2}I_\text{pivot}\dot{\theta}^2=\frac{1}{2}\left(m(R-r)^2+\frac{2}{5}mr^2\right)\dot{\theta}^2,
+            \end{equation}
+            where we have used the parallel axis theorem to get the moment of inertia about the pivot point.
+            We would like to find a relation between $\dot{\phi}$ and $\dot{\theta}$ to simplify the total kinetic energy.
+            Note that when the marble rolls a distance $s=R\theta$ in the dish, which is equal to $r(\phi+\theta)$.
+            % TODO: include diagram for this
+            Then we have
+            \begin{align}
+                \phi&=\frac{R-r}{r}\theta\\
+                \implies\dot{\phi}&=\frac{R-r}{r}\dot{\theta}.
+            \end{align}
+            Thus the total kinetic energy is
+            \begin{align}
+                K=K_\text{tran}+K_\text{rot}&=\frac{1}{2}\left[m(R-r)^2\dot{\theta}^2+\frac{2}{5}mr^2\dot{\theta}^2+\frac{2}{5}mr^2\left(\frac{R-r}{r}\dot{\theta}\right)^2\right]\\
+                &=\frac{1}{2}\left[\frac{7}{5}m(R-r)^2+\frac{2}{5}mr^2\right]\dot{\theta}^2.
+            \end{align}
+            These energies satisfy the forms in equation~\ref{eq:SHM-general-energies}, so the marble does exhibit simple harmonic motion.
+            The resonant frequency is given by equation~\ref{eq:SHM-general-frequency}:
+            \begin{equation}
+                \omega=\sqrt{\frac{mg(R-r)}{\frac{7}{5}m(R-r)^2+\frac{2}{5}mr^2}}.
+            \end{equation}
+            % TODO: examine limits of this formula
+        \end{example}
+
+    \section{Damped Oscillations}
+        \paragraph{}
+        An object moving with simple harmonic motion will continue to do so indefinitely.
+        A more realistic scenario is to include the effects of other forces, such as friction and air resistance, that slow down the oscillations until they eventally decay away to nothing.
+        These effects are collectively known as \textbf{damping}.
+    
+        \paragraph{}
+        Depending on the strength of the damping forces, they can result one of of three scenarios:
+        \begin{itemize}
+            \item \textbf{Underdamping} --- The damping effects aren't that strong, there are still oscillations but they decay away over time.
+            \item \textbf{Overdamping} --- Damping is very strong, there are no oscillations and the system smoothly decays to equilibrium.
+            \item \textbf{Critial damping} --- The system returns to equilibrium in the fastest possible way without overshooting.
+        \end{itemize}
+
+        \paragraph{}
+        Damping forces can be proportional to velocity (as with viscous drag), proportional to the square of velocity (quadratic drag e.g. air resistance), or something else (friction etc.).
+        In this chapter we will focus on linear drag as it provides an instructive example of damping effects which we can solve analytically.
+        We write the damping force as $F=-bv$, where $b$ is some constant with units of \unit{\kilogram\per\second}.
+        The minus sign indicates that the damping force acts in the opposite direction of the velocity.
+        Using Newton II with the two forces we have now, the equation of motion becomes
+        \begin{equation}
+            m\dv[2]{x}{t}+b\dv{x}{t}+kx=0.
+        \end{equation}
+        To solve this we use an ansatz of the form $x(t)=Ae^{\xi t}$.
+        Differentiating twice and substituting into the above, we get an equation for $\xi$:
+        \begin{equation}
+            \xi^2+\frac{b}{m}\xi+\omega_0^2=0,
+        \end{equation}
+        where we have written the resonant frequency as $\omega_0^2=\frac{k}{m}$.
+        The subscript 0 is important to distinguish the resonant frequency from other frequencies we will define later.
+        If we also define the \textbf{damping coefficient} $\gamma$ as
+        \begin{equation}
+            \gamma=\frac{b}{2m},
+        \end{equation}
+        then we can write $\xi$ as
+        \begin{equation}
+            \xi=-\gamma\pm\sqrt{\gamma^2-\omega_0^2},
+        \end{equation}
+        and the general solution is
+        \begin{equation}
+            x(t)=A_1e^{(-\gamma+\sqrt{\gamma^2-\omega_0^2})t}+A_2e^{(-\gamma-\sqrt{\gamma^2-\omega_0^2})t}.
+        \end{equation}
+
+        \paragraph{}
+        Now, we have four different cases that can arise depending on the strength of the damping force i.e. the size of $b$ compared to $\omega_0$.
+        \begin{enumerate}[label=\textbf{Case \arabic*}:]
+            \item $b=0$ (no damping). Then $\gamma=0$ and the general solution becomes
+            \begin{align}
+                x(t)&=A_1e^{i\omega_0^2t}+A_2e^{-i\omega_0^2t}\\
+                &=A\cos(\omega_0 t+\phi),
+                % TODO: check this is correct and provide a relation for A
+            \end{align}
+            which is exactly the SHM that we found before.
+            $\xi$ is purely imaginary.
+            \item $\gamma^2-\omega_0^2<0$. In this case we define the \textbf{damped frequency} $\omega_d=\sqrt{\omega_0^2-\gamma^2}$, so the solution becomes
+            \begin{align}
+                x(t)&=A_1e^{(-\gamma+i\omega_d)t}+A_2e^{(-\gamma-i\omega_d)t}\\
+                &=Ae^{-\gamma t}\cos(\omega_d t+\phi).
+            \end{align}
+            So there are still oscillations, but the amplitude decays over time ($x_m(t)=Ae^{-\gamma t}$).
+            This is an \textit{underdamped} system.
+            $\xi$ is a complex number.
+            \item $\gamma^2-\omega_0^2>0$. Then $\xi$ is a real number and the solution just becomes the sum of two decaying exponentials.
+            \begin{equation}
+                x(t)=A_1e^{(-\gamma+\sqrt{\gamma^2-\omega_0^2})t}+A_2e^{(-\gamma-\sqrt{\gamma^2-\omega_0^2})t}.
+            \end{equation}
+            There are two slightly different decay rates, the second term decays faster since its decay constant is larger.
+            This is an \textit{overdamped} system.
+            \item $\gamma^2=\omega_0^2$. Here, $\xi$ simplifies to just $-\gamma$ (a real number) and the general solution becomes
+            \begin{equation}
+                x(t)=(A_1+A_2t)e^{-\gamma t}.
+            \end{equation}
+            % TODO: explain why we have to add the linear term
+            This is a \textit{critically damped} system.
+        \end{enumerate}
+        % TODO: include plots of different types of motion
+
+        \paragraph{}
+        In the case of an underdamped system, notice that the total mechanical energy, given by equation~\ref{eq:SHM-total-mech-energy}, will decay exponentially.
+        \begin{equation}
+            E_\text{mech}(t)=E_\text{mech}(0)e^{-\frac{b}{m}t}.
+        \end{equation}
+        To quantify the level of underdamping, it is common to define the \textbf{$Q$-factor} as the ratio of the initial energy in the oscillator to the energy dissipated in one radian of the oscillation, or
+        \begin{equation}
+            Q=2\pi\frac{\text{initial energy}}{\text{energy dissipated in one cycle}}.
+        \end{equation}
+        It can be shown that for our linear damping the $Q$-factor is equal to
+        \begin{equation}
+            Q=\frac{m}{b}\omega_d=\tau\omega_d,
+        \end{equation}
+        where $\tau=\frac{m}{b}$ is the \textbf{time constant} for the decay.
+        % TODO: show that this is the case
+
+        % TODO: complete this example and move it somewhere appropriate
+        % \begin{example}
+        %     Consider a source emitting \qty{1}{\watt} of radiation towards a detector.
+        %     % TODO: include diagram for this
+        %     Suppose we place a 99.9\% lossless mirror in front on the detector so that only \qty{1}{\milli\watt} gets through.
+        %     If we place another 99.9\% lossless mirror in between the first one and the emitter, we will create a resonant cavity which will build up to \qty{1}{\kilo\watt}, so that \qty{1}{\watt} will be received by the detector.
+        %     How fast does the power received by the detector decay when the emitter is switched off?
+        % \end{example}
+
+    \section{Forced Oscillations}
+        \paragraph{}
+        A forced oscillator is an oscillator subject to a periodic external force.
+        \begin{equation}
+            F_\text{net}=-kx-bv+F_\text{drive}.
+        \end{equation}
+        Consider a sinusoidal driving force $F_\text{drive}=F_0\cos(\omega_\text{dr}t)$.
+        Then the equation of motion becomes
+        \begin{equation}
+            m\dv[2]{x}{t}+b\dv{x}{t}+kx=F_0\cos(\omega_\text{dr}t).
+        \end{equation}
+        % TODO: solve this equation?
+        When we solve this equation, what we find is that, when damping is small, there is a huge build-up of energy when the system is driven at its resonant frequency $\omega_0$.
+        This phenomenon is called \textbf{resonance}.
+        Mathematically, the condition for resonance is
+        \begin{equation}
+            \omega_\text{drive}=\sqrt{\omega_0^2-\frac{b^2}{2m^2}}=\sqrt{\omega_0^2-2\gamma^2}.
+        \end{equation}
+        We call this $\omega_\text{res}$.
+        Note that this is not the damped frequency $\omega_d$ from above.
+        We see that when damping is weak, the condition for resonance becomes $\omega_\text{drive}\approx\omega_0$.
+
+        \paragraph{}
+        To find the resonant frequency of a system, there are two general methods we can use.
+        There is the ``impulse method'', where we excite all frequencies in the system at once.
+        The system will then resonate at the resonant frequency and the vibrations at other frequencies will decay away (we will see why shortly).
+        An example of this is striking a bell.
+        The other method is the ``frequency-scan method'', where we use a low-ampltidue signal and scan through frequencies until we hit resonance, when energy will rapidly build up.
+
+        \paragraph{}
+        For the case of underdamping ($\gamma<\omega_0$), the general solution is a sum of a transient (decaying) oscillation at the damped frequency and a steady state (not decaying) oscillation at the driven frequency.
+        \begin{equation}
+            x(t)=A_\text{decay}e^{-\gamma t}\cos(\omega_d t+\phi_\text{decay})+A_\text{steady}\cos(\omega_\text{drive}t-\phi_\text{steady}).
+        \end{equation}
+        % TODO: show this
+        The ampltiude and phase of the steady state oscillation depend on the driven frequency and the resonant frequency.
+        These dependencies have the form
+        \begin{equation}
+            A_\text{steady}=\frac{F_0/m}{\sqrt{(\omega_\text{dr}^2-\omega_0^2)^2+\left(\frac{b}{m}\right)^2\omega_\text{dr}^2}},\quad\phi_\text{steady}=\tan^{-1}\left(\frac{\left(\frac{b}{m}\right)\omega_\text{drive}}{\omega_0^2-\omega_\text{drive}^2}\right)+\phi_0
+        \end{equation}
+        % TODO: show plots of A and phi against omega_drive for different levels of damping
+        $A_\text{steady}$ has a maximum at $\omega_\text{res}$, which is the resonance phenomenon we have been discussing.
+        Note that we now have three different ``resonance'' frequencies for oscillators.
+        $\omega_0$ for when we have an undamped, undriven oscillator (SHM), $\omega_d$ for a damped oscillator, and $\omega_\text{res}$ for a driven oscillator.
+        We see that at low driving frequencies, the ampltide of the steady state is small (but nonzero) but the oscillation is in-phase with the driving force.
+        For high driving frequencies, the amplitude goes to zero, and the oscillation is in anti-phase with the driving force.
+        At resonance, the phase of the steady state is $\pi/2$, which means the driving force is in-phase with the velocity.
+        This makes sense because then we have a \textit{constant} power input to the system ($P=\vec{F}\cdot\vec{v}$).
+
+        \paragraph{}
+        For a driven oscillator, we find that the $Q$-factor is
+        \begin{equation}
+            Q=\frac{\omega_\text{res}}{\text{FWHM of energy curve}}\approx\omega_\text{res}\frac{m}{b}.
+        \end{equation}
+        If damping is low, we can say $Q\approx\omega_0\frac{m}{b}$ and write
+        \begin{equation}
+            A_\text{steady}\approx\frac{F_0(\omega_0/\omega_\text{drive})}{k\sqrt{\left(\frac{\omega_0}{\omega_\text{drive}}-\frac{\omega_\text{drive}}{\omega_0}\right)^2+\frac{1}{Q^2}}}.
+        \end{equation}
+        So for $Q\gg 1$, we get the following cases.
+        For $\omega_\text{drive}\ll\omega_\text{res}$, $A_\text{steady}=F_0/k$.
+        For $\omega_\text{drive}=\omega_\text{res}$, we get $A_\text{steady}=QF_0/k$.
+        For $\omega_\text{drive}\gg\omega_\text{res}$, we have $A_\text{steady}=-\frac{\omega_0}{\omega_\text{drive}}F_0/k$.
+        % TODO: write more detail about this
+
+    \section{Coupled Oscillations and Normal Modes}
+        \paragraph{}
+        A coupled oscillator is a system of more than one oscillators that have some way of transferring energy to one another.
+        % TODO: include diagram of 2 masses coupled to 3 springs and two pendula coupled by a spring
+        Generally what we see is that the kinetic energy is passed between each oscillator.
+        A \textbf{normal mode} is a collective excitation of the whole system where all parts move with the same frequency.
+        Normal modes are the generalisation of the resonant frequency for a single oscillator, and once the system is in a normal mode it does not decay or change its motion into another mode (unless there is damping).
+        If we take a system of two pendula coupled by a spring as an example, the system has two normal modes.
+        One where the pendula are swinging in-phase, which has a frequency $\omega_1=\sqrt{\frac{g}{L}}$, and one where they are swinging out-of-phase, which has a frequency $\omega_2=\sqrt{\frac{g}{L}+2\frac{k}{m}}$.
+        % TODO: add more detail to this example
+        % TODO: add diagram of these modes
+
+        \paragraph{}
+        The \textbf{principle of superposition} states that any motion of the system can be expressed as a superposition (sum) of motion due to normal modes.
+        Since the frequencies of the normal modes are unequal, this means the motion will evolve over time, which leads to the kinetic energy being passed around as stated above.
+        This exchange of energy will happen at a \textbf{beat frequency} $\omega_2-\omega_1$.
+        For weakly coupled oscillators (in this case small $k$), they are almost independent and so all the normal modes will be very similar in frequency.
+        This leads to the beat frequency being very small.
+        Note that \textit{no} energy is passed between the normal modes themselves.
+        The designation ``normal'' means they are independent from each other.
+        % TODO: describe in what sense this is the case
+        \begin{example}
+            Consider the example of two blocks, both of mass $m$, coupled to three springs, all with spring constant $k$, from above.
+            Solve for the general motion of each block.
+            % TODO: include a diagram for this (with free body diagrams)
+            
+            \paragraph{}
+            We will solve this with an elementary approach, by looking at the forces on each block.
+            If we set $x_1=0$, and $x_2=0$ at the equilibrium positions of each block respectively, then the force from each spring is
+            \begin{align}
+                F_1&=-kx_1\\
+                F_2&=-k(x_1-x_2)\\
+                F_3&=kx_2.
+            \end{align}
+            so by Newton II, the equations of motion for each block are
+            \begin{align}
+                &m\dv[2]{x_1}{t}+2kx_1-kx_2=0\\
+                &m\dv[2]{x_2}{t}-kx_1+2kx_2=0.
+            \end{align}
+            These are two coupled second-order differential equations, which would be quite hard to solve.
+            Fortunately, by writing the positions of the blocks $x_1$ and $x_2$ in terms of the normal modes, we can uncouple them and solve them easily!
+            First, we will rearrange slightly and substitute in the resonant frequency of a mass on a spring $\omega_0=\sqrt{k/m}$,
+            \begin{align}
+                &\dv[2]{x_1}{t}+\omega_0^2x_1+\omega_0^2(x_1-x_2)=0\\
+                &\dv[2]{x_2}{t}+\omega_0^2x_2-\omega_0^2(x_1-x_2)=0,
+            \end{align}
+            and then we let $X_1=x_1+x_2$ (the normal mode where the masses are swinging together) and $X_2=x_1-x_2$ (the normal mode where the masses are swinging apart).
+            Then we can get differential equations for $X_1$ and $X_2$ by adding and subtracting the two equations we have for $x_1$ and $x_2$.
+            \begin{align}
+                &\dv[2]{X_1}{t}=\dv[2]{x_1}{t}+\dv[2]{x_2}{t}=-\omega_0^2x_1-\omega_0^2x_1=-\omega_0^2X_1\\
+                &\dv[2]{X_2}{t}=\dv[2]{x_1}{t}-\dv[2]{x_2}{t}=-3\omega_0^2(x_1-x_2)=-3\omega_0^2X_2.
+            \end{align}
+            These are just the equations of motion for SHM, so we can solve for the amplitude of the normal modes.
+            \begin{align}
+                X_1(t)&=A_1\cos(\omega_0t+\phi_1)\\
+                X_2(t)&=A_2\cos(\sqrt{3}\omega_0t+\phi_2).
+            \end{align}
+            So for the first mode $X_1=x_1+x_2$ we have $x_1=x_2$, and for the second mode $X_2=x_1-x_2$ we have $x_1=-x_2$.
+            The general solution is a superposition of motion due to normal modes, giving
+            \begin{align}
+                x_1(t)&=A_1^\prime\cos(\omega_1 t+\phi_1)+A_2^\prime\cos(\omega_2 t+\phi_2)\\
+                x_2(t)&=A_1^\prime\cos(\omega_1 t+\phi_1)+A_2^\prime\cos(\omega_2 t+\phi_2),
+            \end{align}
+            where $\omega_1=\omega_0=\sqrt{k/m}$ and $\omega_2=\sqrt{3}\omega_0=\sqrt{3k/m}$.
+            This system requires four initial conditions to specificy a particular solution i.e. $A_1^\prime$, $A_2^\prime$, $\phi_1$, and $\phi_2$.
+            These could be $x_1(0)$, $x_2(0)$, $v_1(0)$, and $v_2(0)$.
+        \end{example}
+
+        \paragraph{}
+        In general, for a system of $N$ coupled simple harmonic oscillators, there will be $N$ normal modes ($N$ ways they can move collectively).
+        Therefore, the general solution will be a superposition of $N$ normal modes and $2N$ initial conditions will be required to specify a particular solution.
+        In the previous example, we defined the variables $X_1=x_1+x_2$ and $X_2=x_1+x_2$ to represent the normal modes.
+        These quantities along with their derivatives $\dot{X}_1$ and $\dot{X}_2$ are known as the \textbf{normal coordinates} of the system.
+        Each way a system can store energy is known as a \textbf{degree of freedom}, and each degree of freedom has a normal coordinate.
+        In simple harmonic oscillators, the degrees of freedom are called \textbf{quadratic} because the energies are proportional to the squares of the normal coordinates $\alpha_1X_1^2$, $\alpha_2X_2^2$, $\beta_1\dot{X}_1^2$, and $\beta_2\dot{X}_2^2$ for some constants $\alpha_1$, $\alpha_2$, $\beta_1$, and $\beta_2$.
+        Recall that the total energy in each normal mode is constant (if there is no damping) as they do not exchange energy with each other.
+        For a given normal mode, all of the oscillators will pass through their equilibrium points at the same time and they will have a fixed phase and amplitude relationship with each other.
+
+    % TODO: as an example, mass on a vertical spring? (Hooke's law + gravity)
 
 \end{document}
