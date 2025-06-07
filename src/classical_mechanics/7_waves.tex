@@ -10,13 +10,13 @@
         Then we can describe the variation in space at a specific point in time as a snapshot:
         % TODO: rewrite this using cos instead of general function?
         \begin{equation}
-            y(x) = A f\left(\frac{2\pi}{\lambda}x+\delta\right),
+            y(x) = Af\left(\frac{2\pi}{\lambda}x+\delta\right),
         \end{equation}
         where $\lambda$ is the \textbf{wavelength} of the wave (the spatial period).
         % TODO: include figures
         We can also describe the variation in amplitude at a single point in space over time:
         \begin{equation}
-            y(t)=A f\left(\frac{2\pi}{T}t+\theta\right),
+            y(t)=Af\left(\frac{2\pi}{T}t+\theta\right),
         \end{equation}
         where $T$ is the temporal period.
 
@@ -24,19 +24,19 @@
         To put these pictures together, we can consider the snapshot picture with a shift $x-vt$ where $v$ is the speed of the wave.
         Then we have
         \begin{align}
-            y(x, t) &= A f\left(\frac{2\pi}{\lambda}(x-vt) + \phi\right)\\
-            &= A f\left(\frac{2\pi}{\lambda}x - \frac{2\pi v}{\lambda}t + \phi\right)\\
-            &= A f\left(\frac{2\pi}{\lambda}x - \frac{2\pi}{T}t + \phi\right)\\
-            &= A f(kx - \omega t + \phi).
+            y(x,t)&=Af\left(\frac{2\pi}{\lambda}(x-vt)+\phi\right)\\
+            &=Af\left(\frac{2\pi}{\lambda}x-\frac{2\pi v}{\lambda}t+\phi\right)\\
+            &=Af\left(\frac{2\pi}{\lambda}x-\frac{2\pi}{T}t+\phi\right)\\
+            &=Af(kx-\omega t+\phi).
         \end{align} 
         Where we have defined the \textbf{wavenumber} (spatial frequency measured in radians/m) $k=2\pi/\lambda$ and recalled $v=f\lambda$, $f=1/T$ and $\omega=2\pi f$.
         \begin{example}
-            Suppose we have a sinusoidal wave given by $y(x, t)=A\cos(kx-\omega t+\phi)$.
+            Suppose we have a sinusoidal wave given by $y(x,t)=A\cos(kx-\omega t+\phi)$.
             What is the particle velocity at fixed position $x$?
 
             To solve this, we take the \textit{partial derivative} with respect to time (to keep $x$ constant)
             \begin{equation}
-                \frac{\partial y(x, t)}{\partial t}=A\omega\sin(kx-\omega t+\phi).
+                \pdv{y(x,t)}{t}=A\omega\sin(kx-\omega t+\phi).
             \end{equation}
             Note that this is different to the propagation speed of the wave itself, which is constant.
         \end{example}
@@ -70,8 +70,8 @@
             Consider two sinusoidal waves with the travelling with the same frequency and direction.
             Then the superposition is given by
             \begin{align}
-                y(x, t) &= A\cos(kx-\omega t) + A\cos(kx-\omega t)\\
-                &= 2A\cos(kx-\omega t).
+                y(x,t)&=A\cos(kx-\omega t)+A\cos(kx-\omega t)\\
+                &=2A\cos(kx-\omega t).
             \end{align}
             So, the resultant wave has the same frequency and direction but double the amplitude.
             % TODO: include diagrams for these examples
@@ -80,21 +80,24 @@
             Now consider what happens if one of the waves has a phase shift of $\pi$ radians.
             The resultant wave is
             \begin{align}
-                y(x, t) &= A\cos(kx-\omega t) + A\cos(kx-\omega t+\pi)\\
-                &= A\cos(kx-\omega t) - A\cos(kx-\omega t)\\
-                &= 0.
+                y(x,t)&=A\cos(kx-\omega t)+A\cos(kx-\omega t+\pi)\\
+                &=A\cos(kx-\omega t)-A\cos(kx-\omega t)\\
+                &=0.
             \end{align}
             The two waves cancel each other out completely.
 
             \paragraph{}
             In the general case with a phase shift $\Omega$, we get
             \begin{align}
-                y(x, t) &=A\cos(kx-\omega t) + A\cos(kx-\omega t+\Omega)\\
-                &= 2A\cos\left(kx-\omega t+\frac{\Omega}{2}\right)\cos\left(-\frac{\Omega}{2}\right)\\
-                &= \underbrace{2A\cos\left(\frac{\Omega}{2}\right)}_{\text{Amplitude }\leq 2A}\underbrace{\cos\left(kx-\omega t+\frac{\Omega}{2}\right)}_{\text{Time-dependent part}}.
+                y(x,t)&=A\cos(kx-\omega t)+A\cos(kx-\omega t+\Omega)\\
+                &=2A\cos\left(kx-\omega t+\frac{\Omega}{2}\right)\cos\left(-\frac{\Omega}{2}\right)\\
+                &=\underbrace{2A\cos\left(\frac{\Omega}{2}\right)}_{\text{Amplitude }\leq 2A}\underbrace{\cos\left(kx-\omega t+\frac{\Omega}{2}\right)}_{\text{Time-dependent part}}.
             \end{align}
             Note that we have used the identity $\cos(\alpha)+\cos(\beta)=2\cos\left(\frac{\alpha+\beta}{2}\right)\cos\left(\frac{\alpha-\beta}{2}\right)$.
         \end{example}
+
+        \paragraph{}
+        Most superpositions of two sinusoidal functions do not have a nice simplification which is easily interpreted like this, but from these basic examples we can build an intuition for what happens when two waves meet.
 
         \paragraph{}
         Now consider what happens if the waves still have the same frequency but are moving in opposite directions.
@@ -102,26 +105,31 @@
         % TODO: put this in an example?
         % TOOD: include diagrams for standing waves
         \begin{align}
-            y(x, t) &= A\cos(kx -\omega t) + A\cos(kx + \omega t)\\
-            &= 2A\cos\left(\frac{2kx}{2}\right)\cos\left(-\frac{2\omega t}{2}\right)\\
-            &= \underbrace{2A\cos(kx)}_{A(x)}\cos(\omega t).
+            y(x,t)&=A\cos(kx-\omega t)+A\cos(kx+\omega t)\\
+            &=2A\cos\left(\frac{2kx}{2}\right)\cos\left(-\frac{2\omega t}{2}\right)\\
+            &=\underbrace{2A\cos(kx)}_{A(x)}\cos(\omega t).
         \end{align}
         So we have a spatially varying amplitude $A(x)$ multiplied by a time-dependent variation.
         This is known as a \textbf{standing wave}.
         \begin{example}
             In the case where one of the waves has a phase shift $\Omega$. The relation above becomes
             \begin{align}
-                y(x, t) &=A\cos(kx-\omega t) + A\cos(kx+\omega t+\Omega)\\
-                &= 2A\cos\left(\frac{2kx+\Omega}{2}\right)\cos\left(-\frac{w\omega t+\Omega}{2}\right)\\
-                &= 2A\cos\left(kx+\frac{\Omega}{2}\right)\cos\left(\omega t+\frac{\Omega}{2}\right).
+                y(x,t)&=A\cos(kx-\omega t)+A\cos(kx+\omega t+\Omega)\\
+                &=2A\cos\left(\frac{2kx+\Omega}{2}\right)\cos\left(-\frac{w\omega t+\Omega}{2}\right)\\
+                &=2A\cos\left(kx+\frac{\Omega}{2}\right)\cos\left(\omega t+\frac{\Omega}{2}\right).
             \end{align}
         \end{example}
         % TODO: include discussion of phasors for modelling superposition and interference
 
         \paragraph{}
+        The points on the standing wave which don't move at all are known as \textbf{nodes}, and points which move up the twice the ampltide of the waves are called \textbf{antinodes}.
+        Nodes are separated by half a wavelength.
+        In a standing wave, the whole string oscillates in simple harmonic motion.
+
+        \paragraph{}
         The standing waves allowed in a one-dimensional region of length $L$ are given by
         \begin{equation}
-            \lambda_\frac{2L}{p}, \quad f_p=p\frac{v}{2L}=pf_1,
+            \lambda=\frac{2L}{p},\quad f_p=p\frac{v}{2L}=pf_1,
         \end{equation}
         where $p\in\mathbb{Z}$.
 
@@ -135,6 +143,14 @@
             y(x,t)=Ae^{i(kx-\omega t+\phi)}.
         \end{equation}
         We recover the trigonometric form (cosine in this case) by taking the real part of this function.
+        For the standing wave example above, we have
+        \begin{align}
+            y(x,t)&=Ae^{i(kx-\omega t)}+Ae^{i(kx+\omega t)}\\
+            &=Ae^{ikx}\left[e^{-i\omega t}+e^{i\omega t}\right]\\
+            &=2Ae^{ikx}\cos(\omega t),
+        \end{align}
+        where in the last line we have used Euler's identity to get $e^{-i\theta}+e^{i\theta}=2\cos\theta$.
+        Taking the real part of this, we recover $y(x,t)=2A\cos(kx)\cos(\omega t)$ which we found above.
         \begin{example}
             Given a periodic wave, what is the phase difference between two points on the wave separated by a distance $\Delta x$?
             \begin{equation}
@@ -172,7 +188,7 @@
         Consider a short section of the string of length $\Delta x$.
         % TODO: include diagram of this
         We are assuming that the string has linear density $\mu$, zero stiffness, and we are ignoring the effects of gravity.
-        Then assuming that there are only small displacements on the string, then $\pdv{y}{X}$ is small, so the angles $\theta_1$ and $\theta_2$ are also small.
+        Then assuming that there are only small displacements on the string, then $\pdv{y}{x}$ is small, so the angles $\theta_1$ and $\theta_2$ are also small.
         Hence we use the small angle approximation and say that $\cos\theta_1\approx\cos\theta_2\approx 1$.
         \begin{align}
             \sum F_x&=-\abs{\vec{T}_1}\cos\theta_1+\abs{\vec{T}_2}\cos\theta_2=0\\
@@ -226,7 +242,7 @@
             &=\mathrm{d}x\sqrt{1+\left(\pdv{y}{x}\right)^2}\\
             &\approx\mathrm{d}x\left(1+\frac{1}{2}\left(\pdv{y}{x}\right)^2\right),
         \end{align}
-        where in the last line we have used the Taylor expansion $\sqrt(1+u^2)\approx 1+\frac{1}{2}u^2$ when $u$ is small.
+        where in the last line we have used the Taylor expansion $\sqrt{1+u^2}\approx 1+\frac{1}{2}u^2$ when $u$ is small.
         This means we can calculate the potential energy as
         \begin{align}
             \mathrm{d}U&=T(\mathrm{d}s-\mathrm{d}x)\\
@@ -263,5 +279,583 @@
                 &=\frac{1}{2}\sqrt{\mu T}A^2\omega^2.
             \end{align}
         \end{example}
+
+        \paragraph{}
+        We can calculate the power transmitted through the wave from first principles as well.
+        Each string segment exerts a force and does work on the adjoining segments.
+        For a point $x_0$ on the string, work is done on the string by to the right of $x_0$ by a tension force $T_y$ applied by the string to the left of $x_0$.
+        % TODO: include a diagram for this
+        Assuming motion in the $x$-direction is negligible, we have that the work done by the tension is $\dd{W}=T_y\dd{y}$.
+        Since we are assuming $\pdv{y}{x}$ is small, $T_y=-T\pdv{y}{x}$.
+        Then we have that the instantaneous power is
+        \begin{align}
+            P_\text{inst}(x,t)=\dv{W}{t}&=T_y\pdv{y}{t}\\
+            &=-T\pdv{y}{x}\pdv{y}{t}\\
+            &=\frac{T}{V}\left(\pdv{y}{t}\right)^2=\sqrt{\mu T}\left(\pdv{y}{t}\right)^2,
+        \end{align}
+        where in the last line we have used the wave equation.
+        For a sinusoidal pattern of motion, we have
+        \begin{equation}
+            P_\text{inst}(x,t)=\sqrt{\mu T}A^2\omega^2\sin^2(kx-\omega t).
+        \end{equation}
+        The average value of $\sin^2$ is $\frac{1}{2}$, so the average power transmitted is
+        \begin{equation}
+            P_\text{avg}=\sqrt{\mu T}A^2\omega^2,
+        \end{equation}
+        which is what we derived before.
+
+    \section{Boundaries, Transmission, and Reflection}
+        \paragraph{}
+        A boundary for a wave is a change in medium.
+        When a wave encounters a boundary, some energy is transmitted across the boundary and some is reflected.
+        Consider a pulse wave travelling along a string:
+        \begin{itemize}
+            \item At a \textit{fixed} end, the string exerts an upward force on the fixed end which pulls back down on the string according to Newton III.
+            This generates an upside-down wave pulse travelling in the opposite direction (what we actually see while this is happening is a superposition of both pulses).
+            \item At a \textit{free} end, the same thing happens except that the reflected pulse is the same way up.
+            Because of the superposition, the free end reaches twice the peak amplitude of the pulse.
+            \item When we have a mix between these two cases, for example a change in linear density of the string, we will see partial transmission and reflection.
+        \end{itemize}
+
+        \paragraph{}
+        % TODO: include a diagram for this
+        To figure out how much gets reflected and transmitted, we must make some assumptions about what happens to the wave at the boundary.
+        At the boundary $x_b$ we have:
+        \begin{itemize}
+            \item $y(x_b,t)$ must be continuous (no gaps in the string).
+            \item $\pdv{y(x_b,t)}{x}$ must be continuous (no sharp kinks).
+        \end{itemize}
+        Therefore, we must have the following two conditions at the boundary (they do not have to hold anywhere else!):
+        \begin{gather}
+            y_i(x_b,t)+y_r(x_b,t)=y_t(x_b,t)\\
+            \pdv{y_i(x_b,t)}{t}+\pdv{y_r(x_b,t)}{t}=\pdv{y_t(x_b,t)}{t},
+        \end{gather}
+        where subscript $i$, $r$, and $t$ represent the incident, reflected, and transmitted waves respectively.
+        Solving for $y_r$ and $y_t$ using the wave equation, we get
+        % TODO: show this
+        \begin{align}
+            y_r(x_b,t)&=\frac{v_2-v_1}{v_2+v_1}y_i(x_b,t)=ry_i(x_b,t)\\
+            y_t(x_b,t)&=\frac{2v_2}{v_1+v_2}y_i(x_b,t)=\tau y_i(x_b,t),
+        \end{align}
+        where we have defined the \textbf{reflection coefficient} $r$ and the \textbf{transmission coefficient} $\tau$ as
+        \begin{equation}
+            r=\frac{v_2-v_1}{v_1+v_2},\quad\tau=\frac{2v_2}{v_1+v_2},
+        \end{equation}
+        where $v_1$ is the wave velocity in the left medium and $v_2$ is the velocity on the right.
+        Note that $-1\leq r\leq 1$, and $0\leq\tau\leq 2$.
+        These coefficients can also be defined in terms of the wave impedance $Z=\sqrt{\mu T}$:
+        \begin{equation}
+            r=\frac{Z_1-Z_2}{Z_1+Z_2},\quad\tau=\frac{2Z_1}{Z_1+Z_2}.
+        \end{equation}
+        Because $r$ and $\tau$ are defined as the ratios of the amplitudes of the reflected and transmitted waves to the incident wave, we have a constraint $\abs{r}+\abs{\tau}=1$.
+        Note that this has nothing to do with energy conservation, it holds even when energy is not conserved!
+
+        \paragraph{}
+        Consider a boundary where the density increases.
+        The wave speed is slower on the other side of the boundary, $v_2<v_1$, so $r<0$ and $\tau<1$.
+        The pulse also becomes narrower because the wave speed is slower.
+        % TODO: include diagrams of these scenarios
+        What about where the density decreases?
+        The new wave speed is faster, $v_2>v_1$, so $r>0$ and $\tau>1$.
+        The reflected pulse has the same width but with smaller amplitude and the transmitted pulse is broader because its speed is higher.
+        The maths for these scenarios is general to \textit{all} shapes of waves.
+        For periodic waves, the left-hand side of the boundary consists of the superposition of the incident and reflected waves.
+        For the transmitted wave, since the frequency is fixed by the source the wavelength \textit{must} be the quantity to change.
+        If energy is conserved, it is conserved at the boundary, so we also have the constraint
+        \begin{equation}
+            \abs{P_{\text{inst}_i}(x_b,t)}=\abs{P_{\text{inst}_r}(x_b,t)}+\abs{P_{\text{inst}_t}(x_b,t)}.
+        \end{equation}
+        Note that this is different to the equations above where incident and reflected were on the same side, here reflected and transmitted are on the same side.
+
+    \section{Normal Modes and Fourier Series}
+        \paragraph{}
+        Consider a standing wave $y(x,t)=Ae^{i(kx-\omega t)}+Be^{i(kx+\omega t)}$ on a string clamped at both ends.
+        % TODO: include diagram of this
+        Suppose the string runs from $x=0$ to $x=L$, then at the boundaries we have $y(0,t)=y(L,t)=0$.
+        Applying the left boundary condition to the standing wave, we get
+        \begin{gather}
+            y(0,t)=\Re(Ae^{-i\omega t}+Be^{i\omega t})=0\\
+            A\cos(\omega t)+B\cos(\omega t)=0\\
+            \implies A=-B.
+        \end{gather}
+        This makes physical sense because as we have seen above, wave pulses invert at fixed boundaries.
+        For the right boundary condition, we get
+        \begin{align}
+            y(L,t)&=\Re(A[e^{i(kL-\omega t)-e^{i(kL+\omega t)}}])\\
+            &=\Re(Ae^{ikL}[\underbrace{e^{-i\omega t}-e^{i\omega t}}_{-2i\sin(\omega t)}])\\
+            &=2A\sin(kL)\sin(\omega t)=0\\
+            &\implies\sin(kL)=0\\
+        \end{align}
+        $\sin(kL)=0$ implies that $kL=n\pi$, so we can write the standing wave in the form
+        \begin{equation}
+            y(x,t)=A\sin(k_n x)\cos(\omega_n t+\phi_0),
+        \end{equation}
+        where
+        \begin{equation}
+            k_n=\frac{n\pi}{L},\quad\omega_n=\frac{n\pi v}{L}.
+        \end{equation}
+        Note that wavelength is related to angular wavenumber by $\lambda=\frac{2\pi}{k}$, so $\lambda_n=\frac{2\pi}{k_n}=\frac{2L}{n}$.
+        These allowed wavenumbers/frequencies are the \textbf{normal modes} of vibration for the string clamped at both ends.
+
+        \paragraph{}
+        Recall in chapter~\ref{chap:6} we discussed exciting all the frequencies of a system at once using the impulse method.
+        If we pluck the string, multiple normal modes are excited.
+        The resulting motion of the string is a superposition of the normal modes, given by
+        \begin{equation}
+            y(x,t)=\sum_n A_n\sin(k_n x)\cos(\omega_n t).
+        \end{equation}
+        We have chosen $\cos$ instead of $\sin$ here for the temporal part because the displacement is maximal at $t=0$.
+        It makes no difference to the physics which one we choose.
+        At $t=0$, we have
+        \begin{equation}\label{eq:waves:plucked-string-initial-conditions}
+            y(x,0)=\sum_n A_n\sin\left(\frac{n\pi}{L}x\right).
+        \end{equation}
+        If we can calculate all the $A_n$'s, we can determine the subsequent motion of the string.
+        But there may be infinitely many $A_n$'s!
+        Luckily, we can use a mathematical tool called \textbf{Fourier series} which makes the calculation of all of them straightforward.
+
+        \paragraph{}
+        If we have a periodic function (for simplicity we can assume the period is $2\pi$, since we can stretch or shrink it otherwise), it is (almost) always possible to represent it as an infinite series of sines and cosines.
+        % TODO: clarify the almost
+        \begin{equation}\label{eq:waves:fourier-series}
+            f(x)=\frac{1}{2}a_0+\sum_{j=1}^\infty a_j\cos(jx)+\sum_{j=1}^\infty b_j\sin(jx).
+        \end{equation}
+        Using some convenient properties of integrals of sines and cosines, there is a simple method to calculate what the coefficients $a_j$ and $b_j$ should be for any function $f(x)$.
+        We can see how this will help us solve our problem of representing a wave pulse as a sum of normal modes.
+
+        \paragraph{}
+        Specifically, we will make use of the following three integrals:
+        \begin{align}
+            &\int_{-\pi}^\pi\sin(mx)\sin(nx)\dd{x}=\begin{cases}
+                0\text{ if }m\neq n\\
+                \pi\text{ if }m=n
+            \end{cases}\\
+            &\int_{-\pi}^\pi\cos(mx)\cos(nx)\dd{x}=\begin{cases}
+                0\text{ if }m\neq n\\
+                \pi\text{ if }m=n
+            \end{cases}\\
+            &\int_{-\pi}^\pi\sin(mx)\cos(nx)\dd{x}=0\quad\forall m,n.
+        \end{align}
+        % TODO: talk about orthogonality
+        Now consider multiplying equation~\ref{eq:waves:fourier-series} by $\cos(nx)$ and integrating from $-\pi$ to $\pi$.
+        We get
+        \begin{align}
+            \begin{split}
+                \int_{-\pi}^\pi\cos(nx)f(x)\dd{x}&=\frac{1}{2}a_0\int_{-\pi}^\pi\cos(nx)\dd{x}+\sum_{j=1}^\infty a_j\int_{-\pi}^\pi\cos(nx)\cos(jx)\dd{x}\\
+                &+\underbrace{\sum_{j=1}^\infty b_j\int_{-\pi}^\pi\sin(nx)\cos(jx)\dd{x}}_{=0}
+            \end{split}\\
+            &=\frac{1}{2}a_0\int_{-\pi}^\pi\cos(nx)\dd{x}+\sum_{j=1}^\infty a_j\int_{-\pi}^\pi\cos(nx)\cos(jx)\dd{x}.
+        \end{align}
+        If $n=0$ we get
+        \begin{equation}
+            \int_{-\pi}^\pi\cos(0)f(x)\dd{x}=\frac{1}{2}a_0\int_{-\pi}^\pi\cos(0)\dd{x}=\pi a_0.
+        \end{equation}
+        Whereas if $n>0$ we find
+        \begin{equation}
+            \int_{-pi}^\pi\cos(nx)f(x)\dd{x}=\sum_{j=1}^\infty a_j\int_{-\pi}^\pi\cos(nx)\cos(jx)\dd{x}.
+        \end{equation}
+        All the terms on the right-hand side are zero except the one where $j=n$, where the result will be $\pi a_n$.
+        So we have found formula for $a_0$ and $a_n$, they are
+        \begin{align}
+            a_0&=\frac{1}{\pi}\int_{-\pi}^\pi f(x)\dd{x}\\
+            a_n&=\frac{1}{\pi}\int_{-\pi}^\pi\cos(nx)f(x)\dd{x}.
+        \end{align}
+        Similarly, if we multiply by $\sin(nx)$ and integrate from $-\pi$ to $\pi$ we find
+        \begin{equation}
+            b_n=\frac{1}{\pi}\int_{-\pi}^\pi\sin(nx)f(x)\dd{x}.
+        \end{equation}
+
+        \paragraph{}
+        More generally, if a function has a period $P$, then we can adjust the periods of sine and cosine and the formulae for the coefficients as follows:
+        \begin{align}
+            f(x)&=\frac{1}{2}a_0+\sum_{j=1}^\infty a_j\cos\left(\frac{2\pi n}{P}x\right)+\sum_{j=1}^\infty b_j\sin\left(\frac{2\pi n}{P}x\right)\\
+            a_0&=\frac{2}{P}\int_{-\frac{P}{2}}^{\frac{P}{2}}f(x)\dd{x}\\
+            a_n&=\frac{2}{P}\int_{-\frac{P}{2}}^{\frac{P}{2}}\cos\left(\frac{2\pi n}{P}x\right)f(x)\dd{x}\\
+            b_n&=\frac{2}{P}\int_{-\frac{P}{2}}^{\frac{P}{2}}\sin\left(\frac{2\pi n}{P}x\right)f(x)\dd{x}.
+        \end{align}
+        In fact, the integrals don't necessarily have to be from $-\frac{P}{2}$ to $\frac{P}{2}$, as long as they go over one full period.
+        We can choose the most convenient range to integrate over.
+
+        \paragraph{}
+        Note that if a function is odd ($f(-x)=-f(x)$), the Fourier series will \textit{only} contain sine terms.
+        Likewise, if a function is even ($f(-x)=f(x)$) its Fourier series will \textit{only} contain cosine terms.
+        This is because sine is an odd function and cosine is even.
+        \begin{example}
+            Find the Fourier series of a square wave of amplitude $d$ and period $P$, which has the form
+            \begin{equation}
+                f(x)=\begin{cases}
+                    -d,\quad-\frac{P}{2}<x<0\\
+                    d,\quad 0<x<\frac{P}{2}
+                \end{cases}
+            \end{equation}
+            on the domain $\left[-\frac{P}{2},\frac{P}{2}\right]$.
+            Outside of this domain it repeats periodically.
+            % TODO: include a diagram of square wave
+
+            \paragraph{}
+            We have defined the square wave above as an odd function, so there should be no cosine terms.
+            We can show this explicitly by calculating the $a_n$ coefficients:
+            \begin{align}
+                a_n&=\frac{2}{P}\int_{-\frac{P}{2}}^{\frac{P}{2}}\cos\left(\frac{2\pi n}{P}x\right)f(x)\dd{x}\\
+                &=\frac{2}{P}\left[\int_{-\frac{P}{2}}^0 -d\cos\left(\frac{2\pi n}{P}x\right)\dd{x}+\int_0^{\frac{P}{2}}d\cos\left(\frac{2\pi n}{P}x\right)\dd{x}\right]\\
+                &=\frac{2d}{P}\underbrace{\left[\int_0^{\frac{P}{2}}\cos\left(\frac{2\pi n}{P}x\right)\dd{x}-\int_{-\frac{P}{2}}^0\cos\left(\frac{2\pi n}{P}x\right)\dd{x}\right]}_{=0\text{ since }\cos(-x)=\cos(x)}.
+            \end{align}
+            Now calculating the $b_n$ coefficients, we find
+            \begin{align}
+                b_n&=\frac{2}{P}\int_{-\frac{P}{2}}^{\frac{P}{2}}\sin\left(\frac{2\pi n}{P}x\right)f(x)\dd{x}\\
+                &=\frac{2}{P}\left[\int_{-\frac{P}{2}}^0 -d\sin\left(\frac{2\pi n}{P}x\right)\dd{x}+\int_0^{\frac{P}{2}}d\sin\left(\frac{2\pi n}{P}x\right)\dd{x}\right]\\
+                &=\frac{2d}{P}\left[\int_0^{\frac{P}{2}}\sin\left(\frac{2\pi n}{P}x\right)\dd{x}-\int_{-\frac{P}{2}}^0\sin\left(\frac{2\pi n}{P}x\right)\dd{x}\right]\\
+                &=\frac{2d}{P}\left(\left[\frac{P}{2\pi n}\cos\left(\frac{2\pi n}{P}x\right)\right]_{-\frac{P}{2}}^0-\left[\frac{P}{2\pi n}\cos\left(\frac{2\pi n}{P}x\right)\right]_0^{\frac{P}{2}}\right)\\
+                &=\frac{d}{\pi n}([1-\cos(-\pi n)]-[\cos(\pi n)-1])\\
+                &=\frac{2d}{\pi n}[1-\cos(\pi n)].
+            \end{align}
+            If $n$ is even then $\cos(\pi n)=1$ and if $n$ is odd then $\cos(\pi n)=-1$, so we get
+            \begin{equation}
+                b_n=\begin{cases}
+                    0\text{ if $n$ is even}\\
+                    \frac{4d}{\pi n}\text{ if $n$ is odd.}
+                \end{cases}
+            \end{equation}
+            Therefore the Fourier series for the square wave consists only of sine terms with odd $n$.
+            The first few terms are
+            \begin{equation}
+                f(x)=\frac{4d}{\pi}\sin\left(\frac{2\pi}{P}x\right)+\frac{4d}{3\pi}\sin\left(\frac{6\pi}{P}x\right)+\frac{4d}{5\pi}\sin\left(\frac{10\pi}{P}x\right)+\dots.
+            \end{equation}
+            % TODO: show plot of Fourier series
+        \end{example}
+
+        \paragraph{}
+        Let's now apply this amazing mathematical technique to the motion of a plucked string clamped at both ends.
+        We know that the initial displacement of the string is given by equation~\ref{eq:waves:plucked-string-initial-conditions}, and we want to find the $A_n$'s.
+        However, the displacement of the string is not periodic in $x$ because the string is finite in length!
+        How we can find a Fourier series?
+        We can just find a Fourier series for a periodic function that matches our string in the range $0$ to $L$.
+        % TODO: include diagram for this periodic extension
+        Really, what we are asking is ``what normal modes are excited when we pluck the string'', so we actually want our Fourier series to contain only the normal modes.
+        Since $\lambda_1=2L$, our periodic representation of the string \textit{must} have period $2L$ otherwise the Fourier series won't contain the fundamental mode.
+        Note that it must also be an odd function, because the initial conditions for the string only contains sines.
+        % TODO: include diagram of what fundamental mode looks like on domain
+        With these constraints, we end up with the following function:
+        \begin{equation}
+            y(x,0)=\begin{cases}
+                4d\frac{x}{L},\quad 0<x<\frac{L}{4}\\
+                \frac{4d}{3}\left(1-\frac{x}{L}\right),\quad\frac{L}{4}<x<L,
+            \end{cases}
+        \end{equation}
+        where $d$ is the maximum initial displacement of the string.
+        Using the formula for the Fourier coefficients with $y^\prime(x)$ as the periodic extension of $y(x,0)$, we get
+        \begin{align}
+            A_n&=\frac{1}{L}\int_{-L}^L\underbrace{\sin\left(\frac{2\pi}{\lambda_n}x\right)}_\text{odd}\underbrace{y^\prime(x)}_\text{odd}\dd{x}\\
+            &=\frac{2}{L}\int_0^L\sin\left(\frac{2\pi}{\lambda_n}x\right)y^\prime(x)\dd{x}\\
+            &=\frac{2}{L}\int_0^L\sin\left(\frac{2\pi}{\lambda_n}x\right)y(x,0)\dd{x}.
+        \end{align}
+        The second line follows because two odd functions multiplied together make an even function, so we can cut the range of the integral in half and double the result.
+        The last line follows because $y^\prime(x)=y(x,0)$ on the domain $[0,L]$, so actually only the initial displacement between $0$ and $L$ matters!
+        Now we can find the $A_n$'s:
+        \begin{equation}
+            A_n=\frac{8d}{L^2}\int_0^{\frac{L}{4}}x\sin\left(\frac{n\pi}{L}x\right)\dd{x}+\frac{8d}{3L}\int_{\frac{L}{4}}^L\sin\left(\frac{n\pi}{L}x\right)\dd{x}-\frac{8d}{3L^2}\int_{\frac{L}{4}}^L x\sin\left(\frac{n\pi}{L}x\right)\dd{x}.
+        \end{equation}
+        We can solve these integrals using the following results
+        \begin{align}
+            \int\sin\left(\frac{n\pi}{L}x\right)\dd{x}&=-\frac{L}{n\pi}\cos\left(\frac{n\pi}{L}x\right)+c\\
+            \int x\sin\left(\frac{n\pi}{L}x\right)\dd{x}&=\frac{L^2}{n^2\pi^2}\sin\left(\frac{n\pi}{L}x\right)-\frac{Lx}{n\pi}\cos\left(\frac{n\pi}{L}x\right).
+        \end{align}
+        So we find
+        \begin{equation}
+            \begin{split}
+                A_n&=8d\left[\frac{1}{n^2\pi^2}\sin\left(\frac{n\pi}{4}\right)-\frac{1}{4\pi n}\cos\left(\frac{n\pi}{4}\right)\right]\\
+                &+\frac{8d}{3}\left[\frac{1}{n\pi}\cos\left(\frac{n\pi}{4}\right)-\frac{1}{n\pi}\cos(n\pi)\right]\\
+                &+\frac{8d}{3}\left[\frac{1}{n\pi}\cos(n\pi)+\frac{1}{n^2\pi^2}\sin\left(\frac{n\pi}{4}\right)-\frac{1}{4\pi n}\cos\left(\frac{n\pi}{4}\right)\right].
+            \end{split}
+        \end{equation}
+        The cosine terms all cancel out, and we are left with
+        \begin{equation}
+            A_n=\frac{32d}{3n^2\pi^2}\sin\left(\frac{n\pi}{4}\right).
+        \end{equation}
+        $\sin\left(\frac{n\pi}{4}\right)$ follows the repeating sequence $\frac{1}{\sqrt{2}}$, $1$, $\frac{1}{\sqrt{2}}$, $0$, $-\frac{1}{\sqrt{2}}$, $-1$, $-\frac{1}{\sqrt{2}}$, $0$..., so the first few terms of the Fourier series are
+        \begin{equation}
+            \begin{split}
+                y(x,0)=\frac{32d}{3\pi^2}\biggl[&\frac{1}{\sqrt{2}}\sin\left(\frac{\pi}{L}x\right)+\frac{1}{4}\sin\left(\frac{2\pi}{L}x\right)+\frac{1}{9\sqrt{2}}+\sin\left(\frac{3\pi}{L}x\right)\\
+                &-\frac{1}{25\sqrt{2}}\sin\left(\frac{5\pi}{L}x\right)-\frac{1}{36}\sin\left(\frac{6\pi}{L}x\right)-\frac{1}{49\sqrt{2}}\sin\left(\frac{7\pi}{L}x\right)+\dots\biggr]
+            \end{split}
+        \end{equation}
+        We can plot the \textbf{frequency spectrum} of $y(x,0)$, which is a plot showing $A_n$ against $n$.
+        We see that the lowest $n$ are the largest components, and they can smaller as $n$ increases.
+        The gaps in the frequency spectrum are where the modes have a node at the point where the string was plucked.
+        This means that because of where we chose to pluck the string, the resulting vibration will not contain any of those frequencies at all.
+
+        \paragraph{}
+        With damping effects, we find that all of the normal modes decay away, with the higher frequency modes decaying faster.
+
+    \section{Sound Waves}
+        \paragraph{}
+        So far we have been looking at transverse waves, where the displacement is perpendicular to the direction of wave travel.
+        Examples of transverse waves in real life are waves on a string and light waves.
+        Waves can also be \textbf{longitudinal}, where the displacement is along the direction of travel.
+        Sound waves are longitudinal, with regions of high density along the direction of travel (compression) and low density (rarefaction).
         
+        \paragraph{}
+        Let's look at some snapshots of longitudinal waves.
+        We denote the displacement of a particle from its equilibrium position by $s(x,t)$.
+        Then the particles oscillate back and forth along the direction of motion with SHM.
+        % TODO: include a diagram of displacement with particle positions overlayed
+        Where $s$ is positive, the particles are displaced to the right, and where $s$ is negative they are displaced to the left.
+        The points of zero displacement represent pressure maxima and minima.
+
+        \paragraph{}
+        It is a general rule for all mechanical waves that the wave speed is related to the ratio of restoring force to inertia.
+        For liquids and gases, this is
+        \begin{equation}
+            v=\sqrt{B}{\rho},
+        \end{equation}
+        where $\rho$ is the density and $B$ is the \textbf{bulk modulus}, which is a measure of how easy it is to compress the medium, given by
+        \begin{equation}
+            B=-V\dv{P}{V}.
+        \end{equation}
+        In everday situations, we can approximate $\dv{P}{V}$ as $\frac{\Delta P}{\Delta V}$ i.e. the pressure change that accompanies a small volume change.
+        We find that for air $B_\text{air}=\qty{1.42e5}{\newton\per\meter\squared}$, and for water $B_\text{water}=\qty{2.2e9}{\newton\per\meter\squared}$.
+        The density of air will change in everyday situations depending on the temperature.
+        At room temperature (\qty{293}{\kelvin}), we have $v=\qty{343}{\meter\per\second}$.
+        More generally, we have $v\propto T$.
+
+        \paragraph{}
+        The equations of pressure waves have the same form as transverse waves:
+        \begin{equation}
+            s(x,t)=A\cos(kx-\omega t+\phi_0).
+        \end{equation}
+        % TODO: justify this
+        Can we get a formula for the variation of pressure across a sound wave?
+        Along the direction of propogation, volume elements oscillate in SHM and pressure variations cause the volumes to change slightly.
+        This is because the left and right-hand sides of undergo slightly different displacements.
+        Thus by the definition of the bulk modulus, we get
+        % TODO: include a diagram of this
+        \begin{align}
+            P(x,t)&=-B\pdv{s(x,t)}{x}\\
+            &=BAk\sin(kx-\omega t+\phi_0)\\
+            &=P_\text{max}\sin(kx-\omega t+\phi_0).
+        \end{align}
+        Note that this pressure is the excess pressure deviation from equilibrium, \textit{not} the absolute pressure in the fluid.
+        From this, we can see that on the plot of $s(x,t)$, points of zero displacement with \textit{positive} derivative are the pressure \textit{maxima}, and those with \textit{negative} derivative are the pressure \textit{minima}.
+
+        \paragraph{}
+        When we calculated the power transmitted by a transverse wave on a string, we could neglect the other directions and consider the problem in 1D.
+        For a sound wave this is not possible, so we have to consider plane waves (waves that have constant value on a plane perpendicular to the direction of motion).
+        Instead of power, we look at \textit{intensity} which is defined as power per unit area, and we measure it across surfaces perpendicular to the propagation of the wave.
+        We have a force $F$ which does work along a distance $\dd{s}$, so $\dd{W}=F\dd{s}$, then the intensity is the power $\dv{W}{t}$ divided by the area which the force acts on $S$:
+        \begin{align}
+            I_\text{inst}&=\dv{}{t}\left(\frac{F}{S}\dd{s}\right)\\
+            &=\frac{F}{S}\pdv{s}{t}\\
+            &=P(x,t)\pdv{s}{t}\\
+            &=-B\pdv{s}{x}\pdv{s}{t}\\
+            &=BA^2k\omega\sin^2(kx-\omega t+\phi_0).
+        \end{align}
+        Note how similar the second last line looks to the equation for instantaneous power of a transverse wave on a string.
+        Taking the time average, we get
+        \begin{align}
+            I_\text{avg}&=\frac{1}{2}BA^2k\omega\\
+            &=\frac{1}{2}\frac{P_\text{max}^2}{\sqrt{\rho B}},
+        \end{align}
+        where in the second line we have substituted more physical quantities.
+        The denominator $\sqrt{\rho B}$ is known as the \textbf{specific acoustic impedance} $Z$, and this can be used to define transmission and reflection coefficients as we did before.
+
+    \section{Longitudinal Standing Waves}
+        \paragraph{}
+        We now have two ways of describing longitudinal waves, by the displacement of the particles and by the pressure along the direction of travel.
+        \begin{align}
+            s(x,t)&=A\cos(kx-\omega t+\phi_0)\\
+            P(x,t)&=P_\text{max}\sin(kx-\omega t+\phi_0).
+        \end{align}
+        We can see that if we have a longitudinal standing wave, displacement nodes will be pressure antinodes, and pressure nodes will be displacement antinodes.
+
+        \paragraph{}
+        Let's look at the allowed wavenumbers for longitudinal waves in a pipe with closed and open ends.
+        In the case with both ends closed, we will have displacement nodes at each end of the pipe (the medium cannot move through the end).
+        Thus the normal modes will have the form
+        \begin{equation}
+            s_n(x,t)=A\sin(k_n x)\cos(\omega_n t+\phi_0),
+        \end{equation}
+        where $k_n=\frac{n\pi}{L}$, $\lambda_n=\frac{2L}{n}$, and $f_n=\frac{nv}{2L}=nf_1$.
+        In the case where both ends are open, we have displacement antinodes at each end.
+        This leads to normal modes of the form
+        \begin{equation}
+            s_n(x,t)=A\cos(k_n x)\cos(\omega_n t+\phi_0),
+        \end{equation}
+        with the same allowed wavenumbers.
+        In the case of pipe with one and closed and one end open, there will be a displacement node at the closed end and a displacement antinode at the open end.
+        Depending on which end of the pipe is open, we would use sine or cosine for the spatial part of the normal modes.
+        The allowed wavenumbers are then $k_n=\frac{(2n-1)\pi}{2L}$, $\lambda_n=\frac{4L}{2n-1}$, $f_n=\frac{(2n-1)v}{4L}=(2n-1)f_1$.
+        Note that in this case the fundamental mode has a wavelength of $4L$.
+
+    \section{The Doppler Effect}
+        \paragraph{}
+        Consider a source at rest emitting spherical waves with frequency $f_s$ and speed $v$.
+        What does a detector towards the source with speed $v_d$ see?
+        % TODO: include a diagram for this
+        In this situation, the wavefronts approach the detector with speed $v+v_d$, so the frequency as measured by the detector is
+        \begin{equation}
+            f_d=\frac{v+v_d}{\lambda}=f_s\frac{v+v_d}{v}.
+        \end{equation}
+        If the detector is moving away from the source, then the observed frequency will be
+        \begin{equation}
+            f_d=f_s\frac{v-v_d}{v}.
+        \end{equation}
+        This change in frequency due to a difference in velocity is known as the \textbf{Doppler effect}.
+
+        \paragraph{}
+        What about a moving source and a stationary detector?
+        % TODO: include diagram for this
+        During one period $T_s$ of the source emitting, the waves will propagate a distance $vT_s$.
+        The source itself moves a distance $v_sT_s$.
+        If the source is moving towards the detector, then the observed wavelength is $\lambda_d=vT_s-v_sT_s=T_s(v-v_s)$, which gives an observed frequency of
+        \begin{equation}
+            f_d=\frac{v}{T_s(v-v_s)}=f_s\frac{v}{v-v_s}.
+        \end{equation}
+        If the source is moving away from the detector, then we get
+        \begin{equation}
+            f_d=f_s\frac{v}{v+v_s}.
+        \end{equation}
+
+        \paragraph{}
+        In the general case of a moving source and detector, we have
+        \begin{equation}
+            f_d=f_s\frac{v\pm v_d}{v\mp v_s},
+        \end{equation}
+        where we have the $\frac{+}{-}$ case when the source and detector are moving closer and the $\frac{-}{+}$ case when they are moving apart.
+
+    \section{Wave Interference}
+        \paragraph{}
+        When two waves come together the result is the sum of both waves at every point.
+        A special case of superposition is created when two waves of the same frequency (coherent waves) meet, called \textbf{interference}.
+        When the crests of two coherent waves meet, they add together and we get a crest which is larger than either of the initial ones, which is called \textbf{constructive interference}.
+        When a crest of one wave meets a trough of another, they cancel out and we get a much smaller amplitude, or even nothing if the initial amplitudes match.
+        This is \textbf{destructive interference}.
+        Let's look at this mathematically.
+        Consider two waves of the same amplitude and frequency travelling in the same direction in 1D.
+        Lets look at the amplitude at a point $x_i$ which is a distance $x_1$ from the source of the first wave and a distance $x_2$ from the source of the second.
+        The resulting amplitude is
+        \begin{equation}
+            y(x_i,t)=A\cos(kx_1-\omega t+\phi_{0,1})+A\cos(kx_2-\omega t+\phi_{0,2}).
+        \end{equation}
+        Now, we will make use of the addition formula
+        \begin{equation}
+            A\cos(\theta_1)+A\cos(\theta_2)=2A\cos\left(\frac{\theta_1+\theta_2}{2}\right)\cos\left(\frac{\theta_1-\theta_2}{2}\right).
+        \end{equation}
+        Then the amplitude at $x_i$ becomes
+        \begin{align}
+            y(x_i,t)&=2A\cos\left(\frac{k(x_1+x_2)-2\omega t+\phi_{0,1}+\phi_{0,2}}{2}\right)\cos\left(\frac{k(x_1-x_2)+\phi_{0,1}-\phi_{0,2}}{2}\right)\\
+            &=2A\cos\left(\frac{\Delta\phi}{2}\right)\cos(k\bar{x}-\omega t+\bar{\phi}_0),
+        \end{align}
+        where we have defined the \textit{total} phase difference $\Delta\phi=k(x_2-x_1)+\phi_{0,2}-\phi_{0,1}$, the average distance from $x_i$ to each source $\bar{x}=\frac{x_1+x_2}{2}$, and the average initial phase $\bar{\phi}_0=\frac{\phi_{0,1}+\phi_{0,2}}{2}$.
+        The maximum amplitude of the superposition is $2A\cos\left(\frac{\Delta\phi}{2}\right)$, so we see that this is maximised --- i.e. we get destructive interference --- for $\Delta\phi=2m\pi$ for integer $m$.
+        Likewise the maximum amplitude goes to zero and we get destructive interference when $\Delta\phi=(2m+1)\pi$.
+
+        \paragraph{}
+        To extend this to more than one dimension, we must keep in mind that wavefronts are circular in 2D and spherical in 3D.
+        If we are very far away from the source, the curvature of the waves becomes negligible and we get \textbf{plane waves}.
+        This is known as the \textbf{far-field limit}.
+
+        \paragraph{}
+        Consider an colinear array of $n$ wave sources all separated by a distance $d$.
+        % TODO: include a diagram of this
+        Let's put ourselves in the far-field limit, so that all the incoming wavefronts from the array will be parallel.
+        The \textbf{path difference} (the extra distance one wave has travelled relative to another) is given by $h=d\sin\theta$.
+        Then the \textbf{phase difference} is just the path difference multiplied by the wavelength $\Delta\phi=kh=\frac{2\pi}{\lambda}d\sin\theta$.
+        If this phase difference is a multiple of $2\pi$, we get constructive interference.
+        This is given by the condition
+        \begin{equation}
+            d\sin\theta_m=m\lambda,
+        \end{equation}
+        where $\theta_m$ labels the angles where we get maxima in amplitude.
+        The value of $m=0,1,2,...$ is called the \textbf{order} of the maxima.
+        Inbetween the maxima, we get secondary maxima with amplitude given by
+        \begin{equation}
+            s(\theta)=\varepsilon\frac{\sin\left(n\frac{\Delta\phi}{2}\right)}{\sin\left(\frac{\Delta\phi}{2}\right)}=\varepsilon\frac{\sin\left(n\frac{kd\sin\theta}{2}\right)}{\sin\left(\frac{kd\sin\theta}{2}\right)},
+        \end{equation}
+        where $n$ is the number of sources and $\varepsilon$ is the amplitude of a single source.
+        % TODO: prove this formula
+        The intensity will be proportional to the square of the amplitude.
+        \begin{equation}
+            I(\theta)=I_1\frac{\sin^2\left(n\frac{kd\sin\theta}{2}\right)}{\sin^2\left(\frac{kd\sin\theta}{2}\right)},
+        \end{equation}
+        where $I_1$ is the intensity from a single source.
+        % TODO: show plots of I against theta for 2, 3, 10 sources
+
+        \paragraph{}
+        Constructive interference is quite often used to examine structures which are too small to observe with visible light, as was historically the case with \textbf{Bragg scattering}.
+        Lawrence and William Henry Bragg used constructive interference of X-rays to measure the distance between atoms in crystals in the early 1910s.
+        Consider a crystal structure with layers of atoms separated by a distance $d$.
+        % TODO: include a diagram for this
+        When X-rays enter the crystal, they scatter off the layers.
+        Consider two parallel incident rays which reflect off the top two layers.
+        The path difference between the two rays will be $2d\sin\theta$, so therefore we get constructive interference when the path difference is an integer multiple of the wavelength:
+        \begin{equation}
+            2d\sin\theta=n\lambda.
+        \end{equation}
+
+        \paragraph{}
+        Interference also gives rise to the phenomenon known as \textbf{diffraction}, which is where waves are observed to curve around apertures and obstructions in their path.
+        Each part of the wavefront in the gap or around the barrier becomes a secondary source of spherical waves, and these waves interfere to give a curved interference pattern.
+        This method of analysis is known as the \textbf{Huygens-Fresnel principle}.
+        % TODO: include a diagram of this
+
+        \paragraph{}
+        Consider a plane wave moving through a gap of height $d$.
+        Let's look at a thin slice of the gap of length $\dd{y}$ at a distance $y$ from the middle as a point source.
+        % TODO: include a diagram of this
+        The amplitude due to this small slice at a far away point $P$ is $\dd{s}=\varepsilon_R\dd{y}\cos(kr-\omega t)$, where $r$ is the distance from the thin slice to $P$ and $R$ is the distance from the middle of the gap to $P$.
+        % TODO: why? show this in more detail
+        If $R\gg d$, then $r\approx R$ so $\varepsilon_R$ only depends on $R$.
+        It can be shown that $r\approx R-y\sin\theta$, which we will need to use because small differences in the distance \textit{will} make a big difference for the phase of the wave at $P$.
+        Integrating over the whole gap, we get
+        \begin{align}
+            s(\theta)=\int\dd{s}&=\varepsilon_R\int_{-\frac{d}{2}}^{\frac{d}{2}}\cos(k(R-y\sin\theta)-\omega t)\dd{y}\\
+            &=2\varepsilon_R d\frac{sin\left(\frac{kd\sin\theta}{2}\right)}{kd\sin\theta}\cos(kR-\omega t).
+        \end{align}
+        The intensity is proportional to the time average of the square of the amplitude.
+        \begin{equation}
+            I(\theta)=4I_0\frac{\sin^2\left(\frac{kd\sin\theta}{2}\right)}{k^2d^2\sin^2\theta},
+        \end{equation}
+        where $I_0$ is the intensity at $\theta=0$.
+        Note that in this situation minima occur at integer multiples of the wavelength, not maxima.
+
+        \paragraph{}
+        If we superpose two sounds with a very similar frequency, we will hear a periodic variation in sound intensity.
+        Consider two longitudinal sound waves:
+        \begin{align}
+            s_1(x,t)&=A\cos(k_1x-\omega_1t)\\
+            s_2(x,t)&=A\cos(k_2x-\omega_2t),
+        \end{align}
+        where $k_1\approx k_2$ and $\omega_1\approx\omega_2$.
+        Then using the addition formula, the superposition is
+        \begin{align}
+            s_1+s_2&=2A\cos\left(\frac{k_1+k_2}{2}x-\frac{\omega_1+\omega_2}{2}t\right)\cos\left(\frac{k_1-k_2}{2}x-\frac{\omega_1-\omega_2}{2}t\right)\\
+            &=2A\cos(\bar{k}x-\bar{\omega}t)\cos(k_\text{mod}x-\omega_\text{mod}t),
+        \end{align}
+        where we have defined the average wavenumber and frequency $\bar{k}$ and $\bar{\omega}$, and a \textbf{modulation wavenumber} and \textbf{modulation frequency} $k_\text{mod}$ and $\omega_\text{mod}$.
+        This superposition is a product of a wave with the average frequency of the two original ones and a low frequency modulation (since the two original frequencies are close, the modulation frequency is very low).
+        % TODO: include diagram of this
+        The intensity rises and falls twice per period, so the \textbf{beat frequency} is twice the modulation frequency, $f_\text{beat}=2f_\text{mod}=f_1-f_2$.
+
+        \paragraph{}
+        Now consider the case where we allow the phase velocities of the waves to be different ($v_1=\frac{\omega_1}{k_1}\neq\v_2=\frac{\omega_2}{k_2}$).
+        Then we can write
+        \begin{align}
+            s_1(x,t)&=A\cos((k_0+\Delta k)x-(\omega_0+\Delta\omega)t)\\
+            s_2(x,t)&=A\cos((k_0-\Delta k)x-(\omega_0-\Delta\omega)t),
+        \end{align}
+        and we get
+        \begin{align}
+            s_1+s_2&=2A\cos\left(\frac{2k_0}{2}x-\frac{2\omega_0}{2}t\right)\cos\left(\frac{2\Delta k}{2}x-\frac{2\Delta\omega}{2}t\right)\\
+            &=2A\cos(k_0x-\omega_0t)\cos(\Delta kx-\Delta\omega t).
+        \end{align}
+        This is the product of a higher frequency wave with a lower frequency envelope.
+        The higher frequency wave has phase speed $v_\text{crest}=\frac{\omega_0}{k_0}$ and the envelope has speed $v_\text{env}=\frac{\Delta\omega}{\Delta k}$.
+        If $\omega\propto k$, then these speeds are always the same.
+        However, if this is not the case then the wave crests travel at a different speed to the envelope.
+        If the range of wavenumbers in a superposition is small, then the group velocity is the speed of the envelope (the largest amplitude) and we have $v_\text{gr}=\left.\dv{\omega}{k}\right|_{k_0}$.
+        % TODO: write more detail in this section
+        % TODO: talk about wavepackets and bandwidth theorem?
+        
+        % TODO: lots of sections in this chapter need rearranging, especially parts of the last section
+
 \end{document}
