@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics</title>
+<!--Generated on Mon Jun 16 09:54:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="up up" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="start" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="prev" href="Ch1.S3.html" title="1.3 Constant Acceleration ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="next" href="Ch1.S5.html" title="1.5 Forces ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch1.S1.html" title="1.1 Introduction ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch1.S2.html" title="1.2 Motion in One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch1.S3.html" title="1.3 Constant Acceleration ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch1.S5.html" title="1.5 Forces ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch1.S6.html" title="1.6 Projectile Motion ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch1.S7.html" title="1.7 Friction ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch1.S8.html" title="1.8 Gravitation ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="bib.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch1.html" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Newton’s Laws of Motion</span></a><a href="Ch1.S3.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Constant Acceleration</span></a><a href="Ch1.S5.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.5 </span>Forces</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.4 </span>Motion in More than One Dimension</h1>
+
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">As alluded to in section <a href="Ch1.S2.html" title="1.2 Motion in One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2</span></a> above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
+This is because the set of all points in 3D space forms a <span class="ltx_text ltx_font_bold">vector space</span>, called <math id="SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math>, so we can pick 3 <span class="ltx_text ltx_font_bold">orthogonal</span> axes and an origin to use as our coordinate system and define three basis vectors to span all of space.
+In <span class="ltx_text ltx_font_bold">cartesian</span> coordinates, which are the most commonly used system to label points in 3D space, we label the axes <math id="SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and <math id="SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, and choose the unit vectors <math id="SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="\hat{\boldsymbol{\imath}}" display="inline"><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></math>, <math id="SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="\hat{\boldsymbol{\jmath}}" display="inline"><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></math> and <math id="SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="\hat{\boldsymbol{k}}" display="inline"><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></math> to point along each axis respectively.</p>
+</div>
+<figure id="SS0.SSS0.Px1.fig1" class="ltx_figure"><svg id="SS0.SSS0.Px1.pic1" class="ltx_picture" height="113.69" overflow="visible" version="1.1" width="113.34"><g fill="#000000" stroke="#000000" stroke-width="0.4pt" transform="translate(0,113.69) matrix(1 0 0 -1 0 0) translate(17.19,0) translate(0,19.49)"><path d="M 0 78.1 L 0 0 L 78.1 0" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.0 1.0 -1.0 0.0 0 78.1)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 78.1 0)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><path d="M 0 0 L 62.42 31.21" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.89442 0.4472 -0.4472 0.89442 62.42 31.21)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 83.63 -2.98)"><foreignObject height="5.96" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.91"><math id="SS0.SSS0.Px1.pic1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 67.88 39.07)"><foreignObject height="8.65" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.28"><math id="SS0.SSS0.Px1.pic1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -3.52 83.63)"><foreignObject height="5.96" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.04"><math id="SS0.SSS0.Px1.pic1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math></foreignObject></g><g stroke-width="0.8pt"><path d="M 0 30.51 L 0 0 L 30.51 0" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(0.0 1.0 -1.0 0.0 0 30.51)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(1.0 0.0 0.0 1.0 30.51 0)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g stroke-width="0.8pt"><path d="M 0 0 L 24.32 12.16" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(0.89442 0.4472 -0.4472 0.89442 24.32 12.16)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 36.38 -14.88)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="SS0.SSS0.Px1.pic1.m4" class="ltx_Math" alttext="\hat{\boldsymbol{\imath}}" display="inline"><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 21.35 17.49)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="SS0.SSS0.Px1.pic1.m5" class="ltx_Math" alttext="\hat{\boldsymbol{\jmath}}" display="inline"><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -12.58 36.38)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="SS0.SSS0.Px1.pic1.m6" class="ltx_Math" alttext="\hat{\boldsymbol{k}}" display="inline"><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></math></foreignObject></g></g></svg>
+</figure>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">A general vector in 3D cartesian coordinates is represented by a sum of components along each direction.</p>
+<table id="Ch1.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E15.m1" class="ltx_Math" alttext="\boldsymbol{A}=A_{x}\hat{\boldsymbol{\imath}}+A_{y}\hat{\boldsymbol{\jmath}}+A%
+_{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝑨</mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.15)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In 2D (in the <math id="SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane where the <math id="SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-component is zero), there is a simple way to calculate the components using the angle that the vector makes with the <math id="SS0.SSS0.Px2.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis.</p>
+</div>
+<figure id="SS0.SSS0.Px2.fig1" class="ltx_figure"><svg id="SS0.SSS0.Px2.pic1" class="ltx_picture" height="117.51" overflow="visible" version="1.1" width="120.1"><g fill="#000000" stroke="#000000" stroke-width="0.4pt" transform="translate(0,117.51) matrix(1 0 0 -1 0 0) translate(23.96,0) translate(0,20.62)"><path d="M 0 78.1 L 0 0 L 78.1 0" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.0 1.0 -1.0 0.0 0 78.1)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 78.1 0)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 83.63 -2.98)"><foreignObject height="5.96" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.91"><math id="SS0.SSS0.Px2.pic1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -3.64 86.32)"><foreignObject height="8.65" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.28"><math id="SS0.SSS0.Px2.pic1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math></foreignObject></g><g stroke-width="0.8pt"><path d="M 0 0 L 62.16 38.85" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(0.848 0.53 -0.53 0.848 62.16 38.85)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 67.88 44.26)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="10.38"><math id="SS0.SSS0.Px2.pic1.m3" class="ltx_Math" alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math></foreignObject></g><path d="M 15.75 0 C 15.75 2.95 14.92 5.84 13.35 8.35" style="fill:none"></path><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 20.37 3.07)"><foreignObject height="9.61" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="6.5"><math id="SS0.SSS0.Px2.pic1.m4" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math></foreignObject></g><g stroke-dasharray="0.4pt,2.0pt" stroke-dashoffset="0.0pt"><path d="M 0 39.37 L 62.99 39.37 L 62.99 0" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -19.34 36.23)"><foreignObject height="12.63" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="14.45"><math id="SS0.SSS0.Px2.pic1.m5" class="ltx_Math" alttext="A_{y}" display="inline"><msub><mi>A</mi><mi>y</mi></msub></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 55.59 -14.34)"><foreignObject height="11.12" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="14.81"><math id="SS0.SSS0.Px2.pic1.m6" class="ltx_Math" alttext="A_{x}" display="inline"><msub><mi>A</mi><mi>x</mi></msub></math></foreignObject></g></g></svg>
+</figure>
+<div id="SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">First, note that the length of the vector is given by Pythagoras’ theorem:</p>
+<table id="Ch1.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E16.m1" class="ltx_Math" alttext="\lvert\boldsymbol{A}\rvert=\sqrt{A_{x}^{2}+A_{y}^{2}}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mi>𝑨</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><msqrt><mrow><msubsup><mi>A</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>A</mi><mi>y</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.16)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Then, using trigonometry, the components <math id="SS0.SSS0.Px2.p2.m1" class="ltx_Math" alttext="A_{x}" display="inline"><msub><mi>A</mi><mi>x</mi></msub></math> and <math id="SS0.SSS0.Px2.p2.m2" class="ltx_Math" alttext="A_{y}" display="inline"><msub><mi>A</mi><mi>y</mi></msub></math> are given by</p>
+<table id="Ch7.S10.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E17.m1" class="ltx_Math" alttext="\displaystyle A_{x}" display="inline"><msub><mi>A</mi><mi>x</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E17.m2" class="ltx_Math" alttext="\displaystyle=\lvert\boldsymbol{A}\rvert\cos\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>𝑨</mi><mo stretchy="false">|</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.17)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E18.m1" class="ltx_Math" alttext="\displaystyle A_{y}" display="inline"><msub><mi>A</mi><mi>y</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E18.m2" class="ltx_Math" alttext="\displaystyle=\lvert\boldsymbol{A}\rvert\sin\theta." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>𝑨</mi><mo stretchy="false">|</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.18)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We also have a relation for the angle:</p>
+<table id="Ch1.E19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E19.m1" class="ltx_Math" alttext="\tan\theta=\frac{A_{y}}{A_{x}}." display="block"><mrow><mrow><mrow><mi>tan</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>=</mo><mfrac><msub><mi>A</mi><mi>y</mi></msub><msub><mi>A</mi><mi>x</mi></msub></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.19)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In 3D we need two angles to describe the direction of a vector (for example, the angle it makes with the <math id="SS0.SSS0.Px2.p2.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis and then the angle it makes with the <math id="SS0.SSS0.Px2.p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="SS0.SSS0.Px2.p2.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane), so the relations become slightly more complicated.
+We will not worry about this for now, and delay a detailed disccusion until the beginning of chapter <a href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">Note that it is important that our basis vectors are <span class="ltx_text ltx_font_bold">orthonormal</span>, meaning both orthogonal and of unit length, as this means we have the relations</p>
+<table id="Ch7.S10.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E20.m1" class="ltx_Math" alttext="\displaystyle\lvert\hat{\boldsymbol{\imath}}\rvert=\lvert\hat{\boldsymbol{%
+\jmath}}\rvert=\lvert\hat{\boldsymbol{k}}\rvert=1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.20)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E21.m1" class="ltx_Math" alttext="\displaystyle\hat{\boldsymbol{\imath}}\cdot\hat{\boldsymbol{\imath}}=\hat{%
+\boldsymbol{\jmath}}\cdot\hat{\boldsymbol{\jmath}}=\hat{\boldsymbol{k}}\cdot%
+\hat{\boldsymbol{k}}=1" display="inline"><mrow><mrow><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.21)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E22.m1" class="ltx_Math" alttext="\displaystyle\hat{\boldsymbol{\imath}}\cdot\hat{\boldsymbol{\jmath}}=\hat{%
+\boldsymbol{\jmath}}\cdot\hat{\boldsymbol{k}}=\hat{\boldsymbol{k}}\cdot\hat{%
+\boldsymbol{\imath}}=0." display="inline"><mrow><mrow><mrow><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.22)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If these results were not true, then some of the mathematics we will do later on (involving dot and cross products) would become much more complicated than it needs to be.</p>
+</div>
+<div id="Ch1.Thmdefinition5" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.5</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch1.Thmdefinition5.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">trajectory</span> of an object in three dimensions is a vector-valued function <math id="Ch1.Thmdefinition5.p1.m1" class="ltx_Math" alttext="\boldsymbol{r}(t)" display="inline"><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> where <math id="Ch1.Thmdefinition5.p1.m2" class="ltx_Math" alttext="t\in\mathbb{R}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, <math id="Ch1.Thmdefinition5.p1.m3" class="ltx_Math" alttext="\boldsymbol{r}(t)\in\mathbb{R}^{3}" display="inline"><mrow><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math>.
+We write</p>
+<table id="Ch1.E23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E23.m1" class="ltx_Math" alttext="\boldsymbol{r}(t)=x(t)\hat{\boldsymbol{\imath}}+y(t)\hat{\boldsymbol{\jmath}}+%
+z(t)\hat{\boldsymbol{k}}" display="block"><mrow><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.23)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">in cartesian coordinates, where <math id="Ch1.Thmdefinition5.p1.m4" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="Ch1.Thmdefinition5.p1.m5" class="ltx_Math" alttext="y(t)" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="Ch1.Thmdefinition5.p1.m6" class="ltx_Math" alttext="z(t)" display="inline"><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> are the 1D trajectories of the object along each axis.
+For example, if <math id="Ch1.Thmdefinition5.p1.m7" class="ltx_Math" alttext="\boldsymbol{r}(t_{0})=\boldsymbol{r}_{0}=x_{0}\hat{\boldsymbol{\imath}}+y_{0}%
+\hat{\boldsymbol{\jmath}}+z_{0}\hat{\boldsymbol{k}}" display="inline"><mrow><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>𝒓</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow></math>, then the object is located at position <math id="Ch1.Thmdefinition5.p1.m8" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> along the <math id="Ch1.Thmdefinition5.p1.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis, <math id="Ch1.Thmdefinition5.p1.m10" class="ltx_Math" alttext="y_{0}" display="inline"><msub><mi>y</mi><mn>0</mn></msub></math> along the <math id="Ch1.Thmdefinition5.p1.m11" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> axis and <math id="Ch1.Thmdefinition5.p1.m12" class="ltx_Math" alttext="z_{0}" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> along the <math id="Ch1.Thmdefinition5.p1.m13" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> axis.
+<math id="Ch1.Thmdefinition5.p1.m14" class="ltx_Math" alttext="\boldsymbol{r}(t)" display="inline"><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is known as the <span class="ltx_text ltx_font_bold">position vector</span>.</p>
+</div>
+</div>
+<div id="SS0.SSS0.Px3.p2" class="ltx_para">
+<p class="ltx_p">At this point it is worth introducing a new notation which will simplify our expressions going forward.
+We will represent a time derivative of a quantity by simply writing a dot above the letter, and put two dots for a second derivative.</p>
+<table id="Ch1.E24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E24.m1" class="ltx_Math" alttext="\dot{x}=\frac{\operatorname{\mathrm{d}}\!x}{\operatorname{\mathrm{d}}\!t},%
+\quad\ddot{x}=\frac{\operatorname{\mathrm{d}}\!^{2}x}{\operatorname{\mathrm{d}%
+}\!t^{2}}," display="block"><mrow><mrow><mrow><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>=</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo rspace="1.167em">,</mo><mrow><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.24)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">i.e. <math id="SS0.SSS0.Px3.p2.m1" class="ltx_Math" alttext="\dot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>˙</mo></mover></math> represents velocity and <math id="SS0.SSS0.Px3.p2.m2" class="ltx_Math" alttext="\ddot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¨</mo></mover></math> represents acceleration.
+The notation is due to Newton and so it is fitting that we use it a lot in mechanics.
+We have also stopped notating dependence on time explicitly for brevity and to reduce clutter in the notation.</p>
+</div>
+<div id="Ch1.Thmdefinition6" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.6</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch1.Thmdefinition6.p1" class="ltx_para">
+<p class="ltx_p">Just as in one dimension.
+The velocity is defined as the time derivative of position.</p>
+<table id="Ch1.E25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E25.m1" class="ltx_Math" alttext="\boldsymbol{v}=\dot{\boldsymbol{r}}=\frac{\operatorname{\mathrm{d}}\!%
+\boldsymbol{r}}{\operatorname{\mathrm{d}}\!t}=\frac{\operatorname{\mathrm{d}}%
+\!x}{\operatorname{\mathrm{d}}\!t}\hat{\boldsymbol{\imath}}+\frac{%
+\operatorname{\mathrm{d}}\!y}{\operatorname{\mathrm{d}}\!t}\hat{\boldsymbol{%
+\jmath}}+\frac{\operatorname{\mathrm{d}}\!z}{\operatorname{\mathrm{d}}\!t}\hat%
+{\boldsymbol{k}}=\dot{x}\hat{\boldsymbol{\imath}}+\dot{y}\hat{\boldsymbol{%
+\jmath}}+\dot{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝒗</mi><mo>=</mo><mover accent="true"><mi>𝒓</mi><mo>˙</mo></mover><mo>=</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>y</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>z</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.25)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Sometimes we denote <math id="Ch1.Thmdefinition6.p1.m1" class="ltx_Math" alttext="\dot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>˙</mo></mover></math>, <math id="Ch1.Thmdefinition6.p1.m2" class="ltx_Math" alttext="\dot{y}" display="inline"><mover accent="true"><mi>y</mi><mo>˙</mo></mover></math> and <math id="Ch1.Thmdefinition6.p1.m3" class="ltx_Math" alttext="\dot{z}" display="inline"><mover accent="true"><mi>z</mi><mo>˙</mo></mover></math> as <math id="Ch1.Thmdefinition6.p1.m4" class="ltx_Math" alttext="v_{x}" display="inline"><msub><mi>v</mi><mi>x</mi></msub></math>, <math id="Ch1.Thmdefinition6.p1.m5" class="ltx_Math" alttext="v_{y}" display="inline"><msub><mi>v</mi><mi>y</mi></msub></math> and <math id="Ch1.Thmdefinition6.p1.m6" class="ltx_Math" alttext="v_{z}" display="inline"><msub><mi>v</mi><mi>z</mi></msub></math> respectively.</p>
+</div>
+</div>
+<div id="Ch1.Thmdefinition7" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.7</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch1.Thmdefinition7.p1" class="ltx_para">
+<p class="ltx_p">Likewise, acceleration is the time derivative of velocity, or the second time derivative of position.</p>
+<table id="Ch1.E26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E26.m1" class="ltx_Math" alttext="\boldsymbol{a}=\ddot{\boldsymbol{r}}=\frac{\operatorname{\mathrm{d}}\!v}{%
+\operatorname{\mathrm{d}}\!t}=\frac{\operatorname{\mathrm{d}}\!^{2}r}{%
+\operatorname{\mathrm{d}}\!t^{2}}=\ddot{x}\hat{\boldsymbol{\imath}}+\ddot{y}%
+\hat{\boldsymbol{\jmath}}+\ddot{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝒂</mi><mo>=</mo><mover accent="true"><mi>𝒓</mi><mo>¨</mo></mover><mo>=</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>v</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>r</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>y</mi><mo>¨</mo></mover><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>z</mi><mo>¨</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.26)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Sometimes <math id="Ch1.Thmdefinition7.p1.m1" class="ltx_Math" alttext="\ddot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¨</mo></mover></math>, <math id="Ch1.Thmdefinition7.p1.m2" class="ltx_Math" alttext="\ddot{y}" display="inline"><mover accent="true"><mi>y</mi><mo>¨</mo></mover></math> and <math id="Ch1.Thmdefinition7.p1.m3" class="ltx_Math" alttext="\ddot{z}" display="inline"><mover accent="true"><mi>z</mi><mo>¨</mo></mover></math> are called <math id="Ch1.Thmdefinition7.p1.m4" class="ltx_Math" alttext="a_{x}" display="inline"><msub><mi>a</mi><mi>x</mi></msub></math>, <math id="Ch1.Thmdefinition7.p1.m5" class="ltx_Math" alttext="a_{y}" display="inline"><msub><mi>a</mi><mi>y</mi></msub></math> and <math id="Ch1.Thmdefinition7.p1.m6" class="ltx_Math" alttext="a_{z}" display="inline"><msub><mi>a</mi><mi>z</mi></msub></math>.</p>
+</div>
+</div>
+<div id="SS0.SSS0.Px3.p3" class="ltx_para">
+<p class="ltx_p">The key insight is that motion in 3D Cartesian coordinates is simply a superposition of three one-dimensional motions.
+Because of this, it is possible (and convenient) for simple problems to ignore the vector nature of the problem and just treat motion along each axis as a separate scalar problem.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Suppose we want to take the dot product of two vectors.
+We can compute it by writing each vector as a sum of components and then multiplying out the brackets.
+Going through the steps in cartesian coordinates, we get</p>
+<table id="Ch7.S10.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E27.m1" class="ltx_Math" alttext="\displaystyle\boldsymbol{A}\cdot\boldsymbol{B}" display="inline"><mrow><mi>𝑨</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝑩</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E27.m2" class="ltx_Math" alttext="\displaystyle=(A_{x}\hat{\boldsymbol{\imath}}+A_{y}\hat{\boldsymbol{\jmath}}+A%
+_{z}\hat{\boldsymbol{k}})\cdot(B_{x}\hat{\boldsymbol{\imath}}+B_{y}\hat{%
+\boldsymbol{\jmath}}+B_{z}\hat{\boldsymbol{k}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>B</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>B</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>B</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.27)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E28.m1" class="ltx_Math" alttext="\displaystyle\begin{aligned} &amp;=A_{x}\hat{\boldsymbol{\imath}}\cdot B_{x}\hat{%
+\boldsymbol{\imath}}+A_{x}\hat{\boldsymbol{\imath}}\cdot B_{y}\hat{\boldsymbol%
+{\jmath}}+A_{x}\hat{\boldsymbol{\imath}}\cdot B_{z}\hat{\boldsymbol{k}}+A_{y}%
+\hat{\boldsymbol{\jmath}}\cdot B_{x}\hat{\boldsymbol{\imath}}+A_{y}\hat{%
+\boldsymbol{\jmath}}\cdot B_{y}\hat{\boldsymbol{\jmath}}+A_{y}\hat{\boldsymbol%
+{\jmath}}\cdot B_{z}\hat{\boldsymbol{k}}\\
+&amp;\quad+A_{z}\hat{\boldsymbol{k}}\cdot B_{x}\hat{\boldsymbol{\imath}}+A_{z}\hat%
+{\boldsymbol{k}}\cdot B_{y}\hat{\boldsymbol{\jmath}}+A_{z}\hat{\boldsymbol{k}}%
+\cdot B_{z}\hat{\boldsymbol{k}}\end{aligned}" display="inline"><mtable columnspacing="0pt" rowspacing="0pt"><mtr><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>x</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>y</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>z</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>x</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>y</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>z</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>x</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>y</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>B</mi><mi>z</mi></msub></mrow><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.28)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E29.m1" class="ltx_Math" alttext="\displaystyle=A_{x}B_{x}\hat{\boldsymbol{\imath}}+A_{y}B_{y}\hat{\boldsymbol{%
+\jmath}}+A_{z}B_{z}\hat{\boldsymbol{k}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>B</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>B</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>⁢</mo><msub><mi>B</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.29)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The last step only follows because the basis vectors are <span class="ltx_text ltx_font_bold">orthonormal</span>.
+This is because the terms with two different basis vectors dotted together vanish (equation <a href="#Ch1.E22" title="In 1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.22</span></a>) and the terms with two of the same basis vector become just the coordinates multiplied together (equation <a href="#Ch1.E21" title="In 1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.21</span></a>).
+All the coordinate systems we have dealt with so far have an orthonormal basis because of this fact.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch1.S3.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Constant Acceleration</span></a><a href="bib.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch1.S5.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.5 </span>Forces</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:54:15 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>6.1 Simple Harmonic Motion ‣ Chapter 6 Oscillations ‣ Classical Mechanics</title>
+<!--Generated on Mon Jun 16 09:54:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="up up" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="start" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="prev" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="next" href="Ch6.S2.html" title="6.2 Physical Pendula ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="Ch6.S2.html" title="6.2 Physical Pendula ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="Ch6.S3.html" title="6.3 Energy in Simple Harmonic Motion ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="Ch6.S4.html" title="6.4 Damped Oscillations ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="Ch6.S5.html" title="6.5 Forced Oscillations ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="Ch6.S6.html" title="6.6 Coupled Oscillations and Normal Modes ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="bib.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch6.html" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Oscillations</span></a><a href="Ch6.html" title="In Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Oscillations</span></a><a href="Ch6.S2.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>Physical Pendula</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.1 </span>Simple Harmonic Motion</h1>
+
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Oscillations are periodic variations of a quantity about some equilibrium.
+This could be an object moving back and forth, a voltage going up and down, or any other physical variable.
+Let’s look at a system we have seen before, a mass on a horizontal spring.
+We are going to study the motion of the mass in much more detail than earlier.
+The only force acting on the mass is the spring restoring force, which is given by Hooke’s law:</p>
+<table id="Ch6.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E1.m1" class="ltx_Math" alttext="\boldsymbol{F}=-kx\hat{\boldsymbol{\imath}}." display="block"><mrow><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">By Newton II, we can write</p>
+<table id="Ch6.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E2.m1" class="ltx_Math" alttext="a_{x}=\frac{\operatorname{\mathrm{d}}\!^{2}x}{\operatorname{\mathrm{d}}\!t^{2}%
+}=-\frac{k}{m}x." display="block"><mrow><mrow><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mi>k</mi><mi>m</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The general solution to this differential equation is</p>
+<table id="Ch6.E3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E3.m1" class="ltx_Math" alttext="x(t)=A_{1}\cos(\omega t)+A_{2}\sin(\omega t)," display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>A</mi><mn>1</mn></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mn>2</mn></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where</p>
+<table id="Ch6.E4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E4.m1" class="ltx_Math" alttext="\omega=\sqrt{\frac{k}{m}}." display="block"><mrow><mrow><mi>ω</mi><mo>=</mo><msqrt><mfrac><mi>k</mi><mi>m</mi></mfrac></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.4)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Systems where displacement is a sinusoidal function of time are said to exhibit <span class="ltx_text ltx_font_bold">simple harmonic motion</span>.
+This motion is characteristic of any system where the force is oppositely proportional to displacement.
+We will see more examples of this later.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">We can simplify the equation for <math id="SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> using a trigonometric addition formula.
+If we let <math id="SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="A_{1}=x_{m}\cos\phi" display="inline"><mrow><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow></mrow></mrow></math>, <math id="SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="A_{2}=x_{m}\sin\phi" display="inline"><mrow><msub><mi>A</mi><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow></mrow></mrow></math>, where <math id="SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is some angle.
+Then we have</p>
+<table id="Ch7.S10.EGx97" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch6.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E5.m1" class="ltx_Math" alttext="\displaystyle x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E5.m2" class="ltx_Math" alttext="\displaystyle=x_{m}\cos\phi\cos(\omega t)+x_{m}\sin\phi\sin(\omega t)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>x</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.5)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E6.m1" class="ltx_Math" alttext="\displaystyle=x_{m}\cos(\omega t+\phi)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We still have two constants <math id="SS0.SSS0.Px3.p1.m5" class="ltx_Math" alttext="x_{m}" display="inline"><msub><mi>x</mi><mi>m</mi></msub></math> and <math id="SS0.SSS0.Px3.p1.m6" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> rather than <math id="SS0.SSS0.Px3.p1.m7" class="ltx_Math" alttext="A_{1}" display="inline"><msub><mi>A</mi><mn>1</mn></msub></math> and <math id="SS0.SSS0.Px3.p1.m8" class="ltx_Math" alttext="A_{2}" display="inline"><msub><mi>A</mi><mn>2</mn></msub></math> to specify the particular solution.
+Since cosine has a maximum value of 1, <math id="SS0.SSS0.Px3.p1.m9" class="ltx_Math" alttext="x_{m}" display="inline"><msub><mi>x</mi><mi>m</mi></msub></math> must represent the maximum amplitude of the oscillation.
+<math id="SS0.SSS0.Px3.p1.m10" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is the <span class="ltx_text ltx_font_bold">initial phase</span> of the oscillation, i.e. the point on the cosine curve where the mass is at <math id="SS0.SSS0.Px3.p1.m11" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>.
+Calculating the derivatives of <math id="SS0.SSS0.Px3.p1.m12" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we find</p>
+<table id="Ch7.S10.EGx98" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch6.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E7.m1" class="ltx_Math" alttext="\displaystyle v(t)" display="inline"><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E7.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!x}{\operatorname{\mathrm{d}}\!t%
+}=-x_{m}\omega\sin(\omega t+\phi)" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mo>−</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>⁢</mo><mi>ω</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.7)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E8.m1" class="ltx_Math" alttext="\displaystyle a(t)" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E8.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!^{2}x}{\operatorname{\mathrm{d}%
+}\!t^{2}}=-x_{m}\omega^{2}\cos(\omega t+\phi)=-\omega^{2}x(t)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>=</mo><mrow><mo>−</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.8)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thankfully we have recovered the equation of motion (<span class="ltx_ref ltx_missing_label ltx_ref_self">LABEL:eq-SHM-spring</span>) for the acceleration.
+The two constants can be found using two initial conditions, usually <math id="SS0.SSS0.Px3.p1.m13" class="ltx_Math" alttext="x(0)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="SS0.SSS0.Px3.p1.m14" class="ltx_Math" alttext="v(0)" display="inline"><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.
+For example, let’s suppose <math id="SS0.SSS0.Px3.p1.m15" class="ltx_Math" alttext="x(0)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="SS0.SSS0.Px3.p1.m16" class="ltx_Math" alttext="v(0)=v_{0}" display="inline"><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub></mrow></math>, then we have</p>
+<table id="Ch7.S10.EGx99" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch6.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E9.m1" class="ltx_Math" alttext="\displaystyle x(0)=x_{m}\cos\phi=0\implies\phi=\pm\frac{\pi}{2}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow></mrow><mo>=</mo><mn>0</mn><mo stretchy="false">⟹</mo><mi>ϕ</mi><mo>=</mo><mrow><mo>±</mo><mstyle displaystyle="true"><mfrac><mi>π</mi><mn>2</mn></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.9)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E10.m1" class="ltx_Math" alttext="\displaystyle v(0)=-x_{m}\omega\sin\phi=v_{0}\implies\phi&lt;0," display="inline"><mrow><mrow><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>⁢</mo><mi>ω</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>ϕ</mi></mrow></mrow></mrow><mo>=</mo><msub><mi>v</mi><mn>0</mn></msub><mo stretchy="false">⟹</mo><mi>ϕ</mi><mo>&lt;</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.10)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">so <math id="SS0.SSS0.Px3.p1.m17" class="ltx_Math" alttext="x_{m}=\frac{v_{0}}{\omega}" display="inline"><mrow><msub><mi>x</mi><mi>m</mi></msub><mo>=</mo><mfrac><msub><mi>v</mi><mn>0</mn></msub><mi>ω</mi></mfrac></mrow></math>, <math id="SS0.SSS0.Px3.p1.m18" class="ltx_Math" alttext="\phi=\frac{\pi}{2}" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mfrac><mi>π</mi><mn>2</mn></mfrac></mrow></math>.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p"><math id="SS0.SSS0.Px4.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> has units of  (the same as angular velocity!), and we call it the <span class="ltx_text ltx_font_bold">natural</span> or <span class="ltx_text ltx_font_bold">resonant (angular) frequency</span>.
+Let’s work out the period of oscillation.
+It should be equal to the time taken for the phase to change by <math id="SS0.SSS0.Px4.p1.m3" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></math>.</p>
+<table id="Ch7.S10.EGx100" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch6.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E11.m1" class="ltx_Math" alttext="\displaystyle\omega t+\phi" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E11.m2" class="ltx_Math" alttext="\displaystyle=\omega(t+T)+\phi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mi>T</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>ϕ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.11)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E12.m1" class="ltx_Math" alttext="\displaystyle\implies\omega T" display="inline"><mrow><mi></mi><mo stretchy="false">⟹</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>T</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E12.m2" class="ltx_Math" alttext="\displaystyle=2\pi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.12)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E13.m1" class="ltx_Math" alttext="\displaystyle T" display="inline"><mi>T</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E13.m2" class="ltx_Math" alttext="\displaystyle=\frac{2\pi}{\omega}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mi>ω</mi></mfrac></mstyle></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.13)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Linear frequency <math id="SS0.SSS0.Px4.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a more familiar unit, being measured in cycles per second or .
+It is related to the period by <math id="SS0.SSS0.Px4.p1.m6" class="ltx_Math" alttext="f=1/T" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>T</mi></mrow></mrow></math>, and therefore to angular frequency by</p>
+<table id="Ch6.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E14.m1" class="ltx_Math" alttext="\omega=2\pi f." display="block"><mrow><mrow><mi>ω</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>f</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.14)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">Let’s look at a pendulum on a string of length <math id="SS0.SSS0.Px5.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> now.
+We are assuming that the string is massless and ignoring the effects of air resistance.
+Given that the arc length of the pendulum is related to the angular displacement by <math id="SS0.SSS0.Px5.p1.m2" class="ltx_Math" alttext="s=L\theta" display="inline"><mrow><mi>s</mi><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></math> and that the restoring force is <math id="SS0.SSS0.Px5.p1.m3" class="ltx_Math" alttext="F=-mg\sin(\theta)" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math>, we have the equation of motion:</p>
+<table id="Ch6.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E15.m1" class="ltx_Math" alttext="F=m\frac{\operatorname{\mathrm{d}}\!^{2}s}{\operatorname{\mathrm{d}}\!t^{2}}=-%
+mg\sin(\theta)." display="block"><mrow><mrow><mi>F</mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>s</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.15)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This is a nonlinear differential equation. We will simplify this by assuming that the angle <math id="SS0.SSS0.Px5.p1.m4" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is small so <math id="SS0.SSS0.Px5.p1.m5" class="ltx_Math" alttext="\sin(\theta)\approx\theta" display="inline"><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mi>θ</mi></mrow></math> (small-angle approximation).
+Then the equation of motion becomes</p>
+<table id="Ch6.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E16.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}s}{\operatorname{\mathrm{d}}\!t^{2}}=-g%
+\theta=-\frac{g}{L}s." display="block"><mrow><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>s</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mi>g</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mi>g</mi><mi>L</mi></mfrac><mo>⁢</mo><mi>s</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.16)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Note that this has the same form as equation <span class="ltx_ref ltx_missing_label ltx_ref_self">LABEL:eq-SHM-spring</span>, so the trajectory will have the same form!
+What we have effectively done is assume that the displacement <math id="SS0.SSS0.Px5.p1.m6" class="ltx_Math" alttext="s" display="inline"><mi>s</mi></math> and the restoring force <math id="SS0.SSS0.Px5.p1.m7" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> are pointing in a straight line, not along the arc of a circle, so that the force becomes identical to Hooke’s law.</p>
+<table id="Ch6.E17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E17.m1" class="ltx_Math" alttext="s(t)=s_{m}\cos(\omega t+\phi)," display="block"><mrow><mrow><mrow><mi>s</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>s</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.17)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="SS0.SSS0.Px5.p1.m8" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> in this case is given by</p>
+<table id="Ch6.E18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E18.m1" class="ltx_Math" alttext="\omega=\sqrt{\frac{g}{L}}." display="block"><mrow><mrow><mi>ω</mi><mo>=</mo><msqrt><mfrac><mi>g</mi><mi>L</mi></mfrac></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.18)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Ch6.Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 6.1</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch6.Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">As an exercise, let’s rederive this result by looking at the torques on the pendulum rather than the forces.</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px6" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px6.p1" class="ltx_para">
+<p class="ltx_p">The pendulum, being a point mass, has a moment of inertia <math id="SS0.SSS0.Px6.p1.m1" class="ltx_Math" alttext="I=mL^{2}" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mrow></math>.
+Then the torque on the pendulum is</p>
+<table id="Ch7.S10.EGx101" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch6.E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E19.m1" class="ltx_Math" alttext="\displaystyle\tau=rF\sin\theta=-mgL\sin\theta\approx-mgL\theta." display="inline"><mrow><mrow><mi>τ</mi><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mi>F</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>L</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo>≈</mo><mrow><mo>−</mo><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.19)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Using <math id="SS0.SSS0.Px6.p1.m2" class="ltx_Math" alttext="\tau=I\alpha" display="inline"><mrow><mi>τ</mi><mo>=</mo><mrow><mi>I</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></math>, we get</p>
+<table id="Ch7.S10.EGx102" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch6.E20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E20.m1" class="ltx_Math" alttext="\displaystyle\alpha=\frac{\operatorname{\mathrm{d}}\!^{2}\theta}{\operatorname%
+{\mathrm{d}}\!t^{2}}" display="inline"><mrow><mi>α</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E20.m2" class="ltx_Math" alttext="\displaystyle=-\frac{mgL}{I}\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>L</mi></mrow><mi>I</mi></mfrac></mstyle><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.20)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E21.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}\theta}{\operatorname{%
+\mathrm{d}}\!t^{2}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E21.m2" class="ltx_Math" alttext="\displaystyle=-\frac{mgL}{mL^{2}}\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>L</mi></mrow><mrow><mi>m</mi><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.21)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E22.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}\theta}{\operatorname{%
+\mathrm{d}}\!t^{2}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch6.E22.m2" class="ltx_Math" alttext="\displaystyle=-\frac{g}{L}\theta." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mi>g</mi><mi>L</mi></mfrac></mstyle><mo>⁢</mo><mi>θ</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.22)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Solving this, we get</p>
+<table id="Ch7.S10.EGx103" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="Ch6.E23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch6.E23.m1" class="ltx_Math" alttext="\displaystyle\theta(t)=\theta_{m}\cos(\omega t+\phi)," display="inline"><mrow><mrow><mrow><mi>θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>θ</mi><mi>m</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.23)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which is the same solution as before where <math id="SS0.SSS0.Px6.p1.m3" class="ltx_Math" alttext="s_{m}=L\theta_{m}" display="inline"><mrow><msub><mi>s</mi><mi>m</mi></msub><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><msub><mi>θ</mi><mi>m</mi></msub></mrow></mrow></math> and <math id="SS0.SSS0.Px6.p1.m4" class="ltx_Math" alttext="\omega=\sqrt{\frac{g}{L}}" display="inline"><mrow><mi>ω</mi><mo>=</mo><msqrt><mfrac><mi>g</mi><mi>L</mi></mfrac></msqrt></mrow></math>.
+Note that we have to be quite careful here, as the angular frequency <math id="SS0.SSS0.Px6.p1.m5" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is <span class="ltx_text ltx_font_italic">not</span> the angular velocity <math id="SS0.SSS0.Px6.p1.m6" class="ltx_Math" alttext="\dot{\theta}" display="inline"><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></math>, since the latter changes with time.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px7" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px7.p1" class="ltx_para">
+<p class="ltx_p">What happens if we don’t use the small-angle approximation?
+Unfortunately, equation <a href="#Ch6.E15" title="In 6.1 Simple Harmonic Motion ‣ Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6.15</span></a> cannot be solved analytically.
+Fortunately, it is easy to solve numerically!
+Analysing the solution is outside the scope of these notes, but to put it simply, as the maximum amplitude of the oscillation increase, the resonant frequency decreases.
+I.e. <math id="SS0.SSS0.Px7.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> becomes a function of <math id="SS0.SSS0.Px7.p1.m2" class="ltx_Math" alttext="s_{m}" display="inline"><msub><mi>s</mi><mi>m</mi></msub></math> (or <math id="SS0.SSS0.Px7.p1.m3" class="ltx_Math" alttext="\theta_{m}" display="inline"><msub><mi>θ</mi><mi>m</mi></msub></math>).</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px8" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px8.p1" class="ltx_para">
+<p class="ltx_p">There is another example of simple harmonic motion that we have seen already.
+Think back to uniform circular motion.
+An object moving with UCM has a trajectory of the form</p>
+<table id="Ch6.E24" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E24.m1" class="ltx_Math" alttext="\theta(t)=\omega t+\phi," display="block"><mrow><mrow><mrow><mi>θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.24)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="SS0.SSS0.Px8.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is the angular velocity and <math id="SS0.SSS0.Px8.p1.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is the angular displacement at <math id="SS0.SSS0.Px8.p1.m3" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>.
+If we describe this motion in cartesian coordinates, the trajectory takes the form</p>
+<table id="Ch6.E25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E25.m1" class="ltx_Math" alttext="\boldsymbol{r}(t)=r\cos(\omega t+\phi)\hat{\boldsymbol{\imath}}+r\sin(\omega t%
++\phi)\hat{\boldsymbol{\jmath}}," display="block"><mrow><mrow><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.25)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">so we see that UCM is really SHM in two dimensions!
+If we look at the object dead-on from the <math id="SS0.SSS0.Px8.p1.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> or <math id="SS0.SSS0.Px8.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> direction, we would see identical motion to that of a mass on a spring.
+For UCM, the motion in the two perpendicular directions are perfectly out of phase (out of phase by one quarter turn, or <math id="SS0.SSS0.Px8.p1.m6" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math>).</p>
+</div>
+<div id="Ch6.Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 6.2</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch6.Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">Consider a pendulum of mass <math id="Ch6.Thmexample2.p1.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and length <math id="Ch6.Thmexample2.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> which is swinging around in uniform circular motion.
+What is the frequency of the oscillation?</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px9" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px9.p1" class="ltx_para">
+<p class="ltx_p">The radial acceleration is <math id="SS0.SSS0.Px9.p1.m1" class="ltx_Math" alttext="a_{r}=\dot{\theta}^{2}r=\omega^{2}L\sin\theta" display="inline"><mrow><msub><mi>a</mi><mi>r</mi></msub><mo>=</mo><mrow><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>⁢</mo><mi>r</mi></mrow><mo>=</mo><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mi>L</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></math>.
+Therefore, we have</p>
+<table id="Ch7.S10.EGx104" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tbody id="Ch6.E26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E26.m1" class="ltx_Math" alttext="\displaystyle mg\sin\theta=m\omega^{2}L\sin\theta" display="block"><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mi>L</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.26)</span></td>
+</tr></tbody>
+<tbody id="Ch6.E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E27.m1" class="ltx_Math" alttext="\displaystyle\implies\omega=\sqrt{\frac{g}{L}}," display="block"><mrow><mrow><mi></mi><mo stretchy="false">⟹</mo><mi>ω</mi><mo>=</mo><msqrt><mfrac><mi>g</mi><mi>L</mi></mfrac></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.27)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which is the same frequency as a normal pendulum.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch6.html" title="In Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Oscillations</span></a><a href="bib.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch6.S2.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>Physical Pendula</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:54:15 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

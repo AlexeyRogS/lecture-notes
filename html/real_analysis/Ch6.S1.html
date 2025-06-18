@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>6.1 The Basic Definition of a Function ‣ Chapter 6 Continuous Functions ‣ Real Analysis</title>
+<!--Generated on Mon Jun 16 09:50:04 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch6.html" title="Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="up up" href="real_analysis.html" title="Real Analysis">
+<link rel="start" href="real_analysis.html" title="Real Analysis">
+<link rel="prev" href="Ch6.html" title="Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="next" href="Ch6.S2.html" title="6.2 Operations on Functions ‣ Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="section" href="Ch6.S2.html" title="6.2 Operations on Functions ‣ Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="section" href="Ch6.S3.html" title="6.3 Classes of Functions ‣ Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="section" href="Ch6.S4.html" title="6.4 Limits ‣ Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="section" href="Ch6.S5.html" title="6.5 Continuity ‣ Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Real Analysis">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Introduction ‣ Real Analysis">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Notions from Set Theory ‣ Real Analysis">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 The Real Numbers ‣ Real Analysis">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Sequences ‣ Real Analysis">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Series ‣ Real Analysis">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Continuous Functions ‣ Real Analysis">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Differentiation ‣ Real Analysis">
+<link rel="bibliography" href="bib.html" title="References ‣ Real Analysis">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch6.html" title="In Real Analysis" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Continuous Functions</span></a><a href="Ch6.html" title="In Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Continuous Functions</span></a><a href="Ch6.S2.html" title="In Chapter 6 Continuous Functions ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>Operations on Functions</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.1 </span>The Basic Definition of a Function</h1>
+
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">The concept of a function is one that is fundamental to all area of mathematics. We will be using functions thoroughly from now on so it’s a good time to review exactly what a function is and how we can manipulate them.</p>
+</div>
+<div id="Ch6.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Definition 6.1</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+</h6>
+<div id="Ch6.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch6.Thmdefinition1.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> and <math id="Ch6.Thmdefinition1.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> be non-empty sets. Then <math id="Ch6.Thmdefinition1.p1.m3" class="ltx_Math" alttext="f\subseteq D\times R" display="inline"><mrow><mi>f</mi><mo>⊆</mo><mrow><mi>D</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>R</mi></mrow></mrow></math> is a function if <math id="Ch6.Thmdefinition1.p1.m4" class="ltx_Math" alttext="\forall x\in D,\forall y,z\in R,\ (x,y)\in f" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mrow><mi>D</mi><mo>,</mo><mrow><mo rspace="0.167em">∀</mo><mi>y</mi></mrow></mrow></mrow><mo>,</mo><mrow><mrow><mi>z</mi><mo>∈</mo><mi>R</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>f</mi></mrow></mrow></mrow></math> and <math id="Ch6.Thmdefinition1.p1.m5" class="ltx_Math" alttext="(x,z)\in f\implies y=z." display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>f</mi><mo stretchy="false">⟹</mo><mi>y</mi><mo>=</mo><mi>z</mi></mrow><mo lspace="0em">.</mo></mrow></math></p>
+</div>
+</div>
+<div id="SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">In English this says that a function is a binary relation on two sets, and what makes a function different from any old binary relation is the property that every <math id="SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="x\in D" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>D</mi></mrow></math> is paired with a <span class="ltx_text ltx_font_italic">unique</span> <math id="SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="y\in R" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>R</mi></mrow></math>.</p>
+</div>
+<div id="Ch6.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Definition 6.2</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+</h6>
+<div id="Ch6.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch6.Thmdefinition2.p1.m1" class="ltx_Math" alttext="f\subseteq D\times R" display="inline"><mrow><mi>f</mi><mo>⊆</mo><mrow><mi>D</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>R</mi></mrow></mrow></math> be a function.
+Then we say <math id="Ch6.Thmdefinition2.p1.m2" class="ltx_Math" alttext="f:D\to R" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>D</mi><mo stretchy="false">→</mo><mi>R</mi></mrow></mrow></math> and denote the unique <math id="Ch6.Thmdefinition2.p1.m3" class="ltx_Math" alttext="y\in R" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>R</mi></mrow></math> associated with <math id="Ch6.Thmdefinition2.p1.m4" class="ltx_Math" alttext="x\in D" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>D</mi></mrow></math> as <math id="Ch6.Thmdefinition2.p1.m5" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> is <span class="ltx_text ltx_font_bold">domain</span> of the function, denoted <math id="I1.i1.p1.m2" class="ltx_Math" alttext="\operatorname{dom}(f)" display="inline"><mrow><mi>dom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is the <span class="ltx_text ltx_font_bold">range<span id="Ch6.footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+                          <span class="ltx_tag ltx_tag_note"><span class="ltx_text ltx_font_medium">1</span></span>
+                          
+                          
+                        <span class="ltx_text ltx_font_medium">Some people use the term </span>range<span class="ltx_text ltx_font_medium"> in an ambiguous way. A less ambiguous term is </span>codomain<span class="ltx_text ltx_font_medium">, which means the same thing as we have just defined for range.</span></span></span></span></span> of the function, denoted <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\operatorname{range}(f)" display="inline"><mrow><mi>range</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">image</span> of <math id="I1.i3.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\operatorname{im}(f)" display="inline"><mrow><mi>im</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is defined as <math id="I1.i3.p1.m3" class="ltx_Math" alttext="{\{f(x):x\in D\}}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="0.278em" stretchy="false">)</mo></mrow></mrow><mo rspace="0.278em">:</mo><mrow><mi>x</mi><mo>∈</mo><mi>D</mi></mrow><mo stretchy="false">}</mo></mrow></math>, or more explicitly <math id="I1.i3.p1.m4" class="ltx_Math" alttext="{\{y\in R:\exists x\in D,f(x)=y\}}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>R</mi></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mrow><mo rspace="0.167em">∃</mo><mi>x</mi></mrow><mo>∈</mo><mi>D</mi></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>y</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></math>. The image is a subset of the range, and may or may not be a proper subset.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For a given <math id="I1.i4.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="I1.i4.p1.m2" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> may be referred to as the <span class="ltx_text ltx_font_bold">image</span> of <math id="I1.i4.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> under <math id="I1.i4.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, or the <span class="ltx_text ltx_font_bold">value</span> of <math id="I1.i4.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="I1.i4.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, or the <span class="ltx_text ltx_font_bold">output</span> of <math id="I1.i4.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> for the <span class="ltx_text ltx_font_bold">input</span> <math id="I1.i4.p1.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">To express what the image of some function <math id="SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> actually is, we need some kind of formula for the image of an arbitrary point <math id="SS0.SSS0.Px1.p3.m2" class="ltx_Math" alttext="x\in D" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>D</mi></mrow></math>. This can be given by a straightforward formula such as</p>
+<table id="Ch6.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex1.m1" class="ltx_Math" alttext="f(x)=2x\quad\text{or}\quad x\mapsto x^{2}+1," display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mspace width="1em"></mspace><mtext>or</mtext></mrow></mrow><mspace width="1em"></mspace><mrow><mi>x</mi><mo stretchy="false">↦</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">or a piecewise definition like</p>
+<table id="Ch6.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E1.m1" class="ltx_Math" alttext="f(x)=\begin{cases}x&amp;x\leq 1\\
+x^{2}+1&amp;x&gt;1,\end{cases}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi>x</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi>x</mi><mo>≤</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>x</mi><mo>&gt;</mo><mn>1</mn></mrow><mo>,</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">or something even more abstract, such as a power series or recurrence relation (Recall that sequences are defined as functions).</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">A real function is a function that has real numbers as its inputs and outputs. We can visualise a real functions behaviour by treating the ordered pairs <math id="SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="\big{(}x,f(x)\big{)}\in f" display="inline"><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mi>x</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>∈</mo><mi>f</mi></mrow></math> as Cartesian coordinates in the plane, which is what we all know as a graph.</p>
+</div>
+<div id="Ch6.Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 6.1</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+</h6>
+<div id="Ch6.Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch6.Thmexample1.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be given by <math id="Ch6.Thmexample1.p1.m2" class="ltx_Math" alttext="f(x)=\sqrt{x}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mi>x</mi></msqrt></mrow></math>. 
+<br class="ltx_break">This is not a function since <math id="Ch6.Thmexample1.p1.m3" class="ltx_Math" alttext="\sqrt{x}" display="inline"><msqrt><mi>x</mi></msqrt></math> is not defined in <math id="Ch6.Thmexample1.p1.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> for <math id="Ch6.Thmexample1.p1.m5" class="ltx_Math" alttext="x&lt;0" display="inline"><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></math>. Even if we restrict the domain of <math id="Ch6.Thmexample1.p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to <math id="Ch6.Thmexample1.p1.m7" class="ltx_Math" alttext="[0,\infty)" display="inline"><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math>, it is still technically not a function since there are two possible values of <math id="Ch6.Thmexample1.p1.m8" class="ltx_Math" alttext="\sqrt{x}" display="inline"><msqrt><mi>x</mi></msqrt></math> for all <math id="Ch6.Thmexample1.p1.m9" class="ltx_Math" alttext="x\in[0,\infty)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math>. We can fix this by taking the absolute value (<math id="Ch6.Thmexample1.p1.m10" class="ltx_Math" alttext="f:[0,\infty)\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> given by <math id="Ch6.Thmexample1.p1.m11" class="ltx_Math" alttext="f(x)=\lvert\sqrt{x}\rvert" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><msqrt><mi>x</mi></msqrt><mo stretchy="false">|</mo></mrow></mrow></math> is a function).</p>
+</div>
+</div>
+<div id="Ch6.Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 6.2</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+</h6>
+<div id="Ch6.Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Ch6.Thmexample2.p1.m1" class="ltx_Math" alttext="f:\mathbb{R}\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>ℝ</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow></math> be given by</p>
+<table id="Ch6.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.Ex2.m1" class="ltx_Math" alttext="f(x)=\begin{cases}1&amp;\text{if}\ x\in\mathbb{Q}\\
+0&amp;\text{if}\ x\in\mathbb{R}\setminus\mathbb{Q}.\end{cases}" display="block"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mn>1</mn></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mtext>if</mtext><mo lspace="0.500em">⁢</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℚ</mi></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mn>0</mn></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>if</mtext><mo lspace="0.500em">⁢</mo><mi>x</mi></mrow><mo>∈</mo><mrow><mi>ℝ</mi><mo>∖</mo><mi>ℚ</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This is again a valid function, and it has numerical values, but drawing a convincing graph of this function is left as a challenge to the reader.</p>
+</div>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch6.html" title="In Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Continuous Functions</span></a><a href="bib.html" title="In Real Analysis" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch6.S2.html" title="In Chapter 6 Continuous Functions ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>Operations on Functions</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:50:04 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

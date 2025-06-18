@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4.1 Polar Coordinates in 2D ‣ Chapter 4 Angular Motion ‣ Classical Mechanics</title>
+<!--Generated on Mon Jun 16 09:54:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="up up" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="start" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="prev" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="next" href="Ch4.S2.html" title="4.2 Angular Kinematics ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S2.html" title="4.2 Angular Kinematics ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S3.html" title="4.3 Constant Angular Acceleration ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S4.html" title="4.4 Uniform Circular Motion ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S5.html" title="4.5 Rigid Body Rotation ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="bib.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch4.html" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Angular Motion</span></a><a href="Ch4.html" title="In Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Angular Motion</span></a><a href="Ch4.S2.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2 </span>Angular Kinematics</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4.1 </span>Polar Coordinates in 2D</h1>
+
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">We have studied in great detail the mechanics of objects travelling in straight lines.
+Now we want to extend this to more general situations where objects can move along curved paths.
+We will first study motion in 2D as it is much simpler than 3D.
+As we saw in section <a href="Ch1.S4.html" title="1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4</span></a>, vectors in 2D can be equivalently described by two cartesian components or their length together with the angle they make with the <math id="SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis.
+Depending on the type of motion in the problem, it is much simpler to describe the trajectory of an object the latter way.
+These are known as <span class="ltx_text ltx_font_bold">polar coordinates</span>.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">To set up the coordinate system, we define two new coordinate axes relative to the position vector <math id="SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="\boldsymbol{r}" display="inline"><mi>𝒓</mi></math>.
+The first axis points along the direction of the position vector, and the second points one quarter turn anticlockwise from the first.
+These axes get two orthonormal vectors to form a basis which we label <math id="SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></math> and <math id="SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></math> respectively.</p>
+</div>
+<figure id="SS0.SSS0.Px2.fig1" class="ltx_figure"><svg id="SS0.SSS0.Px2.pic1" class="ltx_picture" height="178.38" overflow="visible" version="1.1" width="236.77"><g fill="#000000" stroke="#000000" stroke-width="0.4pt" transform="translate(0,178.38) matrix(1 0 0 -1 0 0) translate(79.02,0) translate(0,20.62)"><path d="M 0 156.84 L 0 0 L 156.84 0" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.0 1.0 -1.0 0.0 0 156.84)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 156.84 0)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-width="0.8pt"><path d="M 0 46.26 L 0 0 L 46.26 0" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(0.0 1.0 -1.0 0.0 0 46.26)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(1.0 0.0 0.0 1.0 46.26 0)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 43.4 -14.88)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="SS0.SSS0.Px2.pic1.m1" class="ltx_Math" alttext="\hat{\boldsymbol{\imath}}" display="inline"><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -12.58 42.25)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="SS0.SSS0.Px2.pic1.m2" class="ltx_Math" alttext="\hat{\boldsymbol{\jmath}}" display="inline"><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></math></foreignObject></g><g stroke-width="0.8pt"><path d="M 0 0 L 78.22 125.15" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(0.53 0.848 -0.848 0.53 78.22 125.15)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 83.63 130.87)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="10.38"><math id="SS0.SSS0.Px2.pic1.m3" class="ltx_Math" alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math></foreignObject></g><g stroke-dasharray="0.4pt,2.0pt" stroke-dashoffset="0.0pt"><path d="M 0 125.98 L 78.74 125.98 L 78.74 0" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 71.34 -14.34)"><foreignObject height="11.12" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="14.81"><math id="SS0.SSS0.Px2.pic1.m4" class="ltx_Math" alttext="A_{x}" display="inline"><msub><mi>A</mi><mi>x</mi></msub></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -19.34 122.84)"><foreignObject height="12.63" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="14.45"><math id="SS0.SSS0.Px2.pic1.m5" class="ltx_Math" alttext="A_{y}" display="inline"><msub><mi>A</mi><mi>y</mi></msub></math></foreignObject></g><path d="M -78.42 135.83 L 0 0 L 135.83 78.42" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(-0.5 0.86603 -0.86603 -0.5 -78.42 135.83)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.86603 0.5 -0.5 0.86603 135.83 78.42)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-width="0.8pt"><path d="M -23.13 40.06 L 0 0 L 40.06 23.13" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(-0.5 0.86603 -0.86603 -0.5 -23.13 40.06)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.64pt" transform="matrix(0.86603 0.5 -0.5 0.86603 40.06 23.13)"><path d="M -2.16 2.88 C -1.98 1.8 0 0.18 0.54 0 C 0 -0.18 -1.98 -1.8 -2.16 -2.88" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 37.07 8.74)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="SS0.SSS0.Px2.pic1.m6" class="ltx_Math" alttext="\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -36.2 35.92)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="SS0.SSS0.Px2.pic1.m7" class="ltx_Math" alttext="\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></math></foreignObject></g><g stroke-dasharray="0.4pt,2.0pt" stroke-dashoffset="0.0pt"><path d="M 78.74 125.99 L -32.68 61.65" style="fill:none"></path><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -51.59 58.27)"><foreignObject height="12.15" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="14.02"><math id="SS0.SSS0.Px2.pic1.m8" class="ltx_Math" alttext="A_{\theta}" display="inline"><msub><mi>A</mi><mi>θ</mi></msub></math></foreignObject></g></g><g stroke-dasharray="0.4pt,2.0pt" stroke-dashoffset="0.0pt"><path d="M 78.74 125.99 L 115.91 61.61" style="fill:none"></path><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 108.86 47.27)"><foreignObject height="11.12" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="14.09"><math id="SS0.SSS0.Px2.pic1.m9" class="ltx_Math" alttext="A_{r}" display="inline"><msub><mi>A</mi><mi>r</mi></msub></math></foreignObject></g></g><path d="M 110.24 0 C 110.24 19.35 105.14 38.36 95.47 55.12" style="fill:none"></path><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 114.86 10.94)"><foreignObject height="9.61" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="6.5"><math id="SS0.SSS0.Px2.pic1.m10" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math></foreignObject></g></g></svg>
+</figure>
+</section>
+<section id="SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">Then a 2D vector <math id="SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math> has a cartesian representation <math id="SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="\boldsymbol{A}=A_{x}\hat{\boldsymbol{\imath}}+A_{y}\hat{\boldsymbol{\imath}}" display="inline"><mrow><mi>𝑨</mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow></math> and a polar representation <math id="SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="\boldsymbol{A}=A_{r}\hat{\boldsymbol{r}}+A_{\theta}\hat{\boldsymbol{\theta}}" display="inline"><mrow><mi>𝑨</mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>r</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>θ</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow></math>.
+To find the components in one coordinate system using the components in the other, we have to know the relations between all the basis vectors.
+Using trigonometry, we can see that</p>
+<table id="Ch7.S10.EGx48" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E1.m1" class="ltx_Math" alttext="\displaystyle\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E1.m2" class="ltx_Math" alttext="\displaystyle=\cos\theta\hat{\boldsymbol{\imath}}+\sin\theta\hat{\boldsymbol{%
+\jmath}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.1)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E2.m1" class="ltx_Math" alttext="\displaystyle\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E2.m2" class="ltx_Math" alttext="\displaystyle=-\sin\theta\hat{\boldsymbol{\imath}}+\cos\theta\hat{\boldsymbol{%
+\jmath}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Substituting this into the polar coordinate representation of <math id="SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="\boldsymbol{A}" display="inline"><mi>𝑨</mi></math>, we get</p>
+<table id="Ch7.S10.EGx49" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E3.m1" class="ltx_Math" alttext="\displaystyle\boldsymbol{A}" display="inline"><mi>𝑨</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E3.m2" class="ltx_Math" alttext="\displaystyle=A_{r}(\cos\theta\hat{\boldsymbol{\imath}}+\sin\theta\hat{%
+\boldsymbol{\jmath}})+A_{\theta}(-\sin\theta\hat{\boldsymbol{\imath}}+\cos%
+\theta\hat{\boldsymbol{\jmath}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>θ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.3)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E4.m1" class="ltx_Math" alttext="\displaystyle=(A_{r}\cos\theta-A_{\theta}\sin\theta)\hat{\boldsymbol{\imath}}+%
+(A_{r}\sin\theta+A_{\theta}\cos\theta)\hat{\boldsymbol{\jmath}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>A</mi><mi>r</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>−</mo><mrow><msub><mi>A</mi><mi>θ</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>A</mi><mi>r</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>θ</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Comparing coefficients with the cartesian representation, we see that</p>
+<table id="Ch7.S10.EGx50" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E5.m1" class="ltx_Math" alttext="\displaystyle A_{x}" display="inline"><msub><mi>A</mi><mi>x</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E5.m2" class="ltx_Math" alttext="\displaystyle=A_{r}\cos\theta-A_{\theta}\sin\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>r</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>−</mo><mrow><msub><mi>A</mi><mi>θ</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.5)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E6.m1" class="ltx_Math" alttext="\displaystyle A_{y}" display="inline"><msub><mi>A</mi><mi>y</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E6.m2" class="ltx_Math" alttext="\displaystyle=A_{r}\sin\theta+A_{\theta}\cos\theta." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>r</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>θ</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">By doing the same procedure the other way around, we can deduce that</p>
+<table id="Ch7.S10.EGx51" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E7.m1" class="ltx_Math" alttext="\displaystyle A_{r}" display="inline"><msub><mi>A</mi><mi>r</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E7.m2" class="ltx_Math" alttext="\displaystyle=A_{x}\cos\theta+A_{y}\sin\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mi>x</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.7)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E8.m1" class="ltx_Math" alttext="\displaystyle A_{\theta}" display="inline"><msub><mi>A</mi><mi>θ</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E8.m2" class="ltx_Math" alttext="\displaystyle=-A_{x}\sin\theta+A_{y}\cos\theta." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><msub><mi>A</mi><mi>x</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mi>y</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.8)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">The definition of the axes in polar coordinates may seem confusing at first as the position vector moves around over time.
+This means that the axes and unit vectors also change over time, and we will see how this affects calculation of the motion of an object in the next section.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">Once thing that doesn’t change is the representation of the position vector itself, which is always given by <math id="SS0.SSS0.Px5.p1.m1" class="ltx_Math" alttext="\boldsymbol{r}=r\hat{\boldsymbol{r}}" display="inline"><mrow><mi>𝒓</mi><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow></math>.
+The conversion between representations of the trajectory in cartesian and polar coordinates is then given by equations <a href="Ch1.S4.html#Ch1.E16" title="In 1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.16</span></a>, <a href="Ch1.S4.html#Ch1.E17" title="In 1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.17</span></a>, <a href="Ch1.S4.html#Ch1.E18" title="In 1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.18</span></a>, and <a href="Ch1.S4.html#Ch1.E19" title="In 1.4 Motion in More than One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.19</span></a>.</p>
+<table id="Ch7.S10.EGx52" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E9.m1" class="ltx_Math" alttext="\displaystyle x" display="inline"><mi>x</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E9.m2" class="ltx_Math" alttext="\displaystyle=r\cos\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.9)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E10.m1" class="ltx_Math" alttext="\displaystyle y" display="inline"><mi>y</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E10.m2" class="ltx_Math" alttext="\displaystyle=r\sin\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.10)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E11.m1" class="ltx_Math" alttext="\displaystyle r" display="inline"><mi>r</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E11.m2" class="ltx_Math" alttext="\displaystyle=\sqrt{x^{2}+y^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.11)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E12.m1" class="ltx_Math" alttext="\displaystyle\tan\theta" display="inline"><mrow><mi>tan</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E12.m2" class="ltx_Math" alttext="\displaystyle=\frac{y}{x}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>x</mi></mfrac></mstyle></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.12)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch4.html" title="In Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Angular Motion</span></a><a href="bib.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch4.S2.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2 </span>Angular Kinematics</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:54:15 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,811 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4.5 Rigid Body Rotation ‣ Chapter 4 Angular Motion ‣ Classical Mechanics</title>
+<!--Generated on Mon Jun 16 09:54:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="up up" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="start" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="prev" href="Ch4.S4.html" title="4.4 Uniform Circular Motion ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="next" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S1.html" title="4.1 Polar Coordinates in 2D ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S2.html" title="4.2 Angular Kinematics ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S3.html" title="4.3 Constant Angular Acceleration ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S4.html" title="4.4 Uniform Circular Motion ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="bib.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch4.html" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Angular Motion</span></a><a href="Ch4.S4.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4 </span>Uniform Circular Motion</span></a><a href="Ch5.html" title="In Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Angular Momentum</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4.5 </span>Rigid Body Rotation</h1>
+
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">A rigid body is a system of particles which are fixed together such that they move together, no matter the forces applied.
+We have seen in previous chapters that it is possible to treat rigid bodies as point masses when considering linear motion.
+However, when considering rotational effects as well, we need to consider the macroscopic extent of an object.
+Consider a rigid body in motion and look at the total kinetic energy, which is given by the sum of kinetic energy of each constituent particle:</p>
+<table id="Ch4.E67" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E67.m1" class="ltx_Math" alttext="K=\sum_{i}\frac{1}{2}m_{i}\boldsymbol{v}_{i}\cdot\boldsymbol{v}_{i}." display="block"><mrow><mrow><mi>K</mi><mo rspace="0.111em">=</mo><mrow><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>𝒗</mi><mi>i</mi></msub></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>𝒗</mi><mi>i</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.67)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We can split the velocity of each particle into the sum of velocity around the centre of rotation and velocity along the line of motion.</p>
+<table id="Ch7.S10.EGx68" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E68"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E68.m1" class="ltx_Math" alttext="\displaystyle K" display="inline"><mi>K</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E68.m2" class="ltx_Math" alttext="\displaystyle=\sum_{i}\frac{1}{2}m_{i}(\boldsymbol{v}_{i,\text{rot}}+%
+\boldsymbol{v}_{i,\text{lin}})^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>𝒗</mi><mrow><mi>i</mi><mo>,</mo><mtext>rot</mtext></mrow></msub><mo>+</mo><msub><mi>𝒗</mi><mrow><mi>i</mi><mo>,</mo><mtext>lin</mtext></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.68)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E69"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E69.m1" class="ltx_Math" alttext="\displaystyle=\sum_{i}\frac{1}{2}m_{i}(v_{i,\text{rot}}^{2}+v_{i,\text{lin}}^{%
+2}+2\boldsymbol{v}_{i,\text{rot}}\cdot\boldsymbol{v}_{i,\text{lin}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mtext>rot</mtext></mrow><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mtext>lin</mtext></mrow><mn>2</mn></msubsup><mo>+</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>𝒗</mi><mrow><mi>i</mi><mo>,</mo><mtext>rot</mtext></mrow></msub></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>𝒗</mi><mrow><mi>i</mi><mo>,</mo><mtext>lin</mtext></mrow></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.69)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E70"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E70.m1" class="ltx_Math" alttext="\displaystyle=\underbrace{\sum_{i}\frac{1}{2}m_{i}v_{i,\text{rot}}^{2}}_{K_{%
+\text{rotational}}}+\underbrace{\sum_{i}\frac{1}{2}m_{i}v_{i,\text{lin}}^{2}}_%
+{K_{\text{linear}}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><munder><munder accentunder="true"><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mtext>rot</mtext></mrow><mn>2</mn></msubsup></mrow></mrow><mo>⏟</mo></munder><msub><mi>K</mi><mtext>rotational</mtext></msub></munder><mo>+</mo><munder><munder accentunder="true"><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mtext>lin</mtext></mrow><mn>2</mn></msubsup></mrow></mrow><mo>⏟</mo></munder><msub><mi>K</mi><mtext>linear</mtext></msub></munder></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.70)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The cross-term in the square cancels out (why?).
+Assuming the rigid body is rotating about a <span class="ltx_text ltx_font_italic">fixed</span> axis, all particles rotate in circles with the same angular velocity <math id="SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> because their distance from the axis of rotation is constant.
+This means the rotational kinetic energy can be written as</p>
+<table id="Ch7.S10.EGx69" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E71"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E71.m1" class="ltx_Math" alttext="\displaystyle K_{\text{rot}}" display="inline"><msub><mi>K</mi><mtext>rot</mtext></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E71.m2" class="ltx_Math" alttext="\displaystyle=\sum_{i}\frac{1}{2}m_{i}v_{i,\text{rot}}^{2}=\sum_{i}\frac{1}{2}%
+m_{i}(r_{i}\omega)^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>v</mi><mrow><mi>i</mi><mo>,</mo><mtext>rot</mtext></mrow><mn>2</mn></msubsup></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>⁢</mo><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.71)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E72"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E72.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{2}\omega^{2}\sum_{i}m_{i}r_{i}^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.72)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E73"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E73.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{2}I\omega^{2}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>I</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.73)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><math id="SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is called the <span class="ltx_text ltx_font_bold">moment of inertia</span>, and it is kind of an angular equivalent of mass.
+Notice how it is calculated in a similar way to the centre of mass except with the square of <math id="SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>.
+Also notice how in the formula for <math id="SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="K_{\text{rot}}" display="inline"><msub><mi>K</mi><mtext>rot</mtext></msub></math>, <math id="SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and <math id="SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> play the role of <math id="SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and <math id="SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> respectively, which shows how they are analogous to the linear quantities.
+However <math id="SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, just like the centre of mass, depends on how the mass is distributed in an object.
+For example, consider a solid disc and a hoop of the same mass.
+From the formula for <math id="SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, we can see that since all of the mass in the hoop is concentrated further out, the moment of inertia will be larger than the disc.
+This means that for the same angular velocity, the rotational kinetic energy of the hoop will be larger than the disc.
+<math id="SS0.SSS0.Px1.p1.m11" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> also depends on the axis of rotation, since a different axis will have a different mass distribution around it.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Let’s do a few examples of calculating moments of inertia.</p>
+</div>
+<div id="Ch4.Thmexample7" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.7</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample7.p1" class="ltx_para">
+<p class="ltx_p">Consider a system of two particles with masses <math id="Ch4.Thmexample7.p1.m1" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math> and <math id="Ch4.Thmexample7.p1.m2" class="ltx_Math" alttext="m_{2}" display="inline"><msub><mi>m</mi><mn>2</mn></msub></math> separated by a distance <math id="Ch4.Thmexample7.p1.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>.</p>
+</div>
+<figure id="Ch4.Thmexample7.fig1" class="ltx_figure"><svg id="Ch4.Thmexample7.pic1" class="ltx_picture" height="118.66" overflow="visible" version="1.1" width="169.16"><g fill="#000000" stroke="#000000" stroke-width="0.4pt" transform="translate(0,118.66) matrix(1 0 0 -1 0 0) translate(25.52,0) translate(0,59.33)"><g stroke-dasharray="3.0pt,3.0pt" stroke-dashoffset="0.0pt"><path d="M 0 -59.06 L 0 59.06" style="fill:none"></path></g><g stroke-dasharray="3.0pt,3.0pt" stroke-dashoffset="0.0pt"><path d="M 59.06 -59.06 L 59.06 59.06" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 4.89 44.71)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="10.38"><math id="Ch4.Thmexample7.pic1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 63.94 44.71)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="11.19"><math id="Ch4.Thmexample7.pic1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math></foreignObject></g><path d="M 0 0 M 2.36 0 C 2.36 1.3 1.3 2.36 0 2.36 C -1.3 2.36 -2.36 1.3 -2.36 0 C -2.36 -1.3 -1.3 -2.36 0 -2.36 C 1.3 -2.36 2.36 -1.3 2.36 0 Z M 0 0" style="stroke:none"></path><path d="M 118.11 0 M 120.47 0 C 120.47 1.3 119.42 2.36 118.11 2.36 C 116.81 2.36 115.75 1.3 115.75 0 C 115.75 -1.3 116.81 -2.36 118.11 -2.36 C 119.42 -2.36 120.47 -1.3 120.47 0 Z M 118.11 0" style="stroke:none"></path><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -20.91 7.39)"><foreignObject height="8.45" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="16.02"><math id="Ch4.Thmexample7.pic1.m3" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 123 7.39)"><foreignObject height="8.45" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="16.02"><math id="Ch4.Thmexample7.pic1.m4" class="ltx_Math" alttext="m_{2}" display="inline"><msub><mi>m</mi><mn>2</mn></msub></math></foreignObject></g><path d="M 0.64 -23.62 L 117.47 -23.62" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(-1.0 0.0 0.0 -1.0 0.64 -23.62)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 117.47 -23.62)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 63.94 -38.12)"><foreignObject height="9.61" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.2"><math id="Ch4.Thmexample7.pic1.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math></foreignObject></g></g></svg>
+</figure>
+<div id="Ch4.Thmexample7.p2" class="ltx_para">
+<p class="ltx_p">What is the moment of inertia about the axis which passes through <math id="Ch4.Thmexample7.p2.m1" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math> (<math id="Ch4.Thmexample7.p2.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>) and about the axis which passes halfway between <math id="Ch4.Thmexample7.p2.m3" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math> and <math id="Ch4.Thmexample7.p2.m4" class="ltx_Math" alttext="m_{2}" display="inline"><msub><mi>m</mi><mn>2</mn></msub></math> (<math id="Ch4.Thmexample7.p2.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>)?</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">Lets to the axis which runs through the midpoint first.
+Using the formula for moment of inertia, we get</p>
+<table id="Ch7.S10.EGx70" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E74"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E74.m1" class="ltx_Math" alttext="\displaystyle I_{B}" display="inline"><msub><mi>I</mi><mi>B</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E74.m2" class="ltx_Math" alttext="\displaystyle=m_{1}r_{1}^{2}+m_{2}r_{2}^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>⁢</mo><msubsup><mi>r</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><msub><mi>m</mi><mn>2</mn></msub><mo>⁢</mo><msubsup><mi>r</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.74)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E75"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E75.m1" class="ltx_Math" alttext="\displaystyle=m_{1}\left(\frac{d}{2}\right)^{2}+m_{2}\left(\frac{d}{2}\right)^%
+{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi>d</mi><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>m</mi><mn>2</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi>d</mi><mn>2</mn></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.75)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E76"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E76.m1" class="ltx_Math" alttext="\displaystyle=\frac{m_{1}+m_{2}}{4}d^{2}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>+</mo><msub><mi>m</mi><mn>2</mn></msub></mrow><mn>4</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.76)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">For the moment of inertia about axis <math id="SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, the distance of <math id="SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="m_{1}" display="inline"><msub><mi>m</mi><mn>1</mn></msub></math> from the axis is zero, so the moment of inertia is</p>
+<table id="Ch4.E77" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E77.m1" class="ltx_Math" alttext="I_{A}=m_{2}d^{2}." display="block"><mrow><mrow><msub><mi>I</mi><mi>A</mi></msub><mo>=</mo><mrow><msub><mi>m</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.77)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The key takeaway here is that any mass located at the axis of rotation contributes <span class="ltx_text ltx_font_italic">nothing</span> to the moment of inertia, no matter how much it is.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Just like calculating the centre of mass, when we have a continuous body we have to calculate moments of inertia using integrals.
+The formula is then</p>
+<table id="Ch4.E78" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E78.m1" class="ltx_Math" alttext="I=\int r^{2}\operatorname{\mathrm{d}}\!m," display="block"><mrow><mrow><mi>I</mi><mo rspace="0.111em">=</mo><mrow><mo>∫</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.78)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where we have to find a way to express the mass element <math id="SS0.SSS0.Px4.p1.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!m" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></math> in terms of length, area, or volume elements.
+We will now find the moments of inertia of common shapes.</p>
+</div>
+<div id="Ch4.Thmexample8" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.8</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample8.p1" class="ltx_para">
+<p class="ltx_p">Find the moment of inertia of a thin rod of uniform density rotating about its midpoint.</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="SS0.SSS0.Px5.p1.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> be the length of the rod and <math id="SS0.SSS0.Px5.p1.m2" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> be its linear mass density.
+Then from the diagram, we can see that <math id="SS0.SSS0.Px5.p1.m3" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!m=\lambda\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></math>.
+For the integral, the limits are <math id="SS0.SSS0.Px5.p1.m4" class="ltx_Math" alttext="-L/2" display="inline"><mrow><mo>−</mo><mrow><mi>L</mi><mo>/</mo><mn>2</mn></mrow></mrow></math> and <math id="SS0.SSS0.Px5.p1.m5" class="ltx_Math" alttext="L/2" display="inline"><mrow><mi>L</mi><mo>/</mo><mn>2</mn></mrow></math> and <math id="SS0.SSS0.Px5.p1.m6" class="ltx_Math" alttext="r^{2}=x^{2}" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>, so we have</p>
+<table id="Ch4.E79" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E79.m1" class="ltx_Math" alttext="I=\int_{\frac{L}{2}}^{\frac{L}{2}}x^{2}\lambda\operatorname{\mathrm{d}}\!x=%
+\left.\frac{\lambda x^{3}}{3}\right|_{\frac{L}{2}}^{\frac{L}{2}}=\frac{\lambda
+L%
+^{3}}{12}." display="block"><mrow><mrow><mi>I</mi><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mfrac><mi>L</mi><mn>2</mn></mfrac><mfrac><mi>L</mi><mn>2</mn></mfrac></msubsup><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>λ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><msubsup><mrow><mfrac><mrow><mi>λ</mi><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mn>3</mn></mfrac><mo>|</mo></mrow><mfrac><mi>L</mi><mn>2</mn></mfrac><mfrac><mi>L</mi><mn>2</mn></mfrac></msubsup><mo>=</mo><mfrac><mrow><mi>λ</mi><mo>⁢</mo><msup><mi>L</mi><mn>3</mn></msup></mrow><mn>12</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.79)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If we let <math id="SS0.SSS0.Px5.p1.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> be the total mass then <math id="SS0.SSS0.Px5.p1.m8" class="ltx_Math" alttext="M=\lambda L" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>L</mi></mrow></mrow></math>, and we have</p>
+<table id="Ch4.E80" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E80.m1" class="ltx_Math" alttext="I=\frac{1}{12}ML^{2}." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>12</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.80)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Ch4.Thmexample9" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.9</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample9.p1" class="ltx_para">
+<p class="ltx_p">Find the moment of inertia of a uniform density thin hoop of radius <math id="Ch4.Thmexample9.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> in the <math id="Ch4.Thmexample9.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="Ch4.Thmexample9.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane rotating around the <math id="Ch4.Thmexample9.p1.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis about its centre.</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px6" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px6.p1" class="ltx_para">
+<p class="ltx_p">We can use a symmetry argument to solve this.
+The distance from the axis is constant, so it doesn’t change for any mass element and can be taken out of the integral.
+Thus the moment of inertia just the total mass multiplied by the radius squared.</p>
+<table id="Ch4.E81" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E81.m1" class="ltx_Math" alttext="I=Mr^{2}." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mi>M</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.81)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Note that this is the same result as a point mass of mass <math id="SS0.SSS0.Px6.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> revolving around the <math id="SS0.SSS0.Px6.p1.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis at the same radius <math id="SS0.SSS0.Px6.p1.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>.</p>
+</div>
+<div id="Ch4.Thmexample10" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.10</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample10.p1" class="ltx_para">
+<p class="ltx_p">Find the moment of inertia of a uniform density thin disc of radius <math id="Ch4.Thmexample10.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> in the <math id="Ch4.Thmexample10.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="Ch4.Thmexample10.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane rotating about the <math id="Ch4.Thmexample10.p1.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis about its centre.</p>
+</div>
+<div id="Ch4.Thmexample10.p2" class="ltx_para">
+<p class="ltx_p">Here, we can use the result from the thin hoop.
+If we split the disc up into thin hoops, then we have <math id="Ch4.Thmexample10.p2.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!I=r^{2}\operatorname{\mathrm{d}}\!m" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>I</mi></mrow><mo>=</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></math> and we can integrate this from <math id="Ch4.Thmexample10.p2.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> to <math id="Ch4.Thmexample10.p2.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>.
+But first, we need to write the mass element in terms of the radius of the thin hoop.
+We can write <math id="Ch4.Thmexample10.p2.m4" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!m=\mu\operatorname{\mathrm{d}}\!A" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow><mo>=</mo><mrow><mi>μ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></math> where <math id="Ch4.Thmexample10.p2.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is the surface density of the disc, and the area of a thin hoop is <math id="Ch4.Thmexample10.p2.m6" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!A=2\pi r\operatorname{\mathrm{d}}\!r" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mrow></mrow></math>.
+Putting this all together, we get</p>
+<table id="Ch7.S10.EGx71" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E82"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E82.m1" class="ltx_Math" alttext="\displaystyle I=\int_{0}^{R}2\pi\mu r^{3}\operatorname{\mathrm{d}}\!r=\left.%
+\frac{2\pi\mu r^{4}}{4}\right|_{0}^{R}=\frac{1}{2}\pi\mu R^{4}." display="inline"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mi>R</mi></msubsup></mstyle><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msup><mi>r</mi><mn>3</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mrow></mrow><mo>=</mo><msubsup><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msup><mi>r</mi><mn>4</mn></msup></mrow><mn>4</mn></mfrac></mstyle><mo>|</mo></mrow><mn>0</mn><mi>R</mi></msubsup><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msup><mi>R</mi><mn>4</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.82)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The total mass of the disc is <math id="Ch4.Thmexample10.p2.m7" class="ltx_Math" alttext="M=\mu A=\mu\pi R^{2}" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math>, so this simplifies to</p>
+<table id="Ch4.E83" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E83.m1" class="ltx_Math" alttext="I=\frac{1}{2}MR^{2}." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.83)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">So the moment of inertia of a thin disc is half that of a thin hoop with the same mass and radius.</p>
+</div>
+</div>
+<div id="Ch4.Thmexample11" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.11</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample11.p1" class="ltx_para">
+<p class="ltx_p">Find the moment of inertia of a uniform density sphere of radius <math id="Ch4.Thmexample11.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> rotating about its centre.</p>
+</div>
+<div id="Ch4.Thmexample11.p2" class="ltx_para">
+<p class="ltx_p">Here we will again build upon previous results, this time using the moment of inertia of a thin disc.
+By aligning the axis of rotation with the <math id="Ch4.Thmexample11.p2.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis, we can split the sphere into thin discs of different radii and at different heights on the <math id="Ch4.Thmexample11.p2.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis.
+Then the total moment of inertia is found by integrating over <math id="Ch4.Thmexample11.p2.m3" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!I=\frac{1}{2}r^{2}\operatorname{\mathrm{d}}\!m" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>I</mi></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></math>, where <math id="Ch4.Thmexample11.p2.m4" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is the radius of the thin disc.
+<math id="Ch4.Thmexample11.p2.m5" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!m" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></math> is given by <math id="Ch4.Thmexample11.p2.m6" class="ltx_Math" alttext="\rho\operatorname{\mathrm{d}}\!V" display="inline"><mrow><mi>ρ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>V</mi></mrow></mrow></math> where <math id="Ch4.Thmexample11.p2.m7" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is the volume density, and the volume element <math id="Ch4.Thmexample11.p2.m8" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!V" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>V</mi></mrow></math> is the area of the disc multiplied by its height, <math id="Ch4.Thmexample11.p2.m9" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!V=\pi r^{2}\operatorname{\mathrm{d}}\!z" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>V</mi></mrow><mo>=</mo><mrow><mi>π</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow></math>.
+So far, we have</p>
+<table id="Ch4.E84" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E84.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!I=\frac{1}{2}\rho\pi r^{4}\operatorname{\mathrm{d}}%
+\!z." display="block"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>I</mi></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>r</mi><mn>4</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.84)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In order to integrate this we need a relation between <math id="Ch4.Thmexample11.p2.m10" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, the radius of each disc, and <math id="Ch4.Thmexample11.p2.m11" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>, its height.
+This is given by Pythagoras’ theorem (see the diagram above) as <math id="Ch4.Thmexample11.p2.m12" class="ltx_Math" alttext="r^{2}=R^{2}-z^{2}" display="inline"><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>=</mo><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow></math> so we get</p>
+<table id="Ch4.E85" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E85.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!I=\frac{1}{2}\rho\pi(R^{2}-z^{2})^{2}\operatorname{%
+\mathrm{d}}\!z." display="block"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>I</mi></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.85)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We can now tackle the integral:</p>
+<table id="Ch7.S10.EGx72" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E86"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E86.m1" class="ltx_Math" alttext="\displaystyle I" display="inline"><mi>I</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E86.m2" class="ltx_Math" alttext="\displaystyle=\int_{-R}^{R}\frac{1}{2}\rho\pi(R^{2}-z^{2})^{2}\operatorname{%
+\mathrm{d}}\!z" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>R</mi></mrow><mi>R</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>−</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.86)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E87"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E87.m1" class="ltx_Math" alttext="\displaystyle=\int_{0}^{R}\rho\pi(R^{4}+z^{4}-2R^{2}z^{2})\operatorname{%
+\mathrm{d}}\!z" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mi>R</mi></msubsup></mstyle><mrow><mi>ρ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>R</mi><mn>4</mn></msup><mo>+</mo><msup><mi>z</mi><mn>4</mn></msup></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.87)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E88"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E88.m1" class="ltx_Math" alttext="\displaystyle=\rho\pi\left[R^{4}z+\frac{z^{5}}{z}-\frac{2}{3}R^{2}z^{3}\right]%
+_{0}^{R}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>ρ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msubsup><mrow><mo>[</mo><mrow><mrow><mrow><msup><mi>R</mi><mn>4</mn></msup><mo>⁢</mo><mi>z</mi></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mi>z</mi><mn>5</mn></msup><mi>z</mi></mfrac></mstyle></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>3</mn></msup></mrow></mrow><mo>]</mo></mrow><mn>0</mn><mi>R</mi></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.88)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E89"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E89.m1" class="ltx_Math" alttext="\displaystyle=\frac{8}{15}\rho\pi R^{5}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>8</mn><mn>15</mn></mfrac></mstyle><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>R</mi><mn>5</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.89)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Note that in the second line we have used symmetry to ignore half of the integral and double the result.
+The mass of a sphere is <math id="Ch4.Thmexample11.p2.m13" class="ltx_Math" alttext="M=\frac{4}{3}\rho\pi R^{3}" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msup><mi>R</mi><mn>3</mn></msup></mrow></mrow></math>, so we have</p>
+<table id="Ch4.E90" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E90.m1" class="ltx_Math" alttext="I=\frac{2}{5}MR^{2}." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.90)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px7" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px7.p1" class="ltx_para">
+<p class="ltx_p">We will now look at two useful results that help with calculating more moments of inertia.</p>
+</div>
+<div id="Ch4.Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Theorem 4.1</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;"> <span class="ltx_text ltx_font_medium">(Parallel Axis Theorem)</span></span>
+</h6>
+<div id="Ch4.Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For a system of total mass <math id="Ch4.Thmtheorem1.p1.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and moment of inertia about an axis passing through the centre of mass <math id="Ch4.Thmtheorem1.p1.m2" class="ltx_Math" alttext="I_{\text{COM}}" display="inline"><msub><mi>I</mi><mtext class="ltx_mathvariant_italic">COM</mtext></msub></math>, the moment of inertia about a parallel axis a distance <math id="Ch4.Thmtheorem1.p1.m3" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> away is</span></p>
+<table id="Ch4.E91" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E91.m1" class="ltx_Math" alttext="I_{\parallel}=I_{\text{COM}}+Md^{2}." display="block"><mrow><mrow><msub><mi>I</mi><mo>∥</mo></msub><mo>=</mo><mrow><msub><mi>I</mi><mtext class="ltx_mathvariant_italic">COM</mtext></msub><mo>+</mo><mrow><mi>M</mi><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.91)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS0.SSS0.Px7.p2" class="ltx_para">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"></span> 
+<div id="SS0.SSS0.Px7.p2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#990033;">Proof.</span>Let’s put ourselves in the centre of mass frame, align the <math id="SS0.SSS0.Px7.p2.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis with the axis of rotation and the <math id="SS0.SSS0.Px7.p2.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-axis with the along the perpendicular distance between the two axes.
+The moment of inertia relative to the <math id="SS0.SSS0.Px7.p2.p1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis is</p>
+<table id="Ch4.E92" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E92.m1" class="ltx_Math" alttext="I_{\text{COM}}=\int(x^{2}+y^{2})\operatorname{\mathrm{d}}\!m," display="block"><mrow><mrow><msub><mi>I</mi><mtext>COM</mtext></msub><mo rspace="0.111em">=</mo><mrow><mo rspace="0em">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.92)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and the moment of inertia relative to the other axis is</p>
+<table id="Ch7.S10.EGx73" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E93"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E93.m1" class="ltx_Math" alttext="\displaystyle I_{\parallel}" display="inline"><msub><mi>I</mi><mo>∥</mo></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E93.m2" class="ltx_Math" alttext="\displaystyle=\int[(x-d)^{2}+y^{2}]\operatorname{\mathrm{d}}\!m" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo rspace="0em">∫</mo><mrow><mrow><mo stretchy="false">[</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>d</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">]</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.93)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E94"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E94.m1" class="ltx_Math" alttext="\displaystyle=\int(x^{2}+y^{2})\operatorname{\mathrm{d}}\!m+d^{2}\int%
+\operatorname{\mathrm{d}}\!m+2d\int x\operatorname{\mathrm{d}}\!m" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mrow><mo rspace="0em">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></mstyle><mo>+</mo><mrow><msup><mi>d</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mstyle></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><mi>x</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.94)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E95"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E95.m1" class="ltx_Math" alttext="\displaystyle=I_{\text{COM}}+Md^{2}+2d\int x\operatorname{\mathrm{d}}\!m." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>I</mi><mtext>COM</mtext></msub><mo>+</mo><mrow><mi>M</mi><mo>⁢</mo><msup><mi>d</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow><mi>x</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></mstyle></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.95)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The integral in the last term is <math id="SS0.SSS0.Px7.p2.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> coordinate of the centre of mass, which is zero in the centre of mass frame.
+So the last term disappears, leaving us with the result.
+
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="SS0.SSS0.Px8" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px8.p1" class="ltx_para">
+<p class="ltx_p">We can use this result to calculate moments of inertia of shapes we have seen before about different axes that might be difficult to find via a straightforward approach.</p>
+</div>
+<div id="Ch4.Thmexample12" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.12</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample12.p1" class="ltx_para">
+<p class="ltx_p">Consider a uniform density thin disc of radius <math id="Ch4.Thmexample12.p1.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> in the <math id="Ch4.Thmexample12.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="Ch4.Thmexample12.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane, but instead of rotating around the <math id="Ch4.Thmexample12.p1.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis about its centre like before, it is rotating about a point on the circumference.</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px9" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px9.p1" class="ltx_para">
+<p class="ltx_p">We know that the moment of inertia of the thin disc about the centre is <math id="SS0.SSS0.Px9.p1.m1" class="ltx_Math" alttext="I_{\text{COM}}=\frac{1}{2}MR^{2}" display="inline"><mrow><msub><mi>I</mi><mtext>COM</mtext></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math>, and the distance to the parallel axis is simply the radius <math id="SS0.SSS0.Px9.p1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, so applying the parallel axis theorem we get</p>
+<table id="Ch4.E96" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E96.m1" class="ltx_Math" alttext="I_{\parallel}=\frac{1}{2}MR^{2}+MR^{2}=\frac{3}{2}MR^{2}." display="block"><mrow><mrow><msub><mi>I</mi><mo>∥</mo></msub><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.96)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Ch4.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Theorem 4.2</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;"> <span class="ltx_text ltx_font_medium">(Perpendicular Axis Theorem)</span></span>
+</h6>
+<div id="Ch4.Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose we have a planar lamina lying in the <math id="Ch4.Thmtheorem2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="Ch4.Thmtheorem2.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane.
+The moment of inertia about the <math id="Ch4.Thmtheorem2.p1.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> axis, <math id="Ch4.Thmtheorem2.p1.m4" class="ltx_Math" alttext="I_{z}" display="inline"><msub><mi>I</mi><mi>z</mi></msub></math>, is related to the moments of inertia about the <math id="Ch4.Thmtheorem2.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="Ch4.Thmtheorem2.p1.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axes, <math id="Ch4.Thmtheorem2.p1.m7" class="ltx_Math" alttext="I_{x}" display="inline"><msub><mi>I</mi><mi>x</mi></msub></math> and <math id="Ch4.Thmtheorem2.p1.m8" class="ltx_Math" alttext="I_{y}" display="inline"><msub><mi>I</mi><mi>y</mi></msub></math>, by</span></p>
+<table id="Ch4.E97" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E97.m1" class="ltx_Math" alttext="I_{z}=I_{x}+I_{y}." display="block"><mrow><mrow><msub><mi>I</mi><mi>z</mi></msub><mo>=</mo><mrow><msub><mi>I</mi><mi>x</mi></msub><mo>+</mo><msub><mi>I</mi><mi>y</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.97)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS0.SSS0.Px9.p2" class="ltx_para">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"></span> 
+<div id="SS0.SSS0.Px9.p2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#990033;">Proof.</span>The proof is straightforward: manipulating the integral for moment of inertia about the <math id="SS0.SSS0.Px9.p2.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis we get</p>
+<table id="Ch4.E98" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E98.m1" class="ltx_Math" alttext="I_{z}=\int(x^{2}+y^{2})\operatorname{\mathrm{d}}\!m=\int x^{2}\operatorname{%
+\mathrm{d}}\!m+\int y^{2}\operatorname{\mathrm{d}}\!m=I_{y}+I_{x}." display="block"><mrow><mrow><msub><mi>I</mi><mi>z</mi></msub><mo rspace="0.111em">=</mo><mrow><mo rspace="0em">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><mrow><mo>∫</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow><mo rspace="0.055em">+</mo><mrow><mo>∫</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>I</mi><mi>y</mi></msub><mo>+</mo><msub><mi>I</mi><mi>x</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.98)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Note that <math id="SS0.SSS0.Px9.p2.p1.m2" class="ltx_Math" alttext="\int x^{2}\operatorname{\mathrm{d}}\!m=I_{y}" display="inline"><mrow><mrow><mo>∫</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>m</mi></mrow></mrow></mrow><mo>=</mo><msub><mi>I</mi><mi>y</mi></msub></mrow></math>, not <math id="SS0.SSS0.Px9.p2.p1.m3" class="ltx_Math" alttext="I_{x}" display="inline"><msub><mi>I</mi><mi>x</mi></msub></math> since <math id="SS0.SSS0.Px9.p2.p1.m4" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math> in this case denotes the perpendicular distance from the axis of rotation, which must be around the <math id="SS0.SSS0.Px9.p2.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>-axis.
+
+∎</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="Ch4.Thmexample13" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.13</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample13.p1" class="ltx_para">
+<p class="ltx_p">Consider the uniform density thin disc again.
+What is its moment of inertia about the <math id="Ch4.Thmexample13.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="Ch4.Thmexample13.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> axes?</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px10" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px10.p1" class="ltx_para">
+<p class="ltx_p">We know that <math id="SS0.SSS0.Px10.p1.m1" class="ltx_Math" alttext="I_{z}=\frac{1}{2}MR^{2}" display="inline"><mrow><msub><mi>I</mi><mi>z</mi></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math> for the thin disc, and by the perpendicular axis theorem we have <math id="SS0.SSS0.Px10.p1.m2" class="ltx_Math" alttext="I_{z}=I_{x}+I_{y}" display="inline"><mrow><msub><mi>I</mi><mi>z</mi></msub><mo>=</mo><mrow><msub><mi>I</mi><mi>x</mi></msub><mo>+</mo><msub><mi>I</mi><mi>y</mi></msub></mrow></mrow></math>.
+In this case we can invoke symmetry of the disc to argue that <math id="SS0.SSS0.Px10.p1.m3" class="ltx_Math" alttext="I_{x}=I_{y}" display="inline"><mrow><msub><mi>I</mi><mi>x</mi></msub><mo>=</mo><msub><mi>I</mi><mi>y</mi></msub></mrow></math>, and therefore <math id="SS0.SSS0.Px10.p1.m4" class="ltx_Math" alttext="I_{z}=2I_{x}=2I_{y}" display="inline"><mrow><msub><mi>I</mi><mi>z</mi></msub><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>I</mi><mi>x</mi></msub></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>I</mi><mi>y</mi></msub></mrow></mrow></math>.
+Therefore we must have</p>
+<table id="Ch4.E99" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E99.m1" class="ltx_Math" alttext="I_{x}=I_{y}=\frac{I_{z}}{2}=\frac{1}{4}MR^{2}." display="block"><mrow><mrow><msub><mi>I</mi><mi>x</mi></msub><mo>=</mo><msub><mi>I</mi><mi>y</mi></msub><mo>=</mo><mfrac><msub><mi>I</mi><mi>z</mi></msub><mn>2</mn></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.99)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Ch4.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Theorem 4.3</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;"> <span class="ltx_text ltx_font_medium">(Stretch Rule)</span></span>
+</h6>
+<div id="Ch4.Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The moment of inertia of a rigid object is unchanged when the object is stretched parallel to the axis of rotation and the distribution of mass is kept the same (except along the axis of rotation).
+This allows us to take a planar object and extrude it into 3D along the <math id="Ch4.Thmtheorem3.p1.m1" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis while keeping the same mass and moment of inertia.</span></p>
+</div>
+</div>
+<div id="SS0.SSS0.Px10.p2" class="ltx_para">
+<ul class="ltx_itemize">
+<li class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"></span> 
+<div id="SS0.SSS0.Px10.p2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#990033;">Proof.</span>Have an object of cross-sectional area in the <math id="SS0.SSS0.Px10.p2.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="SS0.SSS0.Px10.p2.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane <math id="SS0.SSS0.Px10.p2.p1.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and height <math id="SS0.SSS0.Px10.p2.p1.m4" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.
+Then the moment of inertia around the <math id="SS0.SSS0.Px10.p2.p1.m5" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis can be expressed as</p>
+<table id="Ch4.E100" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E100.m1" class="ltx_Math" alttext="I_{z}=\int(x^{2}+y^{2})\rho(x,y,z)\operatorname{\mathrm{d}}\!V=\int_{0}^{L}%
+\operatorname{\mathrm{d}}\!z\int_{A}(x^{2}+y^{2})\rho(x,y,z)\operatorname{%
+\mathrm{d}}\!A." display="block"><mrow><mrow><msub><mi>I</mi><mi>z</mi></msub><mo rspace="0.111em">=</mo><mrow><mo rspace="0em">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>V</mi></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>L</mi></msubsup><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow><mo>⁢</mo><mrow><msub><mo rspace="0em">∫</mo><mi>A</mi></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.100)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If we stretch this object along <math id="SS0.SSS0.Px10.p2.p1.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> by a factor of <math id="SS0.SSS0.Px10.p2.p1.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, then we have to divide the mass density by <math id="SS0.SSS0.Px10.p2.p1.m8" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and change the upper limit on the <math id="SS0.SSS0.Px10.p2.p1.m9" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> integral to the new height <math id="SS0.SSS0.Px10.p2.p1.m10" class="ltx_Math" alttext="aL" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>L</mi></mrow></math>.
+This means the total mass remains unchanged.
+Then the new moment of inertia is</p>
+<table id="Ch4.E101" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E101.m1" class="ltx_Math" alttext="I_{z}^{\prime}=\int_{0}^{aL}\operatorname{\mathrm{d}}\!z\int_{A}(x^{2}+y^{2})%
+\frac{\rho(x,y,z/a)}{a}\operatorname{\mathrm{d}}\!A." display="block"><mrow><mrow><msubsup><mi>I</mi><mi>z</mi><mo>′</mo></msubsup><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><mi>a</mi><mo>⁢</mo><mi>L</mi></mrow></msubsup><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow><mo>⁢</mo><mrow><msub><mo rspace="0em">∫</mo><mi>A</mi></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mrow><mi>z</mi><mo>/</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>a</mi></mfrac><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.101)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Making the substitution <math id="SS0.SSS0.Px10.p2.p1.m11" class="ltx_Math" alttext="z^{\prime}=z/a" display="inline"><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>z</mi><mo>/</mo><mi>a</mi></mrow></mrow></math>, we get</p>
+<table id="Ch7.S10.EGx74" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E102"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E102.m1" class="ltx_Math" alttext="\displaystyle I_{z}^{\prime}" display="inline"><msubsup><mi>I</mi><mi>z</mi><mo>′</mo></msubsup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E102.m2" class="ltx_Math" alttext="\displaystyle=\int_{0}^{L}a\operatorname{\mathrm{d}}\!z^{\prime}\int_{A}(x^{2}%
++y^{2})\frac{\rho(x,y,z^{\prime})}{a}\operatorname{\mathrm{d}}\!A" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mi>L</mi></msubsup></mstyle><mrow><mi>a</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>z</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo>∫</mo><mi>A</mi></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><msup><mi>z</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mi>a</mi></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.102)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E103"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E103.m1" class="ltx_Math" alttext="\displaystyle=\int_{0}^{L}\operatorname{\mathrm{d}}\!z^{\prime}\int_{A}(x^{2}+%
+y^{2})\rho(x,y,z^{\prime})\operatorname{\mathrm{d}}\!A" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mi>L</mi></msubsup></mstyle><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>z</mi><mo>′</mo></msup></mrow><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo>∫</mo><mi>A</mi></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><msup><mi>z</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.103)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E104"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E104.m1" class="ltx_Math" alttext="\displaystyle=I_{z}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><msub><mi>I</mi><mi>z</mi></msub></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.104)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Using the stretch rule, we can say that the moment of inertia of a cylinder rotating about its main axis is the same as a thin disc.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px11" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px11.p1" class="ltx_para">
+<p class="ltx_p">Let’s now look at some problems which combine all the ideas of this chapter.</p>
+</div>
+<div id="Ch4.Thmexample14" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.14</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample14.p1" class="ltx_para">
+<p class="ltx_p">A light inextensible cable is being pulled out from a reel with a force of <math id="Ch4.Thmexample14.p1.m1" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math>.
+The reel weighs <math id="Ch4.Thmexample14.p1.m2" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math> and has a radius of <math id="Ch4.Thmexample14.p1.m3" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math>.
+After <math id="Ch4.Thmexample14.p1.m4" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math> of the cable have been pulled out, what it its velocity?</p>
+</div>
+<figure id="Ch4.Thmexample14.fig1" class="ltx_figure"><svg id="Ch4.Thmexample14.pic1" class="ltx_picture" height="88.79" overflow="visible" version="1.1" width="220.46"><g fill="#000000" stroke="#000000" transform="translate(0,88.79) matrix(1 0 0 -1 0 0) translate(51.18,0) translate(0,39.92)"><g stroke-width="1.2pt"><path d="M 0 39.37 L 157.48 39.37" style="fill:none"></path></g><g stroke-width="0.4pt"><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 77.59 44.26)"><foreignObject height="0" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="2.31"><math id="Ch4.Thmexample14.pic1.m1" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math></foreignObject></g><path d="M 118.11 23.62 L 156.84 23.62" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 156.84 23.62)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 162.37 23.62)"><foreignObject height="0" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="2.31"><math id="Ch4.Thmexample14.pic1.m2" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math></foreignObject></g><g stroke-width="0.8pt"><path d="M 0 0 M 39.37 0 C 39.37 21.74 21.74 39.37 0 39.37 C -21.74 39.37 -39.37 21.74 -39.37 0 C -39.37 -21.74 -21.74 -39.37 0 -39.37 C 21.74 -39.37 39.37 -21.74 39.37 0 Z M 0 0" style="fill:none"></path></g><path d="M 0 0 L -39.37 -39.37 L 39.37 -39.37 Z" style="fill:none"></path><path d="M -0.64 7.87 C -4.35 7.87 -7.87 4.35 -7.87 0 C -7.87 -4.35 -4.35 -7.87 0 -7.87 C 4.35 -7.87 7.87 -4.35 7.87 0 C 7.87 3.31 5.8 6.27 2.69 7.4" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 -0.64 7.87)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -46.56 0)"><foreignObject height="0" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="2.31"><math id="Ch4.Thmexample14.pic1.m3" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math></foreignObject></g><g stroke-dasharray="3.0pt,3.0pt" stroke-dashoffset="0.0pt"><path d="M 0 0 L 33.54 19.37" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.86601 0.50002 -0.50002 0.86601 33.54 19.37)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 9.85 14.73)"><foreignObject height="0" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="2.31"><math id="Ch4.Thmexample14.pic1.m4" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math></foreignObject></g></g></g></svg>
+</figure>
+</div>
+</section>
+<section id="SS0.SSS0.Px12" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px12.p1" class="ltx_para">
+<p class="ltx_p">To solve this, we will look at the rotational kinetic energy of the pulley before and after and then invoke the work-energy theorem.
+Its initial kinetic energy is zero, and its final kinetic energy is its rotational kinetic energy <math id="SS0.SSS0.Px12.p1.m1" class="ltx_Math" alttext="K_{\text{rot}}=\frac{1}{2}I\omega^{2}" display="inline"><mrow><msub><mi>K</mi><mtext>rot</mtext></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>I</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow></math>.
+By the work-energy theorem, the final kinetic energy is equal to the work done, which is the length of rope pulled out multiplied by the tension <math id="SS0.SSS0.Px12.p1.m2" class="ltx_Math" alttext="W=Ts" display="inline"><mrow><mi>W</mi><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math>.
+Putting these two equations together and rearranging for <math id="SS0.SSS0.Px12.p1.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, we get</p>
+<table id="Ch4.E105" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E105.m1" class="ltx_Math" alttext="\omega=\sqrt{\frac{2Ts}{I}}." display="block"><mrow><mrow><mi>ω</mi><mo>=</mo><msqrt><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mi>s</mi></mrow><mi>I</mi></mfrac></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.105)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">By the stretch rule, the moment of inertia of the reel is the same as a thin disc, namely <math id="SS0.SSS0.Px12.p1.m4" class="ltx_Math" alttext="I=\frac{1}{2}MR^{2}" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mrow></math>, so we get</p>
+<table id="Ch4.E106" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E106.m1" class="ltx_Math" alttext="\omega=\sqrt{\frac{4Ts}{MR^{2}}}=\sqrt{\frac{4\cdot$\text{\,}$\cdot$\text{\,}$%
+}{$\text{\,}$\cdot($\text{\,}$)^{2}}}=$\text{\,}$." display="block"><mrow><mrow><mi>ω</mi><mo>=</mo><msqrt><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mi>s</mi></mrow><mrow><mi>M</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup></mrow></mfrac></msqrt><mo>=</mo><msqrt><mfrac><mrow><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow></mrow><mrow><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></msqrt><mo>=</mo><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.106)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Now that we have the final angular velocity of the reel, the speed of the cable is just the tangential speed of the reel at its edge, which is</p>
+<table id="Ch4.E107" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E107.m1" class="ltx_Math" alttext="v_{\text{cable}}=v_{\text{reel}}=R\omega=$\text{\,}$\cdot$\text{\,}$=$\text{\,%
+}$." display="block"><mrow><mrow><msub><mi>v</mi><mtext>cable</mtext></msub><mo>=</mo><msub><mi>v</mi><mtext>reel</mtext></msub><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi>ω</mi></mrow><mo>=</mo><mrow><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow></mrow><mo>=</mo><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.107)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Ch4.Thmexample15" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.15</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample15.p1" class="ltx_para">
+<p class="ltx_p">Suppose a dumbbell-shaped pendulum is allowed to fall from horizontal.
+The weights at each end are spherical with radius <math id="Ch4.Thmexample15.p1.m1" class="ltx_Math" alttext="r=$\text{\,}$" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow></math> and they weigh <math id="Ch4.Thmexample15.p1.m2" class="ltx_Math" alttext="m_{\text{weight}}=$\text{\,}$" display="inline"><mrow><msub><mi>m</mi><mtext>weight</mtext></msub><mo>=</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow></math>.
+The bar is <math id="Ch4.Thmexample15.p1.m3" class="ltx_Math" alttext="l=$\text{\,}$" display="inline"><mrow><mi>l</mi><mo>=</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow></math> long and weighs <math id="Ch4.Thmexample15.p1.m4" class="ltx_Math" alttext="m_{\text{bar}}=$\text{\,}$" display="inline"><mrow><msub><mi>m</mi><mtext>bar</mtext></msub><mo>=</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow></math>.
+The pivot point is at the left end of the bar.
+What is angular velocity of the dumbbell when it is vertical?</p>
+</div>
+<figure id="Ch4.Thmexample15.fig1" class="ltx_figure"><svg id="Ch4.Thmexample15.pic1" class="ltx_picture ltx_centering" height="79.85" overflow="visible" version="1.1" width="355.44"><g fill="#000000" stroke="#000000" transform="translate(0,79.85) matrix(1 0 0 -1 0 0) translate(39.92,0) translate(0,39.92)"><g stroke-width="0.8pt"><path d="M 0 0 M 39.37 0 C 39.37 21.74 21.74 39.37 0 39.37 C -21.74 39.37 -39.37 21.74 -39.37 0 C -39.37 -21.74 -21.74 -39.37 0 -39.37 C 21.74 -39.37 39.37 -21.74 39.37 0 Z M 0 0" style="fill:none"></path></g><g stroke-width="0.8pt"><path d="M 39.37 -1.97 L 39.37 1.97 L 236.22 1.97 L 236.22 -1.97 Z" style="fill:none"></path></g><g stroke-width="0.8pt"><path d="M 275.59 0 M 314.96 0 C 314.96 21.74 297.33 39.37 275.59 39.37 C 253.85 39.37 236.22 21.74 236.22 0 C 236.22 -21.74 253.85 -39.37 275.59 -39.37 C 297.33 -39.37 314.96 -21.74 314.96 0 Z M 275.59 0" style="fill:none"></path></g><g stroke-width="0.4pt"><path d="M 43.31 0 M 43.7 0 C 43.7 0.22 43.52 0.39 43.31 0.39 C 43.09 0.39 42.91 0.22 42.91 0 C 42.91 -0.22 43.09 -0.39 43.31 -0.39 C 43.52 -0.39 43.7 -0.22 43.7 0 Z M 43.31 0" style="fill:none"></path><path d="M 42.67 7.87 C 38.96 7.87 35.43 4.35 35.43 0 C 35.43 -4.35 38.96 -7.87 43.31 -7.87 C 47.66 -7.87 51.18 -4.35 51.18 0 C 51.18 3.31 49.11 6.27 46 7.4" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 42.67 7.87)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g></g></svg>
+</figure>
+</div>
+</section>
+<section id="SS0.SSS0.Px13" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px13.p1" class="ltx_para">
+<p class="ltx_p">The first step to solving this problem is working out the moment of inertia of the dumbbell about the pivot point.
+If we split the dumbbell into the two weights (<math id="SS0.SSS0.Px13.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> for the one above the pivot and <math id="SS0.SSS0.Px13.p1.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> for the one below) and the bar, the total moment of inertia can be written as</p>
+<table id="Ch4.E108" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E108.m1" class="ltx_Math" alttext="I=I_{A}+I_{\text{bar}}+I_{B}." display="block"><mrow><mrow><mi>I</mi><mo>=</mo><mrow><msub><mi>I</mi><mi>A</mi></msub><mo>+</mo><msub><mi>I</mi><mtext>bar</mtext></msub><mo>+</mo><msub><mi>I</mi><mi>B</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.108)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Using the parallel axis theorem, the moment of inertia of the bar is <math id="SS0.SSS0.Px13.p1.m3" class="ltx_Math" alttext="I_{\text{bar}}=\frac{1}{12}m_{\text{bar}}l^{2}+m_{\text{bar}}\left(\frac{1}{2}%
+l\right)^{2}=\frac{1}{3}m_{\text{bar}}l^{2}" display="inline"><mrow><msub><mi>I</mi><mtext>bar</mtext></msub><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>12</mn></mfrac><mo>⁢</mo><msub><mi>m</mi><mtext>bar</mtext></msub><mo>⁢</mo><msup><mi>l</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>m</mi><mtext>bar</mtext></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>l</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⁢</mo><msub><mi>m</mi><mtext>bar</mtext></msub><mo>⁢</mo><msup><mi>l</mi><mn>2</mn></msup></mrow></mrow></math>.
+For the weights, we can again use the parallel axis theorem since we know that the moment of inertia of a sphere is <math id="SS0.SSS0.Px13.p1.m4" class="ltx_Math" alttext="\frac{2}{5}mr^{2}" display="inline"><mrow><mfrac><mn>2</mn><mn>5</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>.
+Hence we get</p>
+<table id="Ch7.S10.EGx75" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E109"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E109.m1" class="ltx_Math" alttext="\displaystyle I" display="inline"><mi>I</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E109.m2" class="ltx_Math" alttext="\displaystyle=\left(\frac{2}{5}m_{\text{weight}}r^{2}+m_{\text{weight}}r^{2}%
+\right)+\frac{1}{3}m_{\text{bar}}l^{2}+\left(\frac{2}{5}m_{\text{weight}}r^{2}%
++m_{\text{weight}}(l+r)^{2}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mtext>weight</mtext></msub><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>m</mi><mtext>weight</mtext></msub><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mtext>bar</mtext></msub><mo>⁢</mo><msup><mi>l</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mn>5</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>m</mi><mtext>weight</mtext></msub><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>m</mi><mtext>weight</mtext></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>l</mi><mo>+</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.109)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E110"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E110.m1" class="ltx_Math" alttext="\displaystyle=\frac{9}{5}\cdot$\text{\,}$\cdot($\text{\,}$)^{2}+\frac{1}{3}%
+\cdot$\text{\,}$\cdot($\text{\,}$)^{2}+$\text{\,}$\cdot($\text{\,}$)^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>9</mn><mn>5</mn></mfrac></mstyle><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.110)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E111"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E111.m1" class="ltx_Math" alttext="\displaystyle=$\text{\,}$." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.111)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Now, to use energy conservation we also need to know the potential energy difference.
+To do this we need to know where the centre of mass is, since the potential energy difference is just <math id="SS0.SSS0.Px13.p1.m5" class="ltx_Math" alttext="-Mgh" display="inline"><mrow><mo>−</mo><mrow><mi>M</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>h</mi></mrow></mrow></math>, where <math id="SS0.SSS0.Px13.p1.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is the total mass and <math id="SS0.SSS0.Px13.p1.m7" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is the distance that the centre of mass dropped.
+By symmetry, the centre of mass is clearly just the centre of the dumbbell which is a distance of <math id="SS0.SSS0.Px13.p1.m8" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math> from the pivot.
+Thus the height by which the centre of mass has dropped when it reaches the bottom is <math id="SS0.SSS0.Px13.p1.m9" class="ltx_Math" alttext="\text{\,}" display="inline"><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></math>.
+Setting the zero point of the potential energy to be the initial height, the total energy before is zero since the dumbbell is not moving.
+The final energy is</p>
+<table id="Ch4.E112" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E112.m1" class="ltx_Math" alttext="E_{f}=\frac{1}{2}I\omega^{2}-Mgh=0." display="block"><mrow><mrow><msub><mi>E</mi><mi>f</mi></msub><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>I</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo>−</mo><mrow><mi>M</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>h</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.112)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Rearranging for <math id="SS0.SSS0.Px13.p1.m10" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, we get</p>
+<table id="Ch7.S10.EGx76" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E113"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E113.m1" class="ltx_Math" alttext="\displaystyle\omega" display="inline"><mi>ω</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E113.m2" class="ltx_Math" alttext="\displaystyle=\sqrt{\frac{2Mgh}{I}}" display="inline"><mrow><mi></mi><mo>=</mo><msqrt><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>h</mi></mrow><mi>I</mi></mfrac></mstyle></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.113)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E114"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E114.m1" class="ltx_Math" alttext="\displaystyle=\sqrt{\frac{2\cdot$\text{\,}$\cdot$\text{\,}$\cdot$\text{\,}$}{$%
+\text{\,}$}}" display="inline"><mrow><mi></mi><mo>=</mo><msqrt><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mfrac></mstyle></msqrt></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.114)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E115"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E115.m1" class="ltx_Math" alttext="\displaystyle=$\text{\,}$." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.115)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch4.S4.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.4 </span>Uniform Circular Motion</span></a><a href="bib.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch5.html" title="In Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Angular Momentum</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:54:15 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

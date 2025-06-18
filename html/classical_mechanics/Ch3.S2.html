@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3.2 Work ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics</title>
+<!--Generated on Mon Jun 16 09:54:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="up up" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="start" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="prev" href="Ch3.S1.html" title="3.1 The Conservation of Energy ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="next" href="Ch3.S3.html" title="3.3 Work-Energy Theorem ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="section" href="Ch3.S1.html" title="3.1 The Conservation of Energy ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="section" href="Ch3.S3.html" title="3.3 Work-Energy Theorem ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="section" href="Ch3.S4.html" title="3.4 Conservative Forces ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="section" href="Ch3.S5.html" title="3.5 Energy in a System of Multiple Particles ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="section" href="Ch3.S6.html" title="3.6 Non-conservative Forces ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="section" href="Ch3.S7.html" title="3.7 Collisions ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="bib.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch3.html" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Energy &amp; Work</span></a><a href="Ch3.S1.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>The Conservation of Energy</span></a><a href="Ch3.S3.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Work-Energy Theorem</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.2 </span>Work</h1>
+
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">As force is applied to an object, energy will be added or taken away.
+We call this energy <span class="ltx_text ltx_font_bold">work</span>.
+Work is defined by the force applied multiplied by the distance the force was applied over.
+For a constant force, this can be written mathematically as <math id="SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="W=\boldsymbol{F}\cdot\boldsymbol{s}=\lvert\boldsymbol{F}\rvert\lvert%
+\boldsymbol{s}\rvert\cos\theta" display="inline"><mrow><mi>W</mi><mo>=</mo><mrow><mi>𝑭</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝒔</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mi>𝑭</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>𝒔</mi><mo stretchy="false">|</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></math> (check that this has units of energy!).
+We can think of work as the mechanism for transferring energy.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">If the force is changing continuously over time, we need to be more careful about how we define the work.
+We break up the path of the object into small sections over which the force is approximately constant and integrate over all these small sections to get the total work.</p>
+</div>
+<div id="Ch3.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 3.2</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch3.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">The work done by a force over an infinitesimal distance <math id="Ch3.Thmdefinition2.p1.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!\boldsymbol{r}" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow></math> is</p>
+<table id="Ch3.E25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E25.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!W=\boldsymbol{F}\cdot\operatorname{\mathrm{d}}\!%
+\boldsymbol{r}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>W</mi></mrow><mo>=</mo><mrow><mi>𝑭</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.25)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The total work is then defined as</p>
+<table id="Ch3.E26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E26.m1" class="ltx_Math" alttext="W=\int\operatorname{\mathrm{d}}\!W=\int_{\boldsymbol{r}_{1}}^{\boldsymbol{r}_{%
+2}}\boldsymbol{F}\cdot\operatorname{\mathrm{d}}\!\boldsymbol{r}," display="block"><mrow><mrow><mi>W</mi><mo rspace="0.111em">=</mo><mrow><mo>∫</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>W</mi></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><msub><mi>𝒓</mi><mn>1</mn></msub><msub><mi>𝒓</mi><mn>2</mn></msub></msubsup><mrow><mi>𝑭</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.26)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="Ch3.Thmdefinition2.p1.m2" class="ltx_Math" alttext="\boldsymbol{r}_{1}" display="inline"><msub><mi>𝒓</mi><mn>1</mn></msub></math> and <math id="Ch3.Thmdefinition2.p1.m3" class="ltx_Math" alttext="\boldsymbol{r}_{2}" display="inline"><msub><mi>𝒓</mi><mn>2</mn></msub></math> are the start and end points of the path being integrated over.</p>
+</div>
+</div>
+<div id="SS0.SSS0.Px2.p2" class="ltx_para">
+<p class="ltx_p">This is a line integral, so evaluating it will involve choosing a coordinate system and splitting the path up into components along each axis.
+Let’s do a couple of examples now.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">In cartesian coordinates, the force vector is given by <math id="SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=F_{x}\hat{\boldsymbol{\imath}}+F_{y}\hat{\boldsymbol{\jmath}}+F%
+_{z}\hat{\boldsymbol{k}}" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>F</mi><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>F</mi><mi>z</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow></math> and the infinitesimal displacement is <math id="SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!\boldsymbol{r}=\operatorname{\mathrm{d}}\!x\hat{%
+\boldsymbol{\imath}}+\operatorname{\mathrm{d}}\!y\hat{\boldsymbol{\jmath}}+%
+\operatorname{\mathrm{d}}\!z\hat{\boldsymbol{k}}" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow><mo>=</mo><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>y</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>z</mi><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></math>.
+The dot product <math id="SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="\boldsymbol{F}\cdot\operatorname{\mathrm{d}}\!\boldsymbol{r}" display="inline"><mrow><mi>𝑭</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow></mrow></math> is <math id="SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="F_{x}\operatorname{\mathrm{d}}\!x+F_{y}\operatorname{\mathrm{d}}\!y+F_{z}%
+\operatorname{\mathrm{d}}\!z" display="inline"><mrow><mrow><msub><mi>F</mi><mi>x</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>+</mo><mrow><msub><mi>F</mi><mi>y</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><msub><mi>F</mi><mi>z</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow></math>.
+Thus, the integral in equation <a href="#Ch3.E26" title="In Definition 3.2. ‣ 3.2 Work ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.26</span></a> becomes</p>
+<table id="Ch3.E27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E27.m1" class="ltx_Math" alttext="W=\int_{x_{1}}^{x_{2}}F_{x}\operatorname{\mathrm{d}}\!x+\int_{y_{1}}^{y_{2}}F_%
+{y}\operatorname{\mathrm{d}}\!y+\int_{z_{1}}^{z_{2}}F_{z}\operatorname{\mathrm%
+{d}}\!z," display="block"><mrow><mrow><mi>W</mi><mo rspace="0.111em">=</mo><mrow><mrow><msubsup><mo>∫</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub></msubsup><mrow><msub><mi>F</mi><mi>x</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="0.055em">+</mo><mrow><msubsup><mo>∫</mo><msub><mi>y</mi><mn>1</mn></msub><msub><mi>y</mi><mn>2</mn></msub></msubsup><mrow><msub><mi>F</mi><mi>y</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow><mo rspace="0.055em">+</mo><mrow><msubsup><mo>∫</mo><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></msubsup><mrow><msub><mi>F</mi><mi>z</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>z</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.27)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where the limits of the integrals are the components of the start and end points of the path.</p>
+</div>
+<div id="Ch3.Thmexample3" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 3.3</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch3.Thmexample3.p1" class="ltx_para">
+<p class="ltx_p">Consider a force <math id="Ch3.Thmexample3.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=xy\hat{\boldsymbol{\imath}}+x^{2}y\hat{\boldsymbol{\jmath}}" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></math>.
+What is the work done on an object that moves along a straight line from <math id="Ch3.Thmexample3.p1.m2" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> to <math id="Ch3.Thmexample3.p1.m3" class="ltx_Math" alttext="(4,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math> while under the influence of this force.</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Note that the components of this force <math id="SS0.SSS0.Px4.p1.m1" class="ltx_Math" alttext="F_{x}" display="inline"><msub><mi>F</mi><mi>x</mi></msub></math> and <math id="SS0.SSS0.Px4.p1.m2" class="ltx_Math" alttext="F_{y}" display="inline"><msub><mi>F</mi><mi>y</mi></msub></math> both depend on <math id="SS0.SSS0.Px4.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="SS0.SSS0.Px4.p1.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, so to evaluate the integrals we will have to eliminate the other variable by parameterising the path.
+Luckily this is easy for a straight line, the path can be written as <math id="SS0.SSS0.Px4.p1.m5" class="ltx_Math" alttext="y=\frac{3}{4}x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow></math>.
+Then the work is</p>
+<table id="Ch7.S10.EGx30" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E28.m1" class="ltx_Math" alttext="\displaystyle W" display="inline"><mi>W</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E28.m2" class="ltx_Math" alttext="\displaystyle=\int_{0}^{4}xy\operatorname{\mathrm{d}}\!x+\int_{0}^{3}x^{2}y%
+\operatorname{\mathrm{d}}\!y" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mn>4</mn></msubsup></mstyle><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mn>3</mn></msubsup></mstyle><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.28)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E29.m1" class="ltx_Math" alttext="\displaystyle=\int_{0}^{4}x\left(\frac{3}{4}x\right)\operatorname{\mathrm{d}}%
+\!x+\int_{0}^{3}\left(\frac{4}{3}y\right)^{2}y\operatorname{\mathrm{d}}\!y" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mn>4</mn></msubsup></mstyle><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mi>x</mi></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mn>3</mn></msubsup></mstyle><mrow><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><mi>y</mi></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mi>y</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.29)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E30.m1" class="ltx_Math" alttext="\displaystyle=\frac{3}{4}\int_{0}^{4}x^{2}\operatorname{\mathrm{d}}\!x+\frac{1%
+6}{9}y^{3}\operatorname{\mathrm{d}}\!y" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>3</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mn>4</mn></msubsup></mstyle><mrow><msup><mi>x</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>16</mn><mn>9</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>y</mi><mn>3</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.30)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E31.m1" class="ltx_Math" alttext="\displaystyle=\left.\frac{1}{4}x^{3}\right|_{0}^{4}+\left.\frac{4}{9}y^{4}%
+\right|_{0}^{3}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>4</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>|</mo></mrow><mn>0</mn><mn>4</mn></msubsup><mo>+</mo><msubsup><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mn>9</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>y</mi><mn>4</mn></msup></mrow><mo>|</mo></mrow><mn>0</mn><mn>3</mn></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.31)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E32.m1" class="ltx_Math" alttext="\displaystyle=$\text{\,}$." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi></mi><mtext> </mtext><mi></mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.32)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">Because work is defined by a line integral, its value may change depending on the path taken, even if the start and end points are the same.
+This is quite often the case.
+Let’s do the above example again, but have the object follow a different path.</p>
+</div>
+<div id="Ch3.Thmexample4" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 3.4</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch3.Thmexample4.p1" class="ltx_para">
+<p class="ltx_p">Calculate the work done on an object under the influence of the force from example <a href="#Ch3.Thmexample3" title="Example 3.3. ‣ 3.2 Work ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.3</span></a>, but this time following a path from <math id="Ch3.Thmexample4.p1.m1" class="ltx_Math" alttext="(0,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math> to <math id="Ch3.Thmexample4.p1.m2" class="ltx_Math" alttext="(4,0)" display="inline"><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></math>, then to <math id="Ch3.Thmexample4.p1.m3" class="ltx_Math" alttext="(4,3)" display="inline"><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</div>
+</section>
+<section id="SS0.SSS0.Px6" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px6.p1" class="ltx_para">
+<p class="ltx_p">We can break this path up into two separate straight lines to integrate over.
+The total work done is the sum of the work over both paths.
+Over the first part, <math id="SS0.SSS0.Px6.p1.m1" class="ltx_Math" alttext="y=0" display="inline"><mrow><mi>y</mi><mo>=</mo><mn>0</mn></mrow></math>, so <math id="SS0.SSS0.Px6.p1.m2" class="ltx_Math" alttext="F_{x}=xy=0" display="inline"><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>, so no work is done over this section of the path.
+For the second part, <math id="SS0.SSS0.Px6.p1.m3" class="ltx_Math" alttext="x=4" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>4</mn></mrow></math> and the work done is</p>
+<table id="Ch3.E33" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E33.m1" class="ltx_Math" alttext="W=\int_{0}^{3}16y\operatorname{\mathrm{d}}\!y=\left.8y^{2}\right|_{0}^{3}=$%
+\text{\,}$." display="block"><mrow><mrow><mi>W</mi><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mn>0</mn><mn>3</mn></msubsup><mrow><mn>16</mn><mo>⁢</mo><mi>y</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow><mo>=</mo><msubsup><mrow><mrow><mn>8</mn><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>|</mo></mrow><mn>0</mn><mn>3</mn></msubsup><mo>=</mo><mrow><mi></mi><mtext class="ltx_mathvariant_italic"> </mtext><mi></mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.33)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+<section id="SS0.SSS0.Px7" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px7.p1" class="ltx_para">
+<p class="ltx_p">Now let’s look at how to calculate work done in polar coordinates, in 2D to begin with.
+Force in polar coordinates is given by <math id="SS0.SSS0.Px7.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=F_{r}\hat{\boldsymbol{r}}+F_{\theta}\hat{\boldsymbol{\theta}}" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mrow><msub><mi>F</mi><mi>r</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>F</mi><mi>θ</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow></math>, and the infinitesimal displacement is <math id="SS0.SSS0.Px7.p1.m2" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!\boldsymbol{r}=\operatorname{\mathrm{d}}\!r\hat{%
+\boldsymbol{r}}+r\operatorname{\mathrm{d}}\!\theta\hat{\boldsymbol{\theta}}" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow><mo>=</mo><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></mrow></math>.
+Thus the work done is given by</p>
+<table id="Ch7.S10.EGx31" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E34"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E34.m1" class="ltx_Math" alttext="\displaystyle W" display="inline"><mi>W</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E34.m2" class="ltx_Math" alttext="\displaystyle=\int(F_{r}\hat{\boldsymbol{r}}+F_{\theta}\hat{\boldsymbol{\theta%
+}})\cdot(\operatorname{\mathrm{d}}\!r\hat{\boldsymbol{r}}+r\operatorname{%
+\mathrm{d}}\!\theta\hat{\boldsymbol{\theta}})" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mrow><mo rspace="0em">∫</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>F</mi><mi>r</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>F</mi><mi>θ</mi></msub><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.34)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E35"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E35.m1" class="ltx_Math" alttext="\displaystyle=\int_{r_{1}}^{r_{2}}F_{r}\operatorname{\mathrm{d}}\!r+\int_{%
+\theta_{1}}^{\theta_{2}}F_{\theta}r\operatorname{\mathrm{d}}\!\theta." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><msub><mi>r</mi><mn>1</mn></msub><msub><mi>r</mi><mn>2</mn></msub></msubsup></mstyle><mrow><msub><mi>F</mi><mi>r</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><msub><mi>θ</mi><mn>1</mn></msub><msub><mi>θ</mi><mn>2</mn></msub></msubsup></mstyle><mrow><msub><mi>F</mi><mi>θ</mi></msub><mo>⁢</mo><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.35)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Ch3.Thmexample5" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 3.5</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch3.S1.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>The Conservation of Energy</span></a><a href="bib.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch3.S3.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Work-Energy Theorem</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:54:15 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

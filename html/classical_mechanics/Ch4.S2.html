@@ -1,0 +1,459 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4.2 Angular Kinematics ‣ Chapter 4 Angular Motion ‣ Classical Mechanics</title>
+<!--Generated on Mon Jun 16 09:54:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="up up" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="start" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="prev" href="Ch4.S1.html" title="4.1 Polar Coordinates in 2D ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="next" href="Ch4.S3.html" title="4.3 Constant Angular Acceleration ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S1.html" title="4.1 Polar Coordinates in 2D ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S3.html" title="4.3 Constant Angular Acceleration ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S4.html" title="4.4 Uniform Circular Motion ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="section" href="Ch4.S5.html" title="4.5 Rigid Body Rotation ‣ Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="bib.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch4.html" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Angular Motion</span></a><a href="Ch4.S1.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>Polar Coordinates in 2D</span></a><a href="Ch4.S3.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3 </span>Constant Angular Acceleration</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4.2 </span>Angular Kinematics</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Similar to how we analysed motion along each axis seperately in cartesian coordinates in chapter <a href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>, we can do the same thing in polar coordinates, except with some differences.
+In the special case of circular motion, there is no motion in the radial direction and 2D motion is reduced to a 1D problem.
+Displacement has units of length, but angles are unitless, so we will now examine how the angle of the position vector changes over time.</p>
+</div>
+<div id="Ch4.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 4.1</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">angular displacement</span> of an object is the difference in angle to the <math id="Ch4.Thmdefinition1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis between two times <math id="Ch4.Thmdefinition1.p1.m2" class="ltx_Math" alttext="t_{1}" display="inline"><msub><mi>t</mi><mn>1</mn></msub></math> and <math id="Ch4.Thmdefinition1.p1.m3" class="ltx_Math" alttext="t_{2}&gt;t_{1}" display="inline"><mrow><msub><mi>t</mi><mn>2</mn></msub><mo>&gt;</mo><msub><mi>t</mi><mn>1</mn></msub></mrow></math>.</p>
+<table id="Ch4.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E13.m1" class="ltx_Math" alttext="\Delta\theta=\theta(t_{2})-\theta(t_{1})=\theta_{2}-\theta_{1}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>θ</mi></mrow><mo>=</mo><mrow><mrow><mi>θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>θ</mi><mn>2</mn></msub><mo>−</mo><msub><mi>θ</mi><mn>1</mn></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.13)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Now consider the velocity of the object, analogously to the linear case, we can define the angular velocity as the rate of change of angular displacement.</p>
+</div>
+<div id="Ch4.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 4.2</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">instananeous angular velocity</span> of an object is defined as the time derivative of angular displacement.</p>
+<table id="Ch4.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E14.m1" class="ltx_Math" alttext="\omega(t)=\lim_{\Delta t\to 0}\frac{\theta(t+\Delta t)-\theta(t)}{\Delta t}=%
+\frac{\operatorname{\mathrm{d}}\!\theta(t)}{\operatorname{\mathrm{d}}\!t}=\dot%
+{\theta}." display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mrow><mi>θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.14)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Likewise, the angular acceleration is given by the rate of change of angular velocity.</p>
+</div>
+<div id="Ch4.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 4.3</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">instaneous angular acceleration</span> of an object is defined as the time derivative of angular velocity.</p>
+<table id="Ch4.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E15.m1" class="ltx_Math" alttext="\alpha(t)=\lim_{\Delta t\to 0}\frac{\omega(t+\Delta t)-\omega(t)}{\Delta t}=%
+\frac{\operatorname{\mathrm{d}}\!\omega(t)}{\operatorname{\mathrm{d}}\!t}=%
+\frac{\operatorname{\mathrm{d}}\!^{2}\theta(t)}{\operatorname{\mathrm{d}}\!t^{%
+2}}=\dot{\omega}=\ddot{\theta}." display="block"><mrow><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><munder><mo lspace="0.1389em" movablelimits="false" rspace="0.167em">lim</mo><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>ω</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mover accent="true"><mi>ω</mi><mo>˙</mo></mover><mo>=</mo><mover accent="true"><mi>θ</mi><mo>¨</mo></mover></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.15)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Again analogously to the linear case, we define the average angular velocity and angular acceleration as integrals.</p>
+<table id="Ch7.S10.EGx53" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E16.m1" class="ltx_Math" alttext="\displaystyle\bar{\omega}(t)" display="inline"><mrow><mover accent="true"><mi>ω</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E16.m2" class="ltx_Math" alttext="\displaystyle=\frac{\Delta\theta}{\Delta t}=\frac{1}{\Delta t}\int_{t_{1}}^{t_%
+{2}}\omega(t)\operatorname{\mathrm{d}}\!t" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>θ</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup></mstyle><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.16)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E17.m1" class="ltx_Math" alttext="\displaystyle\bar{\alpha}(t)" display="inline"><mrow><mover accent="true"><mi>α</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E17.m2" class="ltx_Math" alttext="\displaystyle=\frac{\Delta\omega}{\Delta t}=\frac{1}{\Delta t}\int_{t_{1}}^{t_%
+{2}}\alpha(t)\operatorname{\mathrm{d}}\!t." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup></mstyle><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.17)</span></td>
+</tr></tbody>
+</table>
+</div>
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Now, let us go back to the full 2D vectors and see how they change with time.
+The velocity vector is the time derivative of the position vector:</p>
+<table id="Ch4.E18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E18.m1" class="ltx_Math" alttext="\boldsymbol{v}=\frac{\operatorname{\mathrm{d}}\!\boldsymbol{r}}{\operatorname{%
+\mathrm{d}}\!t}=\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!%
+t}(r\hat{\boldsymbol{r}})." display="block"><mrow><mrow><mi>𝒗</mi><mo>=</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.18)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We need to use the product rule for this since in general both <math id="SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> (the length of the position vector) and <math id="SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></math> (the direction that the position vector points) change over time.
+What is the time derivative of <math id="SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></math>?
+We can work it out using equation <a href="Ch4.S1.html#Ch4.E1" title="In 4.1 Polar Coordinates in 2D ‣ Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.1</span></a>:</p>
+<table id="Ch7.S10.EGx54" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E19.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!\hat{\boldsymbol{r}}}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E19.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+\cos\theta\hat{\boldsymbol{\imath}}+\frac{\operatorname{\mathrm{d}}\!}{%
+\operatorname{\mathrm{d}}\!t}\sin\theta\hat{\boldsymbol{\jmath}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.19)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E20.m1" class="ltx_Math" alttext="\displaystyle=-\dot{\theta}\sin\theta\hat{\boldsymbol{\imath}}+\dot{\theta}%
+\cos\theta\hat{\boldsymbol{\jmath}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.20)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E21.m1" class="ltx_Math" alttext="\displaystyle=\omega(-\sin\theta\hat{\boldsymbol{\imath}}+\cos\theta\hat{%
+\boldsymbol{\jmath}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.21)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E22.m1" class="ltx_Math" alttext="\displaystyle=\omega\hat{\boldsymbol{\theta}}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.22)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where we have used equation <a href="Ch4.S1.html#Ch4.E2" title="In 4.1 Polar Coordinates in 2D ‣ Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.2</span></a> to substitute <math id="SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></math> in the last line.
+We can work out the time derivative of <math id="SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></math> now as well, it is</p>
+<table id="Ch7.S10.EGx55" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E23.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!\hat{\boldsymbol{\theta}}}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E23.m2" class="ltx_Math" alttext="\displaystyle=-\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t%
+}\sin\theta\hat{\boldsymbol{\imath}}+\frac{\operatorname{\mathrm{d}}\!}{%
+\operatorname{\mathrm{d}}\!t}\cos\theta\hat{\boldsymbol{\jmath}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.23)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E24.m1" class="ltx_Math" alttext="\displaystyle=-\dot{\theta}\cos\theta\hat{\boldsymbol{\imath}}-\dot{\theta}%
+\sin\theta\hat{\boldsymbol{\jmath}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow><mo>−</mo><mrow><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.24)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E25.m1" class="ltx_Math" alttext="\displaystyle=-\omega\hat{\boldsymbol{r}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.25)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">As an aside, think about why these two results make physical sense.
+Why should the rate of change of <math id="SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></math> be in the <math id="SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></math> direction?</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">We can now finish off calculating the velocity vector:</p>
+<table id="Ch7.S10.EGx56" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E26.m1" class="ltx_Math" alttext="\displaystyle\boldsymbol{v}" display="inline"><mi>𝒗</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E26.m2" class="ltx_Math" alttext="\displaystyle=\dot{r}\hat{\boldsymbol{r}}+r\frac{\operatorname{\mathrm{d}}\!%
+\hat{\boldsymbol{r}}}{\operatorname{\mathrm{d}}\!t}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.26)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E27.m1" class="ltx_Math" alttext="\displaystyle=\dot{r}\hat{\boldsymbol{r}}+r\omega\hat{\boldsymbol{\theta}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.27)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We label the component pointing along the radial direction <math id="SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="v_{r}=\dot{r}" display="inline"><mrow><msub><mi>v</mi><mi>r</mi></msub><mo>=</mo><mover accent="true"><mi>r</mi><mo>˙</mo></mover></mrow></math> and call it the <span class="ltx_text ltx_font_bold">radial velocity</span>, and the component pointing along <math id="SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></math>, <math id="SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="v_{\theta}=r\omega" display="inline"><mrow><msub><mi>v</mi><mi>θ</mi></msub><mo>=</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></math>, is the <span class="ltx_text ltx_font_bold">tangential velocity</span>.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px3" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px3.p1" class="ltx_para">
+<p class="ltx_p">The benefit of using the <math id="SS0.SSS0.Px3.p1.m1" class="ltx_Math" alttext="\hat{\boldsymbol{r}}-\hat{\boldsymbol{\theta}}" display="inline"><mrow><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover><mo>−</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></math> axes with polar coordinates is immediately apparent.
+Using the cartesian coordinate axes, the position vector is given by <math id="SS0.SSS0.Px3.p1.m2" class="ltx_Math" alttext="\boldsymbol{r}=r\cos\theta\hat{\boldsymbol{\imath}}+r\sin\theta\hat{%
+\boldsymbol{\jmath}}" display="inline"><mrow><mi>𝒓</mi><mo>=</mo><mrow><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow></mrow></math>, so the time derivative is</p>
+<table id="Ch7.S10.EGx57" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E28.m1" class="ltx_Math" alttext="\displaystyle\boldsymbol{v}=\frac{\operatorname{\mathrm{d}}\!\boldsymbol{r}}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mrow><mi>𝒗</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E28.m2" class="ltx_Math" alttext="\displaystyle=(\dot{r}\cos\theta-r\omega\sin\theta)\hat{\boldsymbol{\imath}}+(%
+\dot{r}\sin\theta+r\omega\cos\theta)\hat{\boldsymbol{\jmath}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>−</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.28)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E29.m1" class="ltx_Math" alttext="\displaystyle=\dot{r}(\cos\theta\hat{\boldsymbol{\imath}}+\sin\theta\hat{%
+\boldsymbol{\jmath}})+r\omega(-\sin\theta\hat{\boldsymbol{\imath}}+\cos\theta%
+\hat{\boldsymbol{\jmath}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>+</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.29)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E30.m1" class="ltx_Math" alttext="\displaystyle=\dot{r}\hat{\boldsymbol{r}}+r\omega\hat{\boldsymbol{\theta}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.30)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In the last two lines we have regrouped the terms to write <math id="SS0.SSS0.Px3.p1.m3" class="ltx_Math" alttext="\boldsymbol{v}" display="inline"><mi>𝒗</mi></math> in the <math id="SS0.SSS0.Px3.p1.m4" class="ltx_Math" alttext="\hat{\boldsymbol{r}}-\hat{\boldsymbol{\theta}}" display="inline"><mrow><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover><mo>−</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></math> basis and recovered our previous result.
+In the cartesian coordinate system, we get <math id="SS0.SSS0.Px3.p1.m5" class="ltx_Math" alttext="v_{x}=\dot{r}\cos\theta-r\omega\sin\theta" display="inline"><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>−</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></mrow></math> and <math id="SS0.SSS0.Px3.p1.m6" class="ltx_Math" alttext="v_{y}=\dot{r}\sin\theta+r\omega\cos\theta" display="inline"><mrow><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></mrow></math> which is rather opaque to interpretation.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px4" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px4.p1" class="ltx_para">
+<p class="ltx_p">Now, let’s calculate the acceleration vector in polar coordinates.</p>
+<table id="Ch7.S10.EGx58" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E31.m1" class="ltx_Math" alttext="\displaystyle\boldsymbol{a}=\frac{\operatorname{\mathrm{d}}\!\boldsymbol{v}}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mrow><mi>𝒂</mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒗</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E31.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+(\dot{r}\hat{\boldsymbol{r}}+r\omega\hat{\boldsymbol{\theta}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.31)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E32.m1" class="ltx_Math" alttext="\displaystyle=\ddot{r}\hat{\boldsymbol{r}}+\dot{r}\frac{\operatorname{\mathrm{%
+d}}\!\hat{\boldsymbol{r}}}{\operatorname{\mathrm{d}}\!t}+\dot{r}\dot{\theta}%
+\hat{\boldsymbol{\theta}}+r\ddot{\theta}\hat{\boldsymbol{\theta}}+r\dot{\theta%
+}\frac{\operatorname{\mathrm{d}}\!\hat{\boldsymbol{\theta}}}{\operatorname{%
+\mathrm{d}}\!t}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>¨</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.32)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E33.m1" class="ltx_Math" alttext="\displaystyle=\ddot{r}\hat{\boldsymbol{r}}+\dot{r}\dot{\theta}\hat{\boldsymbol%
+{\theta}}+\dot{r}\dot{\theta}\hat{\boldsymbol{\theta}}+r\ddot{\theta}\hat{%
+\boldsymbol{\theta}}-r\dot{\theta}^{2}\hat{\boldsymbol{\theta}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>¨</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow><mo>−</mo><mrow><mi>r</mi><mo>⁢</mo><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.33)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E34"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E34.m1" class="ltx_Math" alttext="\displaystyle=(\ddot{r}-r\dot{\theta}^{2})\hat{\boldsymbol{r}}+(2\dot{r}\dot{%
+\theta}+r\ddot{\theta})\hat{\boldsymbol{\theta}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>−</mo><mrow><mi>r</mi><mo>⁢</mo><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>¨</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.34)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Therefore, the radial acceleration is <math id="SS0.SSS0.Px4.p1.m1" class="ltx_Math" alttext="a_{r}=\ddot{r}-r\dot{\theta}^{2}" display="inline"><mrow><msub><mi>a</mi><mi>r</mi></msub><mo>=</mo><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>−</mo><mrow><mi>r</mi><mo>⁢</mo><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></mrow></mrow></math>, and the tangential acceleration is <math id="SS0.SSS0.Px4.p1.m2" class="ltx_Math" alttext="a_{\theta}=2\dot{r}\dot{\theta}+r\ddot{\theta}" display="inline"><mrow><msub><mi>a</mi><mi>θ</mi></msub><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow><mo>+</mo><mrow><mi>r</mi><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>¨</mo></mover></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px5" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px5.p1" class="ltx_para">
+<p class="ltx_p">Here is an important thing to note about using polar coordinates.
+Although the unit vectors change over time, the reference frame is inertial.
+Our perspective is fixed, it does not move or co-rotate with the coordinate system.
+This an lead to some, at first counterintuitive, results compared to cartesian coordinates.
+One may assume that if there is no force in the radial direction, then there is no acceleration in the radial direction and <math id="SS0.SSS0.Px5.p1.m1" class="ltx_Math" alttext="\ddot{r}=0" display="inline"><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>=</mo><mn>0</mn></mrow></math>.
+However, as we see above, the radial component of the acceleration vector, which takes into account the change of the unit vectors over time, is <math id="SS0.SSS0.Px5.p1.m2" class="ltx_Math" alttext="a_{r}=\ddot{r}-r\dot{\theta}^{2}" display="inline"><mrow><msub><mi>a</mi><mi>r</mi></msub><mo>=</mo><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>−</mo><mrow><mi>r</mi><mo>⁢</mo><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></mrow></mrow></math>.
+The radial component of acceleration is <span class="ltx_text ltx_font_italic">not</span> the derivative of radial velocity, <math id="SS0.SSS0.Px5.p1.m3" class="ltx_Math" alttext="\dot{r}" display="inline"><mover accent="true"><mi>r</mi><mo>˙</mo></mover></math>.
+This can be confusing because it implies that if <math id="SS0.SSS0.Px5.p1.m4" class="ltx_Math" alttext="F_{r}=0" display="inline"><mrow><msub><mi>F</mi><mi>r</mi></msub><mo>=</mo><mn>0</mn></mrow></math> and so <math id="SS0.SSS0.Px5.p1.m5" class="ltx_Math" alttext="a_{r}=0" display="inline"><mrow><msub><mi>a</mi><mi>r</mi></msub><mo>=</mo><mn>0</mn></mrow></math> by Newton’s second law, then there can still be motion in the radial direction <math id="SS0.SSS0.Px5.p1.m6" class="ltx_Math" alttext="\ddot{r}\neq 0" display="inline"><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>≠</mo><mn>0</mn></mrow></math>.
+We will now look at an example to illustrate this.</p>
+</div>
+<div id="Ch4.Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 4.1</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch4.Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Consider a bead which is free to move along a frictionless rod.
+The rod is anchored at one end and is rotating at constant angular velocity <math id="Ch4.Thmexample1.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>.
+As the rod rotates, the bead will swing out to the end of the rod.
+Before it reaches the end, what does its motion look like?</p>
+</div>
+<figure id="Ch4.Thmexample1.fig1" class="ltx_figure"><svg id="Ch4.Thmexample1.pic1" class="ltx_picture" height="144.26" overflow="visible" version="1.1" width="143.77"><g fill="#000000" stroke="#000000" stroke-width="0.4pt" transform="translate(0,144.26) matrix(1 0 0 -1 0 0) translate(8.25,0) translate(0,7.59)"><path d="M 0 117.47 L 0 0 L 117.47 0" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.0 1.0 -1.0 0.0 0 117.47)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(1.0 0.0 0.0 1.0 117.47 0)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-linecap="round" stroke-width="1.6pt"><path d="M 0 0 L 70.87 62.6" style="fill:none"></path></g><path d="M 35.43 31.3 M 41.34 31.3 C 41.34 34.56 38.7 37.2 35.43 37.2 C 32.17 37.2 29.53 34.56 29.53 31.3 C 29.53 28.04 32.17 25.39 35.43 25.39 C 38.7 25.39 41.34 28.04 41.34 31.3 Z M 35.43 31.3" style="stroke:none"></path><path d="M 102.29 59.06 C 95.4 70.99 86.47 81.62 76.41 90.07" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(-0.766 0.64284 -0.64284 -0.766 76.41 90.07)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><path d="M 35.43 31.3 L 20.72 48.96" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(-0.6401 0.76828 -0.76828 -0.6401 20.72 48.96)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 123 -2.98)"><foreignObject height="5.96" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.91"><math id="Ch4.Thmexample1.pic1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 -3.64 125.69)"><foreignObject height="8.65" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.28"><math id="Ch4.Thmexample1.pic1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 24.31 55.67)"><foreignObject height="12.15" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="22.25"><math id="Ch4.Thmexample1.pic1.m3" class="ltx_Math" alttext="F_{\text{rod}}" display="inline"><msub><mi>F</mi><mtext>rod</mtext></msub></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 104.7 80.18)"><foreignObject height="5.96" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="8.61"><math id="Ch4.Thmexample1.pic1.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math></foreignObject></g><path d="M 76 116.68 L 94.49 94.49 L 116.68 112.98" style="fill:none"></path><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(-0.6401 0.76828 -0.76828 -0.6401 76 116.68)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g stroke-dasharray="none" stroke-dashoffset="0.0pt" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.32pt" transform="matrix(0.76828 0.6401 -0.6401 0.76828 116.68 112.98)"><path d="M -1.66 2.21 C -1.52 1.38 0 0.14 0.42 0 C 0 -0.14 -1.52 -1.38 -1.66 -2.21" style="fill:none"></path></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 122.06 108.39)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="Ch4.Thmexample1.pic1.m5" class="ltx_Math" alttext="\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi mathsize="90%">𝒓</mi><mo mathsize="90%">^</mo></mover></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 71.74 122.06)"><foreignObject height="9.99" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="7.69"><math id="Ch4.Thmexample1.pic1.m6" class="ltx_Math" alttext="\hat{\boldsymbol{\theta}}" display="inline"><mover accent="true"><mi mathsize="90%">𝜽</mi><mo mathsize="90%">^</mo></mover></math></foreignObject></g></g></svg>
+</figure>
+</div>
+</section>
+<section id="SS0.SSS0.Px6" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px6.p1" class="ltx_para">
+<p class="ltx_p">Since the total force on the bead is <math id="SS0.SSS0.Px6.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=F_{\text{rod}}\hat{\boldsymbol{\theta}}" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><msub><mi>F</mi><mtext>rod</mtext></msub><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow></math>, the instantaneous radial acceleration <math id="SS0.SSS0.Px6.p1.m2" class="ltx_Math" alttext="a_{r}=\ddot{r}-r\dot{\theta}^{2}" display="inline"><mrow><msub><mi>a</mi><mi>r</mi></msub><mo>=</mo><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>−</mo><mrow><mi>r</mi><mo>⁢</mo><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></mrow></mrow></math> must be zero.
+This is a differential equation that we can solve for the radial motion.</p>
+<table id="Ch4.E35" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E35.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}r}{\operatorname{\mathrm{d}}\!t^{2}}-%
+\omega^{2}r=0." display="block"><mrow><mrow><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>r</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mi>r</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.35)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Using an ansatz of the form <math id="SS0.SSS0.Px6.p1.m3" class="ltx_Math" alttext="r=Ae^{Bt}" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>B</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow></math>, with two unknown constants <math id="SS0.SSS0.Px6.p1.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="SS0.SSS0.Px6.p1.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, we get</p>
+<table id="Ch7.S10.EGx59" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E36.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}}{\operatorname{\mathrm{d}}%
+\!t^{2}}(Ae^{Bt})-\omega^{2}Ae^{Bt}=0" display="inline"><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>B</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>B</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.36)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E37.m1" class="ltx_Math" alttext="\displaystyle AB^{2}e^{Bt}-\omega^{2}Ae^{Bt}=0" display="inline"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>B</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>B</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo>−</mo><mrow><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>B</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.37)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E38.m1" class="ltx_Math" alttext="\displaystyle B^{2}-\omega^{2}=0." display="inline"><mrow><mrow><mrow><msup><mi>B</mi><mn>2</mn></msup><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.38)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This gives <math id="SS0.SSS0.Px6.p1.m6" class="ltx_Math" alttext="B=\pm\omega" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mo>±</mo><mi>ω</mi></mrow></mrow></math>, so we get the general solution</p>
+<table id="Ch4.E39" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E39.m1" class="ltx_Math" alttext="r=A_{+}e^{\omega t}+A_{-}e^{-\omega t}." display="block"><mrow><mrow><mi>r</mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mo>+</mo></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo>+</mo><mrow><msub><mi>A</mi><mo>−</mo></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.39)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">When <math id="SS0.SSS0.Px6.p1.m7" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, <math id="SS0.SSS0.Px6.p1.m8" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is some value <math id="SS0.SSS0.Px6.p1.m9" class="ltx_Math" alttext="r_{0}" display="inline"><msub><mi>r</mi><mn>0</mn></msub></math> and <math id="SS0.SSS0.Px6.p1.m10" class="ltx_Math" alttext="\dot{r}=0" display="inline"><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>=</mo><mn>0</mn></mrow></math>, so</p>
+<table id="Ch7.S10.EGx60" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E40.m1" class="ltx_Math" alttext="\displaystyle\dot{r}(0)" display="inline"><mrow><mover accent="true"><mi>r</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E40.m2" class="ltx_Math" alttext="\displaystyle=\left.A_{+}\omega e^{\omega t}-A_{-}\omega e^{-\omega t}\right|_%
+{t=0}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>A</mi><mo>+</mo></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo>−</mo><msub><mrow><mrow><msub><mi>A</mi><mo>−</mo></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow><mo>|</mo></mrow><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.40)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E41"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E41.m1" class="ltx_Math" alttext="\displaystyle=\omega(A_{+}-A_{-})=0," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>A</mi><mo>+</mo></msub><mo>−</mo><msub><mi>A</mi><mo>−</mo></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.41)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">therefore <math id="SS0.SSS0.Px6.p1.m11" class="ltx_Math" alttext="A_{+}=A_{-}=" display="inline"><mrow><msub><mi>A</mi><mo>+</mo></msub><mo>=</mo><msub><mi>A</mi><mo>−</mo></msub><mo>=</mo><mi></mi></mrow></math>, so we will relabel them both <math id="SS0.SSS0.Px6.p1.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+Finally, <math id="SS0.SSS0.Px6.p1.m13" class="ltx_Math" alttext="r(0)=2A=r_{0}" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><msub><mi>r</mi><mn>0</mn></msub></mrow></math>, so we have</p>
+<table id="Ch7.S10.EGx61" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E42"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E42.m1" class="ltx_Math" alttext="\displaystyle r" display="inline"><mi>r</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E42.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{2}r_{0}(e^{\omega t}+e^{-\omega t})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><msub><mi>r</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>e</mi><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.42)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E43"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E43.m1" class="ltx_Math" alttext="\displaystyle=r_{0}\cosh(\omega t)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.43)</span></td>
+</tr></tbody>
+</table>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch4.S1.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>Polar Coordinates in 2D</span></a><a href="bib.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch4.S3.html" title="In Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3 </span>Constant Angular Acceleration</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:54:15 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

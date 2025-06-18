@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.5 Dynamics of Rigid Bodies ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics</title>
+<!--Generated on Mon Jun 16 09:54:15 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="up up" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="start" href="classical_mechanics.html" title="Classical Mechanics">
+<link rel="prev" href="Ch5.S4.html" title="5.4 Torque and Angular Momentum for Systems of Particles ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="next" href="Ch5.S6.html" title="5.6 Rolling Motion ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="Ch5.S1.html" title="5.1 Moments ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="Ch5.S2.html" title="5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="Ch5.S3.html" title="5.3 Torque ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="Ch5.S4.html" title="5.4 Torque and Angular Momentum for Systems of Particles ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="Ch5.S6.html" title="5.6 Rolling Motion ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="Ch5.S7.html" title="5.7 Static Equilibrium ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Chx1.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="Ch1.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch2.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch3.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="Ch5.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="Ch6.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="Ch7.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="bib.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="Ch5.html" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Angular Momentum</span></a><a href="Ch5.S4.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Torque and Angular Momentum for Systems of Particles</span></a><a href="Ch5.S6.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.6 </span>Rolling Motion</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5.5 </span>Dynamics of Rigid Bodies</h1>
+
+<section id="SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">As stated in chapter <a href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>, rigid bodies are distinguished by the fact that all mass elements have the same angular velocity <math id="SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>.
+Each mass element is therefore moving in circles with speed <math id="SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="v_{i}=R_{i}\omega" display="inline"><mrow><msub><mi>v</mi><mi>i</mi></msub><mo>=</mo><mrow><msub><mi>R</mi><mi>i</mi></msub><mo>⁢</mo><mi>ω</mi></mrow></mrow></math>, where <math id="SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="R_{i}" display="inline"><msub><mi>R</mi><mi>i</mi></msub></math> is the distance from the axis of rotation.
+The smart choice for a coordinate system would be to align the <math id="SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis with the axis of rotation and use cylindrical coordinates <math id="SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="(R,\phi,z)" display="inline"><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>ϕ</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></math>, but let’s look at the angular momentum in cartesian coordinates.
+The velocity of a mass element (assuming that the rigid body has no linear motion) is <math id="SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="\boldsymbol{v}_{i}=v_{x,i}\hat{\boldsymbol{\imath}}+v_{y,i}\hat{\boldsymbol{%
+\jmath}}=-\omega y_{i}\hat{\boldsymbol{\imath}}+\omega x_{i}\hat{\boldsymbol{%
+\jmath}}" display="inline"><mrow><msub><mi>𝒗</mi><mi>i</mi></msub><mo>=</mo><mrow><mrow><msub><mi>v</mi><mrow><mi>x</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>v</mi><mrow><mi>y</mi><mo>,</mo><mi>i</mi></mrow></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow></mrow></math>.
+Then the total angular momentum is</p>
+<table id="Ch7.S10.EGx92" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E58"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E58.m1" class="ltx_Math" alttext="\displaystyle\boldsymbol{L}=\sum_{i}\boldsymbol{L}_{i}" display="inline"><mrow><mi>𝑳</mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><msub><mi>𝑳</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E58.m2" class="ltx_Math" alttext="\displaystyle=\sum_{i}\boldsymbol{r}_{i}\times m_{i}\boldsymbol{v_{i}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><mrow><msub><mi>𝒓</mi><mi>i</mi></msub><mo lspace="0.222em" rspace="0.222em">×</mo><msub><mi>m</mi><mi>i</mi></msub></mrow><mo>⁢</mo><msub><mi>𝒗</mi><mi>𝒊</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.58)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E59"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E59.m1" class="ltx_Math" alttext="\displaystyle=\sum_{i}m_{i}\begin{vmatrix}\hat{\boldsymbol{\imath}}&amp;\hat{%
+\boldsymbol{\jmath}}&amp;\hat{\boldsymbol{k}}\\
+x_{i}&amp;y_{i}&amp;z_{i}\\
+-\omega y_{i}&amp;\omega x_{i}&amp;0\end{vmatrix}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo>|</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mtd><mtd><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mtd><mtd><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mtd></mtr><mtr><mtd><msub><mi>x</mi><mi>i</mi></msub></mtd><mtd><msub><mi>y</mi><mi>i</mi></msub></mtd><mtd><msub><mi>z</mi><mi>i</mi></msub></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub></mrow></mrow></mtd><mtd><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>|</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.59)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E60"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E60.m1" class="ltx_Math" alttext="\displaystyle=\sum_{i}m_{i}x_{i}z_{i}\omega\hat{\boldsymbol{\imath}}+\sum_{i}m%
+_{i}y_{i}z_{i}\omega\hat{\boldsymbol{\jmath}}+\sum_{i}m_{i}(x_{i}^{2}+y_{i}^{2%
+})\omega\hat{\boldsymbol{k}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>z</mi><mi>i</mi></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>z</mi><mi>i</mi></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder></mstyle><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>y</mi><mi>i</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.60)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The last term can be simplified to <math id="SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="\sum_{i}m_{i}R_{i}^{2}\omega\hat{\boldsymbol{k}}=I_{z}\omega\hat{\boldsymbol{k}}" display="inline"><mrow><mrow><msub><mo>∑</mo><mi>i</mi></msub><mrow><msub><mi>m</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>R</mi><mi>i</mi><mn>2</mn></msubsup><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow><mo>=</mo><mrow><msub><mi>I</mi><mi>z</mi></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></math> where <math id="SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="I_{z}" display="inline"><msub><mi>I</mi><mi>z</mi></msub></math> is the moment of inertia about the <math id="SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> axis.
+The first two terms are the <span class="ltx_text ltx_font_bold">products of inertia</span> multiplied by <math id="SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>.
+In the case where the products of inertia are zero, we have</p>
+<table id="Ch5.E61" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E61.m1" class="ltx_Math" alttext="\boldsymbol{L}=I_{z}\omega\hat{\boldsymbol{k}}," display="block"><mrow><mrow><mi>𝑳</mi><mo>=</mo><mrow><msub><mi>I</mi><mi>z</mi></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.61)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and the object is rotating around a <span class="ltx_text ltx_font_bold">principle axis</span>.</p>
+</div>
+</section>
+<section id="SS0.SSS0.Px2" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph"></h2>
+
+<div id="SS0.SSS0.Px2.p1" class="ltx_para">
+<p class="ltx_p">Assuming this angular momentum is measured from the centre of mass of the rigid body, we can use <math id="SS0.SSS0.Px2.p1.m1" class="ltx_Math" alttext="\boldsymbol{\tau}=\dot{\boldsymbol{L}}" display="inline"><mrow><mi>𝝉</mi><mo>=</mo><mover accent="true"><mi>𝑳</mi><mo>˙</mo></mover></mrow></math> to get</p>
+<table id="Ch5.E62" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E62.m1" class="ltx_Math" alttext="\boldsymbol{\tau}=\dot{\boldsymbol{L}}=I\dot{\omega}\hat{\boldsymbol{k}}=I%
+\alpha\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝝉</mi><mo>=</mo><mover accent="true"><mi>𝑳</mi><mo>˙</mo></mover><mo>=</mo><mrow><mi>I</mi><mo>⁢</mo><mover accent="true"><mi>ω</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><mi>I</mi><mo>⁢</mo><mi>α</mi><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.62)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This is an angular analogue of Newton II where moment of inertia takes the place of mass.
+This derivation has also implicitly assumed that the torque is being applied around the axis of rotation and hence the direction of <math id="SS0.SSS0.Px2.p1.m2" class="ltx_Math" alttext="\boldsymbol{L}" display="inline"><mi>𝑳</mi></math> does not change.
+A torque in another direction would change the direction of angular momentum, which leads to <span class="ltx_text ltx_font_italic">precession</span>
+In the case of constant torque around the axis of rotation, the equation above implies that <math id="SS0.SSS0.Px2.p1.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> is constant, which means we can use the angular SUVAT equations from chapter <a href="Ch4.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> to describe the motion.</p>
+</div>
+<div id="Ch5.Thmexample5" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 5.5</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch5.Thmexample5.p1" class="ltx_para">
+<p class="ltx_p">Consider two connected masses on a massless pulley with <math id="Ch5.Thmexample5.p1.m1" class="ltx_Math" alttext="m_{1}&gt;m_{2}" display="inline"><mrow><msub><mi>m</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>m</mi><mn>2</mn></msub></mrow></math>.
+Suppose the system starts from rest and assume the string is massless, inextensible, and lies vertically.
+Find an expression for the magnitude of acceleration of the masses.
+To do this, we have to analyse the forces acting on the blocks and also the torques acting on the pulley.
+</p>
+</div>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="Ch5.S4.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Torque and Angular Momentum for Systems of Particles</span></a><a href="bib.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="Ch5.S6.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.6 </span>Rolling Motion</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Mon Jun 16 09:54:15 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
