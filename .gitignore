@@ -9,3 +9,6 @@
 **/*.bbl
 **/*.synctex.gz
 pdf/*/*.pdf
+
+# LaTeXML output files
+html/*.xml

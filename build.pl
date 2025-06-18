@@ -13,8 +13,8 @@ my @notes = (
 );
 
 foreach (@notes) {
-    system("latexmk 
-        -xelatex 
+    system("latexmk
+        -xelatex
         -cd
         -synctex=1
         -outdir=../pdf
@@ -29,4 +29,18 @@ foreach (@notes) {
         -outdir=../pdf
         src/$_.tex"
     );
+
+    my $latexml = "latexml src/$_.tex";
+    $latexml .= " --dest=html/$_.xml";
+    system($latexml);
+
+    my $latexmlpost = "latexmlpost html/$_.xml";
+    $latexmlpost .= " --dest=html/$_/$_.html";
+    $latexmlpost .= " --sitedirectory=html/$_";
+    $latexmlpost .= " --splitat=section";
+    $latexmlpost .= " --nodefaultresources";
+    system($latexmlpost);
+
+    unlink("$_.latexml.log");
+    unlink("$_.latexmlpost.log");
 }
