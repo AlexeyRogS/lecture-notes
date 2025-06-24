@@ -2,12 +2,12 @@
 
 \begin{document}
 
-    \section{Polar Coordinates in 2D}
+    \section{Polar Coordinates in Two Dimensions}\label{sec:polar-coordinates-in-two-dimensions}
         \paragraph{}
         We have studied in great detail the mechanics of objects travelling in straight lines.
         Now we want to extend this to more general situations where objects can move along curved paths.
         We will first study motion in 2D as it is much simpler than 3D.
-        As we saw in section~\ref{sec:motion-in-2-3d}, vectors in 2D can be equivalently described by two cartesian components or their length together with the angle they make with the $x$-axis.
+        As we saw in section~\ref{sec:motion-in-multiple-dimensions}, vectors in 2D can be equivalently described by two cartesian components or their length together with the angle they make with the $x$-axis.
         Depending on the type of motion in the problem, it is much simpler to describe the trajectory of an object the latter way.
         These are known as \textbf{polar coordinates}.
 
@@ -83,8 +83,8 @@
             \tan\theta&=\frac{y}{x}.
         \end{align}
 
-    \section{Angular Kinematics}
-        Similar to how we analysed motion along each axis seperately in cartesian coordinates in chapter~\ref{chap:1}, we can do the same thing in polar coordinates, except with some differences.
+    \section{Angular Kinematics}\label{sec:angular-kinematics}
+        Similar to how we analysed motion along each axis seperately in cartesian coordinates in chapter~\ref{chap:laws-of-motion}, we can do the same thing in polar coordinates, except with some differences.
         In the special case of circular motion, there is no motion in the radial direction and 2D motion is reduced to a 1D problem.
         Displacement has units of length, but angles are unitless, so we will now examine how the angle of the position vector changes over time.
         \begin{definition}
@@ -234,9 +234,9 @@
             % TODO: add plot of radial motion
         \end{example}
 
-    \section{Constant Angular Acceleration}
+    \section{Constant Angular Acceleration}\label{sec:constant-angular-acceleration}
         \paragraph{}
-        In the case where we have a constant angular acceleration, we can derive a set of equations analogous to the SUVAT equations for linear motion derived in section~\ref{sec:suvat}.
+        In the case where we have a constant angular acceleration, we can derive a set of equations analogous to the SUVAT equations for linear motion derived in section~\ref{sec:constant-acceleration}.
         From the equation for average acceleration above, we get
         \begin{align}
             \Delta\omega=\omega(t)-\omega_0&=\alpha t\\
@@ -257,11 +257,11 @@
         which is an angular version of equation~\ref{eq:suvat-3}.
         These equations are useful in solving problems where we don't have to worry (or don't care) about motion in the radial direction.
 
-    \section{Uniform Circular Motion}
+    \section{Uniform Circular Motion}\label{sec:uniform-circular-motion}
         % TODO: move this section to the beginning of this chapter?
         \paragraph{}
         The simplest case of angular motion is where an object is moving in a circle, so there is no motion in the radial direction, and going at a constant speed.
-        This is called \textbf{uniform circular motion}, and objects moving this way can be analysed using 1D techniques we studied in section~\ref{sec:motion-in-1d}.
+        This is called \textbf{uniform circular motion}, and objects moving this way can be analysed using 1D techniques we studied in section~\ref{sec:motion-in-one-dimension}.
         \begin{figure}[H]
             \centering
             \begin{tikzpicture}[scale=3]
@@ -316,7 +316,7 @@
             &=0.
         \end{align}
         Hence the velocity and position vectors are perpendicular.
-        This makes sense because as we know from section~\ref{sec:motion-in-2-3d}, the velocity is always tangent to the trajectory, which corresponds to being perpendicular to the position vector in the case of a circle.
+        This makes sense because as we know from section~\ref{sec:motion-in-multiple-dimensions}, the velocity is always tangent to the trajectory, which corresponds to being perpendicular to the position vector in the case of a circle.
 
         \paragraph{}
         Finally, notice that since $\vec{r}=r\sin(\omega t)\ihat+r\cos(\omega t)\jhat$,
@@ -388,7 +388,7 @@
             How fast would the mass haves to be projected to get to the top of the loop?
         \end{example}
 
-    \section{Rigid Body Rotation}
+    \section{Rigid Body Rotation}\label{sec:rigid-body-rotation}
         \paragraph{}
         % TODO: introduce moment of inertia for a single particle first
         A rigid body is a system of particles which are fixed together such that they move together, no matter the forces applied.

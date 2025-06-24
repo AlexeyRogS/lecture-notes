@@ -1,7 +1,7 @@
 \documentclass[../classical_mechanics.tex]{subfiles}
 
 \begin{document}
-    \section{Simple Harmonic Motion}
+    \section{Simple Harmonic Motion}\label{sec:simple-harmonic-motion}
         \paragraph{}
         Oscillations are periodic variations of a quantity about some equilibrium.
         This could be an object moving back and forth, a voltage going up and down, or any other physical variable.
@@ -46,7 +46,7 @@
             v(t)&=\dv{x}{t}=-x_m\omega\sin(\omega t+\phi)\label{eq:SHM-velocity}\\
             a(t)&=\dv[2]{x}{t}=-x_m\omega^2\cos(\omega t+\phi)=-\omega^2x(t)\label{eq:SHM-acceleration}.
         \end{align}
-        Thankfully we have recovered the equation of motion (\ref{eq-SHM-spring}) for the acceleration.
+        Thankfully we have recovered the equation of motion (\ref{eq:SHM-spring}) for the acceleration.
         % TODO: include graphs of position, velocity, acceleration and discussion of phase difference between them
         The two constants can be found using two initial conditions, usually $x(0)$ and $v(0)$.
         For example, let's suppose $x(0)=0$ and $v(0)=v_0$, then we have
@@ -86,7 +86,7 @@
         \begin{equation}
             \dv[2]{s}{t}=-g\theta=-\frac{g}{L}s.
         \end{equation}
-        Note that this has the same form as equation \ref{eq-SHM-spring}, so the trajectory will have the same form!
+        Note that this has the same form as equation \ref{eq:SHM-spring}, so the trajectory will have the same form!
         What we have effectively done is assume that the displacement $s$ and the restoring force $F$ are pointing in a straight line, not along the arc of a circle, so that the force becomes identical to Hooke's law.
         \begin{equation}
             s(t)=s_m\cos(\omega t+\phi),
@@ -157,7 +157,7 @@
             % TODO: complete this example
         \end{example}
 
-    \section{Physical Pendula}
+    \section{Physical Pendula}\label{sec:physical-pendula}
         \paragraph{}
         Let's now analyse the motion of a pendulum that is not a point mass.
         % TODO: include diagram of bowling pin pendulum
@@ -204,10 +204,10 @@
             % TODO: compare with annulus pendulum
         \end{example}
 
-    \section{Energy in Simple Harmonic Motion}
+    \section{Energy in Simple Harmonic Motion}\label{sec:energy-in-simple-harmonic-motion}
         \paragraph{}
         % TODO: make references for previous equations
-        As we have seen back in chapter\ref{chap:3}, Hooke's law is a conservative force, so the total energy is conserved.
+        As we have seen back in chapter\ref{chap:energy-and-work}, Hooke's law is a conservative force, so the total energy is conserved.
         Let's show this explicitly for the mass on a spring.
         From before, we know the total energy is given by
         \begin{align}
@@ -313,7 +313,7 @@
             % TODO: examine limits of this formula
         \end{example}
 
-    \section{Damped Oscillations}
+    \section{Damped Oscillations}\label{sec:damped-oscillations}
         \paragraph{}
         An object moving with simple harmonic motion will continue to do so indefinitely.
         A more realistic scenario is to include the effects of other forces, such as friction and air resistance, that slow down the oscillations until they eventally decay away to nothing.
@@ -415,7 +415,7 @@
         %     How fast does the power received by the detector decay when the emitter is switched off?
         % \end{example}
 
-    \section{Forced Oscillations}
+    \section{Forced Oscillations}\label{sec:forced-oscillations}
         \paragraph{}
         A forced oscillator is an oscillator subject to a periodic external force.
         \begin{equation}
@@ -479,7 +479,7 @@
         For $\omega_\text{drive}\gg\omega_\text{res}$, we have $A_\text{steady}=-\frac{\omega_0}{\omega_\text{drive}}F_0/k$.
         % TODO: write more detail about this
 
-    \section{Coupled Oscillations and Normal Modes}
+    \section{Coupled Oscillations and Normal Modes}\label{sec:coupled-oscillations-and-normal-modes}
         \paragraph{}
         A coupled oscillator is a system of more than one oscillators that have some way of transferring energy to one another.
         % TODO: include diagram of 2 masses coupled to 3 springs and two pendula coupled by a spring

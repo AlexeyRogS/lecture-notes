@@ -4,7 +4,7 @@
 
     % TODO: add an interlude on 3D spherical and cylindrical coordinates
 
-    \section{Moments}
+    \section{Moments}\label{sec:moments}
         \paragraph{}
         When dealing with problems involving rotation, we have mechanical quantities which are analogous to ones used to solve linear problems.
         We have seen a few of these before: angular velocity $\omega=v_\theta/r$, angular acceleration $\alpha=a_\theta/r$ (for circular motion), and moment of inertia $I=mr^2$.
@@ -22,7 +22,7 @@
         Note that because the cross product is antisymmetric, the order of $\vec{r}$ and $\vec{p}$ matters!
         The motivation for introducing angular momentum will become clear in the next section. 
 
-    \section{Central Forces}
+    \section{Central Forces}\label{sec:central-forces}
         \paragraph{}
         We will now examine a very special type of force.
         These forces have many useful properties which make solving problems involving them a lot simpler.
@@ -195,7 +195,7 @@
             % TODO: complete this example.
         \end{example}
 
-    \section{Torque}
+    \section{Torque}\label{sec:torque}
         \paragraph{}
         Torque is defined as the \textbf{moment} of force, that is, the product of the distance from a reference point and the force.
         % TODO: include a proper discussion of pivot points and what torque does
@@ -345,7 +345,7 @@
         Then using the angular equivalent of Newton II, $\dot{\vec{L}}=\vec{\tau}=0$.
         So central forces exert no torque and therefore angular momentum is conserved.
 
-    \section{Torque and Angular Momentum for Systems of Particles}
+    \section{Torque and Angular Momentum for Systems of Particles}\label{sec:torque-and-angular-momentum-for-systems-of-particles}
         \paragraph{}
         In a system of many particles, each particle with a position $\vec{r}_i$ and momentum $\vec{p}_i$, the total angular momentum is the sum of each particle's angular momentum.
         \begin{equation}
@@ -367,7 +367,7 @@
             \sum_i\vec{\tau}_i&=\sum_i\vec{r}_i\times\left(\sum_{j\neq i}\vec{F}_{j\to i}+\vec{F}_{i,\text{ext}}\right)\\
             &=\sum_i\sum_{j\neq i}\vec{r}_i\times\vec{F}_{j\to i}+\sum_i\vec{r}_i\times\vec{F}_{i,\text{ext}}.
         \end{align}
-        Looking at the first term more closely, we can use a similar argument to back in chapter~\ref{chap:2} to show that it is zero.
+        Looking at the first term more closely, we can use a similar argument to back in chapter~\ref{chap:linear-momentum} to show that it is zero.
         % TODO: reference specific equation
         The sum will pairs of terms of the form $\vec{r}_i\times\vec{F}_{j\to i}+\vec{r}_j\times\vec{F}_{i\to j}$.
         By Newton III, these two forces are equal and opposite, $\vec{F}_{j\to i}=-\vec{F}_{i\to j}$, so the pair of terms becomes
@@ -389,9 +389,9 @@
         This is very important because it allows us to use the angular equivalent of Newton II in many situations.
         For example, if we are analysing a rigid body rolling down a hill, we can measure the angular momentum and torque from the centre of mass then we can still use $\dot{\vec{L}}=\vec{\tau}$.
 
-    \section{Dynamics of Rigid Bodies}
+    \section{Dynamics of Rigid Bodies}\label{sec:dynamics-of-rigid-bodies}
         \paragraph{}
-        As stated in chapter~\ref{chap:4}, rigid bodies are distinguished by the fact that all mass elements have the same angular velocity $\omega$.
+        As stated in chapter~\ref{chap:angular-motion}, rigid bodies are distinguished by the fact that all mass elements have the same angular velocity $\omega$.
         % TODO: insert figure, rigid body rotation
         Each mass element is therefore moving in circles with speed $v_i=R_i\omega$, where $R_i$ is the distance from the axis of rotation.
         The smart choice for a coordinate system would be to align the $z$-axis with the axis of rotation and use cylindrical coordinates $(R,\phi,z)$, but let's look at the angular momentum in cartesian coordinates.
@@ -424,7 +424,7 @@
         This is an angular analogue of Newton II where moment of inertia takes the place of mass.
         This derivation has also implicitly assumed that the torque is being applied around the axis of rotation and hence the direction of $\vec{L}$ does not change.
         A torque in another direction would change the direction of angular momentum, which leads to \textit{precession}
-        In the case of constant torque around the axis of rotation, the equation above implies that $\alpha$ is constant, which means we can use the angular SUVAT equations from chapter~\ref{chap:4} to describe the motion. 
+        In the case of constant torque around the axis of rotation, the equation above implies that $\alpha$ is constant, which means we can use the angular SUVAT equations from chapter~\ref{chap:angular-motion} to describe the motion. 
         \begin{example}
             Consider two connected masses on a massless pulley with $m_1>m_2$.
             Suppose the system starts from rest and assume the string is massless, inextensible, and lies vertically.
@@ -436,7 +436,7 @@
 
         % TODO: discuss angular equivalent of impulse momentum theorem
 
-    \section{Rolling Motion}
+    \section{Rolling Motion}\label{sec:rolling-motion}
         \paragraph{}
         One of the most familiar examples of torques in everyday life are rolling objects.
         Rolling motion is a superposition of a rotation about the centre of mass and a translation.
@@ -561,7 +561,7 @@
         % TODO: add example of sweet spot to hit a cue ball for perfect rolling
         % TODO: rolling cylinder along a flat plane and falling yo-yo as exersises, answers are very similar
 
-    \section{Static Equilibrium}
+    \section{Static Equilibrium}\label{sec:static-equilibrium}
         \paragraph{}
         In the net force and the net torque on a rigid body are both 0, then it is in \textbf{static equilibrium}.
         % TODO: include discussion of whether objects can be rotating in static equilibrium

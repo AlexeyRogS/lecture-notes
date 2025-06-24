@@ -2,7 +2,7 @@
 
 \begin{document}
 
-    \section{Introduction}
+    \section{Introduction}\label{sec:introduction}
         \paragraph{}
         Mechanics is the study of how things move; from the Earth orbiting the Sun, to a ball rolling down a hill, to an electron in a cathode ray tube.
         The modern formulation of classical mechanics was first developed in the 17\ts{th} and 18\ts{th} centuries by European natural philosophers like Galileo and Newton, who based their ideas on previous theories like those from ancient Greece.
@@ -18,7 +18,7 @@
         Without further ado, let us dive in to how we describe the world in mechanics.
         % talk about predicting the future, determinism, reversibility
 
-    \section{Motion in One Dimension}\label{sec:motion-in-1d}
+    \section{Motion in One Dimension}\label{sec:motion-in-one-dimension}
         \paragraph{}
         No doubt you will have noticed that the world is three dimensional.
         However it is certainly beneficial to study motion in a simplified setting before extending our ideas to the full 3D application.
@@ -91,24 +91,24 @@
             \bar{a}=\frac{\Delta v}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}a(t)\dd{t}.
         \end{equation}
 
-    \section{Constant Acceleration}\label{sec:suvat}
+    \section{Constant Acceleration}\label{sec:constant-acceleration}
         \paragraph{}
         When the acceleration of an object is constant, we can derive some useful equations for simple motion.
         Starting from equation \ref{eq:average-acc} above,
-        \begin{align*}
+        \begin{align}
             \Delta v&=\int_{t_1}^{t_2}a\dd{t}\\
             \implies v_2-v_1&=a\cdot(t_2-t_1),
-        \end{align*}
+        \end{align}
         now setting $t_1=0,t_2=t,v_1=v(0)=u,v_2=v(t)$, we get
         \begin{equation}\label{eq:suvat-1}
             v(t)=u+at,
         \end{equation}
         where $u$ is the initial velocity of the object.
         Now we substitute equation \ref{eq:suvat-1} into equation \ref{eq:total-disp} to get
-        \begin{align*}
+        \begin{align}
             \Delta x&=\int_{t_1}^{t_2}(u+at)\dd{t}\\
             \implies x_2-x_1&=u\cdot(t_2-t_1)+\frac{1}{2}a\cdot(t_2^2-t_1^2).
-        \end{align*}
+        \end{align}
         Setting $t_1=0,t_2=t,x_1=x(0)=x_0,x_2=x(t)$ like before and recalling $s(t)=x(t)-x_0$, we get
         \begin{equation}\label{eq:suvat-2}
             s(t)=ut+\frac{1}{2}at^2.
@@ -128,17 +128,17 @@
         % inflection points => curvature = acceleration = 0
         \begin{example}
             Car accelerating then decelerating % TODO: write this
-            \begin{equation*}
+            \begin{equation}
                 v(t)=-\frac{1}{2}t^4+3t^3
-            \end{equation*}
+            \end{equation}
         \end{example}
         \begin{example}
             Block sliding down a hill (no friction) % TODO: write this
         \end{example}
 
-    \section{Motion in More than One Dimension}\label{sec:motion-in-2-3d}
+    \section{Motion in Mulitple Dimensions}\label{sec:motion-in-multiple-dimensions}
         \paragraph{}
-        As alluded to in section~\ref{sec:motion-in-1d} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
+        As alluded to in section~\ref{sec:motion-in-one-dimension} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
         This is because the set of all points in 3D space forms a \textbf{vector space}, called $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span all of space.
         In \textbf{cartesian} coordinates, which are the most commonly used system to label points in 3D space, we label the axes $x$, $y$ and $z$, and choose the unit vectors $\ihat$, $\jhat$ and $\khat$ to point along each axis respectively.
         \begin{figure}[H]
@@ -195,7 +195,7 @@
             \tan\theta=\frac{A_y}{A_x}\label{eq:2d-polar-theta}.
         \end{equation}
         In 3D we need two angles to describe the direction of a vector (for example, the angle it makes with the $x$ axis and then the angle it makes with the $x$-$y$ plane), so the relations become slightly more complicated.
-        We will not worry about this for now, and delay a detailed disccusion until the beginning of chapter~\ref{chap:5}.
+        We will not worry about this for now, and delay a detailed disccusion until the beginning of chapter~\ref{chap:oscillations}.
 
         \paragraph{}
         Note that it is important that our basis vectors are \textbf{orthonormal}, meaning both orthogonal and of unit length, as this means we have the relations
@@ -257,7 +257,7 @@
         This is because the terms with two different basis vectors dotted together vanish (equation~\ref{eq:basis-vec-ortho}) and the terms with two of the same basis vector become just the coordinates multiplied together (equation~\ref{eq:basis-vec-normal}).
         All the coordinate systems we have dealt with so far have an orthonormal basis because of this fact.
 
-    \section{Forces}
+    \section{Forces}\label{sec:forces}
         \paragraph{}
         Now we know how to describe the motion of an object and changes in the motion (kinematics), but we still don't know how to describe \textit{why} the motion of an object changes (dynamics).
         This is the focus of this section.
@@ -293,15 +293,15 @@
         This is known as an \textbf{equation of motion}, and all classical mechanics problems boil down to solving the equation of motion to obtain the trajectory of the object.
         \begin{example}
             Suppose an object is acted upon by a constant force $F_0$, then we align the $x$ axis with the direction of the force and the equation of motion is
-            \begin{equation*}
+            \begin{equation}
                 \dv[2]{x(t)}{t}=\frac{F_0}{m}.
-            \end{equation*}
+            \end{equation}
             This is a very easy differential equation to solve.
             Integrating twice, we get
-            \begin{align*}
+            \begin{align}
                 &\dv{x(t)}{t}=\int\dv[2]{x(t)}{t}=v_0+\frac{F_0}{m}t\\
                 &x(t)=\int\dv{x(t)}{t}=x_0+v_0t+\frac{F_0}{2m}t^2,
-            \end{align*}
+            \end{align}
             where $v_0=v(0)$ and $x_0=x(0)$ as before.
             Note that comparing to equation \ref{eq:suvat-2}, we can identify $a=\frac{F_0}{m}$ i.e. acceleration is constant, which is consistent with what we developed before.
         \end{example}
@@ -321,17 +321,17 @@
         \paragraph{}
         Force is a vector quantity, so in more than dimension it can be decomposed into multiple components which are the forces along each axis.
         In three dimensions, Newton's Second Law is
-        \begin{align*}
+        \begin{align}
             \vec{F}(t)&=F_x(t)\ihat+F_y(t)\jhat+F_z(t)\khat\\
             &=ma_x(t)\ihat+ma_y(t)\jhat+ma_z(t)\khat \\
             &=m\vec{a}=m\ddot{\vec{r}}.
-        \end{align*}
+        \end{align}
 
         % TODO: talk about weight and normal force
         % TODO: talk about free-body diagrams
         We can now solve any problem in classical mechanics.
 
-    \section{Projectile Motion}
+    \section{Projectile Motion}\label{sec:projectile-motion}
         \paragraph{}
         Let's now look at a concrete example of an experiment which will bring together everything we have looked at in this chapter.
         Suppose we have a cannon situated at the origin which shoots a projectile with a fixed initial velocity $\vec{v}_0$ which makes an initial angle $\theta$ relatitive to the ground.
@@ -391,7 +391,7 @@
             % TODO: complete this example
         \end{example}
 
-    \section{Friction}
+    \section{Friction}\label{sec:friction}
         \paragraph{}
         Friction is a very complicated process which occurs on a miroscopic scale, so in order to model in on a macroscopic scale we must use simplified empirical laws.
         In general, friction is a force which opposes change in motion. Hence if a force is applied parallel to a surface, then the frictional force will be antiparallel to this, perpendicular to the normal force.
@@ -598,7 +598,7 @@
             This acceleration is nonzero and positive, which indicates that block C does indeed accelerate downwards as we thought.
         \end{example}
 
-    \section{Gravitation}
+    \section{Gravitation}\label{sec:gravitation}
         \paragraph{}
         Aside from inventing classical mechanics and calculus, Isaac Newton's most well-known contribution to science is his discovery of the universal law of gravitation.
         % TODO: write more about how it was derived
