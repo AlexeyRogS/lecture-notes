@@ -2,7 +2,7 @@
 
 \begin{document}
 
-    \section{The Wave Equation}
+    \section{The Wave Equation}\label{sec:the-wave-equation}
         \paragraph{}
         A wave is a periodic variation or disturbance which travels at a well defined speed through space.
         How do we describe waves mathematically?
@@ -62,7 +62,7 @@
         All functions which satisfy our definition of a wave solve this equation.
         % TODO: there are also non-periodic solutions
 
-    \section{Superposition of Waves}
+    \section{Superposition of Waves}\label{sec:superposition-of-waves}
         \paragraph{}
         Since the wave equation is linear, the solutions follow the principle of \textbf{linear superposition}.
         This means that when multiple waves come together, the amplitude at every point in space and time is determined by the sum of all the waves at that point.
@@ -162,7 +162,7 @@
             \end{equation}
         \end{example}
 
-    \section{Phase Velocity \& Group Velocity}
+    \section{Phase Velocity \& Group Velocity}\label{sec:phase-velocity-and-group-velocity}
         \paragraph{}
         As we have seen, the speed you need to keep up with a point of constant phase along the wave is given by
         \begin{equation}
@@ -181,7 +181,7 @@
         So if a wave is dispersionless, the phase velocity and group velocity will be the same.
         In the case where $v_g\neq v_\phi$, the group velocity is the speed that the wave envelope propagates.
 
-    \section{Transverse Waves on a String}
+    \section{Transverse Waves on a String}\label{sec:transverse-waves-on-a-string}
         \paragraph{}
         Consider an infinite string under constant tension $T$.
         We will now show that the equation of motion of the string is the wave equation and derive the wave speed.
@@ -304,7 +304,7 @@
         \end{equation}
         which is what we derived before.
 
-    \section{Boundaries, Transmission, and Reflection}
+    \section{Boundaries, Transmission, and Reflection}\label{sec:boundaries-transmision-and-reflection}
         \paragraph{}
         A boundary for a wave is a change in medium.
         When a wave encounters a boundary, some energy is transmitted across the boundary and some is reflected.
@@ -367,7 +367,7 @@
         \end{equation}
         Note that this is different to the equations above where incident and reflected were on the same side, here reflected and transmitted are on the same side.
 
-    \section{Normal Modes and Fourier Series}
+    \section{Normal Modes and Fourier Series}\label{sec:normal-modes-and-fourier-series}
         \paragraph{}
         Consider a standing wave $y(x,t)=Ae^{i(kx-\omega t)}+Be^{i(kx+\omega t)}$ on a string clamped at both ends.
         % TODO: include diagram of this
@@ -398,7 +398,7 @@
         These allowed wavenumbers/frequencies are the \textbf{normal modes} of vibration for the string clamped at both ends.
 
         \paragraph{}
-        Recall in chapter~\ref{chap:6} we discussed exciting all the frequencies of a system at once using the impulse method.
+        Recall in chapter~\ref{chap:oscillations} we discussed exciting all the frequencies of a system at once using the impulse method.
         If we pluck the string, multiple normal modes are excited.
         The resulting motion of the string is a superposition of the normal modes, given by
         \begin{equation}
@@ -587,7 +587,7 @@
         \paragraph{}
         With damping effects, we find that all of the normal modes decay away, with the higher frequency modes decaying faster.
 
-    \section{Sound Waves}
+    \section{Sound Waves}\label{sec:sound-waves}
         \paragraph{}
         So far we have been looking at transverse waves, where the displacement is perpendicular to the direction of wave travel.
         Examples of transverse waves in real life are waves on a string and light waves.
@@ -658,7 +658,7 @@
         where in the second line we have substituted more physical quantities.
         The denominator $\sqrt{\rho B}$ is known as the \textbf{specific acoustic impedance} $Z$, and this can be used to define transmission and reflection coefficients as we did before.
 
-    \section{Longitudinal Standing Waves}
+    \section{Longitudinal Standing Waves}\label{sec:longitudinal-standing-waves}
         \paragraph{}
         We now have two ways of describing longitudinal waves, by the displacement of the particles and by the pressure along the direction of travel.
         \begin{align}
@@ -686,7 +686,7 @@
         The allowed wavenumbers are then $k_n=\frac{(2n-1)\pi}{2L}$, $\lambda_n=\frac{4L}{2n-1}$, $f_n=\frac{(2n-1)v}{4L}=(2n-1)f_1$.
         Note that in this case the fundamental mode has a wavelength of $4L$.
 
-    \section{The Doppler Effect}
+    \section{The Doppler Effect}\label{sec:the-doppler-effect}
         \paragraph{}
         Consider a source at rest emitting spherical waves with frequency $f_s$ and speed $v$.
         What does a detector towards the source with speed $v_d$ see?
@@ -722,7 +722,7 @@
         \end{equation}
         where we have the $\frac{+}{-}$ case when the source and detector are moving closer and the $\frac{-}{+}$ case when they are moving apart.
 
-    \section{Wave Interference}
+    \section{Wave Interference}\label{sec:wave-interference}
         \paragraph{}
         When two waves come together the result is the sum of both waves at every point.
         A special case of superposition is created when two waves of the same frequency (coherent waves) meet, called \textbf{interference}.
