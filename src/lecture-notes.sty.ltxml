@@ -5,7 +5,7 @@ use warnings;
 InputDefinitions("lecture-notes", type => "sty", noltxml => 1);
 
 # have to do this for LaTeXML 2022 for some reason (some issue with siunitx binding), may be fixed for modern version
-DefMacro("\\unit{}", "\\si{}");
-DefMacro("\\qty{}{}", "\\SI{}{}");
+DefMacro("\\unit{}", "\\si{#1}");
+DefMacro("\\qty{}{}", "\\SI{#1}{#2}");
 
 1;
