@@ -3,13 +3,11 @@
 \begin{document}
 
     \section{Introduction}\label{sec:introduction}
-        \paragraph{}
         Mechanics is the study of how things move; from the Earth orbiting the Sun, to a ball rolling down a hill, to an electron in a cathode ray tube.
         The modern formulation of classical mechanics was first developed in the 17\ts{th} and 18\ts{th} centuries by European natural philosophers like Galileo and Newton, who based their ideas on previous theories like those from ancient Greece.
         It was then reformulated in the 19\ts{th} century by French mathematicians such as Lagrange, Poisson and Liouville, as well as Hamilton, whose developments paved the way for the innovations of the 20\ts{th} century, when it was realised that classical mechanics cannot accurately describe objects travelling close to the speed of light or objects that are extremely small (on an atomic scale).
         These discoveries led to the development of relativistic mechanics and quantum mechanics, for which the advanced Lagrangian and Hamiltonian formalisms serve as a mathematical basis.
 
-        \paragraph{}
         In this text we will be studying the Newtonian formulation of classical mechanics, which is still used today not only as a teaching method, but also as a tool in research.
         The Lagrangian and Hamiltonian formalisms come into their own for advanced problems, but can be quite unwieldy for the simple systems that we will be describing the motion of.
         One may wonder why we still study classical mechanics if it has been proven to be obsolete in some areas.
@@ -19,7 +17,6 @@
         % talk about predicting the future, determinism, reversibility
 
     \section{Motion in One Dimension}\label{sec:motion-in-one-dimension}
-        \paragraph{}
         No doubt you will have noticed that the world is three dimensional.
         However it is certainly beneficial to study motion in a simplified setting before extending our ideas to the full 3D application.
         In Newtonian mechanics, we label each point in space with a \textbf{continuous variable} $x$, and we define an origin where $x=0$.
@@ -29,7 +26,6 @@
             The \textbf{trajectory} of an object is a function $x(t)$ where $t,x(t)\in\RR$. $x(t_0)=x_0$ describes the position of the object $x_0$ at some time $t_0$.
         \end{definition}
 
-        \paragraph{}
         In classical mechanics, time evolves as the same rate for the whole universe.
         Our choice of coordinate system together with our choice of reference point for time is called a \textbf{reference frame}.
         By choosing our reference frame cleverly, we can often simplify problems.
@@ -53,6 +49,7 @@
         This is because displacement is a \textbf{vector} quantity, meaning it has direction and magnitude, whereas distance is a \textbf{scalar} quantity.
         In one dimension, the only difference between vector and scalar quantities is that vector quantities are \textbf{signed}.
         The distinction becomes greater in more dimensions when vector quantities are actually represented as vectors.
+        
         \begin{definition}
             The \textbf{instantaneous velocity}, or just the \textbf{velocity} of an object is defined as the rate of change of the object's position with respect to time, or simply the derivative.
             \begin{equation}
@@ -92,7 +89,6 @@
         \end{equation}
 
     \section{Constant Acceleration}\label{sec:constant-acceleration}
-        \paragraph{}
         When the acceleration of an object is constant, we can derive some useful equations for simple motion.
         Starting from equation \ref{eq:average-acc} above,
         \begin{align}
@@ -137,7 +133,6 @@
         \end{example}
 
     \section{Motion in Mulitple Dimensions}\label{sec:motion-in-multiple-dimensions}
-        \paragraph{}
         As alluded to in section~\ref{sec:motion-in-one-dimension} above, motion in more than one dimension is a straightforward generalisation of what we have learned so far.
         This is because the set of all points in 3D space forms a \textbf{vector space}, called $\RR^3$, so we can pick 3 \textbf{orthogonal} axes and an origin to use as our coordinate system and define three basis vectors to span all of space.
         In \textbf{cartesian} coordinates, which are the most commonly used system to label points in 3D space, we label the axes $x$, $y$ and $z$, and choose the unit vectors $\ihat$, $\jhat$ and $\khat$ to point along each axis respectively.
@@ -158,7 +153,6 @@
             \end{tikzpicture}
         \end{figure}
 
-        \paragraph{}
         A general vector in 3D cartesian coordinates is represented by a sum of components along each direction.
         \begin{equation}
             \vec{A}=A_x\ihat+A_y\jhat+A_z\khat.
@@ -197,7 +191,6 @@
         In 3D we need two angles to describe the direction of a vector (for example, the angle it makes with the $x$ axis and then the angle it makes with the $x$-$y$ plane), so the relations become slightly more complicated.
         We will not worry about this for now, and delay a detailed disccusion until the beginning of chapter~\ref{chap:oscillations}.
 
-        \paragraph{}
         Note that it is important that our basis vectors are \textbf{orthonormal}, meaning both orthogonal and of unit length, as this means we have the relations
         \begin{align}
             &\abs{\ihat}=\abs{\jhat}=\abs{\khat}=1\label{eq:basis-vec-magnitude}\\
@@ -241,7 +234,6 @@
         The key insight is that motion in 3D Cartesian coordinates is simply a superposition of three one-dimensional motions.
         Because of this, it is possible (and convenient) for simple problems to ignore the vector nature of the problem and just treat motion along each axis as a separate scalar problem.
         
-        \paragraph{}
         Suppose we want to take the dot product of two vectors.
         We can compute it by writing each vector as a sum of components and then multiplying out the brackets.
         Going through the steps in cartesian coordinates, we get
@@ -258,11 +250,9 @@
         All the coordinate systems we have dealt with so far have an orthonormal basis because of this fact.
 
     \section{Forces}\label{sec:forces}
-        \paragraph{}
         Now we know how to describe the motion of an object and changes in the motion (kinematics), but we still don't know how to describe \textit{why} the motion of an object changes (dynamics).
         This is the focus of this section.
 
-        \paragraph{}
         A force is some influence on an object that changes the object's motion.
         In classical mechanics, we describe forces as vectors and denote a generic force with the symbol $F$.
         The exact dynamics of how forces affect motion are described in Newton's laws of motion, which we will write now.
@@ -318,7 +308,6 @@
             These two forces are then known as a ``Newton (III) pair''.
         \end{definition}
 
-        \paragraph{}
         Force is a vector quantity, so in more than dimension it can be decomposed into multiple components which are the forces along each axis.
         In three dimensions, Newton's Second Law is
         \begin{align}
@@ -332,12 +321,11 @@
         We can now solve any problem in classical mechanics.
 
     \section{Projectile Motion}\label{sec:projectile-motion}
-        \paragraph{}
         Let's now look at a concrete example of an experiment which will bring together everything we have looked at in this chapter.
         Suppose we have a cannon situated at the origin which shoots a projectile with a fixed initial velocity $\vec{v}_0$ which makes an initial angle $\theta$ relatitive to the ground.
         Can we work out how far the projectile will fly and what its flight time is?
         % TODO: add diagram
-        \paragraph{}
+
         This is going to be a 2D problem as we have two axes of motion.
         We shall label the horizontal direction that the cannon is shooting along the $x$ axis and the vertical direction the $y$ axis.
         As stated in the problem, the cannon is located at the origin.
@@ -362,7 +350,6 @@
         \end{equation}
         again by equation \ref{eq:suvat-2}.
 
-        \paragraph{}
         Now, the time of flight $t_f$ will be given when $y(t_f)=0$.
         Solving for this, we get
         \begin{align}
@@ -375,7 +362,6 @@
         Additionally, for a fixed initial speed, a projectile fired at a higher angle would have a longer flight time because more of the initial velocity was aimed along the vertical direction.
         On the other hand, if gravity was stronger, the projectile would fall to the ground faster and the flight time would be shorter.
 
-        \paragraph{}
         Finally, the range of the projectile is given by
         \begin{align}
             x_f = x(t_f) &= v_0\cos(\theta)t_f\\
@@ -392,11 +378,9 @@
         \end{example}
 
     \section{Friction}\label{sec:friction}
-        \paragraph{}
         Friction is a very complicated process which occurs on a miroscopic scale, so in order to model in on a macroscopic scale we must use simplified empirical laws.
         In general, friction is a force which opposes change in motion. Hence if a force is applied parallel to a surface, then the frictional force will be antiparallel to this, perpendicular to the normal force.
 
-        \paragraph{}
         Static friction appears when two objects are motionless with respect to one another.
         If a force is applied between the two objects and they don't move, there must be a frictional force opposing the motion.
         % TODO: add a diagram
@@ -415,7 +399,6 @@
             \end{equation}
         \end{definition}
 
-        \paragraph{}
         Kinetic friction opposes the motion of two surfaces sliding against each other.
         \begin{definition}
             \textbf{Kinetic friction} is given by
@@ -468,7 +451,6 @@
                 \end{tikzpicture}
             \end{figure}
             
-            \paragraph{}
             We will start to solve this problem by drawing free-body diagrams for all the blocks.
             In each diagram, we will orient the $x$-axis along the direction of motion.
             \begin{figure}[H]
@@ -571,11 +553,9 @@
                 &=\qty{28.83}{\newton}.
             \end{align}
 
-            \paragraph{}
             Now, imagine if the rope between blocks A and B is cut.
             What will happen to block C?
 
-            \paragraph{}
             With both blocks A and B providing block C with enough friction to balance gravity, it seems that if we remove block A then there will no longer be enough resistance and block C will have to accelerate downwards.
             We can try calculating the acceleration and find out if our hypothesis is correct.
             The forces on blocks B and C are all the same except that we no longer have $T_{AB}$.
@@ -599,7 +579,6 @@
         \end{example}
 
     \section{Gravitation}\label{sec:gravitation}
-        \paragraph{}
         Aside from inventing classical mechanics and calculus, Isaac Newton's most well-known contribution to science is his discovery of the universal law of gravitation.
         % TODO: write more about how it was derived
         % TODO: include a proper definition
@@ -615,7 +594,6 @@
         \end{align}
         where $\vec{r}_{1\to2}=\vec{r}_{2\to1}=\vec{r}_2-\vec{r}_1$.
         
-        \paragraph{}
         Consider an object of mass $m$ near the surface on the Earth.
         The radius of the Earth is very large so we can approximate the distance between the Earth and the object as simply the radius of the Earth.
         The gravitational force which the Earth exerts on the object is given by

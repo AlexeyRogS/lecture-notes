@@ -3,7 +3,6 @@
 \begin{document}
 
     \section{Sequences \& Convergence}
-        \paragraph{}
         A sequence is an infinitely long ordered list of real numbers. The precise definition is as follows.
         \begin{definition}
             A \textbf{sequence} of real numbers is a function
@@ -12,27 +11,27 @@
             \[(x_n)_n,\quad(x_n)_{n\in\mathbb{N}},\quad(x_n)_{n=1}^\infty,\quad(x_1,x_2,\dots).\]
         \end{definition}
         The elements of a sequence can be given by a formula for the $n$-th term, a recurrence relation, or a pattern given by the first few terms.
-        \begin{equation*}
+        \begin{equation}
             (2,4,6,8,\dots)=(2n)_n\ \mathrm{i.e.}\ x_n=2n,\quad\left(1,\frac{1}{2},\frac{1}{3},\frac{1}{4},\dots\right)=\left(\frac{1}{n}\right)_n\ \mathrm{i.e.}\ x_n=\frac{1}{n}.
-        \end{equation*}
+        \end{equation}
         Some sequences converge to a fixed value, or \textbf{limit}, meaning that as $n$ gets larger and larger, $x_n$ gets closer and closer to the limit. An important question to ask is how do we define if a sequence converges or not, or how do we find the limit if it is only reached after an infinite amount of steps? For example, the sequence $\left(\frac{1}{n}\right)_n$ from above intuitively converges to 0 as $n$ tends to infinity, but how can we prove this mathematically?
         % TODO: add definition of e-closeness as stepping stone (def 4.3.4 in tao)
         \begin{definition}
             Let $(x_n)_n$ be a sequence of real numbers and let $x\in\mathbb{R}$.
             \begin{enumerate}
                 \item $(x_n)_n$ is a \textbf{convergent sequence} with \textbf{limit} $x$ if
-                \begin{equation*}
+                \begin{equation}
                     \forall\varepsilon>0,\ \exists N\in\mathbb{N}\ :\ n\geq N\implies\abs{x_n-x}\leq\varepsilon.
-                \end{equation*}
+                \end{equation}
                 In english this says that `for all $\varepsilon>0$, there exists a natural number $N$ such that for $n\geq N$ the distance between $x_n$ and the limit is less than $\varepsilon$'. We say $(x_n)_n$ \textbf{tends to $x$ as $n$ tends to infinity}.
                 \item $(x_n)_n$ \textbf{tends to infinity} as $n$ tends to infinity if
-                \begin{equation*}
+                \begin{equation}
                     \forall K>0,\ \exists N\in\mathbb{N}\ :\ n\geq N\implies x_n\geq K.
-                \end{equation*}
+                \end{equation}
                 \item Likewise, $(x_n)_n$ \textbf{tends to minus infinity} as $n$ tends to infinity if
-                \begin{equation*}
+                \begin{equation}
                     \forall K>0,\ \exists N\in\mathbb{N}\ :\ n\geq N\implies x_n\leq -K.
-                \end{equation*}
+                \end{equation}
                 \item A sequence is \textbf{divergent} if the limit does not exist or it tends to plus/minus infinity.
             \end{enumerate}
         \end{definition}
@@ -44,33 +43,33 @@
         \begin{example}
             Claim: The sequence $\left(\frac{1}{n}\right)_n$ tends to 0 as $n$ tends to infinity.\\
             \textit{Proof}. Let $\varepsilon>0$ and choose $N>\frac{1}{\varepsilon}$. Then for $n\geq N$ we have
-            \begin{equation*}
+            \begin{equation}
                 \abs{x_n-x}=\abs*{\frac{1}{n}-0}=\frac{1}{n}\leq\frac{1}{N}<\varepsilon.
-            \end{equation*}
+            \end{equation}
         \end{example}
         \begin{example}
             Claim: $\left(\frac{1}{n^2}\right)_n\to0$ as $n\to\infty$.\\
             \textit{Proof}. Let $\varepsilon>0$ and choose $N>\frac{1}{\sqrt{\varepsilon}}$. Then for $n\geq N$ we have
-            \begin{equation*}
+            \begin{equation}
                 \abs{x_n-x}=\abs*{\frac{1}{n^2}-0}=\frac{1}{n^2}\leq\frac{1}{N^2}<\varepsilon.
-            \end{equation*}
+            \end{equation}
             It is important to note that we do not have to always use the most optimal value for $N$. In this proof, choosing $N>\frac{1}{\varepsilon}$ would have been sufficient because $\frac{1}{N^2}\leq\frac{1}{N}$.
         \end{example}
         \begin{example}
             Claim: $x_n=\frac{2n+1}{3n+5}$, $(x_n)_n\to\frac{3}{2}$ as $n\to\infty$.\\
             \textit{Proof}. Let $\varepsilon>0$ and choose $N>\frac{7}{9}\varepsilon$. Then for $n\geq N$ we have
-            \begin{align*}
+            \begin{align}
                 \abs{x_n-x}&=\abs*{\frac{2n+1}{3n+5}-\frac{2}{3}}=\abs*{\frac{3(2n+1)-2(3n+5)}{3(3n+5)}}\\
                 &=\abs*{\frac{6n-6n+3-10}{9n+15}}=\abs*{\frac{-7}{9n+15}}=\frac{7}{9n+15}\\
                 &\leq\frac{7}{9N+15}\leq\frac{7}{9N}<\varepsilon.
-            \end{align*}
+            \end{align}
         \end{example}
         \begin{example}
             Claim: $(n^3)_n\to\infty$ as $n\to\infty$.\\
             \textit{Proof}. Let $K>0$ and choose $N>\sqrt[3]{K}$. Then for $n\geq N$ we have
-            \begin{equation*}
+            \begin{equation}
                 x_n=n^3\geq N^3>K.
-            \end{equation*}
+            \end{equation}
         \end{example}
         \begin{example}
             Claim: $x_n=(-1)^n$, $(x_n)_n$ is divergent.\\
@@ -91,22 +90,21 @@
         \begin{proof}
             \begin{enumerate}[label={\upshape(\roman*)}]
                 \item Let $\varepsilon>0$. Then given $N\in\mathbb{N}$, $n\geq N$ implies
-                \begin{equation*}
+                \begin{equation}
                     \abs{x_n-x}=\abs{x-x}=0<\varepsilon.
-                \end{equation*}
+                \end{equation}
                 \item Let $\varepsilon>0$ and choose $N>\frac{\ln{\varepsilon}}{\ln{\abs{a}}}$. Then for $n\geq N$ we have
-                \begin{equation*}
+                \begin{equation}
                     \abs{x_n-x}=\abs{a^n-0}=\abs{a^n}\leq\abs{a^N}<\varepsilon.
-                \end{equation*}
+                \end{equation}
                 \item Let $K>0$ and choose $N>\frac{\ln{K}}{\ln{a}}$. Then for $n\geq N$ we have
-                \begin{equation*}
+                \begin{equation}
                     a^n\geq a^N>K.
-                \end{equation*}
+                \end{equation}
             \end{enumerate}
         \end{proof}
 
     \section{Properties of Limits}
-        \paragraph{}
         Now that we have established how to prove the existence of limits, we will consider the uniqueness of them, as well as some algebraic properties of convergent sequences.
         \begin{theorem}
             If a sequence converges, its limit is unique.
@@ -114,11 +112,11 @@
         \begin{proof}
             Let $(x_n)_n$ be a convergent sequence and suppose that $(x_n)_n\to x$ and $(x_n)_n\to y$. Let $\varepsilon>0$. Then there exists $N_1\in\mathbb{N}$ such that $n\geq N_1\implies\abs{x_n-x}<\varepsilon$, but there also exists $N_2\in\mathbb{N}$ such that $n\geq N_2\implies\abs{x_n-y}<\varepsilon$.
             Now,
-            \begin{align*}
+            \begin{align}
                 \abs{x-y} &= \abs{x-x_n+x_n-y}\tag{for $n\geq\max\{N_1, N_2\}$}\\
                 &\leq\abs{x-x_n}+\abs{x_n-y}\\
                 &<\varepsilon+\varepsilon=2\varepsilon.
-            \end{align*}
+            \end{align}
             Therefore, $\abs{x-y}=0$, so $x=y$ (since $\forall\varepsilon>0$, $0\leq a<\varepsilon\implies a=0\ \forall a\in\mathbb{R}$). Thus, the two limits are in fact the same.
         \end{proof}
         % TODO: don't need to recall, just cite proof
@@ -147,28 +145,28 @@
             For all parts of this proof, begin by letting $\varepsilon>0$.
             \begin{enumerate}[label={\upshape(\roman*)}]
                 \item Since $x_n\to x,\ \exists N_1\in\mathbb{N}$ such that $n\geq N_1\implies\abs{x_n-x}<\frac{\varepsilon}{2}$ and since $y_n\to y,\ \exists N_2\in\mathbb{N}$ such that $n\geq N_2\implies\abs{y_n-y}<\frac{\varepsilon}{2}$. Choose $N=\max\{N_1, N_2\}$, now for $n\geq N$ we have
-                \begin{align*}
+                \begin{align}
                     \abs{(x_n+y_n)-(x+y)} &= \abs{(x_n-x)+(y_n-y)}\\
                     &\leq\abs{x_n-x}+\abs{y_n-y}\\
                     &<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon.
-                \end{align*}
+                \end{align}
                 \item Since $(x_n)_n$ is bounded, $\exists M\geq0$ such that $\abs{x_n}\leq M\ \forall n\in\mathbb{N}$. Since $x_n\to x,\ \exists N_1\in\mathbb{N}$ such that $n\geq N_1\implies\abs{x_n-x}<\frac{\varepsilon}{2M}$ and since $y_n\to y,\ \exists N_2\in\mathbb{N}$ such that $n\geq N_2\implies\abs{y_n-y}<\frac{\varepsilon}{2\abs{y}}$. Now, choosing $N=\max\{N_1, N_2\}$, for $n\geq N$ we have
-                \begin{align*}
+                \begin{align}
                     \abs{x_ny_n-xy}&=\abs{x_ny_n-x_ny+x_ny-xy}\\
                     &=\abs{x_n(y_n-y)+y(x_n-x)}\\
                     &\leq\abs{x_n}\abs{y_n-y}+\abs{y}\abs{x_n-x}\\
                     &<\abs{x_n}\frac{\varepsilon}{2M}+\abs{y}\frac{\varepsilon}{2\abs{y}}\\
                     &\leq M\frac{\varepsilon}{2M}+\abs{y}\frac{\varepsilon}{2\abs{y}}=\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon.
-                \end{align*}
+                \end{align}
                 \item Since $y_n\to y,\ \exists N_1\in\mathbb{N}$ such that $n\geq N_1\implies\abs{y_n-y}<\frac{\abs{y}}{2}$. Then for $n\geq N_1$
-                \begin{equation*}
+                \begin{equation}
                     \abs{y}=\abs{y_n+(y-y_n)}\leq\abs{y_n}+\abs{y_n-y}<\abs{y_n}+\frac{\abs{y}}{2},
-                \end{equation*}
+                \end{equation}
                 so $\abs{y_n}>\frac{\abs{y}}{2}$. Now, let $N_2$ be such that $n\geq N_2\implies\abs{y_n-y}<\frac{\varepsilon\abs{y}^2}{2}$, then for $n\geq\max\{N_1, N_2\}$ we have
-                \begin{align*}
+                \begin{align}
                     \abs*{\frac{1}{y_n}-\frac{1}{y}}&=\abs*{\frac{y-y_n}{y_ny}}=\frac{\abs{y_n-y}}{\abs{y_n}\abs{y}}\\
                     &<\frac{\varepsilon\abs{y}^2}{2\abs{y_n}\abs{y}}<\frac{2\varepsilon\abs{y}^2}{2\abs{y}^2}=\varepsilon.
-                \end{align*}
+                \end{align}
                 \item Write $\frac{x_n}{y_n}$ as $x_n\cdot\frac{1}{y_n}$, then the result follows from parts (ii) and (iii).
                 \item Let $y_n=a$ (so $(y_n)_n$ is the constant sequence $(a, a, \dots)$ with limit $a$), then the result follows from part (ii).
                 \item We will make use of a minor result to assist in proving this.
@@ -177,11 +175,11 @@
                 \end{lemma}
                 \begin{proof}
                     Suppose by way of contradiction that $a<0$ and let $\varepsilon=-a>0$. Then since $(a_n)_n$ converges, $\exists N\in\mathbb{N}$ such that $n\geq N\implies\abs{a_n-a}<-a$. This means that
-                    \begin{align*}
+                    \begin{align}
                         a<\, &a_n-a<-a\\
                         \implies &a_n-a+a<-a+a\\
                         \implies &a_n<0
-                    \end{align*}
+                    \end{align}
                     which is a contradiction, hence $a$ must be greater than 0.
                 \end{proof}
                 Now, consider $y_n-x_n\geq0\ \forall n\in\mathbb{N}$. The sequence $(y_n-x_n)_n$ converges to $y-x$ by part (i) (and part (v) with $a=-1$) and so by our claim $y-x\geq0$, which implies $x\leq y$ as required.
@@ -191,20 +189,19 @@
         \begin{example}
             Let $(x_n)_n=\left(1+\frac{1}{n^p}\right)_n$ with $p\in\mathbb{N}$. Show that $x_n\to1$ as $n\to\infty$.\\
             First, let $a_n=1$ and $b_n=\frac{1}{n^p}$, then note that we already know that the sequence $\left(\frac{1}{n}\right)_n$ converges to 0, so by theorem \ref{seq-lim-props} (ii) (applied repeatedly),
-            \begin{equation*}
+            \begin{equation}
                 \underbrace{\frac{1}{n}\cdot\frac{1}{n}\cdots\frac{1}{n}}_{p\text{ times}}=\frac{1}{n^p}\to0\text{ as }n\to\infty.
-            \end{equation*}
+            \end{equation}
             Then $(x_n)_n=(a_n+b_n)_n$ which, by theorem \ref{seq-lim-props} (i), converges to 1 since $a_n\to1$ and $b_n\to0$ as $n\to\infty$.
         \end{example}
         \begin{example}
             Show that the sequence $(x_n)_n=\left(\frac{n+5n^2+2n^3}{n^3+3}\right)$ converges to 2.\\
-            \begin{equation*}
+            \begin{equation}
                 \frac{2n^3+5n^2+n}{n^3+3}=\frac{2+5\left(\frac{1}{n}\right)+\left(\frac{1}{n}\right)^2}{1+3\left(\frac{1}{n}\right)^3}\to\frac{2+5(0)+0}{1+3(0)}=2\text{ as }n\to\infty.
-            \end{equation*}
+            \end{equation}
         \end{example}
 
     \section{Monotone Sequences}
-        \paragraph{}
         So far, in all the examples of sequences we have seen so far we have had to know what the limit of the sequence is in order to prove the existence of it, but sometimes this is tricky to know beforehand if we are dealing with a novel sequence. We will now introduce some tools and theorems that will enable us to prove the existence of a limit for a sequence without knowing what the limit is.
         \begin{definition}
             Let $(x_n)_n$ be a sequence of real numbers.
@@ -232,13 +229,13 @@
         \begin{proof}
             $(\implies)$: This follows from theorem \ref{cvg-seq-bounded}.\\
             $(\impliedby)$: Suppose $(x_n)_n$ is bounded and without meaningful loss of generality assume $(x_n)_n$ is increasing. Recall that since $\mathbb{R}$ is \textit{complete}, every bounded set of real numbers has a supremum that is also a real number, i.e. if we let
-            \begin{equation*}
+            \begin{equation}
                 X\coloneqq\{x_n:n\in\mathbb{N}\}
-            \end{equation*}
+            \end{equation}
             then $X$ is a bounded subset of the real numbers and we can let $x=\sup X\in\mathbb{R}$. Now we want to show that $(x_n)_n$ converges to $x$. Let $\varepsilon>0$ and note that $x-\varepsilon$ is not an upper bound since $x$ is the supremum. Therefore, there exists $N\in\mathbb{N}$ such that $x_N\geq x-\varepsilon$. Now since $(x_n)_n$ is increasing, for $n\geq N$ we have
-            \begin{equation*}
+            \begin{equation}
                 \abs{x_n-x}=x-x_n\leq x-x_N\leq\varepsilon,
-            \end{equation*}
+            \end{equation}
             and hence $x_n\to x$ as $n\to\infty$.
         \end{proof}
         This theorem makes intuitive sense, if we have a sequence which is always increasing or decreasing and is bounded then it must reach a limit before it surpasses the bound, and in fact this limit is the least upper/greatest lower bound of the set of elements of the sequence.
@@ -255,27 +252,26 @@
         %TODO, fig here
         \begin{example}
             Let $(x_n)_n$ be a sequence given by
-            \begin{equation*}
+            \begin{equation}
                 x_n=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\cdots+\frac{1}{n^2}=\sum_{k=1}^n\frac{1}{k^2}.
-            \end{equation*}
+            \end{equation}
             Show that this sequence is convergent.\\
             First notice that $(x_n)_n$ is increasing,
-            \begin{equation*}
+            \begin{equation}
                 x_n=\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\cdots+\frac{1}{n^2}<\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\cdots+\frac{1}{n^2}+\frac{1}{(n+1)^2}=x_{n+1},
-            \end{equation*}
+            \end{equation}
             and also the elements of $(x_n)_n$ are bounded between 0 and 2.
-            \begin{align*}
+            \begin{align}
                 0&<\frac{1}{1^2}+\frac{1}{2^2}+\frac{1}{3^2}+\frac{1}{4^2}+\cdots+\frac{1}{n^2}\\
                 &\leq1+\frac{1}{1\cdot2}+\frac{1}{2\cdot3}+\frac{1}{3\cdot4}+\cdots+\frac{1}{(n-1)n}\\
                 &=1+\left(\frac{1}{1}-\frac{1}{2}\right)+\left(\frac{1}{2}-\frac{1}{3}\right)+\left(\frac{1}{3}-\frac{1}{4}\right)+\cdots+\left(\frac{1}{n-1}-\frac{1}{n}\right)\\
                 &=1+1-\frac{1}{n}<2.
-            \end{align*}
+            \end{align}
             Hence by MCT, this sequence must converge.
             In fact, it can be shown that this sequence converges to $\frac{\pi^2}{6}$, but the proof of that is a bit more involved.
         \end{example}
 
     \section{Subsequences}
-        \paragraph{}
         Now we want to introduce the idea of a subsequence, which is a sequence contained within another sequence. We can do this by taking a regular old sequence of real numbers and `picking' certain entries out that we want to be part of the new subsequence, for example: every 2nd entry, every 5th entry, every entry whose index is a power of 10. We can do this by defining a new sequence of natural numbers, and then using this sequence to index our original one as follows.
         \begin{definition}
             Let $(x_n)_n$ be a sequence of real numbers and $(m_k)_k$ be a sequence of natural numbers which is strictly increasing $(m_1<m_2<m_3<\dots)$. Then $(x_{m_k})_k$ is a \textbf{subsequence} of $(x_n)_n$.
@@ -286,9 +282,9 @@
         \end{theorem}
         \begin{proof}
             Let $\varepsilon>0$. Since $x_n\to x,\ \exists N\in\mathbb{N}$ such that $n\geq N\implies\abs{x_n-x}<\varepsilon$. Since $(x_{m_k})_k$ is a subsequence of $(x_n)_n$, we can let $K\in\mathbb{N}$ such that for $k\geq K$ we have $m_k\geq N$ (for example, choose $K=N$ since $m_k\geq k\geq N$). Then we have
-            \begin{equation*}
+            \begin{equation}
                 \abs{x_{m_k}-x}<\varepsilon\ \forall k\geq K,
-            \end{equation*}
+            \end{equation}
             which means that the subsequence converges to $x$.
         \end{proof}
         \begin{theorem}[Monotone Subsequence Theorem]\label{MST}
@@ -297,9 +293,9 @@
         \begin{proof}
             Let $(x_n)_n$ ba a sequence of real numbers. Before proving this theorem we make a quick definition. We say that a natural number $p$ is a \textit{peak} if $x_p\geq x_n\ \forall n\geq p$, i.e. it is the index of the greatest number in the sequence from that point onwards. Now, there are two cases for a general sequence: either it has infinitely many peaks, or it has finitely many.\\
             \textbf{Case 1}: $(x_n)_n$ has infinitely many peaks. List out the peaks in order of which they occur --- $p_1<p_2<p_3\dots$ --- and notice that by definition we have
-            \begin{equation*}
+            \begin{equation}
                 x_{p_1}\geq x_{p_2}\geq x_{p_3}\geq\dots,
-            \end{equation*}
+            \end{equation}
             and thus $(x_{p_k})_k$ is a decreasing subsequence (which is monotone) as required.\\
             \textbf{Case 2}: $(x_n)_n$ has finitely many peaks. Again we can list them in order: $p_1<p_2<p_3<\dots<p_N$. Now let $t_1>p_N$ be a natural number. Since $t_1$ is not a peak by definition, there exists $t_2>t_1$ such that $x_{t_2}>x_{t_1}$. Since $t_2$ is also not a peak, there exists $t_3>t_2$ such that $x_{t_3}>x_{t_2}$. Continuing in this way we generate a sequence $t_1<t_2<t_3<\dots$ with $x_{t_1}<x_{t_2}<x_{t_3}<\dots$, hence $(x_{t_k})_k$ is an increasing subsequence (which is monotone) as required.
         \end{proof}
@@ -314,39 +310,38 @@
         %TODO add axis translation example of subsequence
 
     \section{Cauchy Sequences}
-        \paragraph{}
         Our goal was to develop tools that allow us to determine if a sequence is convergent without knowing what the limit of sequence is. We know that if a sequence is monotone and bounded then it is convergent, and that if a sequence is  a subsequence of a bounded sequence, then it is convergent. But what if a sequence does not fulfill these properties? Our current definition of convergence requires knowledge of the limit in order to prove that a sequence is convergent, so how about we create a new definition of a convergent sequence where we don't need to know what the limit is. The intuition for this defintion is that we want to express mathematically that for a sequence to converge the terms have to get closer and closer together as $n\to\infty$. We will name this new type of convergent sequence \textit{Cauchy} after the 19th-century French mathematician Augustin-Louis Cauchy.
         \begin{definition}
             Let $(x_n)_n$ be a sequence of real numbers. Then $(x_n)_n$ is a \textbf{Cauchy sequence} if
-            \begin{equation*}
+            \begin{equation}
                 \forall\varepsilon>0,\ \exists N\in\mathbb{N}\ :\ n,m\geq N\implies\abs{x_m-x_n}\leq\varepsilon.
-            \end{equation*}
+            \end{equation}
         \end{definition}
         What this defintion is encoding for us is that for any small $\varepsilon$, there exists a step in the sequence such that from that step onwards, \textbf{all terms} of the sequence are $\varepsilon$-close to each other. It is actually quite important that we specify `all terms' as we want this definition to be as close as possible to our original definition of convergence and if we say that, for example, only consecutive terms must get $\varepsilon$-close to each other then we admit some sequences which we would not consider convergent under the original definition. For example, the sequence $(x_n)_n=(\sqrt{n})_n$. Successive terms get arbitrarily close to each other ($x_{n+1}-x_n=\sqrt{n+1}-\sqrt{n}=\frac{1}{\sqrt{n+1}+\sqrt{n}}<\frac{1}{2\sqrt{n}}$) but not \textit{all others} (the terms still get arbitrarily large as $n\to\infty$ so for any index $n$ and distance $M$ we can always find a large enough index $m$ such that $x_m-x_n>M$), and thus the sequence is not Cauchy.
         \begin{example}
             Show that $\left(\frac{1}{n}\right)_n$ is a Cauchy sequence.\\
             Let $\varepsilon>0$ and choose $N>\frac{2}{\varepsilon}$. Then for $m,n\geq N$ we have
-            \begin{equation*}
+            \begin{equation}
                 \abs{x_m-x_n}=\abs*{\frac{1}{m}-\frac{1}{n}}\leq\frac{1}{m}+\frac{1}{n}\leq\frac{1}{N}+\frac{1}{N}=\frac{2}{N}<\varepsilon.
-            \end{equation*}
+            \end{equation}
         \end{example}
         \begin{example}
             Show that $\left(\frac{n}{1+n}\right)_n$ is a Cauchy sequence.\\
             Let $\varepsilon>0$ and choose $N>\frac{1}{\varepsilon}$. Then for $m\geq n\geq N$ we have
-            \begin{align*}
+            \begin{align}
                 \abs{x_m-x_n}&=\abs*{\frac{m}{1+m}-\frac{n}{1+n}}=\abs*{\frac{m-n}{(1+m)(1+n)}}\\
                 &\leq\frac{m-n}{mn}=\frac{1}{n}-\frac{1}{m}\leq\frac{1}{n}\leq\frac{1}{N}<\varepsilon.
-            \end{align*}
+            \end{align}
         \end{example}
         \begin{example}
             Show that the sequence given by $x_n=1+\frac{1}{2}+\dots+\frac{1}{n}$ is not Cauchy.\\
             To prove this, we will show that the sequence fulfills the negation of the Cauchy sequence definition ($\exists\varepsilon>0$ such that $\forall N\in\mathbb{N}\ \exists m,n\geq N$ such that $\abs{x_m-x_n}>\varepsilon$).\\
             Choose $\varepsilon<\frac{1}{2}$, let $N\in\mathbb{N}$, and choose $n=N$ and $m=2N$. Then
-            \begin{align*}
+            \begin{align}
                 &\abs{x_m-x_n}=\abs{x_{2N}-x_N}\\
                 &=\abs*{\left(1+\frac{1}{2}+\dots+\frac{1}{N}+\frac{1}{N+1}+\dots+\frac{1}{2N}\right)-\left(1+\frac{1}{2}+\dots+\frac{1}{N}\right)}\\
                 &=\frac{1}{N+1}+\dots+\frac{1}{2N}\geq\frac{1}{2N}+\dots+\frac{1}{2N}=N\frac{1}{2N}=\frac{1}{2}>\varepsilon.
-            \end{align*}
+            \end{align}
         \end{example}
         Notice that in these examples, the sequences that are Cauchy are also convergent, and the sequence that is not Cauchy is not convergent. This correspondence turns out to be general and in fact it is an important result that the criteria for being convergent and being Cauchy are equivalent.
         \begin{theorem}
@@ -359,24 +354,24 @@
             \end{lemma}
             \begin{proof}
                 Let $(x_n)_n$ be a Cauchy sequence. Then $\exists N\in\mathbb{N}$ such that $n\geq N\implies\abs{x_n-x_N}<1$ (this is equivalent to the definition of Cauchy with $m=N$). Then
-                \begin{equation*}
+                \begin{equation}
                     \abs{x_n}=\abs{x_n-x_N+x_N}\leq\abs{x_n-x_N}+\abs{x_N}\leq 1+\abs{x_N}.
-                \end{equation*}
+                \end{equation}
                 Therefore, for
-                \begin{equation*}
+                \begin{equation}
                     M=\max\{1+\abs{x_N},\abs{x_1},\abs{x_2},\dots,\abs{x_{N-1}}\},
-                \end{equation*}
+                \end{equation}
                 and thus for \textit{all} $n\in\mathbb{N}$ we have $\abs{x_n}\leq M$, so $(x_n)_n$ is bounded.
             \end{proof}
             Now suppose $(x_n)_n$ is a Cauchy sequence, then by the lemma above, $(x_n)_n$ is bounded and thus by the Bolzano-Weierstrass Theorem (\ref{BWT}) there exists a convergent subsequence $(x_{m_k})_k$ which converges to some limit $x$. We now want to show that the Cauchy sequence $(x_n)_n$ also converges to $x$. Let $\varepsilon>0$, Since $(x_n)_n$ is Cauchy $\exists N\in\mathbb{N}$ such that $m,n\geq N\implies\abs{x_m-x_n}<\frac{\varepsilon}{2}$. Also, since $x_{m_k}\to x,\ \exists K\in\mathbb{N}$ such that $k\geq K\implies\abs{x_{m_k}-x}<\frac{\varepsilon}{2}$. Then, for $n\geq\max\{N,K\}$ we have
-            \begin{equation*}
+            \begin{equation}
                 \abs{x_n-x}=\abs{x_n-x_{m_n}+x_{m_n}-x}\leq\abs{x_n-x_{m_k}}+\abs{x_{m_k}-x}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
-            \end{equation*}
+            \end{equation}
             and thus $(x_n)_n$ is convergent with limit $x$.\\
             $(\impliedby)$: Suppose $(x_n)_n$ is a convergent sequence with limit $x$. Let $\varepsilon>0$, then $\exists N\in\mathbb{N}$ such that $n\geq N\implies\abs{x_n-x}<\frac{\varepsilon}{2}$. For $m,n\geq N$ we have
-            \begin{equation*}
+            \begin{equation}
                 \abs{x_m-x_n}=\abs{x_m-x+x-x_n}\leq\abs{x_m-x}+\abs{x-x_n}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
-            \end{equation*}
+            \end{equation}
             and thus $(x_n)_n$ is a Cauchy sequence.
         \end{proof}
 

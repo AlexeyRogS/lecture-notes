@@ -3,7 +3,6 @@
 \begin{document}
 
     \section{The Basic Definition of a Function}
-        \paragraph{}
         The concept of a function is one that is fundamental to all area of mathematics. We will be using functions thoroughly from now on so it's a good time to review exactly what a function is and how we can manipulate them.
         \begin{definition}
             Let $D$ and $R$ be non-empty sets. Then $f \subseteq D \times R$ is a function if $\forall x \in D, \forall y, z \in R,\ (x, y) \in f$ and $(x, z) \in f \implies y = z.$
@@ -20,9 +19,9 @@
             \end{itemize}
         \end{definition}
         To express what the image of some function $f$ actually is, we need some kind of formula for the image of an arbitrary point $x \in D$. This can be given by a straightforward formula such as
-        \begin{equation*}
+        \begin{equation}
             f(x) = 2x \quad \text{or}\quad x \mapsto x^2 + 1,
-        \end{equation*}
+        \end{equation}
         or a piecewise definition like
         \begin{equation}\label{eq:4.1}
             f(x) = \begin{cases}
@@ -32,7 +31,6 @@
         \end{equation}
         or something even more abstract, such as a power series or recurrence relation (Recall that sequences are defined as functions).
 
-        \paragraph{}
         A real function is a function that has real numbers as its inputs and outputs. We can visualise a real functions behaviour by treating the ordered pairs $\big(x, f(x)\big) \in f$ as Cartesian coordinates in the plane, which is what we all know as a graph.
         \begin{example}
             Let $f: \mathbb{R} \to \mathbb{R}$ be given by $f(x) = \sqrt{x}$. \\
@@ -48,7 +46,6 @@
         \end{example}
 
     \section{Operations on Functions}
-        \paragraph{}
         Now we will define how to combine functions together to create new functions. Let $f, g$ be functions with domains and ranges in $\mathbb{R}$.
         \begin{definition}[Basic Arithmetic]
             Firstly, it is useful to have a working definition of equality.
@@ -67,7 +64,6 @@
             \end{itemize}
             Using this definition with the constant function $x \mapsto -1$, we can define the differences of functions.
 
-            \paragraph{}
             The reciprocal $1 / g$ is defined where $g$ is not zero.
             \begin{itemize}
                 \item $\dom\left(\frac{1}{g}\right) = \{x \in \dom(g) : g(x) \ne 0\}$.
@@ -84,14 +80,12 @@
         \end{definition}
 
     \section{Classes of Functions}
-        \paragraph{}
         There are certain properties of functions that we can use to group functions together into similarly-behaving types. Let $f$ be a function with domain and range in $\mathbb{R}$.
         \begin{definition}
             \begin{itemize} \item[]
                 \item $f$ is an \textbf{even} function $\iff f(x) = f(-x)\ \forall x \in \dom(f)$. This can be visualised as symmetry about the y-axis of the graph.
                 \item $f$ is an \textbf{odd} function $\iff -f(x) = f(-x)\ \forall x \in \dom(f)$. This can be visualised as $180^\circ$ rotational symmetry about the origin of the graph.
             \end{itemize}
-            \paragraph{}
             It is possible for a function to be neither even nor odd.
         \end{definition}
         \begin{definition}
@@ -103,7 +97,6 @@
                 Every element in the range is reached by \textit{at least one} element from the domain.
                 \item f is a \textbf{bijection} (or \textbf{one-to-one correspondence}) $\iff f$ is \textbf{injective} and $f$ is \textbf{surjective}. Each element of the range is mapped to by \textit{exactly one} element from the domain.
             \end{itemize}
-            \paragraph{}
             It is possible for a function to be neither  injective nor surjective.
         \end{definition}
 
@@ -112,35 +105,32 @@
         % move boundedness of function to this section
 
     \section{Continuity}
-        \paragraph{}
         Very informally, a continuous function is one whose graph can be drawn without lifting the pen of the page. Intuitively this means that a small change in the input of the function leads to a small change to the output. To write a rigorous definition, we will use what we have learned from sequences.
         \begin{definition}
             Let $f: D \to R$, then $f$ is \textbf{continuous at} $x_0\in D$ if is \textbf{continuous at} $x_0\in D$ if
-            \begin{equation*}
+            \begin{equation}
                 \forall\varepsilon>0,\ \exists\delta>0\text{ such that }\forall x\in D,\ \abs{x-x_0}\leq\delta\implies\abs{f(x)-f(x_0)}\leq\varepsilon.
-            \end{equation*}
+            \end{equation}
             We say $f$ is \textbf{continuous} if $f$ is continuous at all $x_0\in D$.
         \end{definition}
         What this means is that for a fixed point $x_0$ and \textit{any} value of $\varepsilon$ we choose, we can find a $\delta$ such that when the inputs of the function are $\delta$-close, the outputs of the function are $\varepsilon$-close. If this is true for all points in the functions domain, then we call the whole function continuous.
         % TODO: insert a diagram to help here
-        \paragraph{}
         When we are doing a proof of continuity, we must first fix $x_0$, then $\varepsilon$, then we may choose $\delta$ similarly to the way we chose $N$ when proving convergence of a sequence. Let's do an example.
         \begin{example}
             Let $f: \RR\to\RR$ be given by $f(x)=2x$.
             Claim: $f$ is continuous.\\
             Let $x_0\in\RR$, let $\varepsilon>0$, choose $\delta\in(0,\frac{\varepsilon}{2})$.\\
             Consider $x\in\RR$ with $\abs{x-x_0}<\delta$, then
-            \begin{align*}
-                \abs{f(x)-f(x_0)} &= \abs{2x-2x_0}\\
+            \begin{align}
+                \abs{f(x)-f(x_0)}&=\abs{2x-2x_0}\\
                 &=2\abs{x-x_0}\\
                 &<2\delta\\
                 &<\varepsilon.
-            \end{align*}
+            \end{align}
             Since the value of $x_0$ was arbitrary, $f$ is continuous.
         \end{example}
         Just like when proving the convergence of a sequence, when we are first constructing a proof of continuity the value of $\delta$ is unknown until the proof is complete. Once the value is known, we go back and place it at the start so that the proof works.
         % TODO: thomae's function
-        \paragraph{}
         It turns out that there is a very strong link between the continuous functions and convergent sequences that we will now prove.
         \begin{theorem}[Sequential Definition of Continuity]\label{seq-cont}
             Let $D\subseteq\RR$, let $f: D\to\RR$, then the following are equivalent:
@@ -163,7 +153,7 @@
             \underline{Using $\varepsilon-\delta$ definition of continuity}:\\
             Let $x_0\in\RR$, let $\varepsilon>0$, choose $\delta<\min\left\{1, \frac{\varepsilon}{4\abs{x_0}+2}\right\}$.\\
             Consider $x\in\RR$ such that $\abs{x-x_0}<\delta$, then
-            \begin{align*}
+            \begin{align}
                 \abs{f(x)-f(x_0)}&=\abs{2x^2+1-(2x_0^2+1)}\\
                 &=2\abs{x^2-x_0^2}\\
                 &=2\abs{(x-x_0)(x+x_0)}\\
@@ -171,12 +161,12 @@
                 &<2\delta(\abs{x}+\abs{x_0})\\
                 &<2\delta(2\abs{x_0}+1)\tag{provided $\delta<1$ so $\abs{x}<\abs{x_0}+1$}\\
                 &<\varepsilon.\tag{provided $\delta<\frac{\varepsilon}{4\abs{x_0}+2}$}
-            \end{align*}
+            \end{align}
             \underline{Using the sequential definition of continuity}:\\
             Let $x_0\in\RR$, let $(x_n)_n$ be a sequence in $\RR$ such that $x_n\to x_0$. Then
-            \begin{equation*}
+            \begin{equation}
                 f(x_n)=2x_n^2+1\to2x_0^2+1=f(x_0).\tag{by theorem \ref{seq-lim-props}}
-            \end{equation*}
+            \end{equation}
             Therefore $f$ is continuous.
         \end{example}
         Here are a couple of examples proving discontinuity using the sequential definition.
@@ -212,21 +202,21 @@
                 \item[(i)] \underline{Using the $\varepsilon-\delta$ definition}:\\
                 Let $\varepsilon>0$, since $f$ is continuous at $x_0$, $\exists\delta_f>0$ so that $\abs{x-x_0}<\delta_f\implies\abs{f(x)-f(x_0)}<\frac{\varepsilon}{2}$. Similarly for $g$, $\exists\delta_g$.\\
                 Now choose $\delta=\min\{\delta_f,\delta_g\}$, then
-                \begin{align*}
+                \begin{align}
                     \abs{x-x_0}<\delta\implies\abs{(f+g)(x)-(f+g)(x_0)}&=\abs{f(x)+g(x)-(f(x_0)+g(x_0))}\\
                     &=\abs{f(x)-f(x_0)+g(x)-g(x_0)}\\
                     &\leq\abs{f(x)-f(x_0)}+\abs{g(x)-g(x_0)}\\
                     &\leq\frac{\varepsilon}{2}+\frac{\varepsilon}{2}\\
                     &=\varepsilon.
-                \end{align*}
+                \end{align}
                 \underline{Using the sequential definition}:\\
                 Consider a sequence $(x_n)_n$ in $D$ with limit $x_0$. Since $f$ and $g$ are continuous at $x_0$, $f(x_n)\to f(x_0)$ and $g(x_n)\to g(x_0)$.\\
                 Then $(f+g)(x_n)=f(x_n)+g(x_n)\to f(x_0)+g(x_0)=(f+g)(x_0)$.
                 \item (ii), (iii), (vi), and (vii) follow similarly.
                 \item To prove (iv) and (v), note that
-                \begin{equation*}
+                \begin{equation}
                     \min\{f,g\}=\frac{f+g-\abs{f-g}}{2},\quad \max\{f,g\}=\frac{f+g+\abs{f-g}}{2},
-                \end{equation*}
+                \end{equation}
                 then use the results of (i), (iii), and (vi).
             \end{itemize}
         \end{proof}
@@ -236,16 +226,16 @@
         \end{theorem}
         \begin{proof}
             Let $(x_n)_n\in D_f$ with limit $x_0$. Since $f$ is continuous at $x_0$, $f(x_n)\to f(x_0)$. Since $g$ is continuous at $f(x_0)$,
-            \begin{equation*}
+            \begin{equation}
                 (g\circ f)(x_n)=g(f(x_n))\to g(f(x_0))=(g\circ f)(x_0).
-            \end{equation*}
+            \end{equation}
         \end{proof}
         We will now move onto the meat of this chapter, some intuitive but nonetheless very important results about continuous functions which will be very important when we get into more advanced topics.
         \begin{definition}
             A function $f: D\to\RR$ is \textbf{bounded} if $\exists M\in\RR$ such that
-            \begin{equation*}
+            \begin{equation}
                 \forall x\in D,\ \abs{f(x)}\leq M.
-            \end{equation*}
+            \end{equation}
         \end{definition}
         The first theorem we will see is so simple that it is not clear why we need to prove it. It states that a continuous function on a closed interval is bounded and has a maximum and minimum value. As we will see after proving the theorem, there are discontinuous functions which satisfy these properties but there are also many which don't.
         \begin{theorem}[Extreme Value Theorem]\label{evt}
@@ -273,9 +263,9 @@
         % TODO: include diagram
         \begin{theorem}[Intermediate Value Theorem]\label{ivt}
             Let $I\subseteq\RR$ be an interval, $f: I\to\RR$ a continuous function. Let $a,b\in I$ with $a<b$ and let $y\in\RR$ lie between $f(a)$ and $f(b)$ (i.e. $f(a)<y<f(b)$ or $f(b)<y<f(a)$). Then $\exists x\in(a,b)$ such that
-            \begin{equation*}
+            \begin{equation}
                 f(x)=y.
-            \end{equation*}
+            \end{equation}
         \end{theorem}
         \begin{proof}
             Assume without meaningful loss of generality that $f(a)<y<f(b)$. Let $S=\{x\in[a,b]:\ f(x)<y\}$ (since $a\in S$, $S\neq\emptyset$). Let $x_0=\sup S$.\\
@@ -293,10 +283,10 @@
         \begin{example}
             Let $f:[0,1]\to[0,1]$ be continuous. Then $f$ has a fixed point ($\exists x\in[0,1]$ such that $f(x)=x$).\\
             \textit{Proof}. Let $g$ be given by $g(x)=f(x)-x$. Note that by theorem \ref{cts-func-props}, $g$ is continuous on $[0,1]$. Also note that
-            \begin{align*}
+            \begin{align}
                 g(0)&=f(0)-0=f(0)\geq0\\
                 g(1)&=f(1)-1\leq1-1=0
-            \end{align*}
+            \end{align}
             So $0\in[g(1),g(0)]$. If $g(0)=0$ or $g(1)=0$, then $0$ or $1$ are fixed points. Therefore, assume that $g(0)>0>g(1)$, and hence by the intermediate value theorem (\ref{ivt}), $\exists x_0\in(0,1)$ so that $g(x_0)=0$, i.e. $f(x_0)-x_0=0$, so $x_0$ is a fixed point.
         \end{example}
         \begin{corollary}

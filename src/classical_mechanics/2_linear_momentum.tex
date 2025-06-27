@@ -3,7 +3,6 @@
 \begin{document}
 
     \section{Conservation of Momentum}\label{sec:conservation-of-momentum}
-        \paragraph{}
         Consider two objects interacting with each other via some forces.
         They could be two electrons repelling each other because of the electrostatic force or two planets falling together due to gravity.
         By Newton's third law,
@@ -25,7 +24,6 @@
         This means it is constant for all time. We call this quantity the \textbf{linear momentum}.
 
     \section{Centre of Mass}\label{sec:centre-of-mass}
-        \paragraph{}
         Some times it is useful to consider the \textbf{centre of mass} of a system, which is defined as the \textit{average} position of all the objects in the system.
         For the system of two objects, this is calculated as
         \begin{equation}
@@ -48,7 +46,6 @@
             % TODO: write this
         \end{example}
 
-        \paragraph{}
         For a general system of $N$ objects, we define the total mass and total momentum as
         \begin{align}
             M&=m_1+m_2+\dots+m_N\\
@@ -56,7 +53,6 @@
             \vec{P}&=\sum_{i=1}^{N}m_i\vec{v_i}.
         \end{align}
 
-        \paragraph{}
         % TODO: include diagram for this
         The net force on each individual part of the system can be written as the sum of any external forces and internal forces from all the other parts.
         \begin{equation}
@@ -69,7 +65,6 @@
         The second term on the far right-hand side is 0 by Newton's third law (you can prove this by induction).
         % TODO: write example to prove this (F_12 cancels with F_21, F_13 cancels with F_31, F_23 cancels with F_32, etc.)
         
-        \paragraph{}
         Now we define the centre of mass position, velocity, and acceleration as the weighted average of each of the individual particles' quantities.
         \begin{definition}
             Consider a system of $N$ objects.
@@ -94,11 +89,9 @@
         Also note that because the centre of mass momentum is equal to the total momentum, systems of many particles act as if all the mass was concentrated in a point at the centre of mass, moving with the the centre of mass velocity.
         Without these results, we could not apply the laws of mechanics as we have been learning them to macroscopic bodies!
 
-        \paragraph{}
         If $\vec{F}_\text{ext}=0$, i.e. the system is isolated and there are no external forces, then the centre of mass moves in a straight line with a constant velocity and the total linear momentum is conserved.
         % TODO: write example of a projectile exploding while in the air with the COM following the trajectory 
 
-        \paragraph{}
         Since the centre of mass quantites are vectors, we can break them into components just like all the other vector quantites we have seen.
         For example, in 2D cartesian coordinates we have
         \begin{equation}
@@ -110,7 +103,6 @@
         \end{equation}
 
     \section{Continuous Extended Objects}\label{sec:continuous-extended-objects}
-        \paragraph{}
         In the case where the number of particles in the system becomes so large that the distinction between the individual particles becomes smooth, we stop computing the centre of mass quantities as discrete sums and switch to integrals.
         The intuition for this is as follows.
         As the number of particles $N$ tends to infinity, the mass $m_i$ becomes a small mass element $\dd{m}$, which is what we integrate over.
@@ -123,7 +115,6 @@
             \dd{m}=\lambda(x)\dd{x},\quad\dd{m}=\sigma(\vec{r})\dd{A},\quad\dd{m}=\rho(\vec{r})\dd{V}.
         \end{equation}
 
-        \paragraph{}
         We will look at some examples here in the form of uniform lamina, which are flat (two-dimensional) extended objects with uniform surface density.
         \begin{example}
             Find the centre of mass of a right triangle with both small side lengths $a$.
@@ -144,7 +135,6 @@
                 \end{tikzpicture}
             \end{figure}
             
-            \paragraph{}
             We will find each component of the centre of mass position separately.
             In fact, by the symmetry of the shape we only need to find the average $x$ position, because the average $y$ position will be the same.
             We will break the triangle up into thin vertical slices of area $y\dd{x}$.
@@ -177,7 +167,6 @@
                 \end{tikzpicture}
             \end{figure}
 
-            \paragraph{}
             By symmetry, we can see that $\bar{x}$ must be zero.
             Then, dividing the lamina into horizontal slices of area $2x\dd{y}$ (remember the factor of two because the slice goes from negative $x$ to positive $x$!), and using the equation of a circle to write $x=\sqrt{r^2-y^2}$, we get
             \begin{equation}
@@ -215,7 +204,6 @@
             \end{figure}
             Using the techniques we have built up in this chapter, we can find the centre of mass without doing any integrals.
 
-            \paragraph{}
             Firstly, we can consider the whole object in two separate subsections.
             We will call the left section $A$ and the right section $B$.
             Then the centre of mass of the whole lamina will be the average of the centres of mass of each subsection.
@@ -241,7 +229,6 @@
         \end{example}
 
     \section{Impulse}\label{sec:impulse}
-        \paragraph{}
         We have seen that an object has a linear momentum given by $\vec{p}=m\vec{v}$.
         How does the momentum change under the action of a force?
         Notice that
@@ -268,7 +255,6 @@
             This result is sometimes called the \textbf{impulse-momentum theorem}.
         \end{definition}
 
-        \paragraph{}
         If we had a constant force, then the impulse would be $\vec{J}=\vec{F}\Delta t$ ($\Delta t=t_2-t_1$).
         In most problems we want to solve this will not be the case. However, we can define the \textbf{average force} such that
         \begin{equation}
@@ -277,7 +263,6 @@
         % TODO: add figure to illustrate this
         This is quite useful because if we have a short interaction, we can simply consider the average force over the interval which is a good approximation.
 
-        \paragraph{}
         For a general system of $N$ objects, the total impulse on the system over a time interval is
         \begin{equation}
             \vec{J}=\int_{t_1}^{t_2}\sum_{i=1}^N\vec{F}_i(t)\dd{t}t=\int_{t_1}^{t_2}\vec{F}_\text{ext}\dd{t}.
@@ -301,7 +286,6 @@
         % TODO: write another example with the same impulse but much longer time interval (crumple zones?)
 
     \section{Transforming Between Reference Frames}\label{transforming-between-reference-frames}
-        \paragraph{}
         To transform between one frame of reference to another, we subtract the constant velocity between the frames from the position vector.
         \begin{equation}
             \vec{r}^\prime(t)=\vec{r}(t)-Vt.
@@ -313,7 +297,6 @@
         \end{align}
         % TODO: put these in a definition?
 
-        \paragraph{}
         One of the most useful reference frames to transform into is the centre of mass frame.
 
 \end{document}

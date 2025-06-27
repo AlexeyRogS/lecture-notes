@@ -11,6 +11,7 @@
 % \RequirePackage{fontspec} % loading fontspec breaks the \dbar macro as it is currently defined, will need to fix this if we need fontspec in the future (could use the unicode character U+0111)
 \RequirePackage[english]{babel}
 \RequirePackage[a4paper]{geometry}
+\RequirePackage[indent]{parskip}
 \RequirePackage[nottoc]{tocbibind} % add bibliography to table of contents
 \RequirePackage{subfiles}
 \RequirePackage{enumitem}

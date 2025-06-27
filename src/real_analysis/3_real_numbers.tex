@@ -3,7 +3,6 @@
 \begin{document}
 
     \section{Why do we Need the Real Numbers?}
-        \paragraph{}
         The rational numbers have many desirable properties by themselves which allow us to do a lot of mathematics with them. One of these is that they are closed under regular arithmetic operations of addition and multiplication. In fact, $\mathbb{Q}$ forms an \textbf{ordered field} when paired with the total order $\leq$. The rational numbers, along with the integers and natural numbers, satisfy the \textbf{Archimedean property},
         \[\forall q\in\mathbb{Q},\ \exists n\in\mathbb{N}\ \mathrm{s.t.}\ n>q,\]
         and they also possess the property of \textbf{density}, which states that between any two rational numbers there exists another rational number.
@@ -26,31 +25,29 @@
             $S$ is clearly bounded from above, for example $\frac{3}{2}$ is an upper bound $\left(\left(\frac{3}{2}\right)^2 = \frac{9}{4} > 2\right)$, so by the completeness property we would expect a supremum to exist. Let us assume by way of contradiction that $r=\sup(S)$ and that $r\in\mathbb{Q}$.
             Then, by the trichotomy law, we have $r^2<2$, $r^2>2$, or $r^2=2$.\\
             If $r^2<2$, let $\varepsilon>0$, then
-            \begin{align*}
+            \begin{align}
                 (r+\varepsilon)^2 &= r^2+\varepsilon(2r+\varepsilon)\\
                 &< r^2+\varepsilon(2r+1)\tag{$\varepsilon<1$}\\
                 &< r^2+2-r^2\tag{$\varepsilon<\frac{2-r^2}{2r+1}$}\\
                 &= 2.
-            \end{align*}
+            \end{align}
             So there exists a rational number greater than $r$ which is an element of $S$, which means that $r$ is not an upper bound for $S$, contradicting our assumption that $r=\sup(S)$.\\
             If $r^2<2$, let $\varepsilon>0$, then
-            \begin{align*}
+            \begin{align}
                 (r-\varepsilon)^2 &= r^2-\varepsilon(2r+\varepsilon)\\
                 &> r^2-\varepsilon(2r+1)\tag{$\varepsilon<1$}\\
                 &> r^2-r^2+2\tag{$\varepsilon<\frac{r^2-2}{2r+1}$}\\
                 &= 2.
-            \end{align*}
+            \end{align}
             So there exists a rational number less than $r$ which is an upper bound for $S$, which contradicts our assumption that $r=\sup(S)$.\\\\
             Thus $r^2=2$, which we have already shown is impossible if $r\in\mathbb{Q}$, meaning that no supremum exists in $\mathbb{Q}$ for $S$.
         \end{proof}
         % TODO: ordered field stuff 4.2.7 and 4.2.9 in tao
 
     \section{Construction of the Reals}
-        \paragraph{}
         We are giving this real number system a lot of praise, but how can we actually show that it exists?
 
     \section{Subsets of the Real Line}
-        \paragraph{}
         It is helpful to note at this point that the completeness property from before also guarantees the existence of infimums for non-empty subsets that are bounded below.
         \begin{theorem}
             Every non-empty subset of $\mathbb{R}$ that is bounded below has an infimum in $\mathbb{R}$.
@@ -121,21 +118,21 @@
             The proof of these statements follow directly from the basic properties of the absolute value, with the reverse triangle inequality following directly from the normal triangle inequality.
             \begin{itemize}
                 \item[(i)] From (iv) we have $-\abs{x} \leq x \leq \abs{x}$ and similarly for $y$. Adding these two inequalities we get
-                \begin{align*}
+                \begin{align}
                     -\abs{x} -\abs{y} &\leq x + y \leq \abs{x} + \abs{y} \\
                     - \big(\abs{x} + \abs{y}\big) &\leq x + y \leq \abs{x} + \abs{y}, \\
-                \end{align*}
+                \end{align}
                 and thus from (v) we have $\abs{x+y} \leq \abs{y}$.
                 \item[(ii)] Following from the triangle equality, note that
-                \begin{align*}
+                \begin{align}
                     \abs{x} &= \abs{(x-y)+y} \leq \abs{x-y} + \abs{y} \\
                     \abs{y} &= \abs{(y-x)+x} \leq \abs{y-x} + \abs{x}.
-                \end{align*}
+                \end{align}
                 Rearranging each equation in turn, we get
-                \begin{align*}
+                \begin{align}
                     \abs{x} - \abs{y} &\leq \abs{x-y} \\
                     \abs{y} - \abs{x} = -\big(\abs{x} - \abs{y}\big) &\leq \abs{y-x} = \abs{x-y},
-                \end{align*}
+                \end{align}
                 and so using (vi) we obtain $\big\lvert\abs{x} - \abs{y}\big\rvert \leq \abs{x - y}$.
             \end{itemize}
         \end{proof}
@@ -143,7 +140,6 @@
         % TODO: add simpler definition of bounded using absolute value
 
     \section{Inequalities}
-        \paragraph{}
         Manipulating inequalities is an extremely useful trick in analysis because they appear everywhere. We have already discovered and proved the triangle inequality, and now we will discuss a few more.
         \begin{theorem}[General Triangle Inequality]
             % https://math.stackexchange.com/questions/195582/general-proof-for-the-triangle-inequality

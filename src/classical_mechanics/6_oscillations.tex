@@ -2,7 +2,6 @@
 
 \begin{document}
     \section{Simple Harmonic Motion}\label{sec:simple-harmonic-motion}
-        \paragraph{}
         Oscillations are periodic variations of a quantity about some equilibrium.
         This could be an object moving back and forth, a voltage going up and down, or any other physical variable.
         Let's look at a system we have seen before, a mass on a horizontal spring.
@@ -25,12 +24,10 @@
             \omega=\sqrt{\frac{k}{m}}.
         \end{equation}
 
-        \paragraph{}
         Systems where displacement is a sinusoidal function of time are said to exhibit \textbf{simple harmonic motion}.
         This motion is characteristic of any system where the force is oppositely proportional to displacement.
         We will see more examples of this later.
 
-        \paragraph{}
         We can simplify the equation for $x(t)$ using a trigonometric addition formula.
         If we let $A_1=x_m\cos\phi$, $A_2=x_m\sin\phi$, where $\phi$ is some angle.
         Then we have
@@ -56,7 +53,6 @@
         \end{align}
         so $x_m=\frac{v_0}{\omega}$, $\phi=\frac{\pi}{2}$.
 
-        \paragraph{}
         $\omega$ has units of $\unit{\radian\per\second}$ (the same as angular velocity!), and we call it the \textbf{natural} or \textbf{resonant (angular) frequency}.
         % TODO: link to what has been covered earlier, should have been able to work out the period of oscillation by energy conservation previously
         Let's work out the period of oscillation.
@@ -73,7 +69,6 @@
         \end{equation}
         % TODO: include relationship between all linear and angular quantities
 
-        \paragraph{}
         Let's look at a pendulum on a string of length $L$ now.
         We are assuming that the string is massless and ignoring the effects of air resistance.
         % TODO: include diagram and free=body diagram
@@ -98,7 +93,6 @@
         \begin{example}
             As an exercise, let's rederive this result by looking at the torques on the pendulum rather than the forces.
 
-            \paragraph{}
             The pendulum, being a point mass, has a moment of inertia $I=mL^2$.
             Then the torque on the pendulum is
             \begin{eqnarray}
@@ -118,14 +112,12 @@
             Note that we have to be quite careful here, as the angular frequency $\omega$ is \textit{not} the angular velocity $\dot{\theta}$, since the latter changes with time.
         \end{example}
 
-        \paragraph{}
         What happens if we don't use the small-angle approximation?
         Unfortunately, equation~\ref{eq:SHM-pendulum-s-analytic} cannot be solved analytically.
         Fortunately, it is easy to solve numerically!
         Analysing the solution is outside the scope of these notes, but to put it simply, as the maximum amplitude of the oscillation increase, the resonant frequency decreases.
         I.e. $\omega$ becomes a function of $s_m$ (or $\theta_m$).
 
-        \paragraph{}
         There is another example of simple harmonic motion that we have seen already.
         Think back to uniform circular motion.
         % TODO: include a diagram
@@ -146,7 +138,6 @@
             % TODO: add diagram for this
             What is the frequency of the oscillation?
 
-            \paragraph{}
             The radial acceleration is $a_r=\dot{\theta}^2r=\omega^2L\sin\theta$.
             Therefore, we have
             \begin{gather}
@@ -158,7 +149,6 @@
         \end{example}
 
     \section{Physical Pendula}\label{sec:physical-pendula}
-        \paragraph{}
         Let's now analyse the motion of a pendulum that is not a point mass.
         % TODO: include diagram of bowling pin pendulum
         In this case, the we will look at the torques to find the motion.
@@ -175,14 +165,12 @@
         Here we use the small-angle approximation because it allows us to solve for the motion analytically for lots of physical pendula.
         Of course, if we had some object with a moment of inertia that cannot be expressed analytically, we might as well do away with the small-angle approximation since we are going to have to solve the equation of motion numerically anyway!
 
-        \paragraph{}
         Let's do some examples of physical pendula.
         \begin{example}
             Consider a long thin rod swinging about a pivot at one end.
             If $m$ is the mass of the rod and $L$ is its length, what is its resonant frequency?
             % TODO: include diagram
 
-            \paragraph{}
             As we have seen, the moment of inertia of a thin rod rotating about its end is $\frac{1}{3}mL^2$.
             The distance between the pivot and the centre of mass is $\frac{L}{2}$, so by equation~\ref{eq:SHM-physical-pendulum-frequency} the resonant frequency is
             \begin{equation}
@@ -195,7 +183,6 @@
             % TODO: add diagram for this
             What is its resonant frequency?
 
-            \paragraph{}
             The moment of inertia of a thin ring rotating about its centre is $mR^2$, so by the parallel axis theorem the moment of inertia about the pivot is $2mR^2$.
             Therefore, the resonant frequency is
             \begin{equation}
@@ -205,7 +192,6 @@
         \end{example}
 
     \section{Energy in Simple Harmonic Motion}\label{sec:energy-in-simple-harmonic-motion}
-        \paragraph{}
         % TODO: make references for previous equations
         As we have seen back in chapter\ref{chap:energy-and-work}, Hooke's law is a conservative force, so the total energy is conserved.
         Let's show this explicitly for the mass on a spring.
@@ -232,7 +218,6 @@
         This shows that the energies oscillate sinusoidally as well, but with a frequency that is twice the resonant frequency.
         % TODO: include discussion of where each energies reaches maximum and minimum
 
-        \paragraph{}
         In general, for an system exhibiting SHM in the quantity $A$, the equation of motion will be
         \begin{equation}
             \dv[2]{A}{t}=-\omega^2A,
@@ -249,7 +234,6 @@
             Let's solve the pendulum using the energy approach.
             % TODO: include diagram
 
-            \paragraph{}
             The rotational kinetic energy of a pendulum is given by
             \begin{equation}
                 K=\frac{1}{2}I\omega^2=\frac{1}{2}mL^2\omega^2,
@@ -266,7 +250,6 @@
             which is what we found before.
         \end{example}
         
-        \paragraph{}
         The following example is more complicated than anything we have seen so far.
         \begin{example}
             Consider a small marble of mass $m$ and radius $r$ rolling without slipping in a large spherical dish of radius $R$.
@@ -274,7 +257,6 @@
             If so, find the resonant frequency.
             % TODO: add diagram for this
 
-            \paragraph{}
             We will analyse the motion of the marble using energies, which is much simpler than solving this problem using forces.
             The height that the centre of mass changes by when it moves around in the dish is $h=(R-r)(1-\cos\theta)$, so the potential energy is
             \begin{equation}
@@ -314,12 +296,10 @@
         \end{example}
 
     \section{Damped Oscillations}\label{sec:damped-oscillations}
-        \paragraph{}
         An object moving with simple harmonic motion will continue to do so indefinitely.
         A more realistic scenario is to include the effects of other forces, such as friction and air resistance, that slow down the oscillations until they eventally decay away to nothing.
         These effects are collectively known as \textbf{damping}.
     
-        \paragraph{}
         Depending on the strength of the damping forces, they can result one of of three scenarios:
         \begin{itemize}
             \item \textbf{Underdamping} --- The damping effects aren't that strong, there are still oscillations but they decay away over time.
@@ -327,7 +307,6 @@
             \item \textbf{Critial damping} --- The system returns to equilibrium in the fastest possible way without overshooting.
         \end{itemize}
 
-        \paragraph{}
         Damping forces can be proportional to velocity (as with viscous drag), proportional to the square of velocity (quadratic drag e.g. air resistance), or something else (friction etc.).
         In this chapter we will focus on linear drag as it provides an instructive example of damping effects which we can solve analytically.
         We write the damping force as $F=-bv$, where $b$ is some constant with units of \unit{\kilogram\per\second}.
@@ -356,7 +335,6 @@
             x(t)=A_1e^{(-\gamma+\sqrt{\gamma^2-\omega_0^2})t}+A_2e^{(-\gamma-\sqrt{\gamma^2-\omega_0^2})t}.
         \end{equation}
 
-        \paragraph{}
         Now, we have four different cases that can arise depending on the strength of the damping force i.e. the size of $b$ compared to $\omega_0$.
         \begin{enumerate}[label=\textbf{Case \arabic*}:]
             \item $b=0$ (no damping). Then $\gamma=0$ and the general solution becomes
@@ -390,7 +368,6 @@
         \end{enumerate}
         % TODO: include plots of different types of motion
 
-        \paragraph{}
         In the case of an underdamped system, notice that the total mechanical energy, given by equation~\ref{eq:SHM-total-mech-energy}, will decay exponentially.
         \begin{equation}
             E_\text{mech}(t)=E_\text{mech}(0)e^{-\frac{b}{m}t}.
@@ -416,7 +393,6 @@
         % \end{example}
 
     \section{Forced Oscillations}\label{sec:forced-oscillations}
-        \paragraph{}
         A forced oscillator is an oscillator subject to a periodic external force.
         \begin{equation}
             F_\text{net}=-kx-bv+F_\text{drive}.
@@ -437,14 +413,12 @@
         Note that this is not the damped frequency $\omega_d$ from above.
         We see that when damping is weak, the condition for resonance becomes $\omega_\text{drive}\approx\omega_0$.
 
-        \paragraph{}
         To find the resonant frequency of a system, there are two general methods we can use.
         There is the ``impulse method'', where we excite all frequencies in the system at once.
         The system will then resonate at the resonant frequency and the vibrations at other frequencies will decay away (we will see why shortly).
         An example of this is striking a bell.
         The other method is the ``frequency-scan method'', where we use a low-ampltidue signal and scan through frequencies until we hit resonance, when energy will rapidly build up.
 
-        \paragraph{}
         For the case of underdamping ($\gamma<\omega_0$), the general solution is a sum of a transient (decaying) oscillation at the damped frequency and a steady state (not decaying) oscillation at the driven frequency.
         \begin{equation}
             x(t)=A_\text{decay}e^{-\gamma t}\cos(\omega_d t+\phi_\text{decay})+A_\text{steady}\cos(\omega_\text{drive}t-\phi_\text{steady}).
@@ -464,7 +438,6 @@
         At resonance, the phase of the steady state is $\pi/2$, which means the driving force is in-phase with the velocity.
         This makes sense because then we have a \textit{constant} power input to the system ($P=\vec{F}\cdot\vec{v}$).
 
-        \paragraph{}
         For a driven oscillator, we find that the $Q$-factor is
         \begin{equation}
             Q=\frac{\omega_\text{res}}{\text{FWHM of energy curve}}\approx\omega_\text{res}\frac{m}{b}.
@@ -480,7 +453,6 @@
         % TODO: write more detail about this
 
     \section{Coupled Oscillations and Normal Modes}\label{sec:coupled-oscillations-and-normal-modes}
-        \paragraph{}
         A coupled oscillator is a system of more than one oscillators that have some way of transferring energy to one another.
         % TODO: include diagram of 2 masses coupled to 3 springs and two pendula coupled by a spring
         Generally what we see is that the kinetic energy is passed between each oscillator.
@@ -491,7 +463,6 @@
         % TODO: add more detail to this example
         % TODO: add diagram of these modes
 
-        \paragraph{}
         The \textbf{principle of superposition} states that any motion of the system can be expressed as a superposition (sum) of motion due to normal modes.
         Since the frequencies of the normal modes are unequal, this means the motion will evolve over time, which leads to the kinetic energy being passed around as stated above.
         This exchange of energy will happen at a \textbf{beat frequency} $\omega_2-\omega_1$.
@@ -505,7 +476,6 @@
             Solve for the general motion of each block.
             % TODO: include a diagram for this (with free body diagrams)
             
-            \paragraph{}
             We will solve this with an elementary approach, by looking at the forces on each block.
             If we set $x_1=0$, and $x_2=0$ at the equilibrium positions of each block respectively, then the force from each spring is
             \begin{align}
@@ -547,7 +517,6 @@
             These could be $x_1(0)$, $x_2(0)$, $v_1(0)$, and $v_2(0)$.
         \end{example}
 
-        \paragraph{}
         In general, for a system of $N$ coupled simple harmonic oscillators, there will be $N$ normal modes ($N$ ways they can move collectively).
         Therefore, the general solution will be a superposition of $N$ normal modes and $2N$ initial conditions will be required to specify a particular solution.
         In the previous example, we defined the variables $X_1=x_1+x_2$ and $X_2=x_1+x_2$ to represent the normal modes.

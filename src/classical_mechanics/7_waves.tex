@@ -3,7 +3,6 @@
 \begin{document}
 
     \section{The Wave Equation}\label{sec:the-wave-equation}
-        \paragraph{}
         A wave is a periodic variation or disturbance which travels at a well defined speed through space.
         How do we describe waves mathematically?
         Suppose $f(\chi)$ is some periodic function which takes a phase $\chi$ measured in radians (fractions of $2\pi$).
@@ -20,7 +19,6 @@
         \end{equation}
         where $T$ is the temporal period.
 
-        \paragraph{}
         To put these pictures together, we can consider the snapshot picture with a shift $x-vt$ where $v$ is the speed of the wave.
         Then we have
         \begin{align}
@@ -41,7 +39,6 @@
             Note that this is different to the propagation speed of the wave itself, which is constant.
         \end{example}
 
-        \paragraph{}
         For simplicity, let's consider a general right-travelling wave $f(x-vt)$. We can make a substitution $u=x-vt$.
         Then we get
         \begin{align}
@@ -63,7 +60,6 @@
         % TODO: there are also non-periodic solutions
 
     \section{Superposition of Waves}\label{sec:superposition-of-waves}
-        \paragraph{}
         Since the wave equation is linear, the solutions follow the principle of \textbf{linear superposition}.
         This means that when multiple waves come together, the amplitude at every point in space and time is determined by the sum of all the waves at that point.
         \begin{example}
@@ -76,7 +72,6 @@
             So, the resultant wave has the same frequency and direction but double the amplitude.
             % TODO: include diagrams for these examples
 
-            \paragraph{}
             Now consider what happens if one of the waves has a phase shift of $\pi$ radians.
             The resultant wave is
             \begin{align}
@@ -86,7 +81,6 @@
             \end{align}
             The two waves cancel each other out completely.
 
-            \paragraph{}
             In the general case with a phase shift $\Omega$, we get
             \begin{align}
                 y(x,t)&=A\cos(kx-\omega t)+A\cos(kx-\omega t+\Omega)\\
@@ -96,10 +90,8 @@
             Note that we have used the identity $\cos(\alpha)+\cos(\beta)=2\cos\left(\frac{\alpha+\beta}{2}\right)\cos\left(\frac{\alpha-\beta}{2}\right)$.
         \end{example}
 
-        \paragraph{}
         Most superpositions of two sinusoidal functions do not have a nice simplification which is easily interpreted like this, but from these basic examples we can build an intuition for what happens when two waves meet.
 
-        \paragraph{}
         Now consider what happens if the waves still have the same frequency but are moving in opposite directions.
         In this case the superposition is
         % TODO: put this in an example?
@@ -121,19 +113,16 @@
         \end{example}
         % TODO: include discussion of phasors for modelling superposition and interference
 
-        \paragraph{}
         The points on the standing wave which don't move at all are known as \textbf{nodes}, and points which move up the twice the ampltide of the waves are called \textbf{antinodes}.
         Nodes are separated by half a wavelength.
         In a standing wave, the whole string oscillates in simple harmonic motion.
 
-        \paragraph{}
         The standing waves allowed in a one-dimensional region of length $L$ are given by
         \begin{equation}
             \lambda=\frac{2L}{p},\quad f_p=p\frac{v}{2L}=pf_1,
         \end{equation}
         where $p\in\mathbb{Z}$.
 
-        \paragraph{}
         Note that sometimes it is more convenient to express waves in terms of complex exponential functions according to Euler's formula:
         \begin{equation}
             e^{i\theta}=\cos\theta+i\sin\theta,
@@ -163,7 +152,6 @@
         \end{example}
 
     \section{Phase Velocity \& Group Velocity}\label{sec:phase-velocity-and-group-velocity}
-        \paragraph{}
         As we have seen, the speed you need to keep up with a point of constant phase along the wave is given by
         \begin{equation}
             v_\phi=f\lambda=\frac{\omega}{k}.
@@ -173,7 +161,6 @@
         If the relationship is linear, i.e. if $v_\phi$ is constant, the wave is said to be dispersionless.
         Otherwise, the wave will undergo dispersion as different frequencies will travel at difference speeds.
 
-        \paragraph{}
         The \textbf{group velocity} is defined as
         \begin{equation}
             v_g=\dv{\omega}{k}.
@@ -182,7 +169,6 @@
         In the case where $v_g\neq v_\phi$, the group velocity is the speed that the wave envelope propagates.
 
     \section{Transverse Waves on a String}\label{sec:transverse-waves-on-a-string}
-        \paragraph{}
         Consider an infinite string under constant tension $T$.
         We will now show that the equation of motion of the string is the wave equation and derive the wave speed.
         Consider a short section of the string of length $\Delta x$.
@@ -196,7 +182,6 @@
         \end{align}
         From these we get that $T_{1,x}\approx -T$ and $T_{2,x}\approx T$.
         
-        \paragraph{}
         Now, using some trigonometry, notice that
         \begin{align}
             \left.\pdv{y}{x}\right|_x&=\frac{T_{1,y}}{T_{1,x}}\approx -\frac{T_{1,y}}{T}\\
@@ -222,7 +207,6 @@
         \end{align}
         This is the wave equations and we can see that for waves on a string, $v=\sqrt{\frac{T}{\mu}}$.
 
-        \paragraph{}
         What is the mechanical energy stored in a wave on a string?
         It will have two contributions, potential energy which depends on the displacement of every point and kinetic energy which depends on the velocity of every point.
         Consider a segment of the string of length $\mathrm{d}x$, mass $\mathrm{d}m=\mu\mathrm{d}x$.
@@ -280,7 +264,6 @@
             \end{align}
         \end{example}
 
-        \paragraph{}
         We can calculate the power transmitted through the wave from first principles as well.
         Each string segment exerts a force and does work on the adjoining segments.
         For a point $x_0$ on the string, work is done on the string by to the right of $x_0$ by a tension force $T_y$ applied by the string to the left of $x_0$.
@@ -305,7 +288,6 @@
         which is what we derived before.
 
     \section{Boundaries, Transmission, and Reflection}\label{sec:boundaries-transmision-and-reflection}
-        \paragraph{}
         A boundary for a wave is a change in medium.
         When a wave encounters a boundary, some energy is transmitted across the boundary and some is reflected.
         Consider a pulse wave travelling along a string:
@@ -317,7 +299,6 @@
             \item When we have a mix between these two cases, for example a change in linear density of the string, we will see partial transmission and reflection.
         \end{itemize}
 
-        \paragraph{}
         % TODO: include a diagram for this
         To figure out how much gets reflected and transmitted, we must make some assumptions about what happens to the wave at the boundary.
         At the boundary $x_b$ we have:
@@ -350,7 +331,6 @@
         Because $r$ and $\tau$ are defined as the ratios of the amplitudes of the reflected and transmitted waves to the incident wave, we have a constraint $\abs{r}+\abs{\tau}=1$.
         Note that this has nothing to do with energy conservation, it holds even when energy is not conserved!
 
-        \paragraph{}
         Consider a boundary where the density increases.
         The wave speed is slower on the other side of the boundary, $v_2<v_1$, so $r<0$ and $\tau<1$.
         The pulse also becomes narrower because the wave speed is slower.
@@ -368,7 +348,6 @@
         Note that this is different to the equations above where incident and reflected were on the same side, here reflected and transmitted are on the same side.
 
     \section{Normal Modes and Fourier Series}\label{sec:normal-modes-and-fourier-series}
-        \paragraph{}
         Consider a standing wave $y(x,t)=Ae^{i(kx-\omega t)}+Be^{i(kx+\omega t)}$ on a string clamped at both ends.
         % TODO: include diagram of this
         Suppose the string runs from $x=0$ to $x=L$, then at the boundaries we have $y(0,t)=y(L,t)=0$.
@@ -397,7 +376,6 @@
         Note that wavelength is related to angular wavenumber by $\lambda=\frac{2\pi}{k}$, so $\lambda_n=\frac{2\pi}{k_n}=\frac{2L}{n}$.
         These allowed wavenumbers/frequencies are the \textbf{normal modes} of vibration for the string clamped at both ends.
 
-        \paragraph{}
         Recall in chapter~\ref{chap:oscillations} we discussed exciting all the frequencies of a system at once using the impulse method.
         If we pluck the string, multiple normal modes are excited.
         The resulting motion of the string is a superposition of the normal modes, given by
@@ -414,7 +392,6 @@
         But there may be infinitely many $A_n$'s!
         Luckily, we can use a mathematical tool called \textbf{Fourier series} which makes the calculation of all of them straightforward.
 
-        \paragraph{}
         If we have a periodic function (for simplicity we can assume the period is $2\pi$, since we can stretch or shrink it otherwise), it is (almost) always possible to represent it as an infinite series of sines and cosines.
         % TODO: clarify the almost
         \begin{equation}\label{eq:waves:fourier-series}
@@ -423,7 +400,6 @@
         Using some convenient properties of integrals of sines and cosines, there is a simple method to calculate what the coefficients $a_j$ and $b_j$ should be for any function $f(x)$.
         We can see how this will help us solve our problem of representing a wave pulse as a sum of normal modes.
 
-        \paragraph{}
         Specifically, we will make use of the following three integrals:
         \begin{align}
             &\int_{-\pi}^\pi\sin(mx)\sin(nx)\dd{x}=\begin{cases}
@@ -465,7 +441,6 @@
             b_n=\frac{1}{\pi}\int_{-\pi}^\pi\sin(nx)f(x)\dd{x}.
         \end{equation}
 
-        \paragraph{}
         More generally, if a function has a period $P$, then we can adjust the periods of sine and cosine and the formulae for the coefficients as follows:
         \begin{align}
             f(x)&=\frac{1}{2}a_0+\sum_{j=1}^\infty a_j\cos\left(\frac{2\pi n}{P}x\right)+\sum_{j=1}^\infty b_j\sin\left(\frac{2\pi n}{P}x\right)\\
@@ -476,7 +451,6 @@
         In fact, the integrals don't necessarily have to be from $-\frac{P}{2}$ to $\frac{P}{2}$, as long as they go over one full period.
         We can choose the most convenient range to integrate over.
 
-        \paragraph{}
         Note that if a function is odd ($f(-x)=-f(x)$), the Fourier series will \textit{only} contain sine terms.
         Likewise, if a function is even ($f(-x)=f(x)$) its Fourier series will \textit{only} contain cosine terms.
         This is because sine is an odd function and cosine is even.
@@ -492,7 +466,6 @@
             Outside of this domain it repeats periodically.
             % TODO: include a diagram of square wave
 
-            \paragraph{}
             We have defined the square wave above as an odd function, so there should be no cosine terms.
             We can show this explicitly by calculating the $a_n$ coefficients:
             \begin{align}
@@ -524,7 +497,6 @@
             % TODO: show plot of Fourier series
         \end{example}
 
-        \paragraph{}
         Let's now apply this amazing mathematical technique to the motion of a plucked string clamped at both ends.
         We know that the initial displacement of the string is given by equation~\ref{eq:waves:plucked-string-initial-conditions}, and we want to find the $A_n$'s.
         However, the displacement of the string is not periodic in $x$ because the string is finite in length!
@@ -584,17 +556,14 @@
         The gaps in the frequency spectrum are where the modes have a node at the point where the string was plucked.
         This means that because of where we chose to pluck the string, the resulting vibration will not contain any of those frequencies at all.
 
-        \paragraph{}
         With damping effects, we find that all of the normal modes decay away, with the higher frequency modes decaying faster.
 
     \section{Sound Waves}\label{sec:sound-waves}
-        \paragraph{}
         So far we have been looking at transverse waves, where the displacement is perpendicular to the direction of wave travel.
         Examples of transverse waves in real life are waves on a string and light waves.
         Waves can also be \textbf{longitudinal}, where the displacement is along the direction of travel.
         Sound waves are longitudinal, with regions of high density along the direction of travel (compression) and low density (rarefaction).
         
-        \paragraph{}
         Let's look at some snapshots of longitudinal waves.
         We denote the displacement of a particle from its equilibrium position by $s(x,t)$.
         Then the particles oscillate back and forth along the direction of motion with SHM.
@@ -602,7 +571,6 @@
         Where $s$ is positive, the particles are displaced to the right, and where $s$ is negative they are displaced to the left.
         The points of zero displacement represent pressure maxima and minima.
 
-        \paragraph{}
         It is a general rule for all mechanical waves that the wave speed is related to the ratio of restoring force to inertia.
         For liquids and gases, this is
         \begin{equation}
@@ -618,7 +586,6 @@
         At room temperature (\qty{293}{\kelvin}), we have $v=\qty{343}{\meter\per\second}$.
         More generally, we have $v\propto T$.
 
-        \paragraph{}
         The equations of pressure waves have the same form as transverse waves:
         \begin{equation}
             s(x,t)=A\cos(kx-\omega t+\phi_0).
@@ -637,7 +604,6 @@
         Note that this pressure is the excess pressure deviation from equilibrium, \textit{not} the absolute pressure in the fluid.
         From this, we can see that on the plot of $s(x,t)$, points of zero displacement with \textit{positive} derivative are the pressure \textit{maxima}, and those with \textit{negative} derivative are the pressure \textit{minima}.
 
-        \paragraph{}
         When we calculated the power transmitted by a transverse wave on a string, we could neglect the other directions and consider the problem in 1D.
         For a sound wave this is not possible, so we have to consider plane waves (waves that have constant value on a plane perpendicular to the direction of motion).
         Instead of power, we look at \textit{intensity} which is defined as power per unit area, and we measure it across surfaces perpendicular to the propagation of the wave.
@@ -659,7 +625,6 @@
         The denominator $\sqrt{\rho B}$ is known as the \textbf{specific acoustic impedance} $Z$, and this can be used to define transmission and reflection coefficients as we did before.
 
     \section{Longitudinal Standing Waves}\label{sec:longitudinal-standing-waves}
-        \paragraph{}
         We now have two ways of describing longitudinal waves, by the displacement of the particles and by the pressure along the direction of travel.
         \begin{align}
             s(x,t)&=A\cos(kx-\omega t+\phi_0)\\
@@ -667,7 +632,6 @@
         \end{align}
         We can see that if we have a longitudinal standing wave, displacement nodes will be pressure antinodes, and pressure nodes will be displacement antinodes.
 
-        \paragraph{}
         Let's look at the allowed wavenumbers for longitudinal waves in a pipe with closed and open ends.
         In the case with both ends closed, we will have displacement nodes at each end of the pipe (the medium cannot move through the end).
         Thus the normal modes will have the form
@@ -687,7 +651,6 @@
         Note that in this case the fundamental mode has a wavelength of $4L$.
 
     \section{The Doppler Effect}\label{sec:the-doppler-effect}
-        \paragraph{}
         Consider a source at rest emitting spherical waves with frequency $f_s$ and speed $v$.
         What does a detector towards the source with speed $v_d$ see?
         % TODO: include a diagram for this
@@ -701,7 +664,6 @@
         \end{equation}
         This change in frequency due to a difference in velocity is known as the \textbf{Doppler effect}.
 
-        \paragraph{}
         What about a moving source and a stationary detector?
         % TODO: include diagram for this
         During one period $T_s$ of the source emitting, the waves will propagate a distance $vT_s$.
@@ -715,7 +677,6 @@
             f_d=f_s\frac{v}{v+v_s}.
         \end{equation}
 
-        \paragraph{}
         In the general case of a moving source and detector, we have
         \begin{equation}
             f_d=f_s\frac{v\pm v_d}{v\mp v_s},
@@ -723,7 +684,6 @@
         where we have the $\frac{+}{-}$ case when the source and detector are moving closer and the $\frac{-}{+}$ case when they are moving apart.
 
     \section{Wave Interference}\label{sec:wave-interference}
-        \paragraph{}
         When two waves come together the result is the sum of both waves at every point.
         A special case of superposition is created when two waves of the same frequency (coherent waves) meet, called \textbf{interference}.
         When the crests of two coherent waves meet, they add together and we get a crest which is larger than either of the initial ones, which is called \textbf{constructive interference}.
@@ -749,12 +709,10 @@
         The maximum amplitude of the superposition is $2A\cos\left(\frac{\Delta\phi}{2}\right)$, so we see that this is maximised --- i.e. we get destructive interference --- for $\Delta\phi=2m\pi$ for integer $m$.
         Likewise the maximum amplitude goes to zero and we get destructive interference when $\Delta\phi=(2m+1)\pi$.
 
-        \paragraph{}
         To extend this to more than one dimension, we must keep in mind that wavefronts are circular in 2D and spherical in 3D.
         If we are very far away from the source, the curvature of the waves becomes negligible and we get \textbf{plane waves}.
         This is known as the \textbf{far-field limit}.
 
-        \paragraph{}
         Consider an colinear array of $n$ wave sources all separated by a distance $d$.
         % TODO: include a diagram of this
         Let's put ourselves in the far-field limit, so that all the incoming wavefronts from the array will be parallel.
@@ -780,7 +738,6 @@
         where $I_1$ is the intensity from a single source.
         % TODO: show plots of I against theta for 2, 3, 10 sources
 
-        \paragraph{}
         Constructive interference is quite often used to examine structures which are too small to observe with visible light, as was historically the case with \textbf{Bragg scattering}.
         Lawrence and William Henry Bragg used constructive interference of X-rays to measure the distance between atoms in crystals in the early 1910s.
         Consider a crystal structure with layers of atoms separated by a distance $d$.
@@ -792,13 +749,11 @@
             2d\sin\theta=n\lambda.
         \end{equation}
 
-        \paragraph{}
         Interference also gives rise to the phenomenon known as \textbf{diffraction}, which is where waves are observed to curve around apertures and obstructions in their path.
         Each part of the wavefront in the gap or around the barrier becomes a secondary source of spherical waves, and these waves interfere to give a curved interference pattern.
         This method of analysis is known as the \textbf{Huygens-Fresnel principle}.
         % TODO: include a diagram of this
 
-        \paragraph{}
         Consider a plane wave moving through a gap of height $d$.
         Let's look at a thin slice of the gap of length $\dd{y}$ at a distance $y$ from the middle as a point source.
         % TODO: include a diagram of this
@@ -818,7 +773,6 @@
         where $I_0$ is the intensity at $\theta=0$.
         Note that in this situation minima occur at integer multiples of the wavelength, not maxima.
 
-        \paragraph{}
         If we superpose two sounds with a very similar frequency, we will hear a periodic variation in sound intensity.
         Consider two longitudinal sound waves:
         \begin{align}
@@ -836,7 +790,6 @@
         % TODO: include diagram of this
         The intensity rises and falls twice per period, so the \textbf{beat frequency} is twice the modulation frequency, $f_\text{beat}=2f_\text{mod}=f_1-f_2$.
 
-        \paragraph{}
         Now consider the case where we allow the phase velocities of the waves to be different ($v_1=\frac{\omega_1}{k_1}\neq v_2=\frac{\omega_2}{k_2}$).
         Then we can write
         \begin{align}

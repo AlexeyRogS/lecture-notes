@@ -4,7 +4,6 @@
 
     \section{The Conservation of Energy}\label{sec:conservation-of-energy}
         % TODO: introduce kinetic energy as integral of momemtum?
-        \paragraph{}
         Lets calculate the rate of change of velocity squared.
         \begin{align}
             \dv{}{t}v^2&=\dv{\vec{v}}{t}\cdot\vec{v}+\vec{v}\cdot\dv{\vec{v}}{t}\\
@@ -28,7 +27,6 @@
             &=\Delta K=\int_{t_1}^{t_2}\vec{F}\cdot\vec{v}\dd{t}.
         \end{align}
 
-        \paragraph{}
         Consider the gravitational force $\vec{F}=-mg\khat$. Then
         \begin{align}
             \int_{t_1}^{t_2}\dv{}{t}\left(\frac{1}{2}mv^2\right)\dd{t}&=\frac{1}{2}m(v(t_2)^2-v(t_1)^2)\\
@@ -58,12 +56,10 @@
             % TODO: add diagram for this
             If the chain is free to move with no friction, will it fall to the left, right, or will it balance in place.
 
-            \paragraph{}
             The answer is that the chain will not move.
             We will prove this three different ways.
             The first way by analysing the forces as we have learned in chapter~\ref{chap:laws-of-motion}, the second way using energy conservation, and the third way using a clever 16\ts{th} century thought experiment.
 
-            \paragraph{}
             To prove that there is no movement using forces, we will look at the components of the weight parallel to the incline for the left and right halves of the chain separately and show that they are equal in magnitude --- therefore the total force must be zero.
             First, note that if the total mass of the chain is $m$, then the magnitude of the weight force on the left side is $\frac{3}{7}mg$ and on the right it is $\frac{4}{7}mg$.
             % TODO: add free body diagrams
@@ -77,7 +73,6 @@
                 F_\text{left}-F_\text{right}=\frac{3}{7}mg(\frac{4}{5})-\frac{4}{7}mg(\frac{3}{5})=0.
             \end{equation}
 
-            \paragraph{}
             To use energy conservation, we will first restate the problem slightly.
             Instead of a chain draped over the whole wedge, suppose that left and right sides of the chain are replaced with blocks of equivalent mass located at the centre of masses of each part.
             The blocks are connected with a light inextensible string which runs over the top of the wedge via a frictionless pulley.
@@ -102,7 +97,6 @@
                 \frac{1}{2}mv^2=0,\quad\implies v=0.
             \end{equation}
 
-            \paragraph{}
             Finally, we will prove this using a thought experiment by Flemish scientist Simon Stevin.
             % TODO: include a diagram of this
             Suppose we attach another length of chain to both ends such that it forms a closed loop, with the new section hanging freely below the wedge.
@@ -113,14 +107,12 @@
         \end{example}
 
     \section{Work}\label{sec:work}
-        \paragraph{}
         As force is applied to an object, energy will be added or taken away.
         We call this energy \textbf{work}.
         Work is defined by the force applied multiplied by the distance the force was applied over.
         For a constant force, this can be written mathematically as $W=\vec{F}\cdot\vec{s}=\abs{\vec{F}}\abs{\vec{s}}\cos\theta$ (check that this has units of energy!).
         We can think of work as the mechanism for transferring energy.
         
-        \paragraph{}
         If the force is changing continuously over time, we need to be more careful about how we define the work.
         We break up the path of the object into small sections over which the force is approximately constant and integrate over all these small sections to get the total work.
         \begin{definition}
@@ -137,7 +129,6 @@
         This is a line integral, so evaluating it will involve choosing a coordinate system and splitting the path up into components along each axis.
         Let's do a couple of examples now.
         
-        \paragraph{}
         In cartesian coordinates, the force vector is given by $\vec{F}=F_x\ihat+F_y\jhat+F_z\khat$ and the infinitesimal displacement is $\dd{\vec{r}}=\dd{x}\ihat+\dd{y}\jhat+\dd{z}\khat$.
         The dot product $\vec{F}\cdot\dd{\vec{r}}$ is $F_x\dd{x}+F_y\dd{y}+F_z\dd{z}$.
         Thus, the integral in equation~\ref{eq:work-line-integral} becomes
@@ -150,7 +141,6 @@
             What is the work done on an object that moves along a straight line from $(0,0)$ to $(4,3)$ while under the influence of this force.
             % TODO: add diagram
 
-            \paragraph{}
             Note that the components of this force $F_x$ and $F_y$ both depend on $x$ and $y$, so to evaluate the integrals we will have to eliminate the other variable by parameterising the path.
             Luckily this is easy for a straight line, the path can be written as $y=\frac{3}{4}x$.
             Then the work is
@@ -163,7 +153,6 @@
             \end{align}
         \end{example}
         
-        \paragraph{}
         Because work is defined by a line integral, its value may change depending on the path taken, even if the start and end points are the same.
         This is quite often the case.
         Let's do the above example again, but have the object follow a different path.
@@ -171,7 +160,6 @@
             Calculate the work done on an object under the influence of the force from example~\ref{ex:work-cartesian}, but this time following a path from $(0,0)$ to $(4,0)$, then to $(4,3)$.
             % TODO: add diagram
 
-            \paragraph{}
             We can break this path up into two separate straight lines to integrate over.
             The total work done is the sum of the work over both paths.
             Over the first part, $y=0$, so $F_x=xy=0$, so no work is done over this section of the path.
@@ -183,7 +171,6 @@
         % That the work done is different should not be surprising.
         % Imagine you are trying to walk around in a gale.
 
-        \paragraph{}
         Now let's look at how to calculate work done in polar coordinates, in 2D to begin with.
         Force in polar coordinates is given by $\vec{F}=F_r\uvec{r}+F_\theta\uvec{\theta}$, and the infinitesimal displacement is $\dd{\vec{r}}=\dd{r}\uvec{r}+r\dd{\theta}\uvec{\theta}$.
         % TODO: add a derivation of infinitesimal displacement vector in polar coordinates (and a diagram)
@@ -198,7 +185,6 @@
         \end{example}
 
     \section{Work-Energy Theorem}\label{sec:work-energy-theorem}
-        \paragraph{}
         As a force does work on an object, its speed will increase or decrease.
         This relationship is clarified by the work-energy theorem.
         % TODO: write more detailed intro to the work-energy theorem here
@@ -221,7 +207,6 @@
             It is being acted on by a force with the form $\vec{F}=4x\ihat$, and at $t=0$ its position is $x=\qty{4}{\meter}$ and its velocity is $v_0=\qty{1}{\meter\per\second}$.
             What is the particle's velocity when it reaches $x=\qty{6}{\meter}$?
 
-            \paragraph{}
             We can solve this using the work energy theorem.
             First we calculate the work done:
             \begin{equation}
@@ -239,7 +224,6 @@
         %     % TODO: write this example from notes
         % \end{example}
 
-        \paragraph{}
         Now let's look at a mass on a spring. The restoring force on the mass always acts opposite to displacement. Hooke's law says
         \begin{equation}
             F_s=-k(x-x_0),
@@ -273,7 +257,6 @@
         % TODO: solve stopping distance of a block sliding down a slope example from chapter 1 using only energy conservation (or lack thereof in this case)
 
     \section{Conservative Forces}\label{sec:conservative-forces}
-        \paragraph{}
         We have seen that in some cases the total energy is conserved and in others it is not.
         As we have seen above, work done is defined by a line integral, so in general it depends on the path chosen for integration, which corresponds to the path of the object through space.
         However, we have seen for the case of gravity and the spring force that the work done depends \textit{only} on the initial and final positions; the integral is \textit{path independent}.
@@ -289,7 +272,6 @@
         \end{equation}
         and hence the total energy $E=K+U$ is conserved.
 
-        \paragraph{}
         To fully define a potential energy function, we must explicitly say where potential energy is zero.
         Suppose we choose the point $\vec{r}_0$, so $U(\vec{r}_0)=0$.
         Then we can define
@@ -315,7 +297,6 @@
         and so on.
         % TODO: add exersise for some coordinate system
 
-        \paragraph{}
         These discoveries unlock a very powerful and intuitive way to look at dynamics.
         Rather than looking at the force and trying to figure out at what points it is pushing in which direction, we can simply look at the graph of the potential energy, specifically the slope.
         For example, suppose a force has the following potential energy function as a function of radial distance $r$.
@@ -324,7 +305,6 @@
         At A and E we have a positive gradient, which means force is negative, and at C the gradient is negative which implies a positive force.
         We can immediately see that an object under the influence of this force will be pushed towards B or to $r=0$, depending on where it starts and how much kinetic energy it has.
 
-        \paragraph{}
         We will now list a few equivalent properties of conservative forces.
         \begin{definition}\label{def:conservative-force}
             A force $\vec{F}$ is \textbf{conservative} if it satisfies any of the following conditions, which are all equivalent.
@@ -344,7 +324,6 @@
         \end{definition}
         % TODO: add proofs of equivalency
 
-        \paragraph{}
         For a central force, looking at equation~\ref{eq:work-integral-2d-polar} we can see that the second integral will be zero since there is no force in the tangential direction.
         Thus the work done by a central force is always given by
         \begin{equation}
@@ -352,7 +331,6 @@
         \end{equation}
         So the work depends only on the initial and final radial distance and is thus path independent, which implies that central forces are \textit{always} conservative.
 
-        \paragraph{}
         Another category of conservative forces are those that point along a single axis and where the strength of the force depends only on the distance along that axis, if it depends on anything at all (constant forces are conservative!).
         These are forces of the form
         \begin{equation}
@@ -386,7 +364,6 @@
         %     \end{equation}
         % \end{example}
 
-        \paragraph{}
         Another two familiar examples of conservative forces are the universal law of gravitation and Coulomb's law.
         Being central forces, they are therefore conservative.
         Let's calculate their potential energy functions.
@@ -413,7 +390,6 @@
         % TODO: include diagram for this too
 
     \section{Energy in a System of Multiple Particles}\label{sec:energy-in-a-system-of-multiple-particles}
-        \paragraph{}
         Let's look at motion relative to a centre of mass.
         Consider a macroscopic body composed of many particles with a centre of mass at $\vec{r}_\text{COM}$.
         \begin{figure}[H]
@@ -450,7 +426,6 @@
         \end{align}
         where $\vec{v}_i^\prime$ is the velocity of particle $i$ relative to the centre of mass.
 
-        \paragraph{}
         Let's look at the total kinetic energy of the system.
         It is the sum of the kinetic energy of all the constituent particles.
         \begin{align}
@@ -476,7 +451,6 @@
         For example, if we are examining the acceleration of a train, for the most part we don't care about the kinetic energy of objects within the vehicle.
         However, if we are looking at something that is rotating, like a flywheel for instance, we do care about the second term because there is a lot of motion relative to the centre of mass.
 
-        \paragraph{}
         Consider a system of two particles.
         \begin{figure}[H]
             \centering
@@ -519,7 +493,6 @@
             \vec{r}_1^\prime=\frac{-m_2}{m_1+m_2}\vec{r},\quad\vec{r}_2^\prime=\frac{m_1}{m_1+m_2}\vec{r}.
         \end{equation}
 
-        \paragraph{}
         Now let's look at the kinetic energy.
         In the centre of mass frame, it is
         \begin{equation}
@@ -548,7 +521,6 @@
         \end{equation}
 
     \section{Non-conservative Forces}\label{sec:non-conservative-forces}
-        \paragraph{}
         Non-conservative forces are the opposite of conservative forces, that is they don't conserve energy.
         They can be characterised by failing to meet one or more of the conditions in definition~\ref{def:conservative-force}.
         I.e. for a non-conservative force, the work done depends on the path taken and there is no potential energy function.
@@ -556,7 +528,6 @@
         So we get back the energy that we put in.
         But in the case of a non-conservative force like friction, we don't regain energy we put in by moving an object along a path.
 
-        \paragraph{}
         Let's look more closely at kinetic friction as an example.
         Consider a block sliding along a surface which is being slowed down by friction.
         \begin{figure}[H]
@@ -579,7 +550,6 @@
             \oint\vec{f}_k\cdot\dd{\vec{r}}<0.
         \end{equation}
 
-        \paragraph{}
         Now let's add another conservative force and verify that energy is not conserved.
         Suppose the block is sliding down a slope, let $\vec{W}_x$ denote the component of weight acting parallel to $\dd{\vec{r}}$.
         \begin{figure}[H]
@@ -617,7 +587,6 @@
         \end{equation}
         so energy is lost over time.
 
-        \paragraph{}
         In a general system, an object may be under the influence of multiple forces which can be conservative or non-conservative.
         If we split the resultant force on the system into a conservative part and a non-conservative part: $\vec{F}=\vec{F}_\text{conservative}+\vec{F}_\text{non-conservative}$, then using the work energy theorem again we can write
         \begin{align}
@@ -684,7 +653,6 @@
         \end{example}
 
     \section{Collisions}\label{sec:collisions}
-        \paragraph{}
         A collision is an interaction between two objects over a short time interval.
         To solve these problems, we can use the concept of momentum conservation and energy conservation that we have been studying in the last two chapters.
         Consider two blocks sliding along a frictionles surface towards each other (1-dimensional problem).
@@ -703,7 +671,6 @@
         On the other hand, depending on the forces involved during the collision, total kinetic energy may or may not be conserved.
         We call the case where it is conserved ``\textbf{elastic}'' and the case where it is not ``\textbf{inelastic}''. 
 
-        \paragraph{}
         In the case of elastic collisions, where total kinetic energy is conserved, we can write
         \begin{align}
             m_1v_1+m_2v_2&=m_1v_1^\prime+m_2v_2^\prime\\
@@ -726,7 +693,6 @@
         On the other hand, if $m_1\ll m_2$, $v_1^\prime\to -v_1$ and $v_2^\prime\to 0$.
         This corresponds to a ping-pong ball hitting a bowling ball at rest. It bounces off with the same speed in the opposite direction while the bowling ball stays still.
 
-        \paragraph{}
         If we transform the velocities into the centre of mass frame we get
         \begin{align}
             v_{1,\text{COM}}&=\frac{m_2(v_1-v_2)}{m_1+m_2}\\
@@ -738,7 +704,6 @@
         So in the centre of mass frame, the two objects approach each other from opposite directions with velocities antiproportional to thei masses.
         After the collision, the magnitude of the velocities remains the same but they switch sign.
 
-        \paragraph{}
         In an inelastic collision, we only have conservation of momentum since some energy is lost to non-conservative forces in the collision.
         To solve the system, we need another constraint on the velocities after the collision.
         In the case where the \textit{maximum} kinetic energy is lost, which is when the objects stick together and move as a single body with velocity $v^\prime=v_1^\prime=v_2^\prime$.

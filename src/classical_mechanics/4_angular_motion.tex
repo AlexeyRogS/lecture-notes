@@ -3,7 +3,6 @@
 \begin{document}
 
     \section{Polar Coordinates in Two Dimensions}\label{sec:polar-coordinates-in-two-dimensions}
-        \paragraph{}
         We have studied in great detail the mechanics of objects travelling in straight lines.
         Now we want to extend this to more general situations where objects can move along curved paths.
         We will first study motion in 2D as it is much simpler than 3D.
@@ -11,7 +10,6 @@
         Depending on the type of motion in the problem, it is much simpler to describe the trajectory of an object the latter way.
         These are known as \textbf{polar coordinates}.
 
-        \paragraph{}
         To set up the coordinate system, we define two new coordinate axes relative to the position vector $\vec{r}$.
         The first axis points along the direction of the position vector, and the second points one quarter turn anticlockwise from the first.
         These axes get two orthonormal vectors to form a basis which we label $\uvec{r}$ and $\uvec{\theta}$ respectively.
@@ -45,7 +43,6 @@
             \end{tikzpicture}
         \end{figure}
 
-        \paragraph{}
         Then a 2D vector $\vec{A}$ has a cartesian representation $\vec{A}=A_x\ihat+A_y\ihat$ and a polar representation $\vec{A}=A_r\uvec{r}+A_\theta\uvec{\theta}$.
         To find the components in one coordinate system using the components in the other, we have to know the relations between all the basis vectors.
         Using trigonometry, we can see that
@@ -69,11 +66,9 @@
             A_\theta&=-A_x\sin\theta+A_y\cos\theta.
         \end{align}
 
-        \paragraph{}
         The definition of the axes in polar coordinates may seem confusing at first as the position vector moves around over time.
         This means that the axes and unit vectors also change over time, and we will see how this affects calculation of the motion of an object in the next section.
 
-        \paragraph{}
         Once thing that doesn't change is the representation of the position vector itself, which is always given by $\vec{r}=r\uvec{r}$.
         The conversion between representations of the trajectory in cartesian and polar coordinates is then given by equations~\ref{eq:2d-polar-length}, \ref{eq:2d-polar-x-component}, \ref{eq:2d-polar-y-component}, and \ref{eq:2d-polar-theta}.
         \begin{align}
@@ -113,7 +108,6 @@
             \bar{\alpha}(t)&=\frac{\Delta\omega}{\Delta t}=\frac{1}{\Delta t}\int_{t_1}^{t_2}\alpha(t)\dd{t}.
         \end{align}
 
-        \paragraph{}
         Now, let us go back to the full 2D vectors and see how they change with time.
         The velocity vector is the time derivative of the position vector:
         \begin{equation}
@@ -138,7 +132,6 @@
         As an aside, think about why these two results make physical sense.
         Why should the rate of change of $\uvec{r}$ be in the $\uvec{\theta}$ direction?
 
-        \paragraph{}
         We can now finish off calculating the velocity vector:
         \begin{align}
             \vec{v}&=\dot{r}\uvec{r}+r\dv{\uvec{r}}{t}\\
@@ -146,7 +139,6 @@
         \end{align}
         We label the component pointing along the radial direction $v_r=\dot{r}$ and call it the \textbf{radial velocity}, and the component pointing along $\uvec{\theta}$, $v_\theta=r\omega$, is the \textbf{tangential velocity}. 
         
-        \paragraph{}
         The benefit of using the $\uvec{r}-\uvec{\theta}$ axes with polar coordinates is immediately apparent.
         Using the cartesian coordinate axes, the position vector is given by $\vec{r}=r\cos\theta\ihat+r\sin\theta\jhat$, so the time derivative is
         \begin{align}
@@ -157,7 +149,6 @@
         In the last two lines we have regrouped the terms to write $\vec{v}$ in the $\uvec{r}-\uvec{\theta}$ basis and recovered our previous result.
         In the cartesian coordinate system, we get $v_x=\dot{r}\cos\theta-r\omega\sin\theta$ and $v_y=\dot{r}\sin\theta+r\omega\cos\theta$ which is rather opaque to interpretation.
 
-        \paragraph{}
         Now, let's calculate the acceleration vector in polar coordinates.
         \begin{align}
             \vec{a}=\dv{\vec{v}}{t}&=\dv{}{t}(\dot{r}\uvec{r}+r\omega\uvec{\theta})\\
@@ -167,7 +158,6 @@
         \end{align}
         Therefore, the radial acceleration is $a_r=\ddot{r}-r\dot{\theta}^2$, and the tangential acceleration is $a_\theta= 2\dot{r}\dot{\theta}+r\ddot{\theta}$.
 
-        \paragraph{}
         Here is an important thing to note about using polar coordinates.
         Although the unit vectors change over time, the reference frame is inertial.
         Our perspective is fixed, it does not move or co-rotate with the coordinate system.
@@ -204,7 +194,6 @@
                 \end{tikzpicture}
             \end{figure}
 
-            \paragraph{}
             Since the total force on the bead is $\vec{F}=F_\text{rod}\uvec{\theta}$, the instantaneous radial acceleration $a_r=\ddot{r}-r\dot{\theta}^2$ must be zero.
             This is a differential equation that we can solve for the radial motion.
             \begin{equation}
@@ -235,7 +224,6 @@
         \end{example}
 
     \section{Constant Angular Acceleration}\label{sec:constant-angular-acceleration}
-        \paragraph{}
         In the case where we have a constant angular acceleration, we can derive a set of equations analogous to the SUVAT equations for linear motion derived in section~\ref{sec:constant-acceleration}.
         From the equation for average acceleration above, we get
         \begin{align}
@@ -259,7 +247,6 @@
 
     \section{Uniform Circular Motion}\label{sec:uniform-circular-motion}
         % TODO: move this section to the beginning of this chapter?
-        \paragraph{}
         The simplest case of angular motion is where an object is moving in a circle, so there is no motion in the radial direction, and going at a constant speed.
         This is called \textbf{uniform circular motion}, and objects moving this way can be analysed using 1D techniques we studied in section~\ref{sec:motion-in-one-dimension}.
         \begin{figure}[H]
@@ -287,14 +274,12 @@
         Since the speed is constant, $\omega$ is constant as well.
         Therefore, by equation~\ref{eq:ang-suvat-2}, we have $\theta=\omega t$.
 
-        \paragraph{}
         Does this mean acceleration is zero?
         No.
         Since $\omega$ is constant, $\alpha=\dot{\omega}=0$, but this does not mean that the linear acceleration is zero.
         Recall Newton's first law of motion, definition~\ref{def:newton-1}: if the \textit{velocity} is constant, the force (acceleration) is zero.
         Since the path of motion is a circle, the velocity vector is constantly changing direction and is therefore \textit{not} constant.
 
-        \paragraph{}
         We will calculate the velocity and accelearation in cartesian coordinates first.
         Taking equation~\ref{eq:2d-polar-velocity-cartesian} and dropping the terms with $\dot{r}$, we get
         \begin{align}
@@ -318,7 +303,6 @@
         Hence the velocity and position vectors are perpendicular.
         This makes sense because as we know from section~\ref{sec:motion-in-multiple-dimensions}, the velocity is always tangent to the trajectory, which corresponds to being perpendicular to the position vector in the case of a circle.
 
-        \paragraph{}
         Finally, notice that since $\vec{r}=r\sin(\omega t)\ihat+r\cos(\omega t)\jhat$,
         \begin{equation}
             \vec{a}=-\omega^2\vec{r}.
@@ -339,7 +323,6 @@
             \vec{F}_\text{centripetal}=m\vec{a}=-mr\omega^2\uvec{r}=-\frac{mv^2}{r}\uvec{r}.
         \end{equation}
 
-        \paragraph{}
         Let us see if we can reproduce these results using the 2D polar coordinate vectors.
         Using equation~\ref{eq:2d-polar-velocity} and noting that $r$ is constant, we immediately recover
         \begin{equation}
@@ -384,12 +367,10 @@
             Then evaluate the forces at the top of the path to get a formula for the final velocity.
             Finally use the conservation of energy to solve for $v_0$.
 
-            \paragraph{}
             How fast would the mass haves to be projected to get to the top of the loop?
         \end{example}
 
     \section{Rigid Body Rotation}\label{sec:rigid-body-rotation}
-        \paragraph{}
         % TODO: introduce moment of inertia for a single particle first
         A rigid body is a system of particles which are fixed together such that they move together, no matter the forces applied.
         We have seen in previous chapters that it is possible to treat rigid bodies as point masses when considering linear motion.
@@ -424,7 +405,6 @@
         This means that for the same angular velocity, the rotational kinetic energy of the hoop will be larger than the disc.
         $I$ also depends on the axis of rotation, since a different axis will have a different mass distribution around it.
 
-        \paragraph{}
         Let's do a few examples of calculating moments of inertia.
         \begin{example}
             Consider a system of two particles with masses $m_1$ and $m_2$ separated by a distance $d$.
@@ -445,7 +425,6 @@
             \end{figure}
             What is the moment of inertia about the axis which passes through $m_1$ ($A$) and about the axis which passes halfway between $m_1$ and $m_2$ ($B$)?
 
-            \paragraph{}
             Lets to the axis which runs through the midpoint first.
             Using the formula for moment of inertia, we get
             \begin{align}
@@ -460,7 +439,6 @@
             The key takeaway here is that any mass located at the axis of rotation contributes \textit{nothing} to the moment of inertia, no matter how much it is.
         \end{example}
 
-        \paragraph{}
         Just like calculating the centre of mass, when we have a continuous body we have to calculate moments of inertia using integrals.
         The formula is then
         \begin{equation}
@@ -478,7 +456,6 @@
             %     \end{tikzpicture}
             % \end{figure}
 
-            \paragraph{}
             Let $L$ be the length of the rod and $\lambda$ be its linear mass density.
             Then from the diagram, we can see that $\dd{m}=\lambda\dd{x}$.
             For the integral, the limits are $-L/2$ and $L/2$ and $r^2=x^2$, so we have
@@ -500,7 +477,6 @@
             %     \end{tikzpicture}
             % \end{figure}
 
-            \paragraph{}
             We can use a symmetry argument to solve this.
             The distance from the axis is constant, so it doesn't change for any mass element and can be taken out of the integral.
             Thus the moment of inertia just the total mass multiplied by the radius squared.
@@ -568,7 +544,6 @@
             \end{equation}
         \end{example}
 
-        \paragraph{}
         We will now look at two useful results that help with calculating more moments of inertia.
         \begin{theorem}[Parallel Axis Theorem]
             For a system of total mass $M$ and moment of inertia about an axis passing through the centre of mass $I_\text{COM}$, the moment of inertia about a parallel axis a distance $d$ away is
@@ -593,13 +568,11 @@
             So the last term disappears, leaving us with the result.
         \end{proof}
 
-        \paragraph{}
         We can use this result to calculate moments of inertia of shapes we have seen before about different axes that might be difficult to find via a straightforward approach.
         \begin{example}
             Consider a uniform density thin disc of radius $R$ in the $x$-$y$ plane, but instead of rotating around the $z$-axis about its centre like before, it is rotating about a point on the circumference.
             % TODO: include diagram for this
             
-            \paragraph{}
             We know that the moment of inertia of the thin disc about the centre is $I_\text{COM}=\frac{1}{2}MR^2$, and the distance to the parallel axis is simply the radius $R$, so applying the parallel axis theorem we get
             \begin{equation}
                 I_\parallel=\frac{1}{2}MR^2+MR^2=\frac{3}{2}MR^2.
@@ -624,7 +597,6 @@
             What is its moment of inertia about the $x$ and $y$ axes?
             % TODO: include diagram for this
 
-            \paragraph{}
             We know that $I_z=\frac{1}{2}MR^2$ for the thin disc, and by the perpendicular axis theorem we have $I_z=I_x+I_y$.
             In this case we can invoke symmetry of the disc to argue that $I_x=I_y$, and therefore $I_z=2I_x=2I_y$.
             Therefore we must have
@@ -658,7 +630,6 @@
         Using the stretch rule, we can say that the moment of inertia of a cylinder rotating about its main axis is the same as a thin disc.
         % TODO: link to wikipedia lists of moments of inertia
 
-        \paragraph{}
         Let's now look at some problems which combine all the ideas of this chapter.
         \begin{example}
             % TODO: change this example to block falling from a pulley, find a formula for the velocity, acceleration of the block
@@ -686,7 +657,6 @@
                 \end{tikzpicture}
             \end{figure}
             
-            \paragraph{}
             To solve this, we will look at the rotational kinetic energy of the pulley before and after and then invoke the work-energy theorem.
             Its initial kinetic energy is zero, and its final kinetic energy is its rotational kinetic energy $K_\text{rot}=\frac{1}{2}I\omega^2$.
             By the work-energy theorem, the final kinetic energy is equal to the work done, which is the length of rope pulled out multiplied by the tension $W=Ts$.
@@ -722,7 +692,6 @@
                 \end{tikzpicture}
             \end{figure}
             
-            \paragraph{}
             The first step to solving this problem is working out the moment of inertia of the dumbbell about the pivot point.
             If we split the dumbbell into the two weights ($A$ for the one above the pivot and $B$ for the one below) and the bar, the total moment of inertia can be written as
             \begin{equation}
