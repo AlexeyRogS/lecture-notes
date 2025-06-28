@@ -35,153 +35,156 @@
         We have seen one example of a central force already, the universal law of gravitation.
         Another example is Coulomb's law.
 
-        Motion under a central force obeys the following rules:
-        \begin{itemize}
-            \item The motion is confined to a plane.
-            \item The angular momentum is conserved ($\dv{\vec{L}}{t}=0$).
-            \item The position vector sweeps out equal area in equal time.
-        \end{itemize}
-        
-        Let's prove that angular momentum is conserved under the influence of a central force.
-        Looking at the derivative, we get
-        \begin{align}
-            \dv{\vec{L}}{t}&=\dv{}{t}(\vec{r}\times\vec{p})\\
-            &=\dv{\vec{r}}{t}\times\vec{p}+\vec{r}\times\dv{\vec{p}}{t}\\
-            &=\vec{v}\times m\vec{v}+\vec{r}\times F(R)\uvec{R}\\
-            &=0.
-        \end{align}
-        Therefore, $\vec{L}$ is constant over time, it is conserved.
-
-        By definition, $\vec{L}$ is perpendicular to $\vec{r}$.
-        We can also see this by taking the dot product of $\vec{L}$ with the position vector:
-        \begin{equation}
-            \vec{r}\cdot\vec{L}=\vec{r}\cdot(\vec{r}\times\vec{p})=\vec{p}\cdot(\vec{r}\times\vec{r})=0.
-        \end{equation}
-        Since $\vec{L}$ is constant, this implies that $\vec{r}$ is confined to the plane perpendicular to $\vec{L}$.
-        
-        Because of this, it is convenient to use cylindrical coordinates with the plane $z=0$ as the plane of motion.
-        Using equation~\ref{} (note that $\dot{z}=0$) and the cross products between unit vectors, we get
-        % TODO: add reference to velocity in cylindrical coordinates here
-        \begin{align}
-            \vec{L}&=m\vec{r}\times\vec{v}\\
-            &=mR\uvec{R}\times(\dot{R}\uvec{R}+R\dot{\theta}\uvec{\theta})\\
-            &=mR^2\dot{\theta}\khat\label{eq:angular-momentum-theta-dot}\\
-            &=mh\khat.
-        \end{align}
-        In the last line we have defined $h=R^2\dot{\theta}$.
-        This is the \textbf{specific angular momentum} (angular momentum normalised by mass), and is useful in some problems.
-
-        Finally, we will prove the last fact about motion under central forces, the law of equal areas, which is a more general version of Kepler's second law of planetary motion.
-        Consider an object on a curved path at two points separated by a small time interval $\dd{t}$.
-        \begin{figure}[H]
-            \centering
-            \begin{tikzpicture}[scale=5]
-                \fill[fill=black!10,rotate=8] (0,0) -- (1,0) arc [radius=1, start angle=0, end angle=10.1] -- cycle;
-                \draw[rotate=8] (0.3,0) arc [radius=0.3, start angle=0, end angle=10.1];
-                \draw (1,0) arc [radius=1, start angle=0, end angle=30];
-                \draw (0,0) -- (0.95,0.312) (0.99,0.141) -- (0,0);
-                \fill (0.95,0.312) circle [radius=0.01];
-                \fill (0.99,0.141) circle [radius=0.01];
-                \fill (0,0) circle [radius=0.01];
-                \node at (0.3,0.15) {$\dd{\theta}$};
-                \node at (0.5,0) {$R$};
-            \end{tikzpicture}
-        \end{figure}
-        The shaded arc is approximately a triangle, so the area get closer and closer to $A=\frac{1}{2}R^2\dd{\theta}$ as $\dd{t}\to0$.
-        Therefore, we have
-        \begin{equation}
-            \dv{A}{t}=\frac{1}{2}R^2\dv{\theta}{t}=\frac{1}{2}h=\text{const}.
-        \end{equation}
-        So the rate of area swept out over time is constant.
-
-        What does motion under a central force look like?
-        By Newton's second law, we know that
-        \begin{equation}\label{eq:central-force-eom}
-            a_R=\ddot{R}-R\dot{\theta}^2=\frac{F(R)}{m}.
-        \end{equation}
-        Substituting in the specific angular momentum, we get
-        \begin{equation}
-            \ddot{R}-\frac{h^2}{R^3}=\frac{F(R)}{m}.
-        \end{equation}
-        This is the differential equation we need to solve for any central force problem.
-        \begin{example}
-            Prove Kepler's third law: the square of a planet's orbital period is proportional to the cube of the semi-major axis of its orbit.
-
-            Planets move according to the universal law of gravitation, which is
-            \begin{equation}
-                \vec{F}=-\frac{GMm}{R^2}\uvec{R}.
-            \end{equation}
-            We will make an approximation and assume that the sun is fixed at the origin and the planets orbit in circular orbits.
-            In reality, the a given planet and the sun orbit their common centre of mass in elliptical paths, but the difference is very small making this approximation makes the problem much simpler.
-            Since $R=\text{const}$, then $\dot{R}=\ddot{R}=0$.
-            So $a_R=-R\dot{\theta}^2$.
-            Since angular momentum $L=mR^2\dot{\theta}$ is conserved, $\dot{\theta}=\omega$ is a constant.
-            Thus the equation of motion \ref{eq:central-force-eom} becomes
+        \subsection{Properties of Central Forces}\label{subsec:properties-of-central-forces}
+            Motion under a central force obeys the following rules:
+            \begin{itemize}
+                \item The motion is confined to a plane.
+                \item The angular momentum is conserved ($\dv{\vec{L}}{t}=0$).
+                \item The position vector sweeps out equal area in equal time.
+            \end{itemize}
+            
+            Let's prove that angular momentum is conserved under the influence of a central force.
+            Looking at the derivative, we get
             \begin{align}
-                -\frac{GMm}{R^2}&=-mR\omega^2\\
-                GM&=R^3\omega^2.
+                \dv{\vec{L}}{t}&=\dv{}{t}(\vec{r}\times\vec{p})\\
+                &=\dv{\vec{r}}{t}\times\vec{p}+\vec{r}\times\dv{\vec{p}}{t}\\
+                &=\vec{v}\times m\vec{v}+\vec{r}\times F(R)\uvec{R}\\
+                &=0.
             \end{align}
-            The period of the orbit is equal to the displacement divided by the speed, in this case $T=\frac{2\pi}{\omega}$, so rearranging for $R^3$ we get
-            \begin{equation}
-                R^3=\frac{GM}{4\pi^2}T^2.
-            \end{equation}
-        \end{example}
-        \begin{example}
-            Consider a central force of the form $\vec{F}=-\frac{mk^2}{r^3}\uvec{r}$.
-            If a particle under the influence of this force starts at a distance $r=r_0$ from the origin with no radial speed ($v_{r,0}=0$), what will its motion look like for different values of $k$?
+            Therefore, $\vec{L}$ is constant over time, it is conserved.
 
-            Substituting in the force into equation~\ref{eq:central-force-eom}, we get
-            \begin{gather}
-                \ddot{r}-\frac{h}{r^3}=-\frac{k^2}{r^3}\\
-                \ddot{r}+\frac{k^2-h^2}{r^3}=0.
-            \end{gather}
-            For $k^2=h^2$, we get $\ddot{r}=0$, which can be integrated twice to give $r=r_0+v_{r,0}t$.
-            Since $v_{r,0}=0$, we have $r=r_0$ which is circular motion.
-            The angular speed is given by equation~\ref{eq:angular-momentum-theta-dot}, $\omega=\frac{L}{mr_0^2}=\frac{mvr_0}{mr_0^2}=\frac{v}{r_0}$.
-            This is just our familiar result from uniform circular motion, which makes sense because if we plug $k^2=h^2$ into the form of the force above, we get
+            By definition, $\vec{L}$ is perpendicular to $\vec{r}$.
+            We can also see this by taking the dot product of $\vec{L}$ with the position vector:
             \begin{equation}
-                \vec{F}=-\frac{mr^4\omega^2}{r^3}\uvec{r}=-mr\omega^2\uvec{r},
+                \vec{r}\cdot\vec{L}=\vec{r}\cdot(\vec{r}\times\vec{p})=\vec{p}\cdot(\vec{r}\times\vec{r})=0.
             \end{equation}
-            which is just the formula for centripetal force.
-
-            What about the cases where $k^2\neq h^2$?
-            Unfortunately, the differential equation is not solvable analytically for any other case.
-            Luckily, there is another way to solve it!
-            What we have to do is parameterise the orbit in terms of the angular displacement $\theta$ instead of $t$ by making use of the relation $h=r^2\dot{\theta}$.
-            We will also make the substition $u=1/r$, which is a very useful substition when solving problems with central forces of the form $F(r)=\frac{\alpha}{r^n}$.
-            Therefore, the aim is to replace all time derivatives of $r$ with derivatives of $u$ with respect to $\theta$.
-            Using the chain rule, we get
+            Since $\vec{L}$ is constant, this implies that $\vec{r}$ is confined to the plane perpendicular to $\vec{L}$.
+            
+            Because of this, it is convenient to use cylindrical coordinates with the plane $z=0$ as the plane of motion.
+            Using equation~\ref{} (note that $\dot{z}=0$) and the cross products between unit vectors, we get
+            % TODO: add reference to velocity in cylindrical coordinates here
             \begin{align}
-                \dot{r}&=\dv{r}{u}\dot{u}=\dv{r}{u}\dv{u}{\theta}\dot{\theta}\\
-                &=-r^2\dot{\theta}\dv{u}{\theta}\\
-                &=-h\dv{u}{\theta}.
+                \vec{L}&=m\vec{r}\times\vec{v}\\
+                &=mR\uvec{R}\times(\dot{R}\uvec{R}+R\dot{\theta}\uvec{\theta})\\
+                &=mR^2\dot{\theta}\khat\label{eq:angular-momentum-theta-dot}\\
+                &=mh\khat.
             \end{align}
-            For $\ddot{r}$, we get
-            \begin{align}
-                \ddot{r}&=\dv{}{t}\left(-h\dv{u}{\theta}\right)=-h\dv[2]{u}{\theta}\dot{\theta}\\
-                &=-\frac{h^2}{r^2}\dv[2]{u}{\theta}\\
-                &=-h^2u^2\dv[2]{u}{\theta}.
-            \end{align}
-            Now, the equation of motion becomes
-            \begin{gather}
-                -h^2u^2\dv[2]{u}{\theta}+(k^2-h^2)u^3=0\\
-                \dv[2]{u}{\theta}-\frac{k^2-h^2}{h^2}u=0.
-            \end{gather}
+            In the last line we have defined $h=R^2\dot{\theta}$.
+            This is the \textbf{specific angular momentum} (angular momentum normalised by mass), and is useful in some problems.
 
-            Letting $\beta^2=\abs{\frac{k^2-h^2}{h^2}}$, if $k^2>h^2$ then the differential equation becomes
+        \subsection{Kepler's Second Law}\label{subsec:keplers-second-law}
+            Finally, we will prove the last fact about motion under central forces, the law of equal areas, which is a more general version of Kepler's second law of planetary motion.
+            Consider an object on a curved path at two points separated by a small time interval $\dd{t}$.
+            \begin{figure}[H]
+                \centering
+                \begin{tikzpicture}[scale=5]
+                    \fill[fill=black!10,rotate=8] (0,0) -- (1,0) arc [radius=1, start angle=0, end angle=10.1] -- cycle;
+                    \draw[rotate=8] (0.3,0) arc [radius=0.3, start angle=0, end angle=10.1];
+                    \draw (1,0) arc [radius=1, start angle=0, end angle=30];
+                    \draw (0,0) -- (0.95,0.312) (0.99,0.141) -- (0,0);
+                    \fill (0.95,0.312) circle [radius=0.01];
+                    \fill (0.99,0.141) circle [radius=0.01];
+                    \fill (0,0) circle [radius=0.01];
+                    \node at (0.3,0.15) {$\dd{\theta}$};
+                    \node at (0.5,0) {$R$};
+                \end{tikzpicture}
+            \end{figure}
+            The shaded arc is approximately a triangle, so the area get closer and closer to $A=\frac{1}{2}R^2\dd{\theta}$ as $\dd{t}\to0$.
+            Therefore, we have
             \begin{equation}
-                \dv[2]{u}{\theta}-\beta^2 u=0.
+                \dv{A}{t}=\frac{1}{2}R^2\dv{\theta}{t}=\frac{1}{2}h=\text{const}.
             \end{equation}
-            The general solution is $u=Ae^{\beta\theta}+Be^{-\beta\theta}$.
+            So the rate of area swept out over time is constant.
 
-            For the opposite case $k^2<h^2$, the negative sign gets cancelled out and we get
+        \subsection{Motion Under a Central Force}\label{subsec:motion-under-a-central-force}
+            What does motion under a central force look like?
+            By Newton's second law, we know that
+            \begin{equation}\label{eq:central-force-eom}
+                a_R=\ddot{R}-R\dot{\theta}^2=\frac{F(R)}{m}.
+            \end{equation}
+            Substituting in the specific angular momentum, we get
             \begin{equation}
-                \dv[2]{u}{\theta}+\beta^2 u=0.
+                \ddot{R}-\frac{h^2}{R^3}=\frac{F(R)}{m}.
             \end{equation}
-            This has the general solution $u=A\cos(\beta\theta)+B\sin(\beta\theta)$.
+            This is the differential equation we need to solve for any central force problem.
+            \begin{example}
+                Prove Kepler's third law: the square of a planet's orbital period is proportional to the cube of the semi-major axis of its orbit.
 
-            % TODO: complete this example.
-        \end{example}
+                Planets move according to the universal law of gravitation, which is
+                \begin{equation}
+                    \vec{F}=-\frac{GMm}{R^2}\uvec{R}.
+                \end{equation}
+                We will make an approximation and assume that the sun is fixed at the origin and the planets orbit in circular orbits.
+                In reality, the a given planet and the sun orbit their common centre of mass in elliptical paths, but the difference is very small making this approximation makes the problem much simpler.
+                Since $R=\text{const}$, then $\dot{R}=\ddot{R}=0$.
+                So $a_R=-R\dot{\theta}^2$.
+                Since angular momentum $L=mR^2\dot{\theta}$ is conserved, $\dot{\theta}=\omega$ is a constant.
+                Thus the equation of motion \ref{eq:central-force-eom} becomes
+                \begin{align}
+                    -\frac{GMm}{R^2}&=-mR\omega^2\\
+                    GM&=R^3\omega^2.
+                \end{align}
+                The period of the orbit is equal to the displacement divided by the speed, in this case $T=\frac{2\pi}{\omega}$, so rearranging for $R^3$ we get
+                \begin{equation}
+                    R^3=\frac{GM}{4\pi^2}T^2.
+                \end{equation}
+            \end{example}
+            \begin{example}
+                Consider a central force of the form $\vec{F}=-\frac{mk^2}{r^3}\uvec{r}$.
+                If a particle under the influence of this force starts at a distance $r=r_0$ from the origin with no radial speed ($v_{r,0}=0$), what will its motion look like for different values of $k$?
+
+                Substituting in the force into equation~\ref{eq:central-force-eom}, we get
+                \begin{gather}
+                    \ddot{r}-\frac{h}{r^3}=-\frac{k^2}{r^3}\\
+                    \ddot{r}+\frac{k^2-h^2}{r^3}=0.
+                \end{gather}
+                For $k^2=h^2$, we get $\ddot{r}=0$, which can be integrated twice to give $r=r_0+v_{r,0}t$.
+                Since $v_{r,0}=0$, we have $r=r_0$ which is circular motion.
+                The angular speed is given by equation~\ref{eq:angular-momentum-theta-dot}, $\omega=\frac{L}{mr_0^2}=\frac{mvr_0}{mr_0^2}=\frac{v}{r_0}$.
+                This is just our familiar result from uniform circular motion, which makes sense because if we plug $k^2=h^2$ into the form of the force above, we get
+                \begin{equation}
+                    \vec{F}=-\frac{mr^4\omega^2}{r^3}\uvec{r}=-mr\omega^2\uvec{r},
+                \end{equation}
+                which is just the formula for centripetal force.
+
+                What about the cases where $k^2\neq h^2$?
+                Unfortunately, the differential equation is not solvable analytically for any other case.
+                Luckily, there is another way to solve it!
+                What we have to do is parameterise the orbit in terms of the angular displacement $\theta$ instead of $t$ by making use of the relation $h=r^2\dot{\theta}$.
+                We will also make the substition $u=1/r$, which is a very useful substition when solving problems with central forces of the form $F(r)=\frac{\alpha}{r^n}$.
+                Therefore, the aim is to replace all time derivatives of $r$ with derivatives of $u$ with respect to $\theta$.
+                Using the chain rule, we get
+                \begin{align}
+                    \dot{r}&=\dv{r}{u}\dot{u}=\dv{r}{u}\dv{u}{\theta}\dot{\theta}\\
+                    &=-r^2\dot{\theta}\dv{u}{\theta}\\
+                    &=-h\dv{u}{\theta}.
+                \end{align}
+                For $\ddot{r}$, we get
+                \begin{align}
+                    \ddot{r}&=\dv{}{t}\left(-h\dv{u}{\theta}\right)=-h\dv[2]{u}{\theta}\dot{\theta}\\
+                    &=-\frac{h^2}{r^2}\dv[2]{u}{\theta}\\
+                    &=-h^2u^2\dv[2]{u}{\theta}.
+                \end{align}
+                Now, the equation of motion becomes
+                \begin{gather}
+                    -h^2u^2\dv[2]{u}{\theta}+(k^2-h^2)u^3=0\\
+                    \dv[2]{u}{\theta}-\frac{k^2-h^2}{h^2}u=0.
+                \end{gather}
+
+                Letting $\beta^2=\abs{\frac{k^2-h^2}{h^2}}$, if $k^2>h^2$ then the differential equation becomes
+                \begin{equation}
+                    \dv[2]{u}{\theta}-\beta^2 u=0.
+                \end{equation}
+                The general solution is $u=Ae^{\beta\theta}+Be^{-\beta\theta}$.
+
+                For the opposite case $k^2<h^2$, the negative sign gets cancelled out and we get
+                \begin{equation}
+                    \dv[2]{u}{\theta}+\beta^2 u=0.
+                \end{equation}
+                This has the general solution $u=A\cos(\beta\theta)+B\sin(\beta\theta)$.
+
+                % TODO: complete this example.
+            \end{example}
 
     \section{Torque}\label{sec:torque}
         Torque is defined as the \textbf{moment} of force, that is, the product of the distance from a reference point and the force.
@@ -202,129 +205,131 @@
         Changing the reference point will change the value of the torque.
         For a fixed reference point, if the same force is applied further away from the centre, the torque will be greater.
         
-        Let's look at how changing the reference point changes the angular momentum and the torque.
-        Consider the following diagram.
-        \begin{figure}[H]
-            \centering
-            \begin{tikzpicture}[scale=5]
-                \draw[<->] (0,1) |- (1,0);
-                \node[above] at (0,1) {$y$};
-                \node[right] at (1,0) {$x$};
-
-                \draw[->,thick] (0,0) -- (0.2,0.5);
-                \fill (0.2,0.5) circle [radius=0.01];
-                \node[above] at (0.1,0.3) {$\vec{r}$};
-                \draw[<->,very thick] (0.3,0.6) -- (0.2,0.5) -- (0.4,0.4);
-                \node[above] at (0.3,0.6) {$\vec{p}$};
-                \node[right] at (0.4,0.4) {$\vec{F}$};
-
-                \draw[->,thick] (0,0) -- (0.8,0.6);
-                \fill (0.8,0.6) circle [radius=0.01];
-                \node[above] at (0.8,0.6) {$\vec{A}$};
-                
-                \draw[->,thick] (0.8,0.6) -- (0.2,0.5);
-                \node[above] at (0.5,0.55) {$\vec{d}$};
-            \end{tikzpicture}
-        \end{figure}
-        The angular momentum and torque relative to the origin are $\vec{L}=\vec{r}\times\vec{p}$ and $\vec{\tau}=\vec{r}\times\vec{F}$ like before, but what are the angular momentum and torque relative to the point $\vec{A}$?
-        The radius vector or lever arm is now the vector $\vec{d}$ between the points $\vec{A}$ and $\vec{r}$, i.e.
-        \begin{align}
-            \vec{L}_{\vec{A}}&=\vec{d}\times\vec{p}\\
-            &=(\vec{r}-\vec{A})\times\vec{p}\\
-            \vec{\tau}_{\vec{A}}&=\vec{d}\times\vec{F}\\
-            &=(\vec{r}-\vec{A})\times\vec{F}.
-        \end{align}
-        \begin{example}
-            Consider a \qty{2}{\kilogram} particle at $y=\qty{3}{\meter}$ moving to the right with velocity $\vec{v}=\qty{5}{\meter\per\second}\ihat$.
-            What is its angular momentum relative to the origin and relative to the point $\vec{A}=\qty{3}{\meter}\jhat$.
+        \subsection{Changing the Origin}\label{subsec:changing-the-origin}
+            Let's look at how changing the reference point changes the angular momentum and the torque.
+            Consider the following diagram.
             \begin{figure}[H]
                 \centering
-                \begin{tikzpicture}[scale=3]
+                \begin{tikzpicture}[scale=5]
                     \draw[<->] (0,1) |- (1,0);
                     \node[above] at (0,1) {$y$};
                     \node[right] at (1,0) {$x$};
 
-                    \fill (0,0.8) circle [radius=0.01];
-                    \node[above left] at (0,0.8) {$\vec{A}$};
+                    \draw[->,thick] (0,0) -- (0.2,0.5);
+                    \fill (0.2,0.5) circle [radius=0.01];
+                    \node[above] at (0.1,0.3) {$\vec{r}$};
+                    \draw[<->,very thick] (0.3,0.6) -- (0.2,0.5) -- (0.4,0.4);
+                    \node[above] at (0.3,0.6) {$\vec{p}$};
+                    \node[right] at (0.4,0.4) {$\vec{F}$};
 
-                    \fill (0.8,0.8) circle [radius=0.01];
-                    \draw[->,very thick] (0.7,0.85) -- (0.9,0.85);
-                    \node[above] at (0.8,0.85) {$\vec{v}$};
-
-                    \draw[->,thick] (0,0.8) -- (0.8,0.8);
-                    \node[above] at (0.4,0.8) {$\vec{d}$};
-                    \draw[->,thick] (0,0) -- (0.8,0.8);
-                    \node[above] at (0.4,0.4) {$\vec{r}$};
+                    \draw[->,thick] (0,0) -- (0.8,0.6);
+                    \fill (0.8,0.6) circle [radius=0.01];
+                    \node[above] at (0.8,0.6) {$\vec{A}$};
+                    
+                    \draw[->,thick] (0.8,0.6) -- (0.2,0.5);
+                    \node[above] at (0.5,0.55) {$\vec{d}$};
                 \end{tikzpicture}
             \end{figure}
-            The position vector is $\vec{r}=x\ihat+\qty{3}{\meter}\jhat$ and the radius vector relative to $\vec{A}$ is $\vec{d}=x\ihat$.
-            The momentum vector is $\vec{p}=mv_x\ihat=\qty{10}{\kilogram\meter\per\second}$, so the angular momentum relative to the origin is
+            The angular momentum and torque relative to the origin are $\vec{L}=\vec{r}\times\vec{p}$ and $\vec{\tau}=\vec{r}\times\vec{F}$ like before, but what are the angular momentum and torque relative to the point $\vec{A}$?
+            The radius vector or lever arm is now the vector $\vec{d}$ between the points $\vec{A}$ and $\vec{r}$, i.e.
             \begin{align}
-                \vec{L}&=\vec{r}\times\vec{p}=\begin{vmatrix}
-                    \ihat & \jhat & \khat \\
-                    x & 3 & 0 \\
-                    10 & 0 & 0
-                \end{vmatrix}\\
-                &=-\qty{30}{\kilogram\meter\squared\per\second}\khat,
+                \vec{L}_{\vec{A}}&=\vec{d}\times\vec{p}\\
+                &=(\vec{r}-\vec{A})\times\vec{p}\\
+                \vec{\tau}_{\vec{A}}&=\vec{d}\times\vec{F}\\
+                &=(\vec{r}-\vec{A})\times\vec{F}.
             \end{align}
-            at the angular momentum relative to $\vec{A}$ is
+            \begin{example}
+                Consider a \qty{2}{\kilogram} particle at $y=\qty{3}{\meter}$ moving to the right with velocity $\vec{v}=\qty{5}{\meter\per\second}\ihat$.
+                What is its angular momentum relative to the origin and relative to the point $\vec{A}=\qty{3}{\meter}\jhat$.
+                \begin{figure}[H]
+                    \centering
+                    \begin{tikzpicture}[scale=3]
+                        \draw[<->] (0,1) |- (1,0);
+                        \node[above] at (0,1) {$y$};
+                        \node[right] at (1,0) {$x$};
+
+                        \fill (0,0.8) circle [radius=0.01];
+                        \node[above left] at (0,0.8) {$\vec{A}$};
+
+                        \fill (0.8,0.8) circle [radius=0.01];
+                        \draw[->,very thick] (0.7,0.85) -- (0.9,0.85);
+                        \node[above] at (0.8,0.85) {$\vec{v}$};
+
+                        \draw[->,thick] (0,0.8) -- (0.8,0.8);
+                        \node[above] at (0.4,0.8) {$\vec{d}$};
+                        \draw[->,thick] (0,0) -- (0.8,0.8);
+                        \node[above] at (0.4,0.4) {$\vec{r}$};
+                    \end{tikzpicture}
+                \end{figure}
+                The position vector is $\vec{r}=x\ihat+\qty{3}{\meter}\jhat$ and the radius vector relative to $\vec{A}$ is $\vec{d}=x\ihat$.
+                The momentum vector is $\vec{p}=mv_x\ihat=\qty{10}{\kilogram\meter\per\second}$, so the angular momentum relative to the origin is
+                \begin{align}
+                    \vec{L}&=\vec{r}\times\vec{p}=\begin{vmatrix}
+                        \ihat & \jhat & \khat \\
+                        x & 3 & 0 \\
+                        10 & 0 & 0
+                    \end{vmatrix}\\
+                    &=-\qty{30}{\kilogram\meter\squared\per\second}\khat,
+                \end{align}
+                at the angular momentum relative to $\vec{A}$ is
+                \begin{align}
+                    \vec{L}_{\vec{A}}&=\vec{d}\times\vec{p}=\begin{vmatrix}
+                        \ihat & \jhat & \khat \\
+                        x & 0 & 0 \\
+                        10 & 0 & 0
+                    \end{vmatrix}\\
+                    &=0.
+                \end{align}
+                This makes sense because relative to $\vec{A}$ the motion is radial so there is no lever arm.
+            \end{example}
+            \begin{example}
+                Let's now look at a familiar example, uniform circular motion.
+                First, what is the angular momentum relative to the origin for a particle travelling with angular speed $\omega$?
+
+                Working in polar coordinates, the radius vector is $\vec{r}=r\uvec{r}$ and the velocity vector is $\vec{v}=r\omega\uvec{\theta}$.
+                Then the angular momentum is $\vec{L}=r\uvec{r}\times mr\omega\uvec{\theta}=mr^2\omega\khat$.
+                This is a constant, which we know to be the case since the centripetal force is a central force.
+
+                Now, suppose the particle is moving around a circle at $y=h$.
+                What is the angular momentum relative to the origin?
+                % TODO: include diagram for this
+
+                The position vector is now given by $\vec{r}=r\uvec{r}+h\khat$, so the angular momentum becomes
+                \begin{align}
+                    \vec{L}&=m\begin{vmatrix}
+                        \uvec{r} & \uvec{\theta} & \khat \\
+                        r & 0 & h \\
+                        0 & r\omega & 0
+                    \end{vmatrix}\\
+                    &=-mhr\omega\uvec{r}+mr^2\omega\khat.
+                \end{align}
+                The unit vector $\uvec{r}$ changes over time, so $\vec{L}$ is not constant (its magnitude is constant but its direction changes).
+                This is because the centripetal force is no longer central relative to the origin.
+            \end{example}
+
+        \subsection{Angular Version of Newton's Second Law}\label{subsec:angular-version-of-newtons-second-law}
+            Torque is measured in $\unit{\newton\meter}$.
+            This is dimensionally equivalent to Joules, but this does not mean that torque is a kind of energy.
+            Energy is a scalar quantity, whereas torque is a vector, so they are really different things.
+
+            In linear dynamics, we have Newton's second law which states $\vec{F}=\dot{\vec{p}}$.
+            We will now show that there is a rotational equivalent of Newton II that relates torque to angular momentum.
+            Using the product rule to differentiate $\vec{L}$, we find
             \begin{align}
-                \vec{L}_{\vec{A}}&=\vec{d}\times\vec{p}=\begin{vmatrix}
-                    \ihat & \jhat & \khat \\
-                    x & 0 & 0 \\
-                    10 & 0 & 0
-                \end{vmatrix}\\
-                &=0.
+                \dv{\vec{L}}{t}&=\dv{}{t}(\vec{r}\times\vec{p})\\
+                &=(\dot{\vec{r}}\times\vec{p})+(\vec{r}\times\dot{\vec{p}})\\
+                &=\left(\frac{1}{m}\vec{p}\times\vec{p}\right)+(\vec{r}\times\vec{F})\\
+                &=\vec{r}\times\vec{F}=\vec{\tau}.
             \end{align}
-            This makes sense because relative to $\vec{A}$ the motion is radial so there is no lever arm.
-        \end{example}
-        \begin{example}
-            Let's now look at a familiar example, uniform circular motion.
-            First, what is the angular momentum relative to the origin for a particle travelling with angular speed $\omega$?
-
-            Working in polar coordinates, the radius vector is $\vec{r}=r\uvec{r}$ and the velocity vector is $\vec{v}=r\omega\uvec{\theta}$.
-            Then the angular momentum is $\vec{L}=r\uvec{r}\times mr\omega\uvec{\theta}=mr^2\omega\khat$.
-            This is a constant, which we know to be the case since the centripetal force is a central force.
-
-            Now, suppose the particle is moving around a circle at $y=h$.
-            What is the angular momentum relative to the origin?
-            % TODO: include diagram for this
-
-            The position vector is now given by $\vec{r}=r\uvec{r}+h\khat$, so the angular momentum becomes
-            \begin{align}
-                \vec{L}&=m\begin{vmatrix}
-                    \uvec{r} & \uvec{\theta} & \khat \\
-                    r & 0 & h \\
-                    0 & r\omega & 0
-                \end{vmatrix}\\
-                &=-mhr\omega\uvec{r}+mr^2\omega\khat.
-            \end{align}
-            The unit vector $\uvec{r}$ changes over time, so $\vec{L}$ is not constant (its magnitude is constant but its direction changes).
-            This is because the centripetal force is no longer central relative to the origin.
-        \end{example}
-
-        Torque is measured in $\unit{\newton\meter}$.
-        This is dimensionally equivalent to Joules, but this does not mean that torque is a kind of energy.
-        Energy is a scalar quantity, whereas torque is a vector, so they are really different things.
-
-        In linear dynamics, we have Newton's second law which states $\vec{F}=\dot{\vec{p}}$.
-        We will now show that there is a rotational equivalent of Newton II that relates torque to angular momentum.
-        Using the product rule to differentiate $\vec{L}$, we find
-        \begin{align}
-            \dv{\vec{L}}{t}&=\dv{}{t}(\vec{r}\times\vec{p})\\
-            &=(\dot{\vec{r}}\times\vec{p})+(\vec{r}\times\dot{\vec{p}})\\
-            &=\left(\frac{1}{m}\vec{p}\times\vec{p}\right)+(\vec{r}\times\vec{F})\\
-            &=\vec{r}\times\vec{F}=\vec{\tau}.
-        \end{align}
-        This is the same calculation we did earlier for central forces.
-        We now have a shortcut to prove that angular momentum is conserved under the influence of a central force.
-        % TODO: add equation references
-        Since central forces are always parallel to the radius vector, the torque is zero.
-        \begin{equation}
-            \vec{\tau}=\vec{r}\times F(r)\uvec{r}=0.
-        \end{equation}
-        Then using the angular equivalent of Newton II, $\dot{\vec{L}}=\vec{\tau}=0$.
-        So central forces exert no torque and therefore angular momentum is conserved.
+            This is the same calculation we did earlier for central forces.
+            We now have a shortcut to prove that angular momentum is conserved under the influence of a central force.
+            % TODO: add equation references
+            Since central forces are always parallel to the radius vector, the torque is zero.
+            \begin{equation}
+                \vec{\tau}=\vec{r}\times F(r)\uvec{r}=0.
+            \end{equation}
+            Then using the angular equivalent of Newton II, $\dot{\vec{L}}=\vec{\tau}=0$.
+            So central forces exert no torque and therefore angular momentum is conserved.
 
     \section{Torque and Angular Momentum for Systems of Particles}\label{sec:torque-and-angular-momentum-for-systems-of-particles}
         In a system of many particles, each particle with a position $\vec{r}_i$ and momentum $\vec{p}_i$, the total angular momentum is the sum of each particle's angular momentum.
@@ -362,11 +367,12 @@
             \dot{\vec{L}}=\sum_i\vec{\tau}_i=\sum_i\vec{r}_i\times\vec{F}_{i,\text{ext}}.
         \end{equation}
 
-        Is $\dot{\vec{L}}=\tau_\text{ext}$?
-        Only in two situations: when we consider the torque about the origin of an inertial frame of reference, and when we consider the torque about the centre of mass (even if the centre of mass frame is \textit{not} inertial).
-        % TODO: prove this
-        This is very important because it allows us to use the angular equivalent of Newton II in many situations.
-        For example, if we are analysing a rigid body rolling down a hill, we can measure the angular momentum and torque from the centre of mass then we can still use $\dot{\vec{L}}=\vec{\tau}$.
+        \subsection{When is Change in Angular Momentum Equal to External Torque?}\label{subsec:when-is-change-in-angular-momentum-equal-to-external-force}
+            Is $\dot{\vec{L}}=\tau_\text{ext}$?
+            Only in two situations: when we consider the torque about the origin of an inertial frame of reference, and when we consider the torque about the centre of mass (even if the centre of mass frame is \textit{not} inertial).
+            % TODO: prove this
+            This is very important because it allows us to use the angular equivalent of Newton II in many situations.
+            For example, if we are analysing a rigid body rolling down a hill, we can measure the angular momentum and torque from the centre of mass then we can still use $\dot{\vec{L}}=\vec{\tau}$.
 
     \section{Dynamics of Rigid Bodies}\label{sec:dynamics-of-rigid-bodies}
         As stated in chapter~\ref{chap:angular-motion}, rigid bodies are distinguished by the fact that all mass elements have the same angular velocity $\omega$.
@@ -455,83 +461,84 @@
         \end{align}
         So the rotational energy is half of its translational energy, or to put it another way a third of its kinetic energy is stored in the rotational motion.
 
-        Let's look at the forces and torques involved in rolling.
-        On a flat surface, if we have $a_\text{COM}=0$ then $\alpha=a/R=0$.
-        This implies that the torque about the centre of mass is zero which means no force is acting on the rim of the object.
-        All this is to say that there is no tendency to slide.
-        If $a_\text{COM}\neq 0$, then there is a torque about the centre of mass and therefore there is a force.
-        This must be a friction force, specifically static friction in the case of rolling without slipping.
-        Thus we cannot have rolling without friction!
+        \subsection{Forces in Rolling Motion}\label{subsec:forces-in-rolling-motion}
+            Let's look at the forces and torques involved in rolling.
+            On a flat surface, if we have $a_\text{COM}=0$ then $\alpha=a/R=0$.
+            This implies that the torque about the centre of mass is zero which means no force is acting on the rim of the object.
+            All this is to say that there is no tendency to slide.
+            If $a_\text{COM}\neq 0$, then there is a torque about the centre of mass and therefore there is a force.
+            This must be a friction force, specifically static friction in the case of rolling without slipping.
+            Thus we cannot have rolling without friction!
 
-        Which way does the static friction point?
-        We are used to having static friction point to the left if the object is moving to the right, but there is a subtle gotcha here.
-        In the case of rolling motion, the contact point wants to slip to the left, which means the static friction force must point to the right.
-        On an incline, the weight does not exert a torque because it acts on the centre of mass, and the normal force does not exert a torque because it acts parallel to the radius vector.
-        The only force which exerts a torque is the static friction, so $\tau_{f_s}=I\alpha$.
-        \begin{example}
-            A disc is rolling down an inclined plane.
-            Find an expression for its acceleration.
-            \begin{figure}[H]
-                \centering
-                \begin{tikzpicture}[scale=2]
-                    \draw (0,0) -- (3,0) -- (0,1) -- cycle;
-                    \draw (0.5,0.94) circle [radius=0.1];
-                    \draw (2.5,0) arc [radius=0.5, start angle=180, end angle=161.57];
-                    \node[above left] at (2.5,0) {$\theta$};
+            Which way does the static friction point?
+            We are used to having static friction point to the left if the object is moving to the right, but there is a subtle gotcha here.
+            In the case of rolling motion, the contact point wants to slip to the left, which means the static friction force must point to the right.
+            On an incline, the weight does not exert a torque because it acts on the centre of mass, and the normal force does not exert a torque because it acts parallel to the radius vector.
+            The only force which exerts a torque is the static friction, so $\tau_{f_s}=I\alpha$.
+            \begin{example}
+                A disc is rolling down an inclined plane.
+                Find an expression for its acceleration.
+                \begin{figure}[H]
+                    \centering
+                    \begin{tikzpicture}[scale=2]
+                        \draw (0,0) -- (3,0) -- (0,1) -- cycle;
+                        \draw (0.5,0.94) circle [radius=0.1];
+                        \draw (2.5,0) arc [radius=0.5, start angle=180, end angle=161.57];
+                        \node[above left] at (2.5,0) {$\theta$};
 
-                    \draw[->] (0.42,1.1) arc [radius=0.12, start angle=135, end angle=30];
-                    \draw[->,thick,rotate=-18.43,shift={(0.5,1.2)}] (0,0) -- (1,0);
-                    \node[above] at (1.3,0.9) {$\vec{a}_\text{COM}$};
+                        \draw[->] (0.42,1.1) arc [radius=0.12, start angle=135, end angle=30];
+                        \draw[->,thick,rotate=-18.43,shift={(0.5,1.2)}] (0,0) -- (1,0);
+                        \node[above] at (1.3,0.9) {$\vec{a}_\text{COM}$};
 
-                    \begin{scope}[shift={(4,0.6)},scale=0.6]
-                        \fill (0,0) circle [radius=0.05];
-                        \draw[->,thick] (0,0) -- (0,-1);
-                        \node[below] at (0,-1) {$\vec{W}$};
-                        \begin{scope}[rotate=-18.43]
-                            \draw[->,thick] (0,0) -- (-1,0);
-                            \node[left] at (-1,0) {$\vec{f}_s$};
-                            \draw[->,thick] (0,0) -- (0,1);
-                            \node[above] at (0,1) {$\vec{N}$};
-                            \draw[dashed] (0,0) -- (1,0);
+                        \begin{scope}[shift={(4,0.6)},scale=0.6]
+                            \fill (0,0) circle [radius=0.05];
+                            \draw[->,thick] (0,0) -- (0,-1);
+                            \node[below] at (0,-1) {$\vec{W}$};
+                            \begin{scope}[rotate=-18.43]
+                                \draw[->,thick] (0,0) -- (-1,0);
+                                \node[left] at (-1,0) {$\vec{f}_s$};
+                                \draw[->,thick] (0,0) -- (0,1);
+                                \node[above] at (0,1) {$\vec{N}$};
+                                \draw[dashed] (0,0) -- (1,0);
 
-                            \begin{scope}[shift={(0.5,0.5)},scale=0.5]
-                                \draw[<->] (0,1) |- (1,0);
-                                \node[above] at (0,1) {$y$};
-                                \node[right] at (1,0) {$x$};
+                                \begin{scope}[shift={(0.5,0.5)},scale=0.5]
+                                    \draw[<->] (0,1) |- (1,0);
+                                    \node[above] at (0,1) {$y$};
+                                    \node[right] at (1,0) {$x$};
+                                \end{scope}
                             \end{scope}
                         \end{scope}
-                    \end{scope}
-                \end{tikzpicture}
-            \end{figure}
-            
-            Looking at the forces in the $x$ direction, we get
-            \begin{align}
-                \sum F_x=m a_\text{COM}&=\abs{\vec{W}}\sin\theta-\abs{\vec{f}_s}\\
-                &=mg\sin\theta-f_s.
-            \end{align}
-            Now we need to find an expression for the magnitude of static friction $f_s$, which we can do by analysing the torques.
-            Since the only force which exerts a torque is static friction, we have $\tau_{f_s}=Rf_s=I\alpha$.
-            So using the moment of inertia for a disc $\frac{1}{2}mR^2$ and substituting $\alpha=a_\text{COM}/R$, we get
-            \begin{equation}
-                f_s=\frac{I a_\text{COM}}{R^2}=\frac{1}{2}ma_\text{COM}.
-            \end{equation}
-            Substituting this into the equation above, we get
-            \begin{align}
-                ma_\text{COM}&=mg\sin\theta-\frac{1}{2}ma_\text{COM}\\
-                &\implies a_\text{COM}=\frac{2}{3}g\sin\theta.
-            \end{align}
-            This result is somewhat interesting, the acceleration does not depend on the mass or radius of the disc, only the angle of the plane.
-            % TODO: compare to a block sliding down an incline plane
-            However, the acceleration does depend on the distribution of mass within the rolling object, i.e. the moment of inertia.
-            If we had left the moment of inertia unspecified, we would get
-            \begin{equation}
-                a_\text{COM}=\frac{mg\sin\theta}{\frac{I}{R^2}+m}.
-            \end{equation}
-            This is valid for all circular rolling objects.
-            As we have seen, the moment of inertia for most circular objects is proportional to $mR^2$, leading to a simplification with a different constant multiplying $g\sin\theta$.
-        \end{example}
-        % TODO: add example of sweet spot to hit a cue ball for perfect rolling
-        % TODO: rolling cylinder along a flat plane and falling yo-yo as exersises, answers are very similar
+                    \end{tikzpicture}
+                \end{figure}
+                
+                Looking at the forces in the $x$ direction, we get
+                \begin{align}
+                    \sum F_x=m a_\text{COM}&=\abs{\vec{W}}\sin\theta-\abs{\vec{f}_s}\\
+                    &=mg\sin\theta-f_s.
+                \end{align}
+                Now we need to find an expression for the magnitude of static friction $f_s$, which we can do by analysing the torques.
+                Since the only force which exerts a torque is static friction, we have $\tau_{f_s}=Rf_s=I\alpha$.
+                So using the moment of inertia for a disc $\frac{1}{2}mR^2$ and substituting $\alpha=a_\text{COM}/R$, we get
+                \begin{equation}
+                    f_s=\frac{I a_\text{COM}}{R^2}=\frac{1}{2}ma_\text{COM}.
+                \end{equation}
+                Substituting this into the equation above, we get
+                \begin{align}
+                    ma_\text{COM}&=mg\sin\theta-\frac{1}{2}ma_\text{COM}\\
+                    &\implies a_\text{COM}=\frac{2}{3}g\sin\theta.
+                \end{align}
+                This result is somewhat interesting, the acceleration does not depend on the mass or radius of the disc, only the angle of the plane.
+                % TODO: compare to a block sliding down an incline plane
+                However, the acceleration does depend on the distribution of mass within the rolling object, i.e. the moment of inertia.
+                If we had left the moment of inertia unspecified, we would get
+                \begin{equation}
+                    a_\text{COM}=\frac{mg\sin\theta}{\frac{I}{R^2}+m}.
+                \end{equation}
+                This is valid for all circular rolling objects.
+                As we have seen, the moment of inertia for most circular objects is proportional to $mR^2$, leading to a simplification with a different constant multiplying $g\sin\theta$.
+            \end{example}
+            % TODO: add example of sweet spot to hit a cue ball for perfect rolling
+            % TODO: rolling cylinder along a flat plane and falling yo-yo as exersises, answers are very similar
 
     \section{Static Equilibrium}\label{sec:static-equilibrium}
         In the net force and the net torque on a rigid body are both 0, then it is in \textbf{static equilibrium}.

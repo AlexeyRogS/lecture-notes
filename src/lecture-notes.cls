@@ -20,6 +20,8 @@
 \RequirePackage{amsthm} % automatic numbering of theorem environments and the proof environment
 \RequirePackage{tcolorbox} % styling theorem and proof environments
 
+\setcounter{tocdepth}{1}
+
 % ------ environments (theorem, definition, example, etc.)  ------ %
 
 % set up tcolorbox styles

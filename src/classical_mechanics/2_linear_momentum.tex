@@ -24,28 +24,30 @@
         This means it is constant for all time. We call this quantity the \textbf{linear momentum}.
 
     \section{Centre of Mass}\label{sec:centre-of-mass}
-        Some times it is useful to consider the \textbf{centre of mass} of a system, which is defined as the \textit{average} position of all the objects in the system.
-        For the system of two objects, this is calculated as
-        \begin{equation}
-            \vec{r}_\text{COM}=\frac{m_A\vec{r}_A+m_B\vec{r}_B}{m_A+m_B}.
-        \end{equation}
-        This defines a position vector which points to the centre of mass of the system.
-        By differentiating this vector with respect to time, we can get the velocity of the centre of mass
-        \begin{equation}
-            \vec{v}_\text{COM}=\dv{\vec{r}_\text{COM}}{t}=\frac{m_A\dv{\vec{r}_A}{t}+m_B\dv{\vec{r}_B}{t}}{m_A+m_B}=\frac{m_A\vec{v}_A+m_B\vec{v}_B}{m_A+m_B}.
-        \end{equation}
-        This is just the total momentum of the two objects divided by their total mass, and we found before that the total momentum was conserved.
-        % TODO: hint at when it is not conserved
-        \begin{equation}
-            (m_A+m_B)\vec{v}_\text{COM}=m_A\vec{v}_A+m_B\vec{v}_B=\text{constant}.
-        \end{equation}
-        From these definitions we can see that equation \ref{eq-COM-acc} is the accleration of the centre of mass multiplied by the total mass, which by Newton's second law is the force on the centre of mass.
-        This implies that if the resultant force on the centre of mass is 0, then the centre of mass moves with constant velocity, just like a single object following Newton's first law, and the total linear momentum is conserved.
-        \begin{example}
-            For a system of two objects, show that the centre of mass is always located on the line that connects the two objects.
-            % TODO: write this
-        \end{example}
+        \subsection{Centre of Mass of Two Objects}\label{sec:centre-of-mass:subsec:two-objects}
+            Some times it is useful to consider the \textbf{centre of mass} of a system, which is defined as the \textit{average} position of all the objects in the system.
+            For the system of two objects, this is calculated as
+            \begin{equation}
+                \vec{r}_\text{COM}=\frac{m_A\vec{r}_A+m_B\vec{r}_B}{m_A+m_B}.
+            \end{equation}
+            This defines a position vector which points to the centre of mass of the system.
+            By differentiating this vector with respect to time, we can get the velocity of the centre of mass
+            \begin{equation}
+                \vec{v}_\text{COM}=\dv{\vec{r}_\text{COM}}{t}=\frac{m_A\dv{\vec{r}_A}{t}+m_B\dv{\vec{r}_B}{t}}{m_A+m_B}=\frac{m_A\vec{v}_A+m_B\vec{v}_B}{m_A+m_B}.
+            \end{equation}
+            This is just the total momentum of the two objects divided by their total mass, and we found before that the total momentum was conserved.
+            % TODO: hint at when it is not conserved
+            \begin{equation}
+                (m_A+m_B)\vec{v}_\text{COM}=m_A\vec{v}_A+m_B\vec{v}_B=\text{constant}.
+            \end{equation}
+            From these definitions we can see that equation \ref{eq-COM-acc} is the accleration of the centre of mass multiplied by the total mass, which by Newton's second law is the force on the centre of mass.
+            This implies that if the resultant force on the centre of mass is 0, then the centre of mass moves with constant velocity, just like a single object following Newton's first law, and the total linear momentum is conserved.
+            \begin{example}
+                For a system of two objects, show that the centre of mass is always located on the line that connects the two objects.
+                % TODO: write this
+            \end{example}
 
+        \subsection{Centre of Mass of $N$ Objects}\label{sec:centre-of-mass:subsec:n-objects}
         For a general system of $N$ objects, we define the total mass and total momentum as
         \begin{align}
             M&=m_1+m_2+\dots+m_N\\
@@ -265,7 +267,7 @@
 
         For a general system of $N$ objects, the total impulse on the system over a time interval is
         \begin{equation}
-            \vec{J}=\int_{t_1}^{t_2}\sum_{i=1}^N\vec{F}_i(t)\dd{t}t=\int_{t_1}^{t_2}\vec{F}_\text{ext}\dd{t}.
+            \vec{J}=\int_{t_1}^{t_2}\sum_{i=1}^N\vec{F}_i(t)\dd{t}=\int_{t_1}^{t_2}\vec{F}_\text{ext}\dd{t}.
         \end{equation}
         By equation \ref{eq-NII-macroscopic} in the previous section,
         \begin{align}
