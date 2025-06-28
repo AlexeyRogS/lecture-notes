@@ -2,7 +2,7 @@
 
 \begin{document}
 
-    \section{Why do we Need the Real Numbers?}
+    \section{Why do we Need the Real Numbers?}\label{sec:why-do-we-need-real-numbers}
         The rational numbers have many desirable properties by themselves which allow us to do a lot of mathematics with them. One of these is that they are closed under regular arithmetic operations of addition and multiplication. In fact, $\mathbb{Q}$ forms an \textbf{ordered field} when paired with the total order $\leq$. The rational numbers, along with the integers and natural numbers, satisfy the \textbf{Archimedean property},
         \[\forall q\in\mathbb{Q},\ \exists n\in\mathbb{N}\ \mathrm{s.t.}\ n>q,\]
         and they also possess the property of \textbf{density}, which states that between any two rational numbers there exists another rational number.
@@ -44,10 +44,10 @@
         \end{proof}
         % TODO: ordered field stuff 4.2.7 and 4.2.9 in tao
 
-    \section{Construction of the Reals}
+    \section{Construction of the Reals}\label{sec:construction-of-the-reals}
         We are giving this real number system a lot of praise, but how can we actually show that it exists?
 
-    \section{Subsets of the Real Line}
+    \section{Subsets of the Real Line}\label{sec:subsets-of-the-real-line}
         It is helpful to note at this point that the completeness property from before also guarantees the existence of infimums for non-empty subsets that are bounded below.
         \begin{theorem}
             Every non-empty subset of $\mathbb{R}$ that is bounded below has an infimum in $\mathbb{R}$.
@@ -56,27 +56,29 @@
             Let $S$ be a non-empty subset of $\mathbb{R}$ that is bounded above. Then by the completeness property there exists $\ell\in\mathbb{R}$ such that $\ell=\sup(S)$.
             Now consider the set $S^\prime=\{-s\,:\,s\in S\}$. It is clear that $S^\prime$ is a non-empty subset of $\mathbb{R}$ which is bounded below, and that $-\ell=\inf(S)$.
         \end{proof}
-        Quite often we will need some compact notation for denoting a continuous subset of $\mathbb{R}$, such as the positive real numbers, all real numbers between -1 and 4, etc. These subsets are called \textit{intervals}, and we will define them now.
-        \begin{definition}
-            Let $a, b \in \mathbb{R}$ with $a<b$. Then the \textbf{closed interval} from $a$ to $b$ is given by
-            \[[a, b] = \{x \in \mathbb{R} : a \leq x \leq b\},\]
-            and the \textbf{open interval} from $a$ to $b$ is given by
-            \[(a, b) = \{x \in \mathbb{R} : a < x < b\}.\]
-            Likewise the \textbf{half-open intervals} may be defined similarly as
-            \[(a, b] = \{x \in \mathbb{R} : a < x \leq b\},\]
-            \[[a, b) = \{x \in \mathbb{R} : a \leq x < b\}.\]
-        \end{definition}
-        To denote a half-unbounded or fully unbounded interval, we can use a $\infty$ symbol. For example:
-        \[[a, \infty) = \{x \in \mathbb{R} : a \leq x\},\]
-        or
-        \[(-\infty, 0) = \{x \in \mathbb{R} : x < 0\},\]
-        and we could also say
-        \[(-\infty, \infty) = \mathbb{R}.\]
-        It is also useful to note that
-        \[\sup((a, b))=\sup([a, b])=b,\quad\inf((a, b))=\inf([a, b])=a\].
-        % TODO: heine-borel theorem for the line (Theorem 9.1.24 in tao)
 
-    \section{Absolute Value}
+        \subsection{Intervals}\label{subsec:intervals}
+            Quite often we will need some compact notation for denoting a continuous subset of $\mathbb{R}$, such as the positive real numbers, all real numbers between -1 and 4, etc. These subsets are called \textit{intervals}, and we will define them now.
+            \begin{definition}
+                Let $a, b \in \mathbb{R}$ with $a<b$. Then the \textbf{closed interval} from $a$ to $b$ is given by
+                \[[a, b] = \{x \in \mathbb{R} : a \leq x \leq b\},\]
+                and the \textbf{open interval} from $a$ to $b$ is given by
+                \[(a, b) = \{x \in \mathbb{R} : a < x < b\}.\]
+                Likewise the \textbf{half-open intervals} may be defined similarly as
+                \[(a, b] = \{x \in \mathbb{R} : a < x \leq b\},\]
+                \[[a, b) = \{x \in \mathbb{R} : a \leq x < b\}.\]
+            \end{definition}
+            To denote a half-unbounded or fully unbounded interval, we can use a $\infty$ symbol. For example:
+            \[[a, \infty) = \{x \in \mathbb{R} : a \leq x\},\]
+            or
+            \[(-\infty, 0) = \{x \in \mathbb{R} : x < 0\},\]
+            and we could also say
+            \[(-\infty, \infty) = \mathbb{R}.\]
+            It is also useful to note that
+            \[\sup((a, b))=\sup([a, b])=b,\quad\inf((a, b))=\inf([a, b])=a\].
+            % TODO: heine-borel theorem for the line (Theorem 9.1.24 in tao)
+
+    \section{Absolute Value}\label{sec:absolute-value}
         \begin{definition}
             Let $x \in \mathbb{R}$. Then the \textbf{absolute value of $x$} is defined as
             \[\abs{x} = \begin{cases}
@@ -139,7 +141,7 @@
         % TODO: add note about how absolute value is analogous to "distance" between numbers
         % TODO: add simpler definition of bounded using absolute value
 
-    \section{Inequalities}
+    \section{Inequalities}\label{sec:inequalities}
         Manipulating inequalities is an extremely useful trick in analysis because they appear everywhere. We have already discovered and proved the triangle inequality, and now we will discuss a few more.
         \begin{theorem}[General Triangle Inequality]
             % https://math.stackexchange.com/questions/195582/general-proof-for-the-triangle-inequality

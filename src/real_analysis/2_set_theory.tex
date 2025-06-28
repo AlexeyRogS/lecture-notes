@@ -2,7 +2,7 @@
 
 \begin{document}
 
-    \section{Introduction to Sets}
+    \section{Introduction to Sets}\label{sec:introduction-to-sets}
         In modern mathematics, set theory is important as a foundation from which all of mathematics can be derived. All of the mathematical objects we deal with in analysis will be defined in terms of sets.
         \begin{definition}
             A \textbf{set} is an \textit{unordered} collection of objects. If an object $x$ is contained in a set $A$, we call $x$ an \textbf{element} or \textbf{member} of $A$ and write $x \in A$. Likewise if $x$ is \textit{not} contained in $A$ we can say $x$ \textbf{does not belong to} $A$ and write $x \notin A$. Sets are notated with curly braces \{\} around a comma-separated list of the elements.
@@ -31,7 +31,7 @@
             Then we write $B \subset A$.
         \end{definition}
 
-    \section{Algebra of Sets}
+    \section{Algebra of Sets}\label{sec:algebra-of-sets}
         There are operations that we can do on sets to form new sets. These operations can be interpreted as set-theoretic implementations of the Boolean operations and, or, \& not. They also have satisfying parallels with operations and relations that we are familiar with for numbers. For the next three definitions, let $A$ and $B$ be sets.
         \begin{definition}
             The \textbf{union} of $A$ and $B$, $A \cup B$, is defined as
@@ -54,42 +54,44 @@
             So in plain speech, the Cartesian product of two sets is the set of all ordered pairs where the first component is a member of the first set and the second component is a member of the second set. It can be seen as a generalisation of the notion of Cartesian coordinates in the plane. Sometimes the Cartesian product of a set $X$ with itself is noted as $X^2$ instead of $X \times X$, for example $\mathbb{Z}^2 = \mathbb{Z} \times \mathbb{Z}$ denoting the set of all integer points in the plane.
         \end{definition}
 
-    \section{Ordering \& Bounding}
-        \begin{definition}
-            A \textbf{partially ordered set} is an ordered pair $(X, \leq)$, where $X$ is a set and $\leq$ is a binary relation which forms a \textbf{partial order} on $X$. For any two elements $x, y \in X$ we have either $x \leq y$, or $x \slashed{\leq} y$.
-        \end{definition}
-        \begin{example}
-            Let $S$ be a set, then let $P(S)$ be the set of subsets of $S$. Then $(P(S), \subseteq)$ is a partially ordered set. For any two elements $A, B \in P(S)$ we have either $A \subseteq B$ or $A \slashed{\subseteq} B$.
-        \end{example}
-        \begin{definition}
-            A \textbf{totally ordered set} is an ordered pair $(X, \leq)$, where $X$ is a set and $\leq$ is a binary relation which forms a \textbf{total order} on $X$. So for any two elements $x, y \in X$ we have $x \leq y$, or $y \leq x$, or both (never neither)\footnote{This is known as the \textbf{trichotomy law}}. It is possible for a subset of a partially ordered set to be totally ordered (under the same relation).
-        \end{definition}
-        \begin{example}
-            $(\mathbb{N}, \leq)$ --- the set of natural numbers with the greater than or equal to relation --- forms a totally ordered set. For any $m, n \in \mathbb{N}$ we have $m \leq n$, or $n \leq m$, or both ($m=n$). Any subset of $\mathbb{N}$ is also totally ordered under $\leq$.
-        \end{example}
-        The key difference between partial orders and total orders is that partial orders are only useful for comparing some elements with each other whereas total orders can compare all elements with each other.
+    \section{Ordering \& Bounding}\label{sec:ordering-and-bounding}
+        \subsection{Orders}\label{subsec:orders}
+            \begin{definition}
+                A \textbf{partially ordered set} is an ordered pair $(X, \leq)$, where $X$ is a set and $\leq$ is a binary relation which forms a \textbf{partial order} on $X$. For any two elements $x, y \in X$ we have either $x \leq y$, or $x \slashed{\leq} y$.
+            \end{definition}
+            \begin{example}
+                Let $S$ be a set, then let $P(S)$ be the set of subsets of $S$. Then $(P(S), \subseteq)$ is a partially ordered set. For any two elements $A, B \in P(S)$ we have either $A \subseteq B$ or $A \slashed{\subseteq} B$.
+            \end{example}
+            \begin{definition}
+                A \textbf{totally ordered set} is an ordered pair $(X, \leq)$, where $X$ is a set and $\leq$ is a binary relation which forms a \textbf{total order} on $X$. So for any two elements $x, y \in X$ we have $x \leq y$, or $y \leq x$, or both (never neither)\footnote{This is known as the \textbf{trichotomy law}}. It is possible for a subset of a partially ordered set to be totally ordered (under the same relation).
+            \end{definition}
+            \begin{example}
+                $(\mathbb{N}, \leq)$ --- the set of natural numbers with the greater than or equal to relation --- forms a totally ordered set. For any $m, n \in \mathbb{N}$ we have $m \leq n$, or $n \leq m$, or both ($m=n$). Any subset of $\mathbb{N}$ is also totally ordered under $\leq$.
+            \end{example}
+            The key difference between partial orders and total orders is that partial orders are only useful for comparing some elements with each other whereas total orders can compare all elements with each other.
+        
+        \subsection{Bounds}\label{subsec:bounds}
+            There are several different ways we can create definitions for different kinds of `extreme' elements in a set, all with subtle differences between them. We will go through some of these now.
+            \begin{definition}
+                Let $(P, \leq)$ be a partially ordered set and let $S \subseteq P$.
+                \begin{itemize}
+                    \item An element $g \in S$ is the \textbf{greatest element} of $S$ if $\forall s \in S,\, s \leq g$. If a greatest element exists, clearly it is unique (due to the trichotomy law).
+                    In other words, a greatest element is an element that is greater than \textit{all} other elements. However, note that greatest elements may not necessarily exist.
+                    \item An element $m \in S$ is a \textbf{maximal element} of $S$ if there does \textit{not} exist any $s \in S$ with $(s \neq m)$ such that $m \leq s$. A set may have multiple maximal elements, and they may exist without there being a greatest element. Maximal elements also may not necessarily exist.
+                    In simple terms, a maximal element is one that is not smaller than any other element. Notice how this definition is subtly different to the definition of the greatest element.
+                    \item An element $u \in P$ is an \textbf{upper bound} for $S$ in $P$ $\iff \forall s \in S,\, s \leq u$.
+                    Note that if $P=S$, then the definition of a greatest element of $S$ becomes equivalent to the definition of an upper bound of $S$ in $S$, therefore an element $g \in S$ is the greatest element of $S$ if and only if $g$ is an upper bound for $S$ and $g \in S$. It is also plausible that $S$ may \textit{not} have a greatest element while also having an upper bound in $P$ (that's a tricky one to get your head around).
+                    \item Let $T$ be a \textit{totally ordered} subset of $P$. Then the greatest element of $T$ and the maximal element of $T$ are the same, in which case this element is called the \textbf{maximum} of $T$.
+                    \item Let $U(S) \subseteq P$ be the set of all upper bounds for $S$ in $P$. Then $l \in U(S)$ is the \textbf{supremum} (or \textbf{least upper bound}) of $S$ if $\forall u \in U(S),\, l \leq u$.
+                    Basically the supremum of $S$ is the least element of $U(S)$. Thus if suprema exist, they are unique. If a greatest element or maximum exists, then it is the supremum, and this is the only case where the supremum of a set will lie in the set itself.
+                    \item If we switch the elements around the $\leq$ sign in all the above definitions, we obtain the definitions for the dual notions of all those just defined: the \textbf{least element}, \textbf{minimal element}, \textbf{lower bound}, \textbf{minimum}, and \textbf{infimum} (or \textbf{greatest lower bound}).
+                \end{itemize}
+            \end{definition}
+            % TODO: say that we define suprema because maxima may not exist (def 1.3 in notes)
+            % also remove unnecessary stuff from this pls
 
-        There are several different ways we can create definitions for different kinds of `extreme' elements in a set, all with subtle differences between them. We will go through some of these now.
-        \begin{definition}
-            Let $(P, \leq)$ be a partially ordered set and let $S \subseteq P$.
-            \begin{itemize}
-                \item An element $g \in S$ is the \textbf{greatest element} of $S$ if $\forall s \in S,\, s \leq g$. If a greatest element exists, clearly it is unique (due to the trichotomy law).
-                In other words, a greatest element is an element that is greater than \textit{all} other elements. However, note that greatest elements may not necessarily exist.
-                \item An element $m \in S$ is a \textbf{maximal element} of $S$ if there does \textit{not} exist any $s \in S$ with $(s \neq m)$ such that $m \leq s$. A set may have multiple maximal elements, and they may exist without there being a greatest element. Maximal elements also may not necessarily exist.
-                In simple terms, a maximal element is one that is not smaller than any other element. Notice how this definition is subtly different to the definition of the greatest element.
-                \item An element $u \in P$ is an \textbf{upper bound} for $S$ in $P$ $\iff \forall s \in S,\, s \leq u$.
-                Note that if $P=S$, then the definition of a greatest element of $S$ becomes equivalent to the definition of an upper bound of $S$ in $S$, therefore an element $g \in S$ is the greatest element of $S$ if and only if $g$ is an upper bound for $S$ and $g \in S$. It is also plausible that $S$ may \textit{not} have a greatest element while also having an upper bound in $P$ (that's a tricky one to get your head around).
-                \item Let $T$ be a \textit{totally ordered} subset of $P$. Then the greatest element of $T$ and the maximal element of $T$ are the same, in which case this element is called the \textbf{maximum} of $T$.
-                \item Let $U(S) \subseteq P$ be the set of all upper bounds for $S$ in $P$. Then $l \in U(S)$ is the \textbf{supremum} (or \textbf{least upper bound}) of $S$ if $\forall u \in U(S),\, l \leq u$.
-                Basically the supremum of $S$ is the least element of $U(S)$. Thus if suprema exist, they are unique. If a greatest element or maximum exists, then it is the supremum, and this is the only case where the supremum of a set will lie in the set itself.
-                \item If we switch the elements around the $\leq$ sign in all the above definitions, we obtain the definitions for the dual notions of all those just defined: the \textbf{least element}, \textbf{minimal element}, \textbf{lower bound}, \textbf{minimum}, and \textbf{infimum} (or \textbf{greatest lower bound}).
-            \end{itemize}
-        \end{definition}
-        % TODO: say that we define suprema because maxima may not exist (def 1.3 in notes)
-        % also remove unnecessary stuff from this pls
+            %TODO: prove that if a maxima exists, then it is the supremum (lemma 1.3 in notes)
 
-        %TODO: prove that if a maxima exists, then it is the supremum (lemma 1.3 in notes)
-
-        %TODO: include definition of a bounded set
+            %TODO: include definition of a bounded set
 
 \end{document}
