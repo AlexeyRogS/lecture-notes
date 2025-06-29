@@ -100,4 +100,17 @@
         </xsl:choose>
     </xsl:template>
 
+    <!-- Changed navigation elements that appear in the footer -->
+    <xsl:template match="/" mode="footer-navigation">
+        <xsl:if test="//ltx:navigation/ltx:ref">
+            <xsl:text>&#x0A;</xsl:text>
+            <xsl:element name="div" namespace="{$html_ns}">
+                <xsl:attribute name="class">ltx_align_center</xsl:attribute>
+                <xsl:apply-templates select="//ltx:navigation/ltx:ref[@rel='prev']"/>
+                <xsl:apply-templates select="//ltx:navigation/ltx:ref[@rel='next']"/>
+                <xsl:text>&#x0A;</xsl:text>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
 </xsl:stylesheet>
