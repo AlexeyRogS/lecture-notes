@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>6.5 Forced Oscillations ‣ Chapter 6 Oscillations ‣ Classical Mechanics</title>
+<!--Generated on Sun Jun 29 10:34:36 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="../ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="up up" href="../index.html" title="Classical Mechanics">
+<link rel="start" href="../index.html" title="Classical Mechanics">
+<link rel="prev" href="damped-oscillations.html" title="6.4 Damped Oscillations ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="next" href="coupled-oscillations-and-normal-modes.html" title="6.6 Coupled Oscillations and Normal Modes ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="simple-harmonic-motion.html" title="6.1 Simple Harmonic Motion ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="physical-pendula.html" title="6.2 Physical Pendula ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="energy-in-simple-harmonic-motion.html" title="6.3 Energy in Simple Harmonic Motion ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="damped-oscillations.html" title="6.4 Damped Oscillations ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="section" href="coupled-oscillations-and-normal-modes.html" title="6.6 Coupled Oscillations and Normal Modes ‣ Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="../laws-of-motion/index.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="../linear-momentum/index.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="../energy-and-work/index.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="../angular-motion/index.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="../angular-momentum/index.html" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="./" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="../waves/index.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../laws-of-motion/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Newton’s Laws of Motion</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../linear-momentum/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Linear Momentum</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../energy-and-work/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Energy &amp; Work</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../angular-motion/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Angular Motion</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../angular-momentum/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Angular Momentum</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Oscillations</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="simple-harmonic-motion.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.1 </span>Simple Harmonic Motion</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="physical-pendula.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.2 </span>Physical Pendula</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="energy-in-simple-harmonic-motion.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.3 </span>Energy in Simple Harmonic Motion</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="damped-oscillations.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.4 </span>Damped Oscillations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.5 </span>Forced Oscillations</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#underdamped-driven-oscillations" title="In 6.5 Forced Oscillations ‣ Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.5.1 </span>Underdamped Driven Oscillations</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="coupled-oscillations-and-normal-modes.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6 </span>Coupled Oscillations and Normal Modes</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../waves/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Waves</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="../bibliography.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Oscillations</span></a><a href="damped-oscillations.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.4 </span>Damped Oscillations</span></a><a href="coupled-oscillations-and-normal-modes.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6 </span>Coupled Oscillations and Normal Modes</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6.5 </span>Forced Oscillations</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">A forced oscillator is an oscillator subject to a periodic external force.</p>
+<table id="Ch6.E68" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E68.m1" class="ltx_Math" alttext="F_{\text{net}}=-kx-bv+F_{\text{drive}}." display="block"><mrow><mrow><msub><mi>F</mi><mtext>net</mtext></msub><mo>=</mo><mrow><mrow><mrow><mo>−</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>+</mo><msub><mi>F</mi><mtext>drive</mtext></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.68)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Consider a sinusoidal driving force <math id="p1.m1" class="ltx_Math" alttext="F_{\text{drive}}=F_{0}\cos(\omega_{\text{dr}}t)" display="inline"><mrow><msub><mi>F</mi><mtext>drive</mtext></msub><mo>=</mo><mrow><msub><mi>F</mi><mn>0</mn></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ω</mi><mtext>dr</mtext></msub><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+Then the equation of motion becomes</p>
+<table id="Ch6.E69" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E69.m1" class="ltx_Math" alttext="m\frac{\operatorname{\mathrm{d}}\!^{2}x}{\operatorname{\mathrm{d}}\!t^{2}}+b%
+\frac{\operatorname{\mathrm{d}}\!x}{\operatorname{\mathrm{d}}\!t}+kx=F_{0}\cos%
+(\omega_{\text{dr}}t)." display="block"><mrow><mrow><mrow><mrow><mi>m</mi><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mn>0</mn></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ω</mi><mtext>dr</mtext></msub><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.69)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">When we solve this equation, what we find is that, when damping is small, there is a huge build-up of energy when the system is driven at its resonant frequency <math id="p1.m2" class="ltx_Math" alttext="\omega_{0}" display="inline"><msub><mi>ω</mi><mn>0</mn></msub></math>.
+This phenomenon is called <span class="ltx_text ltx_font_bold">resonance</span>.
+Mathematically, the condition for resonance is</p>
+<table id="Ch6.E70" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E70.m1" class="ltx_Math" alttext="\omega_{\text{drive}}=\sqrt{\omega_{0}^{2}-\frac{b^{2}}{2m^{2}}}=\sqrt{\omega_%
+{0}^{2}-2\gamma^{2}}." display="block"><mrow><mrow><msub><mi>ω</mi><mtext>drive</mtext></msub><mo>=</mo><msqrt><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><mfrac><msup><mi>b</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><msup><mi>m</mi><mn>2</mn></msup></mrow></mfrac></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>γ</mi><mn>2</mn></msup></mrow></mrow></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.70)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We call this <math id="p1.m3" class="ltx_Math" alttext="\omega_{\text{res}}" display="inline"><msub><mi>ω</mi><mtext>res</mtext></msub></math>.
+Note that this is not the damped frequency <math id="p1.m4" class="ltx_Math" alttext="\omega_{d}" display="inline"><msub><mi>ω</mi><mi>d</mi></msub></math> from above.
+We see that when damping is weak, the condition for resonance becomes <math id="p1.m5" class="ltx_Math" alttext="\omega_{\text{drive}}\approx\omega_{0}" display="inline"><mrow><msub><mi>ω</mi><mtext>drive</mtext></msub><mo>≈</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">To find the resonant frequency of a system, there are two general methods we can use.
+There is the “impulse method”, where we excite all frequencies in the system at once.
+The system will then resonate at the resonant frequency and the vibrations at other frequencies will decay away (we will see why shortly).
+An example of this is striking a bell.
+The other method is the “frequency-scan method”, where we use a low-ampltidue signal and scan through frequencies until we hit resonance, when energy will rapidly build up.</p>
+</div>
+<section id="underdamped-driven-oscillations" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">6.5.1 </span>Underdamped Driven Oscillations</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">For the case of underdamping (<math id="SS1.p1.m1" class="ltx_Math" alttext="\gamma&lt;\omega_{0}" display="inline"><mrow><mi>γ</mi><mo>&lt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow></math>), the general solution is a sum of a transient (decaying) oscillation at the damped frequency and a steady state (not decaying) oscillation at the driven frequency.</p>
+<table id="Ch6.E71" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E71.m1" class="ltx_Math" alttext="x(t)=A_{\text{decay}}e^{-\gamma t}\cos(\omega_{d}t+\phi_{\text{decay}})+A_{%
+\text{steady}}\cos(\omega_{\text{drive}}t-\phi_{\text{steady}})." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>A</mi><mtext>decay</mtext></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><msub><mi>ϕ</mi><mtext>decay</mtext></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>A</mi><mtext>steady</mtext></msub><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>ω</mi><mtext>drive</mtext></msub><mo>⁢</mo><mi>t</mi></mrow><mo>−</mo><msub><mi>ϕ</mi><mtext>steady</mtext></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.71)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The ampltiude and phase of the steady state oscillation depend on the driven frequency and the resonant frequency.
+These dependencies have the form</p>
+<table id="Ch6.E72" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E72.m1" class="ltx_Math" alttext="A_{\text{steady}}=\frac{F_{0}/m}{\sqrt{(\omega_{\text{dr}}^{2}-\omega_{0}^{2})%
+^{2}+\left(\frac{b}{m}\right)^{2}\omega_{\text{dr}}^{2}}},\quad\phi_{\text{%
+steady}}=\tan^{-1}\left(\frac{\left(\frac{b}{m}\right)\omega_{\text{drive}}}{%
+\omega_{0}^{2}-\omega_{\text{drive}}^{2}}\right)+\phi_{0}" display="block"><mrow><mrow><msub><mi>A</mi><mtext>steady</mtext></msub><mo>=</mo><mfrac><mrow><msub><mi>F</mi><mn>0</mn></msub><mo>/</mo><mi>m</mi></mrow><msqrt><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mtext>dr</mtext><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mrow><msup><mrow><mo>(</mo><mfrac><mi>b</mi><mi>m</mi></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>ω</mi><mtext>dr</mtext><mn>2</mn></msubsup></mrow></mrow></msqrt></mfrac></mrow><mo rspace="1.167em">,</mo><mrow><msub><mi>ϕ</mi><mtext>steady</mtext></msub><mo>=</mo><mrow><mrow><msup><mi>tan</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁡</mo><mrow><mo>(</mo><mfrac><mrow><mrow><mo>(</mo><mfrac><mi>b</mi><mi>m</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><msub><mi>ω</mi><mtext>drive</mtext></msub></mrow><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>ω</mi><mtext>drive</mtext><mn>2</mn></msubsup></mrow></mfrac><mo>)</mo></mrow></mrow><mo>+</mo><msub><mi>ϕ</mi><mn>0</mn></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.72)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p"><math id="SS1.p1.m2" class="ltx_Math" alttext="A_{\text{steady}}" display="inline"><msub><mi>A</mi><mtext>steady</mtext></msub></math> has a maximum at <math id="SS1.p1.m3" class="ltx_Math" alttext="\omega_{\text{res}}" display="inline"><msub><mi>ω</mi><mtext>res</mtext></msub></math>, which is the resonance phenomenon we have been discussing.
+Note that we now have three different “resonance” frequencies for oscillators.
+<math id="SS1.p1.m4" class="ltx_Math" alttext="\omega_{0}" display="inline"><msub><mi>ω</mi><mn>0</mn></msub></math> for when we have an undamped, undriven oscillator (SHM), <math id="SS1.p1.m5" class="ltx_Math" alttext="\omega_{d}" display="inline"><msub><mi>ω</mi><mi>d</mi></msub></math> for a damped oscillator, and <math id="SS1.p1.m6" class="ltx_Math" alttext="\omega_{\text{res}}" display="inline"><msub><mi>ω</mi><mtext>res</mtext></msub></math> for a driven oscillator.
+We see that at low driving frequencies, the ampltide of the steady state is small (but nonzero) but the oscillation is in-phase with the driving force.
+For high driving frequencies, the amplitude goes to zero, and the oscillation is in anti-phase with the driving force.
+At resonance, the phase of the steady state is <math id="SS1.p1.m7" class="ltx_Math" alttext="\pi/2" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>2</mn></mrow></math>, which means the driving force is in-phase with the velocity.
+This makes sense because then we have a <span class="ltx_text ltx_font_italic">constant</span> power input to the system (<math id="SS1.p1.m8" class="ltx_Math" alttext="P=\boldsymbol{F}\cdot\boldsymbol{v}" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mi>𝑭</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝒗</mi></mrow></mrow></math>).</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">For a driven oscillator, we find that the <math id="SS1.p2.m1" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>-factor is</p>
+<table id="Ch6.E73" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E73.m1" class="ltx_Math" alttext="Q=\frac{\omega_{\text{res}}}{\text{FWHM of energy curve}}\approx\omega_{\text{%
+res}}\frac{m}{b}." display="block"><mrow><mrow><mi>Q</mi><mo>=</mo><mfrac><msub><mi>ω</mi><mtext>res</mtext></msub><mtext>FWHM of energy curve</mtext></mfrac><mo>≈</mo><mrow><msub><mi>ω</mi><mtext>res</mtext></msub><mo>⁢</mo><mfrac><mi>m</mi><mi>b</mi></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.73)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If damping is low, we can say <math id="SS1.p2.m2" class="ltx_Math" alttext="Q\approx\omega_{0}\frac{m}{b}" display="inline"><mrow><mi>Q</mi><mo>≈</mo><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>⁢</mo><mfrac><mi>m</mi><mi>b</mi></mfrac></mrow></mrow></math> and write</p>
+<table id="Ch6.E74" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch6.E74.m1" class="ltx_Math" alttext="A_{\text{steady}}\approx\frac{F_{0}(\omega_{0}/\omega_{\text{drive}})}{k\sqrt{%
+\left(\frac{\omega_{0}}{\omega_{\text{drive}}}-\frac{\omega_{\text{drive}}}{%
+\omega_{0}}\right)^{2}+\frac{1}{Q^{2}}}}." display="block"><mrow><mrow><msub><mi>A</mi><mtext>steady</mtext></msub><mo>≈</mo><mfrac><mrow><msub><mi>F</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>/</mo><msub><mi>ω</mi><mtext>drive</mtext></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>k</mi><mo>⁢</mo><msqrt><mrow><msup><mrow><mo>(</mo><mrow><mfrac><msub><mi>ω</mi><mn>0</mn></msub><msub><mi>ω</mi><mtext>drive</mtext></msub></mfrac><mo>−</mo><mfrac><msub><mi>ω</mi><mtext>drive</mtext></msub><msub><mi>ω</mi><mn>0</mn></msub></mfrac></mrow><mo>)</mo></mrow><mn>2</mn></msup><mo>+</mo><mfrac><mn>1</mn><msup><mi>Q</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6.74)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">So for <math id="SS1.p2.m3" class="ltx_Math" alttext="Q\gg 1" display="inline"><mrow><mi>Q</mi><mo>≫</mo><mn>1</mn></mrow></math>, we get the following cases.
+For <math id="SS1.p2.m4" class="ltx_Math" alttext="\omega_{\text{drive}}\ll\omega_{\text{res}}" display="inline"><mrow><msub><mi>ω</mi><mtext>drive</mtext></msub><mo>≪</mo><msub><mi>ω</mi><mtext>res</mtext></msub></mrow></math>, <math id="SS1.p2.m5" class="ltx_Math" alttext="A_{\text{steady}}=F_{0}/k" display="inline"><mrow><msub><mi>A</mi><mtext>steady</mtext></msub><mo>=</mo><mrow><msub><mi>F</mi><mn>0</mn></msub><mo>/</mo><mi>k</mi></mrow></mrow></math>.
+For <math id="SS1.p2.m6" class="ltx_Math" alttext="\omega_{\text{drive}}=\omega_{\text{res}}" display="inline"><mrow><msub><mi>ω</mi><mtext>drive</mtext></msub><mo>=</mo><msub><mi>ω</mi><mtext>res</mtext></msub></mrow></math>, we get <math id="SS1.p2.m7" class="ltx_Math" alttext="A_{\text{steady}}=QF_{0}/k" display="inline"><mrow><msub><mi>A</mi><mtext>steady</mtext></msub><mo>=</mo><mrow><mrow><mi>Q</mi><mo>⁢</mo><msub><mi>F</mi><mn>0</mn></msub></mrow><mo>/</mo><mi>k</mi></mrow></mrow></math>.
+For <math id="SS1.p2.m8" class="ltx_Math" alttext="\omega_{\text{drive}}\gg\omega_{\text{res}}" display="inline"><mrow><msub><mi>ω</mi><mtext>drive</mtext></msub><mo>≫</mo><msub><mi>ω</mi><mtext>res</mtext></msub></mrow></math>, we have <math id="SS1.p2.m9" class="ltx_Math" alttext="A_{\text{steady}}=-\frac{\omega_{0}}{\omega_{\text{drive}}}F_{0}/k" display="inline"><mrow><msub><mi>A</mi><mtext>steady</mtext></msub><mo>=</mo><mrow><mo>−</mo><mrow><mrow><mfrac><msub><mi>ω</mi><mn>0</mn></msub><msub><mi>ω</mi><mtext>drive</mtext></msub></mfrac><mo>⁢</mo><msub><mi>F</mi><mn>0</mn></msub></mrow><mo>/</mo><mi>k</mi></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="damped-oscillations.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.4 </span>Damped Oscillations</span></a><a href="../bibliography.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="coupled-oscillations-and-normal-modes.html" title="In Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6.6 </span>Coupled Oscillations and Normal Modes</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jun 29 10:34:36 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics</title>
+<!--Generated on Sun Jun 29 10:34:36 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="../ltx-book.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="up up" href="../index.html" title="Classical Mechanics">
+<link rel="start" href="../index.html" title="Classical Mechanics">
+<link rel="prev" href="moments.html" title="5.1 Moments ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="next" href="torque.html" title="5.3 Torque ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="moments.html" title="5.1 Moments ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="torque.html" title="5.3 Torque ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="torque-and-angular-momentum-for-systems-of-particles.html" title="5.4 Torque and Angular Momentum for Systems of Particles ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="dynamics-of-rigid-bodies.html" title="5.5 Dynamics of Rigid Bodies ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="rolling-motion.html" title="5.6 Rolling Motion ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="section" href="static-equilibrium.html" title="5.7 Static Equilibrium ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Classical Mechanics">
+<link rel="chapter" href="../laws-of-motion/index.html" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
+<link rel="chapter" href="../linear-momentum/index.html" title="Chapter 2 Linear Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="../energy-and-work/index.html" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
+<link rel="chapter" href="../angular-motion/index.html" title="Chapter 4 Angular Motion ‣ Classical Mechanics">
+<link rel="chapter" href="./" title="Chapter 5 Angular Momentum ‣ Classical Mechanics">
+<link rel="chapter" href="../oscillations/index.html" title="Chapter 6 Oscillations ‣ Classical Mechanics">
+<link rel="chapter" href="../waves/index.html" title="Chapter 7 Waves ‣ Classical Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Classical Mechanics">
+</head>
+<body>
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../laws-of-motion/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Newton’s Laws of Motion</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../linear-momentum/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Linear Momentum</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../energy-and-work/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Energy &amp; Work</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../angular-motion/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Angular Motion</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Angular Momentum</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="moments.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>Moments</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Central Forces</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#properties-of-central-forces" title="In 5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.1 </span>Properties of Central Forces</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#keplers-second-law" title="In 5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.2 </span>Kepler’s Second Law</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#motion-under-a-central-force" title="In 5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.3 </span>Motion Under a Central Force</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="torque.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Torque</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="torque-and-angular-momentum-for-systems-of-particles.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Torque and Angular Momentum for Systems of Particles</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="dynamics-of-rigid-bodies.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.5 </span>Dynamics of Rigid Bodies</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="rolling-motion.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.6 </span>Rolling Motion</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="static-equilibrium.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.7 </span>Static Equilibrium</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../oscillations/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Oscillations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../waves/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Waves</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_bibliography"><a href="../bibliography.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">References</span></a></li>
+</ol></nav>
+</nav>
+<div class="ltx_page_main">
+<header class="ltx_page_header">
+<div class="ltx_align_center">
+<a href="./" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Angular Momentum</span></a><a href="moments.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>Moments</span></a><a href="torque.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Torque</span></a>
+</div></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5.2 </span>Central Forces</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We will now examine a very special type of force.
+These forces have many useful properties which make solving problems involving them a lot simpler.</p>
+</div>
+<div id="Ch5.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 5.2</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch5.Thmdefinition2.p1" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">central force</span> is a force which acts along the radial direction and only depends on the radial distance <math id="Ch5.Thmdefinition2.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>.
+Central forces thus have the form</p>
+<table id="Ch5.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E2.m1" class="ltx_Math" alttext="\boldsymbol{F}=F(r)\hat{\boldsymbol{r}}." display="block"><mrow><mrow><mi>𝑭</mi><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">If <math id="Ch5.Thmdefinition2.p1.m2" class="ltx_Math" alttext="F(r)&lt;0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mn>0</mn></mrow></math>, the force is attractive, and if <math id="Ch5.Thmdefinition2.p1.m3" class="ltx_Math" alttext="F(r)&gt;0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, the force is repulsive.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We have seen one example of a central force already, the universal law of gravitation.
+Another example is Coulomb’s law.</p>
+</div>
+<section id="properties-of-central-forces" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.1 </span>Properties of Central Forces</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Motion under a central force obeys the following rules:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">The motion is confined to a plane.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The angular momentum is conserved (<math id="I1.i2.p1.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!\boldsymbol{L}}{\operatorname{\mathrm{d}}\!t}=0" display="inline"><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝑳</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></math>).</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">The position vector sweeps out equal area in equal time.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">Let’s prove that angular momentum is conserved under the influence of a central force.
+Looking at the derivative, we get</p>
+<table id="Ch7.S10.EGx77" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E3.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!\boldsymbol{L}}{\operatorname{%
+\mathrm{d}}\!t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝑳</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E3.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+(\boldsymbol{r}\times\boldsymbol{p})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>𝒑</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.3)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E4.m1" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!\boldsymbol{r}}{\operatorname{%
+\mathrm{d}}\!t}\times\boldsymbol{p}+\boldsymbol{r}\times\frac{\operatorname{%
+\mathrm{d}}\!\boldsymbol{p}}{\operatorname{\mathrm{d}}\!t}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒓</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo lspace="0.222em" rspace="0.222em">×</mo><mi>𝒑</mi></mrow><mo>+</mo><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>𝒑</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.4)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E5.m1" class="ltx_Math" alttext="\displaystyle=\boldsymbol{v}\times m\boldsymbol{v}+\boldsymbol{r}\times F(R)%
+\hat{\boldsymbol{R}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mi>𝒗</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>m</mi></mrow><mo>⁢</mo><mi>𝒗</mi></mrow><mo>+</mo><mrow><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>F</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>𝑹</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.5)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E6.m1" class="ltx_Math" alttext="\displaystyle=0." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.6)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Therefore, <math id="SS1.p2.m1" class="ltx_Math" alttext="\boldsymbol{L}" display="inline"><mi>𝑳</mi></math> is constant over time, it is conserved.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">By definition, <math id="SS1.p3.m1" class="ltx_Math" alttext="\boldsymbol{L}" display="inline"><mi>𝑳</mi></math> is perpendicular to <math id="SS1.p3.m2" class="ltx_Math" alttext="\boldsymbol{r}" display="inline"><mi>𝒓</mi></math>.
+We can also see this by taking the dot product of <math id="SS1.p3.m3" class="ltx_Math" alttext="\boldsymbol{L}" display="inline"><mi>𝑳</mi></math> with the position vector:</p>
+<table id="Ch5.E7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E7.m1" class="ltx_Math" alttext="\boldsymbol{r}\cdot\boldsymbol{L}=\boldsymbol{r}\cdot(\boldsymbol{r}\times%
+\boldsymbol{p})=\boldsymbol{p}\cdot(\boldsymbol{r}\times\boldsymbol{r})=0." display="block"><mrow><mrow><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>𝑳</mi></mrow><mo>=</mo><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>𝒑</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>𝒑</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>𝒓</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.7)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Since <math id="SS1.p3.m4" class="ltx_Math" alttext="\boldsymbol{L}" display="inline"><mi>𝑳</mi></math> is constant, this implies that <math id="SS1.p3.m5" class="ltx_Math" alttext="\boldsymbol{r}" display="inline"><mi>𝒓</mi></math> is confined to the plane perpendicular to <math id="SS1.p3.m6" class="ltx_Math" alttext="\boldsymbol{L}" display="inline"><mi>𝑳</mi></math>.</p>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">Because of this, it is convenient to use cylindrical coordinates with the plane <math id="SS1.p4.m1" class="ltx_Math" alttext="z=0" display="inline"><mrow><mi>z</mi><mo>=</mo><mn>0</mn></mrow></math> as the plane of motion.
+Using equation <span class="ltx_ref ltx_missing_label ltx_ref_self">LABEL:</span> (note that <math id="SS1.p4.m2" class="ltx_Math" alttext="\dot{z}=0" display="inline"><mrow><mover accent="true"><mi>z</mi><mo>˙</mo></mover><mo>=</mo><mn>0</mn></mrow></math>) and the cross products between unit vectors, we get</p>
+<table id="Ch7.S10.EGx78" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E8.m1" class="ltx_Math" alttext="\displaystyle\boldsymbol{L}" display="inline"><mi>𝑳</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E8.m2" class="ltx_Math" alttext="\displaystyle=m\boldsymbol{r}\times\boldsymbol{v}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>𝒓</mi></mrow><mo lspace="0.222em" rspace="0.222em">×</mo><mi>𝒗</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.8)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E9.m1" class="ltx_Math" alttext="\displaystyle=mR\hat{\boldsymbol{R}}\times(\dot{R}\hat{\boldsymbol{R}}+R\dot{%
+\theta}\hat{\boldsymbol{\theta}})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>m</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mover accent="true"><mi>𝑹</mi><mo>^</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">×</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>R</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝑹</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mi>R</mi><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝜽</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.9)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E10.m1" class="ltx_Math" alttext="\displaystyle=mR^{2}\dot{\theta}\hat{\boldsymbol{k}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.10)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E11.m1" class="ltx_Math" alttext="\displaystyle=mh\hat{\boldsymbol{k}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.11)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">In the last line we have defined <math id="SS1.p4.m3" class="ltx_Math" alttext="h=R^{2}\dot{\theta}" display="inline"><mrow><mi>h</mi><mo>=</mo><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow></mrow></math>.
+This is the <span class="ltx_text ltx_font_bold">specific angular momentum</span> (angular momentum normalised by mass), and is useful in some problems.</p>
+</div>
+</section>
+<section id="keplers-second-law" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.2 </span>Kepler’s Second Law</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Finally, we will prove the last fact about motion under central forces, the law of equal areas, which is a more general version of Kepler’s second law of planetary motion.
+Consider an object on a curved path at two points separated by a small time interval <math id="SS2.p1.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!t" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></math>.</p>
+</div>
+<figure id="SS2.fig1" class="ltx_figure"><svg id="SS2.pic1" class="ltx_picture" height="108.04" overflow="visible" version="1.1" width="199.09"><g fill="#000000" stroke="#000000" stroke-width="0.4pt" transform="translate(0,108.04) matrix(1 0 0 -1 0 0) translate(1.97,0) translate(0,9.34)"><g fill="#E6E6E6"><path d="M 0 0 L 194.93 27.4 C 193.32 38.86 190.7 50.15 187.11 61.16 Z" style="stroke:none"></path></g><path d="M 58.48 8.22 C 58 11.66 57.21 15.05 56.13 18.35" style="fill:none"></path><path d="M 196.85 0 C 196.85 34.55 187.76 68.5 170.48 98.43" style="fill:none"></path><path d="M 0 0 L 187.01 61.42 M 194.88 27.76 L 0 0" style="fill:none"></path><path d="M 187.01 61.42 M 188.97 61.42 C 188.97 62.5 188.09 63.38 187.01 63.38 C 185.92 63.38 185.04 62.5 185.04 61.42 C 185.04 60.33 185.92 59.45 187.01 59.45 C 188.09 59.45 188.97 60.33 188.97 61.42 Z M 187.01 61.42" style="stroke:none"></path><path d="M 194.88 27.76 M 196.85 27.76 C 196.85 28.84 195.97 29.72 194.88 29.72 C 193.8 29.72 192.92 28.84 192.92 27.76 C 192.92 26.67 193.8 25.79 194.88 25.79 C 195.97 25.79 196.85 26.67 196.85 27.76 Z M 194.88 27.76" style="stroke:none"></path><path d="M 0 0 M 1.97 0 C 1.97 1.09 1.09 1.97 0 1.97 C -1.09 1.97 -1.97 1.09 -1.97 0 C -1.97 -1.09 -1.09 -1.97 0 -1.97 C 1.09 -1.97 1.97 -1.09 1.97 0 Z M 0 0" style="stroke:none"></path><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 53.12 24.72)"><foreignObject height="9.61" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="11.88"><math id="SS2.pic1.m1" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!\theta" display="inline"><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></math></foreignObject></g><g fill="#000000" stroke="#000000" transform="matrix(1.0 0.0 0.0 1.0 93.12 -4.73)"><foreignObject height="9.46" overflow="visible" transform="matrix(1 0 0 -1 0 16.6)" width="10.61"><math id="SS2.pic1.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math></foreignObject></g></g></svg>
+</figure>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">The shaded arc is approximately a triangle, so the area get closer and closer to <math id="SS2.p2.m1" class="ltx_Math" alttext="A=\frac{1}{2}R^{2}\operatorname{\mathrm{d}}\!\theta" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mrow></mrow></math> as <math id="SS2.p2.m2" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!t\to 0" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow><mo stretchy="false">→</mo><mn>0</mn></mrow></math>.
+Therefore, we have</p>
+<table id="Ch5.E12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E12.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!A}{\operatorname{\mathrm{d}}\!t}=\frac{1}{2}R%
+^{2}\frac{\operatorname{\mathrm{d}}\!\theta}{\operatorname{\mathrm{d}}\!t}=%
+\frac{1}{2}h=\text{const}." display="block"><mrow><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>A</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>h</mi></mrow><mo>=</mo><mtext>const</mtext></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.12)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">So the rate of area swept out over time is constant.</p>
+</div>
+</section>
+<section id="motion-under-a-central-force" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.3 </span>Motion Under a Central Force</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">What does motion under a central force look like?
+By Newton’s second law, we know that</p>
+<table id="Ch5.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E13.m1" class="ltx_Math" alttext="a_{R}=\ddot{R}-R\dot{\theta}^{2}=\frac{F(R)}{m}." display="block"><mrow><mrow><msub><mi>a</mi><mi>R</mi></msub><mo>=</mo><mrow><mover accent="true"><mi>R</mi><mo>¨</mo></mover><mo>−</mo><mrow><mi>R</mi><mo>⁢</mo><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></mrow><mo>=</mo><mfrac><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow><mi>m</mi></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.13)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Substituting in the specific angular momentum, we get</p>
+<table id="Ch5.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E14.m1" class="ltx_Math" alttext="\ddot{R}-\frac{h^{2}}{R^{3}}=\frac{F(R)}{m}." display="block"><mrow><mrow><mrow><mover accent="true"><mi>R</mi><mo>¨</mo></mover><mo>−</mo><mfrac><msup><mi>h</mi><mn>2</mn></msup><msup><mi>R</mi><mn>3</mn></msup></mfrac></mrow><mo>=</mo><mfrac><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo></mrow></mrow><mi>m</mi></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.14)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This is the differential equation we need to solve for any central force problem.</p>
+</div>
+<div id="Ch5.Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 5.1</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch5.Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">Prove Kepler’s third law: the square of a planet’s orbital period is proportional to the cube of the semi-major axis of its orbit.</p>
+</div>
+<div id="Ch5.Thmexample1.p2" class="ltx_para">
+<p class="ltx_p">Planets move according to the universal law of gravitation, which is</p>
+<table id="Ch5.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E15.m1" class="ltx_Math" alttext="\boldsymbol{F}=-\frac{GMm}{R^{2}}\hat{\boldsymbol{R}}." display="block"><mrow><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mi>G</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>m</mi></mrow><msup><mi>R</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mover accent="true"><mi>𝑹</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.15)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">We will make an approximation and assume that the sun is fixed at the origin and the planets orbit in circular orbits.
+In reality, the a given planet and the sun orbit their common centre of mass in elliptical paths, but the difference is very small making this approximation makes the problem much simpler.
+Since <math id="Ch5.Thmexample1.p2.m1" class="ltx_Math" alttext="R=\text{const}" display="inline"><mrow><mi>R</mi><mo>=</mo><mtext>const</mtext></mrow></math>, then <math id="Ch5.Thmexample1.p2.m2" class="ltx_Math" alttext="\dot{R}=\ddot{R}=0" display="inline"><mrow><mover accent="true"><mi>R</mi><mo>˙</mo></mover><mo>=</mo><mover accent="true"><mi>R</mi><mo>¨</mo></mover><mo>=</mo><mn>0</mn></mrow></math>.
+So <math id="Ch5.Thmexample1.p2.m3" class="ltx_Math" alttext="a_{R}=-R\dot{\theta}^{2}" display="inline"><mrow><msub><mi>a</mi><mi>R</mi></msub><mo>=</mo><mrow><mo>−</mo><mrow><mi>R</mi><mo>⁢</mo><msup><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mn>2</mn></msup></mrow></mrow></mrow></math>.
+Since angular momentum <math id="Ch5.Thmexample1.p2.m4" class="ltx_Math" alttext="L=mR^{2}\dot{\theta}" display="inline"><mrow><mi>L</mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><msup><mi>R</mi><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow></mrow></math> is conserved, <math id="Ch5.Thmexample1.p2.m5" class="ltx_Math" alttext="\dot{\theta}=\omega" display="inline"><mrow><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>=</mo><mi>ω</mi></mrow></math> is a constant.
+Thus the equation of motion <a href="#Ch5.E13" title="In 5.2.3 Motion Under a Central Force ‣ 5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.13</span></a> becomes</p>
+<table id="Ch7.S10.EGx79" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E16.m1" class="ltx_Math" alttext="\displaystyle-\frac{GMm}{R^{2}}" display="inline"><mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mrow><mi>G</mi><mo>⁢</mo><mi>M</mi><mo>⁢</mo><mi>m</mi></mrow><msup><mi>R</mi><mn>2</mn></msup></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E16.m2" class="ltx_Math" alttext="\displaystyle=-mR\omega^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>m</mi><mo>⁢</mo><mi>R</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.16)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E17.m1" class="ltx_Math" alttext="\displaystyle GM" display="inline"><mrow><mi>G</mi><mo>⁢</mo><mi>M</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E17.m2" class="ltx_Math" alttext="\displaystyle=R^{3}\omega^{2}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mi>R</mi><mn>3</mn></msup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.17)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The period of the orbit is equal to the displacement divided by the speed, in this case <math id="Ch5.Thmexample1.p2.m6" class="ltx_Math" alttext="T=\frac{2\pi}{\omega}" display="inline"><mrow><mi>T</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mi>ω</mi></mfrac></mrow></math>, so rearranging for <math id="Ch5.Thmexample1.p2.m7" class="ltx_Math" alttext="R^{3}" display="inline"><msup><mi>R</mi><mn>3</mn></msup></math> we get</p>
+<table id="Ch5.E18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E18.m1" class="ltx_Math" alttext="R^{3}=\frac{GM}{4\pi^{2}}T^{2}." display="block"><mrow><mrow><msup><mi>R</mi><mn>3</mn></msup><mo>=</mo><mrow><mfrac><mrow><mi>G</mi><mo>⁢</mo><mi>M</mi></mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><msup><mi>T</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.18)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Ch5.Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 5.2</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+</h6>
+<div id="Ch5.Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">Consider a central force of the form <math id="Ch5.Thmexample2.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=-\frac{mk^{2}}{r^{3}}\hat{\boldsymbol{r}}" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mi>m</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>3</mn></msup></mfrac><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow></mrow></math>.
+If a particle under the influence of this force starts at a distance <math id="Ch5.Thmexample2.p1.m2" class="ltx_Math" alttext="r=r_{0}" display="inline"><mrow><mi>r</mi><mo>=</mo><msub><mi>r</mi><mn>0</mn></msub></mrow></math> from the origin with no radial speed (<math id="Ch5.Thmexample2.p1.m3" class="ltx_Math" alttext="v_{r,0}=0" display="inline"><mrow><msub><mi>v</mi><mrow><mi>r</mi><mo>,</mo><mn>0</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>), what will its motion look like for different values of <math id="Ch5.Thmexample2.p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>?</p>
+</div>
+<div id="Ch5.Thmexample2.p2" class="ltx_para">
+<p class="ltx_p">Substituting in the force into equation <a href="#Ch5.E13" title="In 5.2.3 Motion Under a Central Force ‣ 5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.13</span></a>, we get</p>
+<table id="Ch7.S10.EGx80" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tbody id="Ch5.E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E19.m1" class="ltx_Math" alttext="\displaystyle\ddot{r}-\frac{h}{r^{3}}=-\frac{k^{2}}{r^{3}}" display="block"><mrow><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>−</mo><mfrac><mi>h</mi><msup><mi>r</mi><mn>3</mn></msup></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><msup><mi>k</mi><mn>2</mn></msup><msup><mi>r</mi><mn>3</mn></msup></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.19)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E20.m1" class="ltx_Math" alttext="\displaystyle\ddot{r}+\frac{k^{2}-h^{2}}{r^{3}}=0." display="block"><mrow><mrow><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>+</mo><mfrac><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>−</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>3</mn></msup></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.20)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">For <math id="Ch5.Thmexample2.p2.m1" class="ltx_Math" alttext="k^{2}=h^{2}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><msup><mi>h</mi><mn>2</mn></msup></mrow></math>, we get <math id="Ch5.Thmexample2.p2.m2" class="ltx_Math" alttext="\ddot{r}=0" display="inline"><mrow><mover accent="true"><mi>r</mi><mo>¨</mo></mover><mo>=</mo><mn>0</mn></mrow></math>, which can be integrated twice to give <math id="Ch5.Thmexample2.p2.m3" class="ltx_Math" alttext="r=r_{0}+v_{r,0}t" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>v</mi><mrow><mi>r</mi><mo>,</mo><mn>0</mn></mrow></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math>.
+Since <math id="Ch5.Thmexample2.p2.m4" class="ltx_Math" alttext="v_{r,0}=0" display="inline"><mrow><msub><mi>v</mi><mrow><mi>r</mi><mo>,</mo><mn>0</mn></mrow></msub><mo>=</mo><mn>0</mn></mrow></math>, we have <math id="Ch5.Thmexample2.p2.m5" class="ltx_Math" alttext="r=r_{0}" display="inline"><mrow><mi>r</mi><mo>=</mo><msub><mi>r</mi><mn>0</mn></msub></mrow></math> which is circular motion.
+The angular speed is given by equation <a href="#Ch5.E10" title="In 5.2.1 Properties of Central Forces ‣ 5.2 Central Forces ‣ Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.10</span></a>, <math id="Ch5.Thmexample2.p2.m6" class="ltx_Math" alttext="\omega=\frac{L}{mr_{0}^{2}}=\frac{mvr_{0}}{mr_{0}^{2}}=\frac{v}{r_{0}}" display="inline"><mrow><mi>ω</mi><mo>=</mo><mfrac><mi>L</mi><mrow><mi>m</mi><mo>⁢</mo><msubsup><mi>r</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>v</mi><mo>⁢</mo><msub><mi>r</mi><mn>0</mn></msub></mrow><mrow><mi>m</mi><mo>⁢</mo><msubsup><mi>r</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac><mo>=</mo><mfrac><mi>v</mi><msub><mi>r</mi><mn>0</mn></msub></mfrac></mrow></math>.
+This is just our familiar result from uniform circular motion, which makes sense because if we plug <math id="Ch5.Thmexample2.p2.m7" class="ltx_Math" alttext="k^{2}=h^{2}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><msup><mi>h</mi><mn>2</mn></msup></mrow></math> into the form of the force above, we get</p>
+<table id="Ch5.E21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E21.m1" class="ltx_Math" alttext="\boldsymbol{F}=-\frac{mr^{4}\omega^{2}}{r^{3}}\hat{\boldsymbol{r}}=-mr\omega^{%
+2}\hat{\boldsymbol{r}}," display="block"><mrow><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mi>m</mi><mo>⁢</mo><msup><mi>r</mi><mn>4</mn></msup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><msup><mi>r</mi><mn>3</mn></msup></mfrac><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>m</mi><mo>⁢</mo><mi>r</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.21)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which is just the formula for centripetal force.</p>
+</div>
+<div id="Ch5.Thmexample2.p3" class="ltx_para">
+<p class="ltx_p">What about the cases where <math id="Ch5.Thmexample2.p3.m1" class="ltx_Math" alttext="k^{2}\neq h^{2}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>≠</mo><msup><mi>h</mi><mn>2</mn></msup></mrow></math>?
+Unfortunately, the differential equation is not solvable analytically for any other case.
+Luckily, there is another way to solve it!
+What we have to do is parameterise the orbit in terms of the angular displacement <math id="Ch5.Thmexample2.p3.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> instead of <math id="Ch5.Thmexample2.p3.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> by making use of the relation <math id="Ch5.Thmexample2.p3.m4" class="ltx_Math" alttext="h=r^{2}\dot{\theta}" display="inline"><mrow><mi>h</mi><mo>=</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow></mrow></math>.
+We will also make the substition <math id="Ch5.Thmexample2.p3.m5" class="ltx_Math" alttext="u=1/r" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>r</mi></mrow></mrow></math>, which is a very useful substition when solving problems with central forces of the form <math id="Ch5.Thmexample2.p3.m6" class="ltx_Math" alttext="F(r)=\frac{\alpha}{r^{n}}" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mi>α</mi><msup><mi>r</mi><mi>n</mi></msup></mfrac></mrow></math>.
+Therefore, the aim is to replace all time derivatives of <math id="Ch5.Thmexample2.p3.m7" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> with derivatives of <math id="Ch5.Thmexample2.p3.m8" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> with respect to <math id="Ch5.Thmexample2.p3.m9" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math>.
+Using the chain rule, we get</p>
+<table id="Ch7.S10.EGx81" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E22.m1" class="ltx_Math" alttext="\displaystyle\dot{r}" display="inline"><mover accent="true"><mi>r</mi><mo>˙</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E22.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!r}{\operatorname{\mathrm{d}}\!u%
+}\dot{u}=\frac{\operatorname{\mathrm{d}}\!r}{\operatorname{\mathrm{d}}\!u}%
+\frac{\operatorname{\mathrm{d}}\!u}{\operatorname{\mathrm{d}}\!\theta}\dot{\theta}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>u</mi><mo>˙</mo></mover></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.22)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E23.m1" class="ltx_Math" alttext="\displaystyle=-r^{2}\dot{\theta}\frac{\operatorname{\mathrm{d}}\!u}{%
+\operatorname{\mathrm{d}}\!\theta}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.23)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E24.m1" class="ltx_Math" alttext="\displaystyle=-h\frac{\operatorname{\mathrm{d}}\!u}{\operatorname{\mathrm{d}}%
+\!\theta}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>h</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.24)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">For <math id="Ch5.Thmexample2.p3.m10" class="ltx_Math" alttext="\ddot{r}" display="inline"><mover accent="true"><mi>r</mi><mo>¨</mo></mover></math>, we get</p>
+<table id="Ch7.S10.EGx82" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E25.m1" class="ltx_Math" alttext="\displaystyle\ddot{r}" display="inline"><mover accent="true"><mi>r</mi><mo>¨</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E25.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+\left(-h\frac{\operatorname{\mathrm{d}}\!u}{\operatorname{\mathrm{d}}\!\theta}%
+\right)=-h\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}\!%
+\theta^{2}}\dot{\theta}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi>h</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>h</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mover accent="true"><mi>θ</mi><mo>˙</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.25)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E26.m1" class="ltx_Math" alttext="\displaystyle=-\frac{h^{2}}{r^{2}}\frac{\operatorname{\mathrm{d}}\!^{2}u}{%
+\operatorname{\mathrm{d}}\!\theta^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>h</mi><mn>2</mn></msup><msup><mi>r</mi><mn>2</mn></msup></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.26)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E27.m1" class="ltx_Math" alttext="\displaystyle=-h^{2}u^{2}\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname%
+{\mathrm{d}}\!\theta^{2}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi>h</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>u</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.27)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Now, the equation of motion becomes</p>
+<table id="Ch7.S10.EGx83" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tbody id="Ch5.E28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E28.m1" class="ltx_Math" alttext="\displaystyle-h^{2}u^{2}\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{%
+\mathrm{d}}\!\theta^{2}}+(k^{2}-h^{2})u^{3}=0" display="block"><mrow><mrow><mrow><mo>−</mo><mrow><msup><mi>h</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>u</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>−</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>u</mi><mn>3</mn></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.28)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E29.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}%
+\!\theta^{2}}-\frac{k^{2}-h^{2}}{h^{2}}u=0." display="block"><mrow><mrow><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><mrow><mfrac><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>−</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><msup><mi>h</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mi>u</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.29)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="Ch5.Thmexample2.p4" class="ltx_para">
+<p class="ltx_p">Letting <math id="Ch5.Thmexample2.p4.m1" class="ltx_Math" alttext="\beta^{2}=\lvert\frac{k^{2}-h^{2}}{h^{2}}\rvert" display="inline"><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>=</mo><mrow><mo stretchy="false">|</mo><mfrac><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>−</mo><msup><mi>h</mi><mn>2</mn></msup></mrow><msup><mi>h</mi><mn>2</mn></msup></mfrac><mo stretchy="false">|</mo></mrow></mrow></math>, if <math id="Ch5.Thmexample2.p4.m2" class="ltx_Math" alttext="k^{2}&gt;h^{2}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>&gt;</mo><msup><mi>h</mi><mn>2</mn></msup></mrow></math> then the differential equation becomes</p>
+<table id="Ch5.E30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E30.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}\!\theta^{2}}%
+-\beta^{2}u=0." display="block"><mrow><mrow><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.30)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">The general solution is <math id="Ch5.Thmexample2.p4.m3" class="ltx_Math" alttext="u=Ae^{\beta\theta}+Be^{-\beta\theta}" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>β</mi><mo>⁢</mo><mi>θ</mi></mrow></msup></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>β</mi><mo>⁢</mo><mi>θ</mi></mrow></mrow></msup></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Ch5.Thmexample2.p5" class="ltx_para">
+<p class="ltx_p">For the opposite case <math id="Ch5.Thmexample2.p5.m1" class="ltx_Math" alttext="k^{2}&lt;h^{2}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>&lt;</mo><msup><mi>h</mi><mn>2</mn></msup></mrow></math>, the negative sign gets cancelled out and we get</p>
+<table id="Ch5.E31" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E31.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}\!\theta^{2}}%
++\beta^{2}u=0." display="block"><mrow><mrow><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>θ</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.31)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">This has the general solution <math id="Ch5.Thmexample2.p5.m2" class="ltx_Math" alttext="u=A\cos(\beta\theta)+B\sin(\beta\theta)" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mrow><mi>A</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>⁢</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="moments.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>Moments</span></a><a href="../bibliography.html" title="In Classical Mechanics" class="ltx_ref" rel="bibliography"><span class="ltx_text ltx_ref_title">References</span></a><a href="torque.html" title="In Chapter 5 Angular Momentum ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Torque</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sun Jun 29 10:34:36 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+</body>
+</html>
