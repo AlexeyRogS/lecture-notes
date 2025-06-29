@@ -113,4 +113,132 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- Remove subsections from TOC -->
+    <xsl:template match="ltx:tocentry">
+        <xsl:if test="contains(@class,'ltx_tocentry_chapter') or contains(@class,'ltx_tocentry_section') or contains(../@class,'ltx_toclist_chapter')">
+            <xsl:apply-imports/>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- Add an "in this page" navbar for each section in addition to the navbar for the whole document -->
+    <!-- Lists subsections, theorems, definitions, examples -->
+    <xsl:template match="/" mode="body">
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:element name="body" namespace="{$html_ns}">
+            <xsl:apply-templates select="." mode="body-begin"/>
+            <xsl:apply-templates select="." mode="navbar"/>
+            <xsl:apply-templates select="." mode="body-main-wrapper"/>
+            <xsl:apply-templates select="." mode="body-end"/>
+            <xsl:text>&#x0A;</xsl:text>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Wrap the body-main (contains main content) with the in-page navbar for layout purposes -->
+    <xsl:template match="/" mode="body-main-wrapper">
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:element name="main" namespace="{$html_ns}">
+            <xsl:apply-templates select="." mode="body-main"/>
+            <xsl:apply-templates select="." mode="in-page-navbar"/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Create the <nav> element -->
+    <!-- These templates are mostly copied from the navbar in LaTeXML-webpage-xhtml.xsl -->
+    <xsl:template match="/" mode="in-page-navbar">
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:element name="nav" namespace="{$html_ns}">
+            <xsl:attribute name="class">ltx_in_page_navbar</xsl:attribute>
+            <xsl:apply-templates select="//ltx:navigation/ltx:TOC" mode="in-page-navbar"/>
+            <xsl:text>&#x0A;</xsl:text>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Create TOC if section contains subsections or theorem environments -->
+    <xsl:template match="ltx:TOC" mode="in-page-navbar">
+        <xsl:param name="context"/>
+        <xsl:if test="//ltx:subsection|//ltx:theorem">
+            <xsl:text>&#x0A;</xsl:text>
+            <xsl:element name="nav" namespace="{$html_ns}">
+                <xsl:call-template name='add_attributes'>
+                    <xsl:with-param name="extra_classes" select="f:class-pref('ltx_toc_',@lists)"/>
+                </xsl:call-template>
+                <xsl:element name="span" namespace="{$html_ns}">
+                    <xsl:attribute name="class">ltx_text ltx_ref_title</xsl:attribute>
+                    On this page:
+                </xsl:element>
+                <xsl:apply-templates mode="in-page-navbar">
+                    <xsl:with-param name="context" select="$context"/>
+                </xsl:apply-templates>
+            </xsl:element>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- Create an <ol> and apply templates to descendants which are subsections -->
+    <xsl:template match="ltx:toclist" mode="in-page-navbar">
+        <xsl:param name="context"/>
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:element name="ol" namespace="{$html_ns}">
+            <xsl:call-template name="add_id"/>
+            <xsl:call-template name="add_attributes"/>
+            <!-- create <li>s for theorem environments that are not part of a subsection -->
+            <xsl:if test="//ltx:section/ltx:theorem">
+                <xsl:element name="ol" namespace="{$html_ns}">
+                    <xsl:attribute name="class">ltx_toclist ltx_toclist_section</xsl:attribute>
+                    <xsl:for-each select="//ltx:section/ltx:theorem">
+                        <xsl:call-template name="theorem-nav-element">
+                            <xsl:with-param name="title" select="./ltx:tocentry[contains(@class,'ltx_ref_self')]/ltx:ref/@title"/>
+                        </xsl:call-template>
+                    </xsl:for-each>
+                </xsl:element>
+            </xsl:if>
+            <!-- create <li>s for subsections -->
+            <xsl:apply-templates select="./descendant::ltx:tocentry[contains(@class, 'ltx_tocentry_subsection')]" mode="in-page-navbar">
+                <xsl:with-param name="context" select="$context"/>
+            </xsl:apply-templates>
+            <xsl:text>&#x0A;</xsl:text>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- Create the <li> for the subsection, then create a sublist for any theorem environments inside it -->
+    <xsl:template match="ltx:tocentry" mode="in-page-navbar">
+        <xsl:param name="context"/>
+            <xsl:text>&#x0A;</xsl:text>
+            <xsl:element name="li" namespace="{$html_ns}">
+                <xsl:call-template name="add_id"/>
+                <xsl:call-template name="add_attributes"/>
+                <xsl:apply-templates>
+                    <xsl:with-param name="context" select="$context"/>
+                </xsl:apply-templates>
+            </xsl:element>
+            <!-- check for children that are theorems and create <li>s for them -->
+            <xsl:variable name="subsection-id" select="substring-after(./ltx:ref/@href,'#')"/>
+            <xsl:if test="//ltx:subsection[@fragid=$subsection-id]/ltx:theorem">
+                <xsl:element name="ol" namespace="{$html_ns}">
+                    <xsl:attribute name="class">ltx_toclist ltx_toclist_subsection</xsl:attribute>
+                    <xsl:for-each select="//ltx:subsection[@fragid=$subsection-id]/ltx:theorem">
+                        <xsl:call-template name="theorem-nav-element">
+                            <xsl:with-param name="title" select="./ltx:ref/@title"/>
+                        </xsl:call-template>
+                    </xsl:for-each>
+                </xsl:element>
+            </xsl:if>
+    </xsl:template>
+
+    <!-- Generate an <li> for a theorem environment -->
+    <xsl:template name="theorem-nav-element">
+        <xsl:param name="title"/>
+        <xsl:element name="li" namespace="{$html_ns}">
+            <xsl:attribute name="class">ltx_tocentry ltx_tocentry_subsubsection</xsl:attribute>
+            <xsl:element name="a" namespace="{$html_ns}">
+                <xsl:attribute name="class">ltx_ref</xsl:attribute>
+                <xsl:attribute name="href"><xsl:value-of select="concat('#',@fragid)"/></xsl:attribute>
+                <xsl:attribute name="title"><xsl:value-of select="$title"/></xsl:attribute>
+                <xsl:element name="span" namespace="{$html_ns}">
+                    <xsl:attribute name="class">ltx_text ltx_ref_title</xsl:attribute>
+                    <xsl:value-of select="./ltx:tags/ltx:tag[@role='typerefnum']"/>
+                </xsl:element>
+            </xsl:element>
+        </xsl:element>
+    </xsl:template>
+
 </xsl:stylesheet>
