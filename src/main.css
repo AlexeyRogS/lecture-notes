@@ -1,0 +1,44 @@
+/* styles to be included in every page */
+
+:root {
+	--colour-bg: #021014;
+	--colour-accent: #4897a8;
+	--colour-fg: rgb(200, 200, 200);
+	--transition-exp: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	margin: 0; /* to get rid of browsers applying margins by default (very silly) */
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--colour-fg);
+}
+
+nav ul, nav ol {
+	list-style: none;
+	padding-left: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-family: monospace;
+}
+
+body {
+	background: var(--colour-bg);
+	color: var(--colour-fg);
+}
+
+:where(h1) { /* default styles for h1 */
+	margin-block: 0;
+	font-size: 2em;
+}
