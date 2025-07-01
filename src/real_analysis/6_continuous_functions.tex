@@ -142,10 +142,10 @@
                 \end{enumerate}
             \end{theorem}
             \begin{proof}\\
-                $(\implies)$: Suppose $f$ is continuous at $x_0$, $(x_n)_n$ is a sequence in $D$ with limit $x_0$.\\
+                (Proof that (i)$\implies$(ii)): Suppose $f$ is continuous at $x_0$, $(x_n)_n$ is a sequence in $D$ with limit $x_0$.\\
                 Let $\varepsilon>0$, since $f$ is continuous at $x_0$, $\exists\delta>0$ such that $\abs{x-x_0}<\delta\implies\abs{f(x)-f(x_0)}<\varepsilon$.\\
                 Now, since $x_n\to x_0$, $\exists N\in\NN$ such that $n\geq N\implies\abs{x_n-x_0}<\delta$, therefore $\abs{f(x_n)-f(x_0)}<\varepsilon$.\\
-                $(\impliedby)$: Suppose by way of contradiction that (ii) is true, but (i) is false. So $\exists\varepsilon>0$ such that $\forall\delta>0, \exists x\in D$ where $\abs{x-x_0}<\delta\implies\abs{f(x)-f(x_0)}\geq\varepsilon$ (negation of continuity).\\
+                (Proof that (ii)$\implies$(i)): Suppose by way of contradiction that (ii) is true, but (i) is false. So $\exists\varepsilon>0$ such that $\forall\delta>0, \exists x\in D$ where $\abs{x-x_0}<\delta\implies\abs{f(x)-f(x_0)}\geq\varepsilon$ (negation of continuity).\\
                 Choose $\varepsilon$ such that the above is satisfied, then for $n\in\NN$, let $\delta=\frac{1}{n}$ and $x_n\in D$ such that $\abs{x_n-x_0}<\frac{1}{n}$ but $\abs{f(x_n)-f(x_0)}\geq\varepsilon$.\\
                 Thus $x_n\to x_0$, but $f(x_n)\not\to f(x_0)$ since $\varepsilon$ is fixed, which is a contradiction of our assumptions that (ii) is true, hence $f$ must be continuous at $x_0$.
             \end{proof}

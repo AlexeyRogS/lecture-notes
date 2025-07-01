@@ -238,8 +238,8 @@
                 Let $(x_n)_n$ be a monotone sequence. Then $(x_n)_n$ is convergent if and only if $(x_n)_n$ is bounded.
             \end{theorem}
             \begin{proof}
-                $(\implies)$: This follows from theorem \ref{thm:cvg-seq-bounded}.\\
-                $(\impliedby)$: Suppose $(x_n)_n$ is bounded and without meaningful loss of generality assume $(x_n)_n$ is increasing. Recall that since $\mathbb{R}$ is \textit{complete}, every bounded set of real numbers has a supremum that is also a real number, i.e. if we let
+                (Forward direction $\implies$): This follows from theorem \ref{thm:cvg-seq-bounded}.\\
+                (Reverse direction $\impliedby$): Suppose $(x_n)_n$ is bounded and without meaningful loss of generality assume $(x_n)_n$ is increasing. Recall that since $\mathbb{R}$ is \textit{complete}, every bounded set of real numbers has a supremum that is also a real number, i.e. if we let
                 \begin{equation}
                     X\coloneqq\{x_n:n\in\mathbb{N}\}
                 \end{equation}
@@ -364,7 +364,7 @@
                 Let $(x_n)_n$ be a sequence of real numbers. Then $(x_n)_n$ is a convergent sequence if and only if it is also a Cauchy sequence.
             \end{theorem}
             \begin{proof}\\
-                $(\implies)$: We will make use of a lemma.
+                (Forward direction $\implies$): We will make use of a lemma.
                 \begin{lemma}
                     Any Cauchy sequence is bounded.
                 \end{lemma}
@@ -384,7 +384,7 @@
                     \abs{x_n-x}=\abs{x_n-x_{m_n}+x_{m_n}-x}\leq\abs{x_n-x_{m_k}}+\abs{x_{m_k}-x}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
                 \end{equation}
                 and thus $(x_n)_n$ is convergent with limit $x$.\\
-                $(\impliedby)$: Suppose $(x_n)_n$ is a convergent sequence with limit $x$. Let $\varepsilon>0$, then $\exists N\in\mathbb{N}$ such that $n\geq N\implies\abs{x_n-x}<\frac{\varepsilon}{2}$. For $m,n\geq N$ we have
+                (Reverse direction $\impliedby$): Suppose $(x_n)_n$ is a convergent sequence with limit $x$. Let $\varepsilon>0$, then $\exists N\in\mathbb{N}$ such that $n\geq N\implies\abs{x_n-x}<\frac{\varepsilon}{2}$. For $m,n\geq N$ we have
                 \begin{equation}
                     \abs{x_m-x_n}=\abs{x_m-x+x-x_n}\leq\abs{x_m-x}+\abs{x-x_n}<\frac{\varepsilon}{2}+\frac{\varepsilon}{2}=\varepsilon,
                 \end{equation}
