@@ -69,6 +69,24 @@
         </xsl:choose>
     </xsl:template>
 
+    <!-- Add a wrapper to all equation <table>s to stop them expanding when they are too wide -->
+    <!-- Overrides templates in LaTeXML-block-xhtml.xsl -->
+    <xsl:template match="ltx:equationgroup">
+        <xsl:param name="context"/>
+        <xsl:element name="{f:blockelement($context,'div')}" namespace="{$html_ns}">
+            <xsl:attribute name="class">ltx_equation_wrapper</xsl:attribute>
+            <xsl:apply-imports/>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="ltx:equation">
+        <xsl:param name="context"/>
+        <xsl:element name="{f:blockelement($context,'div')}" namespace="{$html_ns}">
+            <xsl:attribute name="class">ltx_equation_wrapper</xsl:attribute>
+            <xsl:apply-imports/>
+        </xsl:element>
+    </xsl:template>
+
     <!-- Remove authors -->
     <!-- Overrides template in LaTeXML-structure-xhtml.xsl -->
     <xsl:template name="authors"/>

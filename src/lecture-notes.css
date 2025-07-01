@@ -62,7 +62,7 @@ main {
 }
 
 .ltx_page_main {
-	flex: 1 0 0;
+	width: calc(100% - var(--in-page-navbar-width));
 	padding: 1rem 2rem;
 	font-size: 1.3rem;
 	max-width: var(--content-width);
@@ -205,23 +205,23 @@ li a:hover,  li a:focus {
 /* LaTeXML output */
 
 .ltx_appendix, .ltx_part, .ltx_chapter, .ltx_section, .ltx_subsection { margin-top: 1.5em; }
-.ltx_para                                                             { margin-top: var(--para-margin-top); }
+.ltx_para                                                             { margin-top: var(--para-margin-top); width: 100%;}
 
-.ltx_title_part, .ltx_title_appendix, .ltx_title_bibliography, .ltx_title_chapter { font-size:250%; font-weight:bold; margin-bottom:1em; }
-.ltx_title_section                                                                { font-size:140%; font-weight:bold; margin-bottom:1em; }
-.ltx_title_subsection                                                             { font-size:120%; font-weight:bold; margin-bottom:1em; }
+.ltx_title_part, .ltx_title_appendix, .ltx_title_bibliography, .ltx_title_chapter { font-size: 250%; font-weight: bold; margin-bottom: 1em; }
+.ltx_title_section                                                                { font-size: 140%; font-weight: bold; margin-bottom: 1em; }
+.ltx_title_subsection                                                             { font-size: 120%; font-weight: bold; margin-bottom: 1em; }
 
-.ltx_figure, .ltx_table { text-align:center; margin:0.5em; display:flex; flex-direction:column; align-items:center; }
-.ltx_figure .ltx_caption, .ltx_table .ltx_caption { text-align:justify; }
+.ltx_figure, .ltx_table { text-align: center; margin: 0.5em; display: flex; flex-direction: column; align-items: center; }
+.ltx_figure .ltx_caption, .ltx_table .ltx_caption { text-align: justify; }
 
 /* first p in para gets indented */
 .ltx_para > .ltx_p:first-child, section.ltx_pruned_first > .ltx_title + .ltx_para > .ltx_p, section.ltx_indent_first > .ltx_title + .ltx_para > .ltx_p { text-indent:1em; }
 /* except the initial in a section */
-section > .ltx_title +.ltx_para > .ltx_p, section > .ltx_title +.ltx_date +.ltx_para > .ltx_p {text-indent:0em; }
+section > .ltx_title +.ltx_para > .ltx_p, section > .ltx_title +.ltx_date +.ltx_para > .ltx_p { text-indent: 0em; }
 
 .ltx_theorem { margin: 1em 0; }
-.ltx_theorem .ltx_title { font-size: 110%; margin-bottom:0.5em; font-weight:bold; }
-.ltx_theorem .ltx_title + .ltx_para, .ltx_theorem .ltx_title + .ltx_para .ltx_p, .ltx_theorem .ltx_title + .ltx_p  { margin-top:0em; }
+.ltx_theorem .ltx_title { font-size: 110%; margin-bottom: 0.5em; font-weight: bold; }
+.ltx_theorem .ltx_title + .ltx_para, .ltx_theorem .ltx_title + .ltx_para .ltx_p, .ltx_theorem .ltx_title + .ltx_p  { margin-top: 0em; }
 
 /* set a light background for diagrams, this is a temporary fix */
 /* TODO: implement a proper dark mode colour scheme for diagrams */
@@ -253,13 +253,17 @@ svg.ltx_picture {
 .ltx_align_middle   { vertical-align: middle; }
 .ltx_align_baseline { vertical-align: baseline; }
 
+.ltx_equation_wrapper { overflow-x: scroll; }
 .ltx_equation, .ltx_equationgroup { margin: 1em 0; }
 .ltx_eqn_table { display: table; width: 100%; border-collapse: collapse; }
 
 .ltx_eqn_center_padleft, .ltx_eqn_center_padright { width: 50%; min-width: 2em; }
+.ltx_eqn_left_padleft, .ltx_eqn_right_padright { width: 100%; min-width: 2em; }
 
-.ltx_itemize, .ltx_enumerate { margin-left:1em; padding-left: 0; }
-.ltx_itemize .ltx_item, .ltx_enumerate .ltx_item { display: flex; white-space: nowrap; }
+.ltx_itemize, .ltx_enumerate { margin-left: 1em; padding-left: 0; }
+.ltx_itemize .ltx_item, .ltx_enumerate .ltx_item { display: flex; }
+
+.ltx_item .ltx_para { overflow: hidden; } /* to counter the width: 100% that is applied to all other .ltx_para elements */
 
 li.ltx_item > .ltx_tag { flex-shrink: 0; margin-top: var(--para-margin-top); margin-right: 0.5em; } /* TODO: would like to use align-content: center; here but it only works when the item the tag is referring to is only one line */
 .ltx_item > .ltx_para > .ltx_p:first-child { text-indent: 0em; }
@@ -284,9 +288,9 @@ li.ltx_item > .ltx_tag { flex-shrink: 0; margin-top: var(--para-margin-top); mar
 }
 .ltx_note_mark { color: var(--colour-accent); }
 .ltx_note_type { font-weight: bold; }
-.ltx_note { display:inline-block; text-indent:0; }
-.ltx_note_content .ltx_note_mark { position:absolute; left:0.2em; top:-0.1em; }
-.ltx_note:hover .ltx_note_content, .ltx_note .ltx_note_content:hover { display:block; position:absolute; z-index:10; }
+.ltx_note { display: inline-block; text-indent: 0; }
+.ltx_note_content .ltx_note_mark { position: absolute; left: 0.2em; top: -0.1em; }
+.ltx_note:hover .ltx_note_content, .ltx_note .ltx_note_content:hover { display: block; position: absolute; z-index: 10; }
 
 cite { font-style: normal; }
 
