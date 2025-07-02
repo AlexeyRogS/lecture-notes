@@ -29,7 +29,6 @@ nav.ltx_page_navbar {
 	padding: 1rem 2rem;
 	display: flex;
 	flex-flow: column nowrap;
-	align-items: flex-end;
 	overflow-y: scroll;
 	align-items: start;
 }
@@ -200,6 +199,14 @@ li a:hover,  li a:focus {
 	li a {
 		transition: transform 500ms var(--transition-exp);
 	}
+}
+
+.ltx_tocentry .ltx_toclist, .ltx_tocentry + .ltx_toclist_subsection {
+	margin-left: 1em;
+}
+
+.ltx_ref_self {
+	text-decoration: underline;
 }
 
 /* LaTeXML output */
