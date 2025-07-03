@@ -30,6 +30,46 @@
         </xsl:choose>
     </xsl:template>
 
+    <!-- Remove colour styling from all elements -->
+    <!-- Overrides template in LaTeXML-common-xhtml.xsl -->
+    <!-- TODO: this will probably be removed at some point to bring back colours -->
+    <xsl:template match="*" mode="base-styling">
+        <xsl:if test="@fontsize">
+            <xsl:value-of select="concat('font-size:',@fontsize,';')"/>
+        </xsl:if>
+        <xsl:if test="@width"  ><xsl:value-of select="concat('width:',@width,';')"/></xsl:if>
+        <xsl:if test="@height" >
+            <xsl:choose>
+                <xsl:when test="@depth">
+                    <xsl:value-of select="concat('height:',f:adddim(@height,@depth),';')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="concat('height:',@height,';')"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:if>
+        <xsl:if test="@depth">
+            <xsl:value-of select="concat('vertical-align:',f:negate(@depth),';')"/>
+        </xsl:if>
+        <xsl:if test="@xoffset">
+            <xsl:value-of select="concat('position:relative; left:',@xoffset,';')"/>
+        </xsl:if>
+        <xsl:if test="@yoffset">
+            <xsl:value-of select="concat('position:relative; bottom:',@yoffset,';')"/>
+        </xsl:if>
+        <!-- <xsl:if test="@color"><xsl:value-of select="concat('color:',@color,';')"/></xsl:if> -->
+        <xsl:if test="@backgroundcolor">
+            <xsl:value-of select="concat('background-color:',@backgroundcolor,';')"/>
+        </xsl:if>
+        <xsl:if test="@opacity"><xsl:value-of select="concat('opacity:',@opacity,';')"/></xsl:if>
+        <xsl:if test="@framecolor">
+            <xsl:value-of select="'border-color: '"/>
+            <xsl:value-of select="@framecolor"/>
+            <xsl:value-of select="';'"/>
+        </xsl:if>
+        <xsl:if test="@cssstyle"><xsl:value-of select="concat(@cssstyle,';')"/></xsl:if>
+    </xsl:template>
+
     <!-- Strip label category prefix from hrefs -->
     <!-- (prefix for equations and subsections in IDs is stripped above, prefix for chapters and sections is stripped from filenames by perl script after building) -->
     <!-- Overrides template in LaTeXML-inline-xhtml.xsl -->

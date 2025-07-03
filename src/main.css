@@ -2,6 +2,7 @@
 
 :root {
 	--colour-bg: #021014;
+	--colour-light-bg: #05252e;
 	--colour-accent: #4897a8;
 	--colour-fg: rgb(200, 200, 200);
 	--transition-exp: cubic-bezier(0.16, 1, 0.3, 1);

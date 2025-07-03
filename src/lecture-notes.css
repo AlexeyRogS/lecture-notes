@@ -226,9 +226,24 @@ li a:hover,  li a:focus {
 /* except the initial in a section */
 section > .ltx_title +.ltx_para > .ltx_p, section > .ltx_title +.ltx_date +.ltx_para > .ltx_p { text-indent: 0em; }
 
-.ltx_theorem { margin: 1em 0; }
-.ltx_theorem .ltx_title { font-size: 110%; margin-bottom: 0.5em; font-weight: bold; }
-.ltx_theorem .ltx_title + .ltx_para, .ltx_theorem .ltx_title + .ltx_para .ltx_p, .ltx_theorem .ltx_title + .ltx_p  { margin-top: 0em; }
+/* theorem environment styles */
+.ltx_theorem { margin: 1em 0; padding: 0.5em 1em; background: var(--colour-light-bg); }
+.ltx_theorem .ltx_title { color: var(--colour-accent); } /* TODO: this probably won't stay forever, as we would like to have different colour schemes for each set of notes */
+.ltx_theorem .ltx_title, .ltx_proof .ltx_title { font-size: 110%; margin-bottom: 0.5em; font-weight: bold; }
+
+.ltx_theorem_theorem, .ltx_theorem_corollary, .ltx_theorem_lemma {
+	border-left: 3px var(--colour-accent) solid;
+	margin-bottom: 0;
+}
+
+.ltx_theorem_definition {
+	border: 3px var(--colour-accent) solid;
+}
+
+.ltx_proof {
+	border-left: 3px var(--colour-accent) solid;
+	padding: 0.5em 1em;
+}
 
 /* set a light background for diagrams, this is a temporary fix */
 /* TODO: implement a proper dark mode colour scheme for diagrams */

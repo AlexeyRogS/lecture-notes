@@ -68,15 +68,16 @@
 \newtheorem{example}{Example}[chapter]
 
 % change colour and style of proof title
-\renewenvironment{proof}[1][\proofname]{\par
-    \pushQED{\qed}
-    \normalfont \topsep6\p@\@plus6\p@\relax
-    \trivlist
-    \item\relax
-    {\bfseries\color{\fgcolour}#1\@addpunct{.}}\hspace\labelsep\ignorespaces
-}{
-    \popQED\endtrivlist\@endpefalse
-}
+% TODO: get rid of this for now as it was messing with the HTML conversion, maybe find a way to bring it back in future
+% \renewenvironment{proof}[1][\proofname]{\par
+%     \pushQED{\qed}
+%     \normalfont \topsep6\p@\@plus6\p@\relax
+%     \trivlist
+%     \item\relax
+%     {\bfseries\color{\fgcolour}#1\@addpunct{.}}\hspace\labelsep\ignorespaces
+% }{
+%     \popQED\endtrivlist\@endpefalse
+% }
 
 % define styles for different environments
 \tcolorboxenvironment{theorem}{
