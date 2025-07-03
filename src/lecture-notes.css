@@ -283,11 +283,21 @@ svg.ltx_picture {
 .ltx_eqn_left_padleft, .ltx_eqn_right_padright { width: 100%; min-width: 2em; }
 
 .ltx_itemize, .ltx_enumerate { margin-left: 1em; padding-left: 0; }
-.ltx_itemize .ltx_item, .ltx_enumerate .ltx_item { display: flex; }
+.ltx_itemize .ltx_item, .ltx_enumerate .ltx_item { 
+	display: grid;
+	grid-template-columns: max-content 1fr;
+}
 
-.ltx_item .ltx_para { overflow: hidden; } /* to counter the width: 100% that is applied to all other .ltx_para elements */
+.ltx_item .ltx_para { 
+	overflow: hidden; /* to counter the width: 100% that is applied to all other .ltx_para elements */
+	grid-column-start: 2; 
+}
 
-li.ltx_item > .ltx_tag { flex-shrink: 0; margin-top: var(--para-margin-top); margin-right: 0.5em; } /* TODO: would like to use align-content: center; here but it only works when the item the tag is referring to is only one line */
+.ltx_item .ltx_theorem, .ltx_item .ltx_proof {
+	 grid-column: 1 / 3;
+}
+
+.ltx_item > .ltx_tag { flex-shrink: 0; margin-top: var(--para-margin-top); margin-right: 0.5em; } /* TODO: would like to use align-content: center; here but it only works when the item the tag is referring to is only one line */
 .ltx_item > .ltx_para > .ltx_p:first-child { text-indent: 0em; }
 
 .ltx_tabular .ltx_tr td:first-child::after,
