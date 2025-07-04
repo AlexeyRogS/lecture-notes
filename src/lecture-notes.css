@@ -300,6 +300,12 @@ svg.ltx_picture {
 .ltx_item > .ltx_tag { flex-shrink: 0; margin-top: var(--para-margin-top); margin-right: 0.5em; } /* TODO: would like to use align-content: center; here but it only works when the item the tag is referring to is only one line */
 .ltx_item > .ltx_para > .ltx_p:first-child { text-indent: 0em; }
 
+/* references */
+a.ltx_ref:has(> .ltx_ref_tag):hover, a.ltx_ref:has(> .ltx_ref_tag):focus {
+	transform: none;
+	text-decoration: underline;
+}
+
 .ltx_tabular .ltx_tr td:first-child::after,
 .ltx_tabular .ltx_tr th:first-child::after {
    content: "";
