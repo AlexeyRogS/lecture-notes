@@ -141,7 +141,7 @@
                     \item If $(x_n)_n$ is a sequence in $D$ with limit $x_0$, then the sequence $(f(x_n))_n$ in $\RR$ has limit $f(x_0)$.
                 \end{enumerate}
             \end{theorem}
-            \begin{proof}\\
+            \begin{proof}
                 (Proof that (i)$\implies$(ii)): Suppose $f$ is continuous at $x_0$, $(x_n)_n$ is a sequence in $D$ with limit $x_0$.\\
                 Let $\varepsilon>0$, since $f$ is continuous at $x_0$, $\exists\delta>0$ such that $\abs{x-x_0}<\delta\implies\abs{f(x)-f(x_0)}<\varepsilon$.\\
                 Now, since $x_n\to x_0$, $\exists N\in\NN$ such that $n\geq N\implies\abs{x_n-x_0}<\delta$, therefore $\abs{f(x_n)-f(x_0)}<\varepsilon$.\\
@@ -201,7 +201,7 @@
                     \item If $g(x)\neq0$ $\forall x\in D$, $\left(\frac{f}{g}\right): D\to\RR$ is continuous at $x_0$.
                 \end{enumerate}
             \end{theorem}
-            \begin{proof}\\
+            \begin{proof}
                 \begin{itemize}
                     \item[(i)] \underline{Using the $\varepsilon-\delta$ definition}:\\
                     Let $\varepsilon>0$, since $f$ is continuous at $x_0$, $\exists\delta_f>0$ so that $\abs{x-x_0}<\delta_f\implies\abs{f(x)-f(x_0)}<\frac{\varepsilon}{2}$. Similarly for $g$, $\exists\delta_g$.\\
@@ -252,7 +252,7 @@
                     \item $f$ attains a minimum, i.e. $\exists x_0\in[a,b]$ such that $f(x)\geq f(x_0)\ \forall x\in[a,b]$.
                 \end{enumerate}
             \end{theorem}
-            \begin{proof}\\
+            \begin{proof}
                 \begin{enumerate}[label={\upshape(\roman*)}]
                     \item Assume by way of contradiction that $f$ is not bounded. Then let $(x_n)_n$ be a sequence in $[a,b]$ such that $\forall n\in\NN$ we have $\abs{f(x_n)}>n$.\\
                     $(x_n)_n$ is a bounded sequence (all the terms are contained within an interval), so by the Bolzano-Weierstrass theorem (\ref{thm:BWT}), there exists a convergent subsequence $(x_{n_k})_k\in[a,b]$ with limit $x_0\in[a,b]$.\\

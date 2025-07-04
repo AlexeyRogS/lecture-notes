@@ -112,7 +112,7 @@
                 \item If $\sum_{n=1}^\infty a_n$ is divergent and $\exists N\in\mathbb{N}$ such that $x_n\geq a_n\ \forall n\geq N$, then $\sum_{n=1}^\infty x_n$ also diverges.
             \end{enumerate}
         \end{theorem}
-        \begin{proof}\\
+        \begin{proof}
             \begin{enumerate}[label={\upshape(\roman*)}]
                 \item Let $A=\sum_{n=1}^\infty a_n$ and note that since all the terms $x_n$ are positive, $S_n=\sum_{k=1}^n x_k$ is an increasing sequence. Then, since there exists some integer $N$ such that for all $k\geq N$ we have $x_n\leq a_n$, we get
                 \begin{equation}
@@ -146,7 +146,7 @@
                     \item If $\exists N\in\mathbb{N}$ and $r>1$ such that for all $n\geq N, \frac{x_{n+1}}{x_n}\geq r$, then $\sum_{n=1}^\infty x_n$ is divergent.
                     \end{enumerate}
             \end{theorem}
-            \begin{proof}\\
+            \begin{proof}
                 \begin{enumerate}[label={\upshape(\roman*)}]
                     \item First note that $x_{N+1}\leq rx_N$, $x_{N+2}\leq rx_{N+1}=r^2x_N$, etc. and so $x_{N+k}\leq r^kx_N$. Now consider the sequence given by
                     \begin{equation}
@@ -203,7 +203,7 @@
                     \item If $\exists N\in\mathbb{N}$ and $r>1$ such that for all $n\geq N, \abs{x_n}^\frac{1}{n}\geq r$, then the series diverges.
                 \end{enumerate}
             \end{theorem}
-            \begin{proof}\\
+            \begin{proof}
                 \begin{enumerate}[label={\upshape(\roman*)}]
                     \item For $n\geq N$ we have $\abs{x_n}^\frac{1}{n}\leq r\implies\abs{x_n}\leq r^n$. Let $a_n=r^n$, then $(a_n)_n$ generates a convergent geometric series so by the comparison test the series $\sum_{n=1}^\infty\abs{x_n}$ converges. Thus the series $\sum_{n=1}^\infty x_n$ is absolutely converges and therefore converges.
                     \item For all $n\geq N$ we have $\abs{x_n}^\frac{1}{n}\geq r\implies\abs{x_n}\geq r^n$, so $x_n$ must be a divergent sequence ($\pm\infty$). In particular, $x_n$ does not converge to 0 as $n\to\infty$, so by the contrapositive of theorem \ref{thm:seq-of-series-to-0}, $\sum_{n=1}^\infty x_n$ diverges.
