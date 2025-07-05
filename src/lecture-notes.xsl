@@ -16,7 +16,7 @@
     <!-- Overrides template in LaTeXML-common-xhtml.xsl -->
     <xsl:template name="add_id">
         <xsl:choose>
-            <xsl:when test="local-name()='equation'">
+            <xsl:when test="local-name()='equation' or local-name()='theorem'">
                 <xsl:attribute name="id"><xsl:value-of select="@xml:id"/></xsl:attribute>
             </xsl:when>
             <xsl:when test="local-name()='subsection'">
@@ -71,22 +71,23 @@
     </xsl:template>
 
     <!-- Strip label category prefix from hrefs -->
-    <!-- (prefix for equations and subsections in IDs is stripped above, prefix for chapters and sections is stripped from filenames by perl script after building) -->
+    <!-- (prefix for equations, theorems, and subsections in IDs is stripped above, prefix for chapters and sections is stripped from filenames by perl script after building) -->
     <!-- Overrides template in LaTeXML-inline-xhtml.xsl -->
     <xsl:template match="ltx:ref">
         <xsl:param name="context"/>
         <xsl:choose>
-            <xsl:when test="contains(@href,'eq:') or contains(@href,'chap_') or contains(@href,'sec_') or contains(@href,'subsec:')">
+            <xsl:when test="contains(@href,'eq:') or contains(@href,'chap_') or contains(@href,'sec_') or contains(@href,'subsec:') or contains(@href,'thm:') or contains(@href,'ex:') or contains(@href,'def:')">
                 <xsl:element name="a" namespace="{$html_ns}">
                     <xsl:variable name="innercontext" select="'inline'"/>
                     <!-- this is the edited part -->
                     <xsl:attribute name="href">
                         <xsl:choose>
-                            <xsl:when test="contains(@href,'eq:')"><xsl:value-of select="f:url(concat(substring-before(@href,'eq:'),@idref))"/></xsl:when>
-                            <xsl:when test="contains(@href,'chap_') and contains(@href,'sec_')"><xsl:value-of select="f:url(concat(substring-before(@href,'chap_'),substring-before(substring-after(@href,'chap_'),'sec_'),substring-after(@href,'sec_')))"/></xsl:when>
-                            <xsl:when test="contains(@href,'chap_')"><xsl:value-of select="f:url(concat(substring-before(@href,'chap_'),substring-after(@href,'chap_')))"/></xsl:when>
-                            <xsl:when test="contains(@href,'sec_')"><xsl:value-of select="f:url(concat(substring-before(@href,'sec_'),substring-after(@href,'sec_')))"/></xsl:when>
-                            <xsl:when test="contains(@href,'subsec:')"><xsl:value-of select="f:url(concat('#',substring-after(@href,'subsec:')))"/></xsl:when>
+                            <xsl:when test="contains(@href,'eq:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'eq:'),@idref),'chap_',''),'sec_',''))"/></xsl:when>
+                            <xsl:when test="contains(@href,'thm:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'thm:'),@idref),'chap_',''),'sec_',''))"/></xsl:when>
+                            <xsl:when test="contains(@href,'ex:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'ex:'),@idref),'chap_',''),'sec_',''))"/></xsl:when>
+                            <xsl:when test="contains(@href,'def:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'def:'),@idref),'chap_',''),'sec_',''))"/></xsl:when>
+                            <xsl:when test="contains(@href,'subsec:')"><xsl:value-of select="f:url(f:subst(f:subst(f:subst(@href,'subsec:',''),'chap_',''),'sec_',''))"/></xsl:when>
+                            <xsl:when test="contains(@href,'chap_') or contains(@href,'sec_')"><xsl:value-of select="f:url(f:subst(f:subst(@href,'chap_',''),'sec_',''))"/></xsl:when>
                         </xsl:choose>
                     </xsl:attribute>
                     <xsl:attribute name="title"><xsl:value-of select="@title"/></xsl:attribute>
@@ -209,7 +210,7 @@
             <xsl:attribute name="class">ltx_page_navbar</xsl:attribute>
             <xsl:apply-templates select="//ltx:navigation/ltx:ref[@rel='start']"/>
             <xsl:element name="h2" namespace="{$html_ns}">
-                <xsl:element name="a" namespace="{$html_ns}"><xsl:attribute name="href">https://lachlan.dk/lecture-notes</xsl:attribute>Lecture Notes</xsl:element>
+                <xsl:element name="a" namespace="{$html_ns}"><xsl:attribute name="href">https://lachlan.dk/lecture-notes/</xsl:attribute>Lecture Notes</xsl:element>
             </xsl:element>
             <xsl:element name="h3" namespace="{$html_ns}">by <xsl:element name="a" namespace="{$html_ns}"><xsl:attribute name="class">external-link</xsl:attribute><xsl:attribute name="href">https://lachlan.dk</xsl:attribute>Lachlan Dufort-Kennett</xsl:element></xsl:element>
             <xsl:apply-templates select="//ltx:navigation/ltx:TOC"/>
@@ -334,7 +335,7 @@
             <xsl:attribute name="class">ltx_tocentry ltx_tocentry_subsubsection</xsl:attribute>
             <xsl:element name="a" namespace="{$html_ns}">
                 <xsl:attribute name="class">ltx_ref</xsl:attribute>
-                <xsl:attribute name="href"><xsl:value-of select="concat('#',@fragid)"/></xsl:attribute>
+                <xsl:attribute name="href"><xsl:value-of select="concat('#',@xml:id)"/></xsl:attribute>
                 <xsl:attribute name="title"><xsl:value-of select="$title"/></xsl:attribute>
                 <xsl:element name="span" namespace="{$html_ns}">
                     <xsl:attribute name="class">ltx_text ltx_ref_title</xsl:attribute>

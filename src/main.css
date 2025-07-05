@@ -23,6 +23,14 @@ a {
 	color: var(--colour-fg);
 }
 
+.external-link {
+	color: var(--colour-accent);
+}
+
+.external-link:hover, .external-link:focus {
+	text-decoration: underline;
+}
+
 nav ul, nav ol {
 	list-style: none;
 	padding-left: 0;
