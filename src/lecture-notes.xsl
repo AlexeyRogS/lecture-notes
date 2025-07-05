@@ -134,6 +134,28 @@
 
     <!-- The following templates all override templates in LaTeXML-webpage-xhtml.xsl -->
 
+    <!-- Add CSS and JavaScript files to head (they will be located in the same virtual location for all files on the server) -->
+    <xsl:template match="/" mode="head-resources">
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:element name="link" namespace="{$html_ns}">
+            <xsl:attribute name="rel">stylesheet</xsl:attribute>
+            <xsl:attribute name="href">styles/main.css</xsl:attribute>
+            <xsl:attribute name="type">text/css</xsl:attribute>
+        </xsl:element>
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:element name="link" namespace="{$html_ns}">
+            <xsl:attribute name="rel">stylesheet</xsl:attribute>
+            <xsl:attribute name="href">styles/lecture-notes.css</xsl:attribute>
+            <xsl:attribute name="type">text/css</xsl:attribute>
+        </xsl:element>
+        <xsl:text>&#x0A;</xsl:text>
+        <xsl:element name="script" namespace="{$html_ns}">
+            <xsl:attribute name="defer">defer</xsl:attribute>
+            <xsl:attribute name="src">scripts/lecture-notes.js</xsl:attribute>
+        </xsl:element>
+        <xsl:apply-imports/>
+    </xsl:template>
+
     <!-- Strip label category prefix from <link>s in <head> -->
     <xsl:template match="ltx:navigation/ltx:ref[@rel] | ltx:navigation/ltx:ref[@rev]" mode="inhead">
         <xsl:choose>
@@ -251,9 +273,7 @@
             <xsl:attribute name="class">ltx_in_page_navbar</xsl:attribute>
             <xsl:apply-templates select="//ltx:navigation/ltx:TOC" mode="in-page-navbar"/>
             <xsl:text>&#x0A;</xsl:text>
-            <xsl:element name="footer" namespace="{$html_ns}">
-                Website designed by me. Copyright <xsl:text disable-output-escaping="yes">&amp;copy;</xsl:text> <xsl:element name="span" namespace="{$html_ns}"><xsl:attribute name="id">copyright-date</xsl:attribute></xsl:element> Lachlan Dufort-Kennett
-            </xsl:element>
+            <xsl:element name="footer" namespace="{$html_ns}">Website designed by me. Copyright <xsl:text disable-output-escaping="yes">&amp;copy;</xsl:text> <xsl:element name="span" namespace="{$html_ns}"><xsl:attribute name="id">copyright-date</xsl:attribute></xsl:element> Lachlan Dufort-Kennett</xsl:element>
         </xsl:element>
     </xsl:template>
 
