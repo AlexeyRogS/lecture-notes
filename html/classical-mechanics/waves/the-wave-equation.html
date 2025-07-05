@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>7.1 The Wave Equation ‣ Chapter 7 Waves ‣ Classical Mechanics</title>
-<!--Generated on Sun Jun 29 14:56:25 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:54:41 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 7 Waves ‣ Classical Mechanics">
 <link rel="up up" href="../index.html" title="Classical Mechanics">
 <link rel="start" href="../index.html" title="Classical Mechanics">
@@ -33,7 +32,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Classical Mechanics">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -66,10 +68,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Waves</span></a><a href="./" title="In Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Waves</span></a><a href="superposition-of-waves.html" title="In Chapter 7 Waves ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2 </span>Superposition of Waves</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -84,6 +83,7 @@
 How do we describe waves mathematically?
 Suppose <math id="SS1.p1.m1" class="ltx_Math" alttext="f(\chi)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>χ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is some periodic function which takes a phase <math id="SS1.p1.m2" class="ltx_Math" alttext="\chi" display="inline"><mi>χ</mi></math> measured in radians (fractions of <math id="SS1.p1.m3" class="ltx_Math" alttext="2\pi" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></math>).
 Then we can describe the variation in space at a specific point in time as a snapshot:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.E1" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -93,8 +93,10 @@ Then we can describe the variation in space at a specific point in time as a sna
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7.1)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">where <math id="SS1.p1.m4" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is the <span class="ltx_text ltx_font_bold">wavelength</span> of the wave (the spatial period).
 We can also describe the variation in amplitude at a single point in space over time:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.E2" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -104,11 +106,13 @@ We can also describe the variation in amplitude at a single point in space over 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7.2)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">where <math id="SS1.p1.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is the temporal period.</p>
 </div>
 <div id="SS1.p2" class="ltx_para">
 <p class="ltx_p">To put these pictures together, we can consider the snapshot picture with a shift <math id="SS1.p2.m1" class="ltx_Math" alttext="x-vt" display="inline"><mrow><mi>x</mi><mo>−</mo><mrow><mi>v</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math> where <math id="SS1.p2.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> is the speed of the wave.
 Then we have</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx118" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch7.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -140,11 +144,12 @@ Then we have</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7.6)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Where we have defined the <span class="ltx_text ltx_font_bold">wavenumber</span> (spatial frequency measured in radians/m) <math id="SS1.p2.m3" class="ltx_Math" alttext="k=2\pi/\lambda" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo>/</mo><mi>λ</mi></mrow></mrow></math> and recalled <math id="SS1.p2.m4" class="ltx_Math" alttext="v=f\lambda" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mi>λ</mi></mrow></mrow></math>, <math id="SS1.p2.m5" class="ltx_Math" alttext="f=1/T" display="inline"><mrow><mi>f</mi><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>T</mi></mrow></mrow></math> and <math id="SS1.p2.m6" class="ltx_Math" alttext="\omega=2\pi f" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>f</mi></mrow></mrow></math>.</p>
 </div>
 <div id="Ch7.Thmexample1" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 7.1</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 7.1</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch7.Thmexample1.p1" class="ltx_para">
 <p class="ltx_p">Suppose we have a sinusoidal wave given by <math id="Ch7.Thmexample1.p1.m1" class="ltx_Math" alttext="y(x,t)=A\cos(kx-\omega t+\phi)" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
@@ -152,6 +157,7 @@ What is the particle velocity at fixed position <math id="Ch7.Thmexample1.p1.m2"
 </div>
 <div id="Ch7.Thmexample1.p2" class="ltx_para">
 <p class="ltx_p">To solve this, we take the <span class="ltx_text ltx_font_italic">partial derivative</span> with respect to time (to keep <math id="Ch7.Thmexample1.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> constant)</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.E7" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -161,6 +167,7 @@ What is the particle velocity at fixed position <math id="Ch7.Thmexample1.p1.m2"
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7.7)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Note that this is different to the propagation speed of the wave itself, which is constant.</p>
 </div>
 </div>
@@ -172,6 +179,7 @@ What is the particle velocity at fixed position <math id="Ch7.Thmexample1.p1.m2"
 <div id="SS2.p1" class="ltx_para">
 <p class="ltx_p">For simplicity, let’s consider a general right-travelling wave <math id="SS2.p1.m1" class="ltx_Math" alttext="f(x-vt)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mrow><mi>v</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. We can make a substitution <math id="SS2.p1.m2" class="ltx_Math" alttext="u=x-vt" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mi>x</mi><mo>−</mo><mrow><mi>v</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math>.
 Then we get</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx119" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch7.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -217,8 +225,10 @@ Then we get</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7.13)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">If we do this same calculation with a left-travelling wave <math id="SS2.p1.m3" class="ltx_Math" alttext="f(x+vt)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>v</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, we get the same relation.
 Thus, by construction, the general solution to the differential equation</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.E14" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -228,6 +238,7 @@ Thus, by construction, the general solution to the differential equation</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7.14)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">is <math id="SS2.p1.m4" class="ltx_Math" alttext="f(x,t)=f_{l}(x+vt)+f_{r}(x-vt)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>f</mi><mi>l</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>v</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>f</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mrow><mi>v</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
 This linear differential equation is known as the <span class="ltx_text ltx_font_bold">wave equation</span>.
 All functions which satisfy our definition of a wave solve this equation.</p>
@@ -239,18 +250,19 @@ All functions which satisfy our definition of a wave solve this equation.</p>
 <div class="ltx_align_center">
 <a href="./" title="In Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Waves</span></a><a href="superposition-of-waves.html" title="In Chapter 7 Waves ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.2 </span>Superposition of Waves</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:56:25 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:54:41 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#mathematical-description-of-a-wave" title="In 7.1 The Wave Equation ‣ Chapter 7 Waves ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.1.1 </span>Mathematical Description of a Wave</span></a></li>
 <ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch7.Thmexample1" title=""><span class="ltx_text ltx_ref_title">Example 7.1</span></a></li></ol>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#constructing-the-wave-equation" title="In 7.1 The Wave Equation ‣ Chapter 7 Waves ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7.1.2 </span>Constructing the Wave Equation</span></a></li>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

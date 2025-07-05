@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>2.3 Ordering &amp; Bounding ‣ Chapter 2 Notions from Set Theory ‣ Real Analysis</title>
-<!--Generated on Sun Jun 29 14:55:23 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:53:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 2 Notions from Set Theory ‣ Real Analysis">
 <link rel="up up" href="../index.html" title="Real Analysis">
 <link rel="start" href="../index.html" title="Real Analysis">
@@ -26,7 +25,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Real Analysis">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -52,10 +54,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Real Analysis" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Notions from Set Theory</span></a><a href="algebra-of-sets.html" title="In Chapter 2 Notions from Set Theory ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Algebra of Sets</span></a><a href="../real-numbers/index.html" title="In Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Real Numbers</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -67,7 +66,7 @@
 
 <div id="Ch2.Thmdefinition10" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Definition 2.10</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.10</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch2.Thmdefinition10.p1" class="ltx_para">
 <p class="ltx_p">A <span class="ltx_text ltx_font_bold">partially ordered set</span> is an ordered pair <math id="Ch2.Thmdefinition10.p1.m1" class="ltx_Math" alttext="(X,\leq)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mo lspace="0em" rspace="0em">≤</mo><mo stretchy="false">)</mo></mrow></math>, where <math id="Ch2.Thmdefinition10.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a set and <math id="Ch2.Thmdefinition10.p1.m3" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> is a binary relation which forms a <span class="ltx_text ltx_font_bold">partial order</span> on <math id="Ch2.Thmdefinition10.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. For any two elements <math id="Ch2.Thmdefinition10.p1.m5" class="ltx_Math" alttext="x,y\in X" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>X</mi></mrow></math> we have either <math id="Ch2.Thmdefinition10.p1.m6" class="ltx_Math" alttext="x\leq y" display="inline"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow></math>, or <math id="Ch2.Thmdefinition10.p1.m7" class="ltx_Math" alttext="x\not{\leq}y" display="inline"><mrow><mi>x</mi><mo>≰</mo><mi>y</mi></mrow></math>.</p>
@@ -75,7 +74,7 @@
 </div>
 <div id="Ch2.Thmexample1" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 2.1</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch2.Thmexample1.p1" class="ltx_para">
 <p class="ltx_p">Let <math id="Ch2.Thmexample1.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a set, then let <math id="Ch2.Thmexample1.p1.m2" class="ltx_Math" alttext="P(S)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the set of subsets of <math id="Ch2.Thmexample1.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Then <math id="Ch2.Thmexample1.p1.m4" class="ltx_Math" alttext="(P(S),\subseteq)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mo lspace="0em" rspace="0em">⊆</mo><mo stretchy="false">)</mo></mrow></math> is a partially ordered set. For any two elements <math id="Ch2.Thmexample1.p1.m5" class="ltx_Math" alttext="A,B\in P(S)" display="inline"><mrow><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><mo>∈</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> we have either <math id="Ch2.Thmexample1.p1.m6" class="ltx_Math" alttext="A\subseteq B" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>B</mi></mrow></math> or <math id="Ch2.Thmexample1.p1.m7" class="ltx_Math" alttext="A\not{\subseteq}B" display="inline"><mrow><mi>A</mi><mo>⊈</mo><mi>B</mi></mrow></math>.</p>
@@ -83,7 +82,7 @@
 </div>
 <div id="Ch2.Thmdefinition11" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Definition 2.11</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.11</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch2.Thmdefinition11.p1" class="ltx_para">
 <p class="ltx_p">A <span class="ltx_text ltx_font_bold">totally ordered set</span> is an ordered pair <math id="Ch2.Thmdefinition11.p1.m1" class="ltx_Math" alttext="(X,\leq)" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mo lspace="0em" rspace="0em">≤</mo><mo stretchy="false">)</mo></mrow></math>, where <math id="Ch2.Thmdefinition11.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a set and <math id="Ch2.Thmdefinition11.p1.m3" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math> is a binary relation which forms a <span class="ltx_text ltx_font_bold">total order</span> on <math id="Ch2.Thmdefinition11.p1.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. So for any two elements <math id="Ch2.Thmdefinition11.p1.m5" class="ltx_Math" alttext="x,y\in X" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><mi>X</mi></mrow></math> we have <math id="Ch2.Thmdefinition11.p1.m6" class="ltx_Math" alttext="x\leq y" display="inline"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow></math>, or <math id="Ch2.Thmdefinition11.p1.m7" class="ltx_Math" alttext="y\leq x" display="inline"><mrow><mi>y</mi><mo>≤</mo><mi>x</mi></mrow></math>, or both (never neither)<span id="Ch2.footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
@@ -95,7 +94,7 @@
 </div>
 <div id="Ch2.Thmexample2" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 2.2</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch2.Thmexample2.p1" class="ltx_para">
 <p class="ltx_p"><math id="Ch2.Thmexample2.p1.m1" class="ltx_Math" alttext="(\mathbb{N},\leq)" display="inline"><mrow><mo stretchy="false">(</mo><mi>ℕ</mi><mo>,</mo><mo lspace="0em" rspace="0em">≤</mo><mo stretchy="false">)</mo></mrow></math> — the set of natural numbers with the greater than or equal to relation — forms a totally ordered set. For any <math id="Ch2.Thmexample2.p1.m2" class="ltx_Math" alttext="m,n\in\mathbb{N}" display="inline"><mrow><mrow><mi>m</mi><mo>,</mo><mi>n</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math> we have <math id="Ch2.Thmexample2.p1.m3" class="ltx_Math" alttext="m\leq n" display="inline"><mrow><mi>m</mi><mo>≤</mo><mi>n</mi></mrow></math>, or <math id="Ch2.Thmexample2.p1.m4" class="ltx_Math" alttext="n\leq m" display="inline"><mrow><mi>n</mi><mo>≤</mo><mi>m</mi></mrow></math>, or both (<math id="Ch2.Thmexample2.p1.m5" class="ltx_Math" alttext="m=n" display="inline"><mrow><mi>m</mi><mo>=</mo><mi>n</mi></mrow></math>). Any subset of <math id="Ch2.Thmexample2.p1.m6" class="ltx_Math" alttext="\mathbb{N}" display="inline"><mi>ℕ</mi></math> is also totally ordered under <math id="Ch2.Thmexample2.p1.m7" class="ltx_Math" alttext="\leq" display="inline"><mo>≤</mo></math>.</p>
@@ -114,7 +113,7 @@
 </div>
 <div id="Ch2.Thmdefinition12" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Definition 2.12</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.12</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch2.Thmdefinition12.p1" class="ltx_para">
 <p class="ltx_p">Let <math id="Ch2.Thmdefinition12.p1.m1" class="ltx_Math" alttext="(P,\leq)" display="inline"><mrow><mo stretchy="false">(</mo><mi>P</mi><mo>,</mo><mo lspace="0em" rspace="0em">≤</mo><mo stretchy="false">)</mo></mrow></math> be a partially ordered set and let <math id="Ch2.Thmdefinition12.p1.m2" class="ltx_Math" alttext="S\subseteq P" display="inline"><mrow><mi>S</mi><mo>⊆</mo><mi>P</mi></mrow></math>.</p>
@@ -169,13 +168,11 @@ Basically the supremum of <math id="I1.i5.p1.m7" class="ltx_Math" alttext="S" di
 <div class="ltx_align_center">
 <a href="algebra-of-sets.html" title="In Chapter 2 Notions from Set Theory ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Algebra of Sets</span></a><a href="../real-numbers/index.html" title="In Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Real Numbers</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:55:23 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:53:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#orders" title="In 2.3 Ordering &amp; Bounding ‣ Chapter 2 Notions from Set Theory ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3.1 </span>Orders</span></a></li>
 <ol class="ltx_toclist ltx_toclist_subsection">
@@ -187,6 +184,9 @@ Basically the supremum of <math id="I1.i5.p1.m7" class="ltx_Math" alttext="S" di
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#bounds" title="In 2.3 Ordering &amp; Bounding ‣ Chapter 2 Notions from Set Theory ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3.2 </span>Bounds</span></a></li>
 <ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch2.Thmdefinition12" title=""><span class="ltx_text ltx_ref_title">Definition 2.12</span></a></li></ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

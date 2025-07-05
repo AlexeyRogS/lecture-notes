@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>1.4 Motion in Mulitple Dimensions ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics</title>
-<!--Generated on Sun Jun 29 14:56:25 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:54:41 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
 <link rel="up up" href="../index.html" title="Classical Mechanics">
 <link rel="start" href="../index.html" title="Classical Mechanics">
@@ -31,7 +30,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Classical Mechanics">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -62,10 +64,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Newton’s Laws of Motion</span></a><a href="constant-acceleration.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Constant Acceleration</span></a><a href="forces.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.5 </span>Forces</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -84,6 +83,7 @@ In <span class="ltx_text ltx_font_bold">cartesian</span> coordinates, which are 
 </figure>
 <div id="SS1.p2" class="ltx_para">
 <p class="ltx_p">A general vector in 3D cartesian coordinates is represented by a sum of components along each direction.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E20" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -95,8 +95,10 @@ _{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝑨</mi><mo>=</mo><m
 </tr></tbody>
 </table>
 </div>
+</div>
 <div id="SS1.p3" class="ltx_para">
 <p class="ltx_p">Note that it is important that our basis vectors are <span class="ltx_text ltx_font_bold">orthonormal</span>, meaning both orthogonal and of unit length, as this means we have the relations</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch1.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -123,6 +125,7 @@ _{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝑨</mi><mo>=</mo><m
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.23)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">If these results were not true, then some of the mathematics we will do later on (involving dot and cross products) would become much more complicated than it needs to be.</p>
 </div>
 <div id="SS1.p4" class="ltx_para">
@@ -132,6 +135,7 @@ _{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝑨</mi><mo>=</mo><m
 </figure>
 <div id="SS1.p5" class="ltx_para">
 <p class="ltx_p">First, note that the length of the vector is given by Pythagoras’ theorem:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E24" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -141,7 +145,9 @@ _{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝑨</mi><mo>=</mo><m
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.24)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Then, using trigonometry, the components <math id="SS1.p5.m1" class="ltx_Math" alttext="A_{x}" display="inline"><msub><mi>A</mi><mi>x</mi></msub></math> and <math id="SS1.p5.m2" class="ltx_Math" alttext="A_{y}" display="inline"><msub><mi>A</mi><mi>y</mi></msub></math> are given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch1.E25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -159,7 +165,9 @@ _{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝑨</mi><mo>=</mo><m
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.26)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">We also have a relation for the angle:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E27" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -169,6 +177,7 @@ _{z}\hat{\boldsymbol{k}}." display="block"><mrow><mrow><mi>𝑨</mi><mo>=</mo><m
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.27)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">In 3D we need two angles to describe the direction of a vector (for example, the angle it makes with the <math id="SS1.p5.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis and then the angle it makes with the <math id="SS1.p5.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="SS1.p5.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane), so the relations become slightly more complicated.
 We will not worry about this for now, and delay a detailed disccusion until the beginning of chapter <a href="../oscillations/index.html" title="Chapter 6 Oscillations ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>.</p>
 </div>
@@ -179,11 +188,12 @@ We will not worry about this for now, and delay a detailed disccusion until the 
 
 <div id="Ch1.Thmdefinition5" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.5</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.5</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmdefinition5.p1" class="ltx_para">
 <p class="ltx_p">The <span class="ltx_text ltx_font_bold">trajectory</span> of an object in three dimensions is a vector-valued function <math id="Ch1.Thmdefinition5.p1.m1" class="ltx_Math" alttext="\boldsymbol{r}(t)" display="inline"><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> where <math id="Ch1.Thmdefinition5.p1.m2" class="ltx_Math" alttext="t\in\mathbb{R}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, <math id="Ch1.Thmdefinition5.p1.m3" class="ltx_Math" alttext="\boldsymbol{r}(t)\in\mathbb{R}^{3}" display="inline"><mrow><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math>.
 We write</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E28" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -194,6 +204,7 @@ z(t)\hat{\boldsymbol{k}}" display="block"><mrow><mrow><mi>𝒓</mi><mo>⁢</mo><
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.28)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">in cartesian coordinates, where <math id="Ch1.Thmdefinition5.p1.m4" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="Ch1.Thmdefinition5.p1.m5" class="ltx_Math" alttext="y(t)" display="inline"><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="Ch1.Thmdefinition5.p1.m6" class="ltx_Math" alttext="z(t)" display="inline"><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> are the 1D trajectories of the object along each axis.
 For example, if <math id="Ch1.Thmdefinition5.p1.m7" class="ltx_Math" alttext="\boldsymbol{r}(t_{0})=\boldsymbol{r}_{0}=x_{0}\hat{\boldsymbol{\imath}}+y_{0}%
 \hat{\boldsymbol{\jmath}}+z_{0}\hat{\boldsymbol{k}}" display="inline"><mrow><mrow><mi>𝒓</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>𝒓</mi><mn>0</mn></msub><mo>=</mo><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ı</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi class="ltx_mathvariant_bold-italic" mathvariant="bold-italic">ȷ</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>⁢</mo><mover accent="true"><mi>𝒌</mi><mo>^</mo></mover></mrow></mrow></mrow></math>, then the object is located at position <math id="Ch1.Thmdefinition5.p1.m8" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> along the <math id="Ch1.Thmdefinition5.p1.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis, <math id="Ch1.Thmdefinition5.p1.m10" class="ltx_Math" alttext="y_{0}" display="inline"><msub><mi>y</mi><mn>0</mn></msub></math> along the <math id="Ch1.Thmdefinition5.p1.m11" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> axis and <math id="Ch1.Thmdefinition5.p1.m12" class="ltx_Math" alttext="z_{0}" display="inline"><msub><mi>z</mi><mn>0</mn></msub></math> along the <math id="Ch1.Thmdefinition5.p1.m13" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> axis.
@@ -203,6 +214,7 @@ For example, if <math id="Ch1.Thmdefinition5.p1.m7" class="ltx_Math" alttext="\b
 <div id="SS2.p1" class="ltx_para">
 <p class="ltx_p">At this point it is worth introducing a new notation which will simplify our expressions going forward.
 We will represent a time derivative of a quantity by simply writing a dot above the letter, and put two dots for a second derivative.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E29" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -214,17 +226,19 @@ We will represent a time derivative of a quantity by simply writing a dot above 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.29)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">i.e. <math id="SS2.p1.m1" class="ltx_Math" alttext="\dot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>˙</mo></mover></math> represents velocity and <math id="SS2.p1.m2" class="ltx_Math" alttext="\ddot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¨</mo></mover></math> represents acceleration.
 The notation is due to Newton and so it is fitting that we use it a lot in mechanics.
 We have also stopped notating dependence on time explicitly for brevity and to reduce clutter in the notation.</p>
 </div>
 <div id="Ch1.Thmdefinition6" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.6</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.6</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmdefinition6.p1" class="ltx_para">
 <p class="ltx_p">Just as in one dimension.
 The velocity is defined as the time derivative of position.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E30" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -240,15 +254,17 @@ The velocity is defined as the time derivative of position.</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.30)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Sometimes we denote <math id="Ch1.Thmdefinition6.p1.m1" class="ltx_Math" alttext="\dot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>˙</mo></mover></math>, <math id="Ch1.Thmdefinition6.p1.m2" class="ltx_Math" alttext="\dot{y}" display="inline"><mover accent="true"><mi>y</mi><mo>˙</mo></mover></math> and <math id="Ch1.Thmdefinition6.p1.m3" class="ltx_Math" alttext="\dot{z}" display="inline"><mover accent="true"><mi>z</mi><mo>˙</mo></mover></math> as <math id="Ch1.Thmdefinition6.p1.m4" class="ltx_Math" alttext="v_{x}" display="inline"><msub><mi>v</mi><mi>x</mi></msub></math>, <math id="Ch1.Thmdefinition6.p1.m5" class="ltx_Math" alttext="v_{y}" display="inline"><msub><mi>v</mi><mi>y</mi></msub></math> and <math id="Ch1.Thmdefinition6.p1.m6" class="ltx_Math" alttext="v_{z}" display="inline"><msub><mi>v</mi><mi>z</mi></msub></math> respectively.</p>
 </div>
 </div>
 <div id="Ch1.Thmdefinition7" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.7</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.7</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmdefinition7.p1" class="ltx_para">
 <p class="ltx_p">Likewise, acceleration is the time derivative of velocity, or the second time derivative of position.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E31" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -261,6 +277,7 @@ The velocity is defined as the time derivative of position.</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.31)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Sometimes <math id="Ch1.Thmdefinition7.p1.m1" class="ltx_Math" alttext="\ddot{x}" display="inline"><mover accent="true"><mi>x</mi><mo>¨</mo></mover></math>, <math id="Ch1.Thmdefinition7.p1.m2" class="ltx_Math" alttext="\ddot{y}" display="inline"><mover accent="true"><mi>y</mi><mo>¨</mo></mover></math> and <math id="Ch1.Thmdefinition7.p1.m3" class="ltx_Math" alttext="\ddot{z}" display="inline"><mover accent="true"><mi>z</mi><mo>¨</mo></mover></math> are called <math id="Ch1.Thmdefinition7.p1.m4" class="ltx_Math" alttext="a_{x}" display="inline"><msub><mi>a</mi><mi>x</mi></msub></math>, <math id="Ch1.Thmdefinition7.p1.m5" class="ltx_Math" alttext="a_{y}" display="inline"><msub><mi>a</mi><mi>y</mi></msub></math> and <math id="Ch1.Thmdefinition7.p1.m6" class="ltx_Math" alttext="a_{z}" display="inline"><msub><mi>a</mi><mi>z</mi></msub></math>.</p>
 </div>
 </div>
@@ -272,6 +289,7 @@ Because of this, it is possible (and convenient) for simple problems to ignore t
 <p class="ltx_p">Suppose we want to take the dot product of two vectors.
 We can compute it by writing each vector as a sum of components and then multiplying out the brackets.
 Going through the steps in cartesian coordinates, we get</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch1.E32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -307,6 +325,7 @@ _{z}\hat{\boldsymbol{k}})\cdot(B_{x}\hat{\boldsymbol{\imath}}+B_{y}\hat{%
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.34)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">The last step only follows because the basis vectors are <span class="ltx_text ltx_font_bold">orthonormal</span>.
 This is because the terms with two different basis vectors dotted together vanish (equation <a href="#Ch1.E23" title="In 1.4.1 Points in 3D Space ‣ 1.4 Motion in Mulitple Dimensions ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.23</span></a>) and the terms with two of the same basis vector become just the coordinates multiplied together (equation <a href="#Ch1.E22" title="In 1.4.1 Points in 3D Space ‣ 1.4 Motion in Mulitple Dimensions ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.22</span></a>).
 All the coordinate systems we have dealt with so far have an orthonormal basis because of this fact.</p>
@@ -318,13 +337,11 @@ All the coordinate systems we have dealt with so far have an orthonormal basis b
 <div class="ltx_align_center">
 <a href="constant-acceleration.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Constant Acceleration</span></a><a href="forces.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.5 </span>Forces</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:56:25 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:54:41 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#points-in-3d-space" title="In 1.4 Motion in Mulitple Dimensions ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4.1 </span>Points in 3D Space</span></a></li>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#describing-motion-with-vectors" title="In 1.4 Motion in Mulitple Dimensions ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4.2 </span>Describing Motion with Vectors</span></a></li>
@@ -334,6 +351,9 @@ All the coordinate systems we have dealt with so far have an orthonormal basis b
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch1.Thmdefinition7" title=""><span class="ltx_text ltx_ref_title">Definition 1.7</span></a></li>
 </ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

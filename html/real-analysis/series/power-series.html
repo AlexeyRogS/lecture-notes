@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>5.4 Power Series ‣ Chapter 5 Series ‣ Real Analysis</title>
-<!--Generated on Sun Jun 29 14:55:23 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:53:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 5 Series ‣ Real Analysis">
 <link rel="up up" href="../index.html" title="Real Analysis">
 <link rel="start" href="../index.html" title="Real Analysis">
@@ -27,7 +26,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Real Analysis">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -50,10 +52,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Real Analysis" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Series</span></a><a href="series-of-positive-and-negative-terms.html" title="In Chapter 5 Series ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Series of Positive &amp; Negative Terms</span></a><a href="../continuous-functions/index.html" title="In Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Continuous Functions</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -64,10 +63,11 @@
 </div>
 <div id="Ch5.Thmdefinition5" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Definition 5.5</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 5.5</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch5.Thmdefinition5.p1" class="ltx_para">
 <p class="ltx_p">Let <math id="Ch5.Thmdefinition5.p1.m1" class="ltx_Math" alttext="(a_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> be a sequence of real numbers. Then a power series in some variable <math id="Ch5.Thmdefinition5.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E26" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -79,11 +79,12 @@
 </table>
 </div>
 </div>
+</div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">If we compare the form of a power series to a geometric series, we can see that the convergence of a power series depends on the value of the variable <math id="p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, so the power series is a function of <math id="p2.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. In particular, it can be shown that a power series either converges for all <math id="p2.m3" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, or it converges in some interval of the real line symmetric about <math id="p2.m4" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. For example, if <math id="p2.m5" class="ltx_Math" alttext="(a_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is the constant sequence <math id="p2.m6" class="ltx_Math" alttext="(1)_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math>, then the power series <math id="p2.m7" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msup><mi>x</mi><mi>n</mi></msup></mrow></math> converges for <math id="p2.m8" class="ltx_Math" alttext="-1&lt;x&lt;1" display="inline"><mrow><mrow><mo>−</mo><mn>1</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow></math>.</p>
 </div>
 <div id="Ch5.Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
-<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Theorem 5.9</span></span></h6>
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.9</span></span></h6>
 <div id="Ch5.Thmtheorem9.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">Consider a power series <math id="Ch5.Thmtheorem9.p1.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> and suppose <math id="Ch5.Thmtheorem9.p1.m2" class="ltx_Math" alttext="\lim_{n\to\infty}\lvert a_{n}\rvert^{\frac{1}{n}}=\beta" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><msup><mrow><mo lspace="0em" stretchy="false">|</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mfrac><mn>1</mn><mi>n</mi></mfrac></msup></mrow><mo>=</mo><mi>β</mi></mrow></math>. Then, taking <math id="Ch5.Thmtheorem9.p1.m3" class="ltx_Math" alttext="R=\frac{1}{\beta}" display="inline"><mrow><mi>R</mi><mo>=</mo><mfrac><mn>1</mn><mi>β</mi></mfrac></mrow></math> (if <math id="Ch5.Thmtheorem9.p1.m4" class="ltx_Math" alttext="\beta=0" display="inline"><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow></math>, then take <math id="Ch5.Thmtheorem9.p1.m5" class="ltx_Math" alttext="R=\infty" display="inline"><mrow><mi>R</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>; if <math id="Ch5.Thmtheorem9.p1.m6" class="ltx_Math" alttext="\beta=\infty" display="inline"><mrow><mi>β</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, then take <math id="Ch5.Thmtheorem9.p1.m7" class="ltx_Math" alttext="R=0" display="inline"><mrow><mi>R</mi><mo>=</mo><mn>0</mn></mrow></math>), we have</span></p>
 <ol id="I1" class="ltx_enumerate">
@@ -103,12 +104,11 @@
 <p class="ltx_p"><math id="Ch5.Thmtheorem9.p1.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math><span class="ltx_text ltx_font_italic"> is called the <span class="ltx_text ltx_font_bold">radius of convergence</span> of the power series.</span></p>
 </div>
 </div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="p3" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="p3.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.</span>Fix <math id="p3.p1.m1" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Then</p>
+<p class="ltx_p">Fix <math id="p3.m1" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Then</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E27" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -119,40 +119,41 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.27)</span></td>
 </tr></tbody>
 </table>
-<ol id="I2.i0.I1" class="ltx_enumerate">
-<li id="I2.i0.I1.i1" class="ltx_item" style="list-style-type:none;">
+</div>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(i)</span> 
-<div id="I2.i0.I1.i1.p1" class="ltx_para">
-<ol id="I2.i0.I1.i1.I1" class="ltx_enumerate">
-<li id="I2.i0.I1.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
+<div id="I2.i1.p1" class="ltx_para">
+<ol id="I2.i1.I1" class="ltx_enumerate">
+<li id="I2.i1.I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(a)</span> 
-<div id="I2.i0.I1.i1.I1.i1.p1" class="ltx_para">
-<p class="ltx_p"><math id="I2.i0.I1.i1.I1.i1.p1.m1" class="ltx_Math" alttext="\beta=0" display="inline"><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow></math> (so <math id="I2.i0.I1.i1.I1.i1.p1.m2" class="ltx_Math" alttext="R=\infty" display="inline"><mrow><mi>R</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="I2.i0.I1.i1.I1.i1.p1.m3" class="ltx_Math" alttext="\lvert x\rvert&lt;R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow></math>) implies <math id="I2.i0.I1.i1.I1.i1.p1.m4" class="ltx_Math" alttext="\beta\lvert x\rvert&lt;1" display="inline"><mrow><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, so by the root test <math id="I2.i0.I1.i1.I1.i1.p1.m5" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> converges.</p>
+<div id="I2.i1.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.I1.i1.p1.m1" class="ltx_Math" alttext="\beta=0" display="inline"><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow></math> (so <math id="I2.i1.I1.i1.p1.m2" class="ltx_Math" alttext="R=\infty" display="inline"><mrow><mi>R</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="I2.i1.I1.i1.p1.m3" class="ltx_Math" alttext="\lvert x\rvert&lt;R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow></math>) implies <math id="I2.i1.I1.i1.p1.m4" class="ltx_Math" alttext="\beta\lvert x\rvert&lt;1" display="inline"><mrow><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>, so by the root test <math id="I2.i1.I1.i1.p1.m5" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> converges.</p>
 </div>
 </li>
-<li id="I2.i0.I1.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i1.I1.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(b)</span> 
-<div id="I2.i0.I1.i1.I1.i2.p1" class="ltx_para">
-<p class="ltx_p"><math id="I2.i0.I1.i1.I1.i2.p1.m1" class="ltx_Math" alttext="\beta&gt;0" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="I2.i0.I1.i1.I1.i2.p1.m2" class="ltx_Math" alttext="\beta\lvert x\rvert&lt;1" display="inline"><mrow><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn></mrow></math> (so <math id="I2.i0.I1.i1.I1.i2.p1.m3" class="ltx_Math" alttext="\lvert x\rvert&lt;R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow></math>). By the root test <math id="I2.i0.I1.i1.I1.i2.p1.m4" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> converges.</p>
+<div id="I2.i1.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.I1.i2.p1.m1" class="ltx_Math" alttext="\beta&gt;0" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="I2.i1.I1.i2.p1.m2" class="ltx_Math" alttext="\beta\lvert x\rvert&lt;1" display="inline"><mrow><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn></mrow></math> (so <math id="I2.i1.I1.i2.p1.m3" class="ltx_Math" alttext="\lvert x\rvert&lt;R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>R</mi></mrow></math>). By the root test <math id="I2.i1.I1.i2.p1.m4" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> converges.</p>
 </div>
 </li>
 </ol>
 </div>
 </li>
-<li id="I2.i0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(ii)</span> 
-<div id="I2.i0.I1.i2.p1" class="ltx_para">
-<ol id="I2.i0.I1.i2.I1" class="ltx_enumerate">
-<li id="I2.i0.I1.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<div id="I2.i2.p1" class="ltx_para">
+<ol id="I2.i2.I1" class="ltx_enumerate">
+<li id="I2.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(a)</span> 
-<div id="I2.i0.I1.i2.I1.i1.p1" class="ltx_para">
-<p class="ltx_p"><math id="I2.i0.I1.i2.I1.i1.p1.m1" class="ltx_Math" alttext="\beta=\infty" display="inline"><mrow><mi>β</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> (so <math id="I2.i0.I1.i2.I1.i1.p1.m2" class="ltx_Math" alttext="R=0" display="inline"><mrow><mi>R</mi><mo>=</mo><mn>0</mn></mrow></math>). Then the root test implies that <math id="I2.i0.I1.i2.I1.i1.p1.m3" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> diverges.</p>
+<div id="I2.i2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.I1.i1.p1.m1" class="ltx_Math" alttext="\beta=\infty" display="inline"><mrow><mi>β</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> (so <math id="I2.i2.I1.i1.p1.m2" class="ltx_Math" alttext="R=0" display="inline"><mrow><mi>R</mi><mo>=</mo><mn>0</mn></mrow></math>). Then the root test implies that <math id="I2.i2.I1.i1.p1.m3" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> diverges.</p>
 </div>
 </li>
-<li id="I2.i0.I1.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(b)</span> 
-<div id="I2.i0.I1.i2.I1.i2.p1" class="ltx_para">
-<p class="ltx_p"><math id="I2.i0.I1.i2.I1.i2.p1.m1" class="ltx_Math" alttext="\beta&gt;0" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="I2.i0.I1.i2.I1.i2.p1.m2" class="ltx_Math" alttext="\beta\lvert x\rvert&gt;1" display="inline"><mrow><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&gt;</mo><mn>1</mn></mrow></math> (so <math id="I2.i0.I1.i2.I1.i2.p1.m3" class="ltx_Math" alttext="\lvert x\rvert&gt;R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mi>R</mi></mrow></math>). Then by the root test <math id="I2.i0.I1.i2.I1.i2.p1.m4" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> diverges.</p>
+<div id="I2.i2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.I1.i2.p1.m1" class="ltx_Math" alttext="\beta&gt;0" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="I2.i2.I1.i2.p1.m2" class="ltx_Math" alttext="\beta\lvert x\rvert&gt;1" display="inline"><mrow><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&gt;</mo><mn>1</mn></mrow></math> (so <math id="I2.i2.I1.i2.p1.m3" class="ltx_Math" alttext="\lvert x\rvert&gt;R" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mi>R</mi></mrow></math>). Then by the root test <math id="I2.i2.I1.i2.p1.m4" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> diverges.</p>
 </div>
 </li>
 </ol>
@@ -161,17 +162,18 @@
 </ol>
 <p class="ltx_p">∎</p>
 </div>
-</li>
-</ul>
-<p class="ltx_p">Note that when we are finding <math id="p3.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, it can often be much easier to find the limit <math id="p3.m2" class="ltx_Math" alttext="\lim_{n\to\infty}\left\lvert\frac{a_{n+1}}{a_{n}}\right\rvert" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mrow><mo lspace="0em">|</mo><mfrac><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>a</mi><mi>n</mi></msub></mfrac><mo>|</mo></mrow></mrow></math> than <math id="p3.m3" class="ltx_Math" alttext="\lim_{n\to\infty}\lvert a_{n}\rvert^{\frac{1}{n}}" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><msup><mrow><mo lspace="0em" stretchy="false">|</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mfrac><mn>1</mn><mi>n</mi></mfrac></msup></mrow></math>, and theorem <a href="series-of-positive-and-negative-terms.html#thm:root-test-tools" title="Theorem 5.8 ‣ 5.3.2 The Alternating Series Test ‣ 5.3 Series of Positive &amp; Negative Terms ‣ Chapter 5 Series ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.8</span></a> (iii) says that they have the same value.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Note that when we are finding <math id="p4.m1" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, it can often be much easier to find the limit <math id="p4.m2" class="ltx_Math" alttext="\lim_{n\to\infty}\left\lvert\frac{a_{n+1}}{a_{n}}\right\rvert" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mrow><mo lspace="0em">|</mo><mfrac><msub><mi>a</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>a</mi><mi>n</mi></msub></mfrac><mo>|</mo></mrow></mrow></math> than <math id="p4.m3" class="ltx_Math" alttext="\lim_{n\to\infty}\lvert a_{n}\rvert^{\frac{1}{n}}" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><msup><mrow><mo lspace="0em" stretchy="false">|</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mfrac><mn>1</mn><mi>n</mi></mfrac></msup></mrow></math>, and theorem <a href="series-of-positive-and-negative-terms.html#Ch5.Thmtheorem8" title="Theorem 5.8 ‣ 5.3.2 The Alternating Series Test ‣ 5.3 Series of Positive &amp; Negative Terms ‣ Chapter 5 Series ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.8</span></a> (iii) says that they have the same value.</p>
 </div>
 <div id="Ch5.Thmexample8" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 5.8</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 5.8</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch5.Thmexample8.p1" class="ltx_para">
 <p class="ltx_p">For what values of <math id="Ch5.Thmexample8.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> does the power series <math id="Ch5.Thmexample8.p1.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{n+1}{2^{n}}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><msup><mn>2</mn><mi>n</mi></msup></mfrac><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> converge?
 <br class="ltx_break">Using the root test, we see that</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E28" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -182,16 +184,18 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.28)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">So the radius of convergence of this power series is <math id="Ch5.Thmexample8.p1.m3" class="ltx_Math" alttext="R=2" display="inline"><mrow><mi>R</mi><mo>=</mo><mn>2</mn></mrow></math>. What happens for the bounding values? For <math id="Ch5.Thmexample8.p1.m4" class="ltx_Math" alttext="x=2" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></math>, the power series becomes <math id="Ch5.Thmexample8.p1.m5" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{n+1}{2^{n}}2^{n}=\sum_{n=1}^{\infty}(n+1)" display="inline"><mrow><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><msup><mn>2</mn><mi>n</mi></msup></mfrac><mo>⁢</mo><msup><mn>2</mn><mi>n</mi></msup></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> which is divergent. For <math id="Ch5.Thmexample8.p1.m6" class="ltx_Math" alttext="x=-2" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow></math>, the power series is <math id="Ch5.Thmexample8.p1.m7" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{n+1}{2^{n}}(-2)^{n}=\sum_{n=1}^{\infty}(-1)^{n}(n+1)" display="inline"><mrow><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><msup><mn>2</mn><mi>n</mi></msup></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> which is divergent. Hence the power series converges <math id="Ch5.Thmexample8.p1.m8" class="ltx_Math" alttext="\forall x\in(-2,2)" display="inline"><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>2</mn></mrow><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
 </div>
 </div>
 <div id="Ch5.Thmexample9" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 5.9</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 5.9</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch5.Thmexample9.p1" class="ltx_para">
 <p class="ltx_p">For what values of <math id="Ch5.Thmexample9.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> does the power series <math id="Ch5.Thmexample9.p1.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{1}{n!}x^{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mfrac><mn>1</mn><mrow><mi>n</mi><mo>!</mo></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></mrow></math> converge?
 <br class="ltx_break">Inspecting the ratio of consecutive terms, we see</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E29" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -202,6 +206,7 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.29)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Hence <math id="Ch5.Thmexample9.p1.m3" class="ltx_Math" alttext="\beta=0" display="inline"><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow></math> and <math id="Ch5.Thmexample9.p1.m4" class="ltx_Math" alttext="R=\infty" display="inline"><mrow><mi>R</mi><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, so the power series converges <math id="Ch5.Thmexample9.p1.m5" class="ltx_Math" alttext="\forall x\in\mathbb{R}" display="inline"><mrow><mrow><mo rspace="0.167em">∀</mo><mi>x</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>.</p>
 </div>
 </div>
@@ -211,13 +216,11 @@
 <div class="ltx_align_center">
 <a href="series-of-positive-and-negative-terms.html" title="In Chapter 5 Series ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Series of Positive &amp; Negative Terms</span></a><a href="../continuous-functions/index.html" title="In Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Continuous Functions</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:55:23 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:53:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <ol class="ltx_toclist ltx_toclist_section">
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch5.Thmdefinition5" title=""><span class="ltx_text ltx_ref_title">Definition 5.5</span></a></li>
@@ -226,6 +229,9 @@
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch5.Thmexample9" title=""><span class="ltx_text ltx_ref_title">Example 5.9</span></a></li>
 </ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

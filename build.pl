@@ -52,14 +52,14 @@ foreach (@notes) {
     $latexmlpost .= " --nodefaultresources";
     system($latexmlpost);
 
-    my @files = File::Find::Rule->file()->name("sec_*")->in("html/$htmlname/");
-    foreach my $file (@files) {
-        move($file, $file =~ s/sec_//r);
+    my @sectionFiles = File::Find::Rule->file()->name("sec_*")->in("html/$htmlname/");
+    foreach my $sectionFile (@sectionFiles) {
+        move($sectionFile, $sectionFile =~ s/sec_//r);
     }
 
-    my @files = File::Find::Rule->directory->in("html/$htmlname/");
-    foreach my $file (@files) {
-        move($file, $file =~ s/chap_//r);
+    my @chapterDirs = File::Find::Rule->directory->in("html/$htmlname/");
+    foreach my $chapterDir (@chapterDirs) {
+        move($chapterDir, $chapterDir =~ s/chap_//r);
     }
 
     unlink("$_.latexml.log");

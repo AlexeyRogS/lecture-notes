@@ -3,6 +3,8 @@
 **/*.log
 **/*.fls
 **/*.aux
+**/*.blg
+**/*.xdv
 **/*.fdb_latexmk
 
 # LaTeX output files

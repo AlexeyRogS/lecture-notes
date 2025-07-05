@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>3.4 Conservative Forces ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics</title>
-<!--Generated on Sun Jun 29 14:56:25 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:54:41 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 3 Energy &amp; Work ‣ Classical Mechanics">
 <link rel="up up" href="../index.html" title="Classical Mechanics">
 <link rel="start" href="../index.html" title="Classical Mechanics">
@@ -30,7 +29,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Classical Mechanics">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -60,10 +62,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Energy &amp; Work</span></a><a href="work-energy-theorem.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Work-Energy Theorem</span></a><a href="energy-in-a-system-of-multiple-particles.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Energy in a System of Multiple Particles</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -74,6 +73,7 @@
 As we have seen above, work done is defined by a line integral, so in general it depends on the path chosen for integration, which corresponds to the path of the object through space.
 However, we have seen for the case of gravity and the spring force that the work done depends <span class="ltx_text ltx_font_italic">only</span> on the initial and final positions; the integral is <span class="ltx_text ltx_font_italic">path independent</span>.
 We also saw that in this case we can define a potential energy function for which</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E51" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -84,9 +84,11 @@ We also saw that in this case we can define a potential energy function for whic
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.51)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">where <math id="p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=-\nabla U" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo rspace="0.167em">−</mo><mrow><mo rspace="0.167em">∇</mo><mi>U</mi></mrow></mrow></mrow></math> (mathematicians will note that this is just a special case of the <span class="ltx_text ltx_font_bold">gradient theorem</span>, a multidimensional generalisation of the fundamental theorem of calculus).
 We call forces which have this property <span class="ltx_text ltx_font_bold">conservative forces</span>.
 They are called this because by the work-energy theorem:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E52" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -96,12 +98,14 @@ They are called this because by the work-energy theorem:</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.52)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">and hence the total energy <math id="p1.m2" class="ltx_Math" alttext="E=K+U" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mi>K</mi><mo>+</mo><mi>U</mi></mrow></mrow></math> is conserved.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">To fully define a potential energy function, we must explicitly say where potential energy is zero.
 Suppose we choose the point <math id="p2.m1" class="ltx_Math" alttext="\boldsymbol{r}_{0}" display="inline"><msub><mi>𝒓</mi><mn>0</mn></msub></math>, so <math id="p2.m2" class="ltx_Math" alttext="U(\boldsymbol{r}_{0})=0" display="inline"><mrow><mrow><mi>U</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>𝒓</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.
 Then we can define</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E53" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -112,6 +116,7 @@ Then we can define</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.53)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">We can choose whatever point is most convenient because it won’t affect the physics, since force is minus the derivative of the potential energy any constant value we add to it will disappear.
 Only <span class="ltx_text ltx_font_italic">differences</span> in potential (a.k.a. potential difference) have physical significance.</p>
 </div>
@@ -122,6 +127,7 @@ Only <span class="ltx_text ltx_font_italic">differences</span> in potential (a.k
 <div id="SS1.p1" class="ltx_para">
 <p class="ltx_p">The gradient formula <math id="SS1.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=-\nabla U" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo rspace="0.167em">−</mo><mrow><mo rspace="0.167em">∇</mo><mi>U</mi></mrow></mrow></mrow></math> is the most general way to define potential energy, but it can be written more explicitly by choosing a coordinate system.
 For example, in 1D it reduces to</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E54" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -131,7 +137,9 @@ For example, in 1D it reduces to</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.54)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">in 3D cartesian coordinates it is</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E55" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -143,7 +151,9 @@ For example, in 1D it reduces to</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.55)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">in 2D polar coordinates it is</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E56" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -154,6 +164,7 @@ For example, in 1D it reduces to</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.56)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">and so on.</p>
 </div>
 </section>
@@ -172,9 +183,9 @@ We can immediately see that an object under the influence of this force will be 
 <div id="SS2.p2" class="ltx_para">
 <p class="ltx_p">We will now list a few equivalent properties of conservative forces.</p>
 </div>
-<div id="def:conservative-force" class="ltx_theorem ltx_theorem_definition">
+<div id="Ch3.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 3.3</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch3.Thmdefinition3.p1" class="ltx_para">
 <p class="ltx_p">A force <math id="Ch3.Thmdefinition3.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}" display="inline"><mi>𝑭</mi></math> is <span class="ltx_text ltx_font_bold">conservative</span> if it satisfies any of the following conditions, which are all equivalent.</p>
@@ -189,6 +200,7 @@ We can immediately see that an object under the influence of this force will be 
 <span class="ltx_tag ltx_tag_item">•</span> 
 <div id="I1.i2.p1" class="ltx_para">
 <p class="ltx_p">The work done by the force on a closed loop is zero.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E57" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -198,6 +210,7 @@ We can immediately see that an object under the influence of this force will be 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.57)</span></td>
 </tr></tbody>
 </table>
+</div>
 </div>
 </li>
 <li id="I1.i3" class="ltx_item" style="list-style-type:none;">
@@ -216,6 +229,7 @@ We can immediately see that an object under the influence of this force will be 
 <span class="ltx_tag ltx_tag_item">•</span> 
 <div id="I1.i5.p1" class="ltx_para">
 <p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}" display="inline"><mi>𝑭</mi></math> is irrotational, i.e. the curl of <math id="I1.i5.p1.m2" class="ltx_Math" alttext="\boldsymbol{F}" display="inline"><mi>𝑭</mi></math> is zero.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E58" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -225,6 +239,7 @@ We can immediately see that an object under the influence of this force will be 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.58)</span></td>
 </tr></tbody>
 </table>
+</div>
 </div>
 </li>
 </ul>
@@ -236,8 +251,9 @@ We can immediately see that an object under the influence of this force will be 
 <span class="ltx_tag ltx_tag_subsection">3.4.3 </span>Examples of Conservative Forces</h2>
 
 <div id="SS3.p1" class="ltx_para">
-<p class="ltx_p">For a central force, looking at equation <a href="sec_work.html#Ch3.E35" title="In 3.2.1 Calculating Work Done ‣ 3.2 Work ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.35</span></a> we can see that the second integral will be zero since there is no force in the tangential direction.
+<p class="ltx_p">For a central force, looking at equation <a href="work.html#Ch3.E35" title="In 3.2.1 Calculating Work Done ‣ 3.2 Work ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.35</span></a> we can see that the second integral will be zero since there is no force in the tangential direction.
 Thus the work done by a central force is always given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E59" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -247,11 +263,13 @@ Thus the work done by a central force is always given by</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.59)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">So the work depends only on the initial and final radial distance and is thus path independent, which implies that central forces are <span class="ltx_text ltx_font_italic">always</span> conservative.</p>
 </div>
 <div id="SS3.p2" class="ltx_para">
 <p class="ltx_p">Another category of conservative forces are those that point along a single axis and where the strength of the force depends only on the distance along that axis, if it depends on anything at all (constant forces are conservative!).
 These are forces of the form</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E60" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -261,8 +279,10 @@ These are forces of the form</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.60)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Hooke’s law and the constant gravitational field fall into this category of force.
 The proof is basically the same as for central forces, but we will show that the work done over a closed path is zero.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx35" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch3.E61"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -293,11 +313,13 @@ The proof is basically the same as for central forces, but we will show that the
 </tr></tbody>
 </table>
 </div>
+</div>
 <div id="SS3.p3" class="ltx_para">
 <p class="ltx_p">Another two familiar examples of conservative forces are the universal law of gravitation and Coulomb’s law.
 Being central forces, they are therefore conservative.
 Let’s calculate their potential energy functions.
 For gravity, we get</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx36" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch3.E64"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -326,7 +348,9 @@ For gravity, we get</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.66)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">We can choose <math id="SS3.p3.m1" class="ltx_Math" alttext="r_{0}" display="inline"><msub><mi>r</mi><mn>0</mn></msub></math> for our convenience, in this case if we choose <math id="SS3.p3.m2" class="ltx_Math" alttext="r_{0}=\infty" display="inline"><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> then the lower limit vanishes and the potential energy has the simple form</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E67" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -336,7 +360,9 @@ For gravity, we get</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.67)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Similarly, for Coulomb’s law <math id="SS3.p3.m3" class="ltx_Math" alttext="\boldsymbol{F}=\frac{q_{1}q_{2}}{4\pi\varepsilon_{0}r^{2}}\hat{\boldsymbol{r}}" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mfrac><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>q</mi><mn>2</mn></msub></mrow><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow></math> we get (taking the same zero point <math id="SS3.p3.m4" class="ltx_Math" alttext="r_{0}=\infty" display="inline"><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>)</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.E68" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -346,6 +372,7 @@ For gravity, we get</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.68)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">In the case where <math id="SS3.p3.m5" class="ltx_Math" alttext="q_{1}" display="inline"><msub><mi>q</mi><mn>1</mn></msub></math> and <math id="SS3.p3.m6" class="ltx_Math" alttext="q_{2}" display="inline"><msub><mi>q</mi><mn>2</mn></msub></math> have opposite signs, the numerator <math id="SS3.p3.m7" class="ltx_Math" alttext="q_{1}q_{2}" display="inline"><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>q</mi><mn>2</mn></msub></mrow></math> is negative and we get a graph that looks just like the one for gravity.
 The potential energy is negative for all values of <math id="SS3.p3.m8" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, the gradient is positive and therefore the force is always negative.
 This means that the Coulomb force is attractive in the case of opposite charges.
@@ -359,19 +386,20 @@ This implies that the gradient is always negative so the force is positive, indi
 <div class="ltx_align_center">
 <a href="work-energy-theorem.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Work-Energy Theorem</span></a><a href="energy-in-a-system-of-multiple-particles.html" title="In Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Energy in a System of Multiple Particles</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:56:25 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:54:41 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#force-in-different-coordinate-systems" title="In 3.4 Conservative Forces ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4.1 </span>Force in Different Coordinate Systems</span></a></li>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#properties-of-conservative-forces" title="In 3.4 Conservative Forces ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4.2 </span>Properties of Conservative Forces</span></a></li>
-<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#def:conservative-force" title=""><span class="ltx_text ltx_ref_title">Definition 3.3</span></a></li></ol>
+<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch3.Thmdefinition3" title=""><span class="ltx_text ltx_ref_title">Definition 3.3</span></a></li></ol>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#examples-of-conservative-forces" title="In 3.4 Conservative Forces ‣ Chapter 3 Energy &amp; Work ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4.3 </span>Examples of Conservative Forces</span></a></li>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

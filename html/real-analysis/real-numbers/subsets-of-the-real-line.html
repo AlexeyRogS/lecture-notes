@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>3.3 Subsets of the Real Line ‣ Chapter 3 The Real Numbers ‣ Real Analysis</title>
-<!--Generated on Sun Jun 29 14:55:23 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:53:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 3 The Real Numbers ‣ Real Analysis">
 <link rel="up up" href="../index.html" title="Real Analysis">
 <link rel="start" href="../index.html" title="Real Analysis">
@@ -28,7 +27,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Real Analysis">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -56,10 +58,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Real Analysis" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Real Numbers</span></a><a href="construction-of-the-reals.html" title="In Chapter 3 The Real Numbers ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Construction of the Reals</span></a><a href="absolute-value.html" title="In Chapter 3 The Real Numbers ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Absolute Value</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -69,23 +68,18 @@
 <p class="ltx_p">It is helpful to note at this point that the completeness property from before also guarantees the existence of infimums for non-empty subsets that are bounded below.</p>
 </div>
 <div id="Ch3.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
-<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Theorem 3.3</span></span></h6>
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3.3</span></span></h6>
 <div id="Ch3.Thmtheorem3.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">Every non-empty subset of <math id="Ch3.Thmtheorem3.p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> that is bounded below has an infimum in <math id="Ch3.Thmtheorem3.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</span></p>
 </div>
 </div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="p2" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="p2.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.</span>Let <math id="p2.p1.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a non-empty subset of <math id="p2.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> that is bounded above. Then by the completeness property there exists <math id="p2.p1.m3" class="ltx_Math" alttext="\ell\in\mathbb{R}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="p2.p1.m4" class="ltx_Math" alttext="\ell=\sup(S)" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" rspace="0em">sup</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
-Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{-s\,:\,s\in S\}" display="inline"><mrow><msup><mi>S</mi><mo>′</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo>−</mo><mi>s</mi></mrow><mo lspace="0.448em" rspace="0.448em">:</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. It is clear that <math id="p2.p1.m6" class="ltx_Math" alttext="S^{\prime}" display="inline"><msup><mi>S</mi><mo>′</mo></msup></math> is a non-empty subset of <math id="p2.p1.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> which is bounded below, and that <math id="p2.p1.m8" class="ltx_Math" alttext="-\ell=\inf(S)" display="inline"><mrow><mrow><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" rspace="0em">inf</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
-
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> be a non-empty subset of <math id="p2.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> that is bounded above. Then by the completeness property there exists <math id="p2.m3" class="ltx_Math" alttext="\ell\in\mathbb{R}" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="p2.m4" class="ltx_Math" alttext="\ell=\sup(S)" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" rspace="0em">sup</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Now consider the set <math id="p2.m5" class="ltx_Math" alttext="S^{\prime}=\{-s\,:\,s\in S\}" display="inline"><mrow><msup><mi>S</mi><mo>′</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo>−</mo><mi>s</mi></mrow><mo lspace="0.448em" rspace="0.448em">:</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. It is clear that <math id="p2.m6" class="ltx_Math" alttext="S^{\prime}" display="inline"><msup><mi>S</mi><mo>′</mo></msup></math> is a non-empty subset of <math id="p2.m7" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> which is bounded below, and that <math id="p2.m8" class="ltx_Math" alttext="-\ell=\inf(S)" display="inline"><mrow><mrow><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" rspace="0em">inf</mo><mrow><mo stretchy="false">(</mo><mi>S</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
 ∎</p>
 </div>
-</li>
-</ul>
 </div>
 <section id="intervals" class="ltx_subsection">
 <h2 class="ltx_title ltx_title_subsection">
@@ -96,10 +90,11 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 </div>
 <div id="Ch3.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Definition 3.2</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch3.Thmdefinition2.p1" class="ltx_para">
 <p class="ltx_p">Let <math id="Ch3.Thmdefinition2.p1.m1" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> with <math id="Ch3.Thmdefinition2.p1.m2" class="ltx_Math" alttext="a&lt;b" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mi>b</mi></mrow></math>. Then the <span class="ltx_text ltx_font_bold">closed interval</span> from <math id="Ch3.Thmdefinition2.p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> to <math id="Ch3.Thmdefinition2.p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex6" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -108,7 +103,9 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">and the <span class="ltx_text ltx_font_bold">open interval</span> from <math id="Ch3.Thmdefinition2.p1.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> to <math id="Ch3.Thmdefinition2.p1.m6" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> is given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex7" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -117,7 +114,9 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Likewise the <span class="ltx_text ltx_font_bold">half-open intervals</span> may be defined similarly as</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex8" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -126,6 +125,8 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
+</div>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex9" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -136,8 +137,10 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 </table>
 </div>
 </div>
+</div>
 <div id="SS1.p2" class="ltx_para">
 <p class="ltx_p">To denote a half-unbounded or fully unbounded interval, we can use a <math id="SS1.p2.m1" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> symbol. For example:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex10" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -146,7 +149,9 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">or</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex11" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -155,7 +160,9 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">and we could also say</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex12" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -164,7 +171,9 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">It is also useful to note that</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch3.Ex13" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -173,6 +182,7 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">.</p>
 </div>
 </section>
@@ -182,18 +192,19 @@ Now consider the set <math id="p2.p1.m5" class="ltx_Math" alttext="S^{\prime}=\{
 <div class="ltx_align_center">
 <a href="construction-of-the-reals.html" title="In Chapter 3 The Real Numbers ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Construction of the Reals</span></a><a href="absolute-value.html" title="In Chapter 3 The Real Numbers ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Absolute Value</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:55:23 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:53:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <ol class="ltx_toclist ltx_toclist_section"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch3.Thmtheorem3" title=""><span class="ltx_text ltx_ref_title">Theorem 3.3</span></a></li></ol>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#intervals" title="In 3.3 Subsets of the Real Line ‣ Chapter 3 The Real Numbers ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3.1 </span>Intervals</span></a></li>
 <ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch3.Thmdefinition2" title=""><span class="ltx_text ltx_ref_title">Definition 3.2</span></a></li></ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

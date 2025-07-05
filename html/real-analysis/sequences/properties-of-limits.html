@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>4.2 Properties of Limits ‣ Chapter 4 Sequences ‣ Real Analysis</title>
-<!--Generated on Sun Jun 29 14:55:23 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:53:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 4 Sequences ‣ Real Analysis">
 <link rel="up up" href="../index.html" title="Real Analysis">
 <link rel="start" href="../index.html" title="Real Analysis">
@@ -28,7 +27,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Real Analysis">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -56,10 +58,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Real Analysis" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Sequences</span></a><a href="sequences-and-convergence.html" title="In Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>Sequences &amp; Convergence</span></a><a href="monotone-sequences.html" title="In Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3 </span>Monotone Sequences</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -69,18 +68,17 @@
 <p class="ltx_p">Now that we have established how to prove the existence of limits, we will consider the uniqueness of them, as well as some algebraic properties of convergent sequences.</p>
 </div>
 <div id="Ch4.Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
-<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Theorem 4.2</span></span></h6>
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4.2</span></span></h6>
 <div id="Ch4.Thmtheorem2.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">If a sequence converges, its limit is unique.</span></p>
 </div>
 </div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="p2" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="p2.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.</span>Let <math id="p2.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> be a convergent sequence and suppose that <math id="p2.p1.m2" class="ltx_Math" alttext="(x_{n})_{n}\to x" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow></math> and <math id="p2.p1.m3" class="ltx_Math" alttext="(x_{n})_{n}\to y" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow></math>. Let <math id="p2.p1.m4" class="ltx_Math" alttext="\varepsilon&gt;0" display="inline"><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Then there exists <math id="p2.p1.m5" class="ltx_Math" alttext="N_{1}\in\mathbb{N}" display="inline"><mrow><msub><mi>N</mi><mn>1</mn></msub><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p2.p1.m6" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert x_{n}-x\rvert&lt;\varepsilon" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>ε</mi></mrow></math>, but there also exists <math id="p2.p1.m7" class="ltx_Math" alttext="N_{2}\in\mathbb{N}" display="inline"><mrow><msub><mi>N</mi><mn>2</mn></msub><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p2.p1.m8" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert x_{n}-y\rvert&lt;\varepsilon" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>ε</mi></mrow></math>.
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> be a convergent sequence and suppose that <math id="p2.m2" class="ltx_Math" alttext="(x_{n})_{n}\to x" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow></math> and <math id="p2.m3" class="ltx_Math" alttext="(x_{n})_{n}\to y" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow></math>. Let <math id="p2.m4" class="ltx_Math" alttext="\varepsilon&gt;0" display="inline"><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Then there exists <math id="p2.m5" class="ltx_Math" alttext="N_{1}\in\mathbb{N}" display="inline"><mrow><msub><mi>N</mi><mn>1</mn></msub><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p2.m6" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert x_{n}-x\rvert&lt;\varepsilon" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>ε</mi></mrow></math>, but there also exists <math id="p2.m7" class="ltx_Math" alttext="N_{2}\in\mathbb{N}" display="inline"><mrow><msub><mi>N</mi><mn>2</mn></msub><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p2.m8" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert x_{n}-y\rvert&lt;\varepsilon" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>ε</mi></mrow></math>.
 Now,</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S3.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch4.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -105,16 +103,16 @@ Now,</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.15)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">Therefore, <math id="p2.p1.m9" class="ltx_Math" alttext="\lvert x-y\rvert=0" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="p2.p1.m10" class="ltx_Math" alttext="x=y" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></math> (since <math id="p2.p1.m11" class="ltx_Math" alttext="\forall\varepsilon&gt;0" display="inline"><mrow><mrow><mo rspace="0.167em">∀</mo><mi>ε</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, <math id="p2.p1.m12" class="ltx_Math" alttext="0\leq a&lt;\varepsilon\implies a=0\ \forall a\in\mathbb{R}" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>a</mi><mo>&lt;</mo><mi>ε</mi><mo stretchy="false">⟹</mo><mi>a</mi><mo>=</mo><mrow><mn>0</mn><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>a</mi></mrow></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>). Thus, the two limits are in fact the same.
-
+</div>
+<p class="ltx_p">Therefore, <math id="p2.m9" class="ltx_Math" alttext="\lvert x-y\rvert=0" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="p2.m10" class="ltx_Math" alttext="x=y" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>y</mi></mrow></math> (since <math id="p2.m11" class="ltx_Math" alttext="\forall\varepsilon&gt;0" display="inline"><mrow><mrow><mo rspace="0.167em">∀</mo><mi>ε</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>, <math id="p2.m12" class="ltx_Math" alttext="0\leq a&lt;\varepsilon\implies a=0\ \forall a\in\mathbb{R}" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>a</mi><mo>&lt;</mo><mi>ε</mi><mo stretchy="false">⟹</mo><mi>a</mi><mo>=</mo><mrow><mn>0</mn><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>a</mi></mrow></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>). Thus, the two limits are in fact the same.
 ∎</p>
 </div>
-</li>
-</ul>
-<p class="ltx_p">The next theorem will serve as a stepping stone that will make some more useful theorems much easier to prove. First, recall that a set is bounded if and only if it is bounded both above and below. We extend this definition to the elements of sequences, saying that a sequence is <span class="ltx_text ltx_font_bold">bounded</span> if there exists <math id="p2.m1" class="ltx_Math" alttext="M\geq 0" display="inline"><mrow><mi>M</mi><mo>≥</mo><mn>0</mn></mrow></math> such that <math id="p2.m2" class="ltx_Math" alttext="\lvert x_{n}\rvert\leq M\ \forall n\in\mathbb{N}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>M</mi><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>. This is a very quick and easy way to establish the range of a sequence that will come in handy later.</p>
 </div>
-<div id="thm:cvg-seq-bounded" class="ltx_theorem ltx_theorem_theorem">
-<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Theorem 4.3</span></span></h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The next theorem will serve as a stepping stone that will make some more useful theorems much easier to prove. First, recall that a set is bounded if and only if it is bounded both above and below. We extend this definition to the elements of sequences, saying that a sequence is <span class="ltx_text ltx_font_bold">bounded</span> if there exists <math id="p3.m1" class="ltx_Math" alttext="M\geq 0" display="inline"><mrow><mi>M</mi><mo>≥</mo><mn>0</mn></mrow></math> such that <math id="p3.m2" class="ltx_Math" alttext="\lvert x_{n}\rvert\leq M\ \forall n\in\mathbb{N}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>M</mi><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>. This is a very quick and easy way to establish the range of a sequence that will come in handy later.</p>
+</div>
+<div id="Ch4.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4.3</span></span></h6>
 <div id="Ch4.Thmtheorem3.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">Every convergent sequence is bounded<span id="Ch4.footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
                   <span class="ltx_tag ltx_tag_note"><span class="ltx_text ltx_font_upright">1</span></span>
@@ -123,19 +121,14 @@ Now,</p>
                 <span class="ltx_text ltx_font_upright">Note that the converse of this theorem is obviously not true, </span><math id="Ch4.footnote1.m1" class="ltx_Math" alttext="((-1)^{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math><span class="ltx_text ltx_font_upright"> is bounded, but does not converge.</span></span></span></span>.</span></p>
 </div>
 </div>
-<div id="p3" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="p3.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.</span>Let <math id="p3.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> be a convergent sequence with <math id="p3.p1.m2" class="ltx_Math" alttext="x_{n}\to x" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow></math>. Then there exists <math id="p3.p1.m3" class="ltx_Math" alttext="N\in\mathbb{N}" display="inline"><mrow><mi>N</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p3.p1.m4" class="ltx_Math" alttext="n\geq N\implies\lvert x_{n}-x\rvert&lt;1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>. Consider the terms in the sequence <math id="p3.p1.m5" class="ltx_Math" alttext="x_{1},x_{2},\dots,x_{N-1}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math> and let <math id="p3.p1.m6" class="ltx_Math" alttext="M=\max\{\lvert x_{1}\rvert,\lvert x_{2}\rvert,\dots,\lvert x_{N-1}\rvert\}" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.
-Now, for all <math id="p3.p1.m7" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math>, <math id="p3.p1.m8" class="ltx_Math" alttext="\lvert x_{n}\rvert\leq\max\{M,\lvert x\rvert+1\}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mi>M</mi><mo>,</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math> (since <math id="p3.p1.m9" class="ltx_Math" alttext="\lvert x_{n}-x\rvert\geq\lvert x_{n}\rvert-\lvert x\rvert&lt;1\implies\lvert x_{n%
-}\rvert&lt;1+\lvert x\rvert" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≥</mo><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>−</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>), which is a constant, hence <math id="p3.p1.m10" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is bounded.
-
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Let <math id="p4.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> be a convergent sequence with <math id="p4.m2" class="ltx_Math" alttext="x_{n}\to x" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow></math>. Then there exists <math id="p4.m3" class="ltx_Math" alttext="N\in\mathbb{N}" display="inline"><mrow><mi>N</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="p4.m4" class="ltx_Math" alttext="n\geq N\implies\lvert x_{n}-x\rvert&lt;1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow></math>. Consider the terms in the sequence <math id="p4.m5" class="ltx_Math" alttext="x_{1},x_{2},\dots,x_{N-1}" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></math> and let <math id="p4.m6" class="ltx_Math" alttext="M=\max\{\lvert x_{1}\rvert,\lvert x_{2}\rvert,\dots,\lvert x_{N-1}\rvert\}" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">|</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mrow><mi>N</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.
+Now, for all <math id="p4.m7" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math>, <math id="p4.m8" class="ltx_Math" alttext="\lvert x_{n}\rvert\leq\max\{M,\lvert x\rvert+1\}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mi>M</mi><mo>,</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math> (since <math id="p4.m9" class="ltx_Math" alttext="\lvert x_{n}-x\rvert\geq\lvert x_{n}\rvert-\lvert x\rvert&lt;1\implies\lvert x_{n%
+}\rvert&lt;1+\lvert x\rvert" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≥</mo><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>−</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mn>1</mn><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></math>), which is a constant, hence <math id="p4.m10" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is bounded.
 ∎</p>
 </div>
-</li>
-</ul>
 </div>
 <section id="adding-and-multiplying-sequences" class="ltx_subsection">
 <h2 class="ltx_title ltx_title_subsection">
@@ -144,61 +137,60 @@ Now, for all <math id="p3.p1.m7" class="ltx_Math" alttext="n\geq N" display="inl
 <div id="SS1.p1" class="ltx_para">
 <p class="ltx_p">Now that we have this tool, we can proceed to some more interesting results about how limits of sequences behave when we add and multiply sequences together.</p>
 </div>
-<div id="thm:seq-lim-props" class="ltx_theorem ltx_theorem_theorem">
-<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Theorem 4.4</span></span></h6>
+<div id="Ch4.Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4.4</span></span></h6>
 <div id="Ch4.Thmtheorem4.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Ch4.Thmtheorem4.p1.m1" class="ltx_Math" alttext="a\in\mathbb{R}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, <math id="Ch4.Thmtheorem4.p1.m2" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> and <math id="Ch4.Thmtheorem4.p1.m3" class="ltx_Math" alttext="(y_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> converging sequences with <math id="Ch4.Thmtheorem4.p1.m4" class="ltx_Math" alttext="x_{n}\to x" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow></math> and <math id="Ch4.Thmtheorem4.p1.m5" class="ltx_Math" alttext="y_{n}\to y" display="inline"><mrow><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow></math>.</span></p>
-<ol id="I3" class="ltx_enumerate">
-<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(i)</span> 
-<div id="I3.i1.p1" class="ltx_para">
-<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="x_{n}+y_{n}\to x+y" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="x_{n}+y_{n}\to x+y" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>+</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
 </div>
 </li>
-<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(ii)</span> 
-<div id="I3.i2.p1" class="ltx_para">
-<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="x_{n}y_{n}\to xy" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="x_{n}y_{n}\to xy" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
 </div>
 </li>
-<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(iii)</span> 
-<div id="I3.i3.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I3.i3.p1.m1" class="ltx_Math" alttext="\forall n,y_{n}\neq 0" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I3.i3.p1.m2" class="ltx_Math" alttext="y\neq 0" display="inline"><mrow><mi>y</mi><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I3.i3.p1.m3" class="ltx_Math" alttext="\frac{1}{y_{n}}\to\frac{1}{y}" display="inline"><mrow><mfrac><mn>1</mn><msub><mi>y</mi><mi>n</mi></msub></mfrac><mo stretchy="false">→</mo><mfrac><mn>1</mn><mi>y</mi></mfrac></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\forall n,y_{n}\neq 0" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.i3.p1.m2" class="ltx_Math" alttext="y\neq 0" display="inline"><mrow><mi>y</mi><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I1.i3.p1.m3" class="ltx_Math" alttext="\frac{1}{y_{n}}\to\frac{1}{y}" display="inline"><mrow><mfrac><mn>1</mn><msub><mi>y</mi><mi>n</mi></msub></mfrac><mo stretchy="false">→</mo><mfrac><mn>1</mn><mi>y</mi></mfrac></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
 </div>
 </li>
-<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(iv)</span> 
-<div id="I3.i4.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I3.i4.p1.m1" class="ltx_Math" alttext="\forall n,y_{n}\neq 0" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I3.i4.p1.m2" class="ltx_Math" alttext="y\neq 0" display="inline"><mrow><mi>y</mi><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I3.i4.p1.m3" class="ltx_Math" alttext="\frac{x_{n}}{y_{n}}\to\frac{x}{y}" display="inline"><mrow><mfrac><msub><mi>x</mi><mi>n</mi></msub><msub><mi>y</mi><mi>n</mi></msub></mfrac><mo stretchy="false">→</mo><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.i4.p1.m1" class="ltx_Math" alttext="\forall n,y_{n}\neq 0" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub></mrow><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic"> and </span><math id="I1.i4.p1.m2" class="ltx_Math" alttext="y\neq 0" display="inline"><mrow><mi>y</mi><mo>≠</mo><mn>0</mn></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I1.i4.p1.m3" class="ltx_Math" alttext="\frac{x_{n}}{y_{n}}\to\frac{x}{y}" display="inline"><mrow><mfrac><msub><mi>x</mi><mi>n</mi></msub><msub><mi>y</mi><mi>n</mi></msub></mfrac><mo stretchy="false">→</mo><mfrac><mi>x</mi><mi>y</mi></mfrac></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
 </div>
 </li>
-<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(v)</span> 
-<div id="I3.i5.p1" class="ltx_para">
-<p class="ltx_p"><math id="I3.i5.p1.m1" class="ltx_Math" alttext="ax_{n}\to ax" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i5.p1.m1" class="ltx_Math" alttext="ax_{n}\to ax" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">→</mo><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math><span class="ltx_text ltx_font_italic"></span></p>
 </div>
 </li>
-<li id="I3.i6" class="ltx_item" style="list-style-type:none;">
+<li id="I1.i6" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(vi)</span> 
-<div id="I3.i6.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I3.i6.p1.m1" class="ltx_Math" alttext="\forall n,x_{n}\leq y_{n}" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>≤</mo><msub><mi>y</mi><mi>n</mi></msub></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I3.i6.p1.m2" class="ltx_Math" alttext="x\leq y" display="inline"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+<div id="I1.i6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If </span><math id="I1.i6.p1.m1" class="ltx_Math" alttext="\forall n,x_{n}\leq y_{n}" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>≤</mo><msub><mi>y</mi><mi>n</mi></msub></mrow></math><span class="ltx_text ltx_font_italic">, then </span><math id="I1.i6.p1.m2" class="ltx_Math" alttext="x\leq y" display="inline"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
 </div>
 </li>
 </ol>
 </div>
 </div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="SS1.p2" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="SS1.p2.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.</span>For all parts of this proof, begin by letting <math id="SS1.p2.p1.m1" class="ltx_Math" alttext="\varepsilon&gt;0" display="inline"><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
-<ol id="I4.i0.I1" class="ltx_enumerate">
-<li id="I4.i0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<p class="ltx_p">For all parts of this proof, begin by letting <math id="SS1.p2.m1" class="ltx_Math" alttext="\varepsilon&gt;0" display="inline"><mrow><mi>ε</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(i)</span> 
-<div id="I4.i0.I1.i1.p1" class="ltx_para">
-<p class="ltx_p">Since <math id="I4.i0.I1.i1.p1.m1" class="ltx_Math" alttext="x_{n}\to x,\ \exists N_{1}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>1</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I4.i0.I1.i1.p1.m2" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert x_{n}-x\rvert&lt;\frac{\varepsilon}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mn>2</mn></mfrac></mrow></math> and since <math id="I4.i0.I1.i1.p1.m3" class="ltx_Math" alttext="y_{n}\to y,\ \exists N_{2}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I4.i0.I1.i1.p1.m4" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert y_{n}-y\rvert&lt;\frac{\varepsilon}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mn>2</mn></mfrac></mrow></math>. Choose <math id="I4.i0.I1.i1.p1.m5" class="ltx_Math" alttext="N=\max\{N_{1},N_{2}\}" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, now for <math id="I4.i0.I1.i1.p1.m6" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math> we have</p>
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="I2.i1.p1.m1" class="ltx_Math" alttext="x_{n}\to x,\ \exists N_{1}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>1</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I2.i1.p1.m2" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert x_{n}-x\rvert&lt;\frac{\varepsilon}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mn>2</mn></mfrac></mrow></math> and since <math id="I2.i1.p1.m3" class="ltx_Math" alttext="y_{n}\to y,\ \exists N_{2}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I2.i1.p1.m4" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert y_{n}-y\rvert&lt;\frac{\varepsilon}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mn>2</mn></mfrac></mrow></math>. Choose <math id="I2.i1.p1.m5" class="ltx_Math" alttext="N=\max\{N_{1},N_{2}\}" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, now for <math id="I2.i1.p1.m6" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math> we have</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S3.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch4.E16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -224,11 +216,13 @@ Now, for all <math id="p3.p1.m7" class="ltx_Math" alttext="n\geq N" display="inl
 </tr></tbody>
 </table>
 </div>
+</div>
 </li>
-<li id="I4.i0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(ii)</span> 
-<div id="I4.i0.I1.i2.p1" class="ltx_para">
-<p class="ltx_p">Since <math id="I4.i0.I1.i2.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is bounded, <math id="I4.i0.I1.i2.p1.m2" class="ltx_Math" alttext="\exists M\geq 0" display="inline"><mrow><mrow><mo rspace="0.167em">∃</mo><mi>M</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math> such that <math id="I4.i0.I1.i2.p1.m3" class="ltx_Math" alttext="\lvert x_{n}\rvert\leq M\ \forall n\in\mathbb{N}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>M</mi><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>. Since <math id="I4.i0.I1.i2.p1.m4" class="ltx_Math" alttext="x_{n}\to x,\ \exists N_{1}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>1</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I4.i0.I1.i2.p1.m5" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert x_{n}-x\rvert&lt;\frac{\varepsilon}{2M}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mrow><mn>2</mn><mo>⁢</mo><mi>M</mi></mrow></mfrac></mrow></math> and since <math id="I4.i0.I1.i2.p1.m6" class="ltx_Math" alttext="y_{n}\to y,\ \exists N_{2}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I4.i0.I1.i2.p1.m7" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert y_{n}-y\rvert&lt;\frac{\varepsilon}{2\lvert y\rvert}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow></mfrac></mrow></math>. Now, choosing <math id="I4.i0.I1.i2.p1.m8" class="ltx_Math" alttext="N=\max\{N_{1},N_{2}\}" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, for <math id="I4.i0.I1.i2.p1.m9" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math> we have</p>
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="I2.i2.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is bounded, <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\exists M\geq 0" display="inline"><mrow><mrow><mo rspace="0.167em">∃</mo><mi>M</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math> such that <math id="I2.i2.p1.m3" class="ltx_Math" alttext="\lvert x_{n}\rvert\leq M\ \forall n\in\mathbb{N}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>M</mi><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>. Since <math id="I2.i2.p1.m4" class="ltx_Math" alttext="x_{n}\to x,\ \exists N_{1}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>x</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>1</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I2.i2.p1.m5" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert x_{n}-x\rvert&lt;\frac{\varepsilon}{2M}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mrow><mn>2</mn><mo>⁢</mo><mi>M</mi></mrow></mfrac></mrow></math> and since <math id="I2.i2.p1.m6" class="ltx_Math" alttext="y_{n}\to y,\ \exists N_{2}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I2.i2.p1.m7" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert y_{n}-y\rvert&lt;\frac{\varepsilon}{2\lvert y\rvert}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mi>ε</mi><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow></mfrac></mrow></math>. Now, choosing <math id="I2.i2.p1.m8" class="ltx_Math" alttext="N=\max\{N_{1},N_{2}\}" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math>, for <math id="I2.i2.p1.m9" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math> we have</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S3.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch4.E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -271,11 +265,13 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 </tr></tbody>
 </table>
 </div>
+</div>
 </li>
-<li id="I4.i0.I1.i3" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(iii)</span> 
-<div id="I4.i0.I1.i3.p1" class="ltx_para">
-<p class="ltx_p">Since <math id="I4.i0.I1.i3.p1.m1" class="ltx_Math" alttext="y_{n}\to y,\ \exists N_{1}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>1</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I4.i0.I1.i3.p1.m2" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert y_{n}-y\rvert&lt;\frac{\lvert y\rvert}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></mfrac></mrow></math>. Then for <math id="I4.i0.I1.i3.p1.m3" class="ltx_Math" alttext="n\geq N_{1}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub></mrow></math></p>
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Since <math id="I2.i3.p1.m1" class="ltx_Math" alttext="y_{n}\to y,\ \exists N_{1}\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>y</mi></mrow><mo rspace="0.667em">,</mo><mrow><mrow><mo rspace="0.167em">∃</mo><msub><mi>N</mi><mn>1</mn></msub></mrow><mo>∈</mo><mi>ℕ</mi></mrow></mrow></math> such that <math id="I2.i3.p1.m2" class="ltx_Math" alttext="n\geq N_{1}\implies\lvert y_{n}-y\rvert&lt;\frac{\lvert y\rvert}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></mfrac></mrow></math>. Then for <math id="I2.i3.p1.m3" class="ltx_Math" alttext="n\geq N_{1}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>1</mn></msub></mrow></math></p>
+<div class="ltx_equation_wrapper">
 <table id="Ch4.E24" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -286,7 +282,9 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.24)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">so <math id="I4.i0.I1.i3.p1.m4" class="ltx_Math" alttext="\lvert y_{n}\rvert&gt;\frac{\lvert y\rvert}{2}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></mfrac></mrow></math>. Now, let <math id="I4.i0.I1.i3.p1.m5" class="ltx_Math" alttext="N_{2}" display="inline"><msub><mi>N</mi><mn>2</mn></msub></math> be such that <math id="I4.i0.I1.i3.p1.m6" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert y_{n}-y\rvert&lt;\frac{\varepsilon\lvert y\rvert^{2}}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mrow><mi>ε</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></math>, then for <math id="I4.i0.I1.i3.p1.m7" class="ltx_Math" alttext="n\geq\max\{N_{1},N_{2}\}" display="inline"><mrow><mi>n</mi><mo>≥</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math> we have</p>
+</div>
+<p class="ltx_p">so <math id="I2.i3.p1.m4" class="ltx_Math" alttext="\lvert y_{n}\rvert&gt;\frac{\lvert y\rvert}{2}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></mfrac></mrow></math>. Now, let <math id="I2.i3.p1.m5" class="ltx_Math" alttext="N_{2}" display="inline"><msub><mi>N</mi><mn>2</mn></msub></math> be such that <math id="I2.i3.p1.m6" class="ltx_Math" alttext="n\geq N_{2}\implies\lvert y_{n}-y\rvert&lt;\frac{\varepsilon\lvert y\rvert^{2}}{2}" display="inline"><mrow><mi>n</mi><mo>≥</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mrow><mi>ε</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></math>, then for <math id="I2.i3.p1.m7" class="ltx_Math" alttext="n\geq\max\{N_{1},N_{2}\}" display="inline"><mrow><mi>n</mi><mo>≥</mo><mrow><mi>max</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math> we have</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S3.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch4.E25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -307,36 +305,36 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 </tr></tbody>
 </table>
 </div>
+</div>
 </li>
-<li id="I4.i0.I1.i4" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(iv)</span> 
-<div id="I4.i0.I1.i4.p1" class="ltx_para">
-<p class="ltx_p">Write <math id="I4.i0.I1.i4.p1.m1" class="ltx_Math" alttext="\frac{x_{n}}{y_{n}}" display="inline"><mfrac><msub><mi>x</mi><mi>n</mi></msub><msub><mi>y</mi><mi>n</mi></msub></mfrac></math> as <math id="I4.i0.I1.i4.p1.m2" class="ltx_Math" alttext="x_{n}\cdot\frac{1}{y_{n}}" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><mfrac><mn>1</mn><msub><mi>y</mi><mi>n</mi></msub></mfrac></mrow></math>, then the result follows from parts (ii) and (iii).</p>
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">Write <math id="I2.i4.p1.m1" class="ltx_Math" alttext="\frac{x_{n}}{y_{n}}" display="inline"><mfrac><msub><mi>x</mi><mi>n</mi></msub><msub><mi>y</mi><mi>n</mi></msub></mfrac></math> as <math id="I2.i4.p1.m2" class="ltx_Math" alttext="x_{n}\cdot\frac{1}{y_{n}}" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><mfrac><mn>1</mn><msub><mi>y</mi><mi>n</mi></msub></mfrac></mrow></math>, then the result follows from parts (ii) and (iii).</p>
 </div>
 </li>
-<li id="I4.i0.I1.i5" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(v)</span> 
-<div id="I4.i0.I1.i5.p1" class="ltx_para">
-<p class="ltx_p">Let <math id="I4.i0.I1.i5.p1.m1" class="ltx_Math" alttext="y_{n}=a" display="inline"><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>=</mo><mi>a</mi></mrow></math> (so <math id="I4.i0.I1.i5.p1.m2" class="ltx_Math" alttext="(y_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is the constant sequence <math id="I4.i0.I1.i5.p1.m3" class="ltx_Math" alttext="(a,a,\dots)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></math> with limit <math id="I4.i0.I1.i5.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>), then the result follows from part (ii).</p>
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I2.i5.p1.m1" class="ltx_Math" alttext="y_{n}=a" display="inline"><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>=</mo><mi>a</mi></mrow></math> (so <math id="I2.i5.p1.m2" class="ltx_Math" alttext="(y_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is the constant sequence <math id="I2.i5.p1.m3" class="ltx_Math" alttext="(a,a,\dots)" display="inline"><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>a</mi><mo>,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow></math> with limit <math id="I2.i5.p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>), then the result follows from part (ii).</p>
 </div>
 </li>
-<li id="I4.i0.I1.i6" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i6" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(vi)</span> 
-<div id="I4.i0.I1.i6.p1" class="ltx_para">
+<div id="I2.i6.p1" class="ltx_para">
 <p class="ltx_p">We will make use of a minor result to assist in proving this.</p>
 </div>
 <div id="Thmlemmax1" class="ltx_theorem ltx_theorem_lemma">
-<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Lemma</span></span></h6>
+<h6 class="ltx_title ltx_runin ltx_title_theorem"><span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma</span></span></h6>
 <div id="Thmlemmax1.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose <math id="Thmlemmax1.p1.m1" class="ltx_Math" alttext="(a_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> is a convergent sequence with <math id="Thmlemmax1.p1.m2" class="ltx_Math" alttext="a_{n}\to a" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mi>a</mi></mrow></math>. If <math id="Thmlemmax1.p1.m3" class="ltx_Math" alttext="a_{n}&gt;0\ \forall n\in\mathbb{N}" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>&gt;</mo><mrow><mn>0</mn><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math> then <math id="Thmlemmax1.p1.m4" class="ltx_Math" alttext="a\geq 0" display="inline"><mrow><mi>a</mi><mo>≥</mo><mn>0</mn></mrow></math>.</span></p>
 </div>
 </div>
-<div id="I4.i0.I1.i6.p2" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="I4.i0.I1.i6.p2.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.</span>Suppose by way of contradiction that <math id="I4.i0.I1.i6.p2.p1.m1" class="ltx_Math" alttext="a&lt;0" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math> and let <math id="I4.i0.I1.i6.p2.p1.m2" class="ltx_Math" alttext="\varepsilon=-a&gt;0" display="inline"><mrow><mi>ε</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. Then since <math id="I4.i0.I1.i6.p2.p1.m3" class="ltx_Math" alttext="(a_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> converges, <math id="I4.i0.I1.i6.p2.p1.m4" class="ltx_Math" alttext="\exists N\in\mathbb{N}" display="inline"><mrow><mrow><mo rspace="0.167em">∃</mo><mi>N</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="I4.i0.I1.i6.p2.p1.m5" class="ltx_Math" alttext="n\geq N\implies\lvert a_{n}-a\rvert&lt;-a" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>. This means that</p>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="I2.i6.p2" class="ltx_para">
+<p class="ltx_p">Suppose by way of contradiction that <math id="I2.i6.p2.m1" class="ltx_Math" alttext="a&lt;0" display="inline"><mrow><mi>a</mi><mo>&lt;</mo><mn>0</mn></mrow></math> and let <math id="I2.i6.p2.m2" class="ltx_Math" alttext="\varepsilon=-a&gt;0" display="inline"><mrow><mi>ε</mi><mo>=</mo><mrow><mo>−</mo><mi>a</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. Then since <math id="I2.i6.p2.m3" class="ltx_Math" alttext="(a_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> converges, <math id="I2.i6.p2.m4" class="ltx_Math" alttext="\exists N\in\mathbb{N}" display="inline"><mrow><mrow><mo rspace="0.167em">∃</mo><mi>N</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math> such that <math id="I2.i6.p2.m5" class="ltx_Math" alttext="n\geq N\implies\lvert a_{n}-a\rvert&lt;-a" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi><mo stretchy="false">⟹</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>−</mo><mi>a</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mo>−</mo><mi>a</mi></mrow></mrow></math>. This means that</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S3.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch4.E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -361,20 +359,18 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.29)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">which is a contradiction, hence <math id="I4.i0.I1.i6.p2.p1.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> must be greater than 0.
-
+</div>
+<p class="ltx_p">which is a contradiction, hence <math id="I2.i6.p2.m6" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> must be greater than 0.
 ∎</p>
 </div>
-</li>
-</ul>
-<p class="ltx_p">Now, consider <math id="I4.i0.I1.i6.p2.m1" class="ltx_Math" alttext="y_{n}-x_{n}\geq 0\ \forall n\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>≥</mo><mrow><mn>0</mn><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>. The sequence <math id="I4.i0.I1.i6.p2.m2" class="ltx_Math" alttext="(y_{n}-x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> converges to <math id="I4.i0.I1.i6.p2.m3" class="ltx_Math" alttext="y-x" display="inline"><mrow><mi>y</mi><mo>−</mo><mi>x</mi></mrow></math> by part (i) (and part (v) with <math id="I4.i0.I1.i6.p2.m4" class="ltx_Math" alttext="a=-1" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>) and so by our claim <math id="I4.i0.I1.i6.p2.m5" class="ltx_Math" alttext="y-x\geq 0" display="inline"><mrow><mrow><mi>y</mi><mo>−</mo><mi>x</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math>, which implies <math id="I4.i0.I1.i6.p2.m6" class="ltx_Math" alttext="x\leq y" display="inline"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow></math> as required.</p>
+</div>
+<div id="I2.i6.p3" class="ltx_para">
+<p class="ltx_p">Now, consider <math id="I2.i6.p3.m1" class="ltx_Math" alttext="y_{n}-x_{n}\geq 0\ \forall n\in\mathbb{N}" display="inline"><mrow><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>≥</mo><mrow><mn>0</mn><mo lspace="0.667em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>∈</mo><mi>ℕ</mi></mrow></math>. The sequence <math id="I2.i6.p3.m2" class="ltx_Math" alttext="(y_{n}-x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>−</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> converges to <math id="I2.i6.p3.m3" class="ltx_Math" alttext="y-x" display="inline"><mrow><mi>y</mi><mo>−</mo><mi>x</mi></mrow></math> by part (i) (and part (v) with <math id="I2.i6.p3.m4" class="ltx_Math" alttext="a=-1" display="inline"><mrow><mi>a</mi><mo>=</mo><mrow><mo>−</mo><mn>1</mn></mrow></mrow></math>) and so by our claim <math id="I2.i6.p3.m5" class="ltx_Math" alttext="y-x\geq 0" display="inline"><mrow><mrow><mi>y</mi><mo>−</mo><mi>x</mi></mrow><mo>≥</mo><mn>0</mn></mrow></math>, which implies <math id="I2.i6.p3.m6" class="ltx_Math" alttext="x\leq y" display="inline"><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow></math> as required.</p>
 </div>
 </li>
 </ol>
 <p class="ltx_p">∎</p>
 </div>
-</li>
-</ul>
 </div>
 </section>
 <section id="sandwich-principle" class="ltx_subsection">
@@ -386,11 +382,12 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 </div>
 <div id="Ch4.Thmexample6" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 4.6</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 4.6</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch4.Thmexample6.p1" class="ltx_para">
 <p class="ltx_p">Let <math id="Ch4.Thmexample6.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}=\left(1+\frac{1}{n^{p}}\right)_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><msup><mi>n</mi><mi>p</mi></msup></mfrac></mrow><mo>)</mo></mrow><mi>n</mi></msub></mrow></math> with <math id="Ch4.Thmexample6.p1.m2" class="ltx_Math" alttext="p\in\mathbb{N}" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>ℕ</mi></mrow></math>. Show that <math id="Ch4.Thmexample6.p1.m3" class="ltx_Math" alttext="x_{n}\to 1" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mn>1</mn></mrow></math> as <math id="Ch4.Thmexample6.p1.m4" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>.
-<br class="ltx_break">First, let <math id="Ch4.Thmexample6.p1.m5" class="ltx_Math" alttext="a_{n}=1" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn></mrow></math> and <math id="Ch4.Thmexample6.p1.m6" class="ltx_Math" alttext="b_{n}=\frac{1}{n^{p}}" display="inline"><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><msup><mi>n</mi><mi>p</mi></msup></mfrac></mrow></math>, then note that we already know that the sequence <math id="Ch4.Thmexample6.p1.m7" class="ltx_Math" alttext="\left(\frac{1}{n}\right)_{n}" display="inline"><msub><mrow><mo>(</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msub></math> converges to 0, so by theorem <a href="#thm:seq-lim-props" title="Theorem 4.4 ‣ 4.2.1 Adding and Multiplying Sequences ‣ 4.2 Properties of Limits ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a> (ii) (applied repeatedly),</p>
+<br class="ltx_break">First, let <math id="Ch4.Thmexample6.p1.m5" class="ltx_Math" alttext="a_{n}=1" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><mn>1</mn></mrow></math> and <math id="Ch4.Thmexample6.p1.m6" class="ltx_Math" alttext="b_{n}=\frac{1}{n^{p}}" display="inline"><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>=</mo><mfrac><mn>1</mn><msup><mi>n</mi><mi>p</mi></msup></mfrac></mrow></math>, then note that we already know that the sequence <math id="Ch4.Thmexample6.p1.m7" class="ltx_Math" alttext="\left(\frac{1}{n}\right)_{n}" display="inline"><msub><mrow><mo>(</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mo>)</mo></mrow><mi>n</mi></msub></math> converges to 0, so by theorem <a href="#Ch4.Thmtheorem4" title="Theorem 4.4 ‣ 4.2.1 Adding and Multiplying Sequences ‣ 4.2 Properties of Limits ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a> (ii) (applied repeatedly),</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch4.E30" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -401,16 +398,18 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.30)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">Then <math id="Ch4.Thmexample6.p1.m8" class="ltx_Math" alttext="(x_{n})_{n}=(a_{n}+b_{n})_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></mrow></math> which, by theorem <a href="#thm:seq-lim-props" title="Theorem 4.4 ‣ 4.2.1 Adding and Multiplying Sequences ‣ 4.2 Properties of Limits ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a> (i), converges to 1 since <math id="Ch4.Thmexample6.p1.m9" class="ltx_Math" alttext="a_{n}\to 1" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mn>1</mn></mrow></math> and <math id="Ch4.Thmexample6.p1.m10" class="ltx_Math" alttext="b_{n}\to 0" display="inline"><mrow><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mn>0</mn></mrow></math> as <math id="Ch4.Thmexample6.p1.m11" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<p class="ltx_p">Then <math id="Ch4.Thmexample6.p1.m8" class="ltx_Math" alttext="(x_{n})_{n}=(a_{n}+b_{n})_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></mrow></math> which, by theorem <a href="#Ch4.Thmtheorem4" title="Theorem 4.4 ‣ 4.2.1 Adding and Multiplying Sequences ‣ 4.2 Properties of Limits ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.4</span></a> (i), converges to 1 since <math id="Ch4.Thmexample6.p1.m9" class="ltx_Math" alttext="a_{n}\to 1" display="inline"><mrow><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mn>1</mn></mrow></math> and <math id="Ch4.Thmexample6.p1.m10" class="ltx_Math" alttext="b_{n}\to 0" display="inline"><mrow><msub><mi>b</mi><mi>n</mi></msub><mo stretchy="false">→</mo><mn>0</mn></mrow></math> as <math id="Ch4.Thmexample6.p1.m11" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
 </div>
 </div>
 <div id="Ch4.Thmexample7" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 4.7</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 4.7</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch4.Thmexample7.p1" class="ltx_para">
 <p class="ltx_p">Show that the sequence <math id="Ch4.Thmexample7.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}=\left(\frac{n+5n^{2}+2n^{3}}{n^{3}+3}\right)" display="inline"><mrow><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub><mo>=</mo><mrow><mo>(</mo><mfrac><mrow><mi>n</mi><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>n</mi><mn>3</mn></msup></mrow></mrow><mrow><msup><mi>n</mi><mn>3</mn></msup><mo>+</mo><mn>3</mn></mrow></mfrac><mo>)</mo></mrow></mrow></math> converges to 2.
 <br class="ltx_break"></p>
+<div class="ltx_equation_wrapper">
 <table id="Ch4.E31" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -424,6 +423,7 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 </table>
 </div>
 </div>
+</div>
 </section>
 </section>
 </div>
@@ -431,26 +431,27 @@ _{n}-x\rvert" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mrow><mrow><mo 
 <div class="ltx_align_center">
 <a href="sequences-and-convergence.html" title="In Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>Sequences &amp; Convergence</span></a><a href="monotone-sequences.html" title="In Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.3 </span>Monotone Sequences</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:55:23 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:53:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <ol class="ltx_toclist ltx_toclist_section">
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch4.Thmtheorem2" title=""><span class="ltx_text ltx_ref_title">Theorem 4.2</span></a></li>
-<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#thm:cvg-seq-bounded" title=""><span class="ltx_text ltx_ref_title">Theorem 4.3</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch4.Thmtheorem3" title=""><span class="ltx_text ltx_ref_title">Theorem 4.3</span></a></li>
 </ol>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#adding-and-multiplying-sequences" title="In 4.2 Properties of Limits ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.1 </span>Adding and Multiplying Sequences</span></a></li>
-<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#thm:seq-lim-props" title=""><span class="ltx_text ltx_ref_title">Theorem 4.4</span></a></li></ol>
+<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch4.Thmtheorem4" title=""><span class="ltx_text ltx_ref_title">Theorem 4.4</span></a></li></ol>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#sandwich-principle" title="In 4.2 Properties of Limits ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2.2 </span>Sandwich Principle</span></a></li>
 <ol class="ltx_toclist ltx_toclist_subsection">
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch4.Thmexample6" title=""><span class="ltx_text ltx_ref_title">Example 4.6</span></a></li>
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch4.Thmexample7" title=""><span class="ltx_text ltx_ref_title">Example 4.7</span></a></li>
 </ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

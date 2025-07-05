@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>5.2 The Comparison Test ‣ Chapter 5 Series ‣ Real Analysis</title>
-<!--Generated on Sun Jun 29 14:55:23 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:53:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 5 Series ‣ Real Analysis">
 <link rel="up up" href="../index.html" title="Real Analysis">
 <link rel="start" href="../index.html" title="Real Analysis">
@@ -27,7 +26,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Real Analysis">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Real Analysis</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -54,10 +56,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Real Analysis" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Series</span></a><a href="series.html" title="In Chapter 5 Series ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>Series</span></a><a href="series-of-positive-and-negative-terms.html" title="In Chapter 5 Series ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Series of Positive &amp; Negative Terms</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -66,9 +65,9 @@
 <div id="p1" class="ltx_para">
 <p class="ltx_p">What might have become clear is that determining convergence of series is more complicated than for sequences because the terms themselves are more complicated. Because of this,we want to create tools which will allow us to more easily deduce the properties of a series. One of these is the comparison test, which allows us to determine if a series is convergent by comparing it to a known series such as <math id="p1.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{1}{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow></math> or <math id="p1.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{1}{n^{2}}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn></msup></mfrac></mrow></math>.</p>
 </div>
-<div id="thm:comparison-test" class="ltx_theorem ltx_theorem_theorem">
+<div id="Ch5.Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Theorem 5.3</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;"> <span class="ltx_text ltx_font_medium">(Comparison Test)</span></span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.3</span></span><span class="ltx_text ltx_font_bold"> <span class="ltx_text ltx_font_medium">(Comparison Test)</span></span>
 </h6>
 <div id="Ch5.Thmtheorem3.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Ch5.Thmtheorem3.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> and <math id="Ch5.Thmtheorem3.p1.m2" class="ltx_Math" alttext="(a_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> be sequence with no negative terms. Then</span></p>
@@ -88,18 +87,15 @@
 </ol>
 </div>
 </div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="p2" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="p2.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.
-<br class="ltx_break"></span></p>
-<ol id="I2.i0.I1" class="ltx_enumerate">
-<li id="I2.i0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(i)</span> 
-<div id="I2.i0.I1.i1.p1" class="ltx_para">
-<p class="ltx_p">Let <math id="I2.i0.I1.i1.p1.m1" class="ltx_Math" alttext="A=\sum_{n=1}^{\infty}a_{n}" display="inline"><mrow><mi>A</mi><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow></math> and note that since all the terms <math id="I2.i0.I1.i1.p1.m2" class="ltx_Math" alttext="x_{n}" display="inline"><msub><mi>x</mi><mi>n</mi></msub></math> are positive, <math id="I2.i0.I1.i1.p1.m3" class="ltx_Math" alttext="S_{n}=\sum_{k=1}^{n}x_{k}" display="inline"><mrow><msub><mi>S</mi><mi>n</mi></msub><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow></math> is an increasing sequence. Then, since there exists some integer <math id="I2.i0.I1.i1.p1.m4" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> such that for all <math id="I2.i0.I1.i1.p1.m5" class="ltx_Math" alttext="k\geq N" display="inline"><mrow><mi>k</mi><mo>≥</mo><mi>N</mi></mrow></math> we have <math id="I2.i0.I1.i1.p1.m6" class="ltx_Math" alttext="x_{n}\leq a_{n}" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>≤</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>, we get</p>
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I2.i1.p1.m1" class="ltx_Math" alttext="A=\sum_{n=1}^{\infty}a_{n}" display="inline"><mrow><mi>A</mi><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow></math> and note that since all the terms <math id="I2.i1.p1.m2" class="ltx_Math" alttext="x_{n}" display="inline"><msub><mi>x</mi><mi>n</mi></msub></math> are positive, <math id="I2.i1.p1.m3" class="ltx_Math" alttext="S_{n}=\sum_{k=1}^{n}x_{k}" display="inline"><mrow><msub><mi>S</mi><mi>n</mi></msub><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow></math> is an increasing sequence. Then, since there exists some integer <math id="I2.i1.p1.m4" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> such that for all <math id="I2.i1.p1.m5" class="ltx_Math" alttext="k\geq N" display="inline"><mrow><mi>k</mi><mo>≥</mo><mi>N</mi></mrow></math> we have <math id="I2.i1.p1.m6" class="ltx_Math" alttext="x_{n}\leq a_{n}" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>≤</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>, we get</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E17" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -109,7 +105,9 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.17)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">Therefore, for all <math id="I2.i0.I1.i1.p1.m7" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math> we have</p>
+</div>
+<p class="ltx_p">Therefore, for all <math id="I2.i1.p1.m7" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math> we have</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S3.EGx18" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch5.E18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -127,28 +125,29 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.19)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">and hence <math id="I2.i0.I1.i1.p1.m8" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> is bounded above. But now <math id="I2.i0.I1.i1.p1.m9" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> is both monotone and bounded and so by the MCT (<a href="../sequences/monotone-sequences.html#thm:MCT" title="Theorem 4.5 (Monotone Convergence Theorem (MCT)) ‣ 4.3.1 The Monotone Convergence Theorem ‣ 4.3 Monotone Sequences ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.5</span></a>), <math id="I2.i0.I1.i1.p1.m10" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> must be convergent and thus the series <math id="I2.i0.I1.i1.p1.m11" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> converges.</p>
+</div>
+<p class="ltx_p">and hence <math id="I2.i1.p1.m8" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> is bounded above. But now <math id="I2.i1.p1.m9" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> is both monotone and bounded and so by the MCT (<a href="../sequences/monotone-sequences.html#Ch4.Thmtheorem5" title="Theorem 4.5 (Monotone Convergence Theorem (MCT)) ‣ 4.3.1 The Monotone Convergence Theorem ‣ 4.3 Monotone Sequences ‣ Chapter 4 Sequences ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.5</span></a>), <math id="I2.i1.p1.m10" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> must be convergent and thus the series <math id="I2.i1.p1.m11" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> converges.</p>
 </div>
 </li>
-<li id="I2.i0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(ii)</span> 
-<div id="I2.i0.I1.i2.p1" class="ltx_para">
-<p class="ltx_p">Suppose by way of contradiction that <math id="I2.i0.I1.i2.p1.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> is convergent, then following the argument in part (i) implies that <math id="I2.i0.I1.i2.p1.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>a</mi><mi>n</mi></msub></mrow></math> is convergent, which is a contradiction, meaning <math id="I2.i0.I1.i2.p1.m3" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> must be divergent.</p>
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">Suppose by way of contradiction that <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> is convergent, then following the argument in part (i) implies that <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}a_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>a</mi><mi>n</mi></msub></mrow></math> is convergent, which is a contradiction, meaning <math id="I2.i2.p1.m3" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> must be divergent.</p>
 </div>
 </li>
 </ol>
 <p class="ltx_p">∎</p>
 </div>
-</li>
-</ul>
-<p class="ltx_p">Note that we can also multiply the terms of the generating sequence by a positive constant, as this does not affect the convergence of the series, i.e. we can check that <math id="p2.m1" class="ltx_Math" alttext="\exists N\in\mathbb{N},c&gt;0" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∃</mo><mi>N</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></math> such that <math id="p2.m2" class="ltx_Math" alttext="x_{n}\leq ca_{n}" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>≤</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow></math> or <math id="p2.m3" class="ltx_Math" alttext="x_{n}\geq ca_{n}\ \forall n\geq N" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>≥</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>≥</mo><mi>N</mi></mrow></math>.</p>
 </div>
 <div id="p3" class="ltx_para">
-<p class="ltx_p">We using the comparison test, often the most convenient series to compare to are the so-called ‘<math id="p3.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-series’, that is, those of the form <math id="p3.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{1}{n^{p}}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mfrac><mn>1</mn><msup><mi>n</mi><mi>p</mi></msup></mfrac></mrow></math>.</p>
+<p class="ltx_p">Note that we can also multiply the terms of the generating sequence by a positive constant, as this does not affect the convergence of the series, i.e. we can check that <math id="p3.m1" class="ltx_Math" alttext="\exists N\in\mathbb{N},c&gt;0" display="inline"><mrow><mrow><mrow><mo rspace="0.167em">∃</mo><mi>N</mi></mrow><mo>∈</mo><mi>ℕ</mi></mrow><mo>,</mo><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></mrow></math> such that <math id="p3.m2" class="ltx_Math" alttext="x_{n}\leq ca_{n}" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>≤</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></mrow></math> or <math id="p3.m3" class="ltx_Math" alttext="x_{n}\geq ca_{n}\ \forall n\geq N" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>≥</mo><mrow><mi>c</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo lspace="0.167em">⁢</mo><mrow><mo rspace="0.167em">∀</mo><mi>n</mi></mrow></mrow><mo>≥</mo><mi>N</mi></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We using the comparison test, often the most convenient series to compare to are the so-called ‘<math id="p4.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-series’, that is, those of the form <math id="p4.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{1}{n^{p}}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mfrac><mn>1</mn><msup><mi>n</mi><mi>p</mi></msup></mfrac></mrow></math>.</p>
 </div>
 <div id="Ch5.Thmexample4" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 5.4</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 5.4</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch5.Thmexample4.p1" class="ltx_para">
 <p class="ltx_p">Let <math id="Ch5.Thmexample4.p1.m1" class="ltx_Math" alttext="p\in\mathbb{R}" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>. Then the series <math id="Ch5.Thmexample4.p1.m2" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{1}{n^{p}}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mfrac><mn>1</mn><msup><mi>n</mi><mi>p</mi></msup></mfrac></mrow></math> converges if and only if <math id="Ch5.Thmexample4.p1.m3" class="ltx_Math" alttext="p&gt;1" display="inline"><mrow><mi>p</mi><mo>&gt;</mo><mn>1</mn></mrow></math>.
@@ -163,7 +162,7 @@
 
 <div id="Ch5.Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Theorem 5.4</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;"> <span class="ltx_text ltx_font_medium">(Ratio Test)</span></span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5.4</span></span><span class="ltx_text ltx_font_bold"> <span class="ltx_text ltx_font_medium">(Ratio Test)</span></span>
 </h6>
 <div id="Ch5.Thmtheorem4.p1" class="ltx_para">
 <p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Ch5.Thmtheorem4.p1.m1" class="ltx_Math" alttext="(x_{n})_{n}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mi>n</mi></msub></math> be a sequence of positive terms.</span></p>
@@ -183,18 +182,15 @@
 </ol>
 </div>
 </div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
 <div id="SS1.p1" class="ltx_para">
-<ul class="ltx_itemize">
-<li class="ltx_item" style="list-style-type:none;">
-<span class="ltx_tag ltx_tag_item"></span> 
-<div id="SS1.p1.p1" class="ltx_para">
-<p class="ltx_p"><span class="ltx_text ltx_font_bold" style="color:#003399;">Proof.
-<br class="ltx_break"></span></p>
-<ol id="I4.i0.I1" class="ltx_enumerate">
-<li id="I4.i0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<ol id="I4" class="ltx_enumerate">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
 <span class="ltx_tag ltx_tag_item">(i)</span> 
-<div id="I4.i0.I1.i1.p1" class="ltx_para">
-<p class="ltx_p">First note that <math id="I4.i0.I1.i1.p1.m1" class="ltx_Math" alttext="x_{N+1}\leq rx_{N}" display="inline"><mrow><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>≤</mo><mrow><mi>r</mi><mo>⁢</mo><msub><mi>x</mi><mi>N</mi></msub></mrow></mrow></math>, <math id="I4.i0.I1.i1.p1.m2" class="ltx_Math" alttext="x_{N+2}\leq rx_{N+1}=r^{2}x_{N}" display="inline"><mrow><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>≤</mo><mrow><mi>r</mi><mo>⁢</mo><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mi>N</mi></msub></mrow></mrow></math>, etc. and so <math id="I4.i0.I1.i1.p1.m3" class="ltx_Math" alttext="x_{N+k}\leq r^{k}x_{N}" display="inline"><mrow><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mi>k</mi></mrow></msub><mo>≤</mo><mrow><msup><mi>r</mi><mi>k</mi></msup><mo>⁢</mo><msub><mi>x</mi><mi>N</mi></msub></mrow></mrow></math>. Now consider the sequence given by</p>
+<div id="I4.i1.p1" class="ltx_para">
+<p class="ltx_p">First note that <math id="I4.i1.p1.m1" class="ltx_Math" alttext="x_{N+1}\leq rx_{N}" display="inline"><mrow><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>≤</mo><mrow><mi>r</mi><mo>⁢</mo><msub><mi>x</mi><mi>N</mi></msub></mrow></mrow></math>, <math id="I4.i1.p1.m2" class="ltx_Math" alttext="x_{N+2}\leq rx_{N+1}=r^{2}x_{N}" display="inline"><mrow><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>≤</mo><mrow><mi>r</mi><mo>⁢</mo><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>=</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mi>N</mi></msub></mrow></mrow></math>, etc. and so <math id="I4.i1.p1.m3" class="ltx_Math" alttext="x_{N+k}\leq r^{k}x_{N}" display="inline"><mrow><msub><mi>x</mi><mrow><mi>N</mi><mo>+</mo><mi>k</mi></mrow></msub><mo>≤</mo><mrow><msup><mi>r</mi><mi>k</mi></msup><mo>⁢</mo><msub><mi>x</mi><mi>N</mi></msub></mrow></mrow></math>. Now consider the sequence given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E20" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -204,7 +200,9 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.20)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">This is a geometric series which is convergent by theorem <a href="series.html#thm:geometric-series" title="Theorem 5.2 ‣ 5.1.3 Geometric Series ‣ 5.1 Series ‣ Chapter 5 Series ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a>. Then notice that for all <math id="I4.i0.I1.i1.p1.m4" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math> we have</p>
+</div>
+<p class="ltx_p">This is a geometric series which is convergent by theorem <a href="series.html#Ch5.Thmtheorem2" title="Theorem 5.2 ‣ 5.1.3 Geometric Series ‣ 5.1 Series ‣ Chapter 5 Series ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2</span></a>. Then notice that for all <math id="I4.i1.p1.m4" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math> we have</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E21" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -214,23 +212,25 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.21)</span></td>
 </tr></tbody>
 </table>
-<p class="ltx_p">and hence by the comparison test <math id="I4.i0.I1.i1.p1.m5" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> is convergent.</p>
+</div>
+<p class="ltx_p">and hence by the comparison test <math id="I4.i1.p1.m5" class="ltx_Math" alttext="\sum_{n=1}^{\infty}x_{n}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>x</mi><mi>n</mi></msub></mrow></math> is convergent.</p>
 </div>
 </li>
 </ol>
 <p class="ltx_p">∎</p>
 </div>
-</li>
-</ul>
-<p class="ltx_p">In effect, what the ratio test says is that if <math id="SS1.p1.m1" class="ltx_Math" alttext="\lim_{n\to\infty}\frac{x_{x+1}}{x_{n}}" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mfrac><msub><mi>x</mi><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>x</mi><mi>n</mi></msub></mfrac></mrow></math> exists and is less than 1, then the series converges and if it is greater than 1 then the series diverges. If the limit is equal to 1, then we cannot determine the behaviour of the series from the ratio test. The ratio test works best for geometric series because of the cancellation that happens when dividing the exponents. It also works well for some series containing factorials of <math id="SS1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> for the same reason.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">In effect, what the ratio test says is that if <math id="SS1.p2.m1" class="ltx_Math" alttext="\lim_{n\to\infty}\frac{x_{x+1}}{x_{n}}" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mfrac><msub><mi>x</mi><mrow><mi>x</mi><mo>+</mo><mn>1</mn></mrow></msub><msub><mi>x</mi><mi>n</mi></msub></mfrac></mrow></math> exists and is less than 1, then the series converges and if it is greater than 1 then the series diverges. If the limit is equal to 1, then we cannot determine the behaviour of the series from the ratio test. The ratio test works best for geometric series because of the cancellation that happens when dividing the exponents. It also works well for some series containing factorials of <math id="SS1.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> for the same reason.</p>
 </div>
 <div id="Ch5.Thmexample5" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#003399;">Example 5.5</span></span><span class="ltx_text ltx_font_bold" style="color:#003399;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 5.5</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch5.Thmexample5.p1" class="ltx_para">
 <p class="ltx_p">Show that the series <math id="Ch5.Thmexample5.p1.m1" class="ltx_Math" alttext="\sum_{n=1}^{\infty}\frac{2^{n}}{n!}" display="inline"><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><mfrac><msup><mn>2</mn><mi>n</mi></msup><mrow><mi>n</mi><mo>!</mo></mrow></mfrac></mrow></math> converges.
 <br class="ltx_break">The generating sequence is given by <math id="Ch5.Thmexample5.p1.m2" class="ltx_Math" alttext="x_{n}=\frac{2^{n}}{n!}" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mfrac><msup><mn>2</mn><mi>n</mi></msup><mrow><mi>n</mi><mo>!</mo></mrow></mfrac></mrow></math>, so</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch5.E22" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -242,6 +242,7 @@
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.22)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Hence by the ratio test, the series converges.</p>
 </div>
 </div>
@@ -252,16 +253,14 @@
 <div class="ltx_align_center">
 <a href="series.html" title="In Chapter 5 Series ‣ Real Analysis" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>Series</span></a><a href="series-of-positive-and-negative-terms.html" title="In Chapter 5 Series ‣ Real Analysis" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Series of Positive &amp; Negative Terms</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:55:23 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:53:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <ol class="ltx_toclist ltx_toclist_section">
-<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#thm:comparison-test" title=""><span class="ltx_text ltx_ref_title">Theorem 5.3</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch5.Thmtheorem3" title=""><span class="ltx_text ltx_ref_title">Theorem 5.3</span></a></li>
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch5.Thmexample4" title=""><span class="ltx_text ltx_ref_title">Example 5.4</span></a></li>
 </ol>
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#ratio-test" title="In 5.2 The Comparison Test ‣ Chapter 5 Series ‣ Real Analysis" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.1 </span>The Ratio Test</span></a></li>
@@ -270,6 +269,9 @@
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch5.Thmexample5" title=""><span class="ltx_text ltx_ref_title">Example 5.5</span></a></li>
 </ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>1.2 Motion in One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics</title>
-<!--Generated on Sun Jun 29 14:56:25 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:54:41 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
 <link rel="up up" href="../index.html" title="Classical Mechanics">
 <link rel="start" href="../index.html" title="Classical Mechanics">
@@ -31,7 +30,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Classical Mechanics">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -62,10 +64,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Newton’s Laws of Motion</span></a><a href="introduction.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Introduction</span></a><a href="constant-acceleration.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Constant Acceleration</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -86,7 +85,7 @@ This defines our <span class="ltx_text ltx_font_bold">coordinate system</span>.<
 </div>
 <div id="Ch1.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.1</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmdefinition1.p1" class="ltx_para">
 <p class="ltx_p">The <span class="ltx_text ltx_font_bold">trajectory</span> of an object is a function <math id="Ch1.Thmdefinition1.p1.m1" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> where <math id="Ch1.Thmdefinition1.p1.m2" class="ltx_Math" alttext="t,x(t)\in\mathbb{R}" display="inline"><mrow><mrow><mi>t</mi><mo>,</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>. <math id="Ch1.Thmdefinition1.p1.m3" class="ltx_Math" alttext="x(t_{0})=x_{0}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math> describes the position of the object <math id="Ch1.Thmdefinition1.p1.m4" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> at some time <math id="Ch1.Thmdefinition1.p1.m5" class="ltx_Math" alttext="t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math>.</p>
@@ -101,10 +100,11 @@ In general, it is often best to align the <math id="SS1.p2.m2" class="ltx_Math" 
 </div>
 <div id="Ch1.Thmdefinition2" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.2</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.2</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmdefinition2.p1" class="ltx_para">
 <p class="ltx_p">The <span class="ltx_text ltx_font_bold">displacement</span> of an object is the difference in positions between two times <math id="Ch1.Thmdefinition2.p1.m1" class="ltx_Math" alttext="t_{1}" display="inline"><msub><mi>t</mi><mn>1</mn></msub></math> and <math id="Ch1.Thmdefinition2.p1.m2" class="ltx_Math" alttext="t_{2}&gt;t_{1}" display="inline"><mrow><msub><mi>t</mi><mn>2</mn></msub><mo>&gt;</mo><msub><mi>t</mi><mn>1</mn></msub></mrow></math>. In one dimension:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E1" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -114,7 +114,9 @@ In general, it is often best to align the <math id="SS1.p2.m2" class="ltx_Math" 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.1)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">If <math id="Ch1.Thmdefinition2.p1.m3" class="ltx_Math" alttext="x(0)=x_{0}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math>, then the <span class="ltx_text ltx_font_bold">total displacement</span> of an object as a function of time is given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E2" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -126,8 +128,10 @@ In general, it is often best to align the <math id="SS1.p2.m2" class="ltx_Math" 
 </table>
 </div>
 </div>
+</div>
 <div id="SS1.p3" class="ltx_para">
 <p class="ltx_p">The <span class="ltx_text ltx_font_bold">distance</span> travelled by an object between <math id="SS1.p3.m1" class="ltx_Math" alttext="t_{1}" display="inline"><msub><mi>t</mi><mn>1</mn></msub></math> and <math id="SS1.p3.m2" class="ltx_Math" alttext="t_{2}" display="inline"><msub><mi>t</mi><mn>2</mn></msub></math> is given by the magnitude of displacement,</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E3" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -138,6 +142,7 @@ _{2}-x_{1}\rvert." display="block"><mrow><mrow><mi>distance</mi><mo>=</mo><mrow>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.3)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">In general, distance <math id="SS1.p3.m3" class="ltx_Math" alttext="\neq" display="inline"><mo>≠</mo></math> displacement.
 This is because displacement is a <span class="ltx_text ltx_font_bold">vector</span> quantity, meaning it has direction and magnitude, whereas distance is a <span class="ltx_text ltx_font_bold">scalar</span> quantity.
 In one dimension, the only difference between vector and scalar quantities is that vector quantities are <span class="ltx_text ltx_font_bold">signed</span>.
@@ -150,10 +155,11 @@ The distinction becomes greater in more dimensions when vector quantities are ac
 
 <div id="Ch1.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.3</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.3</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmdefinition3.p1" class="ltx_para">
 <p class="ltx_p">The <span class="ltx_text ltx_font_bold">instantaneous velocity</span>, or just the <span class="ltx_text ltx_font_bold">velocity</span> of an object is defined as the rate of change of the object’s position with respect to time, or simply the derivative.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E4" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -166,9 +172,11 @@ The distinction becomes greater in more dimensions when vector quantities are ac
 </table>
 </div>
 </div>
+</div>
 <div id="SS2.p1" class="ltx_para">
 <p class="ltx_p">Velocity is also a vector quantity.
 The corresponding scalar quantity is <span class="ltx_text ltx_font_bold">speed</span>, defined as the magnitude of velocity,</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E5" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -178,7 +186,9 @@ The corresponding scalar quantity is <span class="ltx_text ltx_font_bold">speed<
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.5)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">The <span class="ltx_text ltx_font_bold">average velocity</span> of an object in a time interval <math id="SS2.p1.m1" class="ltx_Math" alttext="\Delta t=t_{2}-t_{1}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mrow><msub><mi>t</mi><mn>2</mn></msub><mo>−</mo><msub><mi>t</mi><mn>1</mn></msub></mrow></mrow></math> is given by the displacement over the time interval, or also the time average of the velocity (which must be computed with an integral since it is a continuous property).</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E6" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -191,7 +201,9 @@ x%
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.6)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Meanwhile, the <span class="ltx_text ltx_font_bold">average speed</span> is given by</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E7" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -203,7 +215,9 @@ x%
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.7)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Here, we may identify</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E8" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -214,7 +228,9 @@ x%
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.8)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">If the object is travelling at constant velocity, then the integral is trivial and we recover (setting <math id="SS2.p1.m2" class="ltx_Math" alttext="t_{1}=0" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>) the equation that you probably learned in school,</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E9" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -225,12 +241,14 @@ x%
 </tr></tbody>
 </table>
 </div>
+</div>
 <div id="Ch1.Thmdefinition4" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.4</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.4</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmdefinition4.p1" class="ltx_para">
 <p class="ltx_p">The <span class="ltx_text ltx_font_bold">instantaneous acceleration</span>, or just the <span class="ltx_text ltx_font_bold">acceleration</span> of an object is defined as the rate of change of the object’s velocity with respect to time.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E10" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -244,8 +262,10 @@ x%
 </table>
 </div>
 </div>
+</div>
 <div id="SS2.p2" class="ltx_para">
 <p class="ltx_p">Likewise, the <span class="ltx_text ltx_font_bold">average acceleration</span> of an object in a time interval <math id="SS2.p2.m1" class="ltx_Math" alttext="\Delta t" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>t</mi></mrow></math> is</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E11" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -257,6 +277,7 @@ x%
 </tr></tbody>
 </table>
 </div>
+</div>
 </section>
 </section>
 </div>
@@ -264,13 +285,11 @@ x%
 <div class="ltx_align_center">
 <a href="introduction.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Introduction</span></a><a href="constant-acceleration.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Constant Acceleration</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:56:25 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:54:41 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_subsection"><a href="#position-as-a-function-of-time" title="In 1.2 Motion in One Dimension ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2.1 </span>Position as a Function of Time</span></a></li>
 <ol class="ltx_toclist ltx_toclist_subsection">
@@ -283,6 +302,9 @@ x%
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch1.Thmdefinition4" title=""><span class="ltx_text ltx_ref_title">Definition 1.4</span></a></li>
 </ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>

@@ -2,12 +2,11 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>1.5 Forces ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics</title>
-<!--Generated on Sun Jun 29 14:56:25 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Generated on Sat Jul  5 17:54:41 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
 
-<link rel="stylesheet" href="../LaTeXML.css" type="text/css">
-<link rel="stylesheet" href="../ltx-book.css" type="text/css">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="..%5CLaTeXML-navbar-left.css" type="text/css">
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="up" href="./" title="Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics">
 <link rel="up up" href="../index.html" title="Classical Mechanics">
 <link rel="start" href="../index.html" title="Classical Mechanics">
@@ -31,7 +30,10 @@
 <link rel="bibliography" href="../bibliography.html" title="References ‣ Classical Mechanics">
 </head>
 <body>
-<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Classical Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
 <nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
@@ -58,10 +60,7 @@
 </nav>
 <main>
 <div class="ltx_page_main">
-<header class="ltx_page_header">
-<div class="ltx_align_center">
-<a href="./" title="In Classical Mechanics" class="ltx_ref" rel="up"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Newton’s Laws of Motion</span></a><a href="motion-in-multiple-dimensions.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>Motion in Mulitple Dimensions</span></a><a href="projectile-motion.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.6 </span>Projectile Motion</span></a>
-</div></header>
+<header class="ltx_page_header"></header>
 <div class="ltx_page_content">
 <section class="ltx_section ltx_authors_1line" lang="en">
 <h1 class="ltx_title ltx_title_section">
@@ -77,13 +76,14 @@ In classical mechanics, we describe forces as vectors and denote a generic force
 The exact dynamics of how forces affect motion are described in Newton’s laws of motion, which we will write now.
 In the following the symbol <math id="p2.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> stands for the sum of all forces acting on the object, otherwise known as the <span class="ltx_text ltx_font_bold">net force</span>.</p>
 </div>
-<div id="def:newton-1" class="ltx_theorem ltx_theorem_definition">
+<div id="Ch1.Thmdefinition8" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.8</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;"> <span class="ltx_text ltx_font_medium">(Newton’s First Law)</span>.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.8</span></span><span class="ltx_text ltx_font_bold"> <span class="ltx_text ltx_font_medium">(Newton’s First Law)</span>.</span>
 </h6>
 <div id="Ch1.Thmdefinition8.p1" class="ltx_para">
 <p class="ltx_p">An object moving with constant velocity <math id="Ch1.Thmdefinition8.p1.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math>, will stay at the same constant velocity unless acted upon by a force.
 In other words:</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E35" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -93,6 +93,7 @@ In other words:</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.35)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Note that this includes an object at rest, which has velocity <math id="Ch1.Thmdefinition8.p1.m2" class="ltx_Math" alttext="v=0" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
 </div>
 </div>
@@ -101,12 +102,13 @@ In other words:</p>
 In order words, a more massive object will accelerate slower relative to a less massive object when under the influence of identical forces.
 This is quantified by Newton’s Second Law.</p>
 </div>
-<div id="def:newton-2" class="ltx_theorem ltx_theorem_definition">
+<div id="Ch1.Thmdefinition9" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.9</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;"> <span class="ltx_text ltx_font_medium">(Newton’s Second Law)</span>.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.9</span></span><span class="ltx_text ltx_font_bold"> <span class="ltx_text ltx_font_medium">(Newton’s Second Law)</span>.</span>
 </h6>
 <div id="Ch1.Thmdefinition9.p1" class="ltx_para">
 <p class="ltx_p">The net force on the object is equal to the object’s mass times the object’s acceleration.</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E36" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -116,11 +118,13 @@ This is quantified by Newton’s Second Law.</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.36)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">Note that force is always parallel to acceleration.</p>
 </div>
 </div>
 <div id="p4" class="ltx_para">
 <p class="ltx_p">Since acceleration is the second derivative of position, we can write Newton’s Second Law as</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E37" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -131,15 +135,17 @@ This is quantified by Newton’s Second Law.</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.37)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">which is a differential equation for <math id="p4.m1" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
 This is known as an <span class="ltx_text ltx_font_bold">equation of motion</span>, and all classical mechanics problems boil down to solving the equation of motion to obtain the trajectory of the object.</p>
 </div>
 <div id="Ch1.Thmexample4" class="ltx_theorem ltx_theorem_example">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Example 1.4</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;">.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 1.4</span></span><span class="ltx_text ltx_font_bold">.</span>
 </h6>
 <div id="Ch1.Thmexample4.p1" class="ltx_para">
 <p class="ltx_p">Suppose an object is acted upon by a constant force <math id="Ch1.Thmexample4.p1.m1" class="ltx_Math" alttext="F_{0}" display="inline"><msub><mi>F</mi><mn>0</mn></msub></math>, then we align the <math id="Ch1.Thmexample4.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> axis with the direction of the force and the equation of motion is</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E38" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -150,8 +156,10 @@ This is known as an <span class="ltx_text ltx_font_bold">equation of motion</spa
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.38)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">This is a very easy differential equation to solve.
 Integrating twice, we get</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch1.E39"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -170,8 +178,9 @@ Integrating twice, we get</p>
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.40)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">where <math id="Ch1.Thmexample4.p1.m3" class="ltx_Math" alttext="v_{0}=v(0)" display="inline"><mrow><msub><mi>v</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>v</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Ch1.Thmexample4.p1.m4" class="ltx_Math" alttext="x_{0}=x(0)" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math> as before.
-Note that comparing to equation <a href="sec_constant-acceleration.html#Ch1.E17" title="In 1.3 Constant Acceleration ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.17</span></a>, we can identify <math id="Ch1.Thmexample4.p1.m5" class="ltx_Math" alttext="a=\frac{F_{0}}{m}" display="inline"><mrow><mi>a</mi><mo>=</mo><mfrac><msub><mi>F</mi><mn>0</mn></msub><mi>m</mi></mfrac></mrow></math> i.e. acceleration is constant, which is consistent with what we developed before.</p>
+Note that comparing to equation <a href="constant-acceleration.html#Ch1.E17" title="In 1.3 Constant Acceleration ‣ Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.17</span></a>, we can identify <math id="Ch1.Thmexample4.p1.m5" class="ltx_Math" alttext="a=\frac{F_{0}}{m}" display="inline"><mrow><mi>a</mi><mo>=</mo><mfrac><msub><mi>F</mi><mn>0</mn></msub><mi>m</mi></mfrac></mrow></math> i.e. acceleration is constant, which is consistent with what we developed before.</p>
 </div>
 </div>
 <div id="p5" class="ltx_para">
@@ -180,13 +189,14 @@ If we are in a nonintertial reference frame, i.e. one that is accelerating, and 
 One way to test if we are in an inertial frame or not us by using Newton’s First Law.
 If an object accelerates while under the influence of no forces, then our reference frame must be noninertial.</p>
 </div>
-<div id="def:newton-3" class="ltx_theorem ltx_theorem_definition">
+<div id="Ch1.Thmdefinition10" class="ltx_theorem ltx_theorem_definition">
 <h6 class="ltx_title ltx_runin ltx_title_theorem">
-<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold" style="color:#990033;">Definition 1.10</span></span><span class="ltx_text ltx_font_bold" style="color:#990033;"> <span class="ltx_text ltx_font_medium">(Newton’s Third Law)</span>.</span>
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.10</span></span><span class="ltx_text ltx_font_bold"> <span class="ltx_text ltx_font_medium">(Newton’s Third Law)</span>.</span>
 </h6>
 <div id="Ch1.Thmdefinition10.p1" class="ltx_para">
 <p class="ltx_p">When two objects interact with each other, the forces on each object due to the other are <span class="ltx_text ltx_font_bold">equal in magnitude</span> and <span class="ltx_text ltx_font_bold">opposite in direction</span>.
 In other words, if object <math id="Ch1.Thmdefinition10.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> exerts a force <math id="Ch1.Thmdefinition10.p1.m2" class="ltx_Math" alttext="F_{A\to B}" display="inline"><msub><mi>F</mi><mrow><mi>A</mi><mo stretchy="false">→</mo><mi>B</mi></mrow></msub></math> on object <math id="Ch1.Thmdefinition10.p1.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, then object <math id="Ch1.Thmdefinition10.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> exerts a force <math id="Ch1.Thmdefinition10.p1.m5" class="ltx_Math" alttext="F_{B\to A}" display="inline"><msub><mi>F</mi><mrow><mi>B</mi><mo stretchy="false">→</mo><mi>A</mi></mrow></msub></math> on object <math id="Ch1.Thmdefinition10.p1.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and we may write</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch1.E41" class="ltx_equation ltx_eqn_table">
 
 <tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -196,12 +206,14 @@ In other words, if object <math id="Ch1.Thmdefinition10.p1.m1" class="ltx_Math" 
 <td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.41)</span></td>
 </tr></tbody>
 </table>
+</div>
 <p class="ltx_p">These two forces are then known as a “Newton (III) pair”.</p>
 </div>
 </div>
 <div id="p6" class="ltx_para">
 <p class="ltx_p">Force is a vector quantity, so in more than dimension it can be decomposed into multiple components which are the forces along each axis.
 In three dimensions, Newton’s Second Law is</p>
+<div class="ltx_equation_wrapper">
 <table id="Ch7.S10.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
 
 <tbody id="Ch1.E42"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
@@ -229,6 +241,7 @@ In three dimensions, Newton’s Second Law is</p>
 </tr></tbody>
 </table>
 </div>
+</div>
 <div id="p7" class="ltx_para">
 <p class="ltx_p">We can now solve any problem in classical mechanics.
 </p>
@@ -239,21 +252,22 @@ In three dimensions, Newton’s Second Law is</p>
 <div class="ltx_align_center">
 <a href="motion-in-multiple-dimensions.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>Motion in Mulitple Dimensions</span></a><a href="projectile-motion.html" title="In Chapter 1 Newton’s Laws of Motion ‣ Classical Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.6 </span>Projectile Motion</span></a>
 </div>
-<div class="ltx_page_logo">Generated  on Sun Jun 29 14:56:25 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+<div class="ltx_page_logo">Generated  on Sat Jul  5 17:54:41 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
 </div></footer>
 </div>
 <nav class="ltx_in_page_navbar">
-<nav class="ltx_TOC"><span class="ltx_text ltx_ref_title">
-                    On this page:
-                </span>
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
 <ol class="ltx_toclist">
 <ol class="ltx_toclist ltx_toclist_section">
-<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#def:newton-1" title=""><span class="ltx_text ltx_ref_title">Definition 1.8</span></a></li>
-<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#def:newton-2" title=""><span class="ltx_text ltx_ref_title">Definition 1.9</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch1.Thmdefinition8" title=""><span class="ltx_text ltx_ref_title">Definition 1.8</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch1.Thmdefinition9" title=""><span class="ltx_text ltx_ref_title">Definition 1.9</span></a></li>
 <li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch1.Thmexample4" title=""><span class="ltx_text ltx_ref_title">Example 1.4</span></a></li>
-<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#def:newton-3" title=""><span class="ltx_text ltx_ref_title">Definition 1.10</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch1.Thmdefinition10" title=""><span class="ltx_text ltx_ref_title">Definition 1.10</span></a></li>
 </ol>
 </ol></nav>
-</nav></main>
+<footer>
+                Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett
+            </footer></nav></main>
+</div>
 </body>
 </html>
