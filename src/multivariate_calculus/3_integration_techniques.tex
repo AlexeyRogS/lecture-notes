@@ -37,11 +37,13 @@
             f(x)=\frac{A_1}{x-a_1}+\frac{A_2}{x-a_2}+\dots+\frac{A_n}{x-a_n}.
         \end{equation}
         \begin{example}
+            % TODO: format this example
             \begin{equation}
                 \frac{1}{x^2-1} = \frac{A}{x-1}+\frac{B}{x+1}=\frac{1}{2(x-1)}+\frac{1}{2(x+1)}.
             \end{equation}
         \end{example}
         \begin{example}
+            % TODO: format this example
             \begin{equation}
                 \frac{3x+10}{(x-2)(x^2+4)} = \frac{A}{x-2} + \frac{Bx+C}{x^2+4}
             \end{equation}
@@ -57,11 +59,11 @@
         If $f(x)=h(g(x))g^\prime(x)$ where $h(x)$ is a function we know the integral of, we can use the technique of substitution.
         Note that
         \begin{equation}
-            \frac{\mathrm{d}}{\mathrm{d}x}(H(g(x)))=h(g(x))g^\prime(x),
+            \dv{}{x}(H(g(x)))=h(g(x))g^\prime(x),
         \end{equation}
         therefore
         \begin{equation}
-            \int f(x)\mathrm{d}x=H(g(x))+c.
+            \int f(x)\dd{x}=H(g(x))+c.
         \end{equation}
         To solve, make the substitution $u=g(x)$ to use this formula.
         \begin{center}
@@ -110,30 +112,30 @@
         Consider the integral of $\ln x$.
         This can be found using integration by parts:
         \begin{equation}
-            \int\ln x\mathrm{d}x=x\ln x-x+c.
+            \int\ln x\dd{x}=x\ln x-x+c.
         \end{equation}
         Similarly, the integral of $(\ln x)^2$ is
         \begin{equation}
-            \int(\ln x)^2\mathrm{d}x=x(\ln x)^2-2\int\ln x\mathrm{d}x.
+            \int(\ln x)^2\dd{x}=x(\ln x)^2-2\int\ln x\dd{x}.
         \end{equation}
         Hence the integral of $(\ln x)^n$ is given by
         \begin{equation}
-            I_n=\int(\ln x)^n\mathrm{d}x=x(\ln x)^n-n\int(\ln x)^{n-1}\mathrm{d}x=x(\ln x)^n-nI_{n-1}.
+            I_n=\int(\ln x)^n\dd{x}=x(\ln x)^n-n\int(\ln x)^{n-1}\dd{x}=x(\ln x)^n-nI_{n-1}.
         \end{equation}
         \begin{example}
-            Let $I_n=\int x^ne^x\mathrm{d}x$.
+            Let $I_n=\int x^ne^x\dd{x}$.
             Integrating by parts, we get
             \begin{equation}
-                I_n=x^ne^x-\int nx^{n-1}e^x\mathrm{d}x=x^ne^x-nI_{n-1}.
+                I_n=x^ne^x-\int nx^{n-1}e^x\dd{x}=x^ne^x-nI_{n-1}.
             \end{equation}
         \end{example}
         \begin{example}
-            Let $I_n=\int\sin^nx\mathrm{d}x$.
+            Let $I_n=\int\sin^nx\dd{x}$.
             % TODO: write this example
         \end{example}
         Sometimes it is possible to use this technique without using integration by parts.
         \begin{example}
-            Consider $I_n=\int\tan^nx\mathrm{d}x$.
+            Consider $I_n=\int\tan^nx\dd{x}$.
             % TODO: write this example
         \end{example}
 
@@ -144,17 +146,17 @@
         \paragraph{}
         Here are some standard antiderivatives.
         \begin{align}
-            \int e^{ax}\mathrm{d}x&=\frac{1}{a}e^{ax}+c\\
-            \int\sin(ax)\mathrm{d}x&=-\frac{1}{a}\cos(ax)+c\\
-            \int\cos(ax)\mathrm{d}x&=\frac{1}{a}\sin(ax)+c\\
-            \int\tan(ax)\mathrm{d}x&=-\frac{1}{a}\ln\abs{\cos(ax)}+c\\
-            \int\sec^2(ax)\mathrm{d}&x=\frac{1}{a}\tan(ax)+c\\
-            \int\frac{1}{\sqrt{a^2-x^2}}dx&=\sin^{-1}\left(\frac{x}{\abs{a}}\right)+c \\
-            \int\frac{-1}{\sqrt{1-x^2}}dx&=\cos^{-1}(x)+c \\
-            \int\frac{1}{a^2+x^2}dx&=\frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+c \\
-            \int\frac{1}{\sqrt{a^2+x^2}}dx&=\sinh^{-1}\left(\frac{x}{\abs{a}}\right)+c \\
-            \int\frac{1}{\sqrt{x^2-1}}dx&=\cosh^{-1}(x)+c \\
-            \int\frac{1}{1-x^2}dx&=\tanh^{-1}(x)+c.
+            \int e^{ax}\dd{x}&=\frac{1}{a}e^{ax}+c\\
+            \int\sin(ax)\dd{x}&=-\frac{1}{a}\cos(ax)+c\\
+            \int\cos(ax)\dd{x}&=\frac{1}{a}\sin(ax)+c\\
+            \int\tan(ax)\dd{x}&=-\frac{1}{a}\ln\abs{\cos(ax)}+c\\
+            \int\sec^2(ax)\dd{x}&=\frac{1}{a}\tan(ax)+c\\
+            \int\frac{1}{\sqrt{a^2-x^2}}\dd{x}&=\sin^{-1}\left(\frac{x}{\abs{a}}\right)+c \\
+            \int\frac{-1}{\sqrt{1-x^2}}\dd{x}&=\cos^{-1}(x)+c \\
+            \int\frac{1}{a^2+x^2}\dd{x}&=\frac{1}{a}\tan^{-1}\left(\frac{x}{a}\right)+c \\
+            \int\frac{1}{\sqrt{a^2+x^2}}\dd{x}&=\sinh^{-1}\left(\frac{x}{\abs{a}}\right)+c \\
+            \int\frac{1}{\sqrt{x^2-1}}\dd{x}&=\cosh^{-1}(x)+c \\
+            \int\frac{1}{1-x^2}\dd{x}&=\tanh^{-1}(x)+c.
         \end{align}
 
 \end{document}

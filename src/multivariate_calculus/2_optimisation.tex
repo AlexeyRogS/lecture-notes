@@ -7,18 +7,18 @@
         First we recap some facts about Taylor series for univariate functions.
         If a single-variable function $f$ is \textbf{analytic}, then it can be represented around a point $x_0$ by its Taylor series:
         \begin{equation}
-            f(x)=\sum_{n=0}^\infty\frac{(x-x_0)^n}{n!}\frac{\mathrm{d}^n f}{\mathrm{d}x^n}=f(x_0)+(x-x_0)\left.\dv{f}{x}\right|_{x_0}+\frac{(x-x_0)^2}{2}\left.\dv[2]{f}{x}\right|_{x_0}+\dots.
+            f(x)=\sum_{n=0}^\infty\frac{(x-x_0)^n}{n!}\dv[n]{f}{x}=f(x_0)+(x-x_0)\left.\dv{f}{x}\right|_{x_0}+\frac{(x-x_0)^2}{2}\left.\dv[2]{f}{x}\right|_{x_0}+\dots.
         \end{equation}
         % TODO: use Lagrange notation instead of Leibniz notation (would make it clearer that derivative is being evaluated at a specific point)
         This power series is valid for any value of $x$ within the \textbf{radius of convergence}, given by
         \begin{equation}
-            \abs{x-x_0}<\lim_{n\to\infty}\abs*{\frac{\frac{1}{n!}\frac{\mathrm{d}^n f}{\mathrm{d}x^n}}{\frac{1}{(n+1)!}\frac{\mathrm{d}^{n+1}f}{\mathrm{d}x^{n+1}}}}=\lim_{n\to\infty}\abs*{(n+1)\frac{\frac{\mathrm{d}^n f}{\mathrm{d}x^n}}{\frac{\mathrm{d}^{n+1}f}{\mathrm{d}x^{n+1}}}}=R.
+            \abs{x-x_0}<\lim_{n\to\infty}\abs*{\frac{\frac{1}{n!}\dv[n]{f}{x}}{\frac{1}{(n+1)!}\dv[n+1]{f}{x}}}=\lim_{n\to\infty}\abs*{(n+1)\frac{\dv[n]{f}{x}}{\dv[n+1]{f}{x}}}=R.
         \end{equation}
         % TODO: add examples of calculating the radius of convergence
         Recall that we can differentiate a power series without changing the radius of convergence.
         If we truncate the power series after a finite numbers of terms $n=k$, then there is an error between the value of the power series and the actual function which is given by
         \begin{equation}
-            R_{k+1}=\frac{(x-x_0)^{k+1}}{(k+1)!}\left.\frac{\mathrm{d}^{k+1}f}{\mathrm{d}x^{k+1}}\right|_c,
+            R_{k+1}=\frac{(x-x_0)^{k+1}}{(k+1)!}\left.\dv[k+1]{f}{x}\right|_c,
         \end{equation} 
         where $c$ is a real number between $x$ and $x_0$.
         This is Taylor's theorem and it allows us to obtain bounds on the size of the error.
@@ -52,7 +52,7 @@
         Then the first and second derivatives with respect to the parameter $t$ is given by
         \begin{align}
             \dv{f}{t}&=\pdv{f}{x}\dv{x}{t}+\pdv{f}{y}\dv{y}{t}=h\pdv{f}{x}+k\pdv{f}{y}\\
-            \dv[2]{f}{t}&=\frac{\mathrm{d}}{\mathrm{d}t}\left(h\pdv{f}{x}+k\pdv{f}{y}\right)=h\left(\pdv[2]{f}{x}h+\frac{\partial^2 f}{\partial x\partial y}k\right)+k\left(\frac{\partial^2 f}{\partial x\partial y}h+\pdv[2]{f}{y}k\right)\\
+            \dv[2]{f}{t}&=\dv{}{t}\left(h\pdv{f}{x}+k\pdv{f}{y}\right)=h\left(\pdv[2]{f}{x}h+\frac{\partial^2 f}{\partial x\partial y}k\right)+k\left(\frac{\partial^2 f}{\partial x\partial y}h+\pdv[2]{f}{y}k\right)\\
             &=h^2\pdv[2]{f}{x}+2kh\frac{\partial^2 f}{\partial x\partial y}+k^2\pdv[2]{f}{y}.
         \end{align}
         Now we can express $f(x(t),y(t))=z(t)$ and expand $z(t)$ in a Taylor series about $t=0$:
@@ -66,7 +66,7 @@
             &\quad+(x-x_0)(y-y_0)\left.\frac{\partial^2 f}{\partial x\partial y}\right|_{(x_0,y_0)}.
         \end{align}
         Hence our Taylor expansion for a function of two variables about a point $(x_0,y_0)$ is
-        \begin{align}\label{eq-taylor-series-2D}
+        \begin{align}\label{eq:taylor-series-2D}
             f(x,y)&=f(x_0,y_0)+(x-x_0)\left.\pdv{f}{x}\right|_{(x_0,y_0)}+(y-y_0)\left.\pdv{f}{y}\right|_{(x_0,y_0)}+\frac{(x-x_0)^2}{2}\left.\pdv[2]{f}{x}\right|_{(x_0,y_0)}\\
             &\quad+\frac{(y-y_0)^2}{2}\left.\pdv[2]{f}{y}\right|_{(x_0,y_0)}+(x-x_0)(y-y_0)\left.\frac{\partial^2 f}{\partial x\partial y}\right|_{(x_0,y_0)}
         \end{align}
@@ -112,7 +112,7 @@
 
         \paragraph{}
         We can use the same technique to investigate stationary points of two-variable functions.
-        Using equation \ref{eq-taylor-series-2D}, if $(x_0,y_0)$ is a stationary point then $f_x(x_0,y_0)=f_y(x_0,y_0)=0$ and
+        Using equation \ref{eq:taylor-series-2D}, if $(x_0,y_0)$ is a stationary point then $f_x(x_0,y_0)=f_y(x_0,y_0)=0$ and
         \begin{align}
             f(x,y)-f(x_0,y_0)&=\frac{(x-x_0)^2}{2}f_{xx}(x_0,y_0)+\frac{(y-y_0)^2}{2}f_{yy}(x_0,y_0)\\
             &\quad+(x-x_0)(y-y_0)f_{xy}(x_0,y_0)+\dots.

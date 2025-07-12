@@ -7,7 +7,7 @@
         Just as a double integral of a function over a region of 2D space represents the volume under a surface, the triple integral of a function over a region of 3D space represents the \textit{hypervolume} under a volume.
         To evaluate a triple integral, we extend the methods that we have developed for evaluating double integrals.
         Instead of integrating over an infinitesimal area element, we integrate over a \textbf{volume element}.
-        In cartesian coordinates, this has the form $\mathrm{d}V=\mathrm{d}x\mathrm{d}y\mathrm{d}z$.
+        In cartesian coordinates, this has the form $\dd{V}=\dd{x}\dd{y}\dd{z}$.
 
         \paragraph{}
         When deciding the limits of integration, we make the same considerations that we do for double integrals.
@@ -18,7 +18,7 @@
             % TODO: include diagram for this
             Just like in 2D, the centre of the region, which is simply the average value of the coordinates, is given by
             \begin{equation}
-                \bar{x}=\frac{\iiint_V x\mathrm{d}V}{\iiint_V \mathrm{d}V},\dots
+                \bar{x}=\frac{\iiint_V x\dd{V}}{\iiint_V \dd{V}},\dots
             \end{equation}
             We only need to find the average $x$ position in this case since the process will be symmetric for $y$ and $z$.
             Choosing $z$ as the outer variable, the limits are 0 and 1.
@@ -31,15 +31,15 @@
             Then similarly, the limits for $x$ are 0 and $1-z-y$.
             Thus, we have
             \begin{align}
-                \int_0^1\int_0^{1-z}\int_0^{1-z-y}x\mathrm{d}x\mathrm{d}y\mathrm{d}z&=\int_0^1\int_0^{1-z}\frac{1}{2}(1-z-y)^2\mathrm{d}y\mathrm{d}z\\
-                &=\int_0^1\left.-\frac{1}{6}(1-z-y)^3\right|_0^{1-z}\mathrm{d}z\\
-                &=\int_0^1\frac{1}{6}(1-z)^3\mathrm{d}z=\left.-\frac{1}{24}(1-z)^4\right|_0^1=\frac{1}{24}.
+                \int_0^1\int_0^{1-z}\int_0^{1-z-y}x\dd{x}\dd{y}\dd{z}&=\int_0^1\int_0^{1-z}\frac{1}{2}(1-z-y)^2\dd{y}\dd{z}\\
+                &=\int_0^1\left.-\frac{1}{6}(1-z-y)^3\right|_0^{1-z}\dd{z}\\
+                &=\int_0^1\frac{1}{6}(1-z)^3\dd{z}=\left.-\frac{1}{24}(1-z)^4\right|_0^1=\frac{1}{24}.
             \end{align}
             The volume of the tetrahedral region is given by
             \begin{align}
-                \int_0^1\int_0^{1-z}\int_0^{1-z-y}\mathrm{d}x\mathrm{d}y\mathrm{d}z&=\int_0^1\int_0^{1-z}(1-z-y)\mathrm{d}y\mathrm{d}z\\
-                &=\int_0^1\left.-\frac{1}{2}(1-z-y)^2\right|_0^{1-z}\mathrm{d}z\\
-                &=\int_0^1\frac{1}{2}(1-z)^2\mathrm{d}z=\left.-\frac{1}{6}(1-z)^3\right|_0^1=\frac{1}{6}.
+                \int_0^1\int_0^{1-z}\int_0^{1-z-y}\dd{x}\dd{y}\dd{z}&=\int_0^1\int_0^{1-z}(1-z-y)\dd{y}\dd{z}\\
+                &=\int_0^1\left.-\frac{1}{2}(1-z-y)^2\right|_0^{1-z}\dd{z}\\
+                &=\int_0^1\frac{1}{2}(1-z)^2\dd{z}=\left.-\frac{1}{6}(1-z)^3\right|_0^1=\frac{1}{6}.
             \end{align}
             Hence
             \begin{equation}
@@ -51,7 +51,7 @@
     \section{Integrals over Volumes Bounded by Curved Surfaces}
         \paragraph{}
         Just like in 2D, when we have a complicated volume to integrate over making a change of variables can sometimes simplify the problem greatly.
-        If a volume is symmetric about an axis, then we can write $\mathrm{d}V=\mathrm{d}A\mathrm{d}z$, where $z$ points along the axis of symmetry and $\mathrm{d}A$ is the differential cross-sectional area.
+        If a volume is symmetric about an axis, then we can write $\dd{V}=\dd{A}\dd{z}$, where $z$ points along the axis of symmetry and $\dd{A}$ is the differential cross-sectional area.
         \begin{example}
             Find the integral of $z$ over an inverted cone of height $h$ and width $2a$.
             % TODO: include diagram for this
@@ -61,13 +61,13 @@
             \end{equation}
             Hence if we take $z$ as the outer variable, then the integral can be written as
             \begin{equation}
-                \iiint_V z\mathrm{d}V=\int_0^h z\iint_{A(z)}\mathrm{d}A(z)\mathrm{d}z,
+                \iiint_V z\dd{V}=\int_0^h z\iint_{A(z)}\dd{A}(z)\dd{z},
             \end{equation}
             where the inner double integral is simply the area of the 2D region $A(z)$, which is $\pi R_\text{edge}(z)^2$.
             Hence
             \begin{align}
-                \int_0^h z\iint_{A(z)}\mathrm{d}A(z)\mathrm{d}z&=\pi a^2\int_0^h z\left(1-\frac{z}{h}\right)^2\mathrm{d}z\\
-                &=\pi a^2h^2\int_0^1 u(1-u)^2\mathrm{d}u\\
+                \int_0^h z\iint_{A(z)}\dd{A}(z)\dd{z}&=\pi a^2\int_0^h z\left(1-\frac{z}{h}\right)^2\dd{z}\\
+                &=\pi a^2h^2\int_0^1 u(1-u)^2\dd{u}\\
                 &=\pi a^2h^2\left[\frac{1}{2}a^2-\frac{2}{3}u^3+\frac{1}{4}u^4\right]_0^1=\frac{\pi a^2h^2}{12}.
             \end{align}
         \end{example}
@@ -75,7 +75,7 @@
         Such volume are bounded by surfaces called \textbf{surfaces of revolution}.
         In this case,
         \begin{equation}
-            I=\pi\int_{z_1}^{z_2}R_\text{edge}(z)^2 f(z)\mathrm{d}z.
+            I=\pi\int_{z_1}^{z_2}R_\text{edge}(z)^2 f(z)\dd{z}.
         \end{equation}
         \begin{example}
             Find the integral of the decaying exponential $e^{-z}$ over the volume bounded by the paraboloid $az=x^2+y^2$ with $a>0$ and $0\leq z\leq b$.
@@ -83,8 +83,8 @@
             Note that in plane polar coordinates we have $R^2=x^2+y^2$, so the radius of the volume is given by $R_\text{edge}(z)=\sqrt{az}$.
             Hence by using the general formula, we get
             \begin{align}
-                \iiint_V e^{-z}\mathrm{d}z&=\pi a\int_0^b ze^{-z}\mathrm{d}z\\
-                &=\pi a\left(\left.-ze^{-z}\right|_0^b+\int_0^b e^{-z}\mathrm{d}z\right)\\
+                \iiint_V e^{-z}\dd{z}&=\pi a\int_0^b ze^{-z}\dd{z}\\
+                &=\pi a\left(\left.-ze^{-z}\right|_0^b+\int_0^b e^{-z}\dd{z}\right)\\
                 &=\pi a\left[-be^{-b}-e^{-b}+1\right]=\pi a[1-(1+b)e^{-b}].
             \end{align}
         \end{example}
@@ -109,15 +109,15 @@
             Calculate the integral of $x^2$ over the inverted cone from before.
             Since a cone is bounded by a surface of revolution, we switch to cylindrical coordinates and choose $z$ as the outer variable.
             \begin{equation}
-                I=\iiint_V x^2\mathrm{d}V=\int_0^h\iint_{A(z)}x^2\mathrm{d}A(z).
+                I=\iiint_V x^2\dd{V}=\int_0^h\iint_{A(z)}x^2\dd{A}(z).
             \end{equation}
-            For the inner double integral, the area element is $R\mathrm{d}R\mathrm{d}\phi$ and the limits are $0\leq R\leq a\left(1-\frac{z}{h}\right)$ and $0\leq\phi\leq2\pi$.
+            For the inner double integral, the area element is $R\dd{r}\dd{\phi}$ and the limits are $0\leq R\leq a\left(1-\frac{z}{h}\right)$ and $0\leq\phi\leq2\pi$.
             Hence,
             \begin{align}
-                I&=\int_0^h\int_0^{2\pi}\int_0^{a\left(1-\frac{z}{h}\right)}R^3\cos^2\phi\mathrm{d}R\mathrm{d}\phi\\
+                I&=\int_0^h\int_0^{2\pi}\int_0^{a\left(1-\frac{z}{h}\right)}R^3\cos^2\phi\dd{r}\dd{\phi}\\
                 &=\int_0^h\int_0^{2\pi}\frac{1}{4}\cos^2\phi a^4\left(1-\frac{z}{h}\right)^4\\
-                &=\int_0^h\frac{\pi a^4}{4}\left(1-\frac{z}{h}\right)^4\mathrm{d}z\\
-                &=\frac{\pi a^4h}{4}\int_0^1(1-u)^4\mathrm{d}u=\frac{\pi a^4h}{4}\left[-\frac{1}{5}(1-u)^5\right]_0^1=\frac{1}{20}\pi a^4h.
+                &=\int_0^h\frac{\pi a^4}{4}\left(1-\frac{z}{h}\right)^4\dd{z}\\
+                &=\frac{\pi a^4h}{4}\int_0^1(1-u)^4\dd{u}=\frac{\pi a^4h}{4}\left[-\frac{1}{5}(1-u)^5\right]_0^1=\frac{1}{20}\pi a^4h.
             \end{align}
         \end{example}
         \begin{example}
@@ -126,9 +126,9 @@
             The equation for the sphere is $x^2+y^2+z^2=a^2$. Note that $x^2+y^2=R^2$, hence $R_\text{edge}=\sqrt{a^2-z^2}$.
             Doing this integral in cylindrical coordinates, the limits for $\phi$ are 0 and $\frac{\pi}{2}$.
             \begin{align}
-                \iiint_V xyz\mathrm{d}V&=\int_0^a z\int_0^\frac{\pi}{2}\int_0^{\sqrt{a^2-z^2}}R^3\cos\phi\sin\phi\mathrm{d}R\mathrm{d}\phi\mathrm{d}z\\
-                &=\int_0^a z\left(\frac{1}{2}\right)\left(\frac{1}{4}\left(\sqrt{a^2-z^2}\right)^4\right)\mathrm{d}z\\
-                &=\frac{1}{8}\int_0^a z(a^2-z^2)^2\mathrm{d}z\\
+                \iiint_V xyz\dd{V}&=\int_0^a z\int_0^\frac{\pi}{2}\int_0^{\sqrt{a^2-z^2}}R^3\cos\phi\sin\phi\dd{r}\dd{\phi}\dd{z}\\
+                &=\int_0^a z\left(\frac{1}{2}\right)\left(\frac{1}{4}\left(\sqrt{a^2-z^2}\right)^4\right)\dd{z}\\
+                &=\frac{1}{8}\int_0^a z(a^2-z^2)^2\dd{z}\\
                 &=\frac{1}{8}\left[\frac{1}{2}a^4z^2-\frac{1}{2}a^2z^4+\frac{1}{6}z^6\right]_0^a=\frac{1}{8}\left(\frac{1}{6}a^6\right)=\frac{1}{48}a^6.
             \end{align}
         \end{example}
@@ -136,13 +136,13 @@
     \section{Integration over Volumes Bounded by Portions of a Sphere}
         \paragraph{}
         If the region of integration is a sphere (or part of one), then changing to spherical coordinates will simplify the problem as the limits of integration will be constant.
-        The volume element in spherical coordinates is given by $\mathrm{d}V=\mathrm{d}r\cdot r\mathrm{d}\theta\cdot R\mathrm{d}\phi=r^2\sin\theta\mathrm{d}r\mathrm{d}\theta\mathrm{d}\phi$.
+        The volume element in spherical coordinates is given by $\dd{V}=\dd{r}\cdot r\dd{\theta}\cdot R\dd{\phi}=r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}$.
         Another case where spherical coordinates are useful is the volume of integration is the entirety of 3D space and the function to be integrated over depends only on the distance from a point (it has spherical symmetry).
         \begin{example}
             Find the integral of the function $e^{-\frac{r}{h}}$ over $\RR^3$.
             \begin{align}
-                \iiint_{\RR^3}e^{-\frac{r}{h}}\mathrm{d}V&=\int_0^{2\pi}\int_0^\pi\int_0^\infty e^{-\frac{r}{h}}r^2\sin\theta\mathrm{d}r\mathrm{d}\theta\mathrm{d}\phi\\
-                &=4\pi\int_0^\infty r^2e^{-\frac{r}{h}}\mathrm{d}r\\
+                \iiint_{\RR^3}e^{-\frac{r}{h}}\dd{V}&=\int_0^{2\pi}\int_0^\pi\int_0^\infty e^{-\frac{r}{h}}r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}\\
+                &=4\pi\int_0^\infty r^2e^{-\frac{r}{h}}\dd{r}\\
                 &=4\pi\left[(-hr^2-2h^2r-2h^3)e^{-\frac{r}{h}}\right]_0^\infty=8\pi h^3.
             \end{align}
         \end{example}
