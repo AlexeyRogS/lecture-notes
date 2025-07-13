@@ -103,7 +103,7 @@
             p(v)=\sqrt{\frac{2}{\pi}}\left(\frac{m}{k_BT}\right)^\frac{3}{2}v^2\exp\left(-\frac{mv^2}{2k_BT}\right),
         \end{equation}
         where $p(v)$ is the probability density of a single particle having speed $v$.
-        Note that this probability distribution is properly normalised so that $\int_{0}^{\infty}p(v)\mathrm{d}v=1$.
+        Note that this probability distribution is properly normalised so that $\int_{0}^{\infty}p(v)\dd{v}=1$.
         At higher temperatures, the tail drops off much less i.e. there are a much wider range of velocities.
         % TODO: include diagram for this
         From this distribution, we can measure some characteristic speeds.
@@ -116,13 +116,13 @@
         The mean speed will be to the right of the most probable speed since the distribution is asymmetric.
         It is found by integrating the distribution multiplied by $v$:
         \begin{align}
-            \bar{v}=\int_{0}^{\infty}vp(v)\mathrm{d}v&=A\int_{0}^{\infty}v^3e^{-av^2}\mathrm{d}v\\
+            \bar{v}=\int_{0}^{\infty}vp(v)\dd{v}&=A\int_{0}^{\infty}v^3e^{-av^2}\dd{v}\\
             &=\frac{1}{2}Aa^{-2}\\
             &=\sqrt{\frac{8k_BT}{\pi m}}.
         \end{align}
         Finally, we can calculate the root mean square speed just to check our answer from before:
         \begin{align}
-            v_\text{rms}=\sqrt{\int_{0}^{\infty}v^2p(v)\mathrm{d}v}&=\sqrt{A\int_{0}^{\infty}v^4e^{-av^2}\mathrm{d}v}\\
+            v_\text{rms}=\sqrt{\int_{0}^{\infty}v^2p(v)\dd{v}}&=\sqrt{A\int_{0}^{\infty}v^4e^{-av^2}\dd{v}\mathrm{d}v}\\
             &=\sqrt{A\frac{3}{8}}\sqrt{\pi}a^{-\frac{5}{2}}\\
             &=\sqrt{\frac{3k_BT}{m}}.
         \end{align}

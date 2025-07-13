@@ -14,7 +14,7 @@
                 \begin{equation}
                     \lim_{x\to c}\frac{f(x)-f(c)}{x-c}\,\text{exists.}
                 \end{equation}
-                If this limit exists, then we denote it $f^\prime(c)$, the \textbf{derivative} of $f$ at $c$. We say $f$ is \textbf{differentiable} if $f$ is differentiable at all $c\in I$. Then $f^\prime:I\to\RR$ is also a function, called the \textbf{derivative} of $f$ (also denoted $\frac{\mathrm{d}f}{\mathrm{d}x}$).
+                If this limit exists, then we denote it $f^\prime(c)$, the \textbf{derivative} of $f$ at $c$. We say $f$ is \textbf{differentiable} if $f$ is differentiable at all $c\in I$. Then $f^\prime:I\to\RR$ is also a function, called the \textbf{derivative} of $f$ (also denoted $\dv{f}{x}$).
             \end{definition}
             % TODO: figure for this
             \begin{example}
@@ -242,8 +242,8 @@
 
     \section{Higher Derivatives}\label{sec:higher-derivatives}
         If the derivative of a differentiable function can be considered a function in its own right, then we can investigate the differentiability of it as well.
-        If the derivative $f^\prime$ of a function $f$ is differentiable, then we can define another function $f^{\prime\prime}$ or $\frac{\mathrm{d}^2f}{\mathrm{d}x^2}$ as the \textbf{second derivative}, and we say that $f$ is \textbf{twice differentiable}.
-        We can carry on this way if the derivatives carry on being differentiable, and once the prime notation becomes unwieldy, we can write the $n$\ts{th} \textbf{derivative} of $f$ as $f^{(n)}$ or $\frac{\mathrm{d}^nf}{\mathrm{d}x^n}$.
+        If the derivative $f^\prime$ of a function $f$ is differentiable, then we can define another function $f^{\prime\prime}$ or $\dv[2]{f}{x}$ as the \textbf{second derivative}, and we say that $f$ is \textbf{twice differentiable}.
+        We can carry on this way if the derivatives carry on being differentiable, and once the prime notation becomes unwieldy, we can write the $n$\ts{th} \textbf{derivative} of $f$ as $f^{(n)}$ or $\dv[n]{f}{x}$.
         
         \subsection{Operations on Derivatives}\label{subsec:operations-on-derivatives}
             \begin{theorem}\label{thm:2nd-diff-func-props}

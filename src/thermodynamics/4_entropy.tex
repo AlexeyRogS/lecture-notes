@@ -30,7 +30,7 @@
 
         \paragraph{}
         Now consider an ideal gas at pressure $P$ and volume $V$ in thermal equilibrium with a reservoir at temperature $T$.
-        If there is a movable frictionless insulating piston on top and the force on the pistonis reduced, the gas expands to volume $V+\mathrm{d}V$.
+        If there is a movable frictionless insulating piston on top and the force on the pistonis reduced, the gas expands to volume $V+\dd{V}$.
         The gas goes work, but its temperature stays constant, so $\Delta U=0$.
         Thus, we have
         \begin{equation}
@@ -48,28 +48,28 @@
         $x$ is proportional to $V$, so $\Omega\propto V^N$.
         Hence we can write
         \begin{equation}
-            \frac{\Omega_{V+\mathrm{d}V}}{\Omega_V}=\left(\frac{V+\mathrm{d}V}{V}\right).
+            \frac{\Omega_{V+\dd{V}}}{\Omega_V}=\left(\frac{V+\dd{V}}{V}\right).
         \end{equation}
-        Since we know from the last chapter that the work done by the gas is $\dbar{W}=P\mathrm{d}V$, we have that
+        Since we know from the last chapter that the work done by the gas is $\dbar{W}=P\dd{V}$, we have that
         \begin{align}
-            \dbar{Q}_R&=P\mathrm{d}V\\
-            &=Nk_BT\frac{\mathrm{d}V}{V}\\
-            \implies\frac{\mathrm{d}{V}}{V}&=\frac{\dbar{Q}_R}{Nk_BT}.
+            \dbar{Q}_R&=P\dd{V}\\
+            &=Nk_BT\frac{\dd{V}}{V}\\
+            \implies\frac{\dd{V}}{V}&=\frac{\dbar{Q}_R}{Nk_BT}.
         \end{align}
         Combining this with the relation above we get
         \begin{equation}
-            \ln\left(\frac{\Omega_{V+\mathrm{d}V}}{\Omega_V}\right)=N\ln\left(1+\frac{\dbar{Q}_R}{Nk_BT}\right).
+            \ln\left(\frac{\Omega_{V+\dd{V}}}{\Omega_V}\right)=N\ln\left(1+\frac{\dbar{Q}_R}{Nk_BT}\right).
         \end{equation}
         Note that $\frac{\dbar{Q}_R}{Nk_BT}<<1$, so we can use the Taylor expansion for $\ln(1+x)\approx x$, and we get
         \begin{equation}
-            k_B\ln\Omega_{V+\mathrm{d}V}-k_B\ln\Omega_V=\frac{\dbar{Q}_R}{T}.
+            k_B\ln\Omega_{V+\dd{V}}-k_B\ln\Omega_V=\frac{\dbar{Q}_R}{T}.
         \end{equation}
 
         \paragraph{}
         What about free expansion?
         As we saw before, no work is done by the gas and there is no heat transfer to the gas, so $\Delta U=0$.
-        The start and end macrostates under an expansion from $V$ to $V+\mathrm{d}V$ are the same for the isothermal reversible expansion considered above.
-        Thus the quantity $k_B\ln\Omega_{V+\mathrm{d}V}-k_B\ln\Omega_V$ must be the same for both processes.
+        The start and end macrostates under an expansion from $V$ to $V+\dd{V}$ are the same for the isothermal reversible expansion considered above.
+        Thus the quantity $k_B\ln\Omega_{V+\dd{V}}-k_B\ln\Omega_V$ must be the same for both processes.
 
         \paragraph{}
         Consider adding a small amount of heat to an ideal gas but keeping the volume constant.
@@ -95,14 +95,14 @@
         \end{align}
         Note that
         \begin{equation}
-            \ln(T+\mathrm{d}T)-\ln T=\frac{\mathrm{d}T}{T},
+            \ln(T+\dd{T})-\ln T=\frac{\dd{T}}{T},
         \end{equation}
         so
         \begin{align}
-            k_B\ln\Omega_{T+\mathrm{d}T}-k_B\ln\Omega_T&=\frac{3N}{2}k_B\frac{\mathrm{d}T}{T}\\
-            k_B\ln\Omega_{T+\mathrm{d}T}-k_B\ln\Omega_T&=\frac{\dbar{Q}_R}{T},
+            k_B\ln\Omega_{T+\dd{T}}-k_B\ln\Omega_T&=\frac{3N}{2}k_B\frac{\dd{T}}{T}\\
+            k_B\ln\Omega_{T+\dd{T}}-k_B\ln\Omega_T&=\frac{\dbar{Q}_R}{T},
         \end{align}
-        where in the last line we have used $\mathrm{d}U=\dbar{Q}_R$.
+        where in the last line we have used $\dd{U}=\dbar{Q}_R$.
 
         \paragraph{}
         What we have shown is that this quantity $k_B\ln\Omega$, which we will call $S$ is a state variable (path independent).
@@ -139,11 +139,11 @@
         \paragraph{}
         Recall that when a gas is heated slowly at constant volume,
         \begin{equation}
-            \mathrm{d}S=\frac{\dbar{Q}_R}{T}.
+            \dd{S}=\frac{\dbar{Q}_R}{T}.
         \end{equation}
         In this case, the work done is 0, so by the first law we have
         \begin{equation}
-            \mathrm{d}S=\frac{\mathrm{d}U}{T},
+            \dd{S}=\frac{\dd{U}}{T},
         \end{equation}
         or alternatively,
         \begin{equation}
@@ -151,12 +151,12 @@
         \end{equation}
         From this we get an alternative definition of the first law:
         \begin{equation}
-            \mathrm{d}{U}=T\mathrm{d}S-P\mathrm{d}V.
+            \dd{U}=T\dd{S}-P\dd{V}.
         \end{equation}
         This is the first law defined completely in terms of state variables.
         To calculate entropy changes for a reversible process, we have
         \begin{equation}
-            \Delta S=\int\mathrm{d}S=\int\frac{\dbar{Q}_R}{T}.
+            \Delta S=\int\dd{S}=\int\frac{\dbar{Q}_R}{T}.
         \end{equation}
         If our process is irreversible, free expansion for example, then we need to identify an equivalent reversible process with the same start and end conditions.
         This works because we know the entropy change will always be the same.
@@ -164,8 +164,8 @@
         \paragraph{}
         At constant volume with no work done, we have
         \begin{align}
-            \mathrm{d}S&=\dv{U}{T}\frac{\mathrm{d}T}{T}\\
-            &=C_V\frac{\mathrm{d}T}{T}\\
+            \dd{S}&=\dv{U}{T}\frac{\dd{T}}{T}\\
+            &=C_V\frac{\dd{T}}{T}\\
             \implies C_V&=T\left(\pdv{S}{T}\right)_V.
         \end{align}
 
