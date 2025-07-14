@@ -1,0 +1,291 @@
+\documentclass[../quantum_mechanics.tex]{subfiles}
+
+\begin{document}
+
+    \section{Introduction to the Quantum Harmonic Oscillator}\label{sec:introduction-to-the-quantum-harmonic-oscillator}
+        The square well has introduced to the key concepts of quantum mechanical systems.
+        However, it is not the most realistic model in the world, although it has some uses.
+        In this chapter, we will study the quantum analogue of the simple harmonic oscillator from classical mechanics, which is a very useful quantum mechanical model.
+
+        \subsection{The Importance of the Harmonic Oscillator}\label{subsec:importance-of-the-harmonic-oscillator}
+            It is not an understatement to say that the simple harmonic oscillator is quite possibly the most important model in classical mechanics.
+            Why is this?
+
+            The prototypical example of a system exhibiting simple harmonic motion is a mass on a spring, for which the force acting on the mass is given by Hooke's law $F=-kx$.
+            This leads to sinusoidal motion with frequency $\omega=\sqrt{\frac{k}{m}}$.
+
+            The reason why Hooke's law works so well in so many scenarios is that it is always a good approximation around a stable equilibrium point.
+            To see why this is, we take the Taylor expansion of a potential energy function (it does not matter what shape it is) about a minimum located at $x_0$,
+            \begin{equation}
+                V(x)=V(x_0)+\dv{V(x_0)}{x}(x-x_0)+\frac{1}{2}\dv[2]{V(x_0)}{x}(x-x_0)^2+\dots.
+            \end{equation}
+            The term with the first derivative vanishes since $x_0$ is a minimum, so for $x$ close to $x_0$, the potential is approximately given by
+            \begin{equation}
+                V(x)\approx V(x_0)+\frac{1}{2}\dv[2]{V(x_0)}{x}(x-x_0)^2.
+            \end{equation}
+            This gives rise to a force with the same form as Hooke's law:
+            \begin{equation}
+                F=-\dv{V(x)}{x}=-\dv[2]{V(x_0)}{x}(x-x_0).
+            \end{equation}
+
+            If we apply this to situations in quantum mechanics, we could approximate the behaviour of, for example, vibrations in diatomic molecules that consist of two bound atoms such as hydrogen chloride.
+            These interatomic forces can be modelled classically using the Lennard-Jones potential, but at the equilibrium point we can approximate the potential as parabolic.
+            This means that the quantum harmonic oscillator will be a good approximation of the ground state and the first few excited states of this system!
+            % TODO: include a diagram of this
+
+        \subsection{Setting up the Quantum Harmonic Oscillator}\label{subsec:setting-up-the-quantum-harmonic-oscillator}
+            For the classical harmonic oscillator, the potential energy is
+            \begin{equation}
+                V(x)=\frac{1}{2}kx^2=\frac{1}{2}m\omega^2x^2.
+            \end{equation}
+            For the quantum harmonic oscillator, we will write the potential energy with the natural frequency $\omega$ because it is more helpful than referring to an abstract ``spring constant'' $k$.
+            
+            In quantum mechanics, our position variable $x$ gets promoted to an operator $\hat{x}$, so the potential energy operator for the quantum harmonic oscillator would be
+            \begin{equation}
+                \hat{V}(x)=\frac{1}{2}m\omega^2\hat{x}^2.
+            \end{equation}
+            The Hamiltonian operator for the system is then
+            \begin{equation}
+                \hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2,
+            \end{equation}
+            which, when written in the position basis, becomes
+            \begin{equation}
+                \hat{H}=-\frac{\hbar^2}{2m}\pdv[2]{}{x}+\frac{1}{2}m\omega^2x^2.
+            \end{equation}
+            The time-dependent Schrodinger equation is therefore
+            \begin{equation}
+                -\frac{\hbar^2}{2m}\pdv[2]{\psi(x,t)}{x}+\frac{1}{2}m\omega^2x^2\psi(x,t)=i\hbar\pdv{\psi(x,t)}{t}.
+            \end{equation}
+            
+            Just like in the last chapter, we can separate the time-dependence out to get the time-dependent Schrodinger equation for the QHO:
+            \begin{equation}\label{eq:qho-tise}
+                -\frac{\hbar^2}{2m}\dv[2]{u(x)}{x}+\frac{1}{2}m\omega^2x^2u(x)=Eu(x),
+            \end{equation}
+            where the full wavefunction is then given by $\psi(x,t)=u(x)e^{-\frac{iEt}{\hbar}}$.
+            % TODO: mention that this is Weber's equation
+
+    \section{Solving the Quantum Harmonic Oscillator}\label{sec:solving-the-quantum-harmonic-oscillator}
+        We will now go through all the stages of solving equation~\ref{eq:qho-tise} to find the energy eigenstates.
+        
+        \subsection{Changing the Dimensionless Quantities}\label{sec:solving-the-quantum-harmonic-oscillator:subsec:changing-to-dimensionless-quantities}
+            The first step is change our variable from $x$ to some dimensionless variable $y$.
+            This will simplify the notation somewhat, which makes it easier to see what is going on.
+
+            We have three physical constants, $\hbar$, $m$, and $\omega$ in equation~\ref{eq:qho-tise}.
+            These have units of \unit{\kilogram\meter\squared\per\second}, \unit{\kilogram}, and \unit{\per\second} respectively.
+            If we combine these in the form $\frac{\hbar}{m\omega}$, this has units of \unit{\meter\squared}.
+            Therefore, if we define
+            \begin{equation}
+                x_0=\sqrt{\frac{\hbar}{m\omega}},
+            \end{equation}
+            this is a natural length scale for the problem, so we can define our new dimensionless length parameter $y$ as
+            \begin{equation}
+                y=\frac{x}{x_0}=\sqrt{\frac{m\omega}{\hbar}}x.
+            \end{equation}
+            Note that $x_0$ has nothing to do with equilibrium position.
+            For a given oscillator, this is a constant.
+            Substituting $x=yx_0$ into equation~\ref{eq:qho-tise} and expanding the definition of $x_0$, we get
+            \begin{align}
+                -\frac{\hbar^2}{2m}\frac{1}{x_0^2}\dv[2]{u}{y}+\frac{1}{2}m\omega^2x_0^2y^2u&=Eu\\
+                -\frac{\hbar^2}{2m}\frac{m\omega}{\hbar}\dv[2]{u}{y}+\frac{1}{2}m\omega^2\frac{\hbar}{m\omega}y^2u&=Eu\\
+                -\frac{\hbar\omega}{2}\left(\dv[2]{u}{y}-y^2u\right)&=Eu\\
+                \dv[2]{u}{y}-y^2u&=-\varepsilon u,\label{eq:qho-tise-dimensionless}
+            \end{align}
+            where we have defined
+            \begin{equation}
+                \varepsilon=\frac{2E}{\hbar\omega},
+            \end{equation}
+            as the dimensionless energy parameter.
+
+        \subsection{Simplifying Using Asymptotic Analysis}\label{sec:solving-the-quantum-harmonic-oscillator:subsec:simplifying-using-asymptotic-analysis}
+            As $y\to\pm\infty$, we can neglect $\varepsilon u$ compared to $y^2u$ as the former will be negligible.
+            Equation~\ref{eq:qho-tise-dimensionless} then becomes
+            \begin{equation}
+                \dv[2]{u}{y}=y^2u.
+            \end{equation}
+            If we guess a solution of the form $Ae^{-\frac{y^2}{2}}$, then we get
+            \begin{align}
+                \dv{}{y}Ae^{-\frac{y^2}{2}}&=-Aye^{-\frac{y^2}{2}}\\
+                \dv[2]{}{y}Ae^{-\frac{y^2}{2}}&=-Ae^{-\frac{y^2}{2}}+Ay^2e^{-\frac{y^2}{2}}\approx Ay^2e^{-\frac{y^2}{2}},
+            \end{align}
+            where in the last part we have neglected terms that are small when $y\to\pm\infty$.
+            Therefore, this function is a solution to the TISE for large $y$.
+            Note that $Be^{+\frac{y^2}{2}}$ is also a valid solution, but is does not have a finite limit as $y\to\pm\infty$ and is therefore not normalisable, so we will throw it out.
+
+            So the behaviour of the full solution to the TISE must be Gaussian for large $y$, but what about the rest of the function?
+            We now suppose that it takes the form
+            \begin{equation}
+                u(y)=h(y)e^{-\frac{y^2}{2}},
+            \end{equation}
+            and substitute this into equation~\ref{eq:qho-tise-dimensionless} to see what we get.
+
+            Taking derivatives, we find
+            \begin{align}
+                \dv{u}{y}&=\dv{h}{y}e^{-\frac{y^2}{2}}-yhe^{-\frac{y^2}{2}}\\
+                \dv[2]{u}{y}&=\dv[2]{h}{y}e^{-\frac{y^2}{2}}-y\dv{h}{y}e^{-\frac{y^2}{2}}-he^{-\frac{y^2}{2}}-y\dv{h}{y}e^{-\frac{y^2}{2}}+y^2he^{-\frac{y^2}{2}}\\
+                &=\dv[2]{h}{y}e^{-\frac{y^2}{2}}-2y\dv{h}{y}e^{-\frac{y^2}{2}}-he^{-\frac{y^2}{2}}+y^2he^{-\frac{y^2}{2}}.
+            \end{align}
+            Substituting these in, we get
+            \begin{align}
+                &\dv[2]{h}{y}e^{-\frac{y^2}{2}}-2y\dv{h}{y}e^{-\frac{y^2}{2}}-he^{-\frac{y^2}{2}}+y^2he^{-\frac{y^2}{2}}+(\varepsilon-y^2)he^{-\frac{y^2}{2}}=0\\
+                &\dv[2]{h}{y}e^{-\frac{y^2}{2}}-2y\dv{h}{y}e^{-\frac{y^2}{2}}+(\varepsilon-1)he^{-\frac{y^2}{2}}=0\\
+                &\dv[2]{h}{y}-2y\dv{h}{y}+(\varepsilon-1)h=0\label{eq:qho-tise-h}.
+            \end{align}
+            If we solve this differential equation for $h(y)$, we get the full solution for equation~\ref{eq:qho-tise-dimensionless}.
+            Luckily, this equation is a well-known equation in mathematics called ``Hermite's Equation'' (with $2\lambda=\varepsilon-1$)!
+            We will now go through the solution via a series method.
+        
+        \subsection{Solving for $h(y)$ via a Series Expansion}\label{sec:solving-the-quantum-harmonic-oscillator:subsec:solving-for-h(y)-via-a-series-expansion}
+            Assuming that $h(y)$ can be written as an infinite polynomial (a power series), we can substitute the following into equation~\ref{eq:qho-tise-h}:
+            \begin{equation}
+                h(y)=\sum_{n=0}^\infty a_ny^n.
+            \end{equation}
+            What we find is a recurrence relation for the coefficients:
+            \begin{equation}
+                \frac{a_{j+2}}{a_j}=\frac{2j+1-\varepsilon}{(j+2)(j+1)}.
+            \end{equation}
+
+            The limiting behaviour for the ratio of the subsequent coefficients is
+            \begin{equation}
+                \lim_{j\to\infty}\frac{a_{j+2}}{a_j}=\frac{2}{j},
+            \end{equation}
+            which diverges more quickly than the Gaussian converges.
+            % TODO: show this in more detail please
+            This means that for the solutions to be valid wavefunctions, meaning for them to be normalisable, the power series must terminate.
+            For each solution with a series terminating at $j=1$, $j=2$, $j=3$, etc., we obtain one valid eigenstate.
+
+            For some $j$ to be the highest non-vanishing coefficient, we must have the numerator of the recurrence relation be zero, i.e.
+            \begin{equation}
+                2j+1-\varepsilon=0.
+            \end{equation}
+            If we substitute back in $\varepsilon=\frac{2E}{\hbar\omega}$, this gives us the energy eigenvalues of the quantum harmonic oscillator:
+            \begin{equation}
+                E_n=\hbar\omega\left(n+\frac{1}{2}\right),
+            \end{equation}
+            where we have replaced $j$ with $n$.
+            Note that in contrast to the infinite square well, the label for the energy eigenvalues starts at 0 instead of 1.
+            This is just a matter of preference for how the equations look and doesn't mean anything physically.
+
+            The ground state energy is $E_0=\frac{1}{2}\hbar\omega$, the first excited state is $E_1=\frac{3}{2}\hbar\omega$, and so on.
+            The energy levels are equally spaced, increasing in single units of $\hbar\omega$.
+
+            So what are the polynomials $h_n(y)$?
+            To determine the coefficients, we need $a_0$ to calculate all the even coefficients and $a_1$ to calculate all the odd coefficients.
+            Both the even and odd coefficients must terminate for the whole series to terminate, but the value of $E$ only allows us to terminate one or the other.
+            Therefore, valid eigenstates will either have $a_0=0$ and only odd powers of $x$ or $a_1=0$ and only even power of $x$ in $h(y)$.
+
+            For the ground state, only $a_0\neq 0$, so $h(y)=a_0$ and the ground state eigenfunction is
+            \begin{equation}
+                u_0(y)=a_0e^{-\frac{y^2}{2}}.
+            \end{equation}
+            For the first excited state, only $a_1\neq 0$, so $h(y)=a_1y$ and the eigenfunction is therefore
+            \begin{equation}
+                u_1(y)=a_1ye^{-\frac{y^2}{2}}.
+            \end{equation}
+            For the second excited state, $a_0$ and $a_2$ are nonzero so $h(y)=a_0+a_2x^2$.
+            The dimensionless energy has the value
+            \begin{equation}
+                \varepsilon=\frac{2E}{\hbar\omega}=\frac{2\times\frac{5}{2}\hbar\omega}{\hbar\omega}=5,
+            \end{equation}
+            so the recurrence relation gives
+            \begin{equation}
+                \frac{a_2}{a_0}=\frac{2(0)+1-5}{(0+2)(0+1)}=-\frac{4}{2}=-2.
+            \end{equation}
+            Hence the eigenfunction takes the form
+            \begin{equation}
+                u_2(y)=a_0(1-2y^2)e^{-\frac{y^2}{2}}.
+            \end{equation}
+            The process carries on like this.
+            The polynomials generated are called \textbf{Hermite polynomials}, and denoted $h_n(y)$.
+            Note that it is conventional to introduce a minus sign to the normalisation constant $a_0$ or $a_1$ so that the leading-order terms in the polynomial have a positive sign.
+            The first few Hermite polynomials are
+            \begin{align}
+                h_0(y)&=1\\
+                h_1(y)&=2y\\
+                h_2(y)&=4y^2-2\\
+                h_3(y)&=8y^3-12y\\
+                h_4(y)&=16y^4-48y^2+12\\
+                h_5(y)&=32y^5-160y^3+120y.
+            \end{align}
+            These coefficients are slightly different to the ones calculated above, but it doesn't matter since we have to normalise the whole wavefunction anyway.
+
+    \section{Energy Eigenstates of the QHO}\label{chap:quantum-harmonic-oscillator:sec:energy-eigenstates}
+        There is one final step to writing out the eigenstates, which is to return to physical units and remove the dimensionless length $y$.
+        Once we do this, the energy eigenstates (including time dependence) have the form:
+        \begin{equation}
+            \psi_n(x,t)=N_nh_n\left(\sqrt{\frac{m\omega}{\hbar}}x\right)e^{-\frac{m\omega}{2\hbar}x^2}e^{-i\omega t\left(n+\frac{1}{2}\right)}.
+        \end{equation}
+        The normalisation constant $N_n$ turns out to be
+        \begin{equation}
+            N_n=\frac{1}{\sqrt{2^nn!}}\sqrt[4]{\frac{m\omega}{\pi\hbar}}.
+        \end{equation}
+        % TODO: check and calculate this
+        
+        The spatial part of the first few eigenstates is
+        \begin{align}
+            u_0(x)&=N_0e^{-\frac{m\omega}{2\hbar}x^2}\\
+            u_1(x)&=N_1xe^{-\frac{m\omega}{2\hbar}x^2}\\
+            u_2(x)&=N_2\left(\frac{2m\omega}{\hbar}x^2-1\right)e^{-\frac{m\omega}{2\hbar}x^2}\\
+            u_3(x)&=N_3\left(8\sqrt{\left(\frac{m\omega}{\hbar}\right)^3}y^3-12\sqrt{\frac{m\omega}{\hbar}}y\right)e^{-\frac{m\omega}{2\hbar}x^2}\\
+        \end{align}
+        % TODO: calculate all normalisations and plot
+            
+        \subsection{Comparison of the Quantum to Classical Harmonic Oscillator}\label{subsec:comparison-of-the-quantum-to-classical-harmonic-oscillator}
+            Here are the probability density of the first few eigenstates, with the classical probability density of a simple harmonic oscillator with energy $E=\hbar\omega\left(n+\frac{1}{2}\right)$ overlayed.
+            We can see that as $n$ increases, the spatial probability density of the oscillator is more spread out, just like how the amplitude of them classical turning points increase for higher energy.
+            The quantum probability density is actually nonzero beyond the classical turning point, so we have some tunnelling, but it decays exponentially in this region.
+            Also note that the wavelength of $\psi_n$ is shortest at the center of the well, which is where a classical particle would be travelling the fastest.
+            % http://tinyurl.com/qu-SHO
+
+        \subsection{Parity}\label{sec:energy-eigenstates:subsec:parity}
+            Recall that we saw in section~\ref{sec:solving-the-quantum-harmonic-oscillator:subsec:solving-for-h(y)-via-a-series-expansion} that the Hermite polynomials are either even or odd.
+            This property is passed on to the eigenstates as well.
+            We can investigate this symmetry by defining an operator which will detect whether a given wavefunction is odd or even.
+            
+            \begin{definition}
+                The \textbf{parity} operator switches $x$ to $-x$, and can be defined by its action on a wavefunction as
+                \begin{equation}
+                    \hat{P}\psi(x,t)=\psi(-x,t).
+                \end{equation}
+            \end{definition}
+
+            What are the possible eigenvalues of parity?
+            If we apply parity twice, we get
+            \begin{equation}
+                \hat{P}^2\psi(x)=\hat{P}\hat{P}\psi(x)=\hat{P}\psi(-x)=\psi(x),
+            \end{equation}
+            so \textit{all} wavefunctions are eigenfunctions of $\hat{P}^2$ with eigenvalue $+1$.
+            Using this fact, we can show that the eigenvalues of $\hat{P}$ are $\pm 1$.
+            Suppose that $\psi(x)$ is an eigenfunction of $\hat{P}$ with eigenvalue $P$, then
+            \begin{equation}
+                \hat{P}^2\psi(x)=\hat{P}P\psi(x)=P^2\psi(x),
+            \end{equation}
+            implies that $P^2=1$, hence $P=\pm 1$.
+            If a wavefunction is an eigenfunction of parity with $\hat{P}\psi(x)=\psi(x)$, then this means that $\psi(x)$ is an even function (symmetric about $x=0$) since this implies $\psi(-x)=\psi(x)$.
+            Likewise, if we have $\hat{P}\psi(x)=-\psi(x)$, then $\psi(x)$ must be odd (antisymmetric about $x=0$) since this implies $\psi(x)=-\psi(-x)$.
+            Not all wavefunctions are even or odd, therefore not all wavefunctions are eigenfunctions of parity.
+
+            Is parity Hermitian?
+            We can test this by calculating the adjoint, note that the integral has to be from $-\infty$ to $\infty$ for the harmonic oscillator.
+            \begin{align}
+                \langle\hat{P}^\dagger\rangle&=\int_{-\infty}^\infty(\hat{P}\psi(x))^\ast\psi(x)\dd{x}\\
+                &=\int_{-\infty}^\infty\psi^\ast(-x)\psi(x)\dd{x},
+            \end{align}
+            now we make a substitution $y=-x$ to get
+            \begin{align}
+                \langle\hat{P}^\dagger\rangle&=-\int_\infty^{-\infty}\psi^\ast(y)\psi(-y)\dd{y}\\
+                &=\int_{-\infty}^\infty\psi^\ast(y)\hat{P}\psi(y)\dd{y}\\
+                &=\langle\hat{P}\rangle,
+            \end{align}
+            hence $\hat{P}$ is Hermitian and therefore it is observable.
+            % TODO: talk about how we can observe parity
+
+        \subsection{Superposition States}\label{chap:quantum-harmonic-oscillator:sec:energy-eigenstates:subsec:superposition-states}
+            We can write superposition states just like we can for the infinite square well, using an expansion of energy eigenfunctions.
+            \begin{equation}
+                \psi(x,t)=\sum_{n=0}^\infty c_nu_n(x)e^{-\frac{iE_nt}{\hbar}}.
+            \end{equation}
+            The only difference between this formula and the one for the infinite square well is that the index $n$ starts from 0 instead of 1.
+            % TODO: talk about coherent states
+
+\end{document}
