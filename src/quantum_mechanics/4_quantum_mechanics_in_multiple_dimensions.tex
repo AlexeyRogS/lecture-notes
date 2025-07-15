@@ -1,0 +1,168 @@
+\documentclass[../quantum_mechanics.tex]{subfiles}
+
+\begin{document}
+
+    \section{The 3D Quantum Harmonic Oscillator}\label{sec:the-3d-quantum-harmonic-oscillator}
+        % TODO: rewrite main principles of this section as solving the infinite square well in 3D
+        Solving the quantum harmonic oscillator in one dimension proved to be quite a slog, but we will see that in more than one dimension it is much easier!
+        This is because we can use the method of separation of variables to break down the problem into copies of the one-dimensional problem, for which we already know the solution.
+
+        \subsection{Schrodinger Equation for the 3D QHO}\label{subsec:schrodinger-equation-for-the-3d-qho}
+            The first thing we need to do is write out the potential energy so that we can write down the Schrodinger equation.
+            The particle is going to be under the influence of a central force $\vec{F}=-\sqrt{\omega/m}\vec{r}$, which gives a potential energy
+            \begin{equation}
+                \hat{V}=\frac{1}{2}m\omega^2\hat{r}^2=\frac{1}{2}m\omega^2(\hat{x}^2+\hat{y}^2+\hat{z}^2).
+            \end{equation}
+            Note that here we are assuming that force grows in magnitude with the same rate in every direction, and therefore the natural frequency $\omega$ is the same in all directions.
+            We call an oscillator like this \textbf{isotropic}.
+
+            For kinetic energy, we can write
+            \begin{equation}
+                \hat{T}=\frac{\hat{p}^2}{2m}=\frac{\hat{\vec{p}}\cdot\hat{\vec{p}}}{2m},
+            \end{equation}
+            where $\hat{\vec{p}}$ is the 3D momentum operator, which components $\hat{\vec{p}}=(\hat{p}_x,\hat{p}_y,\hat{p}_z)$ given by
+            \begin{align}
+                \hat{p}_x&=-i\hbar\pdv{}{x}\\
+                \hat{p}_y&=-i\hbar\pdv{}{y}\\
+                \hat{p}_z&=-i\hbar\pdv{}{z}.
+            \end{align}
+            Therefore, kinetic energy in 3D can be written as
+            \begin{align}
+                \hat{T}&=\frac{1}{2m}(\hat{p}_x^2+\hat{p}_y^2+\hat{p}_z^2)\\
+                &=-\frac{\hbar^2}{2m}\left(\pdv[2]{}{x}+\pdv[2]{}{y}+\pdv[2]{}{z}\right)\\
+                &=-\frac{\hbar^2}{2m}\nabla^2.
+            \end{align}
+            where $\nabla^2$ is the Laplacian operator.
+
+            Putting these together, the time-independent Schrodinger equation in the position basis is
+            \begin{align}
+                \left(-\frac{\hbar^2}{2m}\nabla^2+\frac{1}{2}m\omega^2r^2\right)u(\vec{r})&=Eu(\vec{r})\\
+                \left(-\frac{\hbar^2}{2m}\left(\pdv[2]{}{x}+\pdv[2]{}{y}+\pdv[2]{}{z}\right)+\frac{1}{2}m\omega^2(x^2+y^2+z^2)\right)u(x,y,z)&=Eu(x,y,z).\label{eq:qho-tise-3d}
+            \end{align}
+            The TISE is now a partial differential equation, rather that an ordinary one, as the spatial part of the wavefunction now depends on three variables: $x$, $y$, and $z$.
+            As in the 1D case, the full energy eigenfunctions are obtained by multiplying the spatial part with the temporal part, so we get
+            \begin{equation}
+                \psi(x,y,z,t)=u(x,y,z)e^{-\frac{iEt}{\hbar}},
+            \end{equation}
+            for whatever the energy eigenvalues $E$ happen to be.
+
+        \subsection{Solving the TISE by Separation of Variables}\label{sec:the-3d-quantum-harmonic-oscillator:subsec:solving-the-tise-by-separation-of-variables}
+            Note that the potential energy has the form $V(x,y,z)=V_x(x)+V_y(y)+V_z(z)$.
+            For a classical oscillator with a potential like this, the motion along each dimension is unaffected by the motion along the others.
+            Therefore, we assume that the eigenfunctions are separable, so they take the form
+            \begin{equation}
+                u(x,y,z)=u_x(x)u_y(y)u_z(z).
+            \end{equation}
+            
+            Inserting this form into equation~\ref{eq:qho-tise-3d} gives
+            \begin{equation}
+                -\frac{\hbar^2}{2m}\left(u_yu_z\dv[2]{u}{x}+u_xu_z\dv[2]{u}{y}+u_xu_y\dv[2]{u}{z}\right)+\frac{1}{2}m\omega^2(x^2+y^2+z^2)=E,
+            \end{equation}
+            then dividing by $u_xu_yu_z$ so that each term only depends on a single variable, we get
+            \begin{equation}\label{eq:qho-tise-3d-separated}
+                \begin{split}
+                &\left(-\frac{\hbar^2}{2m}\frac{1}{u_x}\dv[2]{u}{x}+\frac{1}{2}m\omega^2x^2\right)+\left(-\frac{\hbar^2}{2m}\frac{1}{u_y}\dv[2]{u}{y}+\frac{1}{2}m\omega^2y^2\right)\\
+                &+\left(-\frac{\hbar^2}{2m}\frac{1}{u_z}\dv[2]{u}{z}+\frac{1}{2}m\omega^2z^2\right)=E 
+                \end{split}
+            \end{equation}
+
+            Now, the whole left-hand side must equal the total energy $E$, which is a constant.
+            However, $x$, $y$, and $z$ can all be varied completely independently.
+            This means that each term in large parentheses must itself be equal to a constant.
+            These constants represent the energy along each axis, so we will denote them $E_x$, $E_y$, and $E_z$.
+            By equation~\ref{eq:qho-tise-3d-separated}, we have
+            \begin{equation}
+                E=E_x+E_y+E_z.
+            \end{equation}
+            We then have three separate ordinary differential equations:
+            \begin{align}
+                -\frac{\hbar^2}{2m}\dv[2]{u}{x}+\frac{1}{2}m\omega^2x^2u_x&=E_xu_x\\
+                -\frac{\hbar^2}{2m}\dv[2]{u}{y}+\frac{1}{2}m\omega^2y^2u_y&=E_yu_y\\
+                -\frac{\hbar^2}{2m}\dv[2]{u}{z}+\frac{1}{2}m\omega^2z^2u_z&=E_zu_z.
+            \end{align}
+            These are three copies of the 1D quantum harmonic oscillator!
+            We therefore know what the forms of $u_x$, $u_y$, and $u_z$ will be as we have solved for them already.
+            The energy eigenstates of the 3D isotropic quantum harmonic oscillator will then be products of the the one-dimensional eigenstates.
+
+            The solution for each coordinate axis will have its own quantum number to describe which energy level the particle is on along that direction.
+            We call these three labels $n_x$, $n_y$, $n_z$.
+            Then the energy eigenvalues along each axis are
+            \begin{align}
+                E_x&=\hbar\omega\left(n_x+\frac{1}{2}\right)\\
+                E_y&=\hbar\omega\left(n_y+\frac{1}{2}\right)\\
+                E_z&=\hbar\omega\left(n_z+\frac{1}{2}\right),
+            \end{align}
+            just like in the one-dimensional case.
+
+            This means that the total energy has three quantum numbers which label the eigenvalues, which are given by
+            \begin{equation}\label{eq:qho-eigenvalues-3d}
+                E_{n_xn_yn_z}=E_x+E_y+E_z=\hbar\omega\left(n_x+n_y+n_z+\frac{3}{2}\right).
+            \end{equation}
+            Each quantum number starts from zero, and they can all take on any value independent of each other.
+            Clearly we will have some combinations of values which have the same energy, for example $n_x=n_y=n_z=1$, or $n_x=2$, $n_y=1$, and $n_z=0$, or $n_x=3$ and $n_y=n_z=0$!
+            We will discuss what this means in the next section.
+
+    \section{Degeneracy}\label{sec:degeneracy}
+        \subsection{Energy Eigenstates of the 3D Isotropic QHO}\label{subsec:energy-eigenstates-of-the-3d-qho}
+            As derived in the last section, the energy eigenvalues of the 3D isotropic quantum harmonic oscillator are
+            \begin{equation}
+                E_{n_xn_yn_z}=\hbar\omega\left(n_x+n_y+n_z+\frac{3}{2}\right),
+            \end{equation}
+            and the spatial parts of the eigenfunctions are
+            \begin{align}
+                u_{n_xn_yn_z}(x,y,z)&=u_{n_x}(x)u_{n_y}(y)u_{n_z}(z)\\
+                &=N_{n_x}N_{n_y}N_{n_z}h_{n_x}\left(\frac{x}{x_0}\right)h_{n_y}\left(\frac{y}{x_0}\right)h_{n_z}\left(\frac{z}{x_0}\right)e^{-\frac{m\omega}{2\hbar}(x^2+y^2+z^2)},
+            \end{align}
+            where we recall the natural length scale $x_0=\sqrt{\frac{\hbar}{m\omega}}$.
+            % check and calculate this is correct
+            The full time-dependent eigenfunctions will then simply be
+            \begin{align}
+                \psi_{n_xn_yn_z}(x,y,z,t)&=u_{n_xn_yn_z}(x,y,z)e^{-\frac{iE_{n_xn_yn_z}t}{\hbar}}\\
+                &=u_{n_x}(x)e^{-\frac{iE_{n_x}}{\hbar}}u_{n_y}(y)e^{-\frac{iE_{n_y}}{\hbar}}u_{n_z}(z)e^{-\frac{iE_{n_z}}{\hbar}},
+            \end{align}
+            where in the last line we have shown explicitly that the full wavefunction really is the product of the three individual wavefunctions for each direction using $E_{n_xn_yn_z}=E_{n_x}+E_{n_y}+E_{n_z}$.
+
+            The ground state energy for the 3D QHO is found when $n_x=n_y=n_z=0$, which gives
+            \begin{equation}
+                E_{000}=\hbar\omega\left(0+0+0+\frac{3}{2}\right)=\frac{3}{2}\hbar\omega.
+            \end{equation}
+            This is three times as much energy as for a 1D oscillator.
+            % TODO: comment on why
+            Since the quantum numbers $n_x$, $n_y$, and $n_z$ can vary independently, the spacing between energy levels is still $\hbar\omega$ just like in the one-dimensional case.
+
+            The ground state wavefunction looks like
+            \begin{equation}
+                \psi_{000}(x,y,z,t)=N_{000}e^{-\frac{m\omega}{2\hbar}(x^2+y^2+z^2)}e^{-\frac{3}{2}i\omega t}.
+            \end{equation}
+
+            In dirac notation, we denote the eigenstates by $\ket{n_xn_yn_z}$, so the ground state would be denoted $\ket{000}$.
+
+            The first excited state is the state with the second lowest energy, which would be $E=\frac{5}{2}\hbar\omega$ for the 3D isotropic oscillator.
+            However, from equation~\ref{eq:qho-eigenvalues-3d}, we can see that there are several states that have this energy!
+            They are:
+            \begin{equation}
+                E_{100}=E_{010}=E_{001}=\frac{5}{2}\hbar\omega.
+            \end{equation}
+            This was not possible in for the one-dimensional oscillator, but becomes possible now because of the extra degrees of freedom and because of the symmetry of the situation.
+
+            The three eigenstates that have this eigenvalue have three \textit{distinct} wavefunctions, given by
+            \begin{align}
+                \psi_{100}(x,y,z,t)&=N_{100}xe^{-\frac{m\omega}{2\hbar}(x^2+y^2+z^2)}e^{-\frac{5}{2}i\omega t}\\
+                \psi_{010}(x,y,z,t)&=N_{010}ye^{-\frac{m\omega}{2\hbar}(x^2+y^2+z^2)}e^{-\frac{5}{2}i\omega t}\\
+                \psi_{001}(x,y,z,t)&=N_{001}ze^{-\frac{m\omega}{2\hbar}(x^2+y^2+z^2)}e^{-\frac{5}{2}i\omega t}
+            \end{align}
+            These wavefunctions, which correspond to the states $\ket{100}$, $\ket{010}$, and $\ket{001}$, are still orthonormal and so they represent physically distinct states, yet they have the same energy.
+            These are known as \textbf{degenerate states}.
+            \begin{definition}
+                \textbf{Degenerate states} are states that share the same eigenvalue of a Hermitian operator.
+
+                The number of states with the same eigenvalue is called the \textbf{degeneracy} of the eigenvalue.
+                For example, the first excited state of the 3D isotropic quantum harmonic oscillator can correspond to three different eigenstates, so we say that the first excited state has a degeneracy of 3.
+            \end{definition}
+
+        % TODO: calculate degeneracy of each level
+
+        % TODO: include a subsection on visualising
+        % http://tinyurl.com/qu-SHO2
+
+\end{document}
