@@ -1,0 +1,594 @@
+\documentclass[../quantum_mechanics.tex]{subfiles}
+
+\begin{document}
+
+    \section{The Hydrogen Hamiltonian}\label{sec:hydrogen-hamiltonian}
+        We will now look at the major early success story of quantum mechanics, solving for the motion of an electron in a hydrogen atom.
+        Our assumptions are that the nucleus (the proton) is a particle with mass $m_p$ and charge $+e$, and the electron is a particle with mass $m_e$ and charge $-e$.
+        Reality, or rather our latest understanding of the hydrogen atom, is more complex and there are things that we are neglecting here such as coupling between spin and angular momentum, special relativity, and the quantum vacuum.
+
+        \subsection{Setting up the Problem}\label{sec:hydrogen-hamiltonian:subsec:setting-up-the-problem}
+            The electron is bound to the proton by the Coulomb force, which is
+            \begin{equation}
+                \vec{F}=-\frac{e^2}{4\pi\varepsilon_0 r^2}\uvec{r},
+            \end{equation}
+            where $\varepsilon_0$ is the permittivity of free space and $r$ is the distance between the two particles.
+            
+            To find the potential energy, we integrate from $\infty$ to $r$ (we are taking the potential energy to be zero at infinity) to calculate the work done to bring the electron from infinity to $r$, so we get
+            \begin{equation}
+                V(r)=-\int_\infty^r F(r^\prime)\dd{r^\prime}=\int_\infty^r\frac{e^2}{4\pi\varepsilon_0 r^{\prime 2}}\dd{r^\prime}=-\frac{e^2}{4\pi\varepsilon_0 r}.
+            \end{equation}
+            The Coulomb force does positive work to bring the electron closer to the proton, so the potential energy is negative for any finite separation.
+            This means that the energy eigenvalues will also be negative.
+
+            Taking the reduced mass of the electron as
+            \begin{equation}
+                \mu=\frac{m_p m_e}{m_p + m_e},
+            \end{equation}
+            the kinetic energy operator is
+            \begin{equation}
+                \hat{T}=\frac{\hat{p}^2}{2\mu}=-\frac{\hbar^2}{2\mu}\nabla^2.
+            \end{equation}
+
+            Combining these, the time-independent Schrodinger equation for the hydrogen atom electron can be written as
+            \begin{equation}
+                \left(-\frac{\hbar^2}{2\mu}\nabla^2-\frac{e^2}{4\pi\varepsilon_0 r}\right)\psi=E\psi.
+            \end{equation}
+            This potential has spherical symmetry, so we will solve the Schrodinger equation in spherical coordinates.
+            Expanding the Laplacian, the full equation is
+            \begin{equation}\label{eq:hydrogen-tise-expanded}
+                -\frac{\hbar^2}{2\mu}\left[\frac{1}{r^2}\pdv{}{r}\left(r^2\pdv{}{r}\right)+\frac{1}{r^2\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{}{\theta}\right)+\frac{1}{r^2\sin^2\theta}\pdv[2]{}{\phi}\right]\psi-\frac{e^2}{4\pi\varepsilon_0 r}\psi=E\psi
+            \end{equation}
+
+        \subsection{Separating and Solving}\label{sec:hydrogen-hamiltonian:subsec:separating-and-solving}
+            Equation~\ref{eq:hydrogen-tise-expanded} is separable, so we look for solutions of the form
+            \begin{equation}
+                \psi(r,\theta,\phi)=R(r)\Theta(\theta)\Phi(\phi).
+            \end{equation}
+            This gives us the derivatives of the wavefunction:
+            \begin{equation}
+                \pdv{\psi}{r}=\Theta\Phi\dv{R}{r},\quad\pdv{\psi}{\theta}=R\Phi\dv{\Theta}{\theta},\quad\pdv{\psi}{\phi}=R\Theta\dv{\Phi}{\phi}.
+            \end{equation}
+            Now, if we substitute these into equation~\ref{eq:hydrogen-tise-expanded} and rearrange so that we have all terms containing $r$ on one side and all terms containing $\theta$ and $\phi$ on the other, we get
+            \begin{equation}
+                \frac{1}{\Theta\sin\theta}\dv{}{\theta}\left(\sin\theta\dv{\Theta}{\theta}\right)+\frac{1}{\Phi\sin^2\theta}\dv[2]{\Phi}{\phi}=-\frac{1}{R}\dv{}{r}\left(r^2\dv{R}{r}\right)-\frac{2\mu r^2}{\hbar^2}\left(\frac{e^2}{4\pi\varepsilon_0 r}+E\right).
+            \end{equation}
+            Using the method of separation of variables, both sides must be equal to the same constant, which we will set to be $-\lambda^2$.
+            % TODO: motivation for this choice of constant?
+            Thus we have the \textbf{radial equation} (rearranging slightly and cancelling off the minus sign from all terms):
+            \begin{equation}\label{eq:hydrogen-tise-radial}
+                \dv{}{r}\left(r^2\dv{R(r)}{r}\right)+\frac{2\mu r^2}{\hbar^2}\left(\frac{e^2}{4\pi\varepsilon_0 r}+E\right)R(r)=\lambda^2R(r),
+            \end{equation}
+            and the \textbf{angular equation}:
+            \begin{equation}\label{eq:hydrogen-tise-angular}
+                \frac{1}{\Theta(\theta)\sin\theta}\dv{}{\theta}\left(\sin\theta\dv{\Theta(\theta)}{\theta}\right)+\frac{1}{\Phi(\phi)\sin^2\theta}\dv[2]{\Phi(\phi)}{\phi}=-\lambda^2.
+            \end{equation}
+
+            Notice that equation~\ref{eq:hydrogen-tise-angular} is completely independent of the potential energy, and it is also separable.
+            Moving all terms with $\theta$ onto one side and all terms with $\phi$ onto the other, we get
+            \begin{equation}
+                -\lambda^2\sin^2\theta-\frac{\sin\theta}{\Theta(\theta)}\dv{}{\theta}\left(\sin\theta\dv{\Theta(\theta)}{\theta}\right)=\frac{1}{\Phi(\phi)}\dv[2]{\Phi(\phi)}{\phi}.
+            \end{equation}
+            Now setting both sides equal to a separation constant $-m^2$, we get the \textbf{polar equation}:
+            \begin{equation}\label{eq:hydrogen-tise-polar}
+                \sin\theta\dv{}{\theta}\left(\sin\theta\dv{\Theta(\theta)}{\theta}\right)=(m^2-\lambda^2\sin^2\theta)\Theta(\theta),
+            \end{equation}
+            and the \textbf{azimuthal equation}:
+            \begin{equation}\label{eq:hydrogen-tise-azimuthal}
+                \dv[2]{\Phi(\phi)}{\phi}=-m^2\Phi(\phi).
+            \end{equation}
+
+    \section{Solving the Hydrogen Atom}\label{sec:solving-the-hydrogen-atom}
+        To find the eigenfunctions of the hydrogen Hamiltonian, we will have to solve all three equations \ref{eq:hydrogen-tise-radial}, \ref{eq:hydrogen-tise-polar}, and \ref{eq:hydrogen-tise-azimuthal}, find the possible values of the separation constants, and calculate the normalisation coefficients.
+        Let's do the simplest one, the azimuthal equation, first.
+
+        \subsection{The Azimuthal Equation}\label{sec:solving-the-hydrogen-atom:subsec:the-azimuthal-equation}
+            Equation~\ref{eq:hydrogen-tise-azimuthal} is the simple harmonic motion equation, and its solutions are
+            \begin{equation}
+                \Phi(\phi)=Ce^{\pm im\phi}.
+            \end{equation}
+            For this wavefunction to be normalised, we must have
+            \begin{equation}
+                \int_0^{2\pi}\abs{\Phi(\phi)}^2\dd{\phi}=\int_0^{2\pi}\abs{C}^2=1,
+            \end{equation}
+            which implies
+            \begin{equation}
+                C=\frac{1}{\sqrt{2\pi}}.
+            \end{equation}
+            
+            What are the possible values of $m$?
+            Note that $\Phi(\phi)$ must be single-valued, and $\phi$ is a periodic variable, which enforces the following constraint for any value of $\phi$:
+            \begin{align}
+                \Phi(\phi)&=\Phi(\phi+2\pi)\\
+                \frac{1}{\sqrt{2\pi}}e^{im\phi}&=\frac{1}{\sqrt{2\pi}}e^{im(\phi+2\pi)}=\frac{1}{\sqrt{2\pi}}e^{im\phi}e^{2\pi im}.
+            \end{align}
+            This implies that $e^{2\pi im}$ must be $1$, and therefore $m$ must be an integer.
+            The condition that $\Phi(\phi)$ must be periodic is our boundary condition that we are using to constrain $m$.
+            
+            $m$ is called the \textbf{magnetic quantum number}.
+            We will come back to why it is called this later.
+
+            Finally, note that since $\abs{e^{im\phi}}^2=1$ for all values of $\phi$, the final probability density $\abs{\psi}^2$ will be \textit{independent} of $\phi$.
+
+        \subsection{The Polar Equation}\label{sec:solving-the-hydrogen-atom:subsec:the-polar-equation}
+            To solve equation~\ref{eq:hydrogen-tise-polar}, we will first make the substitution $u=\cos\theta$ along with
+            \begin{align}
+                \dv{u}{\theta}&=-\sin\theta\\
+                \dv{}{\theta}&=\dv{u}{\theta}\dv{}{u}=-\sin\theta\dv{}{u}=-\sqrt{1-u^2}\dv{}{u},
+            \end{align}
+            where in the last equality we have used the identity $\sin\theta=\sqrt{1-\cos^2\theta}$ over the range $0\leq\theta\leq\pi$.
+            With these substitutions, 
+            \begin{equation}
+                \sin\theta\dv{}{\theta}=\sqrt{1-u^2}\left(-\sqrt{1-u^2}\dv{}{u}\right)=(u^2-1)\dv{}{u},
+            \end{equation}
+            so equation~\ref{eq:hydrogen-tise-polar} becomes
+            \begin{gather}
+                (u^2-1)\dv{}{u}\left((u^2-1)\dv{\Theta}{u}\right)=(m^2-\lambda^2(1-u^2))\Theta\\
+                \dv{}{u}\left((1-u^2)\dv{\Theta}{u}\right)=\left(\frac{m^2}{1-u^2}-\lambda^2\right)\Theta,
+            \end{gather}
+            where in the last line we have divided by $-(u^2-1)$.
+
+            This is a well-known differential equation called the \textbf{general Legendre equation}.
+            Its solutions are the \textbf{associated Legendre polynomials} $P_\ell^m(u)$, where $\ell$ is a non-negative integer related to the separation constant $\lambda^2$ by
+            \begin{equation}
+                \lambda^2=\ell(\ell+1).
+            \end{equation}
+            This can be derived by a power series solution.
+            % TODO: derive this by a power series solution
+            
+            The form of the associated Legendre polynomials can be given in terms of the (regular) \textbf{Legendre polynomials} $P_\ell(u)$, which are solutions of the (regular) \textbf{Legendre equation}, which is the general Legendre equation with $m=0$.
+            The Legendre polynomials can be defined by \textbf{Rodrigues' formula}:
+            \begin{equation}
+                P_\ell(u)=\frac{1}{2^\ell \ell!}\dv[\ell]{}{u}[(u^2-1)^\ell].
+            \end{equation}
+            From this, the associated Legendre polynomials are given by
+            \begin{align}
+                P_\ell^m(u)&=(-1)^m(1-u^2)^{\frac{m}{2}}\dv[m]{P_\ell(u)}{u}\\
+                &=\frac{(-1)^m}{2^\ell \ell!}(1-u^2)^{\frac{m}{2}}\dv[\ell+m]{}{u}[(u^2-1)^\ell].
+            \end{align}
+            % TODO: derive this?
+            This formula implies that we have the constraint
+            \begin{equation}
+                0\leq\abs{m}\leq\ell,
+            \end{equation}
+            which is also something that falls out from the series solution.
+
+            $\ell$ is called the \textbf{orbital angular momentum quantum number}, and again we will discuss its name later.
+
+        \subsection{Spherical Harmonics}\label{sec:solving-the-hydrogen-atom:subsec:spherical-harmonics}
+            Taking the solutions to the azimuthal and polar equations together, the solutions to the whole angular part of the TISE for the hydrogen atom (equation~\ref{eq:hydrogen-tise-angular}) are
+            \begin{equation}
+                Y_\ell^m(\theta,\phi)=Ne^{im\phi}P_\ell^m(\cos\theta),
+            \end{equation}
+            where $N$ is a normalisation constant such that
+            \begin{equation}
+                \int_0^{2\pi}\int_0^\pi\abs{Y_\ell^m(\theta,\phi)}^2\sin\theta\dd{\theta}\dd{\phi}=1.
+            \end{equation}
+            $N$ turns out to be given by
+            \begin{equation}
+                N=\sqrt{\frac{(2\ell+1)(\ell-m)!}{4\pi(\ell+m)!}}.
+            \end{equation}
+            % TODO: derive and check this
+
+            The allowed values of the orbital angular momentum and magnetic quantum numbers are
+            \begin{align}
+                \ell&=0,1,2,3,\dots\\
+                m&=-\ell,-\ell+1,\dots,-1,0,1,\dots,\ell-1,\ell.
+            \end{align}
+
+            Since the angular equation~\ref{eq:hydrogen-tise-angular} did not depend on the potential at all, the angular part of the TISE would be the same for \textit{any} problem where the potential energy only depended on radial distance.
+            For this reason, the functions $Y_\ell^m(\theta,\phi)$ are quite important and they appear in any problem with spherical symmetry.
+            They are known as the \textbf{spherical harmonics} and are to the surface of a sphere what sine and cosine are to a circle, i.e. they form a \textbf{complete and orthonormal basis} for functions defined on the surface of the unit sphere.
+
+            The first few (normalised) spherical harmonics are given by
+            \begin{align}
+                Y_0^0&=\frac{1}{\sqrt{4\pi}}\\
+                Y_1^0&=\sqrt{\frac{3}{4\pi}}\cos\theta,\quad Y_1^1=-\sqrt{\frac{3}{8\pi}}\sin\theta e^{i\phi}\\
+                Y_2^0&=\sqrt{\frac{5}{16\pi}}(3\cos^2\theta-1),\quad Y_2^1=-\sqrt{\frac{15}{8\pi}}\sin\theta\cos\theta e^{i\phi},\quad Y_2^2=\sqrt{\frac{15}{32\pi}}\sin^2\theta e^{2i\phi},
+            \end{align}
+            % TODO: construct these from the series solution (maybe in the differential equations notes)
+            
+            the spherical harmonics with negative $m$ are given by
+            \begin{equation}
+                Y_\ell^{-m}(\theta,\phi)=(-1)^m (Y_\ell^m(\theta,\phi))^\ast.
+            \end{equation}
+            % TODO: prove this
+
+            The magnitude squared of the spherical harmonics gives the probability distribution of finding the electron in a certain direction from the proton.
+            If we plot the magnitude squared, looking at the distance of the surface from the origin in a given direction gives us an idea of the likelihood of finding an electron in that direction (the larger the magnitude squared, the higher the probability).
+            % TODO: include some plots
+            As we mentioned before, since the azimuthal part of the spherical harmonics is always just a complex exponential, we have that $\abs{Y_\ell^m}^2$ does not depend on $\phi$, which means that all the spherical harmonics are rotationally symmetric about the $z$-axis.
+            Furthermore, we have that
+            \begin{equation}
+                \abs{Y_\ell^m}^2=\abs{Y_\ell^{-m}}^2,
+            \end{equation}
+            we will come back to the implications of this later.
+
+            The state with $\ell=m=0$ is the only one that is spherically symmetric, the electron is equally likely to be found in any direction.
+            For $\ell>0$ we see that when $m=0$ the electron is most likely to be found on the $z$-axis, whereas for $\abs{m}=\ell$ it is most likely to be found in the $x$-$y$ plane.
+
+        \subsection{The Radial Equation}\label{sec:solving-the-hydrogen-atom:subsec:the-radial-equation}
+            Finally we turn to solving the radial equation~\ref{eq:hydrogen-tise-radial}.
+            Substituting the separation constant that we found earlier $\lambda^2=\ell(\ell+1)$, we have
+            \begin{equation}\label{eq:hydrogen-tise-radial-ell}
+                \dv{}{r}\left(r^2\dv{R(r)}{r}\right)+\frac{2\mu r^2}{\hbar^2}\left(\frac{e^2}{4\pi\varepsilon_0 r}+E\right)R(r)=\ell(\ell+1)R(r),
+            \end{equation}
+
+            % TODO: solve this explicitly
+            The solutions can then be derived explicitly using a series solution to be
+            \begin{equation}
+                R_{n\ell}(r)=\sum_{p=0}^{n-\ell-1}c_p\left(\frac{r}{a_0}\right)^{p+\ell}e^{-\frac{r}{na_0}},
+            \end{equation}
+            where the $c_p$'s are coefficients, $n$ is a \textit{positive} integer, and $a_0$ is the \textbf{Bohr radius}, given by
+            \begin{equation}
+                a_0=\frac{4\pi\varepsilon_0\hbar^2}{\mu e^2}.
+            \end{equation}
+            Technically this is the \textit{reduced} Bohr radius as the official definition has the electron mass instead of the reduced mass, but the difference is incredibly small since the electron is so much less massive than the proton.
+
+            The series solution imposes another constraint that
+            \begin{equation}
+                \ell\leq n-1.
+            \end{equation}
+
+            We find that the energy eigenvalues only depend on $n$, and are given by
+            \begin{equation}
+                E_n=-\frac{\hbar^2}{2\mu a_0^2n^2}=-\frac{R_H}{n^2},
+            \end{equation}
+            where we have defined the \textbf{Rydberg constant} $R_H=\frac{\hbar^2}{2\mu a_0^2}$.
+            Because $E_n$ depends only on the quantum number $n$, it is called the \textbf{principal quantum number}.
+
+            These radial parts of the wavefunction should be normalised using the condition
+            \begin{equation}
+                \int_0^\infty\abs{R_{n\ell}}^2r^2\dd{r}=1,
+            \end{equation}
+            and the first few eigenfunctions are:
+            % TODO: derive these
+            \begin{align}
+                R_{10}(r)&=N_{10}e^{-\frac{r}{a_0}}\\
+                R_{20}(r)&=N_{20}\left(1-\frac{r}{2a_0}\right)e^{-\frac{r}{2a_0}},\quad R_{21}(r)=N_{21}\frac{r}{a_0}e^{-\frac{r}{2a_0}},
+            \end{align}
+            where $N_{n\ell}$ are the normalisation constants.
+
+            Multiplying the radial part with the spherical harmonics found earlier, we finally get the whole spatial part of the energy eigenstates as
+            \begin{equation}
+                u_{n\ell m}(r,\theta,\phi)=R_{n\ell}(r)Y_\ell^m(\theta,\phi).
+            \end{equation}
+            The spherical harmonics have no units, so since the magnitude squared of the whole spatial part should have units of \unit{\per\meter\cubed} (or ``probability per unit volume'') the magnitude squared of the radial part $\abs{R_{n\ell}}^2$ also has units of \unit{\per\meter\cubed}.
+            This means that the radial part $R_{n\ell}$ itself has units of \unit{\meter\tothe{-\frac{3}{2}}}.
+
+        \subsection{Radial Probability Density}\label{sec:solving-the-hydrogen-atom:subsec:radial-probability-density}
+            The radial part of the wavefunction gives information about the likelihood of finding the electron a certain distance from the proton.
+            Let's calculate the probability of finding the electron in a spherical shell between $r_1$ and $r_2$.
+            \begin{align}
+                P(r_1<r<r_2)&=\int_0^{2\pi}\int_0^\pi\int_{r_1}^{r_2}\abs{u(r,\theta,\phi)}^2r^2\sin\theta\dd{r}\dd{\theta}\dd{\phi}\\
+                &=\int_0^{2\pi}\int_0^\pi\abs{Y_\ell^m(\theta,\phi)}^2\sin\theta\dd{\theta}\dd{\phi}\int_{r_1}^{r_2}\abs{R_{n\ell}(r)}^2r^2\dd{r}\\
+                &=\int_{r_1}^{r_2}\abs{R_{n\ell}(r)}^2r^2\dd{r},
+            \end{align}
+            where in the last line we have used the fact that the spherical harmonics are normalised.
+            The integrand $\abs{R_{n\ell}}^2r^2$ has units of \unit{\per\meter} or ``probability per radial metre'', and so we must interpret this quantity as the \textbf{radial probability density}, not the radial part of the wavefunction.
+            This means that the most likely radial distance to find the electron from the proton is given by the maximum of $\abs{R_{n\ell}}^2r^2$, \textit{not} $\abs{R_{n\ell}}^2$.
+            \begin{example}
+                What is the most likely distance to find the electron in the ground state $R_{10}$?
+
+                The radial part of the wavefunction is given by $R_{10}(r)=N_{10}e^{-\frac{r}{a_0}}$, so the most likely distance is given by the maximum of
+                \begin{equation}
+                    \abs{R_{10}(r)}^2r^2=\abs{N_{10}}^2e^{-\frac{2r}{a_0}}r^2.
+                \end{equation}
+                We can find this by differentiating and setting the derivative to zero:
+                \begin{align}
+                    \dv{}{r}\left(\abs{N_{10}}^2e^{-\frac{2r}{a_0}}r^2\right)=2\abs{N_{10}}^2re^{-\frac{2r}{a_0}}-\frac{2\abs{N_{10}}^2}{a_0}r^2e^{-\frac{2r}{a_0}}&=0\\
+                    \implies 2r\left(1-\frac{r}{a_0}\right)&=0.
+                \end{align}
+                One solution to this equation is $r=0$ which is a minimum, and the other solution is $r=a_0$, which must be the maximum.
+
+                % TODO: include a plot
+                This justifies the common statement that the ``size'' of a hydrogen atom is $a_0$.
+            \end{example}
+
+            In general, the radial probability density has $n-\ell$ maxima.
+            For a fixed $n$, the radius of the first maximum increases with increasing $\ell$.
+            The maximum values also \textit{increase} with increasing radius, which makes sense because there is more volume, so we are more likely to find the electron there.
+            % TODO: include plots 
+
+    \section{Energy Eigenstates of Hydrogen}\label{chap:the-hydrogen-atom:sec:energy-eigenstates}
+        \subsection{Summary of the Eigenstates of Hydrogen}\label{sec:energy-eigenstates:subsec:summary-of-eigenstates}
+            Putting the radial and angular parts of the eigenfunctions together, the whole spatial part of the electron eigenstate is
+            \begin{align}
+                u_{n\ell m}(r,\theta,\phi)&=R_{n\ell}(r)Y_\ell^m(\theta,\phi)\\
+                &=N_{n\ell}\sqrt{\frac{(2\ell+1)(\ell-m)!}{4\pi(\ell+m)!}}\sum_{p=0}^{n-\ell-1}c_p\left(\frac{r}{a_0}\right)^{p+\ell}e^{-\frac{r}{na_0}}e^{im\phi}P_\ell^m(\cos\theta),
+            \end{align}
+            where $P_\ell^m$ are the associated Legendre polynomials and the principal, orbital angular momentum, and magnetic quantum numbers take the following values:
+            \begin{align}
+                n&=1,2,3,\dots\\
+                \ell&=0,1,2,\dots,n-1\\
+                m&=-\ell,-\ell+1,\dots,-1,0,1,\dots,\ell-1,\ell.
+            \end{align} 
+            These eigenstates have energy eigenvalues given by
+            \begin{equation}
+                E_n=-\frac{\hbar^2}{2\mu a_0^2n^2}=-\frac{R_H}{n^2},
+            \end{equation}
+            where the (reduced) Bohr radius is given by
+            \begin{equation}
+                a_0=\frac{4\pi\varepsilon_0\hbar^2}{\mu e^2}.
+            \end{equation}
+            % TODO: show that they are energy eigenstates with that eigenvalue
+
+            The \textbf{ground state energy} $E_1$ is given by
+            \begin{equation}
+                E_1=-R_H=-\qty{13.6}{\electronvolt}.
+            \end{equation}
+            This is the \textbf{ionisation energy} of hydrogen, i.e. the energy required to completely remove the electron from the influence of the proton.
+
+            Since the energy only depends on the principal quantum number, and for $n>1$ we can have multiple values of $\ell$ and $m$, we have a set of \textbf{degenerate} states for all energy levels above the ground state.
+            For example, for the first excited state $n=2$, we can have $\ell=0,1$ and $m=-1,0,1$, which leads to four degenerate states
+            \begin{equation}
+                u_{200},\,u_{210},\,u_{211},\,\text{and }u_{21\,-1},
+            \end{equation}
+            all with energy $E_2=-\frac{R_H}{4}$.
+
+            For a given $\ell$, there are $2\ell+1$ possible values of $m$.
+            Thus in can be shown that for a given $n$, the total degeneracy is
+            \begin{equation}
+                \sum_{\ell=0}^{n-1}(2\ell+1)=n^2.
+            \end{equation}
+            % TODO: prove this by induction
+
+            % TODO: include a diagram of energy levels
+            % TODO: talk about different spectral series for the principal quantum number
+            % TODO: Rydberg formula, talk about Balmer formula as an exersize
+
+            The greater the principal quantum number $n$ for a given $\ell$, the greater the expectation value of radial distance $\langle r\rangle$ i.e. the more spread out the probability distribution is.
+            For a given $n$, $\ell$ determines the number of polar nodes, which are the nodes as you go from $\theta=0$ to $\theta=\pi$.
+
+            In Dirac notation, the eigenstates are labelled
+            \begin{equation}
+                \ket{n\ell m},
+            \end{equation}
+            and they have the orthonormality condition
+            \begin{equation}
+                \braket{n\ell m}{n^\prime\ell^\prime m^\prime}=\delta_{nn^\prime}\delta_{\ell\ell^\prime}\delta_{mm^\prime}.
+            \end{equation}
+
+        \subsection{Spectroscopic Notation}\label{sec:energy-eigenstates:subsec:spectroscopic-notation}
+            For historical reasons, scientists working in atomic and nuclear physics adopt a notation for the eigenstates of hydrogen based on different series of spectral lines that were observed before electron orbitals were fully understood.
+            Early spectroscopists denoted the first four values of $\ell$ by the letters $\text{s}$, $\text{p}$, $\text{d}$, and $\text{f}$, standing for ``sharp'', ``principal'', ``diffuse'', and ``fundamental'' respectively.
+            These names do not mean anything in the quantum mechanical description, but the notation remains widespread.
+
+            % TODO: talk about how different spectral lines for different values for l were observed if they are degenerate
+            In this notation the ground state is called the $1\text{s}$ orbital, the first excited states are called the $2\text{s}$ and the $2\text{p}$ orbitals, the second excited states would be the $3\text{s}$, $3\text{p}$, and $3\text{d}$ orbitals, and so on.
+            After $\ell=4$, the letters continue in alphabetical order from $\text{g}$ for $\ell=5$ onwards, missing out the letter ``j''.
+
+            Note that a $\text{p}$ orbital stands for three eigenstates with $m=-1,0,1$, a $\text{d}$ orbital stands for five eigenstates with $m=-2,-1,0,1,2$, etc.
+
+        \subsection{Hydrogen-like Atoms and Ions}\label{sec:energy-eigenstates:subsec:hydrogen-like-atoms}
+            We have solved for the motion of a single electron in a hydrogen atom, but what about electrons in other atoms?
+
+            We can apply the same model that we have developed so far to ions with a single electron such as $\text{He}^+$ (a helium nucleus with a single electron), $\text{Li}^{2+}$ (a lithium nucleus with a single electron), $\text{Be}^{3+}$ (a beryllium nucleus with a single electron), etc.
+            In this case, the charge of the nucleus is now $Ze$, where $Z$ is the atomic number, or the number of protons in the nucleus, equal to $2$ for helium, $3$ for lithium, $4$ for beryllium, etc.
+            The potential energy then increases in magnitude by a factor of $Z$, and the energy levels shift down by a factor of $Z^2$.
+            % TODO: put more details here
+            \begin{equation}
+                E_n=-\frac{Z^2R_H}{n^2}.
+            \end{equation}
+            The electrons are more strongly bound.
+            Note that for our description of hydrogen, the reduced mass would also change slightly.
+            % TODO: talk about size of the ions
+
+            What about atoms with more than one electron?
+            The dynamics get complicated, since we have to consider interactions between the electrons.
+            For this reason, studying multi-electron atoms in general is out of the scope of these notes.
+            What we \textit{can} begin to look at are the \textbf{alkali metals} (lithium, sodium, potassium, rubidium, etc.).
+            These atoms are neutral, so they have $Z$ protons in the nucleus and $Z$ electrons in orbitals, but $Z-1$ of these electrons are tightly bound in closed shells.
+            This means that the most weakly bound outermost electron (the \textbf{valence electron}) is in its own shell.
+            It is not really possible to say anything about the form of the eigenstates of the valence electron using the framework we have created so far, but by considering two extreme scenarios we can make claims about its energy levels.
+
+            If the valence electron is at very large radii, much greater than the inner electrons, then the nuclear charge would be ``screened'' such that the valence electron would only notice an effective charge of $+e$ coming from the centre.
+            This would mean that the energy levels would be roughly the same as for hydrogen.
+            In the other extreme case, where the valence electron is at very small radii, inside the inner electron shells, then it would see the full unscreened nuclear charge $+Ze$.
+            Therefore the actual potential energy curve must lie somewhere between these two extremes.
+            % TODO: include diagram of this
+
+            Spectroscopy experiments also show that for alkali metals the degeneracy between the different values of $\ell$ is broken.
+            For a given $n$, the smaller values of $\ell$ have slightly lower energy.
+            Why is this?
+            If we assume that the shape of the radial probability density will be roughly the same for the valence electron as for the hydrogen atom electron, then recall that for a given $n$ the radius of the first maxima increases for increasing $\ell$.
+            This means that for smaller $\ell$ (for a given $n$), the electron is more likely to be found closer in to the nucleus and therefore further into the unscreened regime where the Coulomb force is stronger.
+            This results in these states being slightly more tightly bound and therefore being slightly lower in energy.
+
+            Quantitatively, we can write the energy levels for the valence electron in an alkali metal as
+            \begin{equation}
+                E_{n\ell}=-\frac{R_H}{(n-\Delta(n,\ell))^2},
+            \end{equation}
+            where $\Delta(n,\ell)$ is the \textbf{quantum defect}, an empirically determined quantity which denotes how far the energy levels are shifted down compared to hydrogen.
+            Notice that we label the energy levels $E_{n\ell}$ now instead of just $E_n$ because the states with different $\ell$ are now no longer degenerate.
+
+            For example, the $3\text{s}$ orbital in sodium has $\Delta(3,0)=1.37$, the $3\text{p}$ orbital has $\Delta(3,1)=0.88$, and the $3\text{d}$ orbital has $\Delta(3,2)=0.01$, meaning this state has almost the same energy as $E_3$ for hydrogen.
+
+            % TODO: talk about maximum number of electrons in each shell
+
+    \section{Angular Momentum}\label{sec:angular-momentum}
+        \subsection{Quantum Mechanical Definition of Angular Momentum}\label{sec:angular-momentum:subsec:quantum-mechanical-definition}
+            Classically, angular momentum is defined as
+            \begin{equation}
+                \vec{L}=\vec{r}\times\vec{p}.
+            \end{equation}
+            It is a useful quantity to study in classical mechanics because it is conserved for any particle under the influence of a central force such that the Coulomb force.
+            We should therefore expect that angular momentum is conserved for the electron in hydrogen as well, so let's investigate.
+
+            Quantum mechanically, we define angular momentum in the same way it is defined classically, except using (vector) \textit{operators} instead of just vectors.
+            \begin{definition}
+                The \textbf{angular momentum operator} is defined in terms of the position and momentum operators as
+                \begin{equation}
+                    \hat{\vec{L}}=\hat{\vec{r}}\times\hat{\vec{p}}.
+                \end{equation}
+
+                Writing out the cross product, we see that the components of the angular momentum operator are
+                \begin{align}
+                    \hat{L}_x&=\hat{y}\hat{p}_z-\hat{z}\hat{p}_y\\
+                    \hat{L}_y&=\hat{z}\hat{p}_x-\hat{x}\hat{p}_z\\
+                    \hat{L}_z&=\hat{x}\hat{p}_y-\hat{y}\hat{p}_x.
+                \end{align}
+            \end{definition}
+            Recall that $\hat{r}_i\hat{p}_j$ commute as long as $i\neq j$, so the ordering does not matter when writing out the components.
+            However, given that we cannot know all components of $\hat{\vec{r}}$ and $\hat{\vec{p}}$ simultaneously due to the uncertainty principle, it seems like we will not be able to know all components of angular momentum simultaneously either.
+
+        \subsection{Commutation Relations}\label{sec:angular-momentum:subsec:commutation-relations}
+            Let us test this out by finding some commutators.
+            Note that as a general tip for calculating commutators, it is almost always useful to use standard commutator identities to simplify as much as possible before expanding the commutators themselves.
+            For example, when finding the commutator of $\hat{L}_x$ and $\hat{L}_y$, we use the fact that
+            \begin{equation}
+                [\hat{A},\hat{B}+\hat{C}]=[\hat{A},\hat{B}]+[\hat{A},\hat{C}],
+            \end{equation}
+            to write
+            \begin{align}
+                [\hat{L}_x,\hat{L}_y]&=[\hat{y}\hat{p}_z-\hat{z}\hat{p}_y,\hat{z}\hat{p}_x-\hat{x}\hat{p}_z]\\
+                &=[\hat{y}\hat{p}_z,\hat{z}\hat{p}_x]+[\hat{z}\hat{p}_y,\hat{x}\hat{p}_z]-[\hat{y}\hat{p}_z,\hat{x}\hat{p}_z]-[\hat{z}\hat{p}_y,\hat{z}\hat{p}_x].
+            \end{align}
+            The last two terms contain only things that all commute with each other, so they must be zero.
+            Similarly, in the first two terms involving $y$ and $x$ commute with everything else in their commutators, so we can pull them out as constants:
+            \begin{equation}
+                [\hat{L}_x,\hat{L}_y]=\hat{y}[\hat{p}_z,\hat{z}]\hat{p}_x+\hat{p}_y[\hat{z},\hat{p}_z]\hat{x}.
+            \end{equation}
+            Now we can insert the value of the commutator that we know, $[\hat{z},\hat{p}_z]=i\hbar$, to get
+            \begin{align}
+                [\hat{L}_x,\hat{L}_y]&=-i\hbar\hat{y}\hat{p}_x+i\hbar\hat{p}_y\hat{x}\\
+                &=i\hbar(\hat{x}\hat{p}_y-\hat{y}\hat{p}_x)\\
+                &=i\hbar\hat{L}_z.
+            \end{align}
+            Hence the $x$ and $y$ components of angular momentum do not commute and we cannot know them both simultaneously.
+            Calculating the commutators between the other components, we find the same outcome.
+            The values are
+            \begin{align}
+                [\hat{L}_y,\hat{L}_z]&=i\hbar\hat{L}_x\\
+                [\hat{L}_z,\hat{L}_x]&=i\hbar\hat{L}_y.
+            \end{align}
+            Notice that these commutators follow a cyclic pattern under the exchange of labels $x$, $y$, and $z$.
+            This is just a consequence of the definition of $\vec{\hat{L}}$ as a cross product.
+
+            What properties can be know about the electron's angular momentum simultaneously?
+            What about one of the components and the total magnitude?
+            To try this, we calculate the commutator of one of the components with the operator $\hat{L}^2$, which is defined as
+            \begin{equation}
+                \hat{L}^2=\hat{\vec{L}}\cdot\hat{\vec{L}}=\hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2.
+            \end{equation}
+            So the commutator between $\hat{L}_x$ and $\hat{L}^2$ is
+            \begin{align}
+                [\hat{L}_x,\hat{L}^2]&=[\hat{L}_x,\hat{L}_x^2+\hat{L}_y^2+\hat{L}_z^2]\\
+                &=[\hat{L}_x,\hat{L}_x\hat{L}_x]+[\hat{L}_x,\hat{L}_y\hat{L}_y]+[\hat{L}_x,\hat{L}_z\hat{L}_z].
+            \end{align}
+            The first term will be zero, and using the identity
+            \begin{equation}
+                [\hat{A},\hat{B}\hat{C}]=\hat{B}[\hat{A},\hat{C}]+[\hat{A},\hat{B}]\hat{C},
+            \end{equation}
+            the second and third terms can be written as
+            \begin{align}
+                [\hat{L}_x,\hat{L}^2]&=\hat{L}_y[\hat{L}_x,\hat{L}_y]+[\hat{L}_x,\hat{L}_y]\hat{L}_y+\hat{L}_z[\hat{L}_x,\hat{L}_z]+[\hat{L}_x,\hat{L}_z]\hat{L}_z\\
+                &=\hat{L}_y(i\hbar\hat{L}_z)+i\hbar\hat{L}_z\hat{L}_y+\hat{L}_z(-i\hbar\hat{L}_y)+(-i\hbar\hat{L}_y)\hat{L}_z\\
+                &=i\hbar(\hat{L}_y\hat{L}_z+\hat{L}_z\hat{L}_y-\hat{L}_z\hat{L}_y-\hat{L}_y\hat{L}_z)\\
+                &=0.
+            \end{align}
+            Hence we can know the total magnitude of angular momentum and one of its components simultaneously, as one can show similarly that
+            \begin{align}
+                [\hat{L}_y,\hat{L}^2]&=0\\
+                [\hat{L}_z,\hat{L}^2]&=0.
+            \end{align}
+
+            It can also be shown that $\hat{L}^2$ and the components of angular momentum also all commute with the Hamiltonian:
+            \begin{align}
+                [\hat{H},\hat{L}^2]=[\hat{H},\hat{L}_x]=[\hat{H},\hat{L}_y]=[\hat{H},\hat{L}_z]=0,
+            \end{align}
+            meaning that the eigenfunctions of $\hat{H}$ are also simultaneously eigenfunctions of $\hat{L}^2$ and \textit{one} component of angular momentum, conventionally taken to be $\hat{L}_z$.
+            This is a \textbf{maximal set of mutually commuting operators}, a set of operators where each one commutes with all others.
+
+        \subsection{Eigenvalues of Angular Momentum}\label{sec:angular-momentum:subsec:eigenvalues}
+            Let us find the eigenvalues of the $\hat{L}^2$ and $\hat{L}_z$ operators.
+            Given that angular momentum is a quantity relating to rotations, it is reasonable to assume that it will act on the angular part of the wavefunction.
+            For this reason, we will write out the angular momentum operators explicitly in terms of angular position coordinates.
+
+            In the position basis, we can write
+            \begin{equation}
+                \hat{L}_x=\hat{y}\hat{p}_z-\hat{z}\hat{p}_y=-i\hbar\left(y\pdv{}{z}-z\pdv{}{y}\right),
+            \end{equation}
+            with similar results for $\hat{L}_y$ and $\hat{L}_z$.
+            Using these and the chain rule, e.g.
+            \begin{equation}
+                \pdv{}{z}=\pdv{}{r}\pdv{r}{z}+\pdv{}{\theta}\pdv{\theta}{z}+\pdv{}{\phi}\pdv{\phi}{z},
+            \end{equation}
+            we get the following results for angular momentum operators in the position basis:
+            \begin{align}
+                \hat{L}_x&=i\hbar\left(\sin\phi\pdv{}{\theta}+\cot\theta\cos\phi\pdv{}{\phi}\right)\\
+                \hat{L}_y&=i\hbar\left(-\cos\phi\pdv{}{\theta}+\cot\theta\sin\phi\pdv{}{\phi}\right)\\
+                \hat{L}_z&=-i\hbar\pdv{}{\phi}\\
+                \hat{L}^2&=-\hbar^2\left(\frac{1}{\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{}{\theta}\right)+\frac{1}{\sin^2\theta}\pdv[2]{}{\phi}\right).\label{eq:angular-momentum-magnitude-position-basis}
+            \end{align}
+            So we were right to assume that no derivatives of $r$ would appear in these operators.
+
+            Notice that equation~\ref{eq:angular-momentum-magnitude-position-basis} looks very similar to the angular equation for the hydrogen atom electron (equation~\ref{eq:hydrogen-tise-angular}).
+            In fact, if we take the angular equation and multiply it by $-\hbar^2Y_\ell^m(\theta,\phi)$, bearing in mind that $Y_\ell^m(\theta,\phi)=\Theta(\theta)\Phi(\phi)$ since the spherical harmonics were the solution to the angular equation, we get
+            \begin{equation}
+                -\hbar^2\left(\frac{1}{\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{}{\theta}\right)+\frac{1}{\sin^2\theta}\pdv[2]{}{\phi}\right)Y_\ell^m(\theta,\phi)=\hbar^2\ell(\ell+1)Y_\ell^m(\theta,\phi),
+            \end{equation}
+            where we have substituted $\lambda^2$ for $\ell(\ell+1)$.
+            This looks like an eigenvalue equation, and in fact it looks exactly like what we would get if we acted $\hat{L}^2$ on a wavefunction:
+            \begin{equation}
+                \hat{L}^2\psi=-\hbar^2\left(\frac{1}{\sin\theta}\pdv{}{\theta}\left(\sin\theta\pdv{}{\theta}\right)+\frac{1}{\sin^2\theta}\pdv[2]{}{\phi}\right)\psi,
+            \end{equation}
+            therefore the eigenfunctions of $\hat{L}^2$ must be the spherical harmonics, which makes sense since they are the angular part of the eigenfunctions of the hydrogen Hamiltonian, and their eigenvalues are $\hbar^2\ell(\ell+1)$.
+            \begin{equation}
+                \hat{L}^2Y_\ell^m(\theta,\phi)=\hbar^2\ell(\ell+1)Y_\ell^m(\theta,\phi).
+            \end{equation}
+
+            This finally explains why $\ell$ is called the orbital angular momentum quantum number, as it determines the magnitude of the angular momemtum of an electron in a certain orbital.
+            An electron in a state with a given $\ell$ will have orbital angular momentum with magnitude
+            \begin{equation}
+                L=\hbar\sqrt{\ell(\ell+1)}.
+            \end{equation}
+            This implies that the angular momentum of the electron is forced to be \textit{quantised}.
+            Depending on the total energy the electron has, which is determined by the principal quantum number $n$, the angular momentum can only have a magnitude given by the eigenvalue equation above for the allowed values of $\ell$.
+            For example, if an electron is sitting in the {2\ts{nd}} excited state ($n=3$), then the magnitude of its angular momentum can either be $\hbar$, $\sqrt{2}\hbar$, or $\sqrt{6}\hbar$.
+
+            The spherical harmonics are also eigenfunctions of $\hat{L}_z$, which we can calculate explicitly by writing
+            \begin{align}
+                \hat{L}_zY_\ell^m(\theta,\phi)&=-i\hbar\pdv{}{\phi}Y_\ell^m(\theta,\phi)\\
+                &=-i\hbar\frac{\Theta(\theta)}{\sqrt{2\pi}}\pdv{}{\phi}\left(e^{im\phi}\right)\\
+                &=m\hbar\frac{\Theta(\theta)}{\sqrt{2\pi}}e^{im\phi}\\
+                &=m\hbar Y_\ell^m(\theta,\phi).
+            \end{align}
+            So the allowed values of the $z$-component of angular momentum are
+            \begin{equation}
+                L_z=m\hbar.
+            \end{equation}
+            If we consider again the electron in the {2\ts{nd}} excited state and suppose it has $\ell=2$, the allowed values for the $z$-component of its angular momentum are $-2\hbar$, $-\hbar$, $0$, $\hbar$, and $2\hbar$.
+            So the magnetic quantum number $m$ determines the alignment of the electron's angular momentum with the $z$-axis, the larger the magnitude of $m$, the more aligned they are.
+            Note that $L_z$ can never be as large as the total magnitude of angular momentum, i.e. the angular momentum can never point exactly along $z$.
+            This is because if $L_z=L$, then we know that $L_x=L_y=0$, which is not allowed!
+            However, as $\ell$ gets larger, the maximum allowed value of $L_z$ gets closer and closer to $L$.
+
+        \subsection{Visualising the Allowed Values of Angular Momentum}\label{sec:angular-momentum:subsec:visualising-the-allowed-values}
+            We can visualise the allowed values of angular momentum for a given state in the 3D space of angular momentum with $L_x$, $L_y$, and $L_z$ each on their own axis.
+            The angular momentum vector has a fixed length determined by $\ell$, and the different allowed values of $m$ sweep out cones around the $z$-axis since the values of $L_x$ and $L_y$ are unknown.
+            % TODO: include diagram of this
+
+            Note that this does \textit{not} imply that $L_x$ and $L_y$ are allowed to take on a continuous set of values, they are also quantised.
+            % TODO: describe how are they quantised
+            The cones are simply a visual aid which denotes that the values of $L_x$ and $L_y$ are unknown.
+
+            The angle between $\vec{L}$ and the $z$-axis in this diagram can be written
+            \begin{equation}
+                \cos\theta=\frac{L_z}{L}=\frac{m\hbar}{\hbar\sqrt{\ell(\ell+1)}}=\frac{m}{\sqrt{\ell(\ell+1)}}.
+            \end{equation}
+            The minimal angle occurs for maximal $L_z$, which occurs when $\abs{m}=\ell$.
+            \begin{equation}
+                \cos\theta_\text{min}=\frac{\ell}{\sqrt{\ell(\ell+1)}}<1.
+            \end{equation}
+            This implies that
+            \begin{equation}
+                \theta_\text{min}>0,
+            \end{equation}
+            as we have seen, however as $\ell\to\infty$, we get
+            \begin{equation}
+                \cos\theta_\text{min}\to 1\quad\implies\theta_\text{min}\to 0,
+            \end{equation}
+            which is what we expect from classical physics.
+
+\end{document}
