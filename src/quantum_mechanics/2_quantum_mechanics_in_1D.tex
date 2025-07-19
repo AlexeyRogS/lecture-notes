@@ -1,0 +1,317 @@
+\documentclass[../quantum_mechanics.tex]{subfiles}
+
+\begin{document}
+
+    \section{The Free Particle}\label{sec:free-particle}
+        Now that we have done plenty of exposition, we will finally study at what the motion of a quantum particle actually looks like.
+        We will first analyse the simplest case, which is that of a free particle.
+
+        \subsection{Solving the Schrodinger Equation}\label{sec:free-particle:subsec:solving-the-schrodinger-equation}
+            A free particle is under the influence of no forces, so the potential $V(x)$ is zero.
+            The TISE (equation~\ref{eq:tise}) then becomes
+            \begin{gather}\label{eq:free-tise}
+                -\frac{\hbar^2}{2m}\dv[2]{u(x)}{x}=Eu(x)\\
+                \implies\dv[2]{u(x)}{x}=-\frac{2mE}{\hbar^2}u(x).
+            \end{gather}
+            For a free particle, the total energy $E$ is just the kinetic energy $\frac{p^2}{2m}$, so inputting this gives
+            \begin{equation}
+                \dv[2]{u(x)}{x}=-\frac{p^2}{\hbar^2}u(x)=-k^2u(x),
+            \end{equation}
+            where we have defined $k^2=\frac{p^2}{\hbar^2}$.
+
+            This happens to be an equation we know very well, the equation for simple harmonic motion!
+            This implies that the spatial part of the energy eigenfunctions take the form
+            \begin{equation}
+                u(x)=Ae^{ikx}.
+            \end{equation}
+            These solutions are known as \textbf{plane wave} solutions.
+            Plane waves of the form $e^{-ikx}$ are also solutions, but we will ignore them for now and bring them back later.
+
+            As we learned in section~\ref{subsec:solving-the-temporal-part-of-the-schrodinger-equation}, the temporal part of the solution is given by equation~\ref{eq:tdse-solution}.
+            We multiply this with the spatial part to get the full energy eigenfunctions for the free particle:
+            \begin{equation}
+                \psi(x,t)=Ae^{\frac{i}{\hbar}(px-Et)}=Ae^{i(kx-\omega t)},
+            \end{equation}
+            where we have introduced the frequency $\omega$ of the temporal oscillation given by
+            \begin{equation}\label{eq:einstein-relation}
+                E=\hbar\omega.
+            \end{equation}
+            This is the well-known Einstein relation.
+            % TODO: introduce the Einstein relation when talking about temporal solution to the Schrodinger equation?
+            $k$ represents the wavenumber of the oscillation in space, and is related to the particle's momentum by
+            \begin{equation}\label{eq:de-broglie-relation}
+                p=\hbar k.
+            \end{equation}
+            This is known as the de Broglie relation.
+
+            Having already derived two seminal results of early quantum mechanics, you might think we are not doing too bad, however there are a couple of problems with these energy eigenfunctions.
+
+            The first issue is that these plane waves clearly do not represent the most general solution to the Schrodinger equation.
+            In principle, we should be able to choose any valid initial wavefunction $\psi(x,0)$, which need not even be separable, and then the Schrodinger equation determines its evolution.
+            However, for a plane wave, we can only specify $A$ which is its amplitude (and initial phase if $A$ is complex) at $t=0$.
+
+            The second issue is more serious, and it is that the plane wave solutions are \textit{unnormalisable}.
+            To see this, we can calculate the integral of probability density over all space:
+            \begin{equation}
+                \int_{-\infty}^\infty\abs{\psi(x,t)}^2\dd{x}=\int_{-\infty}^\infty\abs{Ae^{i(kx-\omega t)}}^2\dd{x}=\abs{A}^2\int_{-\infty}^\infty\dd{x}=\infty.
+            \end{equation}
+            % TODO: show this more rigorously
+            This happens because plane waves do not decay as $x\to\pm\infty$.
+            Physically, this happens because plane waves have \textit{definite} momentum and therefore, by the uncertainty principle, their position is \textit{completely undefined}.
+            This reflects the fact that if we calculate the probability density for a plane wave, it is \textit{constant} everywhere in space!
+            \begin{equation}
+                \abs{\psi(x,t)}^2=\abs{Ae^{i(kx-\omega t)}}^2=\abs{A}^2.
+            \end{equation}
+
+            The fact that plane waves have definite momentum is elucidated by the fact that they are eigenstates of the momentum operator.
+            This means that if we measure the momentum of a plane wave, we get back a definite result.
+            \begin{equation}
+                \hat{p}\psi(x,t)=-i\hbar A\pdv{}{x}e^{\frac{i}{\hbar}(px-Et)}=-i\hbar A\frac{ip}{\hbar}e^{\frac{i}{\hbar}(px-Et)}=p\psi(x,t).
+            \end{equation}
+            To be clear, the fact that momentum eigenstates are unnormalisable means that they are \textbf{unphysical}, a free particle can \textit{never} be found in a stationary state.
+
+            Luckily both of these problems, the lack and generality and the unnormalisability, can be solved using the linearity of the Schrodinger equation, i.e. using the superposition principle.
+
+        \subsection{Wave Packets}\label{sec:free-particle:subsec:wave-packets}
+            For a wavefunction to be normalisable, it must be localised to some extent in space.
+            Using the principle of superposition, we can add together momentum eigenstates to get a normalisable wavefunction.
+            This will have the consequence of the particle no longer having definite momentum, but that means that position will no longer be undefined.
+
+            Let us consider a superposition of two momentum eigenstates with wavenumbers $k_1$ and $k_2$.
+            Note that wavenumber $k$ is basically synonymous with momentum in quantum mechanics, as the two are related by the de Broglie relation~\ref{eq:de-broglie-relation}.
+            \begin{equation}
+                \psi(x,t)=Ae^{i(k_1x-\omega_1t)}+Be^{i(k_2x-\omega_2t)}.
+            \end{equation}
+            The temporal frequencies $\omega_1$ and $\omega_2$ are given by the Einstein relation~\ref{eq:einstein-relation}, so $\omega_1=\frac{E_1}{\hbar}=\frac{p_1^2}{2m\hbar}$ and similarly for $\omega_2$.
+            In the same way that wavenumber is synonymous with momentum, temporal frequency is synonymous with energy.
+            This solution is no longer separable, i.e. it is not of the form $\psi(x,t)=u(t)e^{i\omega t}$.
+            Now, the probability density is not uniform over all space and this wavefunction is no longer a momentum eigenstate, however this wavefunction is still not normalisable as it is periodic.
+            % TODO: show that it is no longer a momentum eigenstate
+            
+            In fact, we can add together infinitely many plane waves, and this would still be the case.
+            \begin{equation}
+                \psi(x,t)=\sum_n A_ne^{i(k_nx-\omega_nt)}.
+            \end{equation}
+            Notice that this is a \textbf{Fourier series}, which are always periodic over the domain $(-\infty,\infty)$.
+            % TODO: https://phet.colorado.edu/en/simulations/fourier-making-waves/about
+
+            To fully eliminate the periodicity, we need to make the range of wavenumbers continuous, and so the sum becomes an integral.
+            \begin{equation}
+                \psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty A(k)e^{i(kx-\omega t)}\dd{k}.
+            \end{equation}
+            The intuition for why this is the case is that as the spacing between wavenumbers decreases, the spacing between maxima in the Fourier sum increases.
+            So in the limit that the wavenumber spacing goes to zero and becomes continuous, the spacing between maxima goes to infinity.
+            Notice that the amplitudes and initial phases of the plane waves $A_n$ have become a function of the wavenumber $A(k)$.
+            This definition of $\psi(x,t)$ in terms of an integral of plane waves is known as a \textbf{wave packet}.
+            The factor $1/\sqrt{2\pi}$ in front of the integral is placed there because it happens to be the correct normalisation (so the integral of $\abs{\psi(x,t)}^2$ over all space is one), which will be explained in a moment.
+            
+            If we absorb the time evolution into $A(k)$ so it becomes $A(k,t)=A(k)e^{-i\omega t}$, then this wavefunction becomes
+            \begin{equation}\label{eq:psi-fourier}
+                \psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty A(k,t)e^{ikx}\dd{k},
+            \end{equation}
+            which shows that the wavefunction $\psi(x,t)$ is the \textbf{Fourier transform} of $A(k,t)$.
+            Likewise, we can say that the amplitude $A(k,t)$ is the Fourier transform of the wavefunction $\psi(x,t)$:
+            \begin{equation}\label{eq:psi-fourier-inverse}
+                A(k,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty\psi(x,t)e^{-ikx}\dd{x}.
+            \end{equation}
+            
+            There is a result from mathematics called \textbf{Parseval's theorem}, which says that if $\psi(x,t)$ is normalised, then its Fourier transform $A(k,t)$ is normalised, and vice versa.
+            This means that if we enforce
+            \begin{equation}
+                \int_{-\infty}^\infty\abs{A(k,t)}^2\dd{k}=1,
+            \end{equation}
+            then $\psi(x,t)$ will be a correctly normalised wavefunction.
+            % TODO: write an example proving this
+
+            Note that we can also define this Fourier integral in terms of momentum using the de Broglie relation~\ref{eq:de-broglie-relation}:
+            \begin{align}
+                \psi(x,t)&=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty\phi(p,t)e^{\frac{i}{\hbar}px}\dd{p}\label{eq:psi-fourier-momentum}\\
+                \phi(p,t)&=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty\psi(x,t)e^{-\frac{i}{\hbar}px}\dd{x},\label{eq:psi-fourier-momentum-inverse}
+            \end{align}
+            where the normalisation factor has changed to $1/\sqrt{2\pi\hbar}$.
+            % TODO: note that this comes from the scaling property of the Dirac delta
+
+            We can interpret $\abs{A(k,t)}^2$ as the \textbf{wavenumber probability density} and $\abs{\phi(p,t)}^2$ as the \textbf{momentum probability density}, i.e. $\abs{\phi(p,t)}^2\dd{p}$ represents the probability that a measurement of a particle's momentum will be in the range $(p,p+\dd{p})$ at time $t$.
+
+            In summary, we have found that by choosing an appropriate range of momenta and amplitudes for their corresponding plane waves (namely a $\phi(p,t)$ or $A(k,t)$ which is normalisable), we can construct a normalised wave packet $\psi(x,t)$.
+            This all followed from the principle of superposition.
+            Furthermore, note that the Fourier transform relations above hold for \textit{any} system in quantum mechanics, not just the free particle.
+            However, there is an important caveat that $E=p^2/2m$ does not hold in general, only for the free particle.
+
+        % TODO: write general result for an arbitrary initial wavefunction
+
+    \section{Gaussian Wave Packets}\label{sec:gaussian-wave-packets}
+        We will now look at a concrete example of a valid state for a free particle constructed as a wave packet and study its properties to get a general idea of how wavefunctions behave in quantum mechanics.
+        As discussed in section~\ref{sec:free-particle:subsec:wave-packets} above, this begins with choosing a set of wavenumbers and their amplitudes $A(k)$.
+        We will start with constructing the wave packet at $t=0$, then we will discuss how it evolves with time.
+
+        \subsection{Choosing an Amplitude $A(k)$}\label{subsec:choosing-an-amplitude}
+            It would be nice to choose $A(k)$ to be a Gaussian shape, because then the Fourier transform $\psi(x,0)$ will also be a Gaussian, and Gaussians are nice to work with.
+        
+            Recall that a Gaussian function has the general form
+            \begin{equation}
+                \frac{a}{\sqrt{\pi}}e^{-\frac{(x-c)^2}{b^2}},
+            \end{equation}
+            which is a bell curve centered at $c$, with height $\frac{a}{\sqrt{\pi}}$, width $b$, and area $ab$.
+            This means if we want our wavenumber probability density to be a Gaussian centered at some wavenumber $k_0$ with width $\Delta k$, we should choose $a=\frac{1}{\Delta k}$ so that it will be normalised.
+            \begin{equation}\label{eq:gaussian-wavenumber-probability-density}
+                A(k)^2=\frac{1}{\Delta k\sqrt{\pi}}e^{-\frac{(k-k_0)^2}{\Delta k^2}}.
+            \end{equation}
+            The width $\Delta k$ is the distance from the centre at $e^{-1}$ of the maximum height.
+            It is a rough measure of the range of wavenumbers of the plane waves that make up the wave packet.
+            Note that $\Delta p=\hbar\Delta k$, so the width $\Delta k$ is directly related to the uncertainty in momentum.
+            % TODO: include plots!
+
+        \subsection{Calculating the Wavefunction $\psi(x,0)$}\label{subsec:calculating-the-wavefunction}
+            Using the Fourier transform given by equation~\ref{eq:psi-fourier}, the wavefunction at $t=0$ is given by
+            \begin{align}
+                \psi(x,0)&=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty A(k)e^{ikx}\dd{x}\\
+                &=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^\infty e^{-\frac{(k-k_0)^2}{2\Delta k^2}}e^{ikx}\dd{k},
+            \end{align}
+            where in the second line we inserted the square root of equation~\ref{eq:gaussian-wavenumber-probability-density} for $A(k)$.
+            To integrate this we use the standard result for Gaussian integrals:
+            \begin{equation}\label{eq:gaussian-standard-integral}
+                \int_{-\infty}^\infty e^{-\alpha q^2}e^{-\beta q}\dd{q}=\sqrt{\frac{\pi}{\alpha}}e^{\frac{\beta^2}{4\alpha}}.
+            \end{equation}
+            With $q=k-k_0$ (so $\dd{q}=\dd{k}$), we get
+            \begin{align}
+                \psi(x,0)&=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^\infty e^{-\frac{q^2}{2\Delta k^2}}e^{i(q+k_0)x}\dd{q}\\
+                &=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}e^{ik_0x}\int_{-\infty}^\infty e^{-\frac{q^2}{2\Delta k^2}}e^{iqx}\dd{q}.
+            \end{align}
+            We can now use the standard integral with $\alpha=\frac{1}{2\Delta k^2}$ and $\beta=-ix$ to get
+            \begin{align}
+                \psi(x,0)&=\frac{\sqrt{2\pi\Delta k^2}}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}e^{ik_0x}e^{-\frac{\Delta k^2x^2}{2}}\\
+                &=\sqrt{\frac{\Delta k}{\sqrt{\pi}}}e^{ik_0x}e^{-\frac{x^2\Delta k^2}{2}}.
+            \end{align}
+
+            What is the probability density at $t=0$?
+            We can calculate this directly by taking the magnitude square:
+            \begin{equation}
+                \abs{\psi(x,0)}^2=\frac{\Delta k}{\sqrt{\pi}}e^{-x^2\Delta k^2}=\frac{\Delta k}{\sqrt{\pi}}e^{-\frac{x^2}{\Delta x_0^2}},
+            \end{equation}
+            where we have defined $\Delta x_0=\frac{1}{\Delta k}$ as the width at $t=0$.
+            So the probability density is also a Gaussian, this time centered at $x=0$, with width $\Delta x_0=\frac{1}{\Delta k}$.
+            % TODO: check that it is normalised
+
+            Notice that $\Delta x_0\Delta k=1$, which can be expressed in term of momentum via the de Broglie relation:
+            \begin{equation}
+                \Delta x_0\Delta p=\hbar.
+            \end{equation}
+            This is a manifestation of the uncertainty principle.
+            The factor of $1$ arises from our definition of width of a Gaussian.
+            Notice that the width of the position probability density is inversely proportional to the width of the wavenumber probability density.
+            This reflects the fact that due to the uncertainty principle, if the uncertainty in momentum $\Delta k$ is small then the uncertainty in position $\Delta x_0$ must be wide and vice versa.
+
+        \subsection{Time-evolution of the Gaussian Wave Packet}\label{subsec:time-evolution-of-the-gaussian-wave-packet}
+            As we found in section~\ref{sec:free-particle:subsec:wave-packets}, the time evolution of our wave packet is given by
+            \begin{equation}
+                \psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^\infty A(k)e^{i(kx-\omega t)}\dd{k}.
+            \end{equation}
+            To evaluate this, we need to keep in mind that $\omega$ is a function of $k$ through the Einstein and de Broglie relations.
+            Specifically, for a free particle only we have $E=\frac{p^2}{2m}$, which gives
+            \begin{align}
+                E&=\frac{p^2}{2m}\\
+                \hbar\omega&=\frac{\hbar^2k^2}{2m}\\
+                \implies\omega(k)&=\frac{\hbar k^2}{2m}.\label{eq:gaussian-dispersion}
+            \end{align}
+            This is our \textbf{dispersion relation} for matter waves.
+            Note that the $\omega$ is not proportional to $k$, so matter waves are \textbf{dispersive}.
+            This means that different wavelength will travel at different speeds.
+            The phase velocity is given by
+            \begin{equation}
+                v_\text{ph}(k)=\frac{\omega}{k}=\frac{\hbar k}{2m},
+            \end{equation}
+            so shorter wavelengths (larger $k$) travel faster.
+            This makes physical sense as large $k$ corresponds to large momentum.
+            Meanwhile the group velocity for a wave packet centered at $k_0$ is
+            \begin{equation}
+                v_\text{gr}(k)=\left.\dv{\omega}{k}\right|_{k_0}=\frac{\hbar k_0}{2m}=2v_\text{ph}(k_0).
+            \end{equation}
+            This is the speed that the envelope of the wave packet will travel at.
+            Combining these ideas together, we expect that the wave packet will be smudged out over time, as some wavelengths in it travel faster and some slower.
+
+            Let's see if we can show this explicitly.
+            Substituting the square root of equation~\ref{eq:gaussian-wavenumber-probability-density} for $A(k)$ and equation~\ref{eq:gaussian-dispersion} for $\omega(k)$ into the integral, we get
+            \begin{equation}
+                \psi(x,t)=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^\infty e^{-\frac{(k-k_0)^2}{2\Delta k^2}}e^{i\left(kx-\frac{\hbar k^2}{2m}t\right)}\dd{k}.
+            \end{equation}
+            We would like to use the standard integral~\ref{eq:gaussian-standard-integral} for Gaussians again.
+            Making the same substitution as in section~\ref{subsec:calculating-the-wavefunction} above ($q=k-k_0$) gives
+            \begin{align}
+                \psi(x,t)&=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^\infty e^{-\frac{q^2}{2\Delta k^2}}e^{i(q+k_0)x}e^{-\frac{i\hbar(q+k_0)^2}{2m}t}\dd{q}\\
+                &=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^\infty e^{-\frac{q^2}{2\Delta k^2}}e^{iqx}e^{ik_0x}e^{-\frac{i\hbar q^2}{2m}t}e^{-\frac{i\hbar qk_0}{m}t}e^{-\frac{i\hbar k_0^2}{2m}t}\dd{q}.
+            \end{align}
+            We can simplify the notation a bit by defining $\omega_0=\frac{\hbar k_0^2}{2m}$, the frequency of the state with wavenumber $k_0$, and using the group velocity $v_\text{gr}(k_0)=\frac{\hbar k_0}{m}$.
+            The fifth and sixth exponentials can be rewritten in terms of these quantities, and then the third and fifth exponentials can be taken out of the integral to get
+            \begin{equation}
+                \psi(x,t)=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}e^{i(k_0x-\omega_0 t)}\int_{-\infty}^\infty e^{-\left(\frac{1}{2\Delta k^2}+\frac{i\hbar}{2m}t\right)q^2}e^{-i(v_\text{gr}(k_0)t-x)q}\dd{q}.
+            \end{equation}
+            Now we can use the standard integral with
+            \begin{align}
+                \alpha&=\frac{1}{2\Delta k^2}+\frac{i\hbar}{2m}t\\
+                \beta&=i(v_\text{gr}(k_0)t-x),
+            \end{align}
+            to get
+            \begin{align}
+                \psi(x,t)&=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\sqrt{\frac{\pi}{\frac{1}{2\Delta k^2}+\frac{i\hbar}{2m}t}}e^{i(k_0x-\omega_0 t)}e^{-\frac{(x-v_\text{gr}(k_0)t)^2}{4\left(\frac{1}{2\Delta k^2}+\frac{i\hbar}{2m}t\right)}}\\
+                &=\sqrt{\frac{\Delta k}{\sqrt{\pi}\left(1+\frac{i\hbar\Delta k^2t}{m}\right)}}e^{i(k_0x-\omega_0 t)}e^{-\frac{\Delta k^2(x-v_\text{gr}(k_0)t)^2}{2\left(1+\frac{i\hbar\Delta k^2t}{m}\right)}}.
+            \end{align}
+
+            Calculating the probability density, we get
+            \begin{equation}
+                \abs{\psi(x,t)}^2=\frac{\Delta k}{\sqrt{\pi}\sqrt{1+\frac{\hbar^2\Delta k^4t^2}{m^2}}}e^{-\frac{\Delta k^2(x-v_\text{gr}(k_0)t)^2}{1+\frac{\hbar^2\Delta k^4t^2}{m^2}}}.
+            \end{equation}
+            This is quite a complicated expression, but there are a few key things we can pick out that tell us in simple terms how the wave packet behaves.
+            The structure of the probability density is basically
+            \begin{equation}
+                \abs{\psi(x,t)}^2=C(t)e^{-\frac{(x-x_0(t))^2}{\Delta x(t)^2}},
+            \end{equation}
+            so we see that the height, width, and centre of the wave packet all change with time while retaining a Gaussian form.
+            
+            Comparing the two expressions, the centre of the wave packet $x_0$ evolves as
+            \begin{equation}
+                x_0(t)=v_\text{gr}(k_0)t,
+            \end{equation}
+            so the position of the peak of the wavepacket moves to the right with a constant speed, the speed of the central wavenumber (or equivalently, the speed of the envelope).
+            This makes sense, there are no forces acting on the particle so its speed stays constant with time.
+            % TODO: calculate <x(t)> as an exercise to show that the peak position, which is <x>, follows the classical trajectory
+
+            The width of the wave packet is
+            \begin{equation}
+                \Delta x(t)=\frac{1}{\Delta k}\sqrt{1+\frac{\hbar^2\Delta k^4t^2}{m^2}}=\Delta x_0\sqrt{1+\frac{\hbar^2\Delta k^4t^2}{m^2}},
+            \end{equation}
+            where we have reintroduced $\Delta x_0=\frac{1}{\Delta k}$, the width of the wave packet at $t=0$ from before.
+            Thus the width $\Delta x$ increases over time just like we predicted.
+
+            The height has the form
+            \begin{equation}
+                C(t)=\frac{1}{\sqrt{\pi}\Delta x(t)},
+            \end{equation}
+            so since the width increases with time, the height decreases.
+            This makes sense, as to preserve the normalisation of the wave packet the amplitude must decrease as it spreads out.
+
+            Notice that in the limit $t\to 0$, we get back our previous results for the initial wave packet $\psi(x,0)$.
+            If $\Delta k$ is larger at $t=0$, i.e. if the uncertainty in momentum $\Delta p$ is larger, the the wavepacket spreads out more slowly.
+
+            Does the uncertainty in momentum $\Delta p$ increase over just like $\Delta x$?
+            From equation~\ref{eq:psi-fourier-momentum}, we have
+            \begin{align}
+                \psi(x,t)&=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty\phi(p,t)e^{\frac{i}{\hbar}px}\dd{p}\\
+                &=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty\phi(p,0)e^{\frac{i}{\hbar}(px-Et)}\dd{p}.
+            \end{align}
+            For the free particle, we have $E=\frac{p^2}{2m}$ and so
+            \begin{equation}
+                \psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^\infty\phi(p,0)e^{-\frac{i}{\hbar}\frac{p^2}{2m}t}e^{\frac{i}{\hbar}px}\dd{p}.
+            \end{equation}
+            Hence we have that
+            \begin{equation}
+                \abs{\phi(p,t)}^2=\abs{\phi(p,0)e^{-\frac{i}{\hbar}\frac{p^2}{2m}t}}^2=\abs{\phi(p,0)}^2,
+            \end{equation}
+            so the momentum probability density remains the same over time and $\Delta p$ does not change.
+            This is not a general fact, it only holds for the free particle.
+            We will find that when there are forces present, $\Delta p$ does indeed increase over time.
+            In that sense, this is sort of a quantum analogue of Newton's first law.
+
+            % http://tinyurl.com/wave-packet
+    
+\end{document}
