@@ -45,7 +45,7 @@
                 \hat{V}(x)=\frac{1}{2}m\omega^2\hat{x}^2.
             \end{equation}
             The Hamiltonian operator for the system is then
-            \begin{equation}
+            \begin{equation}\label{eq:qho-hamiltonian}
                 \hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2\hat{x}^2,
             \end{equation}
             which, when written in the position basis, becomes
@@ -159,7 +159,7 @@
                 2j+1-\varepsilon=0.
             \end{equation}
             If we substitute back in $\varepsilon=\frac{2E}{\hbar\omega}$, this gives us the energy eigenvalues of the quantum harmonic oscillator:
-            \begin{equation}
+            \begin{equation}\label{eq:qho-eigenvalues}
                 E_n=\hbar\omega\left(n+\frac{1}{2}\right),
             \end{equation}
             where we have replaced $j$ with $n$.
@@ -224,7 +224,7 @@
         The spatial part of the first few eigenstates is
         \begin{align}
             u_0(x)&=N_0e^{-\frac{m\omega}{2\hbar}x^2}\\
-            u_1(x)&=N_1xe^{-\frac{m\omega}{2\hbar}x^2}\\
+            u_1(x)&=N_1xe^{-\frac{m\omega}{2\hbar}x^2}\label{eq:qho-first-excited-state}\\
             u_2(x)&=N_2\left(\frac{2m\omega}{\hbar}x^2-1\right)e^{-\frac{m\omega}{2\hbar}x^2}\\
             u_3(x)&=N_3\left(8\sqrt{\left(\frac{m\omega}{\hbar}\right)^3}y^3-12\sqrt{\frac{m\omega}{\hbar}}y\right)e^{-\frac{m\omega}{2\hbar}x^2}\\
         \end{align}
@@ -287,5 +287,271 @@
             \end{equation}
             The only difference between this formula and the one for the infinite square well is that the index $n$ starts from 0 instead of 1.
             % TODO: talk about coherent states
+
+    \section{Solving the QHO with Ladder Operators}\label{sec:solving-the-qho-with-ladder-operators}
+        In this section we are going to introduce a technique to solve for the energy eigenvalues and eigenfunctions without solving the complicated differential equation~\ref{eq:qho-tise}.
+        This method will be to factorise the Hamiltonian using two new operators, which we will call ladder operators for reasons that will become clear, and then see what their effect on an unknown eigenfunction is.
+
+        \subsection{Factorising the Hamiltonian}\label{sec:solving-the-qho-with-ladder-operators:subsec:factorising-the-hamiltonian}
+            Notice that the QHO Hamiltonian (equation~\ref{eq:qho-hamiltonian}) is a sum of squares of operators.
+            We would like to write it in a more symmetric form and then factorise.
+
+            We can do this by removing the units.
+            Define the dimensionless position operator by
+            \begin{equation}
+                \hat{X}=\frac{\hat{x}}{x_0},
+            \end{equation}
+            where $x_0=\sqrt{\frac{\hbar}{m\omega}}$ is the natural length scale created using the constants in the Hamiltonian.
+            We can define a dimensionless momentum operator by creating a nautral momentum scale, which is created by dividing $\hbar$ by $x_0$:
+            \begin{equation}
+                p_0=\frac{\hbar}{x_0}=\sqrt{\hbar m\omega}.
+            \end{equation}
+            Then we can define
+            \begin{equation}
+                \hat{P}=\frac{\hat{x}}{p_0},
+            \end{equation}
+            as the dimensionless momentum operator.
+
+            Substituting these into equation~\ref{eq:qho-hamiltonian}, we get
+            \begin{align}
+                \hat{H}&=\frac{p_0^2\hat{P}^2}{2m}+\frac{1}{2}m\omega^2x_0^2\hat{X}^2\\
+                &=\frac{\hbar m\omega}{2m}\hat{P}^2+\frac{m\omega^2\hbar}{m\omega}\hat{X}^2\\
+                &=\frac{\hbar\omega}{2}(\hat{P}^2+\hat{X}^2).
+            \end{align}
+
+            Recall that an expression $u^2+v^2$ can be factored using complex numbers as $(u+iv)(u-iv)$.
+            When using the same idea with operators, we need to keep in mind that two operators may not necessarily commute.
+            The two parentheses expand to
+            \begin{align}
+                (\hat{U}-i\hat{V})(\hat{U}+i\hat{V})&=\hat{U}^2+\hat{V}^2+i\hat{U}\hat{V}-i\hat{V}\hat{U}\\
+                &=\hat{U}^2+\hat{V}^2+i[\hat{U},\hat{V}],
+            \end{align}
+            therefore for the QHO Hamiltonian, we get
+            \begin{equation}
+                \hat{H}=\frac{\hbar\omega}{2}((\hat{X}-i\hat{P})(\hat{X}+i\hat{P})-i[\hat{X},\hat{P}]),
+            \end{equation}
+            where we have to subtract of $i$ times the commutator of $\hat{X}$ and $\hat{P}$ to account for the cross terms.
+            The commutator between dimensionless position and momentum is given by
+            \begin{align}
+                [\hat{X},\hat{P}]&=\left[\frac{\hat{x}}{x_0},\frac{\hat{p}}{p_0}\right]\\
+                &=\frac{1}{x_0p_0}[\hat{x},\hat{p}]\\
+                &=\sqrt{\frac{m\omega}{\hbar}}\frac{1}{\sqrt{\hbar m\omega}}i\hbar\\
+                &=i,
+            \end{align}
+            So the Hamiltonian simplifies to
+            \begin{equation}
+                \hat{H}=\frac{\hbar\omega}{2}((\hat{X}-i\hat{P})(\hat{X}+i\hat{P})+1).
+            \end{equation}
+
+            Now we will define new operators to be the combination in parentheses:
+            \begin{align}
+                \hat{A}&=\frac{1}{\sqrt{2}}(\hat{X}+i\hat{P})\\
+                \hat{A}^\dagger&=\frac{1}{\sqrt{2}}(\hat{X}-i\hat{P}).
+            \end{align}
+            These operators are called the \textbf{ladder operators} for reasons that will become very clear in the next section.
+            If we substitute these into the Hamiltonian, we get
+            \begin{equation}\label{eq:qho-hamiltonian-ladder}
+                \hat{H}=\hbar\omega\left(\hat{A}^\dagger\hat{A}+\frac{1}{2}\right).
+            \end{equation}
+            This equation looks suspiciously like equation~\ref{eq:qho-eigenvalues} for the energy eigenvalues but with operators!
+            This implies that the product $\hat{A}^\dagger\hat{A}$ is a ``number operator'', it has the energy eigenstates as its eigenfunctions with their corresponding quantum number $n$ as its eigenvalues.
+            % TODO: prove that this is the case
+            % TODO: talk about the opposite order of factorisation which gives H=hbar*omega*(AA^+ - 1/2)
+
+            But what do the operators $\hat{A}$ and $\hat{A}^\dagger$ actually do?
+            Note that $\hat{A}^\dagger$ is the adjoint of $\hat{A}$, as we can tell by the notation and because it is defined as the ``complex conjugate'' of $\hat{A}$.
+            Because $\hat{A}\neq\hat{A}^\dagger$, neither of them are Hermitian and therefore they do not represent observables.
+            We will look at the action of these operators on an energy eigenstate in the next section.
+
+    \section{Ladder Operators}\label{sec:ladder-operators}
+        To work out the action of the ladder operators on an energy eigenstate $u_n$, we will first calculate some commutators involving them and then do some algebra to find the result.
+        
+        \subsection{Properties of Ladder Operators}\label{subsec:properties-of-ladder-operators}
+            We have already seen that since $\hat{A}$ and $\hat{A}^\dagger$ are different operators, they cannot be Hermitian.
+
+            The first commutator we will need is the commutator of $\hat{A}$ with its adjoint $\hat{A}^\dagger$, which is
+            \begin{align}
+                [\hat{A},\hat{A}^\dagger]&=\frac{1}{2}[\hat{X}+i\hat{P},\hat{X}-i\hat{P}]\\
+                &=\frac{1}{2}([\hat{X},\hat{X}]+i[\hat{P},\hat{X}]-i[\hat{X},\hat{P}]-i^2[\hat{P},\hat{P}])\\
+                &=\frac{1}{2}(0-i^2-i^2+0)\\
+                &=1,
+            \end{align}
+            So $\hat{A}$ and $\hat{A}^\dagger$ do not commute.
+
+            The next commutator to calculate is that of the ladder operators with the Hamiltonian.
+            Looking at $\hat{A}$ first, this is
+            \begin{align}
+                [\hat{H},\hat{A}]&=\hbar\omega\left[\left(\hat{A}^\dagger\hat{A}+\frac{1}{2}\right),\hat{A}\right]\\
+                &=\hbar\omega\left([\hat{A}^\dagger\hat{A},\hat{A}]+\left[\frac{1}{2},\hat{A}\right]\right)\\
+                &=\hbar\omega(\hat{A}^\dagger[\hat{A},\hat{A}]+[\hat{A}^\dagger,\hat{A}]\hat{A})\\
+                &=-\hbar\omega\hat{A}.
+            \end{align}
+            % TODO: make sure all these steps are using identities that have been defined previously (addition, multiplication, constants inside commutator, antisymmetry)
+            By a similar calculation, it can be shown that $[\hat{H},\hat{A}^\dagger]=+\hbar\omega\hat{A}^\dagger$.
+
+        \subsection{The Lowering Operator}\label{subsec:the-lowering-operator}
+            Suppose we have the an energy eigenstate $u_i$, so $\hat{H}u_i=E_iu_i$.
+            We will now calculate what $\hat{A}$ when it acts on $u_i$ by acting the Hamiltonian on $\hat{A}u_i$.
+            When doing this calculation, we will deliberately ``add zero'' (add and subtract the same term) in order to introduce the commutators we have calculated above.
+            \begin{align}
+                \hat{H}(\hat{A}u_i)&=(\hat{H}\hat{A}-\hat{A}\hat{H}+\hat{A}\hat{H})u_i\\
+                &=[\hat{H},\hat{A}]u_i+\hat{A}(\hat{H}u_i)\\
+                &=-\hbar\omega\hat{A}u_i+E_i\hat{A}u_i\\
+                &=(E_i-\hbar\omega)\hat{A}u_i.
+            \end{align}
+            This does not really look like we have made much progress, but notice that the last line is an eigenvalue equation, which implies that $\hat{A}u_i$ is an energy eigenfunction with energy $E_i-\hbar\omega$.
+            Of course, since we know what the energy eigenvalues are, we can see that $\hat{A}u_i$ must be proportional to $u_{i-1}$ because $E_i-\hbar\omega=E_{i-1}$!
+
+            Let us apply $\hat{A}$ twice to $u_i$ and see what happens.
+            Using the same trick, we get
+            \begin{align}
+                \hat{H}(\hat{A}^2u_i)&=\hat{H}\hat{A}(\hat{A}u_i)\\
+                &=(\hat{H}\hat{A}-\hat{A}\hat{H}+\hat{A}\hat{H})(\hat{A}u_i)\\
+                &=[\hat{H},\hat{A}](\hat{A}u_i)+\hat{A}\hat{H}(\hat{A}u_i)\\
+                &=-\hbar\omega\hat{A}^2u_i+(E_i-\hbar\omega)\hat{A}^2u_i\\
+                &=(E_i-2\hbar\omega)\hat{A}^2u_i,
+            \end{align}
+            so we see, in the same way, that $\hat{A}^2u_i$ is proportional to $u_{i-2}$ since $E_i-2\hbar\omega=E_{i-2}$.
+
+            One can show that in general,
+            \begin{equation}
+                \hat{H}(\hat{A}^nu_i)=(E_i-n\hbar\omega)\hat{A}^nu_i.
+            \end{equation}
+
+            So the action of $\hat{A}$ is to \textit{lower} an eigenstate $u_i$ by one energy unit of $\hbar\omega$.
+            For this reason, $\hat{A}$ is called the \textbf{lowering operator}.
+
+        \subsection{The Raising Operator}\label{subsec:the-raising-operator}
+            If $\hat{A}$ lowers an energy eigenstate by one unit of $\hbar\omega$, one would expect that its adjoint $\hat{A}^\dagger$ raises it up by one.
+            Indeed, we find that this is the case, so $\hat{A}^\dagger$ is called the \textbf{raising operator}.
+
+            We can show that this is the case by doing a similar calculation to above.
+            \begin{align}
+                \hat{H}(\hat{A}^\dagger u_i)&=(\hat{H}\hat{A}^\dagger-\hat{A}^\dagger\hat{H}+\hat{A}^\dagger\hat{H})u_i\\
+                &=[\hat{H},\hat{A}^\dagger]u_i+\hat{A}^\dagger(\hat{H}u_i)\\
+                &=\hbar\omega\hat{A}^\dagger u_i+E_i\hat{A}^\dagger u_i\\
+                &=(E_i+\hbar\omega)\hat{A}^\dagger u_i,\label{eq:qho-ladder-raising-action}
+            \end{align}
+            as predicted.
+
+            Again, one can show in general that
+            \begin{equation}
+                \hat{H}(\hat{A}^{\dagger\,n}u_i)=(E_i+n\hbar\omega)\hat{A}^{\dagger\,n}u_i.
+            \end{equation}
+
+            One easy way to remember which operator raises and which one lowers is by imagining the Hermitian dagger $\dagger$ as a little ``+'' symbol, which denotes raising.
+
+        \subsection{The Ladder of Energy Levels}\label{subsec:the-ladder-of-energy-levels}
+            The raising and lowering operators imply that we have a ``ladder'' of energy levels, equally spaced apart by $\hbar\omega$.
+            However, there is one problem.
+            It appears that there is nothing stopping us from applying the lowering operator $\hat{A}$ indefinitely, implying that there are infinitely many rungs in both directions!
+            We know that this is impossible, since the potential energy $V(x)$ has a minimum value of $V=0$, which means there are \textit{no bound states} with $E_i<0$.
+
+            We can also show directly that the energy must be greater than or equal to zero.
+            Recall that the expectation value of the Hamiltonian for an energy eigenstate $u_n$ is $E_n$:
+            \begin{equation}
+                \expval{\hat{H}}{u_n}=\int_{-\infty}^\infty u_n^\ast\hat{H}u_n\dd{x}=E_n\int_{-\infty}^\infty u_n^\ast u_n\dd{x}=E_n.
+            \end{equation}
+            Then if we insert equation~\ref{eq:qho-hamiltonian-ladder}, we get
+            \begin{align}
+                E_n&=\hbar\omega\int_{-\infty}^\infty u_n^\ast\left(\hat{A}^\dagger\hat{A}+\frac{1}{2}\right)u_n\dd{x}\\
+                &=\hbar\omega\left[\int_{-\infty}^\infty u_n^\ast\hat{A}^\dagger\hat{A}u_n\dd{x}+\frac{1}{2}\int_{-\infty}^\infty u_n^\ast u_n\dd{x}\right]\\
+                &=\hbar\omega\left[\int_{-\infty}^\infty(\hat{A}u_n)^\ast\hat{A}u_n\dd{x}+\frac{1}{2}\right]\\
+                &=\hbar\omega\left[\int_{-\infty}^\infty\abs{\hat{A}u_n}^2\dd{x}+\frac{1}{2}\right]\\
+                &\geq 0.
+            \end{align}
+            Note that in the third-last line, we used the fact that $u_n^\ast\hat{A}^\dagger$ is the complex conjugate of $\hat{A}u_n$, and to go from the second-last line to the last we recall that probability density must be non-negative everywhere.
+            % TODO: include Dirac notation proof: <n|N|n>=<n|A^+ A|n>=(A|n>)^* A|n> geq 0
+
+            All this is to say that we need to impose that there exists a ground state with a minimum energy.
+            To do this, we define the lowering operator to completely annihilate the ground state wavefunction
+            \begin{equation}
+                \hat{A}u_0=0.
+            \end{equation}
+            This is known as the \textbf{ladder termination condition}.
+            It implies that any repeated application of the lowering operator will eventually end up returning zero (since $\hat{A}^n u_0=0$ for any $n$).
+            % TODO: do any problems arise if we "forget" to impose this condition?
+            This actually gives us the value of the ground state energy.
+            If we apply $\hat{H}$ to $u_0$, we get
+            \begin{align}
+                \hat{H}u_0&=\hbar\omega\left(\hat{A}^\dagger\hat{A}+\frac{1}{2}\right)u_0\\
+                &=\hbar\omega\hat{A}^\dagger(\hat{A}u_0)+\frac{1}{2}\hbar\omega u_0\\
+                &=\frac{1}{2}\hbar\omega u_0,
+            \end{align}
+            since the first term becomes zero.
+            So the ground state energy is $\frac{1}{2}\hbar\omega$, which is what we found before by solving the Schrodinger equation.
+
+            This, along with equation~\ref{eq:qho-ladder-raising-action}, gives us the full spectrum of energy levels
+            \begin{equation}
+                E_n=\hbar\omega\left(n+\frac{1}{2}\right),
+            \end{equation}
+            as found previously.
+            % TODO: necessary to explicitly show this?
+
+        \subsection{Finding the Eigenfunctions Using Ladder Operators}\label{subsec:finding-the-eigenfunctions-using-ladder-operators}
+            The only thing we haven't recovered yet from our knowledge of the QHO using this method is the form of the energy eigenstates in the position basis.
+            According to equation~\ref{eq:qho-ladder-raising-action}, $\hat{A}^\dagger u_n$ is proportional to $u_{n+1}$.
+            We can calculate the constant of proportionality by setting $\hat{A}^\dagger u_n=Cu_{n+1}$ and using the fact that the energy eigenstates are normalised.
+            \begin{align}
+                1&=\int_{-\infty}^\infty u_{n+1}^\ast u_{n+1}\dd{x}\\
+                &=\frac{1}{C^2}\int_{-\infty}^\infty(\hat{A}^\dagger u_n)^\ast\hat{A}^\dagger u_n\dd{x}\\
+                &=\frac{1}{C^2}\int_{-\infty}^\infty u_n^\ast\hat{A}\hat{A}^\dagger u_n\dd{x}.
+            \end{align}
+            We will now use a nifty trick that comes in handy when manipulating expressions with ladder operators.
+            With the commutator $[\hat{A},\hat{A}^\dagger]=1$, we can rewrite
+            \begin{equation}
+                \hat{A}\hat{A}^\dagger=\hat{A}\hat{A}^\dagger-\hat{A}^\dagger\hat{A}+\hat{A}^\dagger\hat{A}=[\hat{A},\hat{A}^\dagger]+\hat{A}^\dagger\hat{A}=1+\hat{A}^\dagger\hat{A}.
+            \end{equation}
+            Using this and substituting the Hamiltonian, we get
+            \begin{align}
+                1&=\frac{1}{C^2}\int_{-\infty}^\infty u_n^\ast(1+\hat{A}^\dagger\hat{A})u_n\dd{x}\\
+                &=\frac{1}{C^2}\int_{-\infty}^\infty u_n^\ast\left(1+\frac{\hat{H}}{\hbar\omega}-\frac{1}{2}\right)u_n\dd{x}\\
+                &=\frac{1}{C^2}\int_{-\infty}^\infty u_n^\ast\left(\frac{\hat{H}}{\hbar\omega}u_n+\frac{1}{2}u_n\right)\dd{x}\\
+                &=\frac{1}{C^2}\int_{-\infty}^\infty u_n^\ast\left(\left(n+\frac{1}{2}\right)u_n+\frac{1}{2}u_n\right)\dd{x}\\
+                &=\frac{n+1}{C^2}\int_{-\infty}^\infty u_n^\ast u_n\dd{x}\\
+                &=\frac{n+1}{C^2},
+            \end{align}
+            which implies $C=\sqrt{n+1}$.
+            Thus, we have
+            \begin{equation}\label{eq:qho-ladder-raising-normalised}
+                \hat{A}^\dagger u_n=\sqrt{n+1}u_{n+1}.
+            \end{equation}
+            % TODO: again, show Dirac notation proof, e.g. bottom of this section https://en.wikipedia.org/wiki/Quantum_harmonic_oscillator#Ladder_operator_method
+
+            By a similar calculation, one can show that
+            \begin{equation}
+                \hat{A} u_n=\sqrt{n}u_{n-1}.
+            \end{equation}
+
+            Using the ladder termination condition and expanding $\hat{A}$ in the position basis, we can find the form of the ground state wavefunction in the position basis.
+            \begin{align}
+                &\hat{A}u_0=0\\
+                &\frac{1}{\sqrt{2}}(\hat{X}+i\hat{P})u_0=0\\
+                &\left(\frac{\hat{x}}{x_0}+i\frac{\hat{p}}{p_0}\right)u_0=0\\
+                &\sqrt{\frac{m\omega}{\hbar}}u_0+\frac{i}{\sqrt{\hbar m\omega}}\left(-i\hbar\dv{u_0}{x}\right)=0
+            \end{align}
+            This gives us a first-order differential equation which we can solve by integrating:
+            \begin{align}
+                \dv{u_0}{x}&=-\frac{m\omega}{\hbar}xu_0\\
+                \int\frac{\dd{u_0}}{u_0}&=-\frac{m\omega}{\hbar}\int x\dd{x}\\
+                \ln u_0&=-\frac{m\omega}{2\hbar}x^2+c\\
+                u_0&=N_0e^{-\frac{m\omega}{2\hbar}x^2},
+            \end{align}
+            which is exactly the wavefunction we found by solving the Schrodinger equation.
+            Note that if we were solving this problem from scratch using ladder operators, this would be the \textit{only} differential equation we have to solve, and also the only time that we have to refer back to the definition of the ladder operators in terms of $\hat{X}$ and $\hat{P}$!
+
+            The rest of the eigenstates can be found using equation~\ref{eq:qho-ladder-raising-normalised} and by expanding the definition of $\hat{A}^\dagger$.
+            For example, for the first excited state we have $\hat{A}^\dagger u_0=\sqrt{0+1}u_1=u_1$, so we get
+            \begin{align}
+                u_1&=\frac{1}{\sqrt{2}}(\hat{X}-i\hat{P})u_0\\
+                &=\frac{1}{\sqrt{2}}\left(\sqrt{\frac{m\omega}{\hbar}}x-\sqrt{\frac{\hbar}{m\omega}}\dv{}{x}\right)N_0e^{-\frac{m\omega}{2\hbar}x^2}\\
+                &=N_0\sqrt{\frac{2m\omega}{\hbar}}xe^{-\frac{m\omega}{2\hbar}x^2},
+            \end{align}
+            which is the same as equation~\ref{eq:qho-first-excited-state}.
+            Note that when using this method for generating the eigenfunctions, they are already normalised!
+            % TODO: inductively prove the form of the wavefunctions for all n
+
+    % TODO: include formula for ladder operators in terms of dimensionful operators
+    % TODO: talk about ladder operators being generators of rotation in phase space for classical oscillator
 
 \end{document}
