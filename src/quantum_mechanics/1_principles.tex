@@ -1,5 +1,469 @@
 \documentclass[../quantum_mechanics.tex]{subfiles}
 
 \begin{document}
+
+    \section{Quantum States}\label{sec:quantum-states}
+        Quantum states are described by \textbf{vectors} in a complex vector space, specifically a \textbf{Hilbert space}, which is a complete inner product space.
+        % TODO: technically rays
+        The exact properties of the Hilbert space are determined by the nature of the physical problem we are studying.
+        Physically distinct states of the system are represented by orthogonal directions in Hilbert space.
+        We will discuss what this means more rigorously in later chapters.
+        A Hilbert space may be finite-dimensional, where the system can only be in finitely-many states, or infinite-dimensional, which is certainly the case for any particle that can move.
+
+        Transformations on the state of the system, such as time-evolution or change of basis, are described using \textbf{linear operators}, which are a generalisation of matrices from finite-dimensional linear algebra.
+
+        \subsection{Dirac Notation}\label{sec:quantum-states:subsec:dirac-notation}
+            States in the Hilbert space are written as $\ket{\psi}$, where $\psi$ is some label we have made up for the state.
+            This notation is called a \textbf{ket}.
+            Recall that the inner product can be defined as the action of a corresponding \textbf{linear functional} or \textbf{covector} from the \textbf{dual space} on the vector.
+            For ket vectors there is a corresponding reversed notation $\bra{\psi}$, called a \textbf{bra}, which represents the corresponding linear functional.
+            Then the inner product between two states $\ket{\psi}$ and $\ket{\phi}$ can be written as
+            \begin{equation}
+                \braket{\phi}{\psi}=-\braket{\psi}{\phi}.
+            \end{equation}
+            This expression is known as a ``bra-ket'' (= bracket).
+            This notation is due to Paul Dirac, and is known as \textbf{Dirac notation} or \textbf{Bra-ket notation}.
+
+            In a system where the Hilbert space is finite-dimensional with $n$ dimensions, it is isomorphic to $\CC^n$.
+            Then the kets can be associated with column vectors and the bras with row vectors, just like how we would write linear functionals from the dual space in finite-dimensional linear algebra, and the inner product is defined by matrix multiplication.
+            In this case, linear operators really are just $n\times n$ matrices.
+
+            All our familiar ideas from linear algebra carry over to Hilbert space, in particular if we have an operator $\hat{O}$ and it acts on the state $\ket{\psi}$ to get
+            \begin{equation}
+                \hat{O}\ket{\psi}=O\ket{\psi},
+            \end{equation}
+            then this is an \textbf{eigenvalue equation}.
+            We say that $\ket{\psi}$ is an \textbf{eigenket} of $\hat{O}$ with eigenvalue $O$.
+
+            There exists bases for the Hilbert space for which we can write the state $\ket{\psi}$ as a linear combination.
+            In particular there is a special basis which is formed from the solutions to the Schrodinger equation (see the next section) called the \textbf{energy eigenbasis}, which is usually labelled $\ket{n}$ where $n$ is an integer label that can take some range of values specified by the problem.
+            The expansion of an arbitrary state $\ket{\psi}$ in the energy eigenbasis looks like
+            \begin{equation}\label{eq:braket-superposition}
+                \ket{\psi}=\sum_n c_n\ket{n}=\sum_n\braket{n}{\psi}\ket{\psi},
+            \end{equation},
+            where $c_n$ is the inner product of the state $\ket{\psi}$ with the eigenstate $\ket{n}$.
+            We will study energy eigenbases again and again throughout the following chapters, as they are pretty much the most important objects of study in quantum mechanics.
+
+        \subsection{The Wavefunction}\label{sec:quantum-states:subsec:the-wavefunction}
+            For a system with spatial degrees of freedom, we also have a continuous basis that we can express our state in, the position basis $\ket{x}$.
+            Since the position basis is continuous, an arbitrary quantum state $\psi$ is represented in the position basis by an integral:
+            \begin{equation}
+                \ket{\psi}=\int_{-\infty}^\infty\psi(x,t)\ket{x}\dd{x}.
+            \end{equation}
+            The quantity $\psi(x,t)$ is called the \textbf{wavefunction}, and is basically the continuous list of coefficients in the linear combination of position eigenkets.
+
+            We can isolate the value of the wavefunction at a position $x$ by calculating the inner product of the state $\ket{\psi}$ with the relevant position eigenket $\hat{x}$ (taking care to use a different dummy variable for the integration):
+            \begin{align}
+                \braket{x}{\psi}&=\int_{-\infty}^\infty\bra{x}\psi(x^\prime,t)\ket{x^\prime}\dd{x^\prime}\\
+                &=\int_{-\infty}^\infty\psi(x^\prime,t)\braket{x}{x^\prime}\dd{x^\prime}\\
+                &=\int_{-\infty}^\infty\psi(x^\prime,t)\delta(x-x^\prime)\dd{x^\prime}\\
+                &=\psi(x,t).
+            \end{align}
+            For systems with only spatial degrees of freedom, which we will study exclusively in the first few chapters, we can actually get by using only the wavefunction to describe the full state of the system and ignoring the more abstract kets and bras.
+            However, when we come to describe systems with internal degrees of freedom such as spin, we will need Dirac notation to describe the system state.
+            To keep on top of things, we will keep track of ways that important concepts such as superpositions and expectation values can be described using both notations throughout.
     
+            % TODO: define what we mean by operators acting on the wavefunction directly
+
+    \section{The Schrodinger Equation}\label{sec:the-schrodinger-equation}
+        % TODO: this section is currently just revision, needs to be written more from first principles
+        
+        % TODO: include derivation of the Schrodinger equation from unitary time evolution
+        \subsection{The Time-Dependent Schrodinger Equation}\label{subsec:the-time-dependent-schrodinger-equation}
+            The \textbf{wavefunction} $\psi(x,t)$ of a non-relativistic particle of mass $m$ obeys the \textbf{time-dependent Schrodinger equation} (TDSE), which is a second-order partial differential equation given by
+            \begin{equation}\label{eq:tdse}
+                -\frac{\hbar^2}{2m}\pdv[2]{\psi(x,t)}{x}+V(x)\psi(x,t)=i\hbar\pdv{\psi(x,t)}{t},
+            \end{equation}
+            where $\hbar$ is the reduced Planck constant, defined as $\hbar=\frac{h}{2\pi}$.
+
+            The TDSE takes the form
+            \begin{equation}
+                \begin{split}
+                    (\text{kinetic energy operator})\times\psi(x,t)&+(\text{potential energy operator})\times\psi(x,t)=\\
+                    &(\text{total energy operator})\times\psi(x,t).    
+                \end{split}
+            \end{equation}
+
+            Recall that in classical mechanics, kinetic energy is defined as
+            \begin{equation}
+                K=\frac{1}{2}mv^2=\frac{p^2}{2m}.
+            \end{equation}
+            In quantum mechanics, physical quantities are represented by \textbf{operators}, which are linear transformations that act on the wavefunction.
+            Operators obey the same relations as their corresponding quantities in classical mechanics.
+            Hence, the kinetic energy operator in quantum mechanics is defined as
+            \begin{equation}\label{eq:operator-kinetic-energy}
+                \hat{T}=\frac{\hat{p}^2}{2m}=\frac{1}{2m}\left(-i\hbar\pdv{}{x}\right)\left(-i\hbar\pdv{}{x}\right)=-\frac{\hbar^2}{2m}\pdv[2]{}{x}.
+            \end{equation}
+            Operators act successively to the right, so the product of two derivative operators becomes a second derivative which is then applied to the wavefunction that the operator is acting on.
+            
+            The total energy operator, or \textbf{Hamiltonian operator} is defined as the sum of the kinetic energy and potential energy operators.
+            \begin{equation}
+                \hat{H}=\hat{T}+\hat{V}=\frac{\hat{p}^2}{2m}+\hat{V}=-\frac{\hbar^2}{2m}\pdv[2]{}{x}+V(x).
+            \end{equation}
+            The potential energy operator $\hat{V}$ becomes just the function $V(x)$ because the position operator $\hat{x}=x$.
+            Note that the potential energy function $V(x)$ is often referred to in quantum mechanics as simply ``potential'', but this should not be confused with other similarly named functions such as electric potential (voltage, equal to potential energy per unit charge) and gravitational potential (potential energy per unit mass), which are physically different quantities!
+            
+            The TDSE can be written more compactly using the Hamiltonian as
+            \begin{equation}
+                \hat{H}\psi(x,t)=i\hbar\pdv{\psi(x,t)}{t}.
+            \end{equation}
+
+            The TDSE is a \textit{linear} differential equation.
+            This means the the solutions obey the principle of superposition, i.e. if $\psi_1$ and $\psi_2$ are solutions, then $A\psi_1+B\psi_2$ is also a solution.
+            This is where the superposition states in quantum mechanics come from.
+
+            It is also first-order in time, which implies that specifying the wavefunction at some time $t_0$ uniquely specifies the wavefunction for all future times.
+            Thus the wavefunction evolves deterministically according to the Schrodinger equation if the particle is left alone without measurement.
+
+            % TODO: Schrodinger equation in Dirac notation
+
+        \subsection{The Time-Independent Schrodinger Equation}\label{the-time-independent-schrodinger-equation}
+            We can make one step towards solving the Schrodinger equation in general by separating the time evolution out of the equation.
+            We will assume that the wavefunction $\psi(x,t)$ is the product of a spatial part, that depends only on $x$, and a temporal part that depends only on $t$ and describes the time evolution.
+            \begin{equation}
+                \psi(x,t)=u(x)T(t).
+            \end{equation}
+            This technique is known as \textbf{separation of variables}.
+
+            If we substitute this into the TDSE (equation~\ref{eq:tdse}), we get
+            \begin{equation}
+                -\frac{\hbar^2}{2m}T(t)\dv[2]{u(x)}{x}+V(x)u(x)T(t)=i\hbar u(x)\dv{T(t)}{t}.
+            \end{equation}
+            If we divide by $u(x)T(t)$, we can get all terms depending on $x$ on one side and all terms depending on $t$ on the other:
+            \begin{equation}\label{eq:tdse-separated}
+                -\frac{\hbar^2}{2m}\frac{1}{u(x)}\dv[2]{u(x)}{x}+V(x)=\hbar\frac{1}{T(t)}\dv{T(t)}{t}.
+            \end{equation}
+            Now since both sides only depend on a single variable, they must both be constant.
+            This constant must have units of energy, since it must have the same units as $V(x)$, and it must be equal to the total energy of the particle since that is what is on the left hand side.
+
+            If we set the left-hand side equal to the total energy and multiply both sides by $u(x)$, we get
+            \begin{equation}\label{eq:tise}
+                -\frac{\hbar^2}{2m}\dv[2]{u(x)}{x}+V(x)u(x)=Eu(x).
+            \end{equation}
+            This equation is of the form
+            \begin{equation}
+                (\text{operator})\times u(x)=(\text{constant})\times u(x),
+            \end{equation}
+            which is an \textbf{eigenvalue equation}.
+            This means that $u(x)$ represents an \textit{eigenfunction} of the Hamiltonian operator, with eigenvalue $E$.
+            This equation is known as the \textbf{time-independent Schrodinger equation} (TISE).
+            Note that the full time dependent separable wavefunction $\psi(x,t)$ is also an eigenfunction of the Hamiltonian, since the spatial derivative does not act on the temporal part.
+            These eigenfunctions, which are usually labelled with some subscript to denote the energy, are known as \textbf{energy eigenstates}.
+
+            The TISE can be written more compactly using the Hamiltonian as
+            \begin{equation}
+                \hat{H}\psi=E\psi.
+            \end{equation}
+
+            Note that only the energy eigenstates solve the TISE, but any superposition of energy eigenstates can solve the TDSE.
+
+        \subsection{Solving the Temporal Part of the Schrodinger Equation}\label{subsec:solving-the-temporal-part-of-the-schrodinger-equation}
+            Looking at the right hand side of equation~\ref{eq:tdse-separated}, we see that there is nothing unknown, and therefore we are able to solve it in general.
+            Setting the right hand side equal to $E$ and rearranging a bit, we get
+            \begin{equation}
+                \dv{T(t)}{t}=-\frac{iE}{\hbar}T(t).
+            \end{equation}
+            This equation has the solution
+            \begin{equation}
+                T(t)=e^{-\frac{iE}{\hbar}t},
+            \end{equation}
+            which holds for \textit{any} potential energy $V(x)$.
+            This is therefore the temporal part of the energy eigenstates for any problem.
+            It means we do not actually need to solve the full TDSE for every problem we want to study in quantum mechanics. 
+            We need only solve the TISE, which is different for every problem because of the presence of the potential, to find the spatial part of the energy eigenstates, and then the full eigenfunctions are given by
+            \begin{equation}\label{eq:tdse-solution}
+                \psi(x,t)=u(x)e^{-\frac{iE}{\hbar}t},
+            \end{equation}
+            where the spatial part $u(x)$ is the eigenfunction of $\hat{H}$ with eigenvalue $E$.
+
+            In particular, the linearity of the TDSE implies that the time-evolution of a superposition of energy eigenstates is equal to the superposition of the time-evolution of those eigenstates.
+            We will use this principle repeatedly to find the most general solutions to the TDSE.
+
+    \section{Conditions for Valid Wavefunctions}\label{sec:conditions-for-valid-wavefunctions}
+        From what we have derived so far, there are some constraints we have on what type of wavefunctions can represent physical states.
+        In classical mechanics, the trajectory $x(t)$ which is the solution of Newton's second law is the object which we impose constraints on smoothness on.
+        For quantum mechanics, the role of the trajectory is replaced by the wavefunction, the square magnitude of which represents probability density.
+        This means that while it also has the smoothness requirements determined by the Schrodinger equation, the wavefunction needs some additional constraints which we will see below.
+
+        \subsection{Smoothness}\label{sec:conditions-for-valid-wavefunctions:subsec:smoothness}
+            As stated above, the form of Newton's second law requires the trajectory to be not only continuous, but twice-differentiable.
+            % TODO: be more rigorous with this
+
+            The wavefunction must be continuous, because a discontinuity in $\psi$ at $x_0$ would like to ambiguous probabilities near $x_0$.
+            It must also have a continuous slope, except at points where the potential energy is infinite.
+            To see why, we can rearrange the TISE to
+            \begin{equation}
+                \dv[2]{u(x)}{x}=\frac{2m}{\hbar^2}(V(x)-E)u(x),
+            \end{equation}
+            and then integrate over a small interval $[x_0,x_0+\varepsilon]$ to get
+            \begin{equation}
+                \left.\dv{u(x)}{x}\right|_{x_0}-\left.\dv{u(x)}{x}\right|_{x_0+\varepsilon}=\frac{2m}{\hbar^2}\int_{x_0}^{x_0^\varepsilon}(V(x)-E)u(x)\dd{x}.
+            \end{equation}
+            If the left-hand side is not equal to zero in the limit $\varepsilon\to 0$, then the slope $\dv{\psi}{x}$ is nonzero at $x_0$.
+            When can the right-hand side be nonzero?
+            The term $Eu(x)$ is finite so the integral goes to zero in the limit $\varepsilon\to 0$, and the same will be true for the term $V(x)u(x)$ even if $V(x)$ is discontinuous at $x_0$.
+            Only if $V(x)$ is infinite at $x_0$ will the integral be nonzero in the limit $\varepsilon\to 0$.
+
+        \subsection{Normalisation}\label{sec:conditions-for-valid-wavefunctions:subsec:normalisation}
+            As alluded to above, the fact that the square magnitude of $\psi(x,t)$ represents a probability density necessitates an extra constraint on the wavefunction.
+            Namely, the integral of the probability density over all space must be equal to one.
+            This represents the fact that the particle must be located \textit{somewhere}.
+            \begin{equation}
+                \int_{-\infty}^\infty\psi^\ast(x,t)\psi(x,t)\dd{x}=\int_{-\infty}^\infty\abs{\psi(x,t)}^2\dd{x}=1.
+            \end{equation}
+            This constraint is called the \textbf{normalisation condition}.
+            If wavefunctions do not have this property, then the probabilities calculated from them will not make sense.
+
+            This gives us a requirement that the physically realisable wavefunction must be \textbf{square integrable}, which implies that the integral of the square magnitude over all space is finite:
+            \begin{equation}
+                \int_{-\infty}^\infty\abs{\psi(x,t)}^2\dd{x}=N<\infty.
+            \end{equation}
+            If a given wavefunction $\psi(x,t)$ is square integrable, then $\frac{1}{\sqrt{N}}\psi(x,t)$ where $N$ is given by the equation above will be a correctly normalised wavefunction.
+            
+            Square integrability imposes that $\psi(x,t)$ decays to zero sufficiently rapidly as $x\to\pm\infty$.
+            This makes physical sense, because it would not make sense for a particle to have a nonzero probability to be located infinitely far away.
+            Wavefunctions which are not square integrable are called \textbf{unnormalisable}.
+            % TODO: talk more about what square integrability imposes
+
+            In Dirac notation, the normalisation condition is written as
+            \begin{equation}
+                \braket{\psi}{\psi}=1.
+            \end{equation}
+
+    \section{Expectation Values}\label{sec:expectation-values}
+        Generally speaking, if we make a measurement of a quantum mechanical system, the state of the system will be changed.
+        This means that there is no additional precision to be gained from repeated measurements, unlike with classical systems.
+        Once a measurement is made, the system's wavefunction collapses into one of the eigenstates of the operator.
+        The eigenvalues represent all possible measurement outcomes of that operator.
+        
+        In order to make repeated measurements in the same way we would with a classical system, what we need to do is prepare a large number of systems in identical initial states, then measure them all.
+        This gives us an ensemble average for the quantity, which is called the \textbf{expectation value}.
+        Expectation values are denoted with angle brackets around the quantity, sometimes with a subscript $\psi$ to denote for which state we are taking the average value, e.g. $\langle\hat{x}\rangle_\psi$ represents the average position in the state $\psi$.
+
+        Note that the name ``expectation value'' can be slightly misleading, for it does not denote what we ``expect'' to measure when we do a measurement.
+        It simply means the average of many measurements of systems in identical states.
+        
+        \subsection{Operators with Discrete Eigenvalues}\label{subsec:operators-with-discrete-eigenvalues}
+            Suppose an operator $\hat{O}$ has a discrete set of measurement outcomes (eigenvalues) labelled $O_n$.
+            Then the expectation value is simply the sum of each outcome weighted by the probability:
+            \begin{equation}\label{eq:operator-expval-discrete}
+                \langle\hat{O}\rangle=\sum_i O_i P(O_i).
+            \end{equation}
+            % TODO: expand this further in terms of the overlap?
+
+        \subsection{Operators with Continuous Eigenvalues}\label{subsec:operators-with-continuous-eigenvalues}
+            In the case that the set of measurement outcomes is continuous, the sum should change into an integral.
+            But what should the integral look like?
+
+            We know that the wavefunction represents probability density in space, so the average value of position, which is simply the expectation value of the $\hat{x}$ operator, is
+            \begin{equation}\label{eq:expval-position}
+                \langle\hat{x}(t)\rangle=\int_{-\infty}^\infty\hat{x}\psi(x,t)^\ast\psi(x,t)\dd{x}=\int_{-\infty}^\infty x\abs{\psi(x,t)}^2\dd{x}.
+            \end{equation}
+            Notice that the time-dependence of $\langle\hat{x}\rangle$ comes purely from the wavefunction.
+            
+            This is the quantum analogue of the trajectory in classical mechanics.
+        
+            Can we extend this to other operators?
+            For position, since $\hat{x}=x$, it does not matter where we put $\hat{x}$ in the integral in equation~\ref{eq:expval-position}, but for other operators, like momentum, it does matter.
+            To see why, note that momentum contains a derivative $\pdv{}{x}$, then note that
+            \begin{equation}
+                \psi^\ast\pdv{\psi}{x}\neq\pdv{\psi^\ast}{x}\psi,
+            \end{equation}
+            in general.
+
+            Note that in classical mechanics, the trajectory follows Newton's second law
+            \begin{equation}
+                \dv{x(t)}{t}=\frac{p(t)}{m}.
+            \end{equation}
+            We would like that the same thing would happen in classical mechanics, i.e. that
+            \begin{equation}\label{eq:newton-II-quantum}
+                \dv{\langle x(t)\rangle}{t}=\frac{\langle p(t)\rangle}{m},
+            \end{equation}
+            but we do not know a priori if this is the case.
+
+            Let's calculate the time derivative of $\langle x(t)\rangle$ to see what happens.
+            % TODO: note that this derivation comes from Robinett
+            \begin{align}
+                \dv{\langle x(t)\rangle}{t}&=\dv{}{t}\left(\int_{-\infty}^\infty x\abs{\psi(x,t)}^2\dd{x}\right)\\
+                &=\int_{-\infty}^\infty x\left(\pdv{\psi^\ast}{t}\psi+\psi^\ast\pdv{\psi}{t}\right)\dd{x}.
+            \end{align}
+            Now, we can change the temporal derivatives to spatial derivatives by rearranging the TDSE (equation~\ref{eq:tdse}) and its complex conjugate for $\pdv{\psi}{t}$ and $\pdv{\psi^\ast}{t}$:
+            \begin{equation}\label{eq:tdse-time-derivative-substitution}
+                \pdv{\psi}{t}=-\frac{\hbar}{2mi}\pdv[2]{\psi}{x}+\frac{V}{i\hbar}\psi,\quad\pdv{\psi^\ast}{t}=\frac{\hbar}{2mi}\pdv[2]{\psi^\ast}{x}-\frac{V}{i\hbar}\psi^\ast.
+            \end{equation}
+            Substituting these in, we get
+            \begin{align}
+                \dv{\langle x(t)\rangle}{t}&=\frac{\hbar}{2mi}\int_{-\infty}^\infty x\left(\pdv[2]{\psi^\ast}{x}\psi-\frac{V}{i\hbar}\abs{\psi}-\psi^\ast\pdv[2]{\psi}{x}+\frac{V}{i\hbar}\abs{\psi}\right)\dd{x}\\
+                &=\frac{\hbar}{2mi}\int_{-\infty}^\infty\left(\pdv[2]{\psi^\ast}{x}x\psi-\psi^\ast x\pdv[2]{\psi}{x}\right)\dd{x}.
+            \end{align}
+            Looking at the first term and integrating by parts, we get
+            \begin{align}
+                \int_{-\infty}^\infty\pdv[2]{\psi^\ast}{x}x\psi\dd{x}&=\left.\pdv{\psi^\ast}{x}x\psi\right|_{-\infty}^\infty-\int_{-\infty}^\infty\pdv{\psi}{x}\pdv{}{}(x\psi)\dd{x}\\
+                &=-\int_{-\infty}^\infty\pdv{\psi^\ast}{x}\left(\psi+x\pdv{\psi}{x}\right)\dd{x}.
+            \end{align}
+            The ``surface'' terms go to zero because the wavefunction is square integrable, and therefore must go to zero at $\pm\infty$.
+            Integrating by parts again and using the same trick, we get
+            \begin{align}
+                \int_{-\infty}^\infty\pdv[2]{\psi^\ast}{x}x\psi\dd{x}&=-\left.\psi^\ast\left(\psi+x\pdv{\psi}{x}\right)\right|_{-\infty}^\infty+\int_{-\infty}^\infty\psi^\ast\left(2\pdv{\psi}{x}+x\pdv[2]{\psi}{x}\right)\dd{x}\\
+                &=\int_{-\infty}^\infty\psi^\ast\left(2\pdv{\psi}{x}+x\pdv[2]{\psi}{x}\right)\dd{x}.
+            \end{align}
+            Substituting this into the time derivative for the expectation value for position, we get
+            \begin{align}
+                \dv{\langle x(t)\rangle}{t}&=\frac{\hbar}{2mi}\int_{-\infty}^\infty\left(2\psi^\ast\pdv{\psi}{x}+\psi^\ast x\pdv[2]{\psi}{x}-\psi^\ast x\pdv[2]{\psi}{x}\right)\dd{x}\\
+                &=\frac{1}{m}\int_{-\infty}^\infty\psi^\ast\left(-i\hbar\pdv{}{x}\right)\psi\dd{x}\\
+                &=\frac{1}{m}\int_{-\infty}^\infty\psi^\ast\hat{p}\psi\dd{x},
+            \end{align}
+            where we have substituted the definition of the momentum operator.
+            So if we interpret this integral as the expectation value of momentum, equation~\ref{eq:newton-II-quantum} holds.
+
+            We thus have the following generalisation.
+            \begin{definition}
+                For an operator $\hat{O}$ with continuous measurement outcomes, the expectation value of $\hat{O}$ for a state $\psi$ is defined as
+                \begin{equation}
+                    \langle\hat{O}\rangle_\psi=\int_{-\infty}^\infty\psi(x,t)^\ast\hat{O}\psi(x,t)\dd{x}.
+                \end{equation}
+
+                In Dirac notation, this is denoted
+                \begin{equation}
+                    \langle\hat{O}\rangle_\psi=\matrixelement{\psi}{\hat{O}}{\psi}.
+                \end{equation}
+                % TODO: mention this is called a matrix element
+            \end{definition}
+            % TODO: justify this more rigorously
+
+    \section{Quantum Uncertainty}\label{sec:quantum-uncertainty}
+        The most famous appearance of uncertainty in quantum mechanics is the Heisenberg uncertainty principle between position and momentum.
+        \begin{equation}\label{eq:x-p-uncertainty}
+            \Delta x\Delta p\geq\frac{\hbar}{2}.
+        \end{equation}
+        This means that, in contrast to classical mechanics, there are no possible states a particle can be in where it has both definite momentum and position.
+        This has dramatic consequences, such as the loss of a well-defined trajectory for quantum particles.
+
+        It also implies that particles confined to finite spaces must have nonzero kinetic energy.
+
+        Mathematically, the quantum uncertainty of any observable is defined as the standard deviation of the probability distribution \textit{prior to measurement}.
+        If we have a particle in an eigenstate of a given observable and we measure that observable, we know which eigenvalue we will get back and so there is no uncertainty.
+        For any superposition state, there is nonzero uncertainty.
+        This represents the fact that the outcome of a measurement is truly random, quantum uncertainty does \textit{not} represent our lack of knowledge of a definite state.
+
+        The uncertainty in position is
+        \begin{equation}
+            \Delta x=\sqrt{\langle\hat{x}^2\rangle-\langle\hat{x}\rangle^2}.
+        \end{equation}
+        % TODO: explain why this formula is equal to the standard deviation
+        One way to remember which way round the two terms in the square root are is by noting that uncertainty must be real.
+        The first term, which is an average of squares i.e. things that are $\geq 0$, must therefore be greater than the second term, which is an average of things that can be positive or negative.
+
+        Does this formula generalise to all operators?
+        Suppose $\hat{O}$ is an operator with a discrete set of measurement outcomes $O_i$ with probabilities $P(O_i)$.
+        Then the standard deviation is defined as
+        \begin{align}
+            \Delta O&=\sqrt{\sum_i (O_i-\langle\hat{O}\rangle)^2P(O_i)}\\
+            &=\sqrt{\sum_i O_i^2P(O_i)-2\langle\hat{O}\rangle\sum_i O_iP(O_i)+\langle\hat{O}\rangle^2\sum_i P(O_i)}\\
+            &=\sqrt{\langle\hat{O}^2\rangle-2\langle\hat{O}\rangle^2+\langle\hat{O}\rangle^2}\\
+            &=\sqrt{\langle\hat{O}^2\rangle-\langle\hat{O}\rangle^2},
+        \end{align}
+        so the relation holds.
+        % TODO: prove for operators with continuous eigenvalues
+
+        \begin{definition}
+            For an observable operator $\hat{O}$, the uncertainty is given by
+            \begin{equation}\label{eq:operator-uncertainty}
+                \Delta O=\sqrt{\langle\hat{O}^2\rangle-\langle\hat{O}\rangle^2}.
+            \end{equation}
+        \end{definition}
+
+        \begin{example}
+            Suppose we are going to measure the momentum of a particle, which has probability $0.5$ to have momentum $+p_0$, and probability $0.5$ to have momentum $-p_0$.
+            What is the uncertainty in the measurement?
+
+            Using equation~\ref{eq:operator-uncertainty}, we have
+            \begin{equation}
+                \Delta p=\sqrt{\langle\hat{p}^2\rangle-\langle\hat{p}\rangle^2}.
+            \end{equation}
+            We need to calculate both terms inside the square root.
+
+            Since the two possible measurement outcomes are equidistant from zero with equal probability, we expect the average value of measurement to be zero.
+            We can verify this by calculating:
+            \begin{equation}
+                \langle\hat{p}\rangle=p_0\times 0.5-p_0\times 0.5=0.
+            \end{equation}
+
+            On the other hand, the average value of squared momentum is
+            \begin{equation}
+                \langle\hat{p}^2\rangle=p_0^2\times 0.5+(-p_0)^2\times 0.5=p_0^2.
+            \end{equation}
+
+            Then the uncertainty is
+            \begin{equation}
+                \Delta p=\sqrt{p_0^2-0}=p_0.
+            \end{equation}
+        \end{example}
+        % TODO: http://tinyurl.com/EUncert
+
+    \section{Probability Current}\label{sec:probability-current}
+        Consider a wire carrying some electric current $I$.
+        Mathematically, current is defined as the amount of charge passing a point per unit time.
+        By analogy, we can also define a ``probability current'', which denotes the amount of probability passing through a point per unit time.
+
+        \subsection{Probability Conservation}\label{subsec:probability-conservation}
+            The total probability of finding a particle for $x\in(-\infty,\infty)$ is one, and this does \textit{not} change with time.
+            This means that the total probability is \textbf{conserved}.
+
+            However, we can actually make a stronger claim than this.
+            For the probability of finding a particle in a small interval $(x_0,x_0+\dd{x})$ to change, some probability must ``flow'' in or out of this interval.
+            This is known as \textbf{local conservation}.
+            We say that there is nonzero \textbf{probability current} $j$ in or out of the segment.
+            % TODO: include diagram
+            The net change in probability current in the small interval is defined as
+            \begin{equation}
+                j(x_0+\dd{x},t)-j(x_0,t)=\dd{j}(x_0,t),
+            \end{equation}
+            and the probability of finding the particle in the interval is
+            \begin{equation}
+                \abs{\psi(x_0,t)}^2\dd{x},
+            \end{equation}
+            so for probability to be conserved locally we must have
+            \begin{equation}
+                \dd{j}(x_0,t)=-\pdv{}{t}\abs{\psi(x_0,t)}^2.
+            \end{equation}
+            The minus sign is there because the left-hand side being \textit{positive} implies that probability is \textit{leaving} the region.
+
+            In the limit where the interval becomes infinitesimally small, we get
+            \begin{equation}\label{eq:probability-continuity-equation}
+                \pdv{\abs{\psi(x,t)^2}}{t}=-\pdv{j(x,t)}{x}.
+            \end{equation}
+            This is known as the \textbf{continuity equation}, and it appears in all sorts of context in physics whenever we have local conservation (e.g. charge conservation in electromagnetism, mass conservation in fluid dynamics, etc.).
+            The greater the magnitude of the slope of the probability current, the faster probability is flowing through a given point.
+            Probability current $j$ has units \unit{\per\second}, or ``probability per unit time''.
+
+        \subsection{Calculating Probability Current}\label{subsec:calculating-probability-current}
+            To calculate the probability current $j$ for a given state $\psi$, we can start from the continuity equation~\ref{eq:probability-continuity-equation} and use the Schrodinger equation to write the temporal derivative in terms of a spatial derivative just like we did in section~\ref{subsec:operators-with-continuous-eigenvalues}.
+
+            Starting with the left-hand side of equation~\ref{eq:probability-continuity-equation} and using the product rule, we have
+            \begin{align}
+                \pdv{\abs{\psi}^2}{t}&=\pdv{\psi^\ast}{t}\psi+\psi^\ast\pdv{\psi}{t}\\
+                &=\left(\frac{\hbar}{2mi}\pdv[2]{\psi^\ast}{x}-\frac{V}{i\hbar}\psi^\ast\right)\psi+\psi^\ast\left(-\frac{\hbar}{2mi}\pdv[2]{\psi}{x}+\frac{V}{i\hbar}\psi\right)\\
+                &=\frac{\hbar}{2mi}\left(\pdv[2]{\psi^\ast}{x}\psi-\psi^\ast\pdv[2]{\psi}{x}\right),
+            \end{align}
+            where in the second line we have used relations~\ref{eq:tdse-time-derivative-substitution}.
+
+            It would be nice if we could write this expression as a derivative of something, because then we could just straightforwardly integrate the continuity equation to obtain $j$.
+            Luckily, by adding zero we can see that this expression has the form
+            \begin{align}
+                \pdv[2]{\psi^\ast}{x}\psi-\psi^\ast\pdv[2]{\psi}{x}&=\pdv[2]{\psi^\ast}{x}\psi+\pdv{\psi^\ast}{x}\pdv{\psi}{x}-\psi^\ast\pdv[2]{\psi}{x}-\pdv{\psi^\ast}{x}\pdv{\psi}{x}\\
+                &=\pdv{}{x}\left(\pdv{\psi^\ast}{x}\psi-\psi^\ast\pdv{\psi}{x}\right),
+            \end{align}
+            and hence we have
+            \begin{equation}
+                \pdv{\abs{\psi}^2}{t}=\frac{\hbar}{2mi}\pdv{}{x}\left(\pdv{\psi^\ast}{x}\psi-\psi^\ast\pdv{\psi}{x}\right).
+            \end{equation}
+            So by equation~\ref{eq:probability-continuity-equation}, $j$ takes the form
+            \begin{equation}
+                j(x,t)=\frac{h}{2mi}\left(\psi^\ast\pdv{\psi}{x}-\pdv{\psi^\ast}{x}\psi\right).
+            \end{equation}
+            % TODO: http://tinyurl.com/pcurrent
+
+            % TODO: use probability current to show that normalisation is conserved over time
+
 \end{document}
