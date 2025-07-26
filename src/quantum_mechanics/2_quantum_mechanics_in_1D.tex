@@ -312,6 +312,631 @@
             We will find that when there are forces present, $\Delta p$ does indeed increase over time.
             In that sense, this is sort of a quantum analogue of Newton's first law.
 
-            % http://tinyurl.com/wave-packet
+            % TODO: http://tinyurl.com/wave-packet
+
+    \section{The Infinite Square Well}\label{sec:infinite-square-well}
+        We will now study the motion of a free particle that is confined to a finite region of space.
+        This is known as the \textbf{infinite square well} because the situation is described by an infinitely deep potential well, or sometimes it is called the \textbf{particle in a box} problem.
+
+        \subsection{Setting up the Schrodinger Equation}\label{sec:infinite-square-well:subsec:setting-up-the-schrodinger-equation}
+            Our square well will go from $x=0$ to $x=L$, then as stated above, the potential energy for this system takes the piecewise form
+            \begin{equation}
+                V(x)=\begin{cases}
+                    \infty & \text{for }x\leq 0\\
+                    0 & \text{for }0<x<L\\
+                    \infty & \text{for }x\geq L.
+                \end{cases}
+            \end{equation}
+            % TODO: diagram!
+            Inside the well, the TISE will therefore look just like it does for the free particle (since there are no forces acting inside the well), which is given by equation~\ref{eq:free-tise}:
+            \begin{equation}\label{eq:isw-tise}
+                \dv[2]{u(x)}{x}=-\frac{2mE}{\hbar^2}u(x).
+            \end{equation}
+            This equation may look the same as for the free particle, but the solutions take a slightly different form because the \textbf{boundary conditions} are different: equation~\ref{eq:isw-tise} is only valid inside the well.
+
+            Outside the well, the potential is infinite, so the wavefunction cannot exist and must be zero.
+
+        \subsection{Energy Eigenfunctions}\label{sec:infinite-square-well:subsec:energy-eigenfunctions}
+            Equation~\ref{eq:isw-tise} has the general solution
+            \begin{equation}
+                u(x)=A\sin(kx)+B\cos(kx),
+            \end{equation}
+            where the wavenumber is
+            \begin{equation}\label{eq:isw-wavenumber}
+                k=\frac{\sqrt{2mE}}{\hbar}.
+            \end{equation}
+            % TODO: comment on if this is the same as a free particle
+            We could write this using complex exponentials like we did for the free particle, but using trigonometric functions simplifies things here as we will see shortly.
+
+            We now need to take into account the boundary conditions.
+            Recall from section~\ref{sec:conditions-for-valid-wavefunctions:subsec:smoothness}, that the wavefunction needs to be continuous over all space.
+            For this to be the case, we must have that the wavefunction vanishes at the boundaries of the well.
+            \begin{equation}
+                u(0)=u(L)=0.
+            \end{equation}
+            The first condition implies that $B$ must be zero, and the second implies
+            \begin{align}
+                A\sin(kL)&=0\\
+                \implies k_n&=\frac{n\pi}{L},
+            \end{align}
+            where $n$ is a positive integer (negative integers give the same solutions multiplied by $-1$ since sine is an odd function, so we just ignore them, and $n=0$ makes the wavefunction zero everywhere, which is not interesting so we ignore that too).
+            So the wavenumber can only take on a discrete set of values given by positive integer multiples of $\frac{\pi}{L}$, which we have labelled $k_n$ with a subscript.
+
+            $A$ is the normalisation constant, which we can calculate by looking at the probability density:
+            \begin{equation}
+                \int_{-\infty}^\infty\abs{A\sin(k_n x)}\dd{x}=\abs{A}^2\int_0^L\sin^2\left(\frac{n\pi}{L}x\right)\dd{x}\overset{!}{=}1.
+            \end{equation}
+            The integral is $\frac{L}{2}$, which implies that $A=\sqrt{\frac{2}{L}}$.
+
+            Thus, in contrast to the particle which is free over all space, the particle confined to a finite region has a \textbf{discrete} set of eigenfunctions, the spatial parts of which are given by
+            \begin{equation}\label{eq:isw-spatial-eigenstates}
+                u_n(x)=\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi}{L}x\right),\quad n=1,2,3,\dots
+            \end{equation}
+
+            The energy eigenvalues are given by equation~\ref{eq:isw-wavenumber}:
+            \begin{equation}\label{eq:isw-eigenvalues}
+                E_n=\frac{\hbar^2k^2}{2m}=\frac{\pi^2\hbar^2}{2mL^2}n^2.
+            \end{equation}
+            So the total energy is only allowed to be from a discrete set of values as well.
+
+            The full time-dependent energy eigenstates are
+            \begin{equation}\label{eq:isw-eigenstates}
+                \psi_n(x,t)=\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi}{L}x\right)e^{-\frac{\pi^2\hbar}{2mL^2}n^2t},\quad n=1,2,3,\dots
+            \end{equation}
+            % TODO: talk about momentum-space wavefunction, how these eigenstates are not momentum eigenstates (exercise)
+            In Dirac notation, these are written as $\ket{n}$.
+            Although it can be ambiguous whether the wavefunction for a state $\ket{n}$ (i.e. $\braket{x}{n}$) is the full time-dependent eigenfunction $\psi_n$ or just the spatial part $u_n$, it is usually either determined by context or it does not matter. 
+
+            As $n$ increases, the spacing between the energy levels gets larger.
+            % TODO: diagram
+            Also note that the more narrow the well (smaller $L$), the higher the energy levels.
+            Note that the lowest possible energy, what we call the \textbf{ground state}, is found when $n=1$, so the particle can never have zero energy.
+            These are manifestations of the uncertainty principle, specifically that localising a particle necessitates if having a higher momentum uncertainty as we saw in section~\ref{sec:quantum-uncertainty}.
+            A particle which has any localisation at all can never have zero energy, since that would imply it has zero momentum for certain.
+
+            % TODO: http://tinyurl.com/infwell1d
+            % TODO: http://tinyurl.com/timedev
+
+        \subsection{Probability Density}\label{sec:infinite-square-well:subsec:probability-density}
+            As we can see from equation~\ref{eq:isw-eigenstates}, the wavefunction of the particle oscillates faster in both space and time the large $n$ is.
+            This carries over to the spatial probability density, which is
+            \begin{equation}
+                \abs{\psi_n(x,t)}^2=\frac{2}{L}\sin^2\left(\frac{n\pi}{L}x\right).
+            \end{equation}
+            % TODO: diagram!
+
+            How does this compare to the probability density of a classical free particle in an infinite well?
+            This would be like a particle sliding back and force on a frictionless surface between two walls, with elastic collisions at both ends.
+            Since the particle's speed is constant, it is equally likely to be found anywhere within the well, so we have
+            \begin{equation}
+                P_\text{Cl}=\frac{1}{L}.
+            \end{equation}
+            The correspondence principle suggests that the quantum probability density would reduce to the classical probability density in the classical limit of large energy (large $n$).
+            % TODO: diagram!
+            This does not appear to be the case here, but we need to look at the actual probability rather than just the values of probability density.
+            It is the case that as $n\to\infty$, $\abs{\psi_n}^2\Delta x$ tends to $P_\text{Cl}\Delta x$ for any interval $\Delta x$.
+            % TODO: prove this
+            
+            Why then does the quantum probability density oscillate with ever shorter wavelength for increasing $n$?
+            The answer comes from looking at the expectation value of the particle's kinetic energy.
+            We saw that the kinetic energy operator was given by equation~\ref{eq:operator-kinetic-energy}, so the expectation value for a general wavefunction $\psi(x,t)$ is
+            \begin{align}
+                \langle\hat{T}\rangle&=\int_{-\infty}^\infty\psi^\ast\hat{T}\psi\dd{x}\\
+                &=-\frac{\hbar^2}{2m}\int_{-\infty}^\infty\psi^\ast\pdv[2]{\psi}{x}\dd{x}.
+            \end{align}
+            Integrating by parts and using the same argument as in section~\ref{subsec:operators-with-continuous-eigenvalues} to justify that the surface terms vanish, we get
+            \begin{align}
+                \langle\hat{T}\rangle&=-\frac{\hbar^2}{2m}\left[\left.\psi^\ast\pdv{\psi}{x}\right|_{-\infty}^\infty-\int_{-\infty}^\infty\pdv{\psi^\ast}{x}\pdv{\psi}{x}\dd{x}\right]\\
+                &=\frac{\hbar^2}{2m}\int_{-\infty}^\infty\left|\pdv{\psi}{x}\right|^2\dd{x}.
+                % TODO: fix vbars not resizing with \abs{}?
+            \end{align}
+            So the average kinetic energy is related to the ``wiggliness'' of the wavefunction.
+            In particular, for the infinite square well we find that the expectation of kinetic energy for the energy eigenstates $\langle\hat{T}\rangle_{\psi_n}=E_n$, so as $n$ increases the wavefunction oscillates with shorter wavelengths.
     
+    \section{Properties of Energy Eigenstates}\label{sec:properties-of-energy-eigenstates}
+        We will now discuss some properties of the energy eigenstates.
+        These apply for the eigenstates of the infinite square well (equation~\ref{eq:isw-eigenstates}), but also to the solutions of the TISE for any other problem.
+
+        \subsection{Orthonormality}\label{sec:properties-of-energy-eigenstates:subsec:orthonormality}
+            Orthonormality consists of two properties of a set of functions: being mutually orthogonal, and being all normalised.
+            Orthogonality of wavefunctions in quantum mechanics is measured using an \textbf{inner product}, which is defined by the integral:
+            \begin{equation}
+                \int_{-\infty}^\infty\psi_n^\ast\psi_m\dd{x}.
+            \end{equation}
+            If this integral is zero, the two wavefunctions are orthogonal.
+            If it is non zero, then they are not orthogonal.
+            Sometimes the inner product is referred to as the \textbf{overlap} of the two wavefunctions.
+            A set of wavefunctions being mutually orthogonal means that each wavefunction in the set is orthogonal to every other one.
+
+            Taking the two conditions together, a set of wavefunctions $\psi_n$ are said to be mutally orthonormal if
+            \begin{equation}
+                \int_{-\infty}^\infty\psi_n^\ast\psi_m\dd{x}=\delta_{n,m}=\begin{cases}
+                    1 & \text{if } n=m\\
+                    0 & \text{if } n\neq m.
+                \end{cases}
+            \end{equation}
+            This statement implies that the wavefunctions are mutually orthogonal except in the case where we are taking the inner product of a wavefunction with itself, in which case we have the integral of the magnitude squared which would be one to have the wavefunction normalised.
+            We have introduced the \textbf{Kronecker delta} $\delta_{n,m}$ which is shorthand for the piecewise definition on the right so simplify the notation.
+            In Dirac notation, this is written as
+            \begin{equation}
+                \braket{n}{m}=\delta_{n,m}.
+            \end{equation}
+
+            Why is it always the case that the wavefunctions are orthonormal?
+            We will prove later on that it is because the Hamiltonian is a Hermitian operator.
+
+        \subsection{Eigenfunctions form a Basis}\label{sec:properties-of-energy-eigenstates:subsec:eigenfunctions-form-a-basis}
+            For any problem in quantum mechanics, the energy eigenfunctions form what is known as a \textbf{basis}.
+            This means that we can expand any valid wavefunction $\psi$ which fulfills the boundary conditions as a linear superposition of energy eigenstates:
+            \begin{equation}\label{eq:superposition-time-evolution}
+                \psi(x,t)=\sum_{n=1}^\infty c_n\psi_n(x,t)=\sum_{n=1}^\infty c_nu_n(x)e^{-\frac{iE_n}{\hbar}t},
+            \end{equation}
+            where $\psi_n(x,t)$ are the energy eigenfunctions, $u_n(x)$ are the spatial part, $E_n$ are the energy eigenvalues, and $c_n$ are the coefficients in the superposition.
+            Note that we have taken $n=1$ to $\infty$ to be the indices for the sum since those are the indices for the eigenfunctions of the infinite square well, but when applying this to other problems we could have different labels.
+            % TODO: note why this is always possible
+
+            This is exactly what we saw in section~\ref{sec:gaussian-wave-packets} when we constructed a normalisable wave packet as an integral over energy/momentum eigenstates.
+            In that case (for the free particle), a finite or even discretely infinite superposition was still not normalisable, but in general it will be because the energy eigenstates are normalisable.
+            Note that the probability density of a superposition does depend on time in almost all cases, because the time-dependent phases in the energy eigenstates rotate at different frequencies.
+            This causes them to have a phase difference which causes the time-dependence.
+            % TODO: exercise here
+
+            For the wavefunction $\psi$ to be correctly normalised, we must then have
+            \begin{equation}
+                \sum_{n=1}^\infty\abs{c_n}^2=1.
+            \end{equation}
+            % TODO: exercise here
+
+            There is a physical interpretation for the coefficients of the superposition $c_n$.
+            If we look at the expectation value of the Hamiltonian for the above superposition, we get
+            \begin{align}
+                \langle\hat{H}\rangle_\psi&=\int_{-\infty}^\infty\psi^\ast\hat{H}\psi\dd{x}\\
+                &=\int_{-\infty}^\infty\sum_{m=1}^\infty c_m^\ast\psi_m^\ast\sum_{n=1}^\infty c_n\hat{H}\psi_n\dd{x}\\
+                &=\sum_{m=1}^\infty\sum_{n=1}^\infty E_nc_m^\ast c_n\int_{-\infty}^\infty\psi_m^\ast\psi_n\dd{x}\\
+                &=\sum_{m=1}^\infty\sum_{n=1}^\infty E_nc_m^\ast c_n\delta_{n,m}\\
+                &=\sum_{n=1}^\infty E_n\abs{c_n}^2.
+            \end{align}
+            If we compare this to equation~\ref{eq:operator-expval-discrete}, we see that $\abs{c_n}^2$ is the probability of finding the value $E_n$ if the particle's energy is measured. 
+            % TODO: define at expectation value of the Hamiltonian for an energy eigenstate earlier
+
+            This is immediately apparent if we write the superposition using Dirac notation, it takes the form of equation~\ref{eq:braket-superposition}:
+            \begin{equation}\label{eq:isw-braket-superposition}
+                \ket{\psi}=\sum_{n=1}^\infty c_n\ket{n}=\sum_{n=1}^\infty\braket{n}{\psi}\ket{\psi},
+            \end{equation}
+            where $\braket{n}{\psi}$, the inner product or overlap between $\ket{\psi}$ and the eigenstate $\ket{n}$, is the probability that we find the particle in state $\ket{n}$ upon measuring the energy.
+
+        \subsection{Expanding in the Energy Eigenbasis}\label{sec:properties-of-energy-eigenstates:subsec:expanding-in-the-energy-eigenbasis}
+            What about if we have a wavefunction that is not clearly written as a superposition of energy eigenstates.
+            How can we find its time evolution?
+            For example, consider an initial state for the infinite square well
+            \begin{equation}
+                \psi(x,0)=N\sin^3\left(\frac{\pi x}{L}\right)\quad\text{for }0<x<L,
+            \end{equation}
+            where $\psi(x,0)=0$ outside the well.
+            This is a valid wavefunction for the system (it is a valid wavefunction which can be normalised for a suitable choice of $N$ and it goes to zero at the boundaries of the well), but it is not written in the form~\ref{eq:superposition-time-evolution}.
+            
+            Since it is not of the form of one of the energy eigenfunctions, given by equation~\ref{eq:isw-spatial-eigenstates}, it must be a superposition state.
+            The challenge is finding the right coefficients $c_n$ to write it in the form~\ref{eq:superposition-time-evolution}.
+            This is basically a generalised Fourier series problem, with the energy eigenfunctions taking the place of sine and cosine.
+            Notice that the energy eigenfunctions share the same essential properties for solving this problem that sine and cosine have, namely that they for a complete and orthonormal basis for the set of functions we are interested in.
+
+            Let us suppose that $\psi(x,0)$ from above takes the form
+            \begin{equation}
+                \psi(x,0)=\sum_{m=1}^\infty c_mu_m(x),
+            \end{equation}
+            and then, inspired by the connection to Fourier series, let us multiply by $u_n(x)*\ast$ and integrate over all space.
+            \begin{align}
+                \int_{-\infty}^\infty u_n(x)^\ast\psi(x,0)\dd{x}&=\int_{-\infty}^\infty u_n(x)^\ast\sum_{m=1}^\infty c_mu_m(x)\dd{x}\\
+                &=\sum_{m=1}^\infty c_m\int_{-\infty}^\infty u_n(x)^\ast u_m(x)\dd{x}\\
+                &=\sum_{m=1}^\infty c_m\delta_{n,m}\\
+                &=c_n.
+            \end{align}
+            So we have found that for any initial wavefunction $\psi(x,0)$, we can expand in energy eigenfunctions with coefficients given by the inner product of the spatial part of the energy eigenfunction with the wavefunction:
+            \begin{equation}
+                c_n=\int_{-\infty}^\infty u_n^\ast\psi(x,0)\dd{x}.
+            \end{equation}
+            Of course, we know this already from equation~\ref{eq:isw-braket-superposition}, but it is nice to prove it another way.
+            Once we have the coefficients $c_n$, the time evolution is straightforwardly given by~\ref{eq:superposition-time-evolution}.
+
+            This derivation makes sense because it shows that, in the same way that Fourier series work, if a given wavefunction looks ``similar'' to one of the eigenstates, the inner product between them, and therefore the corresponding coefficient, will be larger than the others.
+            This means that the time evolution of the superposition will be mostly similar to that of the most similar eigenstate.
+            % TODO: justify this better
+            % TODO: http://tinyurl.com/exp-eigenstates
+            % TODO: calculate the above example and do Ncos(2pix/L)sin(pix/L) as an example
+
+        \subsection{Time Evolution of Superpositions}\label{sec:properties-of-energy-eigenstates:subsec:time-evolution-of-superpositions}
+            Let us consider, as a simple example, the following superposition of two energy eigenstates:
+            \begin{equation}
+                \psi(x,t)=\frac{1}{\sqrt{2}}(u_1(x)e^{-\frac{iE_1}{\hbar}t}+u_2(x)e^{-\frac{iE_2}{\hbar}t}).
+            \end{equation}
+            The time evolution of the probability density is given by
+            \begin{equation}
+                \abs{\psi(x,t)}^2=\frac{1}{2}\abs{u_1(x)}^2+\frac{1}{2}\abs{u_2(x)}^2+u_1^\ast(x)u_2(x)\cos\left(\frac{(E_2-E_1)t}{\hbar}\right).
+            \end{equation}
+            % TODO: comment on this
+
+            % TODO: show that for isw this oscillates about the centre
+            % TODO: calculate uncertainty for isw?
+
+            If no measurement of the particle is made then its wavefunction evolves deterministically like this, governed by the Schrodinger equation.
+            If the particle's energy is measured, its state will instantly and non-deterministically collapse into one of the energy eigenstates.
+            For example when measuring the energy of the two-energy state above, we can tell from the coefficients that we have $50\%$ probability to measure $E_1$ and $50\%$ probability to measure $E_2$.
+            Suppose we measure $E_2$, then the particle's wavefunction becomes
+            \begin{equation}
+                \psi(x,t)=u_2(x)e^{-\frac{iE_2}{\hbar}t},
+            \end{equation}
+            i.e. the particle is now in an energy eigenstate and the probability density is constant over time.
+            All subsequent measurements of the energy will therefore return $E_2$.
+
+            If we measured an observable $\hat{O}$ whos eigenfunctions are not also eigenfunctions of the Hamiltonian, then the collapsed state after measurement will evolve as a superposition state.
+            For example, if we had a particle in an infinite square well and we measured the particle's momentum, then its wavefunction would collapse into a momentum eigenstate.
+            As we have seen, these are not energy eigenstates, so they must be superpositions of energy eigenstates.
+            Such observables with different sets of eigenfunctions are called \textbf{incompatible}, and we will study them more in section~\ref{sec:commutators}.
+
+            Note that when an observable operator $\hat{O}$ acts on a state $\psi$ which is not an eigenstate of $\hat{O}$, the result $\hat{O}\psi$ is \textit{not} what we measure.
+            $\hat{O}\psi$ is a superposition of eigenstates of $\hat{O}$ multiplied by eigenvalues and probability amplitudes of measuring each value.
+            The wavefunction after measurement collapses into one of the eigenstates of $\hat{O}$.
+            % TODO: demonstrate this with an example
+
+    % TODO: finite square well, scattering potentials
+    % TODO: https://tinyurl.com/superpos-infwell
+
+    \section{Hermitian Operators}\label{sec:hermitian-operators}
+        The goal of this section is to think a little bit more about what kinds of operators we can have in quantum mechanics.
+        We have seen that operators represent observable properties of a quantum system, with their eigenvalues representing possible measurement outcomes, but is this the case for all operators?
+        Do all operators represent observable quantities?
+        If not, how can we tell if an operator does represent an observable?
+
+        It turns out that only a special subset of operators are observables.
+        These operators are the so-called \textbf{Hermitian operators}, which is a mathematical property.
+        We will go over what this means and why Hermitian operators are observable below, but first we need to introduce another property of operators, the adjoint. 
+        
+        \subsection{The Adjoint}\label{sec:hermitian-operators:subsec:the-adjoint}
+            For every operator $\hat{O}$ we can define a generalisation of the complex conjugate of a scalar called the \textbf{adjoint}, or \textbf{Hermitian conjugate}, denoted with $\hat{O}^\dagger$.
+            But how do we define the complex conjugate of an operator?
+            In a finite dimensional Hilbert space where operators are matrices, the generalisation of the complex conjugate is the conjugate transpose.
+            But how do we define the conjugate transpose of an operator in an infinite dimensional Hilbert space?
+
+            Instead of trying to wrap our heads around what different types of operators in infinite dimensions can look like and trying to define a generalisation of conjugate transpose for them, let's look at how the conjugate transpose acts on vectors.
+            In finite dimensions, we have that for a complex vector $\vec{u}$ and a matrix $A$:
+            \begin{equation}
+                (A\vec{u})^\dagger=\vec{u}^\dagger A^\dagger,
+            \end{equation}
+            where the $\dagger$ denotes conjugate transpose.
+            This means for the inner product of $A\vec{u}$ with another complex vector $\vec{v}$ we have
+            \begin{equation}
+                A\vec{u}\cdot\vec{v}=(A\vec{u})^\dagger\vec{v}=\vec{u}^\dagger A^\dagger\vec{v}=\vec{u}\cdot(A^\dagger\vec{v}).
+            \end{equation}
+            In Dirac notation this would be written as
+            \begin{equation}
+                \braket{\hat{A}u}{v}=\matrixelement{u}{\hat{A}}{v}.
+            \end{equation}
+            We can now simply \textit{define} the adjoint of an operator in an infinite dimensional Hilbert space to satisfy this relation.
+            \begin{definition}
+                For an operator $\hat{O}$, the \textbf{adjoint}, or \textbf{Hermitian conjugate}, of $\hat{O}$, denoted $\hat{O}^\dagger$, is the operator which for any states $\ket{\psi}$ and $\ket{\phi}$ satisfies:
+                \begin{equation}\label{eq:adjoint-braket}
+                    \braket{\hat{O}\psi}{\phi}=\matrixelement{\psi}{\hat{O}^\dagger}{\phi},
+                \end{equation}
+                or in the position basis:
+                \begin{equation}\label{eq:adjoint-integral}
+                    \int_{-\infty}^\infty(\hat{O}\psi)^\ast\phi\dd{x}=\int_{-\infty}^\infty\psi^\ast\hat{O}^\dagger\phi\dd{x}.
+                \end{equation}
+            \end{definition}
+            % TODO: prove position basis statement
+            % TODO: existence and uniqueness??
+
+            Some operators are equal to their own adjoint.
+            \begin{equation}
+                \hat{O}^\dagger=\hat{O}.
+            \end{equation}
+            These operators are called \textbf{self-adjoint}, or more commonly among physicists, \textbf{Hermitian}.
+            \begin{definition}
+                A \textbf{Hermitian operator} is an operator $\hat{O}$ that is equal to its own adjoint $\hat{O}^\dagger$.
+                Hermitian operators can therefore be defined by the following identity:
+                \begin{equation}
+                    \braket{\hat{O}\psi}{\phi}=\matrixelement{\psi}{\hat{O}}{\phi},
+                \end{equation}
+                % TODO: prove that these are equivalent?
+                or in the position basis:
+                \begin{equation}
+                    \int_{-\infty}^\infty(\hat{O}\psi)^\ast\phi\dd{x}=\int_{-\infty}^\infty\psi^\ast\hat{O}\phi\dd{x}.
+                \end{equation}
+            \end{definition}
+            Hermitian operators can be viewed as the ``real numbers'' of operators.
+
+            Before moving on to defining what an observable is, we will calculate the adjoint of a product of two operators.
+            By definition of the adjoint (\ref{eq:adjoint-braket}), we have
+            \begin{equation}\label{eq:adjoint-product-definition}
+                \braket{\hat{A}\hat{B}\psi}{\phi}=\matrixelement{\psi}{(\hat{A}\hat{B})^\dagger}{\phi}.
+            \end{equation}
+            However, by defining $\ket{\chi}=\hat{B}\ket{\psi}$, we can apply the definition of the adjoint differently to get
+            \begin{equation}
+                \braket{\hat{A}\chi}{\phi}=\matrixelement{\chi}{\hat{A}^\dagger}{\phi}=\matrixelement{\hat{B}\psi}{\hat{A}^\dagger}{\phi}.
+            \end{equation}
+            Then, defining $\ket{\upsilon}=\hat{A}^\dagger\ket{\phi}$ and applying the definition of the adjoint one more time, we have
+            \begin{equation}
+                \braket{\hat{B}\psi}{\upsilon}=\matrixelement{\psi}{\hat{B}^\dagger}{\upsilon}=\matrixelement{\psi}{\hat{B}^\dagger\hat{A}^\dagger}{\phi}.
+            \end{equation}
+            Comparing this to equation~\ref{eq:adjoint-product-definition}, we have shown that
+            \begin{equation}
+                (\hat{A}\hat{B})^\dagger=\hat{B}^\dagger\hat{A}^\dagger.
+            \end{equation}
+            So the adjoint of the product of two operators is equal to the product of the adjoints in the opposite order. 
+            Note that these equations could equivalently be written with the position basis integral notation, but we will use Dirac notation from now on because it is less cumbersome.  
+
+        \subsection{What are Observables?}\label{sec:hermitian-operators:subsec:what-are-observables}
+            Let us think about what properties we require of operators for them to represent physical observables.
+            We would like that all the eigenvalues are real, since they represent measurement outcomes.
+            Additionally, we also require that eigenvectors corresponding to distinct eigenvalues are orthogonal, otherwise our probabilistic interpretation of state vectors in Hilbert space wouldn't work.
+            % TODO: justify this better
+            Finally, we would like that the eigenvectors of an observable form a basis for Hilbert space, so that any valid state of the system can be expressed as a superposition of eigenstates.
+
+            Looking at the first property, we will first show that all eigenvalues of an operator being real is equivalent to the expectation value of the operator for any valid state being real.
+            Let $\hat{O}$ be an operator with eigenstates $\ket{i}$ and eigenvalues $O_i$, so
+            \begin{equation}
+                \hat{O}\ket{i}=O_i\ket{i}\quad\forall i.
+            \end{equation}
+            Suppose the expectation value for \textit{any} state $\ket{\psi}$, $\langle\hat{O}\rangle_\psi$ is real.
+            Then the expectation value of $\hat{O}$ for each eigenstate is
+            \begin{equation}
+                \langle\hat{O}\rangle_i=\expval{\hat{O}}{i}=O_i\braket{i}{i}=O_i,
+            \end{equation}
+            which implies that $O_i$ must be real.
+            Conversely, if we assume that all of the $O_i$'s are real, then the expectation value of $\hat{O}$ for an arbitrary state $\ket{\psi}$ is
+            \begin{equation}
+                \langle\hat{O}\rangle_\psi=\expval{\hat{O}}{\psi}=\sum_{i,j}c_i^\ast c_j\matrixelement{i}{\hat{O}}{j}=\sum_{i,j}c_i^\ast c_j O_j\braket{i}{j}=\sum_{i,j}c_i^\ast c_j O_j\delta_{i,j}=\sum_i\abs{c_i}^2O_i,
+            \end{equation}
+            which is a sum of real numbers and is therefore itself real.
+            % TODO: put this in a theorem?
+
+            Now, note that the complex conjugate of an expectation value is given by
+            \begin{equation}
+                \langle\hat{O}\rangle_\psi^\ast=(\expval{\hat{O}}{\psi})^\ast=\braket{\hat{O}\psi}{\psi}.
+            \end{equation}
+            Finally, for the expectation value an operator $\hat{O}$ to be real, we must have
+            \begin{align}
+                \langle\hat{O}\rangle_\psi^\ast&=\langle\hat{O}\rangle_\psi\\
+                \implies\braket{\hat{O}\psi}{\psi}&=\expval{\hat{O}}{\psi},
+            \end{align}
+            and this is exactly the definition of a Hermitian operator!
+            So this implies that if $\hat{O}$ is Hermitian, all of its eigenvalues are real and thus it seems to be a valid candidate for an observable.
+            The converse is also true: if all of the eigenvalues of an operator are real, then that operator is Hermitian.
+            % TODO: prove this
+            This equivalency leads us to believe that \textit{all} observables are Hermitian operators (and vice versa!).
+
+            What about the other properties?
+            It turns out that Hermitian operators fulfill them too.
+
+            Consider a Hermitian operator $\hat{O}$ and let $\ket{i}$ and $\ket{j}$ be eigenstates of $\hat{O}$ with eigenvalues $O_i$ and $O_j$ respectively.
+            Then because $\hat{O}$ is Hermitian, we have that
+            \begin{equation}
+                \matrixelement{i}{\hat{O}}{j}-\matrixelement{j}{\hat{O}}{i}^\ast=0,
+            \end{equation}
+            but by expanding these inner products we find
+            \begin{align}
+                \matrixelement{i}{\hat{O}}{j}-\matrixelement{j}{\hat{O}}{i}^\ast&=O_j\braket{i}{j}-O_i\braket{j}{i}^\ast\\
+                &=(O_j-O_i)\braket{i}{j}.
+            \end{align}
+            Thus if $O_i\neq O_j$ then $\braket{i}{j}=0$ so the eigenstates must be orthogonal.
+            What if $O_i=O_j$?
+            Then a linear combination of $\ket{i}$ and $\hat{j}$ is also an eigenvector!
+            Luckily, it is always possible to find two linear combinations that are orthogonal.
+            % TODO: since |i> and |j> are L.I.?
+            We will come back to study this case in more detail in chapter~\ref{chap:multiple-dimensions}.
+            % TODO: note that this is the spectral theorem
+            % TODO: this is a tutorial problem, also theorem 1.3.3 Ballentine
+
+            Since the Hamiltonian is Hermitian (it represents total energy which is observable), this implies that the energy eigenfunctions (with distinct eigenvalues) are mutually orthogonal.
+            We already saw this was the case for the infinite square well, but this implies that it is true for any system.
+            % TODO: prove that Hamiltonian is Hermitian using definition as an exercise
+
+            Finally, it can be shown that eigenvectors of Hermitian operators form a basis for the Hilbert space.
+            This means that for a set of eigenvectors $\ket{i}$ of a Hermitian operator $\hat{O}$, any state $\ket{\psi}$ can be written
+            \begin{equation}
+                \ket{\psi}=\sum_i c_i\ket{i}=\sum_i\ket{i}\braket{i}{\psi}.
+            \end{equation}
+            Where we have introduced the orthonormality condition of the eigenvectors to show that the coefficients $c_i=\braket{i}{\psi}$ (as we saw when we were expanding an arbitrary state in terms of the energy eigenfunctions for the infinite square well in section~\ref{sec:properties-of-energy-eigenstates:subsec:expanding-in-the-energy-eigenbasis}).
+            % TODO: this only holds in finite dimensions generally, see section 1.3 Ballentine
+
+            We can pull an interesting fact from this equation.
+            If we put brackets around all the terms including $i$, 
+            \begin{equation}
+                \ket{\psi}=\left(\sum_i\ket{i}\bra{i}\right)\ket{\psi},
+            \end{equation}
+            then since this equation holds for any state $\ket{\psi}$, the term in the brackets must be equal to the identity operator!
+            \begin{equation}
+                \sum_i\ket{i}\bra{i}=I.
+            \end{equation}
+            This is called a \textbf{resolution of the identity}.
+            % TODO: probably should explain why we are allowed to do this, looks gung ho
+            % TODO: also haven't really introduced the idea that a ket-bra is an operator
+            % TODO: also explain how it works for continuous operators e.g. position
+            This is a fact that comes in useful sometimes for evaluating complicated expressions and we will use it later on.
+            In particular, it lets us write down the diagonal representation of $\hat{O}$, which is given by
+            \begin{equation}
+                \hat{O}=\sum_i O_i\ket{i}\bra{i}.
+            \end{equation}
+
+            \begin{example}
+                Consider the operator $\hat{D}=\pdv{}{x}$. Does this operator represent an observable?
+
+                The easiest way to check this is to calculate the adjoint $\hat{D}^\dagger$ using the position basis definition~\ref{eq:adjoint-integral}.
+                We will start from the left hand side and integrate by parts:
+                \begin{align}
+                    \int_{-\infty}^\infty(\hat{D}\psi)^\ast\psi\dd{x}&=\int_{-\infty}^\infty\pdv{\psi^\ast}{x}\psi\dd{x}\\
+                    &=\left.\psi^\ast\psi\right|_{-\infty}^\infty-\int_{-\infty}^\infty\psi^\ast\pdv{\psi}{x}\dd{x}\\
+                    &=\int_{-\infty}^\infty\psi^\ast(-\hat{D})\psi\dd{x}.
+                \end{align}
+                By the definition of the adjoint, this is equal to the right hand side of equation~\ref{eq:adjoint-integral}, therefore we have
+                \begin{equation}
+                    \hat{D}^\dagger=-\hat{D}=-\pdv{}{x},
+                \end{equation}
+                so $\hat{D}$ is not Hermitian and therefore cannot be an observable.
+            \end{example}
+
+    \section{Commutators}\label{sec:commutators}
+        We have seen that we some operators it matters which order we apply them in.
+        For example, if we apply $\hat{x}$ then $\hat{p}$, we may get a different result to if we apply $\hat{p}$ then $\hat{x}$.
+        We can measure the degree to which two operators fail to commute using a simple expression called the commutator, denoted with square brackets.
+        \begin{definition}
+            The \textbf{commutator} of two operators $\hat{A}$ and $\hat{B}$ is defined as
+            \begin{equation}
+                [\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}.
+            \end{equation}
+            If $[\hat{A},\hat{B}]=0$, then $\hat{A}$ and $\hat{B}$ commute, that is changing their order of application does not change the result.
+        \end{definition}
+        \begin{example}\label{ex:commutator-x-p}
+            What is the commutator of position $\hat{x}=x$ and momentum $\hat{p}=-i\hbar\pdv{}{x}$?
+
+            To calculate this commutator, we need to act it on an arbitrary state $\ket{\psi}$ as if it was an operator, since $\hat{p}$ contains a derivative.
+            \begin{align}
+                [\hat{x},\hat{p}]\ket{\psi}&=\hat{x}\hat{p}\ket{\psi}-\hat{p}\hat{x}\ket{\psi}\\
+                &=x\left(-i\hbar\pdv{}{x}\right)\ket{\psi}-\left(-i\hbar\pdv{}{x}\right)(x\ket{\psi})\\
+                &=-i\hbar x\pdv{\ket{\psi}}{x}+i\hbar\pdv{}{x}(x\ket{\psi})\\
+                &=-i\hbar x\pdv{\ket{\psi}}{x}+i\hbar x\pdv{}{\ket{\psi}}+i\hbar\ket{\psi}\\
+                &=i\hbar\ket{\psi}.
+            \end{align}
+            This implies that
+            \begin{equation}\label{eq:x-p-commutator}
+                [\hat{x},\hat{p}]=i\hbar,
+            \end{equation}
+            so $\hat{x}$ and $\hat{p}$ do not commute.
+        \end{example}
+
+        Going back to products of two operators briefly, when is the product of two Hermitian operators itself Hermitian?
+        In section~\ref{sec:hermitian-operators:subsec:the-adjoint}, we showed that
+        \begin{equation}
+            (\hat{A}\hat{B})^\dagger=\hat{B}^\dagger\hat{A}^\dagger.
+        \end{equation}
+        Where $\hat{A}$ and $\hat{B}$ are Hermitian, we have
+        \begin{align}
+            (\hat{A}\hat{B})^\dagger&=\hat{B}\hat{A}\\
+            &=\hat{B}\hat{A}-\hat{A}\hat{B}+\hat{A}\hat{B}\\
+            &=\hat{A}\hat{B}-[\hat{A},\hat{B}].
+        \end{align}
+        So the product of two Hermitian operators is Hermitian \textit{only} if they commute, i.e. $[\hat{A},\hat{B}]=0$.
+        
+        Note that for two general operators that do not commute, we can switch their order in an expression by introducing the commutator:
+        \begin{align}
+            \hat{A}\hat{B}&=\hat{A}\hat{B}-\hat{B}\hat{A}+\hat{B}\hat{A}\\
+            &=\hat{B}\hat{A}+[\hat{A},\hat{B}].
+        \end{align}
+        Also, we have for any commutator that
+        \begin{equation}
+            [\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}=-(\hat{B}\hat{A}-\hat{A}\hat{B})=-[\hat{B},\hat{A}],
+        \end{equation}
+        so all commutators are antisymmetric.
+
+        You might think that two operators commuting is handy for manipulating expressions with products of operators but not much use beyond that, but actually the value of a the commutator has important implications for measurements.
+        In particular, we can show that two observables commuting is equivalent to them \textit{sharing} a common basis of eigenfunctions.
+        This means that the two observables can be ``measured simultaneously'', which means that we can know exactly which state the particle is in with respect to both observables at the same time.
+        
+        Let $\hat{A}$ and $\hat{B}$ be Hermitian operators which commute.
+        \begin{equation}
+            [\hat{A},\hat{B}]=0.
+        \end{equation}
+        Suppose the kets $\ket{i}$ are the basis of $\hat{A}$ with eigenvalues $A_i$.
+        \begin{equation}
+            \hat{A}\ket{i}=A_i\ket{i}\quad\forall i.
+        \end{equation}
+        Then because the commutator is zero, the order of application does not matter and we have
+        \begin{equation}
+            \hat{A}(\hat{B}\ket{i})=\hat{B}(\hat{A}\ket{i})=\hat{B}(A_i\ket{i})=A_i(\hat{B}\ket{i}).
+        \end{equation}
+        Note that the parentheses are not strictly necessary, they are just there for clarity.
+        The first and last parts taken together are an eigenvalue equation.
+        If each eigenstate $\ket{i}$ has a distinct eigenvalue, then this implies that $\hat{B}\ket{i}$ is a scalar multiple of $\ket{i}$.
+        % TODO: what about the case where there is degeneracy?
+        This further implies that $\ket{i}$ is an eigenstate of $\hat{B}$, and so we have shown that $\hat{A}$ and $\hat{B}$ share an eigenbasis.
+        
+        Conversely, suppose that we don't know what $[\hat{A},\hat{B}]$ is but we do know that $\hat{A}$ and $\hat{B}$ share an eigenbasis.
+        So $\hat{A}\ket{i}=A_i\ket{i}$ and $\hat{B}\ket{i}=B_i\ket{i}$ for all values of $i$.
+        Then we have that
+        \begin{align}
+            [\hat{A},\hat{B}]\ket{i}&=\hat{A}(\hat{B}\ket{i})-\hat{B}(\hat{A}\ket{i})\\
+            &=B_i\hat{A}\ket{i}-A_i\hat{B}\ket{i}\\
+            &=B_iA_i\ket{i}-A_iB_i\ket{i}\\
+            &=0,
+        \end{align}
+        for all $i$, hence $[\hat{A},\hat{B}]$ must be zero $\hat{A}$ commutes with $\hat{B}$.
+        % TODO: reference free particle case, E and p share eigenfunctions
+        
+        Being able to measure two observables simultaneously makes a bit more sense now.
+        Suppose we measure $\hat{A}$ first, then if the particle is not in an eigenstate of $\hat{A}$ already then it will collapse into one.
+        Then, when we measure $\hat{B}$, the particle is already in an eigenstate of $\hat{B}$ and so we will get that eigenvalue and the particle will still be in the state we measured for $\hat{A}$.
+        This would not be the case if $\hat{A}$ and $\hat{B}$ did not commute.
+        Then upon measuring $\hat{B}$, the particle would be in a superposition state with respect to $\hat{A}$ and we would no longer know its state with respect to $\hat{A}$ for certain.
+        
+        As we stated in section~\ref{sec:properties-of-energy-eigenstates:subsec:time-evolution-of-superpositions}, observables which do not share a set of eigenfunctions, i.e. do not commute, are called \textbf{incompatible observables}. 
+        The most famous set of incompatible observables is certainly position and momentum.
+        As we saw in example~\ref{ex:commutator-x-p}, position and momentum do not commute, meaning there do not exist simultaneous eigenfunctions of $\hat{x}$ and $\hat{p}$.
+        There are therefore no quantum states with definite values of both position and momentum.
+        
+        \subsection{Uncertainty from Incompatibility}\label{subsec:uncertainty-from-incompatibility}
+            The fact that observables which do not commmute do not share eigenfunctions is directly responsible for the uncertainty principle.
+            It can be shown that for two observables $\hat{A}$ and $\hat{B}$, the product of their uncertainties obeys the relation:
+            \begin{equation}\label{eq:general-uncertainty-relation}
+                \Delta A\Delta B\geq\frac{1}{2}\abs{\langle[\hat{A},\hat{B}]\rangle}.
+            \end{equation}
+            This is known as the \textbf{general uncertainty relation}.
+            The right hand side means we find the commutator of $\hat{A}$ and $\hat{B}$, then calculate the expectation value of the result, then take the modulus of that.
+            % TODO: prove this, proof in Robinett 12.4
+            \begin{example}
+                Prove the famous Heisenberg uncertainty relation~\ref{eq:x-p-uncertainty}:
+                \begin{equation}
+                    \Delta x\Delta p\geq\frac{\hbar}{2}.
+                \end{equation}
+
+                Putting $\hat{x}$ and $\hat{p}$ into equation~\ref{eq:general-uncertainty-relation} and using~\ref{eq:x-p-commutator} gives
+                \begin{align}
+                    \Delta x\Delta p&\geq\frac{1}{2}\abs{\langle[\hat{x},\hat{p}]\rangle}\\
+                    &\geq\frac{1}{2}\abs{\langle i\hbar\rangle}\\
+                    &=\geq\frac{1}{2}\abs{i\hbar}\\
+                    &=\geq\frac{\hbar}{2}.
+                \end{align}
+            \end{example}
+
+        % TODO: mention connection to Poisson bracket from classical mechanics
+        
+    \section{Conservation Laws}\label{sec:conservation-laws}
+        In classical mechanics, and especially in advanced problem solving techniques, conserved quantities are of upmost importance because of their ability to simplify problems.
+        A conserved quantity is defined classically as one with a time derivative of zero.
+        Unfortunately, in quantum mechanics we cannot really define conserved quantities in the same way, since a particle's state is fundamentally uncertain until measurement.
+        What we can look at is the time derivative of expectation values.
+
+        Let $\hat{O}$ be a Hermitian operator, and assume that it does not explicitly depend on time, i.e. $\pdv{\hat{O}}{t}=0$.
+        Then the expectation value, which may depend on time through the time dependence of the state $\ket{\psi}$, is
+        \begin{align}
+            \dv{}{t}\langle\hat{O}\rangle&=\dv{}{t}\expval{\hat{O}}{\psi}\\
+            &=\pdv{}{t}(\bra{\psi})\hat{O}\ket{\psi}+\bra{\psi}\hat{O}\pdv{}{t}\ket{\psi},
+        \end{align}
+        where in the second line the first partial derivative only acts on the bra.
+        % TODO: in the integral notation this is using the Leibniz integral rule, explain how this is allowed 
+        Now we will use the same trick we have used several times already to get rid of the time derivatives by substituting in the Schrodinger equation and its complex conjugate.
+        This time we will substitute in the TDSE.
+        In Dirac notation, the substitution looks like:
+        \begin{equation}
+            \pdv{\ket{\psi}}{t}=-\frac{i}{\hbar}\hat{H}\ket{\psi},\quad\pdv{\bra{\psi}}{t}=\frac{i}{\hbar}\bra{\psi}\hat{H}.
+        \end{equation}
+        So we have
+        \begin{align}
+            \dv{}{t}\langle\hat{O}\rangle&=\frac{i}{\hbar}\bra{\psi}\hat{H}\hat{O}\ket{\psi}-\frac{i}{\hbar}\bra{\psi}\hat{O}\hat{H}\ket{\psi}\\
+            &=\frac{i}{\hbar}\expval{[\hat{H},\hat{O}]}{\psi}\\
+            &=\frac{i}{\hbar}\langle[\hat{H},\hat{O}]\rangle.
+        \end{align}
+        If the commutator $[\hat{H},\hat{O}]=0$, then the expectation value is zero.
+        This tells us that if $\hat{O}$ does not explicitly depend on time and commutes with the Hamiltonian, its expectation value will be constant over time.
+        This is the quantum analogue of a conserved quantity.
+        % TODO: mention link to the correspondence principle
+
+        The result above can be applied to position and momentum to show that they actually obey Newton's laws of motion \textit{on average}.
+        Specifically, we have
+        \begin{align}
+            m\dv{\langle\hat{x}\rangle}{t}&=\langle\hat{p}\rangle\\
+            \dv{\langle\hat{p}\rangle}{t}&=-\left\langle\dv{V(x)}{x}\right\rangle.
+        \end{align}
+        These two results are known as the \textbf{Ehrenfest theorem}.
+        % TODO: prove these as exercises
+
 \end{document}
+        
