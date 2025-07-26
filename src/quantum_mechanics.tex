@@ -25,17 +25,24 @@
     \maketitle
     \tableofcontents
 
-    \chapter{Preface}
+    \chapter{Preface}\label{chap:preface}
 
     \mainmatter
-    \chapter{Introduction}
+    \chapter{Principles of Quantum Mechanics}\label{chap:principles}
     \subfile{quantum_mechanics/1_principles.tex}
-    \chapter{1-Dimensional Quantum Mechanics}
-    \subfile{quantum_mechanics/2_1d_quantum_mechanics.tex}
+    \chapter{Quantum Mechanics in One Dimension}\label{chap:one-dimension}
+    \subfile{quantum_mechanics/2_quantum_mechanics_in_1D.tex}
+    \chapter{The Quantum Harmonic Oscillator}\label{chap:quantum-harmonic-oscillator}
+    \subfile{quantum_mechanics/3_harmonic_oscillator.tex}
+    \chapter{Quantum Mechanics in Multiple Dimensions}\label{chap:multiple-dimensions}
+    \subfile{quantum_mechanics/4_quantum_mechanics_in_multiple_dimensions.tex}
+    
+    \chapter{The Hydrogen Atom}\label{chap:the-hydrogen-atom}
+    \subfile{quantum_mechanics/5_hydrogen_atom.tex}
 
     \backmatter
     \nocite{*}
     \bibliographystyle{plain}
-    \bibliography{quantum_mechanics/bibliography}
+    \bibliography{quantum_mechanics/bibliography}\label{bibliography}
 
 \end{document}
