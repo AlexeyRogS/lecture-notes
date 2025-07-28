@@ -197,7 +197,7 @@ li a:hover,  li a:focus {
 	margin-left: 1em;
 }
 
-.ltx_ref_self {
+.ltx_ref_self > span {
 	text-decoration: underline;
 }
 
