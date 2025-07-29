@@ -1,0 +1,677 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="hydrogen-hamiltonian.html" title="5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="next" href="energy-eigenstates.html" title="5.3 Energy Eigenstates of Hydrogen ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="hydrogen-hamiltonian.html" title="5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="energy-eigenstates.html" title="5.3 Energy Eigenstates of Hydrogen ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="angular-momentum.html" title="5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="hydrogen-hamiltonian.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>The Hydrogen Hamiltonian</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Solving the Hydrogen Atom</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="energy-eigenstates.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Energy Eigenstates of Hydrogen</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="angular-momentum.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Angular Momentum</span></a></li>
+</ol>
+</li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5.2 </span>Solving the Hydrogen Atom</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">To find the eigenfunctions of the hydrogen Hamiltonian, we will have to solve all three equations <a href="hydrogen-hamiltonian.html#Ch5.E10" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.10</span></a>, <a href="hydrogen-hamiltonian.html#Ch5.E13" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.13</span></a>, and <a href="hydrogen-hamiltonian.html#Ch5.E14" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.14</span></a>, find the possible values of the separation constants, and calculate the normalisation coefficients.
+Let’s do the simplest one, the azimuthal equation, first.</p>
+</div>
+<section id="the-azimuthal-equation" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.1 </span>The Azimuthal Equation</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Equation <a href="hydrogen-hamiltonian.html#Ch5.E14" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.14</span></a> is the simple harmonic motion equation, and its solutions are</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E15.m1" class="ltx_Math" alttext="\Phi(\phi)=Ce^{\pm im\phi}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>±</mo><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.15)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">For this wavefunction to be normalised, we must have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E16.m1" class="ltx_Math" alttext="\int_{0}^{2\pi}\lvert\Phi(\phi)\rvert^{2}\operatorname{\mathrm{d}}\!\phi=\int_%
+{0}^{2\pi}\lvert C\rvert^{2}=1," display="block"><mrow><mrow><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup><mrow><msup><mrow><mo lspace="0em" stretchy="false">|</mo><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup><msup><mrow><mo stretchy="false">|</mo><mi>C</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.16)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which implies</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E17.m1" class="ltx_Math" alttext="C=\frac{1}{\sqrt{2\pi}}." display="block"><mrow><mrow><mi>C</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.17)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">What are the possible values of <math id="SS1.p2.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>?
+Note that <math id="SS1.p2.m2" class="ltx_Math" alttext="\Phi(\phi)" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math> must be single-valued, and <math id="SS1.p2.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is a periodic variable, which enforces the following constraint for any value of <math id="SS1.p2.m4" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx68" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E18.m1" class="ltx_Math" alttext="\displaystyle\Phi(\phi)" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E18.m2" class="ltx_Math" alttext="\displaystyle=\Phi(\phi+2\pi)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ϕ</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.18)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E19.m1" class="ltx_Math" alttext="\displaystyle\frac{1}{\sqrt{2\pi}}e^{im\phi}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E19.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2\pi}}e^{im(\phi+2\pi)}=\frac{1}{\sqrt{2\pi}}e^{%
+im\phi}e^{2\pi im}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ϕ</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>m</mi></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.19)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This implies that <math id="SS1.p2.m5" class="ltx_Math" alttext="e^{2\pi im}" display="inline"><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>m</mi></mrow></msup></math> must be <math id="SS1.p2.m6" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, and therefore <math id="SS1.p2.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> must be an integer.
+The condition that <math id="SS1.p2.m8" class="ltx_Math" alttext="\Phi(\phi)" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math> must be periodic is our boundary condition that we are using to constrain <math id="SS1.p2.m9" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p"><math id="SS1.p3.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is called the <span class="ltx_text ltx_font_bold">magnetic quantum number</span>.
+We will come back to why it is called this later.</p>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">Finally, note that since <math id="SS1.p4.m1" class="ltx_Math" alttext="\lvert e^{im\phi}\rvert^{2}=1" display="inline"><mrow><msup><mrow><mo stretchy="false">|</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow></math> for all values of <math id="SS1.p4.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>, the final probability density <math id="SS1.p4.m3" class="ltx_Math" alttext="\lvert\psi\rvert^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math> will be <span class="ltx_text ltx_font_italic">independent</span> of <math id="SS1.p4.m4" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>.</p>
+</div>
+</section>
+<section id="the-polar-equation" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.2 </span>The Polar Equation</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">To solve equation <a href="hydrogen-hamiltonian.html#Ch5.E13" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.13</span></a>, we will first make the substitution <math id="SS2.p1.m1" class="ltx_Math" alttext="u=\cos\theta" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></math> along with</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx69" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E20.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!u}{\operatorname{\mathrm{d}}\!\theta}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E20.m2" class="ltx_Math" alttext="\displaystyle=-\sin\theta" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo rspace="0.167em">−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.20)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E21.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!\theta}" display="inline"><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E21.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!u}{\operatorname{\mathrm{d}}\!%
+\theta}\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!u}=-\sin%
+\theta\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!u}=-\sqrt{%
+1-u^{2}}\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!u}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow><mo>=</mo><mrow><mo rspace="0.167em">−</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.21)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where in the last equality we have used the identity <math id="SS2.p1.m2" class="ltx_Math" alttext="\sin\theta=\sqrt{1-\cos^{2}\theta}" display="inline"><mrow><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>=</mo><msqrt><mrow><mn>1</mn><mo>−</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></msqrt></mrow></math> over the range <math id="SS2.p1.m3" class="ltx_Math" alttext="0\leq\theta\leq\pi" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>θ</mi><mo>≤</mo><mi>π</mi></mrow></math>.
+With these substitutions,</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E22.m1" class="ltx_Math" alttext="\sin\theta\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!\theta%
+}=\sqrt{1-u^{2}}\left(-\sqrt{1-u^{2}}\frac{\operatorname{\mathrm{d}}\!}{%
+\operatorname{\mathrm{d}}\!u}\right)=(u^{2}-1)\frac{\operatorname{\mathrm{d}}%
+\!}{\operatorname{\mathrm{d}}\!u}," display="block"><mrow><mrow><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt><mo>⁢</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></msqrt><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.22)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so equation <a href="hydrogen-hamiltonian.html#Ch5.E13" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.13</span></a> becomes</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx70" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tbody id="Ch5.E23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E23.m1" class="ltx_Math" alttext="\displaystyle(u^{2}-1)\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm%
+{d}}\!u}\left((u^{2}-1)\frac{\operatorname{\mathrm{d}}\!\Theta}{\operatorname{%
+\mathrm{d}}\!u}\right)=(m^{2}-\lambda^{2}(1-u^{2}))\Theta" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>−</mo><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Θ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.23)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E24.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!u}%
+\left((1-u^{2})\frac{\operatorname{\mathrm{d}}\!\Theta}{\operatorname{\mathrm{%
+d}}\!u}\right)=\left(\frac{m^{2}}{1-u^{2}}-\lambda^{2}\right)\Theta," display="block"><mrow><mrow><mrow><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mfrac><msup><mi>m</mi><mn>2</mn></msup><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Θ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.24)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where in the last line we have divided by <math id="SS2.p1.m4" class="ltx_Math" alttext="-(u^{2}-1)" display="inline"><mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">This is a well-known differential equation called the <span class="ltx_text ltx_font_bold">general Legendre equation</span>.
+Its solutions are the <span class="ltx_text ltx_font_bold">associated Legendre polynomials</span> <math id="SS2.p2.m1" class="ltx_Math" alttext="P_{\ell}^{m}(u)" display="inline"><mrow><msubsup><mi>P</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></math>, where <math id="SS2.p2.m2" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> is a non-negative integer related to the separation constant <math id="SS2.p2.m3" class="ltx_Math" alttext="\lambda^{2}" display="inline"><msup><mi>λ</mi><mn>2</mn></msup></math> by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E25" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E25.m1" class="ltx_Math" alttext="\lambda^{2}=\ell(\ell+1)." display="block"><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.25)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This can be derived by a power series solution.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">The form of the associated Legendre polynomials can be given in terms of the (regular) <span class="ltx_text ltx_font_bold">Legendre polynomials</span> <math id="SS2.p3.m1" class="ltx_Math" alttext="P_{\ell}(u)" display="inline"><mrow><msub><mi>P</mi><mi mathvariant="normal">ℓ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></math>, which are solutions of the (regular) <span class="ltx_text ltx_font_bold">Legendre equation</span>, which is the general Legendre equation with <math id="SS2.p3.m2" class="ltx_Math" alttext="m=0" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow></math>.
+The Legendre polynomials can be defined by <span class="ltx_text ltx_font_bold">Rodrigues’ formula</span>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E26" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E26.m1" class="ltx_Math" alttext="P_{\ell}(u)=\frac{1}{2^{\ell}\ell!}\frac{\operatorname{\mathrm{d}}\!^{\ell}}{%
+\operatorname{\mathrm{d}}\!u^{\ell}}[(u^{2}-1)^{\ell}]." display="block"><mrow><mrow><mrow><msub><mi>P</mi><mi mathvariant="normal">ℓ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><msup><mn>2</mn><mi mathvariant="normal">ℓ</mi></msup><mo>⁢</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>!</mo></mrow></mrow></mfrac><mo>⁢</mo><mfrac><msup><mi mathvariant="normal">d</mi><mi mathvariant="normal">ℓ</mi></msup><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>u</mi><mi mathvariant="normal">ℓ</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi mathvariant="normal">ℓ</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.26)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">From this, the associated Legendre polynomials are given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx71" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E27.m1" class="ltx_Math" alttext="\displaystyle P_{\ell}^{m}(u)" display="inline"><mrow><msubsup><mi>P</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E27.m2" class="ltx_Math" alttext="\displaystyle=(-1)^{m}(1-u^{2})^{\frac{m}{2}}\frac{\operatorname{\mathrm{d}}\!%
+^{m}P_{\ell}(u)}{\operatorname{\mathrm{d}}\!u^{m}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mfrac><mi>m</mi><mn>2</mn></mfrac></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mi>m</mi></msup><mo lspace="0.167em">⁡</mo><msub><mi>P</mi><mi mathvariant="normal">ℓ</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>u</mi><mi>m</mi></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.27)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E28.m1" class="ltx_Math" alttext="\displaystyle=\frac{(-1)^{m}}{2^{\ell}\ell!}(1-u^{2})^{\frac{m}{2}}\frac{%
+\operatorname{\mathrm{d}}\!^{\ell+m}}{\operatorname{\mathrm{d}}\!u^{\ell+m}}[(%
+u^{2}-1)^{\ell}]." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mrow><msup><mn>2</mn><mi mathvariant="normal">ℓ</mi></msup><mo>⁢</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>!</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mfrac><mi>m</mi><mn>2</mn></mfrac></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mi>m</mi></mrow></msup><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>u</mi><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mi>m</mi></mrow></msup></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi mathvariant="normal">ℓ</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.28)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This formula implies that we have the constraint
+</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E29" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E29.m1" class="ltx_Math" alttext="0\leq\lvert m\rvert\leq\ell," display="block"><mrow><mrow><mn>0</mn><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>m</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.29)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which is also something that falls out from the series solution.</p>
+</div>
+<div id="SS2.p4" class="ltx_para">
+<p class="ltx_p"><math id="SS2.p4.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> is called the <span class="ltx_text ltx_font_bold">orbital angular momentum quantum number</span>, and again we will discuss its name later.</p>
+</div>
+</section>
+<section id="spherical-harmonics" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.3 </span>Spherical Harmonics</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Taking the solutions to the azimuthal and polar equations together, the solutions to the whole angular part of the TISE for the hydrogen atom (equation <a href="hydrogen-hamiltonian.html#Ch5.E11" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.11</span></a>) are</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E30.m1" class="ltx_Math" alttext="Y_{\ell}^{m}(\theta,\phi)=Ne^{im\phi}P_{\ell}^{m}(\cos\theta)," display="block"><mrow><mrow><mrow><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>N</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup><mo>⁢</mo><msubsup><mi>P</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.30)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS3.p1.m1" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is a normalisation constant such that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E31" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E31.m1" class="ltx_Math" alttext="\int_{0}^{2\pi}\int_{0}^{\pi}\lvert Y_{\ell}^{m}(\theta,\phi)\rvert^{2}\sin%
+\theta\operatorname{\mathrm{d}}\!\theta\operatorname{\mathrm{d}}\!\phi=1." display="block"><mrow><mrow><mrow><msubsup><mo>∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup><mrow><msubsup><mo lspace="0.167em" rspace="0em">∫</mo><mn>0</mn><mi>π</mi></msubsup><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>θ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.31)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p"><math id="SS3.p1.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> turns out to be given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E32" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E32.m1" class="ltx_Math" alttext="N=\sqrt{\frac{(2\ell+1)(\ell-m)!}{4\pi(\ell+m)!}}." display="block"><mrow><mrow><mi>N</mi><mo>=</mo><msqrt><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>−</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow><mo>!</mo></mrow></mrow><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mi>m</mi></mrow><mo stretchy="false">)</mo></mrow><mo>!</mo></mrow></mrow></mfrac></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.32)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">The allowed values of the orbital angular momentum and magnetic quantum numbers are</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx72" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E33.m1" class="ltx_Math" alttext="\displaystyle\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E33.m2" class="ltx_Math" alttext="\displaystyle=0,1,2,3,\dots" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.33)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E34"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E34.m1" class="ltx_Math" alttext="\displaystyle m" display="inline"><mi>m</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E34.m2" class="ltx_Math" alttext="\displaystyle=-\ell,-\ell+1,\dots,-1,0,1,\dots,\ell-1,\ell." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>,</mo><mrow><mrow><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">ℓ</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.34)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">Since the angular equation <a href="hydrogen-hamiltonian.html#Ch5.E11" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.11</span></a> did not depend on the potential at all, the angular part of the TISE would be the same for <span class="ltx_text ltx_font_italic">any</span> problem where the potential energy only depended on radial distance.
+For this reason, the functions <math id="SS3.p3.m1" class="ltx_Math" alttext="Y_{\ell}^{m}(\theta,\phi)" display="inline"><mrow><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math> are quite important and they appear in any problem with spherical symmetry.
+They are known as the <span class="ltx_text ltx_font_bold">spherical harmonics</span> and are to the surface of a sphere what sine and cosine are to a circle, i.e. they form a <span class="ltx_text ltx_font_bold">complete and orthonormal basis</span> for functions defined on the surface of the unit sphere.</p>
+</div>
+<div id="SS3.p4" class="ltx_para">
+<p class="ltx_p">The first few (normalised) spherical harmonics are given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx73" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E35"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E35.m1" class="ltx_Math" alttext="\displaystyle Y_{0}^{0}" display="inline"><msubsup><mi>Y</mi><mn>0</mn><mn>0</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E35.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{4\pi}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.35)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E36.m1" class="ltx_Math" alttext="\displaystyle Y_{1}^{0}" display="inline"><msubsup><mi>Y</mi><mn>1</mn><mn>0</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E36.m2" class="ltx_Math" alttext="\displaystyle=\sqrt{\frac{3}{4\pi}}\cos\theta,\quad Y_{1}^{1}=-\sqrt{\frac{3}{%
+8\pi}}\sin\theta e^{i\phi}" display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo rspace="1.167em">,</mo><mrow><msubsup><mi>Y</mi><mn>1</mn><mn>1</mn></msubsup><mo>=</mo><mrow><mo>−</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mn>3</mn><mrow><mn>8</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.36)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E37.m1" class="ltx_Math" alttext="\displaystyle Y_{2}^{0}" display="inline"><msubsup><mi>Y</mi><mn>2</mn><mn>0</mn></msubsup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E37.m2" class="ltx_Math" alttext="\displaystyle=\sqrt{\frac{5}{16\pi}}(3\cos^{2}\theta-1),\quad Y_{2}^{1}=-\sqrt%
+{\frac{15}{8\pi}}\sin\theta\cos\theta e^{i\phi},\quad Y_{2}^{2}=\sqrt{\frac{15%
+}{32\pi}}\sin^{2}\theta e^{2i\phi}," display="inline"><mrow><mrow><mrow><mi></mi><mo>=</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mn>5</mn><mrow><mn>16</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle></msqrt><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>3</mn><mo lspace="0.167em">⁢</mo><mrow><msup><mi>cos</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><msubsup><mi>Y</mi><mn>2</mn><mn>1</mn></msubsup><mo>=</mo><mrow><mo>−</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mn>15</mn><mrow><mn>8</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mrow></mrow></mrow></mrow></mrow><mo rspace="1.167em">,</mo><mrow><msubsup><mi>Y</mi><mn>2</mn><mn>2</mn></msubsup><mo>=</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mn>15</mn><mrow><mn>32</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mstyle></msqrt><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mrow></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.37)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p5" class="ltx_para">
+<p class="ltx_p">the spherical harmonics with negative <math id="SS3.p5.m1" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> are given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E38" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E38.m1" class="ltx_Math" alttext="Y_{\ell}^{-m}(\theta,\phi)=(-1)^{m}(Y_{\ell}^{m}(\theta,\phi))^{\ast}." display="block"><mrow><mrow><mrow><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mrow><mo>−</mo><mi>m</mi></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>m</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.38)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p6" class="ltx_para">
+<p class="ltx_p">The magnitude squared of the spherical harmonics gives the probability distribution of finding the electron in a certain direction from the proton.
+If we plot the magnitude squared, looking at the distance of the surface from the origin in a given direction gives us an idea of the likelihood of finding an electron in that direction (the larger the magnitude squared, the higher the probability).
+As we mentioned before, since the azimuthal part of the spherical harmonics is always just a complex exponential, we have that <math id="SS3.p6.m1" class="ltx_Math" alttext="\lvert Y_{\ell}^{m}\rvert^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math> does not depend on <math id="SS3.p6.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>, which means that all the spherical harmonics are rotationally symmetric about the <math id="SS3.p6.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis.
+Furthermore, we have that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E39" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E39.m1" class="ltx_Math" alttext="\lvert Y_{\ell}^{m}\rvert^{2}=\lvert Y_{\ell}^{-m}\rvert^{2}," display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mrow><mo>−</mo><mi>m</mi></mrow></msubsup><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.39)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">we will come back to the implications of this later.</p>
+</div>
+<div id="SS3.p7" class="ltx_para">
+<p class="ltx_p">The state with <math id="SS3.p7.m1" class="ltx_Math" alttext="\ell=m=0" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mi>m</mi><mo>=</mo><mn>0</mn></mrow></math> is the only one that is spherically symmetric, the electron is equally likely to be found in any direction.
+For <math id="SS3.p7.m2" class="ltx_Math" alttext="\ell&gt;0" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> we see that when <math id="SS3.p7.m3" class="ltx_Math" alttext="m=0" display="inline"><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow></math> the electron is most likely to be found on the <math id="SS3.p7.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis, whereas for <math id="SS3.p7.m5" class="ltx_Math" alttext="\lvert m\rvert=\ell" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>m</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi mathvariant="normal">ℓ</mi></mrow></math> it is most likely to be found in the <math id="SS3.p7.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>-<math id="SS3.p7.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> plane.</p>
+</div>
+</section>
+<section id="the-radial-equation" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.4 </span>The Radial Equation</h2>
+
+<div id="SS4.p1" class="ltx_para">
+<p class="ltx_p">Finally we turn to solving the radial equation <a href="hydrogen-hamiltonian.html#Ch5.E10" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.10</span></a>.
+Substituting the separation constant that we found earlier <math id="SS4.p1.m1" class="ltx_Math" alttext="\lambda^{2}=\ell(\ell+1)" display="inline"><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E40" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E40.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!r}\left(r^{2}%
+\frac{\operatorname{\mathrm{d}}\!R(r)}{\operatorname{\mathrm{d}}\!r}\right)+%
+\frac{2\mu r^{2}}{\hbar^{2}}\left(\frac{e^{2}}{4\pi\varepsilon_{0}r}+E\right)R%
+(r)=\ell(\ell+1)R(r)," display="block"><mrow><mrow><mrow><mrow><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>R</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><mi>r</mi></mrow></mfrac><mo>+</mo><mi>E</mi></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.40)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS4.p2" class="ltx_para">
+<p class="ltx_p">The solutions can then be derived explicitly using a series solution to be</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E41" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E41.m1" class="ltx_Math" alttext="R_{n\ell}(r)=\sum_{p=0}^{n-\ell-1}c_{p}\left(\frac{r}{a_{0}}\right)^{p+\ell}e^%
+{-\frac{r}{na_{0}}}," display="block"><mrow><mrow><mrow><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>p</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>n</mi><mo>−</mo><mi mathvariant="normal">ℓ</mi><mo>−</mo><mn>1</mn></mrow></munderover><mrow><msub><mi>c</mi><mi>p</mi></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mi>r</mi><msub><mi>a</mi><mn>0</mn></msub></mfrac><mo>)</mo></mrow><mrow><mi>p</mi><mo>+</mo><mi mathvariant="normal">ℓ</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mi>r</mi><mrow><mi>n</mi><mo>⁢</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mfrac></mrow></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.41)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where the <math id="SS4.p2.m1" class="ltx_Math" alttext="c_{p}" display="inline"><msub><mi>c</mi><mi>p</mi></msub></math>’s are coefficients, <math id="SS4.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a <span class="ltx_text ltx_font_italic">positive</span> integer, and <math id="SS4.p2.m3" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> is the <span class="ltx_text ltx_font_bold">Bohr radius</span>, given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E42" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E42.m1" class="ltx_Math" alttext="a_{0}=\frac{4\pi\varepsilon_{0}\hbar^{2}}{\mu e^{2}}." display="block"><mrow><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mrow><mrow><mi>μ</mi><mo>⁢</mo><msup><mi>e</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.42)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Technically this is the <span class="ltx_text ltx_font_italic">reduced</span> Bohr radius as the official definition has the electron mass instead of the reduced mass, but the difference is incredibly small since the electron is so much less massive than the proton.</p>
+</div>
+<div id="SS4.p3" class="ltx_para">
+<p class="ltx_p">The series solution imposes another constraint that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E43" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E43.m1" class="ltx_Math" alttext="\ell\leq n-1." display="block"><mrow><mrow><mi mathvariant="normal">ℓ</mi><mo>≤</mo><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.43)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS4.p4" class="ltx_para">
+<p class="ltx_p">We find that the energy eigenvalues only depend on <math id="SS4.p4.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, and are given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E44" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E44.m1" class="ltx_Math" alttext="E_{n}=-\frac{\hbar^{2}}{2\mu a_{0}^{2}n^{2}}=-\frac{R_{H}}{n^{2}}," display="block"><mrow><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mrow><mo>−</mo><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msubsup><mi>a</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><msub><mi>R</mi><mi>H</mi></msub><msup><mi>n</mi><mn>2</mn></msup></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.44)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have defined the <span class="ltx_text ltx_font_bold">Rydberg constant</span> <math id="SS4.p4.m2" class="ltx_Math" alttext="R_{H}=\frac{\hbar^{2}}{2\mu a_{0}^{2}}" display="inline"><mrow><msub><mi>R</mi><mi>H</mi></msub><mo>=</mo><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msubsup><mi>a</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mrow></math>.
+Because <math id="SS4.p4.m3" class="ltx_Math" alttext="E_{n}" display="inline"><msub><mi>E</mi><mi>n</mi></msub></math> depends only on the quantum number <math id="SS4.p4.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, it is called the <span class="ltx_text ltx_font_bold">principal quantum number</span>.</p>
+</div>
+<div id="SS4.p5" class="ltx_para">
+<p class="ltx_p">These radial parts of the wavefunction should be normalised using the condition</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E45" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E45.m1" class="ltx_Math" alttext="\int_{0}^{\infty}\lvert R_{n\ell}\rvert^{2}r^{2}\operatorname{\mathrm{d}}\!r=1," display="block"><mrow><mrow><mrow><msubsup><mo>∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo lspace="0em" stretchy="false">|</mo><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.45)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">and the first few eigenfunctions are:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx74" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E46"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E46.m1" class="ltx_Math" alttext="\displaystyle R_{10}(r)" display="inline"><mrow><msub><mi>R</mi><mn>10</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E46.m2" class="ltx_Math" alttext="\displaystyle=N_{10}e^{-\frac{r}{a_{0}}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>N</mi><mn>10</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mi>r</mi><msub><mi>a</mi><mn>0</mn></msub></mfrac></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.46)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E47"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E47.m1" class="ltx_Math" alttext="\displaystyle R_{20}(r)" display="inline"><mrow><msub><mi>R</mi><mn>20</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E47.m2" class="ltx_Math" alttext="\displaystyle=N_{20}\left(1-\frac{r}{2a_{0}}\right)e^{-\frac{r}{2a_{0}}},\quad
+R%
+_{21}(r)=N_{21}\frac{r}{a_{0}}e^{-\frac{r}{2a_{0}}}," display="inline"><mrow><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>N</mi><mn>20</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mstyle displaystyle="true"><mfrac><mi>r</mi><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mi>r</mi><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mfrac></mrow></msup></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><msub><mi>R</mi><mn>21</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>N</mi><mn>21</mn></msub><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>r</mi><msub><mi>a</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mi>r</mi><mrow><mn>2</mn><mo>⁢</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mfrac></mrow></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.47)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS4.p5.m1" class="ltx_Math" alttext="N_{n\ell}" display="inline"><msub><mi>N</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub></math> are the normalisation constants.</p>
+</div>
+<div id="SS4.p6" class="ltx_para">
+<p class="ltx_p">Multiplying the radial part with the spherical harmonics found earlier, we finally get the whole spatial part of the energy eigenstates as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E48" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E48.m1" class="ltx_Math" alttext="u_{n\ell m}(r,\theta,\phi)=R_{n\ell}(r)Y_{\ell}^{m}(\theta,\phi)." display="block"><mrow><mrow><mrow><msub><mi>u</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mi>m</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.48)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The spherical harmonics have no units, so since the magnitude squared of the whole spatial part should have units of <math id="SS4.p6.m1" class="ltx_Math" alttext="{\mathrm{m}}^{-3}" display="inline"><msup><mi class="ltx_unit" mathvariant="normal">m</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></math> (or “probability per unit volume”) the magnitude squared of the radial part <math id="SS4.p6.m2" class="ltx_Math" alttext="\lvert R_{n\ell}\rvert^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math> also has units of <math id="SS4.p6.m3" class="ltx_Math" alttext="{\mathrm{m}}^{-3}" display="inline"><msup><mi class="ltx_unit" mathvariant="normal">m</mi><mrow><mo>−</mo><mn>3</mn></mrow></msup></math>.
+This means that the radial part <math id="SS4.p6.m4" class="ltx_Math" alttext="R_{n\ell}" display="inline"><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub></math> itself has units of <math id="SS4.p6.m5" class="ltx_Math" alttext="{\mathrm{m}}^{-\frac{3}{2}}" display="inline"><msup><mi class="ltx_unit" mathvariant="normal">m</mi><mrow><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow></msup></math>.</p>
+</div>
+</section>
+<section id="radial-probability-density" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.2.5 </span>Radial Probability Density</h2>
+
+<div id="SS5.p1" class="ltx_para">
+<p class="ltx_p">The radial part of the wavefunction gives information about the likelihood of finding the electron a certain distance from the proton.
+Let’s calculate the probability of finding the electron in a spherical shell between <math id="SS5.p1.m1" class="ltx_Math" alttext="r_{1}" display="inline"><msub><mi>r</mi><mn>1</mn></msub></math> and <math id="SS5.p1.m2" class="ltx_Math" alttext="r_{2}" display="inline"><msub><mi>r</mi><mn>2</mn></msub></math>.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx75" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E49"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E49.m1" class="ltx_Math" alttext="\displaystyle P(r_{1}&lt;r&lt;r_{2})" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>&lt;</mo><mi>r</mi><mo>&lt;</mo><msub><mi>r</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E49.m2" class="ltx_Math" alttext="\displaystyle=\int_{0}^{2\pi}\int_{0}^{\pi}\int_{r_{1}}^{r_{2}}\lvert u(r,%
+\theta,\phi)\rvert^{2}r^{2}\sin\theta\operatorname{\mathrm{d}}\!r\operatorname%
+{\mathrm{d}}\!\theta\operatorname{\mathrm{d}}\!\phi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mi>π</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><msub><mi>r</mi><mn>1</mn></msub><msub><mi>r</mi><mn>2</mn></msub></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>r</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>θ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.49)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E50"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E50.m1" class="ltx_Math" alttext="\displaystyle=\int_{0}^{2\pi}\int_{0}^{\pi}\lvert Y_{\ell}^{m}(\theta,\phi)%
+\rvert^{2}\sin\theta\operatorname{\mathrm{d}}\!\theta\operatorname{\mathrm{d}}%
+\!\phi\int_{r_{1}}^{r_{2}}\lvert R_{n\ell}(r)\rvert^{2}r^{2}\operatorname{%
+\mathrm{d}}\!r" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msubsup></mstyle><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mn>0</mn><mi>π</mi></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>θ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mrow></mrow></mrow></mrow><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><msub><mi>r</mi><mn>1</mn></msub><msub><mi>r</mi><mn>2</mn></msub></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mrow></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.50)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E51"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E51.m1" class="ltx_Math" alttext="\displaystyle=\int_{r_{1}}^{r_{2}}\lvert R_{n\ell}(r)\rvert^{2}r^{2}%
+\operatorname{\mathrm{d}}\!r," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><msub><mi>r</mi><mn>1</mn></msub><msub><mi>r</mi><mn>2</mn></msub></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.51)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where in the last line we have used the fact that the spherical harmonics are normalised.
+The integrand <math id="SS5.p1.m3" class="ltx_Math" alttext="\lvert R_{n\ell}\rvert^{2}r^{2}" display="inline"><mrow><msup><mrow><mo stretchy="false">|</mo><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math> has units of <math id="SS5.p1.m4" class="ltx_Math" alttext="{\mathrm{m}}^{-1}" display="inline"><msup><mi class="ltx_unit" mathvariant="normal">m</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> or “probability per radial metre”, and so we must interpret this quantity as the <span class="ltx_text ltx_font_bold">radial probability density</span>, not the radial part of the wavefunction.
+This means that the most likely radial distance to find the electron from the proton is given by the maximum of <math id="SS5.p1.m5" class="ltx_Math" alttext="\lvert R_{n\ell}\rvert^{2}r^{2}" display="inline"><mrow><msup><mrow><mo stretchy="false">|</mo><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></math>, <span class="ltx_text ltx_font_italic">not</span> <math id="SS5.p1.m6" class="ltx_Math" alttext="\lvert R_{n\ell}\rvert^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><msub><mi>R</mi><mrow><mi>n</mi><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math>.</p>
+</div>
+<div id="Ch5.Thmexample1" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 5.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch5.Thmexample1.p1" class="ltx_para">
+<p class="ltx_p">What is the most likely distance to find the electron in the ground state <math id="Ch5.Thmexample1.p1.m1" class="ltx_Math" alttext="R_{10}" display="inline"><msub><mi>R</mi><mn>10</mn></msub></math>?</p>
+</div>
+<div id="Ch5.Thmexample1.p2" class="ltx_para">
+<p class="ltx_p">The radial part of the wavefunction is given by <math id="Ch5.Thmexample1.p2.m1" class="ltx_Math" alttext="R_{10}(r)=N_{10}e^{-\frac{r}{a_{0}}}" display="inline"><mrow><mrow><msub><mi>R</mi><mn>10</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>N</mi><mn>10</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mi>r</mi><msub><mi>a</mi><mn>0</mn></msub></mfrac></mrow></msup></mrow></mrow></math>, so the most likely distance is given by the maximum of</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E52" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E52.m1" class="ltx_Math" alttext="\lvert R_{10}(r)\rvert^{2}r^{2}=\lvert N_{10}\rvert^{2}e^{-\frac{2r}{a_{0}}}r^%
+{2}." display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>R</mi><mn>10</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">|</mo><msub><mi>N</mi><mn>10</mn></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow><msub><mi>a</mi><mn>0</mn></msub></mfrac></mrow></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.52)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">We can find this by differentiating and setting the derivative to zero:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx76" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E53"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E53.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!r}%
+\left(\lvert N_{10}\rvert^{2}e^{-\frac{2r}{a_{0}}}r^{2}\right)=2\lvert N_{10}%
+\rvert^{2}re^{-\frac{2r}{a_{0}}}-\frac{2\lvert N_{10}\rvert^{2}}{a_{0}}r^{2}e^%
+{-\frac{2r}{a_{0}}}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mrow><mo stretchy="false">|</mo><msub><mi>N</mi><mn>10</mn></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow><msub><mi>a</mi><mn>0</mn></msub></mfrac></mrow></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><msub><mi>N</mi><mn>10</mn></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mi>r</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow><msub><mi>a</mi><mn>0</mn></msub></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><msub><mi>N</mi><mn>10</mn></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><msub><mi>a</mi><mn>0</mn></msub></mfrac></mstyle><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow><msub><mi>a</mi><mn>0</mn></msub></mfrac></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E53.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.53)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E54"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E54.m1" class="ltx_Math" alttext="\displaystyle\implies 2r\left(1-\frac{r}{a_{0}}\right)" display="inline"><mrow><mi></mi><mo stretchy="false">⟹</mo><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mstyle displaystyle="true"><mfrac><mi>r</mi><msub><mi>a</mi><mn>0</mn></msub></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E54.m2" class="ltx_Math" alttext="\displaystyle=0." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.54)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">One solution to this equation is <math id="Ch5.Thmexample1.p2.m2" class="ltx_Math" alttext="r=0" display="inline"><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow></math> which is a minimum, and the other solution is <math id="Ch5.Thmexample1.p2.m3" class="ltx_Math" alttext="r=a_{0}" display="inline"><mrow><mi>r</mi><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></math>, which must be the maximum.</p>
+</div>
+<div id="Ch5.Thmexample1.p3" class="ltx_para">
+<p class="ltx_p">This justifies the common statement that the “size” of a hydrogen atom is <math id="Ch5.Thmexample1.p3.m1" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math>.</p>
+</div>
+</div>
+<div id="SS5.p2" class="ltx_para">
+<p class="ltx_p">In general, the radial probability density has <math id="SS5.p2.m1" class="ltx_Math" alttext="n-\ell" display="inline"><mrow><mi>n</mi><mo>−</mo><mi mathvariant="normal">ℓ</mi></mrow></math> maxima.
+For a fixed <math id="SS5.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the radius of the first maximum increases with increasing <math id="SS5.p2.m3" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.
+The maximum values also <span class="ltx_text ltx_font_italic">increase</span> with increasing radius, which makes sense because there is more volume, so we are more likely to find the electron there.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="hydrogen-hamiltonian.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>The Hydrogen Hamiltonian</span></a><a href="energy-eigenstates.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Energy Eigenstates of Hydrogen</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#the-azimuthal-equation" title="In 5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.1 </span>The Azimuthal Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#the-polar-equation" title="In 5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.2 </span>The Polar Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#spherical-harmonics" title="In 5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.3 </span>Spherical Harmonics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#the-radial-equation" title="In 5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.4 </span>The Radial Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#radial-probability-density" title="In 5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2.5 </span>Radial Probability Density</span></a></li>
+<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch5.Thmexample1" title=""><span class="ltx_text ltx_ref_title">Example 5.1</span></a></li></ol>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.7 Conservation Laws ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="commutators.html" title="2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="next" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="free-particle.html" title="2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="gaussian-wave-packets.html" title="2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="infinite-square-well.html" title="2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="properties-of-energy-eigenstates.html" title="2.4 Properties of Energy Eigenstates ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="hermitian-operators.html" title="2.5 Hermitian Operators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="commutators.html" title="2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="free-particle.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>The Free Particle</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="gaussian-wave-packets.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Gaussian Wave Packets</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="infinite-square-well.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3 </span>The Infinite Square Well</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="properties-of-energy-eigenstates.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>Properties of Energy Eigenstates</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="hermitian-operators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.5 </span>Hermitian Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="commutators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>Commutators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self"><span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.7 </span>Conservation Laws</span></span></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.7 </span>Conservation Laws</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">In classical mechanics, and especially in advanced problem solving techniques, conserved quantities are of upmost importance because of their ability to simplify problems.
+A conserved quantity is defined classically as one with a time derivative of zero.
+Unfortunately, in quantum mechanics we cannot really define conserved quantities in the same way, since a particle’s state is fundamentally uncertain until measurement.
+What we can look at is the time derivative of expectation values.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="\hat{O}" display="inline"><mover accent="true"><mi>O</mi><mo>^</mo></mover></math> be a Hermitian operator, and assume that it does not explicitly depend on time, i.e. <math id="p2.m2" class="ltx_Math" alttext="\frac{\partial\hat{O}}{\partial t}=0" display="inline"><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></math>.
+Then the expectation value, which may depend on time through the time dependence of the state <math id="p2.m3" class="ltx_Math" alttext="\lvert\psi\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></math>, is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx33" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E147"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E147.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+\langle\hat{O}\rangle" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E147.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+\langle\psi\mathclose{}|\mathopen{}\hat{O}\mathclose{}|\mathopen{}\psi\rangle" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.147)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E148"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E148.m1" class="ltx_math_unparsed" alttext="\displaystyle=\frac{\partial}{\partial t}(\langle\psi\rvert)\hat{O}\lvert\psi%
+\rangle+\langle\psi\rvert\hat{O}\frac{\partial}{\partial t}\lvert\psi\rangle," display="inline"><mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mstyle><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow><mo stretchy="false">)</mo></mrow><mover accent="true"><mi>O</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo>+</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow><mover accent="true"><mi>O</mi><mo>^</mo></mover><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mstyle><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.148)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where in the second line the first partial derivative only acts on the bra.
+Now we will use the same trick we have used several times already to get rid of the time derivatives by substituting in the Schrodinger equation and its complex conjugate.
+This time we will substitute in the TDSE.
+In Dirac notation, the substitution looks like:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E149" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E149.m1" class="ltx_math_unparsed" alttext="\frac{\partial\lvert\psi\rangle}{\partial t}=-\frac{i}{\hbar}\hat{H}\lvert\psi%
+\rangle,\quad\frac{\partial\langle\psi\rvert}{\partial t}=\frac{i}{\hbar}%
+\langle\psi\rvert\hat{H}." display="block"><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo rspace="0em">=</mo><mo lspace="0em">−</mo><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mover accent="true"><mi>H</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo rspace="1.167em">,</mo><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.149)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx34" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E150"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E150.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+\langle\hat{O}\rangle" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E150.m2" class="ltx_math_unparsed" alttext="\displaystyle=\frac{i}{\hbar}\langle\psi\rvert\hat{H}\hat{O}\lvert\psi\rangle-%
+\frac{i}{\hbar}\langle\psi\rvert\hat{O}\hat{H}\lvert\psi\rangle" display="inline"><mrow><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mover accent="true"><mi>O</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo>−</mo><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow><mover accent="true"><mi>O</mi><mo>^</mo></mover><mover accent="true"><mi>H</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.150)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E151"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E151.m1" class="ltx_Math" alttext="\displaystyle=\frac{i}{\hbar}\langle\psi\mathclose{}|\mathopen{}[\hat{H},\hat{%
+O}]\mathclose{}|\mathopen{}\psi\rangle" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.151)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E152"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E152.m1" class="ltx_Math" alttext="\displaystyle=\frac{i}{\hbar}\langle[\hat{H},\hat{O}]\rangle." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">⟨</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo stretchy="false">⟩</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.152)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">If the commutator <math id="p2.m4" class="ltx_Math" alttext="[\hat{H},\hat{O}]=0" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>, then the expectation value is zero.
+This tells us that if <math id="p2.m5" class="ltx_Math" alttext="\hat{O}" display="inline"><mover accent="true"><mi>O</mi><mo>^</mo></mover></math> does not explicitly depend on time and commutes with the Hamiltonian, its expectation value will be constant over time.
+This is the quantum analogue of a conserved quantity.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The result above can be applied to position and momentum to show that they actually obey Newton’s laws of motion <span class="ltx_text ltx_font_italic">on average</span>.
+Specifically, we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx35" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E153"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E153.m1" class="ltx_Math" alttext="\displaystyle m\frac{\operatorname{\mathrm{d}}\!\langle\hat{x}\rangle}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mpadded width="0.350em"><mi mathvariant="normal">d</mi></mpadded><mo>⁡</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E153.m2" class="ltx_Math" alttext="\displaystyle=\langle\hat{p}\rangle" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.153)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E154"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E154.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!\langle\hat{p}\rangle}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mpadded width="0.350em"><mi mathvariant="normal">d</mi></mpadded><mo>⁡</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E154.m2" class="ltx_Math" alttext="\displaystyle=-\left\langle\frac{\operatorname{\mathrm{d}}\!V(x)}{%
+\operatorname{\mathrm{d}}\!x}\right\rangle." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mo>⟨</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>V</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⟩</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.154)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">These two results are known as the <span class="ltx_text ltx_font_bold">Ehrenfest theorem</span>.</p>
+</div>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="commutators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>Commutators</span></a><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

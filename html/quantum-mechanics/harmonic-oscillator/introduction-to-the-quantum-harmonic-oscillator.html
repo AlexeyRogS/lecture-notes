@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="next" href="solving-the-quantum-harmonic-oscillator.html" title="3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-quantum-harmonic-oscillator.html" title="3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="energy-eigenstates.html" title="3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-qho-with-ladder-operators.html" title="3.4 Solving the QHO with Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="ladder-operators.html" title="3.5 Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Introduction to the Quantum Harmonic Oscillator</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Solving the Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="energy-eigenstates.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Energy Eigenstates of the QHO</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-qho-with-ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Solving the QHO with Ladder Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Ladder Operators</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.1 </span>Introduction to the Quantum Harmonic Oscillator</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">The square well has introduced to the key concepts of quantum mechanical systems.
+However, it is not the most realistic model in the world, although it has some uses.
+In this chapter, we will study the quantum analogue of the simple harmonic oscillator from classical mechanics, which is a very useful quantum mechanical model.</p>
+</div>
+<section id="importance-of-the-harmonic-oscillator" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1.1 </span>The Importance of the Harmonic Oscillator</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">It is not an understatement to say that the simple harmonic oscillator is quite possibly the most important model in classical mechanics.
+Why is this?</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">The prototypical example of a system exhibiting simple harmonic motion is a mass on a spring, for which the force acting on the mass is given by Hooke’s law <math id="SS1.p2.m1" class="ltx_Math" alttext="F=-kx" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math>.
+This leads to sinusoidal motion with frequency <math id="SS1.p2.m2" class="ltx_Math" alttext="\omega=\sqrt{\frac{k}{m}}" display="inline"><mrow><mi>ω</mi><mo>=</mo><msqrt><mfrac><mi>k</mi><mi>m</mi></mfrac></msqrt></mrow></math>.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">The reason why Hooke’s law works so well in so many scenarios is that it is always a good approximation around a stable equilibrium point.
+To see why this is, we take the Taylor expansion of a potential energy function (it does not matter what shape it is) about a minimum located at <math id="SS1.p3.m1" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>,</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E1.m1" class="ltx_Math" alttext="V(x)=V(x_{0})+\frac{\operatorname{\mathrm{d}}\!V(x_{0})}{\operatorname{\mathrm%
+{d}}\!x}(x-x_{0})+\frac{1}{2}\frac{\operatorname{\mathrm{d}}\!^{2}V(x_{0})}{%
+\operatorname{\mathrm{d}}\!x^{2}}(x-x_{0})^{2}+\dots." display="block"><mrow><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>V</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>V</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The term with the first derivative vanishes since <math id="SS1.p3.m2" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> is a minimum, so for <math id="SS1.p3.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> close to <math id="SS1.p3.m4" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>, the potential is approximately given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E2.m1" class="ltx_Math" alttext="V(x)\approx V(x_{0})+\frac{1}{2}\frac{\operatorname{\mathrm{d}}\!^{2}V(x_{0})}%
+{\operatorname{\mathrm{d}}\!x^{2}}(x-x_{0})^{2}." display="block"><mrow><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≈</mo><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>V</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This gives rise to a force with the same form as Hooke’s law:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E3.m1" class="ltx_Math" alttext="F=-\frac{\operatorname{\mathrm{d}}\!V(x)}{\operatorname{\mathrm{d}}\!x}=-\frac%
+{\operatorname{\mathrm{d}}\!^{2}V(x_{0})}{\operatorname{\mathrm{d}}\!x^{2}}(x-%
+x_{0})." display="block"><mrow><mrow><mi>F</mi><mo>=</mo><mrow><mo>−</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>V</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>V</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.3)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">If we apply this to situations in quantum mechanics, we could approximate the behaviour of, for example, vibrations in diatomic molecules that consist of two bound atoms such as hydrogen chloride.
+These interatomic forces can be modelled classically using the Lennard-Jones potential, but at the equilibrium point we can approximate the potential as parabolic.
+This means that the quantum harmonic oscillator will be a good approximation of the ground state and the first few excited states of this system!</p>
+</div>
+</section>
+<section id="setting-up-the-quantum-harmonic-oscillator" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.1.2 </span>Setting up the Quantum Harmonic Oscillator</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">For the classical harmonic oscillator, the potential energy is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E4.m1" class="ltx_Math" alttext="V(x)=\frac{1}{2}kx^{2}=\frac{1}{2}m\omega^{2}x^{2}." display="block"><mrow><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">For the quantum harmonic oscillator, we will write the potential energy with the natural frequency <math id="SS2.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> because it is more helpful than referring to an abstract “spring constant” <math id="SS2.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">In quantum mechanics, our position variable <math id="SS2.p2.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> gets promoted to an operator <math id="SS2.p2.m2" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math>, so the potential energy operator for the quantum harmonic oscillator would be</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E5.m1" class="ltx_Math" alttext="\hat{V}(x)=\frac{1}{2}m\omega^{2}\hat{x}^{2}." display="block"><mrow><mrow><mrow><mover accent="true"><mi>V</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.5)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The Hamiltonian operator for the system is then</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E6.m1" class="ltx_Math" alttext="\hat{H}=\frac{\hat{p}^{2}}{2m}+\frac{1}{2}m\omega^{2}\hat{x}^{2}," display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>=</mo><mrow><mfrac><msup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mn>2</mn></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.6)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which, when written in the position basis, becomes</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E7.m1" class="ltx_Math" alttext="\hat{H}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}}{\partial x^{2}}+\frac{1}{2}m%
+\omega^{2}x^{2}." display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.7)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The time-dependent Schrodinger equation is therefore</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E8.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi(x,t)}{\partial x^{2}}+\frac{1}{2}m%
+\omega^{2}x^{2}\psi(x,t)=i\hbar\frac{\partial\psi(x,t)}{\partial t}." display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.8)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">Just like in the last chapter, we can separate the time-dependence out to get the time-dependent Schrodinger equation for the QHO:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E9.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2m}\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{\operatorname{%
+\mathrm{d}}\!x^{2}}+\frac{1}{2}m\omega^{2}x^{2}u(x)=Eu(x)," display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.9)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where the full wavefunction is then given by <math id="SS2.p3.m1" class="ltx_Math" alttext="\psi(x,t)=u(x)e^{-\frac{iEt}{\hbar}}" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></mrow></mrow></math>.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a><a href="solving-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Solving the Quantum Harmonic Oscillator</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subimportance-of-the-harmonic-oscillator" title="In 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1.1 </span>The Importance of the Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subsetting-up-the-quantum-harmonic-oscillator" title="In 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1.2 </span>Setting up the Quantum Harmonic Oscillator</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

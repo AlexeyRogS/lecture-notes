@@ -1,0 +1,393 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="next" href="gaussian-wave-packets.html" title="2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="gaussian-wave-packets.html" title="2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="infinite-square-well.html" title="2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="properties-of-energy-eigenstates.html" title="2.4 Properties of Energy Eigenstates ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="hermitian-operators.html" title="2.5 Hermitian Operators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="commutators.html" title="2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="conservation-laws.html" title="2.7 Conservation Laws ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>The Free Particle</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="gaussian-wave-packets.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Gaussian Wave Packets</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="infinite-square-well.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3 </span>The Infinite Square Well</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="properties-of-energy-eigenstates.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>Properties of Energy Eigenstates</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="hermitian-operators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.5 </span>Hermitian Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="commutators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>Commutators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="conservation-laws.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.7 </span>Conservation Laws</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.1 </span>The Free Particle</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Now that we have done plenty of exposition, we will finally study at what the motion of a quantum particle actually looks like.
+We will first analyse the simplest case, which is that of a free particle.</p>
+</div>
+<section id="solving-the-schrodinger-equation" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1.1 </span>Solving the Schrodinger Equation</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">A free particle is under the influence of no forces, so the potential <math id="SS1.p1.m1" class="ltx_Math" alttext="V(x)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is zero.
+The TISE (equation <a href="../principles/the-schrodinger-equation.html#Ch1.E18" title="In 1.2.2 The Time-Independent Schrodinger Equation ‣ 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.18</span></a>) then becomes</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx10" class="ltx_equationgroup ltx_eqn_gather ltx_eqn_table">
+
+<tbody id="Ch2.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E1.m1" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{%
+\operatorname{\mathrm{d}}\!x^{2}}=Eu(x)" display="block"><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.1)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E2.m1" class="ltx_Math" alttext="\displaystyle\implies\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{\operatorname{%
+\mathrm{d}}\!x^{2}}=-\frac{2mE}{\hbar^{2}}u(x)." display="block"><mrow><mrow><mi></mi><mo stretchy="false">⟹</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">For a free particle, the total energy <math id="SS1.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is just the kinetic energy <math id="SS1.p1.m3" class="ltx_Math" alttext="\frac{p^{2}}{2m}" display="inline"><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></math>, so inputting this gives</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E3.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{\operatorname{\mathrm{d}}\!x^{2}}=-%
+\frac{p^{2}}{\hbar^{2}}u(x)=-k^{2}u(x)," display="block"><mrow><mrow><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><msup><mi>p</mi><mn>2</mn></msup><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have defined <math id="SS1.p1.m4" class="ltx_Math" alttext="k^{2}=\frac{p^{2}}{\hbar^{2}}" display="inline"><mrow><msup><mi>k</mi><mn>2</mn></msup><mo>=</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mfrac></mrow></math>.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">This happens to be an equation we know very well, the equation for simple harmonic motion!
+This implies that the spatial part of the energy eigenfunctions take the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E4.m1" class="ltx_Math" alttext="u(x)=Ae^{ikx}." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.4)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">These solutions are known as <span class="ltx_text ltx_font_bold">plane wave</span> solutions.
+Plane waves of the form <math id="SS1.p2.m1" class="ltx_Math" alttext="e^{-ikx}" display="inline"><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup></math> are also solutions, but we will ignore them for now and bring them back later.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">As we learned in section <a href="../principles/the-schrodinger-equation.html#subsolving-the-temporal-part-of-the-schrodinger-equation" title="1.2.3 Solving the Temporal Part of the Schrodinger Equation ‣ 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.2.3</span></a>, the temporal part of the solution is given by equation <a href="../principles/the-schrodinger-equation.html#Ch1.E23" title="In 1.2.3 Solving the Temporal Part of the Schrodinger Equation ‣ 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.23</span></a>.
+We multiply this with the spatial part to get the full energy eigenfunctions for the free particle:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E5.m1" class="ltx_Math" alttext="\psi(x,t)=Ae^{\frac{i}{\hbar}(px-Et)}=Ae^{i(kx-\omega t)}," display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.5)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have introduced the frequency <math id="SS1.p3.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> of the temporal oscillation given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E6.m1" class="ltx_Math" alttext="E=\hbar\omega." display="block"><mrow><mrow><mi>E</mi><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.6)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This is the well-known Einstein relation.
+<math id="SS1.p3.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> represents the wavenumber of the oscillation in space, and is related to the particle’s momentum by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E7.m1" class="ltx_Math" alttext="p=\hbar k." display="block"><mrow><mrow><mi>p</mi><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>k</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.7)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This is known as the de Broglie relation.</p>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">Having already derived two seminal results of early quantum mechanics, you might think we are not doing too bad, however there are a couple of problems with these energy eigenfunctions.</p>
+</div>
+<div id="SS1.p5" class="ltx_para">
+<p class="ltx_p">The first issue is that these plane waves clearly do not represent the most general solution to the Schrodinger equation.
+In principle, we should be able to choose any valid initial wavefunction <math id="SS1.p5.m1" class="ltx_Math" alttext="\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, which need not even be separable, and then the Schrodinger equation determines its evolution.
+However, for a plane wave, we can only specify <math id="SS1.p5.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> which is its amplitude (and initial phase if <math id="SS1.p5.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is complex) at <math id="SS1.p5.m4" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="SS1.p6" class="ltx_para">
+<p class="ltx_p">The second issue is more serious, and it is that the plane wave solutions are <span class="ltx_text ltx_font_italic">unnormalisable</span>.
+To see this, we can calculate the integral of probability density over all space:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E8.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}\lvert\psi(x,t)\rvert^{2}\operatorname{\mathrm{d}}\!x=%
+\int_{-\infty}^{\infty}\lvert Ae^{i(kx-\omega t)}\rvert^{2}\operatorname{%
+\mathrm{d}}\!x=\lvert A\rvert^{2}\int_{-\infty}^{\infty}\operatorname{\mathrm{%
+d}}\!x=\infty." display="block"><mrow><mrow><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo lspace="0em" stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.8)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This happens because plane waves do not decay as <math id="SS1.p6.m1" class="ltx_Math" alttext="x\to\pm\infty" display="inline"><mrow><mi>x</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>.
+Physically, this happens because plane waves have <span class="ltx_text ltx_font_italic">definite</span> momentum and therefore, by the uncertainty principle, their position is <span class="ltx_text ltx_font_italic">completely undefined</span>.
+This reflects the fact that if we calculate the probability density for a plane wave, it is <span class="ltx_text ltx_font_italic">constant</span> everywhere in space!</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E9.m1" class="ltx_Math" alttext="\lvert\psi(x,t)\rvert^{2}=\lvert Ae^{i(kx-\omega t)}\rvert^{2}=\lvert A\rvert^%
+{2}." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.9)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p7" class="ltx_para">
+<p class="ltx_p">The fact that plane waves have definite momentum is elucidated by the fact that they are eigenstates of the momentum operator.
+This means that if we measure the momentum of a plane wave, we get back a definite result.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E10.m1" class="ltx_Math" alttext="\hat{p}\psi(x,t)=-i\hbar A\frac{\partial}{\partial x}e^{\frac{i}{\hbar}(px-Et)%
+}=-i\hbar A\frac{ip}{\hbar}e^{\frac{i}{\hbar}(px-Et)}=p\psi(x,t)." display="block"><mrow><mrow><mrow><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi>p</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.10)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">To be clear, the fact that momentum eigenstates are unnormalisable means that they are <span class="ltx_text ltx_font_bold">unphysical</span>, a free particle can <span class="ltx_text ltx_font_italic">never</span> be found in a stationary state.</p>
+</div>
+<div id="SS1.p8" class="ltx_para">
+<p class="ltx_p">Luckily both of these problems, the lack and generality and the unnormalisability, can be solved using the linearity of the Schrodinger equation, i.e. using the superposition principle.</p>
+</div>
+</section>
+<section id="wave-packets" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.1.2 </span>Wave Packets</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">For a wavefunction to be normalisable, it must be localised to some extent in space.
+Using the principle of superposition, we can add together momentum eigenstates to get a normalisable wavefunction.
+This will have the consequence of the particle no longer having definite momentum, but that means that position will no longer be undefined.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">Let us consider a superposition of two momentum eigenstates with wavenumbers <math id="SS2.p2.m1" class="ltx_Math" alttext="k_{1}" display="inline"><msub><mi>k</mi><mn>1</mn></msub></math> and <math id="SS2.p2.m2" class="ltx_Math" alttext="k_{2}" display="inline"><msub><mi>k</mi><mn>2</mn></msub></math>.
+Note that wavenumber <math id="SS2.p2.m3" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is basically synonymous with momentum in quantum mechanics, as the two are related by the de Broglie relation <a href="#Ch2.E7" title="In 2.1.1 Solving the Schrodinger Equation ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.7</span></a>.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E11.m1" class="ltx_Math" alttext="\psi(x,t)=Ae^{i(k_{1}x-\omega_{1}t)}+Be^{i(k_{2}x-\omega_{2}t)}." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>k</mi><mn>2</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><msub><mi>ω</mi><mn>2</mn></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.11)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The temporal frequencies <math id="SS2.p2.m4" class="ltx_Math" alttext="\omega_{1}" display="inline"><msub><mi>ω</mi><mn>1</mn></msub></math> and <math id="SS2.p2.m5" class="ltx_Math" alttext="\omega_{2}" display="inline"><msub><mi>ω</mi><mn>2</mn></msub></math> are given by the Einstein relation <a href="#Ch2.E6" title="In 2.1.1 Solving the Schrodinger Equation ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.6</span></a>, so <math id="SS2.p2.m6" class="ltx_Math" alttext="\omega_{1}=\frac{E_{1}}{\hbar}=\frac{p_{1}^{2}}{2m\hbar}" display="inline"><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>=</mo><mfrac><msub><mi>E</mi><mn>1</mn></msub><mi mathvariant="normal">ℏ</mi></mfrac><mo>=</mo><mfrac><msubsup><mi>p</mi><mn>1</mn><mn>2</mn></msubsup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac></mrow></math> and similarly for <math id="SS2.p2.m7" class="ltx_Math" alttext="\omega_{2}" display="inline"><msub><mi>ω</mi><mn>2</mn></msub></math>.
+In the same way that wavenumber is synonymous with momentum, temporal frequency is synonymous with energy.
+This solution is no longer separable, i.e. it is not of the form <math id="SS2.p2.m8" class="ltx_Math" alttext="\psi(x,t)=u(t)e^{i\omega t}" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow></math>.
+Now, the probability density is not uniform over all space and this wavefunction is no longer a momentum eigenstate, however this wavefunction is still not normalisable as it is periodic.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">In fact, we can add together infinitely many plane waves, and this would still be the case.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E12.m1" class="ltx_Math" alttext="\psi(x,t)=\sum_{n}A_{n}e^{i(k_{n}x-\omega_{n}t)}." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munder><mo movablelimits="false">∑</mo><mi>n</mi></munder><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>k</mi><mi>n</mi></msub><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.12)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Notice that this is a <span class="ltx_text ltx_font_bold">Fourier series</span>, which are always periodic over the domain <math id="SS2.p3.m1" class="ltx_Math" alttext="(-\infty,\infty)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="SS2.p4" class="ltx_para">
+<p class="ltx_p">To fully eliminate the periodicity, we need to make the range of wavenumbers continuous, and so the sum becomes an integral.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E13.m1" class="ltx_Math" alttext="\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}A(k)e^{i(kx-\omega t)}%
+\operatorname{\mathrm{d}}\!k." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.13)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The intuition for why this is the case is that as the spacing between wavenumbers decreases, the spacing between maxima in the Fourier sum increases.
+So in the limit that the wavenumber spacing goes to zero and becomes continuous, the spacing between maxima goes to infinity.
+Notice that the amplitudes and initial phases of the plane waves <math id="SS2.p4.m1" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> have become a function of the wavenumber <math id="SS2.p4.m2" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+This definition of <math id="SS2.p4.m3" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> in terms of an integral of plane waves is known as a <span class="ltx_text ltx_font_bold">wave packet</span>.
+The factor <math id="SS2.p4.m4" class="ltx_Math" alttext="1/\sqrt{2\pi}" display="inline"><mrow><mn>1</mn><mo>/</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></math> in front of the integral is placed there because it happens to be the correct normalisation (so the integral of <math id="SS2.p4.m5" class="ltx_Math" alttext="\lvert\psi(x,t)\rvert^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math> over all space is one), which will be explained in a moment.</p>
+</div>
+<div id="SS2.p5" class="ltx_para">
+<p class="ltx_p">If we absorb the time evolution into <math id="SS2.p5.m1" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> so it becomes <math id="SS2.p5.m2" class="ltx_Math" alttext="A(k,t)=A(k)e^{-i\omega t}" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></mrow></math>, then this wavefunction becomes</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E14.m1" class="ltx_Math" alttext="\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}A(k,t)e^{ikx}%
+\operatorname{\mathrm{d}}\!k," display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.14)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which shows that the wavefunction <math id="SS2.p5.m3" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the <span class="ltx_text ltx_font_bold">Fourier transform</span> of <math id="SS2.p5.m4" class="ltx_Math" alttext="A(k,t)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+Likewise, we can say that the amplitude <math id="SS2.p5.m5" class="ltx_Math" alttext="A(k,t)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the Fourier transform of the wavefunction <math id="SS2.p5.m6" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E15.m1" class="ltx_Math" alttext="A(k,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\psi(x,t)e^{-ikx}%
+\operatorname{\mathrm{d}}\!x." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.15)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p6" class="ltx_para">
+<p class="ltx_p">There is a result from mathematics called <span class="ltx_text ltx_font_bold">Parseval’s theorem</span>, which says that if <math id="SS2.p6.m1" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is normalised, then its Fourier transform <math id="SS2.p6.m2" class="ltx_Math" alttext="A(k,t)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is normalised, and vice versa.
+This means that if we enforce</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E16.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}\lvert A(k,t)\rvert^{2}\operatorname{\mathrm{d}}\!k=1," display="block"><mrow><mrow><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mrow><mo lspace="0em" stretchy="false">|</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.16)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">then <math id="SS2.p6.m3" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> will be a correctly normalised wavefunction.</p>
+</div>
+<div id="SS2.p7" class="ltx_para">
+<p class="ltx_p">Note that we can also define this Fourier integral in terms of momentum using the de Broglie relation <a href="#Ch2.E7" title="In 2.1.1 Solving the Schrodinger Equation ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.7</span></a>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E17.m1" class="ltx_Math" alttext="\displaystyle\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E17.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\phi(p,t)e^{%
+\frac{i}{\hbar}px}\operatorname{\mathrm{d}}\!p" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>p</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.17)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E18.m1" class="ltx_Math" alttext="\displaystyle\phi(p,t)" display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E18.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\psi(x,t)e^{-%
+\frac{i}{\hbar}px}\operatorname{\mathrm{d}}\!x," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.18)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where the normalisation factor has changed to <math id="SS2.p7.m1" class="ltx_Math" alttext="1/\sqrt{2\pi\hbar}" display="inline"><mrow><mn>1</mn><mo>/</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></msqrt></mrow></math>.</p>
+</div>
+<div id="SS2.p8" class="ltx_para">
+<p class="ltx_p">We can interpret <math id="SS2.p8.m1" class="ltx_Math" alttext="\lvert A(k,t)\rvert^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math> as the <span class="ltx_text ltx_font_bold">wavenumber probability density</span> and <math id="SS2.p8.m2" class="ltx_Math" alttext="\lvert\phi(p,t)\rvert^{2}" display="inline"><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></math> as the <span class="ltx_text ltx_font_bold">momentum probability density</span>, i.e. <math id="SS2.p8.m3" class="ltx_Math" alttext="\lvert\phi(p,t)\rvert^{2}\operatorname{\mathrm{d}}\!p" display="inline"><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>p</mi></mrow></mrow></math> represents the probability that a measurement of a particle’s momentum will be in the range <math id="SS2.p8.m4" class="ltx_Math" alttext="(p,p+\operatorname{\mathrm{d}}\!p)" display="inline"><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mi>p</mi><mo>+</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>p</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></math> at time <math id="SS2.p8.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+<div id="SS2.p9" class="ltx_para">
+<p class="ltx_p">In summary, we have found that by choosing an appropriate range of momenta and amplitudes for their corresponding plane waves (namely a <math id="SS2.p9.m1" class="ltx_Math" alttext="\phi(p,t)" display="inline"><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> or <math id="SS2.p9.m2" class="ltx_Math" alttext="A(k,t)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> which is normalisable), we can construct a normalised wave packet <math id="SS2.p9.m3" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+This all followed from the principle of superposition.
+Furthermore, note that the Fourier transform relations above hold for <span class="ltx_text ltx_font_italic">any</span> system in quantum mechanics, not just the free particle.
+However, there is an important caveat that <math id="SS2.p9.m4" class="ltx_Math" alttext="E=p^{2}/2m" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>m</mi></mrow></mrow></math> does not hold in general, only for the free particle.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a><a href="gaussian-wave-packets.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Gaussian Wave Packets</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#solving-the-schrodinger-equation" title="In 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1.1 </span>Solving the Schrodinger Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#wave-packets" title="In 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1.2 </span>Wave Packets</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

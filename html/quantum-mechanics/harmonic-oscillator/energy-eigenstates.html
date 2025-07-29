@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="solving-the-quantum-harmonic-oscillator.html" title="3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="next" href="solving-the-qho-with-ladder-operators.html" title="3.4 Solving the QHO with Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="introduction-to-the-quantum-harmonic-oscillator.html" title="3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-quantum-harmonic-oscillator.html" title="3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-qho-with-ladder-operators.html" title="3.4 Solving the QHO with Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="ladder-operators.html" title="3.5 Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="introduction-to-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Introduction to the Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Solving the Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Energy Eigenstates of the QHO</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-qho-with-ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Solving the QHO with Ladder Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Ladder Operators</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.3 </span>Energy Eigenstates of the QHO</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">There is one final step to writing out the eigenstates, which is to return to physical units and remove the dimensionless length <math id="p1.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.
+Once we do this, the energy eigenstates (including time dependence) have the form:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E43" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E43.m1" class="ltx_Math" alttext="\psi_{n}(x,t)=N_{n}h_{n}\left(\sqrt{\frac{m\omega}{\hbar}}x\right)e^{-\frac{m%
+\omega}{2\hbar}x^{2}}e^{-i\omega t\left(n+\frac{1}{2}\right)}." display="block"><mrow><mrow><mrow><msub><mi>ψ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>N</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>h</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><msqrt><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></msqrt><mo>⁢</mo><mi>x</mi></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.43)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The normalisation constant <math id="p1.m2" class="ltx_Math" alttext="N_{n}" display="inline"><msub><mi>N</mi><mi>n</mi></msub></math> turns out to be</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E44" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E44.m1" class="ltx_Math" alttext="N_{n}=\frac{1}{\sqrt{2^{n}n!}}\sqrt[4]{\frac{m\omega}{\pi\hbar}}." display="block"><mrow><mrow><msub><mi>N</mi><mi>n</mi></msub><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><msup><mn>2</mn><mi>n</mi></msup><mo>⁢</mo><mrow><mi>n</mi><mo>!</mo></mrow></mrow></msqrt></mfrac><mo>⁢</mo><mroot><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mn>4</mn></mroot></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.44)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The spatial part of the first few eigenstates is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx41" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E45"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E45.m1" class="ltx_Math" alttext="\displaystyle u_{0}(x)" display="inline"><mrow><msub><mi>u</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E45.m2" class="ltx_Math" alttext="\displaystyle=N_{0}e^{-\frac{m\omega}{2\hbar}x^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>N</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.45)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E46"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E46.m1" class="ltx_Math" alttext="\displaystyle u_{1}(x)" display="inline"><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E46.m2" class="ltx_Math" alttext="\displaystyle=N_{1}xe^{-\frac{m\omega}{2\hbar}x^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>N</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.46)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E47"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E47.m1" class="ltx_Math" alttext="\displaystyle u_{2}(x)" display="inline"><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E47.m2" class="ltx_Math" alttext="\displaystyle=N_{2}\left(\frac{2m\omega}{\hbar}x^{2}-1\right)e^{-\frac{m\omega%
+}{2\hbar}x^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>N</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>−</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.47)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E48"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E48.m1" class="ltx_Math" alttext="\displaystyle u_{3}(x)" display="inline"><mrow><msub><mi>u</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E48.m2" class="ltx_Math" alttext="\displaystyle=N_{3}\left(8\sqrt{\left(\frac{m\omega}{\hbar}\right)^{3}}y^{3}-1%
+2\sqrt{\frac{m\omega}{\hbar}}y\right)e^{-\frac{m\omega}{2\hbar}x^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>N</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>8</mn><mo>⁢</mo><msqrt><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>)</mo></mrow><mn>3</mn></msup></msqrt><mo>⁢</mo><msup><mi>y</mi><mn>3</mn></msup></mrow><mo>−</mo><mrow><mn>12</mn><mo>⁢</mo><msqrt><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mstyle></msqrt><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.48)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<section id="comparison-of-the-quantum-to-classical-harmonic-oscillator" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3.1 </span>Comparison of the Quantum to Classical Harmonic Oscillator</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Here are the probability density of the first few eigenstates, with the classical probability density of a simple harmonic oscillator with energy <math id="SS1.p1.m1" class="ltx_Math" alttext="E=\hbar\omega\left(n+\frac{1}{2}\right)" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></math> overlayed.
+We can see that as <math id="SS1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> increases, the spatial probability density of the oscillator is more spread out, just like how the amplitude of them classical turning points increase for higher energy.
+The quantum probability density is actually nonzero beyond the classical turning point, so we have some tunnelling, but it decays exponentially in this region.
+Also note that the wavelength of <math id="SS1.p1.m3" class="ltx_Math" alttext="\psi_{n}" display="inline"><msub><mi>ψ</mi><mi>n</mi></msub></math> is shortest at the center of the well, which is where a classical particle would be travelling the fastest.</p>
+</div>
+</section>
+<section id="parity" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3.2 </span>Parity</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Recall that we saw in section <a href="solving-the-quantum-harmonic-oscillator.html#solving-for-h(y)-via-a-series-expansion" title="3.2.3 Solving for ℎ⁢(𝑦) via a Series Expansion ‣ 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.2.3</span></a> that the Hermite polynomials are either even or odd.
+This property is passed on to the eigenstates as well.
+We can investigate this symmetry by defining an operator which will detect whether a given wavefunction is odd or even.</p>
+</div>
+<div id="Ch3.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch3.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">parity</span> operator switches <math id="Ch3.Thmdefinition1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to <math id="Ch3.Thmdefinition1.p1.m2" class="ltx_Math" alttext="-x" display="inline"><mrow><mo>−</mo><mi>x</mi></mrow></math>, and can be defined by its action on a wavefunction as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E50" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E50.m1" class="ltx_Math" alttext="\hat{P}\psi(x,t)=\psi(-x,t)." display="block"><mrow><mrow><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.50)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">What are the possible eigenvalues of parity?
+If we apply parity twice, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E51" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E51.m1" class="ltx_Math" alttext="\hat{P}^{2}\psi(x)=\hat{P}\hat{P}\psi(x)=\hat{P}\psi(-x)=\psi(x)," display="block"><mrow><mrow><mrow><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mn>2</mn></msup><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.51)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so <span class="ltx_text ltx_font_italic">all</span> wavefunctions are eigenfunctions of <math id="SS2.p2.m1" class="ltx_Math" alttext="\hat{P}^{2}" display="inline"><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mn>2</mn></msup></math> with eigenvalue <math id="SS2.p2.m2" class="ltx_Math" alttext="+1" display="inline"><mrow><mo>+</mo><mn>1</mn></mrow></math>.
+Using this fact, we can show that the eigenvalues of <math id="SS2.p2.m3" class="ltx_Math" alttext="\hat{P}" display="inline"><mover accent="true"><mi>P</mi><mo>^</mo></mover></math> are <math id="SS2.p2.m4" class="ltx_Math" alttext="\pm 1" display="inline"><mrow><mo>±</mo><mn>1</mn></mrow></math>.
+Suppose that <math id="SS2.p2.m5" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is an eigenfunction of <math id="SS2.p2.m6" class="ltx_Math" alttext="\hat{P}" display="inline"><mover accent="true"><mi>P</mi><mo>^</mo></mover></math> with eigenvalue <math id="SS2.p2.m7" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, then</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E52" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E52.m1" class="ltx_Math" alttext="\hat{P}^{2}\psi(x)=\hat{P}P\psi(x)=P^{2}\psi(x)," display="block"><mrow><mrow><mrow><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mn>2</mn></msup><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>P</mi><mn>2</mn></msup><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.52)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">implies that <math id="SS2.p2.m8" class="ltx_Math" alttext="P^{2}=1" display="inline"><mrow><msup><mi>P</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow></math>, hence <math id="SS2.p2.m9" class="ltx_Math" alttext="P=\pm 1" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mo>±</mo><mn>1</mn></mrow></mrow></math>.
+If a wavefunction is an eigenfunction of parity with <math id="SS2.p2.m10" class="ltx_Math" alttext="\hat{P}\psi(x)=\psi(x)" display="inline"><mrow><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then this means that <math id="SS2.p2.m11" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is an even function (symmetric about <math id="SS2.p2.m12" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>) since this implies <math id="SS2.p2.m13" class="ltx_Math" alttext="\psi(-x)=\psi(x)" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Likewise, if we have <math id="SS2.p2.m14" class="ltx_Math" alttext="\hat{P}\psi(x)=-\psi(x)" display="inline"><mrow><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, then <math id="SS2.p2.m15" class="ltx_Math" alttext="\psi(x)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> must be odd (antisymmetric about <math id="SS2.p2.m16" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>) since this implies <math id="SS2.p2.m17" class="ltx_Math" alttext="\psi(x)=-\psi(-x)" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+Not all wavefunctions are even or odd, therefore not all wavefunctions are eigenfunctions of parity.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">Is parity Hermitian?
+We can test this by calculating the adjoint, note that the integral has to be from <math id="SS2.p3.m1" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></math> to <math id="SS2.p3.m2" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> for the harmonic oscillator.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx42" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E53"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E53.m1" class="ltx_Math" alttext="\displaystyle\langle\hat{P}^{\dagger}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>†</mo></msup><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E53.m2" class="ltx_Math" alttext="\displaystyle=\int_{-\infty}^{\infty}(\hat{P}\psi(x))^{\ast}\psi(x)%
+\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.53)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E54"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E54.m1" class="ltx_Math" alttext="\displaystyle=\int_{-\infty}^{\infty}\psi^{\ast}(-x)\psi(x)\operatorname{%
+\mathrm{d}}\!x," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.54)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">now we make a substitution <math id="SS2.p3.m3" class="ltx_Math" alttext="y=-x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mo>−</mo><mi>x</mi></mrow></mrow></math> to get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx43" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E55"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E55.m1" class="ltx_Math" alttext="\displaystyle\langle\hat{P}^{\dagger}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>†</mo></msup><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E55.m2" class="ltx_Math" alttext="\displaystyle=-\int_{\infty}^{-\infty}\psi^{\ast}(y)\psi(-y)\operatorname{%
+\mathrm{d}}\!y" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mi mathvariant="normal">∞</mi><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.55)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E56"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E56.m1" class="ltx_Math" alttext="\displaystyle=\int_{-\infty}^{\infty}\psi^{\ast}(y)\hat{P}\psi(y)\operatorname%
+{\mathrm{d}}\!y" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.56)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E57"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E57.m1" class="ltx_Math" alttext="\displaystyle=\langle\hat{P}\rangle," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.57)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">hence <math id="SS2.p3.m4" class="ltx_Math" alttext="\hat{P}" display="inline"><mover accent="true"><mi>P</mi><mo>^</mo></mover></math> is Hermitian and therefore it is observable.</p>
+</div>
+</section>
+<section id="superposition-states" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.3.3 </span>Superposition States</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">We can write superposition states just like we can for the infinite square well, using an expansion of energy eigenfunctions.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E58" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E58.m1" class="ltx_Math" alttext="\psi(x,t)=\sum_{n=0}^{\infty}c_{n}u_{n}(x)e^{-\frac{iE_{n}t}{\hbar}}." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mi>i</mi><mo>⁢</mo><msub><mi>E</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.58)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The only difference between this formula and the one for the infinite square well is that the index <math id="SS3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> starts from 0 instead of 1.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="solving-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Solving the Quantum Harmonic Oscillator</span></a><a href="solving-the-qho-with-ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Solving the QHO with Ladder Operators</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subcomparison-of-the-quantum-to-classical-harmonic-oscillator" title="In 3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3.1 </span>Comparison of the Quantum to Classical Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#parity" title="In 3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3.2 </span>Parity</span></a></li>
+<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch3.Thmdefinition1" title=""><span class="ltx_text ltx_ref_title">Definition 3.1</span></a></li></ol>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#chap:harmonic-oscillator:superposition-states" title="In 3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3.3 </span>Superposition States</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

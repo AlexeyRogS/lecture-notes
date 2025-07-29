@@ -1,0 +1,388 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1.4 Expectation Values ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="conditions-for-valid-wavefunctions.html" title="1.3 Conditions for Valid Wavefunctions ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="next" href="quantum-uncertainty.html" title="1.5 Quantum Uncertainty ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="quantum-states.html" title="1.1 Quantum States ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="the-schrodinger-equation.html" title="1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="conditions-for-valid-wavefunctions.html" title="1.3 Conditions for Valid Wavefunctions ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="quantum-uncertainty.html" title="1.5 Quantum Uncertainty ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="probability-current.html" title="1.6 Probability Current ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="quantum-states.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Quantum States</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="the-schrodinger-equation.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>The Schrodinger Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="conditions-for-valid-wavefunctions.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Conditions for Valid Wavefunctions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>Expectation Values</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="quantum-uncertainty.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.5 </span>Quantum Uncertainty</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="probability-current.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.6 </span>Probability Current</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.4 </span>Expectation Values</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Generally speaking, if we make a measurement of a quantum mechanical system, the state of the system will be changed.
+This means that there is no additional precision to be gained from repeated measurements, unlike with classical systems.
+Once a measurement is made, the system’s wavefunction collapses into one of the eigenstates of the operator.
+The eigenvalues represent all possible measurement outcomes of that operator.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In order to make repeated measurements in the same way we would with a classical system, what we need to do is prepare a large number of systems in identical initial states, then measure them all.
+This gives us an ensemble average for the quantity, which is called the <span class="ltx_text ltx_font_bold">expectation value</span>.
+Expectation values are denoted with angle brackets around the quantity, sometimes with a subscript <math id="p2.m1" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> to denote for which state we are taking the average value, e.g. <math id="p2.m2" class="ltx_Math" alttext="\langle\hat{x}\rangle_{\psi}" display="inline"><msub><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow><mi>ψ</mi></msub></math> represents the average position in the state <math id="p2.m3" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Note that the name “expectation value” can be slightly misleading, for it does not denote what we “expect” to measure when we do a measurement.
+It simply means the average of many measurements of systems in identical states.</p>
+</div>
+<section id="operators-with-discrete-eigenvalues" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.4.1 </span>Operators with Discrete Eigenvalues</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Suppose an operator <math id="SS1.p1.m1" class="ltx_Math" alttext="\hat{O}" display="inline"><mover accent="true"><mi>O</mi><mo>^</mo></mover></math> has a discrete set of measurement outcomes (eigenvalues) labelled <math id="SS1.p1.m2" class="ltx_Math" alttext="O_{n}" display="inline"><msub><mi>O</mi><mi>n</mi></msub></math>.
+Then the expectation value is simply the sum of each outcome weighted by the probability:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E29" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E29.m1" class="ltx_Math" alttext="\langle\hat{O}\rangle=\sum_{i}O_{i}P(O_{i})." display="block"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow><mo rspace="0.111em">=</mo><mrow><munder><mo movablelimits="false">∑</mo><mi>i</mi></munder><mrow><msub><mi>O</mi><mi>i</mi></msub><mo>⁢</mo><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>O</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.29)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="operators-with-continuous-eigenvalues" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.4.2 </span>Operators with Continuous Eigenvalues</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">In the case that the set of measurement outcomes is continuous, the sum should change into an integral.
+But what should the integral look like?</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">We know that the wavefunction represents probability density in space, so the average value of position, which is simply the expectation value of the <math id="SS2.p2.m1" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math> operator, is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E30.m1" class="ltx_Math" alttext="\langle\hat{x}(t)\rangle=\int_{-\infty}^{\infty}\hat{x}\psi(x,t)^{\ast}\psi(x,%
+t)\operatorname{\mathrm{d}}\!x=\int_{-\infty}^{\infty}x\lvert\psi(x,t)\rvert^{%
+2}\operatorname{\mathrm{d}}\!x." display="block"><mrow><mrow><mrow><mo stretchy="false">⟨</mo><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>x</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.30)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Notice that the time-dependence of <math id="SS2.p2.m2" class="ltx_Math" alttext="\langle\hat{x}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></math> comes purely from the wavefunction.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">This is the quantum analogue of the trajectory in classical mechanics.</p>
+</div>
+<div id="SS2.p4" class="ltx_para">
+<p class="ltx_p">Can we extend this to other operators?
+For position, since <math id="SS2.p4.m1" class="ltx_Math" alttext="\hat{x}=x" display="inline"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>=</mo><mi>x</mi></mrow></math>, it does not matter where we put <math id="SS2.p4.m2" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math> in the integral in equation <a href="#Ch1.E30" title="In 1.4.2 Operators with Continuous Eigenvalues ‣ 1.4 Expectation Values ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.30</span></a>, but for other operators, like momentum, it does matter.
+To see why, note that momentum contains a derivative <math id="SS2.p4.m3" class="ltx_Math" alttext="\frac{\partial}{\partial x}" display="inline"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></math>, then note that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E31" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E31.m1" class="ltx_Math" alttext="\psi^{\ast}\frac{\partial\psi}{\partial x}\neq\frac{\partial\psi^{\ast}}{%
+\partial x}\psi," display="block"><mrow><mrow><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mrow><mo>≠</mo><mrow><mfrac><mrow><mo rspace="0em">∂</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac><mo>⁢</mo><mi>ψ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.31)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">in general.</p>
+</div>
+<div id="SS2.p5" class="ltx_para">
+<p class="ltx_p">Note that in classical mechanics, the trajectory follows Newton’s second law</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E32" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E32.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!x(t)}{\operatorname{\mathrm{d}}\!t}=\frac{p(t%
+)}{m}." display="block"><mrow><mrow><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mi>m</mi></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.32)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">We would like that the same thing would happen in classical mechanics, i.e. that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E33" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E33.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!\langle x(t)\rangle}{\operatorname{\mathrm{d}%
+}\!t}=\frac{\langle p(t)\rangle}{m}," display="block"><mrow><mrow><mfrac><mrow><mpadded width="0.350em"><mi mathvariant="normal">d</mi></mpadded><mo>⁡</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo stretchy="false">⟨</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mi>m</mi></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.33)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">but we do not know a priori if this is the case.</p>
+</div>
+<div id="SS2.p6" class="ltx_para">
+<p class="ltx_p">Let’s calculate the time derivative of <math id="SS2.p6.m1" class="ltx_Math" alttext="\langle x(t)\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></math> to see what happens.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E34"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E34.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!\langle x(t)\rangle}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mpadded width="0.350em"><mi mathvariant="normal">d</mi></mpadded><mo>⁡</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E34.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!t}%
+\left(\int_{-\infty}^{\infty}x\lvert\psi(x,t)\rvert^{2}\operatorname{\mathrm{d%
+}}\!x\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>x</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.34)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E35"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E35.m1" class="ltx_Math" alttext="\displaystyle=\int_{-\infty}^{\infty}x\left(\frac{\partial\psi^{\ast}}{%
+\partial t}\psi+\psi^{\ast}\frac{\partial\psi}{\partial t}\right)\operatorname%
+{\mathrm{d}}\!x." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>ψ</mi></mrow><mo>+</mo><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.35)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Now, we can change the temporal derivatives to spatial derivatives by rearranging the TDSE (equation <a href="the-schrodinger-equation.html#Ch1.E9" title="In 1.2.1 The Time-Dependent Schrodinger Equation ‣ 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.9</span></a>) and its complex conjugate for <math id="SS2.p6.m2" class="ltx_Math" alttext="\frac{\partial\psi}{\partial t}" display="inline"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></math> and <math id="SS2.p6.m3" class="ltx_Math" alttext="\frac{\partial\psi^{\ast}}{\partial t}" display="inline"><mfrac><mrow><mo rspace="0em">∂</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></math>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E36" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E36.m1" class="ltx_Math" alttext="\frac{\partial\psi}{\partial t}=-\frac{\hbar}{2mi}\frac{\partial^{2}\psi}{%
+\partial x^{2}}+\frac{V}{i\hbar}\psi,\quad\frac{\partial\psi^{\ast}}{\partial t%
+}=\frac{\hbar}{2mi}\frac{\partial^{2}\psi^{\ast}}{\partial x^{2}}-\frac{V}{i%
+\hbar}\psi^{\ast}." display="block"><mrow><mrow><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mi>V</mi><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo>⁢</mo><mi>ψ</mi></mrow></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mfrac><mrow><mo rspace="0em">∂</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>−</mo><mrow><mfrac><mi>V</mi><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac><mo>⁢</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.36)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Substituting these in, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E37.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!\langle x(t)\rangle}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mpadded width="0.350em"><mi mathvariant="normal">d</mi></mpadded><mo>⁡</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E37.m2" class="ltx_Math" alttext="\displaystyle=\frac{\hbar}{2mi}\int_{-\infty}^{\infty}x\left(\frac{\partial^{2%
+}\psi^{\ast}}{\partial x^{2}}\psi-\frac{V}{i\hbar}\lvert\psi\rvert-\psi^{\ast}%
+\frac{\partial^{2}\psi}{\partial x^{2}}+\frac{V}{i\hbar}\lvert\psi\rvert\right%
+)\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>x</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>ψ</mi></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mi>V</mi><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow></mrow><mo>−</mo><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mi>V</mi><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.37)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E38.m1" class="ltx_Math" alttext="\displaystyle=\frac{\hbar}{2mi}\int_{-\infty}^{\infty}\left(\frac{\partial^{2}%
+\psi^{\ast}}{\partial x^{2}}x\psi-\psi^{\ast}x\frac{\partial^{2}\psi}{\partial
+x%
+^{2}}\right)\operatorname{\mathrm{d}}\!x." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ψ</mi></mrow><mo>−</mo><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.38)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Looking at the first term and integrating by parts, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E39"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E39.m1" class="ltx_Math" alttext="\displaystyle\int_{-\infty}^{\infty}\frac{\partial^{2}\psi^{\ast}}{\partial x^%
+{2}}x\psi\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ψ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E39.m2" class="ltx_Math" alttext="\displaystyle=\left.\frac{\partial\psi^{\ast}}{\partial x}x\psi\right|_{-%
+\infty}^{\infty}-\int_{-\infty}^{\infty}\frac{\partial\psi}{\partial x}\frac{%
+\partial}{\partial}(x\psi)\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ψ</mi></mrow><mo>|</mo></mrow><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mo>−</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mo>∂</mo></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.39)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E40.m1" class="ltx_Math" alttext="\displaystyle=-\int_{-\infty}^{\infty}\frac{\partial\psi^{\ast}}{\partial x}%
+\left(\psi+x\frac{\partial\psi}{\partial x}\right)\operatorname{\mathrm{d}}\!x." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>ψ</mi><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.40)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The “surface” terms go to zero because the wavefunction is square integrable, and therefore must go to zero at <math id="SS2.p6.m4" class="ltx_Math" alttext="\pm\infty" display="inline"><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+Integrating by parts again and using the same trick, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E41"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E41.m1" class="ltx_Math" alttext="\displaystyle\int_{-\infty}^{\infty}\frac{\partial^{2}\psi^{\ast}}{\partial x^%
+{2}}x\psi\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ψ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E41.m2" class="ltx_Math" alttext="\displaystyle=-\left.\psi^{\ast}\left(\psi+x\frac{\partial\psi}{\partial x}%
+\right)\right|_{-\infty}^{\infty}+\int_{-\infty}^{\infty}\psi^{\ast}\left(2%
+\frac{\partial\psi}{\partial x}+x\frac{\partial^{2}\psi}{\partial x^{2}}\right%
+)\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><msubsup><mrow><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>ψ</mi><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow><mo>|</mo></mrow><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.41)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E42"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E42.m1" class="ltx_Math" alttext="\displaystyle=\int_{-\infty}^{\infty}\psi^{\ast}\left(2\frac{\partial\psi}{%
+\partial x}+x\frac{\partial^{2}\psi}{\partial x^{2}}\right)\operatorname{%
+\mathrm{d}}\!x." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.42)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Substituting this into the time derivative for the expectation value for position, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch1.E43"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch1.E43.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!\langle x(t)\rangle}{%
+\operatorname{\mathrm{d}}\!t}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mpadded width="0.350em"><mi mathvariant="normal">d</mi></mpadded><mo>⁡</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E43.m2" class="ltx_Math" alttext="\displaystyle=\frac{\hbar}{2mi}\int_{-\infty}^{\infty}\left(2\psi^{\ast}\frac{%
+\partial\psi}{\partial x}+\psi^{\ast}x\frac{\partial^{2}\psi}{\partial x^{2}}-%
+\psi^{\ast}x\frac{\partial^{2}\psi}{\partial x^{2}}\right)\operatorname{%
+\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>i</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mrow><mo>(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>−</mo><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.43)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E44"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E44.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{m}\int_{-\infty}^{\infty}\psi^{\ast}\left(-i\hbar\frac{%
+\partial}{\partial x}\right)\psi\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>m</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.44)</span></td>
+</tr></tbody>
+<tbody id="Ch1.E45"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch1.E45.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{m}\int_{-\infty}^{\infty}\psi^{\ast}\hat{p}\psi%
+\operatorname{\mathrm{d}}\!x," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>m</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.45)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have substituted the definition of the momentum operator.
+So if we interpret this integral as the expectation value of momentum, equation <a href="#Ch1.E33" title="In 1.4.2 Operators with Continuous Eigenvalues ‣ 1.4 Expectation Values ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.33</span></a> holds.</p>
+</div>
+<div id="SS2.p7" class="ltx_para">
+<p class="ltx_p">We thus have the following generalisation.</p>
+</div>
+<div id="Ch1.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch1.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">For an operator <math id="Ch1.Thmdefinition1.p1.m1" class="ltx_Math" alttext="\hat{O}" display="inline"><mover accent="true"><mi>O</mi><mo>^</mo></mover></math> with continuous measurement outcomes, the expectation value of <math id="Ch1.Thmdefinition1.p1.m2" class="ltx_Math" alttext="\hat{O}" display="inline"><mover accent="true"><mi>O</mi><mo>^</mo></mover></math> for a state <math id="Ch1.Thmdefinition1.p1.m3" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> is defined as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E46" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E46.m1" class="ltx_Math" alttext="\langle\hat{O}\rangle_{\psi}=\int_{-\infty}^{\infty}\psi(x,t)^{\ast}\hat{O}%
+\psi(x,t)\operatorname{\mathrm{d}}\!x." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow><mi>ψ</mi></msub><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>ψ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∗</mo></msup><mo>⁢</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.46)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Ch1.Thmdefinition1.p2" class="ltx_para">
+<p class="ltx_p">In Dirac notation, this is denoted</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E47" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E47.m1" class="ltx_Math" alttext="\langle\hat{O}\rangle_{\psi}=\langle\psi\mathclose{}|\mathopen{}\hat{O}%
+\mathclose{}|\mathopen{}\psi\rangle." display="block"><mrow><mrow><msub><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow><mi>ψ</mi></msub><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>ψ</mi><mo stretchy="false">|</mo><mover accent="true"><mi>O</mi><mo>^</mo></mover><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.47)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="conditions-for-valid-wavefunctions.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Conditions for Valid Wavefunctions</span></a><a href="quantum-uncertainty.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.5 </span>Quantum Uncertainty</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#suboperators-with-discrete-eigenvalues" title="In 1.4 Expectation Values ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4.1 </span>Operators with Discrete Eigenvalues</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#suboperators-with-continuous-eigenvalues" title="In 1.4 Expectation Values ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4.2 </span>Operators with Continuous Eigenvalues</span></a></li>
+<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch1.Thmdefinition1" title=""><span class="ltx_text ltx_ref_title">Definition 1.1</span></a></li></ol>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="./" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="next" href="solving-the-hydrogen-atom.html" title="5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-hydrogen-atom.html" title="5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="energy-eigenstates.html" title="5.3 Energy Eigenstates of Hydrogen ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="angular-momentum.html" title="5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>The Hydrogen Hamiltonian</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-hydrogen-atom.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Solving the Hydrogen Atom</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="energy-eigenstates.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Energy Eigenstates of Hydrogen</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="angular-momentum.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Angular Momentum</span></a></li>
+</ol>
+</li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5.1 </span>The Hydrogen Hamiltonian</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We will now look at the major early success story of quantum mechanics, solving for the motion of an electron in a hydrogen atom.
+Our assumptions are that the nucleus (the proton) is a particle with mass <math id="p1.m1" class="ltx_Math" alttext="m_{p}" display="inline"><msub><mi>m</mi><mi>p</mi></msub></math> and charge <math id="p1.m2" class="ltx_Math" alttext="+e" display="inline"><mrow><mo>+</mo><mi>e</mi></mrow></math>, and the electron is a particle with mass <math id="p1.m3" class="ltx_Math" alttext="m_{e}" display="inline"><msub><mi>m</mi><mi>e</mi></msub></math> and charge <math id="p1.m4" class="ltx_Math" alttext="-e" display="inline"><mrow><mo>−</mo><mi>e</mi></mrow></math>.
+Reality, or rather our latest understanding of the hydrogen atom, is more complex and there are things that we are neglecting here such as coupling between spin and angular momentum, special relativity, and the quantum vacuum.</p>
+</div>
+<section id="setting-up-the-problem" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.1.1 </span>Setting up the Problem</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">The electron is bound to the proton by the Coulomb force, which is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E1.m1" class="ltx_Math" alttext="\boldsymbol{F}=-\frac{e^{2}}{4\pi\varepsilon_{0}r^{2}}\hat{\boldsymbol{r}}," display="block"><mrow><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS1.p1.m1" class="ltx_Math" alttext="\varepsilon_{0}" display="inline"><msub><mi>ε</mi><mn>0</mn></msub></math> is the permittivity of free space and <math id="SS1.p1.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> is the distance between the two particles.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">To find the potential energy, we integrate from <math id="SS1.p2.m1" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> to <math id="SS1.p2.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> (we are taking the potential energy to be zero at infinity) to calculate the work done to bring the electron from infinity to <math id="SS1.p2.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, so we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E2.m1" class="ltx_Math" alttext="V(r)=-\int_{\infty}^{r}F(r^{\prime})\operatorname{\mathrm{d}}\!r^{\prime}=\int%
+_{\infty}^{r}\frac{e^{2}}{4\pi\varepsilon_{0}r^{\prime 2}}\operatorname{%
+\mathrm{d}}\!r^{\prime}=-\frac{e^{2}}{4\pi\varepsilon_{0}r}." display="block"><mrow><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msubsup><mo>∫</mo><mi mathvariant="normal">∞</mi><mi>r</mi></msubsup><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>r</mi><mo>′</mo></msup></mrow></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo>∫</mo><mi mathvariant="normal">∞</mi><mi>r</mi></msubsup><mrow><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>r</mi><mrow><mo mathsize="142%">′</mo><mo lspace="0em">⁣</mo><mn>2</mn></mrow></msup></mrow></mfrac><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>r</mi><mo>′</mo></msup></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The Coulomb force does positive work to bring the electron closer to the proton, so the potential energy is negative for any finite separation.
+This means that the energy eigenvalues will also be negative.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">Taking the reduced mass of the electron as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E3" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E3.m1" class="ltx_Math" alttext="\mu=\frac{m_{p}m_{e}}{m_{p}+m_{e}}," display="block"><mrow><mrow><mi>μ</mi><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mi>p</mi></msub><mo>⁢</mo><msub><mi>m</mi><mi>e</mi></msub></mrow><mrow><msub><mi>m</mi><mi>p</mi></msub><mo>+</mo><msub><mi>m</mi><mi>e</mi></msub></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.3)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">the kinetic energy operator is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E4" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E4.m1" class="ltx_Math" alttext="\hat{T}=\frac{\hat{p}^{2}}{2\mu}=-\frac{\hbar^{2}}{2\mu}\nabla^{2}." display="block"><mrow><mrow><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo>=</mo><mfrac><msup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mfrac><mo lspace="0.167em">⁢</mo><msup><mo>∇</mo><mn>2</mn></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.4)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">Combining these, the time-independent Schrodinger equation for the hydrogen atom electron can be written as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E5" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E5.m1" class="ltx_Math" alttext="\left(-\frac{\hbar^{2}}{2\mu}\nabla^{2}-\frac{e^{2}}{4\pi\varepsilon_{0}r}%
+\right)\psi=E\psi." display="block"><mrow><mrow><mrow><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mfrac><mo lspace="0.167em">⁢</mo><msup><mo>∇</mo><mn>2</mn></msup></mrow></mrow><mo lspace="0em">−</mo><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><mi>r</mi></mrow></mfrac></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>ψ</mi></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>ψ</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.5)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This potential has spherical symmetry, so we will solve the Schrodinger equation in spherical coordinates.
+Expanding the Laplacian, the full equation is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E6" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E6.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2\mu}\left[\frac{1}{r^{2}}\frac{\partial}{\partial r}\left(r%
+^{2}\frac{\partial}{\partial r}\right)+\frac{1}{r^{2}\sin\theta}\frac{\partial%
+}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{%
+1}{r^{2}\sin^{2}\theta}\frac{\partial^{2}}{\partial\phi^{2}}\right]\psi-\frac{%
+e^{2}}{4\pi\varepsilon_{0}r}\psi=E\psi" display="block"><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mfrac><mn>1</mn><msup><mi>r</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>r</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>r</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>]</mo></mrow><mo>⁢</mo><mi>ψ</mi></mrow></mrow><mo>−</mo><mrow><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mi>ψ</mi></mrow></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>ψ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.6)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="separating-and-solving" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.1.2 </span>Separating and Solving</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Equation <a href="#Ch5.E6" title="In 5.1.1 Setting up the Problem ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.6</span></a> is separable, so we look for solutions of the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E7" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E7.m1" class="ltx_Math" alttext="\psi(r,\theta,\phi)=R(r)\Theta(\theta)\Phi(\phi)." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.7)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This gives us the derivatives of the wavefunction:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E8" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E8.m1" class="ltx_Math" alttext="\frac{\partial\psi}{\partial r}=\Theta\Phi\frac{\operatorname{\mathrm{d}}\!R}{%
+\operatorname{\mathrm{d}}\!r},\quad\frac{\partial\psi}{\partial\theta}=R\Phi%
+\frac{\operatorname{\mathrm{d}}\!\Theta}{\operatorname{\mathrm{d}}\!\theta},%
+\quad\frac{\partial\psi}{\partial\phi}=R\Theta\frac{\operatorname{\mathrm{d}}%
+\!\Phi}{\operatorname{\mathrm{d}}\!\phi}." display="block"><mrow><mrow><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>r</mi></mrow></mfrac><mo>=</mo><mrow><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>R</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow></mfrac><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>ϕ</mi></mrow></mfrac></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.8)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Now, if we substitute these into equation <a href="#Ch5.E6" title="In 5.1.1 Setting up the Problem ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.6</span></a> and rearrange so that we have all terms containing <math id="SS2.p1.m1" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> on one side and all terms containing <math id="SS2.p1.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> and <math id="SS2.p1.m3" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> on the other, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E9.m1" class="ltx_Math" alttext="\frac{1}{\Theta\sin\theta}\frac{\operatorname{\mathrm{d}}\!}{\operatorname{%
+\mathrm{d}}\!\theta}\left(\sin\theta\frac{\operatorname{\mathrm{d}}\!\Theta}{%
+\operatorname{\mathrm{d}}\!\theta}\right)+\frac{1}{\Phi\sin^{2}\theta}\frac{%
+\operatorname{\mathrm{d}}\!^{2}\Phi}{\operatorname{\mathrm{d}}\!\phi^{2}}=-%
+\frac{1}{R}\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!r}%
+\left(r^{2}\frac{\operatorname{\mathrm{d}}\!R}{\operatorname{\mathrm{d}}\!r}%
+\right)-\frac{2\mu r^{2}}{\hbar^{2}}\left(\frac{e^{2}}{4\pi\varepsilon_{0}r}+E%
+\right)." display="block"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Θ</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Θ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Φ</mi><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mfrac><mn>1</mn><mi>R</mi></mfrac><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>R</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>−</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><mi>r</mi></mrow></mfrac><mo>+</mo><mi>E</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.9)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Using the method of separation of variables, both sides must be equal to the same constant, which we will set to be <math id="SS2.p1.m4" class="ltx_Math" alttext="-\lambda^{2}" display="inline"><mrow><mo>−</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow></math>.
+Thus we have the <span class="ltx_text ltx_font_bold">radial equation</span> (rearranging slightly and cancelling off the minus sign from all terms):</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E10.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!r}\left(r^{2}%
+\frac{\operatorname{\mathrm{d}}\!R(r)}{\operatorname{\mathrm{d}}\!r}\right)+%
+\frac{2\mu r^{2}}{\hbar^{2}}\left(\frac{e^{2}}{4\pi\varepsilon_{0}r}+E\right)R%
+(r)=\lambda^{2}R(r)," display="block"><mrow><mrow><mrow><mrow><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>r</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>R</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>r</mi></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>ε</mi><mn>0</mn></msub><mo>⁢</mo><mi>r</mi></mrow></mfrac><mo>+</mo><mi>E</mi></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>⁢</mo><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.10)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">and the <span class="ltx_text ltx_font_bold">angular equation</span>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E11.m1" class="ltx_Math" alttext="\frac{1}{\Theta(\theta)\sin\theta}\frac{\operatorname{\mathrm{d}}\!}{%
+\operatorname{\mathrm{d}}\!\theta}\left(\sin\theta\frac{\operatorname{\mathrm{%
+d}}\!\Theta(\theta)}{\operatorname{\mathrm{d}}\!\theta}\right)+\frac{1}{\Phi(%
+\phi)\sin^{2}\theta}\frac{\operatorname{\mathrm{d}}\!^{2}\Phi(\phi)}{%
+\operatorname{\mathrm{d}}\!\phi^{2}}=-\lambda^{2}." display="block"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Θ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mo>−</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.11)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">Notice that equation <a href="#Ch5.E11" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.11</span></a> is completely independent of the potential energy, and it is also separable.
+Moving all terms with <math id="SS2.p2.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> onto one side and all terms with <math id="SS2.p2.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> onto the other, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E12.m1" class="ltx_Math" alttext="-\lambda^{2}\sin^{2}\theta-\frac{\sin\theta}{\Theta(\theta)}\frac{%
+\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!\theta}\left(\sin%
+\theta\frac{\operatorname{\mathrm{d}}\!\Theta(\theta)}{\operatorname{\mathrm{d%
+}}\!\theta}\right)=\frac{1}{\Phi(\phi)}\frac{\operatorname{\mathrm{d}}\!^{2}%
+\Phi(\phi)}{\operatorname{\mathrm{d}}\!\phi^{2}}." display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo>−</mo><mrow><mfrac><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mrow><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Θ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.12)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Now setting both sides equal to a separation constant <math id="SS2.p2.m3" class="ltx_Math" alttext="-m^{2}" display="inline"><mrow><mo>−</mo><msup><mi>m</mi><mn>2</mn></msup></mrow></math>, we get the <span class="ltx_text ltx_font_bold">polar equation</span>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E13.m1" class="ltx_Math" alttext="\sin\theta\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!\theta%
+}\left(\sin\theta\frac{\operatorname{\mathrm{d}}\!\Theta(\theta)}{%
+\operatorname{\mathrm{d}}\!\theta}\right)=(m^{2}-\lambda^{2}\sin^{2}\theta)%
+\Theta(\theta)," display="block"><mrow><mrow><mrow><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi mathvariant="normal">Θ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>−</mo><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.13)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">and the <span class="ltx_text ltx_font_bold">azimuthal equation</span>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E14.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}\Phi(\phi)}{\operatorname{\mathrm{d}}\!%
+\phi^{2}}=-m^{2}\Phi(\phi)." display="block"><mrow><mrow><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi mathvariant="normal">Φ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.14)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a><a href="solving-the-hydrogen-atom.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Solving the Hydrogen Atom</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#setting-up-the-problem" title="In 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1.1 </span>Setting up the Problem</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#separating-and-solving" title="In 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1.2 </span>Separating and Solving</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

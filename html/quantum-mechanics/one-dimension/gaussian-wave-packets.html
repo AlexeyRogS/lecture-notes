@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="free-particle.html" title="2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="next" href="infinite-square-well.html" title="2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="free-particle.html" title="2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="infinite-square-well.html" title="2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="properties-of-energy-eigenstates.html" title="2.4 Properties of Energy Eigenstates ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="hermitian-operators.html" title="2.5 Hermitian Operators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="commutators.html" title="2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="conservation-laws.html" title="2.7 Conservation Laws ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="free-particle.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>The Free Particle</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Gaussian Wave Packets</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="infinite-square-well.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3 </span>The Infinite Square Well</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="properties-of-energy-eigenstates.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>Properties of Energy Eigenstates</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="hermitian-operators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.5 </span>Hermitian Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="commutators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>Commutators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="conservation-laws.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.7 </span>Conservation Laws</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.2 </span>Gaussian Wave Packets</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We will now look at a concrete example of a valid state for a free particle constructed as a wave packet and study its properties to get a general idea of how wavefunctions behave in quantum mechanics.
+As discussed in section <a href="free-particle.html#wave-packets" title="2.1.2 Wave Packets ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.1.2</span></a> above, this begins with choosing a set of wavenumbers and their amplitudes <math id="p1.m1" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+We will start with constructing the wave packet at <math id="p1.m2" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, then we will discuss how it evolves with time.</p>
+</div>
+<section id="choosing-an-amplitude" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2.1 </span>Choosing an Amplitude <math id="SS1.m1" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">It would be nice to choose <math id="SS1.p1.m1" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be a Gaussian shape, because then the Fourier transform <math id="SS1.p1.m2" class="ltx_Math" alttext="\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> will also be a Gaussian, and Gaussians are nice to work with.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">Recall that a Gaussian function has the general form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E19.m1" class="ltx_Math" alttext="\frac{a}{\sqrt{\pi}}e^{-\frac{(x-c)^{2}}{b^{2}}}," display="block"><mrow><mrow><mfrac><mi>a</mi><msqrt><mi>π</mi></msqrt></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><msup><mi>b</mi><mn>2</mn></msup></mfrac></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.19)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which is a bell curve centered at <math id="SS1.p2.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>, with height <math id="SS1.p2.m2" class="ltx_Math" alttext="\frac{a}{\sqrt{\pi}}" display="inline"><mfrac><mi>a</mi><msqrt><mi>π</mi></msqrt></mfrac></math>, width <math id="SS1.p2.m3" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, and area <math id="SS1.p2.m4" class="ltx_Math" alttext="ab" display="inline"><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></math>.
+This means if we want our wavenumber probability density to be a Gaussian centered at some wavenumber <math id="SS1.p2.m5" class="ltx_Math" alttext="k_{0}" display="inline"><msub><mi>k</mi><mn>0</mn></msub></math> with width <math id="SS1.p2.m6" class="ltx_Math" alttext="\Delta k" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></math>, we should choose <math id="SS1.p2.m7" class="ltx_Math" alttext="a=\frac{1}{\Delta k}" display="inline"><mrow><mi>a</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></mfrac></mrow></math> so that it will be normalised.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E20.m1" class="ltx_Math" alttext="A(k)^{2}=\frac{1}{\Delta k\sqrt{\pi}}e^{-\frac{(k-k_{0})^{2}}{\Delta k^{2}}}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>−</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.20)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The width <math id="SS1.p2.m8" class="ltx_Math" alttext="\Delta k" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></math> is the distance from the centre at <math id="SS1.p2.m9" class="ltx_Math" alttext="e^{-1}" display="inline"><msup><mi>e</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> of the maximum height.
+It is a rough measure of the range of wavenumbers of the plane waves that make up the wave packet.
+Note that <math id="SS1.p2.m10" class="ltx_Math" alttext="\Delta p=\hbar\Delta k" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></mrow></math>, so the width <math id="SS1.p2.m11" class="ltx_Math" alttext="\Delta k" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></math> is directly related to the uncertainty in momentum.</p>
+</div>
+</section>
+<section id="calculating-the-wavefunction" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2.2 </span>Calculating the Wavefunction <math id="SS2.m1" class="ltx_Math" alttext="\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>
+</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Using the Fourier transform given by equation <a href="free-particle.html#Ch2.E14" title="In 2.1.2 Wave Packets ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.14</span></a>, the wavefunction at <math id="SS2.p1.m1" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> is given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E21.m1" class="ltx_Math" alttext="\displaystyle\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E21.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}A(k)e^{ikx}%
+\operatorname{\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.21)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E22.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^{%
+\infty}e^{-\frac{(k-k_{0})^{2}}{2\Delta k^{2}}}e^{ikx}\operatorname{\mathrm{d}%
+}\!k," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>−</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.22)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where in the second line we inserted the square root of equation <a href="#Ch2.E20" title="In 2.2.1 Choosing an Amplitude 𝐴⁢(𝑘) ‣ 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.20</span></a> for <math id="SS2.p1.m2" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+To integrate this we use the standard result for Gaussian integrals:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E23.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}e^{-\alpha q^{2}}e^{-\beta q}\operatorname{\mathrm{d}}%
+\!q=\sqrt{\frac{\pi}{\alpha}}e^{\frac{\beta^{2}}{4\alpha}}." display="block"><mrow><mrow><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>α</mi><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>β</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow><mo>=</mo><mrow><msqrt><mfrac><mi>π</mi><mi>α</mi></mfrac></msqrt><mo>⁢</mo><msup><mi>e</mi><mfrac><msup><mi>β</mi><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mi>α</mi></mrow></mfrac></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.23)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">With <math id="SS2.p1.m3" class="ltx_Math" alttext="q=k-k_{0}" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><mi>k</mi><mo>−</mo><msub><mi>k</mi><mn>0</mn></msub></mrow></mrow></math> (so <math id="SS2.p1.m4" class="ltx_Math" alttext="\operatorname{\mathrm{d}}\!q=\operatorname{\mathrm{d}}\!k" display="inline"><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow><mo>=</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mrow></math>), we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E24.m1" class="ltx_Math" alttext="\displaystyle\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E24.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^{%
+\infty}e^{-\frac{q^{2}}{2\Delta k^{2}}}e^{i(q+k_{0})x}\operatorname{\mathrm{d}%
+}\!q" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>q</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.24)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E25.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}e^{ik_{0}x}\int_{-%
+\infty}^{\infty}e^{-\frac{q^{2}}{2\Delta k^{2}}}e^{iqx}\operatorname{\mathrm{d%
+}}\!q." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>k</mi><mn>0</mn></msub><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>q</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.25)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">We can now use the standard integral with <math id="SS2.p1.m5" class="ltx_Math" alttext="\alpha=\frac{1}{2\Delta k^{2}}" display="inline"><mrow><mi>α</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></math> and <math id="SS2.p1.m6" class="ltx_Math" alttext="\beta=-ix" display="inline"><mrow><mi>β</mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></math> to get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx14" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E26.m1" class="ltx_Math" alttext="\displaystyle\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E26.m2" class="ltx_Math" alttext="\displaystyle=\frac{\sqrt{2\pi\Delta k^{2}}}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2%
+\pi}}e^{ik_{0}x}e^{-\frac{\Delta k^{2}x^{2}}{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></msqrt><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>k</mi><mn>0</mn></msub><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.26)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E27.m1" class="ltx_Math" alttext="\displaystyle=\sqrt{\frac{\Delta k}{\sqrt{\pi}}}e^{ik_{0}x}e^{-\frac{x^{2}%
+\Delta k^{2}}{2}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow><msqrt><mi>π</mi></msqrt></mfrac></mstyle></msqrt><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>k</mi><mn>0</mn></msub><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.27)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">What is the probability density at <math id="SS2.p2.m1" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>?
+We can calculate this directly by taking the magnitude square:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E28" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E28.m1" class="ltx_Math" alttext="\lvert\psi(x,0)\rvert^{2}=\frac{\Delta k}{\sqrt{\pi}}e^{-x^{2}\Delta k^{2}}=%
+\frac{\Delta k}{\sqrt{\pi}}e^{-\frac{x^{2}}{\Delta x_{0}^{2}}}," display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow><msqrt><mi>π</mi></msqrt></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mrow></msup></mrow><mo>=</mo><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow><msqrt><mi>π</mi></msqrt></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>x</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.28)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have defined <math id="SS2.p2.m2" class="ltx_Math" alttext="\Delta x_{0}=\frac{1}{\Delta k}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></mfrac></mrow></math> as the width at <math id="SS2.p2.m3" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>.
+So the probability density is also a Gaussian, this time centered at <math id="SS2.p2.m4" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>, with width <math id="SS2.p2.m5" class="ltx_Math" alttext="\Delta x_{0}=\frac{1}{\Delta k}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></mfrac></mrow></math>.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">Notice that <math id="SS2.p3.m1" class="ltx_Math" alttext="\Delta x_{0}\Delta k=1" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow><mo>=</mo><mn>1</mn></mrow></math>, which can be expressed in term of momentum via the de Broglie relation:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E29" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E29.m1" class="ltx_Math" alttext="\Delta x_{0}\Delta p=\hbar." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow><mo>=</mo><mi mathvariant="normal">ℏ</mi></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.29)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This is a manifestation of the uncertainty principle.
+The factor of <math id="SS2.p3.m2" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> arises from our definition of width of a Gaussian.
+Notice that the width of the position probability density is inversely proportional to the width of the wavenumber probability density.
+This reflects the fact that due to the uncertainty principle, if the uncertainty in momentum <math id="SS2.p3.m3" class="ltx_Math" alttext="\Delta k" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></math> is small then the uncertainty in position <math id="SS2.p3.m4" class="ltx_Math" alttext="\Delta x_{0}" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math> must be wide and vice versa.</p>
+</div>
+</section>
+<section id="time-evolution-of-the-gaussian-wave-packet" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.2.3 </span>Time-evolution of the Gaussian Wave Packet</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">As we found in section <a href="free-particle.html#wave-packets" title="2.1.2 Wave Packets ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.1.2</span></a>, the time evolution of our wave packet is given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E30.m1" class="ltx_Math" alttext="\psi(x,t)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}A(k)e^{i(kx-\omega t)}%
+\operatorname{\mathrm{d}}\!k." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.30)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">To evaluate this, we need to keep in mind that <math id="SS3.p1.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is a function of <math id="SS3.p1.m2" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> through the Einstein and de Broglie relations.
+Specifically, for a free particle only we have <math id="SS3.p1.m3" class="ltx_Math" alttext="E=\frac{p^{2}}{2m}" display="inline"><mrow><mi>E</mi><mo>=</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow></math>, which gives</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx15" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E31.m1" class="ltx_Math" alttext="\displaystyle E" display="inline"><mi>E</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E31.m2" class="ltx_Math" alttext="\displaystyle=\frac{p^{2}}{2m}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.31)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E32.m1" class="ltx_Math" alttext="\displaystyle\hbar\omega" display="inline"><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E32.m2" class="ltx_Math" alttext="\displaystyle=\frac{\hbar^{2}k^{2}}{2m}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.32)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E33.m1" class="ltx_Math" alttext="\displaystyle\implies\omega(k)" display="inline"><mrow><mi></mi><mo stretchy="false">⟹</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E33.m2" class="ltx_Math" alttext="\displaystyle=\frac{\hbar k^{2}}{2m}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.33)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This is our <span class="ltx_text ltx_font_bold">dispersion relation</span> for matter waves.
+Note that the <math id="SS3.p1.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is not proportional to <math id="SS3.p1.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>, so matter waves are <span class="ltx_text ltx_font_bold">dispersive</span>.
+This means that different wavelength will travel at different speeds.
+The phase velocity is given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E34" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E34.m1" class="ltx_Math" alttext="v_{\text{ph}}(k)=\frac{\omega}{k}=\frac{\hbar k}{2m}," display="block"><mrow><mrow><mrow><msub><mi>v</mi><mtext>ph</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mi>ω</mi><mi>k</mi></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>k</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.34)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so shorter wavelengths (larger <math id="SS3.p1.m6" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>) travel faster.
+This makes physical sense as large <math id="SS3.p1.m7" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> corresponds to large momentum.
+Meanwhile the group velocity for a wave packet centered at <math id="SS3.p1.m8" class="ltx_Math" alttext="k_{0}" display="inline"><msub><mi>k</mi><mn>0</mn></msub></math> is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E35" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E35.m1" class="ltx_Math" alttext="v_{\text{gr}}(k)=\left.\frac{\operatorname{\mathrm{d}}\!\omega}{\operatorname{%
+\mathrm{d}}\!k}\right|_{k_{0}}=\frac{\hbar k_{0}}{2m}=2v_{\text{ph}}(k_{0})." display="block"><mrow><mrow><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mrow><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>ω</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mfrac><mo>|</mo></mrow><msub><mi>k</mi><mn>0</mn></msub></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mtext>ph</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.35)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This is the speed that the envelope of the wave packet will travel at.
+Combining these ideas together, we expect that the wave packet will be smudged out over time, as some wavelengths in it travel faster and some slower.</p>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">Let’s see if we can show this explicitly.
+Substituting the square root of equation <a href="#Ch2.E20" title="In 2.2.1 Choosing an Amplitude 𝐴⁢(𝑘) ‣ 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.20</span></a> for <math id="SS3.p2.m1" class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> and equation <a href="#Ch2.E33" title="In 2.2.3 Time-evolution of the Gaussian Wave Packet ‣ 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.33</span></a> for <math id="SS3.p2.m2" class="ltx_Math" alttext="\omega(k)" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> into the integral, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E36" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E36.m1" class="ltx_Math" alttext="\psi(x,t)=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^{\infty%
+}e^{-\frac{(k-k_{0})^{2}}{2\Delta k^{2}}}e^{i\left(kx-\frac{\hbar k^{2}}{2m}t%
+\right)}\operatorname{\mathrm{d}}\!k." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>−</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>)</mo></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>k</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.36)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">We would like to use the standard integral <a href="#Ch2.E23" title="In 2.2.2 Calculating the Wavefunction 𝜓⁢(𝑥,0) ‣ 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.23</span></a> for Gaussians again.
+Making the same substitution as in section <a href="#subcalculating-the-wavefunction" title="2.2.2 Calculating the Wavefunction 𝜓⁢(𝑥,0) ‣ 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.2.2</span></a> above (<math id="SS3.p2.m3" class="ltx_Math" alttext="q=k-k_{0}" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><mi>k</mi><mo>−</mo><msub><mi>k</mi><mn>0</mn></msub></mrow></mrow></math>) gives</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx16" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E37.m1" class="ltx_Math" alttext="\displaystyle\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E37.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^{%
+\infty}e^{-\frac{q^{2}}{2\Delta k^{2}}}e^{i(q+k_{0})x}e^{-\frac{i\hbar(q+k_{0}%
+)^{2}}{2m}t}\operatorname{\mathrm{d}}\!q" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>q</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>+</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.37)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E38.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\int_{-\infty}^{%
+\infty}e^{-\frac{q^{2}}{2\Delta k^{2}}}e^{iqx}e^{ik_{0}x}e^{-\frac{i\hbar q^{2%
+}}{2m}t}e^{-\frac{i\hbar qk_{0}}{m}t}e^{-\frac{i\hbar k_{0}^{2}}{2m}t}%
+\operatorname{\mathrm{d}}\!q." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>q</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><msub><mi>k</mi><mn>0</mn></msub><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>q</mi><mo>⁢</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msubsup><mi>k</mi><mn>0</mn><mn>2</mn></msubsup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.38)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">We can simplify the notation a bit by defining <math id="SS3.p2.m4" class="ltx_Math" alttext="\omega_{0}=\frac{\hbar k_{0}^{2}}{2m}" display="inline"><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msubsup><mi>k</mi><mn>0</mn><mn>2</mn></msubsup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow></math>, the frequency of the state with wavenumber <math id="SS3.p2.m5" class="ltx_Math" alttext="k_{0}" display="inline"><msub><mi>k</mi><mn>0</mn></msub></math>, and using the group velocity <math id="SS3.p2.m6" class="ltx_Math" alttext="v_{\text{gr}}(k_{0})=\frac{\hbar k_{0}}{m}" display="inline"><mrow><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mi>k</mi><mn>0</mn></msub></mrow><mi>m</mi></mfrac></mrow></math>.
+The fifth and sixth exponentials can be rewritten in terms of these quantities, and then the third and fifth exponentials can be taken out of the integral to get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E39" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E39.m1" class="ltx_Math" alttext="\psi(x,t)=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}e^{i(k_{0}x-\omega_{0}%
+t)}\int_{-\infty}^{\infty}e^{-\left(\frac{1}{2\Delta k^{2}}+\frac{i\hbar}{2m}t%
+\right)q^{2}}e^{-i(v_{\text{gr}}(k_{0})t-x)q}\operatorname{\mathrm{d}}\!q." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>k</mi><mn>0</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><msup><mi>e</mi><mrow><mo>−</mo><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>q</mi></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.39)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Now we can use the standard integral with</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx17" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E40.m1" class="ltx_Math" alttext="\displaystyle\alpha" display="inline"><mi>α</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E40.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{2\Delta k^{2}}+\frac{i\hbar}{2m}t" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.40)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E41"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E41.m1" class="ltx_Math" alttext="\displaystyle\beta" display="inline"><mi>β</mi></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E41.m2" class="ltx_Math" alttext="\displaystyle=i(v_{\text{gr}}(k_{0})t-x)," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow><mo>−</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.41)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">to get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx18" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E42"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E42.m1" class="ltx_Math" alttext="\displaystyle\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E42.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{\Delta k\sqrt{\pi}}\sqrt{2\pi}}\sqrt{\frac{\pi}{%
+\frac{1}{2\Delta k^{2}}+\frac{i\hbar}{2m}t}}e^{i(k_{0}x-\omega_{0}t)}e^{-\frac%
+{(x-v_{\text{gr}}(k_{0})t)^{2}}{4\left(\frac{1}{2\Delta k^{2}}+\frac{i\hbar}{2%
+m}t\right)}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msqrt><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi><mo>⁢</mo><msqrt><mi>π</mi></msqrt></mrow></msqrt><mo>⁢</mo><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mrow></mfrac></mstyle><mo>⁢</mo><msqrt><mstyle displaystyle="true"><mfrac><mi>π</mi><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></mfrac></mstyle></msqrt><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>k</mi><mn>0</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mn>4</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.42)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E43"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E43.m1" class="ltx_Math" alttext="\displaystyle=\sqrt{\frac{\Delta k}{\sqrt{\pi}\left(1+\frac{i\hbar\Delta k^{2}%
+t}{m}\right)}}e^{i(k_{0}x-\omega_{0}t)}e^{-\frac{\Delta k^{2}(x-v_{\text{gr}}(%
+k_{0})t)^{2}}{2\left(1+\frac{i\hbar\Delta k^{2}t}{m}\right)}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow><mrow><msqrt><mi>π</mi></msqrt><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow><mi>m</mi></mfrac></mrow><mo>)</mo></mrow></mrow></mfrac></mstyle></msqrt><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>k</mi><mn>0</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow><mi>m</mi></mfrac></mrow><mo>)</mo></mrow></mrow></mfrac></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.43)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">Calculating the probability density, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E44" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E44.m1" class="ltx_Math" alttext="\lvert\psi(x,t)\rvert^{2}=\frac{\Delta k}{\sqrt{\pi}\sqrt{1+\frac{\hbar^{2}%
+\Delta k^{4}t^{2}}{m^{2}}}}e^{-\frac{\Delta k^{2}(x-v_{\text{gr}}(k_{0})t)^{2}%
+}{1+\frac{\hbar^{2}\Delta k^{4}t^{2}}{m^{2}}}}." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow><mrow><msqrt><mi>π</mi></msqrt><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>4</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><msup><mi>m</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow></mfrac><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>4</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><msup><mi>m</mi><mn>2</mn></msup></mfrac></mrow></mfrac></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.44)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This is quite a complicated expression, but there are a few key things we can pick out that tell us in simple terms how the wave packet behaves.
+The structure of the probability density is basically</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E45" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E45.m1" class="ltx_Math" alttext="\lvert\psi(x,t)\rvert^{2}=C(t)e^{-\frac{(x-x_{0}(t))^{2}}{\Delta x(t)^{2}}}," display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>−</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.45)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so we see that the height, width, and centre of the wave packet all change with time while retaining a Gaussian form.</p>
+</div>
+<div id="SS3.p4" class="ltx_para">
+<p class="ltx_p">Comparing the two expressions, the centre of the wave packet <math id="SS3.p4.m1" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> evolves as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E46" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E46.m1" class="ltx_Math" alttext="x_{0}(t)=v_{\text{gr}}(k_{0})t," display="block"><mrow><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>v</mi><mtext>gr</mtext></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>k</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.46)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so the position of the peak of the wavepacket moves to the right with a constant speed, the speed of the central wavenumber (or equivalently, the speed of the envelope).
+This makes sense, there are no forces acting on the particle so its speed stays constant with time.</p>
+</div>
+<div id="SS3.p5" class="ltx_para">
+<p class="ltx_p">The width of the wave packet is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E47" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E47.m1" class="ltx_Math" alttext="\Delta x(t)=\frac{1}{\Delta k}\sqrt{1+\frac{\hbar^{2}\Delta k^{4}t^{2}}{m^{2}}%
+}=\Delta x_{0}\sqrt{1+\frac{\hbar^{2}\Delta k^{4}t^{2}}{m^{2}}}," display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></mfrac><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>4</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><msup><mi>m</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow><mo>=</mo><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mfrac><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msup><mi>k</mi><mn>4</mn></msup><mo>⁢</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><msup><mi>m</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.47)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have reintroduced <math id="SS3.p5.m1" class="ltx_Math" alttext="\Delta x_{0}=\frac{1}{\Delta k}" display="inline"><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></mfrac></mrow></math>, the width of the wave packet at <math id="SS3.p5.m2" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math> from before.
+Thus the width <math id="SS3.p5.m3" class="ltx_Math" alttext="\Delta x" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi></mrow></math> increases over time just like we predicted.</p>
+</div>
+<div id="SS3.p6" class="ltx_para">
+<p class="ltx_p">The height has the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E48" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E48.m1" class="ltx_Math" alttext="C(t)=\frac{1}{\sqrt{\pi}\Delta x(t)}," display="block"><mrow><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><msqrt><mi>π</mi></msqrt><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.48)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so since the width increases with time, the height decreases.
+This makes sense, as to preserve the normalisation of the wave packet the amplitude must decrease as it spreads out.</p>
+</div>
+<div id="SS3.p7" class="ltx_para">
+<p class="ltx_p">Notice that in the limit <math id="SS3.p7.m1" class="ltx_Math" alttext="t\to 0" display="inline"><mrow><mi>t</mi><mo stretchy="false">→</mo><mn>0</mn></mrow></math>, we get back our previous results for the initial wave packet <math id="SS3.p7.m2" class="ltx_Math" alttext="\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.
+If <math id="SS3.p7.m3" class="ltx_Math" alttext="\Delta k" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>k</mi></mrow></math> is larger at <math id="SS3.p7.m4" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>, i.e. if the uncertainty in momentum <math id="SS3.p7.m5" class="ltx_Math" alttext="\Delta p" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow></math> is larger, the the wavepacket spreads out more slowly.</p>
+</div>
+<div id="SS3.p8" class="ltx_para">
+<p class="ltx_p">Does the uncertainty in momentum <math id="SS3.p8.m1" class="ltx_Math" alttext="\Delta p" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow></math> increase over just like <math id="SS3.p8.m2" class="ltx_Math" alttext="\Delta x" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi></mrow></math>?
+From equation <a href="free-particle.html#Ch2.E17" title="In 2.1.2 Wave Packets ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.17</span></a>, we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx19" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E49"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E49.m1" class="ltx_Math" alttext="\displaystyle\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E49.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\phi(p,t)e^{%
+\frac{i}{\hbar}px}\operatorname{\mathrm{d}}\!p" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>p</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.49)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E50"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E50.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\phi(p,0)e^{%
+\frac{i}{\hbar}(px-Et)}\operatorname{\mathrm{d}}\!p." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mrow><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>p</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.50)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">For the free particle, we have <math id="SS3.p8.m3" class="ltx_Math" alttext="E=\frac{p^{2}}{2m}" display="inline"><mrow><mi>E</mi><mo>=</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow></math> and so</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E51" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E51.m1" class="ltx_Math" alttext="\psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\phi(p,0)e^{-\frac{%
+i}{\hbar}\frac{p^{2}}{2m}t}e^{\frac{i}{\hbar}px}\operatorname{\mathrm{d}}\!p." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></msqrt></mfrac><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>p</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.51)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Hence we have that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E52" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E52.m1" class="ltx_Math" alttext="\lvert\phi(p,t)\rvert^{2}=\lvert\phi(p,0)e^{-\frac{i}{\hbar}\frac{p^{2}}{2m}t}%
+\rvert^{2}=\lvert\phi(p,0)\rvert^{2}," display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.52)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so the momentum probability density remains the same over time and <math id="SS3.p8.m4" class="ltx_Math" alttext="\Delta p" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow></math> does not change.
+This is not a general fact, it only holds for the free particle.
+We will find that when there are forces present, <math id="SS3.p8.m5" class="ltx_Math" alttext="\Delta p" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow></math> does indeed increase over time.
+In that sense, this is sort of a quantum analogue of Newton’s first law.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="free-particle.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>The Free Particle</span></a><a href="infinite-square-well.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3 </span>The Infinite Square Well</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subchoosing-an-amplitude" title="In 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2.1 </span>Choosing an Amplitude <math class="ltx_Math" alttext="A(k)" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subcalculating-the-wavefunction" title="In 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2.2 </span>Calculating the Wavefunction <math class="ltx_Math" alttext="\psi(x,0)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math></span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subtime-evolution-of-the-gaussian-wave-packet" title="In 2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2.3 </span>Time-evolution of the Gaussian Wave Packet</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

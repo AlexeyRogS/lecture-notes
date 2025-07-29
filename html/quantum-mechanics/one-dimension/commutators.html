@@ -1,0 +1,437 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="hermitian-operators.html" title="2.5 Hermitian Operators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="next" href="conservation-laws.html" title="2.7 Conservation Laws ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="free-particle.html" title="2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="gaussian-wave-packets.html" title="2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="infinite-square-well.html" title="2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="properties-of-energy-eigenstates.html" title="2.4 Properties of Energy Eigenstates ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="hermitian-operators.html" title="2.5 Hermitian Operators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="conservation-laws.html" title="2.7 Conservation Laws ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="free-particle.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>The Free Particle</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="gaussian-wave-packets.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Gaussian Wave Packets</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="infinite-square-well.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3 </span>The Infinite Square Well</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="properties-of-energy-eigenstates.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>Properties of Energy Eigenstates</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="hermitian-operators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.5 </span>Hermitian Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>Commutators</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="conservation-laws.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.7 </span>Conservation Laws</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.6 </span>Commutators</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We have seen that we some operators it matters which order we apply them in.
+For example, if we apply <math id="p1.m1" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math> then <math id="p1.m2" class="ltx_Math" alttext="\hat{p}" display="inline"><mover accent="true"><mi>p</mi><mo>^</mo></mover></math>, we may get a different result to if we apply <math id="p1.m3" class="ltx_Math" alttext="\hat{p}" display="inline"><mover accent="true"><mi>p</mi><mo>^</mo></mover></math> then <math id="p1.m4" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math>.
+We can measure the degree to which two operators fail to commute using a simple expression called the commutator, denoted with square brackets.</p>
+</div>
+<div id="Ch2.Thmdefinition3" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 2.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch2.Thmdefinition3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">commutator</span> of two operators <math id="Ch2.Thmdefinition3.p1.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="Ch2.Thmdefinition3.p1.m2" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> is defined as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E120" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E120.m1" class="ltx_Math" alttext="[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow><mo>−</mo><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.120)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">If <math id="Ch2.Thmdefinition3.p1.m3" class="ltx_Math" alttext="[\hat{A},\hat{B}]=0" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>, then <math id="Ch2.Thmdefinition3.p1.m4" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="Ch2.Thmdefinition3.p1.m5" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> commute, that is changing their order of application does not change the result.</p>
+</div>
+</div>
+<div id="Ch2.Thmexample2" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch2.Thmexample2.p1" class="ltx_para">
+<p class="ltx_p">What is the commutator of position <math id="Ch2.Thmexample2.p1.m1" class="ltx_Math" alttext="\hat{x}=x" display="inline"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>=</mo><mi>x</mi></mrow></math> and momentum <math id="Ch2.Thmexample2.p1.m2" class="ltx_Math" alttext="\hat{p}=-i\hbar\frac{\partial}{\partial x}" display="inline"><mrow><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mrow></mrow></mrow></math>?</p>
+</div>
+<div id="Ch2.Thmexample2.p2" class="ltx_para">
+<p class="ltx_p">To calculate this commutator, we need to act it on an arbitrary state <math id="Ch2.Thmexample2.p2.m1" class="ltx_Math" alttext="\lvert\psi\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></math> as if it was an operator, since <math id="Ch2.Thmexample2.p2.m2" class="ltx_Math" alttext="\hat{p}" display="inline"><mover accent="true"><mi>p</mi><mo>^</mo></mover></math> contains a derivative.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx28" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E121"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E121.m1" class="ltx_math_unparsed" alttext="\displaystyle[\hat{x},\hat{p}]\lvert\psi\rangle" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E121.m2" class="ltx_math_unparsed" alttext="\displaystyle=\hat{x}\hat{p}\lvert\psi\rangle-\hat{p}\hat{x}\lvert\psi\rangle" display="inline"><mrow><mo>=</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mover accent="true"><mi>p</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo>−</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mover accent="true"><mi>x</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.121)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E122"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E122.m1" class="ltx_math_unparsed" alttext="\displaystyle=x\left(-i\hbar\frac{\partial}{\partial x}\right)\lvert\psi%
+\rangle-\left(-i\hbar\frac{\partial}{\partial x}\right)(x\lvert\psi\rangle)" display="inline"><mrow><mo>=</mo><mi>x</mi><mrow><mo>(</mo><mo lspace="0em">−</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo>−</mo><mrow><mo>(</mo><mo lspace="0em">−</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.122)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E123"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E123.m1" class="ltx_math_unparsed" alttext="\displaystyle=-i\hbar x\frac{\partial\lvert\psi\rangle}{\partial x}+i\hbar%
+\frac{\partial}{\partial x}(x\lvert\psi\rangle)" display="inline"><mrow><mo rspace="0em">=</mo><mo lspace="0em">−</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mi>x</mi><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mrow><mo stretchy="false">(</mo><mi>x</mi><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.123)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E124"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E124.m1" class="ltx_math_unparsed" alttext="\displaystyle=-i\hbar x\frac{\partial\lvert\psi\rangle}{\partial x}+i\hbar x%
+\frac{\partial}{\partial\lvert\psi\rangle}+i\hbar\lvert\psi\rangle" display="inline"><mrow><mo rspace="0em">=</mo><mo lspace="0em">−</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mi>x</mi><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>+</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mi>x</mi><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow></mfrac></mstyle><mo>+</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.124)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E125"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E125.m1" class="ltx_math_unparsed" alttext="\displaystyle=i\hbar\lvert\psi\rangle." display="inline"><mrow><mo>=</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mrow><mo stretchy="false">|</mo><mi>ψ</mi><mo stretchy="false">⟩</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.125)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This implies that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E126" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E126.m1" class="ltx_Math" alttext="[\hat{x},\hat{p}]=i\hbar," display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.126)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so <math id="Ch2.Thmexample2.p2.m3" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math> and <math id="Ch2.Thmexample2.p2.m4" class="ltx_Math" alttext="\hat{p}" display="inline"><mover accent="true"><mi>p</mi><mo>^</mo></mover></math> do not commute.</p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Going back to products of two operators briefly, when is the product of two Hermitian operators itself Hermitian?
+In section <a href="hermitian-operators.html#the-adjoint" title="2.5.1 The Adjoint ‣ 2.5 Hermitian Operators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.5.1</span></a>, we showed that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E127" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E127.m1" class="ltx_Math" alttext="(\hat{A}\hat{B})^{\dagger}=\hat{B}^{\dagger}\hat{A}^{\dagger}." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>†</mo></msup><mo>=</mo><mrow><msup><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>†</mo></msup><mo>⁢</mo><msup><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>†</mo></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.127)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Where <math id="p2.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="p2.m2" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> are Hermitian, we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx29" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E128"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E128.m1" class="ltx_Math" alttext="\displaystyle(\hat{A}\hat{B})^{\dagger}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow><mo stretchy="false">)</mo></mrow><mo>†</mo></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E128.m2" class="ltx_Math" alttext="\displaystyle=\hat{B}\hat{A}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.128)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E129"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E129.m1" class="ltx_Math" alttext="\displaystyle=\hat{B}\hat{A}-\hat{A}\hat{B}+\hat{A}\hat{B}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow><mo>−</mo><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.129)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E130"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E130.m1" class="ltx_Math" alttext="\displaystyle=\hat{A}\hat{B}-[\hat{A},\hat{B}]." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow><mo>−</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.130)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So the product of two Hermitian operators is Hermitian <span class="ltx_text ltx_font_italic">only</span> if they commute, i.e. <math id="p2.m3" class="ltx_Math" alttext="[\hat{A},\hat{B}]=0" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Note that for two general operators that do not commute, we can switch their order in an expression by introducing the commutator:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx30" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E131"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E131.m1" class="ltx_Math" alttext="\displaystyle\hat{A}\hat{B}" display="inline"><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E131.m2" class="ltx_Math" alttext="\displaystyle=\hat{A}\hat{B}-\hat{B}\hat{A}+\hat{B}\hat{A}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow><mo>−</mo><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow></mrow><mo>+</mo><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.131)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E132"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E132.m1" class="ltx_Math" alttext="\displaystyle=\hat{B}\hat{A}+[\hat{A},\hat{B}]." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.132)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Also, we have for any commutator that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E133" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E133.m1" class="ltx_Math" alttext="[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}=-(\hat{B}\hat{A}-\hat{A}\hat{B%
+})=-[\hat{B},\hat{A}]," display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow><mo>−</mo><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow><mo>−</mo><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.133)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so all commutators are antisymmetric.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">You might think that two operators commuting is handy for manipulating expressions with products of operators but not much use beyond that, but actually the value of a the commutator has important implications for measurements.
+In particular, we can show that two observables commuting is equivalent to them <span class="ltx_text ltx_font_italic">sharing</span> a common basis of eigenfunctions.
+This means that the two observables can be “measured simultaneously”, which means that we can know exactly which state the particle is in with respect to both observables at the same time.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="p5.m2" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> be Hermitian operators which commute.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E134" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E134.m1" class="ltx_Math" alttext="[\hat{A},\hat{B}]=0." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.134)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Suppose the kets <math id="p5.m3" class="ltx_Math" alttext="\lvert i\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></math> are the basis of <math id="p5.m4" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> with eigenvalues <math id="p5.m5" class="ltx_Math" alttext="A_{i}" display="inline"><msub><mi>A</mi><mi>i</mi></msub></math>.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E135" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E135.m1" class="ltx_math_unparsed" alttext="\hat{A}\lvert i\rangle=A_{i}\lvert i\rangle\quad\forall i." display="block"><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><msub><mi>A</mi><mi>i</mi></msub><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mspace width="1.167em"></mspace><mo rspace="0.167em">∀</mo><mi>i</mi><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.135)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Then because the commutator is zero, the order of application does not matter and we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E136" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E136.m1" class="ltx_math_unparsed" alttext="\hat{A}(\hat{B}\lvert i\rangle)=\hat{B}(\hat{A}\lvert i\rangle)=\hat{B}(A_{i}%
+\lvert i\rangle)=A_{i}(\hat{B}\lvert i\rangle)." display="block"><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>i</mi></msub><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>A</mi><mi>i</mi></msub><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.136)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Note that the parentheses are not strictly necessary, they are just there for clarity.
+The first and last parts taken together are an eigenvalue equation.
+If each eigenstate <math id="p5.m6" class="ltx_Math" alttext="\lvert i\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></math> has a distinct eigenvalue, then this implies that <math id="p5.m7" class="ltx_math_unparsed" alttext="\hat{B}\lvert i\rangle" display="inline"><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> is a scalar multiple of <math id="p5.m8" class="ltx_Math" alttext="\lvert i\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></math>.
+This further implies that <math id="p5.m9" class="ltx_Math" alttext="\lvert i\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></math> is an eigenstate of <math id="p5.m10" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math>, and so we have shown that <math id="p5.m11" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="p5.m12" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> share an eigenbasis.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Conversely, suppose that we don’t know what <math id="p6.m1" class="ltx_Math" alttext="[\hat{A},\hat{B}]" display="inline"><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></math> is but we do know that <math id="p6.m2" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="p6.m3" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> share an eigenbasis.
+So <math id="p6.m4" class="ltx_math_unparsed" alttext="\hat{A}\lvert i\rangle=A_{i}\lvert i\rangle" display="inline"><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><msub><mi>A</mi><mi>i</mi></msub><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> and <math id="p6.m5" class="ltx_math_unparsed" alttext="\hat{B}\lvert i\rangle=B_{i}\lvert i\rangle" display="inline"><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><msub><mi>B</mi><mi>i</mi></msub><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> for all values of <math id="p6.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>.
+Then we have that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx31" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E137"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E137.m1" class="ltx_math_unparsed" alttext="\displaystyle[\hat{A},\hat{B}]\lvert i\rangle" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E137.m2" class="ltx_math_unparsed" alttext="\displaystyle=\hat{A}(\hat{B}\lvert i\rangle)-\hat{B}(\hat{A}\lvert i\rangle)" display="inline"><mrow><mo>=</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow><mo>−</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.137)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E138"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E138.m1" class="ltx_math_unparsed" alttext="\displaystyle=B_{i}\hat{A}\lvert i\rangle-A_{i}\hat{B}\lvert i\rangle" display="inline"><mrow><mo>=</mo><msub><mi>B</mi><mi>i</mi></msub><mover accent="true"><mi>A</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo>−</mo><msub><mi>A</mi><mi>i</mi></msub><mover accent="true"><mi>B</mi><mo>^</mo></mover><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.138)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E139"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E139.m1" class="ltx_math_unparsed" alttext="\displaystyle=B_{i}A_{i}\lvert i\rangle-A_{i}B_{i}\lvert i\rangle" display="inline"><mrow><mo>=</mo><msub><mi>B</mi><mi>i</mi></msub><msub><mi>A</mi><mi>i</mi></msub><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow><mo>−</mo><msub><mi>A</mi><mi>i</mi></msub><msub><mi>B</mi><mi>i</mi></msub><mrow><mo stretchy="false">|</mo><mi>i</mi><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.139)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E140"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E140.m1" class="ltx_Math" alttext="\displaystyle=0," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.140)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">for all <math id="p6.m7" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, hence <math id="p6.m8" class="ltx_Math" alttext="[\hat{A},\hat{B}]" display="inline"><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></math> must be zero <math id="p6.m9" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> commutes with <math id="p6.m10" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Being able to measure two observables simultaneously makes a bit more sense now.
+Suppose we measure <math id="p7.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> first, then if the particle is not in an eigenstate of <math id="p7.m2" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> already then it will collapse into one.
+Then, when we measure <math id="p7.m3" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math>, the particle is already in an eigenstate of <math id="p7.m4" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> and so we will get that eigenvalue and the particle will still be in the state we measured for <math id="p7.m5" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math>.
+This would not be the case if <math id="p7.m6" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="p7.m7" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math> did not commute.
+Then upon measuring <math id="p7.m8" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math>, the particle would be in a superposition state with respect to <math id="p7.m9" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and we would no longer know its state with respect to <math id="p7.m10" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> for certain.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">As we stated in section <a href="properties-of-energy-eigenstates.html#time-evolution-of-superpositions" title="2.4.4 Time Evolution of Superpositions ‣ 2.4 Properties of Energy Eigenstates ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.4.4</span></a>, observables which do not share a set of eigenfunctions, i.e. do not commute, are called <span class="ltx_text ltx_font_bold">incompatible observables</span>.
+The most famous set of incompatible observables is certainly position and momentum.
+As we saw in example <a href="#Ch2.Thmexample2" title="Example 2.2. ‣ 2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.2</span></a>, position and momentum do not commute, meaning there do not exist simultaneous eigenfunctions of <math id="p8.m1" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math> and <math id="p8.m2" class="ltx_Math" alttext="\hat{p}" display="inline"><mover accent="true"><mi>p</mi><mo>^</mo></mover></math>.
+There are therefore no quantum states with definite values of both position and momentum.</p>
+</div>
+<section id="uncertainty-from-incompatibility" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.6.1 </span>Uncertainty from Incompatibility</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">The fact that observables which do not commmute do not share eigenfunctions is directly responsible for the uncertainty principle.
+It can be shown that for two observables <math id="SS1.p1.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="SS1.p1.m2" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math>, the product of their uncertainties obeys the relation:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E141" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E141.m1" class="ltx_Math" alttext="\Delta A\Delta B\geq\frac{1}{2}\lvert\langle[\hat{A},\hat{B}]\rangle\rvert." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>B</mi></mrow><mo>≥</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.141)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This is known as the <span class="ltx_text ltx_font_bold">general uncertainty relation</span>.
+The right hand side means we find the commutator of <math id="SS1.p1.m3" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="SS1.p1.m4" class="ltx_Math" alttext="\hat{B}" display="inline"><mover accent="true"><mi>B</mi><mo>^</mo></mover></math>, then calculate the expectation value of the result, then take the modulus of that.</p>
+</div>
+<div id="Ch2.Thmexample3" class="ltx_theorem ltx_theorem_example">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Example 2.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch2.Thmexample3.p1" class="ltx_para">
+<p class="ltx_p">Prove the famous Heisenberg uncertainty relation <a href="../principles/quantum-uncertainty.html#Ch1.E48" title="In 1.5 Quantum Uncertainty ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.48</span></a>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E142" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E142.m1" class="ltx_Math" alttext="\Delta x\Delta p\geq\frac{\hbar}{2}." display="block"><mrow><mrow><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow><mo>≥</mo><mfrac><mi mathvariant="normal">ℏ</mi><mn>2</mn></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.142)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Ch2.Thmexample3.p2" class="ltx_para">
+<p class="ltx_p">Putting <math id="Ch2.Thmexample3.p2.m1" class="ltx_Math" alttext="\hat{x}" display="inline"><mover accent="true"><mi>x</mi><mo>^</mo></mover></math> and <math id="Ch2.Thmexample3.p2.m2" class="ltx_Math" alttext="\hat{p}" display="inline"><mover accent="true"><mi>p</mi><mo>^</mo></mover></math> into equation <a href="#Ch2.E141" title="In 2.6.1 Uncertainty from Incompatibility ‣ 2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.141</span></a> and using <a href="#Ch2.E126" title="In Example 2.2. ‣ 2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.126</span></a> gives</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx32" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E143"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E143.m1" class="ltx_Math" alttext="\displaystyle\Delta x\Delta p" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>p</mi></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E143.m2" class="ltx_Math" alttext="\displaystyle\geq\frac{1}{2}\lvert\langle[\hat{x},\hat{p}]\rangle\rvert" display="inline"><mrow><mi></mi><mo>≥</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.143)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E144"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E144.m1" class="ltx_Math" alttext="\displaystyle\geq\frac{1}{2}\lvert\langle i\hbar\rangle\rvert" display="inline"><mrow><mi></mi><mo>≥</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.144)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E145"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E145.m1" class="ltx_math_unparsed" alttext="\displaystyle=\geq\frac{1}{2}\lvert i\hbar\rvert" display="inline"><mrow><mo rspace="0em">=</mo><mo lspace="0em">≥</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mrow><mo stretchy="false">|</mo><mi>i</mi><mi mathvariant="normal">ℏ</mi><mo stretchy="false">|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.145)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E146"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E146.m1" class="ltx_math_unparsed" alttext="\displaystyle=\geq\frac{\hbar}{2}." display="inline"><mrow><mo rspace="0em">=</mo><mo lspace="0em">≥</mo><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">ℏ</mi><mn>2</mn></mfrac></mstyle><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.146)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="hermitian-operators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.5 </span>Hermitian Operators</span></a><a href="conservation-laws.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.7 </span>Conservation Laws</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<ol class="ltx_toclist ltx_toclist_section">
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch2.Thmdefinition3" title=""><span class="ltx_text ltx_ref_title">Definition 2.3</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch2.Thmexample2" title=""><span class="ltx_text ltx_ref_title">Example 2.2</span></a></li>
+</ol>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subuncertainty-from-incompatibility" title="In 2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6.1 </span>Uncertainty from Incompatibility</span></a></li>
+<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch2.Thmexample3" title=""><span class="ltx_text ltx_ref_title">Example 2.3</span></a></li></ol>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

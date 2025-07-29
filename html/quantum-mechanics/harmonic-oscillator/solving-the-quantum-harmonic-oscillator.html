@@ -1,0 +1,517 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="introduction-to-the-quantum-harmonic-oscillator.html" title="3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="next" href="energy-eigenstates.html" title="3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="introduction-to-the-quantum-harmonic-oscillator.html" title="3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="energy-eigenstates.html" title="3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-qho-with-ladder-operators.html" title="3.4 Solving the QHO with Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="ladder-operators.html" title="3.5 Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="introduction-to-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Introduction to the Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Solving the Quantum Harmonic Oscillator</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="energy-eigenstates.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Energy Eigenstates of the QHO</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-qho-with-ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Solving the QHO with Ladder Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Ladder Operators</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.2 </span>Solving the Quantum Harmonic Oscillator</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We will now go through all the stages of solving equation <a href="introduction-to-the-quantum-harmonic-oscillator.html#Ch3.E9" title="In 3.1.2 Setting up the Quantum Harmonic Oscillator ‣ 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.9</span></a> to find the energy eigenstates.</p>
+</div>
+<section id="changing-to-dimensionless-quantities" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2.1 </span>Changing to Dimensionless Quantities</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">The first step is change our variable from <math id="SS1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> to some dimensionless variable <math id="SS1.p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.
+This will simplify the notation somewhat, which makes it easier to see what is going on.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">We have three physical constants, <math id="SS1.p2.m1" class="ltx_Math" alttext="\hbar" display="inline"><mi mathvariant="normal">ℏ</mi></math>, <math id="SS1.p2.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, and <math id="SS1.p2.m3" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> in equation <a href="introduction-to-the-quantum-harmonic-oscillator.html#Ch3.E9" title="In 3.1.2 Setting up the Quantum Harmonic Oscillator ‣ 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.9</span></a>.
+These have units of <math id="SS1.p2.m4" class="ltx_Math" alttext="\mathrm{kg}\text{\,}{\mathrm{m}}^{2}\text{\,}{\mathrm{s}}^{-1}" display="inline"><mrow><mi class="ltx_unit">kg</mi><mtext> </mtext><msup><mi class="ltx_unit" mathvariant="normal">m</mi><mn>2</mn></msup><mtext> </mtext><msup><mi class="ltx_unit" mathvariant="normal">s</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow></math>, <math id="SS1.p2.m5" class="ltx_Math" alttext="\mathrm{kg}" display="inline"><mi class="ltx_unit">kg</mi></math>, and <math id="SS1.p2.m6" class="ltx_Math" alttext="{\mathrm{s}}^{-1}" display="inline"><msup><mi class="ltx_unit" mathvariant="normal">s</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></math> respectively.
+If we combine these in the form <math id="SS1.p2.m7" class="ltx_Math" alttext="\frac{\hbar}{m\omega}" display="inline"><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></math>, this has units of <math id="SS1.p2.m8" class="ltx_Math" alttext="{\mathrm{m}}^{2}" display="inline"><msup><mi class="ltx_unit" mathvariant="normal">m</mi><mn>2</mn></msup></math>.
+Therefore, if we define</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E10.m1" class="ltx_Math" alttext="x_{0}=\sqrt{\frac{\hbar}{m\omega}}," display="block"><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><msqrt><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.10)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">this is a natural length scale for the problem, so we can define our new dimensionless length parameter <math id="SS1.p2.m9" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E11.m1" class="ltx_Math" alttext="y=\frac{x}{x_{0}}=\sqrt{\frac{m\omega}{\hbar}}x." display="block"><mrow><mrow><mi>y</mi><mo>=</mo><mfrac><mi>x</mi><msub><mi>x</mi><mn>0</mn></msub></mfrac><mo>=</mo><mrow><msqrt><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></msqrt><mo>⁢</mo><mi>x</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.11)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Note that <math id="SS1.p2.m10" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> has nothing to do with equilibrium position.
+For a given oscillator, this is a constant.
+Substituting <math id="SS1.p2.m11" class="ltx_Math" alttext="x=yx_{0}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>y</mi><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></math> into equation <a href="introduction-to-the-quantum-harmonic-oscillator.html#Ch3.E9" title="In 3.1.2 Setting up the Quantum Harmonic Oscillator ‣ 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.9</span></a> and expanding the definition of <math id="SS1.p2.m12" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx36" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E12.m1" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\frac{1}{x_{0}^{2}}\frac{\operatorname{%
+\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}\!y^{2}}+\frac{1}{2}m\omega^{2}x_%
+{0}^{2}y^{2}u" display="inline"><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E12.m2" class="ltx_Math" alttext="\displaystyle=Eu" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.12)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E13"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E13.m1" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\frac{m\omega}{\hbar}\frac{\operatorname{%
+\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}\!y^{2}}+\frac{1}{2}m\omega^{2}%
+\frac{\hbar}{m\omega}y^{2}u" display="inline"><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E13.m2" class="ltx_Math" alttext="\displaystyle=Eu" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.13)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E14"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E14.m1" class="ltx_Math" alttext="\displaystyle-\frac{\hbar\omega}{2}\left(\frac{\operatorname{\mathrm{d}}\!^{2}%
+u}{\operatorname{\mathrm{d}}\!y^{2}}-y^{2}u\right)" display="inline"><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E14.m2" class="ltx_Math" alttext="\displaystyle=Eu" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.14)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E15.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}%
+\!y^{2}}-y^{2}u" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E15.m2" class="ltx_Math" alttext="\displaystyle=-\varepsilon u," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>ε</mi><mo>⁢</mo><mi>u</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.15)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have defined</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E16.m1" class="ltx_Math" alttext="\varepsilon=\frac{2E}{\hbar\omega}," display="block"><mrow><mrow><mi>ε</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>E</mi></mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.16)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">as the dimensionless energy parameter.</p>
+</div>
+</section>
+<section id="simplifying-using-asymptotic-analysis" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2.2 </span>Simplifying Using Asymptotic Analysis</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">As <math id="SS2.p1.m1" class="ltx_Math" alttext="y\to\pm\infty" display="inline"><mrow><mi>y</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, we can neglect <math id="SS2.p1.m2" class="ltx_Math" alttext="\varepsilon u" display="inline"><mrow><mi>ε</mi><mo>⁢</mo><mi>u</mi></mrow></math> compared to <math id="SS2.p1.m3" class="ltx_Math" alttext="y^{2}u" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></math> as the former will be negligible.
+Equation <a href="#Ch3.E15" title="In 3.2.1 Changing to Dimensionless Quantities ‣ 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.15</span></a> then becomes</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E17.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}\!y^{2}}=y^{2%
+}u." display="block"><mrow><mrow><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>u</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.17)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">If we guess a solution of the form <math id="SS2.p1.m4" class="ltx_Math" alttext="Ae^{-\frac{y^{2}}{2}}" display="inline"><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></math>, then we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx37" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E18.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!}{\operatorname{\mathrm{d}}\!y}%
+Ae^{-\frac{y^{2}}{2}}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi mathvariant="normal">d</mi><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E18.m2" class="ltx_Math" alttext="\displaystyle=-Aye^{-\frac{y^{2}}{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>A</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.18)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E19.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}}{\operatorname{\mathrm{d}}%
+\!y^{2}}Ae^{-\frac{y^{2}}{2}}" display="inline"><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E19.m2" class="ltx_Math" alttext="\displaystyle=-Ae^{-\frac{y^{2}}{2}}+Ay^{2}e^{-\frac{y^{2}}{2}}\approx Ay^{2}e%
+^{-\frac{y^{2}}{2}}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>+</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>≈</mo><mrow><mi>A</mi><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.19)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where in the last part we have neglected terms that are small when <math id="SS2.p1.m5" class="ltx_Math" alttext="y\to\pm\infty" display="inline"><mrow><mi>y</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>.
+Therefore, this function is a solution to the TISE for large <math id="SS2.p1.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.
+Note that <math id="SS2.p1.m7" class="ltx_Math" alttext="Be^{+\frac{y^{2}}{2}}" display="inline"><mrow><mi>B</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>+</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></math> is also a valid solution, but is does not have a finite limit as <math id="SS2.p1.m8" class="ltx_Math" alttext="y\to\pm\infty" display="inline"><mrow><mi>y</mi><mo stretchy="false">→</mo><mrow><mo>±</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> and is therefore not normalisable, so we will throw it out.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">So the behaviour of the full solution to the TISE must be Gaussian for large <math id="SS2.p2.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, but what about the rest of the function?
+We now suppose that it takes the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E20.m1" class="ltx_Math" alttext="u(y)=h(y)e^{-\frac{y^{2}}{2}}," display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.20)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">and substitute this into equation <a href="#Ch3.E15" title="In 3.2.1 Changing to Dimensionless Quantities ‣ 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.15</span></a> to see what we get.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">Taking derivatives, we find</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx38" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E21.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!u}{\operatorname{\mathrm{d}}\!y}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E21.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!h}{\operatorname{\mathrm{d}}\!y%
+}e^{-\frac{y^{2}}{2}}-yhe^{-\frac{y^{2}}{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mi>y</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.21)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E22"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E22.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}u}{\operatorname{\mathrm{d}}%
+\!y^{2}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E22.m2" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!^{2}h}{\operatorname{\mathrm{d}%
+}\!y^{2}}e^{-\frac{y^{2}}{2}}-y\frac{\operatorname{\mathrm{d}}\!h}{%
+\operatorname{\mathrm{d}}\!y}e^{-\frac{y^{2}}{2}}-he^{-\frac{y^{2}}{2}}-y\frac%
+{\operatorname{\mathrm{d}}\!h}{\operatorname{\mathrm{d}}\!y}e^{-\frac{y^{2}}{2%
+}}+y^{2}he^{-\frac{y^{2}}{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>+</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.22)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E23.m1" class="ltx_Math" alttext="\displaystyle=\frac{\operatorname{\mathrm{d}}\!^{2}h}{\operatorname{\mathrm{d}%
+}\!y^{2}}e^{-\frac{y^{2}}{2}}-2y\frac{\operatorname{\mathrm{d}}\!h}{%
+\operatorname{\mathrm{d}}\!y}e^{-\frac{y^{2}}{2}}-he^{-\frac{y^{2}}{2}}+y^{2}%
+he^{-\frac{y^{2}}{2}}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>+</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.23)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Substituting these in, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx39" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E24.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}h}{\operatorname{\mathrm{d}}%
+\!y^{2}}e^{-\frac{y^{2}}{2}}-2y\frac{\operatorname{\mathrm{d}}\!h}{%
+\operatorname{\mathrm{d}}\!y}e^{-\frac{y^{2}}{2}}-he^{-\frac{y^{2}}{2}}+y^{2}%
+he^{-\frac{y^{2}}{2}}+(\varepsilon-y^{2})he^{-\frac{y^{2}}{2}}=0" display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>+</mo><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ε</mi><mo>−</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.24)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E25.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}h}{\operatorname{\mathrm{d}}%
+\!y^{2}}e^{-\frac{y^{2}}{2}}-2y\frac{\operatorname{\mathrm{d}}\!h}{%
+\operatorname{\mathrm{d}}\!y}e^{-\frac{y^{2}}{2}}+(\varepsilon-1)he^{-\frac{y^%
+{2}}{2}}=0" display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ε</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.25)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E26.m1" class="ltx_Math" alttext="\displaystyle\frac{\operatorname{\mathrm{d}}\!^{2}h}{\operatorname{\mathrm{d}}%
+\!y^{2}}-2y\frac{\operatorname{\mathrm{d}}\!h}{\operatorname{\mathrm{d}}\!y}+(%
+\varepsilon-1)h=0." display="inline"><mrow><mrow><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>h</mi></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>y</mi></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ε</mi><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>h</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.26)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">If we solve this differential equation for <math id="SS2.p3.m1" class="ltx_Math" alttext="h(y)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we get the full solution for equation <a href="#Ch3.E15" title="In 3.2.1 Changing to Dimensionless Quantities ‣ 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.15</span></a>.
+Luckily, this equation is a well-known equation in mathematics called “Hermite’s Equation” (with <math id="SS2.p3.m2" class="ltx_Math" alttext="2\lambda=\varepsilon-1" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi></mrow><mo>=</mo><mrow><mi>ε</mi><mo>−</mo><mn>1</mn></mrow></mrow></math>)!
+We will now go through the solution via a series method.</p>
+</div>
+</section>
+<section id="solving-for-h(y)-via-a-series-expansion" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.2.3 </span>Solving for <math id="SS3.m1" class="ltx_Math" alttext="h(y)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> via a Series Expansion</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Assuming that <math id="SS3.p1.m1" class="ltx_Math" alttext="h(y)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be written as an infinite polynomial (a power series), we can substitute the following into equation <a href="#Ch3.E26" title="In 3.2.2 Simplifying Using Asymptotic Analysis ‣ 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.26</span></a>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E27" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E27.m1" class="ltx_Math" alttext="h(y)=\sum_{n=0}^{\infty}a_{n}y^{n}." display="block"><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>y</mi><mi>n</mi></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.27)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">What we find is a recurrence relation for the coefficients:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E28" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E28.m1" class="ltx_Math" alttext="\frac{a_{j+2}}{a_{j}}=\frac{2j+1-\varepsilon}{(j+2)(j+1)}." display="block"><mrow><mrow><mfrac><msub><mi>a</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><msub><mi>a</mi><mi>j</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi>ε</mi></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.28)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">The limiting behaviour for the ratio of the subsequent coefficients is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E29" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E29.m1" class="ltx_Math" alttext="\lim_{j\to\infty}\frac{a_{j+2}}{a_{j}}=\frac{2}{j}," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>j</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mfrac><msub><mi>a</mi><mrow><mi>j</mi><mo>+</mo><mn>2</mn></mrow></msub><msub><mi>a</mi><mi>j</mi></msub></mfrac></mrow><mo>=</mo><mfrac><mn>2</mn><mi>j</mi></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.29)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which diverges more quickly than the Gaussian converges.
+This means that for the solutions to be valid wavefunctions, meaning for them to be normalisable, the power series must terminate.
+For each solution with a series terminating at <math id="SS3.p2.m1" class="ltx_Math" alttext="j=1" display="inline"><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></math>, <math id="SS3.p2.m2" class="ltx_Math" alttext="j=2" display="inline"><mrow><mi>j</mi><mo>=</mo><mn>2</mn></mrow></math>, <math id="SS3.p2.m3" class="ltx_Math" alttext="j=3" display="inline"><mrow><mi>j</mi><mo>=</mo><mn>3</mn></mrow></math>, etc., we obtain one valid eigenstate.</p>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">For some <math id="SS3.p3.m1" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> to be the highest non-vanishing coefficient, we must have the numerator of the recurrence relation be zero, i.e.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E30" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E30.m1" class="ltx_Math" alttext="2j+1-\varepsilon=0." display="block"><mrow><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mi>ε</mi></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.30)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">If we substitute back in <math id="SS3.p3.m2" class="ltx_Math" alttext="\varepsilon=\frac{2E}{\hbar\omega}" display="inline"><mrow><mi>ε</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>E</mi></mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mrow></math>, this gives us the energy eigenvalues of the quantum harmonic oscillator:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E31" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E31.m1" class="ltx_Math" alttext="E_{n}=\hbar\omega\left(n+\frac{1}{2}\right)," display="block"><mrow><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>n</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.31)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have replaced <math id="SS3.p3.m3" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> with <math id="SS3.p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>.
+Note that in contrast to the infinite square well, the label for the energy eigenvalues starts at 0 instead of 1.
+This is just a matter of preference for how the equations look and doesn’t mean anything physically.</p>
+</div>
+<div id="SS3.p4" class="ltx_para">
+<p class="ltx_p">The ground state energy is <math id="SS3.p4.m1" class="ltx_Math" alttext="E_{0}=\frac{1}{2}\hbar\omega" display="inline"><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></math>, the first excited state is <math id="SS3.p4.m2" class="ltx_Math" alttext="E_{1}=\frac{3}{2}\hbar\omega" display="inline"><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>=</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></math>, and so on.
+The energy levels are equally spaced, increasing in single units of <math id="SS3.p4.m3" class="ltx_Math" alttext="\hbar\omega" display="inline"><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></math>.</p>
+</div>
+<div id="SS3.p5" class="ltx_para">
+<p class="ltx_p">So what are the polynomials <math id="SS3.p5.m1" class="ltx_Math" alttext="h_{n}(y)" display="inline"><mrow><msub><mi>h</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>?
+To determine the coefficients, we need <math id="SS3.p5.m2" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> to calculate all the even coefficients and <math id="SS3.p5.m3" class="ltx_Math" alttext="a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> to calculate all the odd coefficients.
+Both the even and odd coefficients must terminate for the whole series to terminate, but the value of <math id="SS3.p5.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> only allows us to terminate one or the other.
+Therefore, valid eigenstates will either have <math id="SS3.p5.m5" class="ltx_Math" alttext="a_{0}=0" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math> and only odd powers of <math id="SS3.p5.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> or <math id="SS3.p5.m7" class="ltx_Math" alttext="a_{1}=0" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math> and only even power of <math id="SS3.p5.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="SS3.p5.m9" class="ltx_Math" alttext="h(y)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="SS3.p6" class="ltx_para">
+<p class="ltx_p">For the ground state, only <math id="SS3.p6.m1" class="ltx_Math" alttext="a_{0}\neq 0" display="inline"><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>, so <math id="SS3.p6.m2" class="ltx_Math" alttext="h(y)=a_{0}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></math> and the ground state eigenfunction is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E32" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E32.m1" class="ltx_Math" alttext="u_{0}(y)=a_{0}e^{-\frac{y^{2}}{2}}." display="block"><mrow><mrow><mrow><msub><mi>u</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.32)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">For the first excited state, only <math id="SS3.p6.m3" class="ltx_Math" alttext="a_{1}\neq 0" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>, so <math id="SS3.p6.m4" class="ltx_Math" alttext="h(y)=a_{1}y" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>y</mi></mrow></mrow></math> and the eigenfunction is therefore</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E33" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E33.m1" class="ltx_Math" alttext="u_{1}(y)=a_{1}ye^{-\frac{y^{2}}{2}}." display="block"><mrow><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>y</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.33)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">For the second excited state, <math id="SS3.p6.m5" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> and <math id="SS3.p6.m6" class="ltx_Math" alttext="a_{2}" display="inline"><msub><mi>a</mi><mn>2</mn></msub></math> are nonzero so <math id="SS3.p6.m7" class="ltx_Math" alttext="h(y)=a_{0}+a_{2}x^{2}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></mrow></math>.
+The dimensionless energy has the value</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E34" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E34.m1" class="ltx_Math" alttext="\varepsilon=\frac{2E}{\hbar\omega}=\frac{2\times\frac{5}{2}\hbar\omega}{\hbar%
+\omega}=5," display="block"><mrow><mrow><mi>ε</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>E</mi></mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mfrac><mn>5</mn><mn>2</mn></mfrac></mrow><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac><mo>=</mo><mn>5</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.34)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">so the recurrence relation gives</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E35" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E35.m1" class="ltx_Math" alttext="\frac{a_{2}}{a_{0}}=\frac{2(0)+1-5}{(0+2)(0+1)}=-\frac{4}{2}=-2." display="block"><mrow><mrow><mfrac><msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>0</mn></msub></mfrac><mo>=</mo><mfrac><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo>−</mo><mn>5</mn></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>0</mn><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mfrac><mn>4</mn><mn>2</mn></mfrac></mrow><mo>=</mo><mrow><mo>−</mo><mn>2</mn></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.35)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Hence the eigenfunction takes the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E36" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E36.m1" class="ltx_Math" alttext="u_{2}(y)=a_{0}(1-2y^{2})e^{-\frac{y^{2}}{2}}." display="block"><mrow><mrow><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.36)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The process carries on like this.
+The polynomials generated are called <span class="ltx_text ltx_font_bold">Hermite polynomials</span>, and denoted <math id="SS3.p6.m8" class="ltx_Math" alttext="h_{n}(y)" display="inline"><mrow><msub><mi>h</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+Note that it is conventional to introduce a minus sign to the normalisation constant <math id="SS3.p6.m9" class="ltx_Math" alttext="a_{0}" display="inline"><msub><mi>a</mi><mn>0</mn></msub></math> or <math id="SS3.p6.m10" class="ltx_Math" alttext="a_{1}" display="inline"><msub><mi>a</mi><mn>1</mn></msub></math> so that the leading-order terms in the polynomial have a positive sign.
+The first few Hermite polynomials are</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx40" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E37.m1" class="ltx_Math" alttext="\displaystyle h_{0}(y)" display="inline"><mrow><msub><mi>h</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E37.m2" class="ltx_Math" alttext="\displaystyle=1" display="inline"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.37)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E38.m1" class="ltx_Math" alttext="\displaystyle h_{1}(y)" display="inline"><mrow><msub><mi>h</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E38.m2" class="ltx_Math" alttext="\displaystyle=2y" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.38)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E39"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E39.m1" class="ltx_Math" alttext="\displaystyle h_{2}(y)" display="inline"><mrow><msub><mi>h</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E39.m2" class="ltx_Math" alttext="\displaystyle=4y^{2}-2" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo>−</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.39)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E40.m1" class="ltx_Math" alttext="\displaystyle h_{3}(y)" display="inline"><mrow><msub><mi>h</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E40.m2" class="ltx_Math" alttext="\displaystyle=8y^{3}-12y" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mn>8</mn><mo>⁢</mo><msup><mi>y</mi><mn>3</mn></msup></mrow><mo>−</mo><mrow><mn>12</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.40)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E41"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E41.m1" class="ltx_Math" alttext="\displaystyle h_{4}(y)" display="inline"><mrow><msub><mi>h</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E41.m2" class="ltx_Math" alttext="\displaystyle=16y^{4}-48y^{2}+12" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mn>16</mn><mo>⁢</mo><msup><mi>y</mi><mn>4</mn></msup></mrow><mo>−</mo><mrow><mn>48</mn><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mn>12</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.41)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E42"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E42.m1" class="ltx_Math" alttext="\displaystyle h_{5}(y)" display="inline"><mrow><msub><mi>h</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E42.m2" class="ltx_Math" alttext="\displaystyle=32y^{5}-160y^{3}+120y." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mn>32</mn><mo>⁢</mo><msup><mi>y</mi><mn>5</mn></msup></mrow><mo>−</mo><mrow><mn>160</mn><mo>⁢</mo><msup><mi>y</mi><mn>3</mn></msup></mrow></mrow><mo>+</mo><mrow><mn>120</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.42)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">These coefficients are slightly different to the ones calculated above, but it doesn’t matter since we have to normalise the whole wavefunction anyway.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="introduction-to-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Introduction to the Quantum Harmonic Oscillator</span></a><a href="energy-eigenstates.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Energy Eigenstates of the QHO</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#changing-to-dimensionless-quantities" title="In 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2.1 </span>Changing to Dimensionless Quantities</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#simplifying-using-asymptotic-analysis" title="In 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2.2 </span>Simplifying Using Asymptotic Analysis</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#solving-for-h(y)-via-a-series-expansion" title="In 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2.3 </span>Solving for <math class="ltx_Math" alttext="h(y)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> via a Series Expansion</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

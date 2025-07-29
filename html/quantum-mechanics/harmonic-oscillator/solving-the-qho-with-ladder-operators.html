@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>3.4 Solving the QHO with Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="energy-eigenstates.html" title="3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="next" href="ladder-operators.html" title="3.5 Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="introduction-to-the-quantum-harmonic-oscillator.html" title="3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-quantum-harmonic-oscillator.html" title="3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="energy-eigenstates.html" title="3.3 Energy Eigenstates of the QHO ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="section" href="ladder-operators.html" title="3.5 Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="introduction-to-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.1 </span>Introduction to the Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-quantum-harmonic-oscillator.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.2 </span>Solving the Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="energy-eigenstates.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Energy Eigenstates of the QHO</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4 </span>Solving the QHO with Ladder Operators</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Ladder Operators</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3.4 </span>Solving the QHO with Ladder Operators</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">In this section we are going to introduce a technique to solve for the energy eigenvalues and eigenfunctions without solving the complicated differential equation <a href="introduction-to-the-quantum-harmonic-oscillator.html#Ch3.E9" title="In 3.1.2 Setting up the Quantum Harmonic Oscillator ‣ 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.9</span></a>.
+This method will be to factorise the Hamiltonian using two new operators, which we will call ladder operators for reasons that will become clear, and then see what their effect on an unknown eigenfunction is.</p>
+</div>
+<section id="factorising-the-hamiltonian" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">3.4.1 </span>Factorising the Hamiltonian</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Notice that the QHO Hamiltonian (equation <a href="introduction-to-the-quantum-harmonic-oscillator.html#Ch3.E6" title="In 3.1.2 Setting up the Quantum Harmonic Oscillator ‣ 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.6</span></a>) is a sum of squares of operators.
+We would like to write it in a more symmetric form and then factorise.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">We can do this by removing the units.
+Define the dimensionless position operator by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E59" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E59.m1" class="ltx_Math" alttext="\hat{X}=\frac{\hat{x}}{x_{0}}," display="block"><mrow><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>=</mo><mfrac><mover accent="true"><mi>x</mi><mo>^</mo></mover><msub><mi>x</mi><mn>0</mn></msub></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.59)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS1.p2.m1" class="ltx_Math" alttext="x_{0}=\sqrt{\frac{\hbar}{m\omega}}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><msqrt><mfrac><mi mathvariant="normal">ℏ</mi><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></msqrt></mrow></math> is the natural length scale created using the constants in the Hamiltonian.
+We can define a dimensionless momentum operator by creating a nautral momentum scale, which is created by dividing <math id="SS1.p2.m2" class="ltx_Math" alttext="\hbar" display="inline"><mi mathvariant="normal">ℏ</mi></math> by <math id="SS1.p2.m3" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E60" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E60.m1" class="ltx_Math" alttext="p_{0}=\frac{\hbar}{x_{0}}=\sqrt{\hbar m\omega}." display="block"><mrow><mrow><msub><mi>p</mi><mn>0</mn></msub><mo>=</mo><mfrac><mi mathvariant="normal">ℏ</mi><msub><mi>x</mi><mn>0</mn></msub></mfrac><mo>=</mo><msqrt><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow></msqrt></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.60)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Then we can define</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E61" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E61.m1" class="ltx_Math" alttext="\hat{P}=\frac{\hat{x}}{p_{0}}," display="block"><mrow><mrow><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo>=</mo><mfrac><mover accent="true"><mi>x</mi><mo>^</mo></mover><msub><mi>p</mi><mn>0</mn></msub></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.61)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">as the dimensionless momentum operator.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">Substituting these into equation <a href="introduction-to-the-quantum-harmonic-oscillator.html#Ch3.E6" title="In 3.1.2 Setting up the Quantum Harmonic Oscillator ‣ 3.1 Introduction to the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.6</span></a>, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx44" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E62"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E62.m1" class="ltx_Math" alttext="\displaystyle\hat{H}" display="inline"><mover accent="true"><mi>H</mi><mo>^</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E62.m2" class="ltx_Math" alttext="\displaystyle=\frac{p_{0}^{2}\hat{P}^{2}}{2m}+\frac{1}{2}m\omega^{2}x_{0}^{2}%
+\hat{X}^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><msubsup><mi>p</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mo>⁢</mo><msup><mover accent="true"><mi>X</mi><mo>^</mo></mover><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.62)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E63"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E63.m1" class="ltx_Math" alttext="\displaystyle=\frac{\hbar m\omega}{2m}\hat{P}^{2}+\frac{m\omega^{2}\hbar}{m%
+\omega}\hat{X}^{2}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mn>2</mn></msup></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow></mfrac></mstyle><mo>⁢</mo><msup><mover accent="true"><mi>X</mi><mo>^</mo></mover><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.63)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E64"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E64.m1" class="ltx_Math" alttext="\displaystyle=\frac{\hbar\omega}{2}(\hat{P}^{2}+\hat{X}^{2})." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>P</mi><mo>^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover accent="true"><mi>X</mi><mo>^</mo></mover><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.64)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">Recall that an expression <math id="SS1.p4.m1" class="ltx_Math" alttext="u^{2}+v^{2}" display="inline"><mrow><msup><mi>u</mi><mn>2</mn></msup><mo>+</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></math> can be factored using complex numbers as <math id="SS1.p4.m2" class="ltx_Math" alttext="(u+iv)(u-iv)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.
+When using the same idea with operators, we need to keep in mind that two operators may not necessarily commute.
+The two parentheses expand to</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx45" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E65"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E65.m1" class="ltx_Math" alttext="\displaystyle(\hat{U}-i\hat{V})(\hat{U}+i\hat{V})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>U</mi><mo>^</mo></mover><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>V</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>U</mi><mo>^</mo></mover><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>V</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E65.m2" class="ltx_Math" alttext="\displaystyle=\hat{U}^{2}+\hat{V}^{2}+i\hat{U}\hat{V}-i\hat{V}\hat{U}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msup><mover accent="true"><mi>U</mi><mo>^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover accent="true"><mi>V</mi><mo>^</mo></mover><mn>2</mn></msup><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>U</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>V</mi><mo>^</mo></mover></mrow></mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>V</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>U</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.65)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E66"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E66.m1" class="ltx_Math" alttext="\displaystyle=\hat{U}^{2}+\hat{V}^{2}+i[\hat{U},\hat{V}]," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msup><mover accent="true"><mi>U</mi><mo>^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover accent="true"><mi>V</mi><mo>^</mo></mover><mn>2</mn></msup><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>U</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>V</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.66)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">therefore for the QHO Hamiltonian, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E67" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E67.m1" class="ltx_Math" alttext="\hat{H}=\frac{\hbar\omega}{2}((\hat{X}-i\hat{P})(\hat{X}+i\hat{P})-i[\hat{X},%
+\hat{P}])," display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>=</mo><mrow><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.67)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have to subtract of <math id="SS1.p4.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> times the commutator of <math id="SS1.p4.m4" class="ltx_Math" alttext="\hat{X}" display="inline"><mover accent="true"><mi>X</mi><mo>^</mo></mover></math> and <math id="SS1.p4.m5" class="ltx_Math" alttext="\hat{P}" display="inline"><mover accent="true"><mi>P</mi><mo>^</mo></mover></math> to account for the cross terms.
+The commutator between dimensionless position and momentum is given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx46" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E68"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E68.m1" class="ltx_Math" alttext="\displaystyle[\hat{X},\hat{P}]" display="inline"><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E68.m2" class="ltx_Math" alttext="\displaystyle=\left[\frac{\hat{x}}{x_{0}},\frac{\hat{p}}{p_{0}}\right]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>[</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>x</mi><mo>^</mo></mover><msub><mi>x</mi><mn>0</mn></msub></mfrac></mstyle><mo>,</mo><mstyle displaystyle="true"><mfrac><mover accent="true"><mi>p</mi><mo>^</mo></mover><msub><mi>p</mi><mn>0</mn></msub></mfrac></mstyle><mo>]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.68)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E69"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E69.m1" class="ltx_Math" alttext="\displaystyle=\frac{1}{x_{0}p_{0}}[\hat{x},\hat{p}]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>p</mi><mn>0</mn></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>p</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.69)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E70"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E70.m1" class="ltx_Math" alttext="\displaystyle=\sqrt{\frac{m\omega}{\hbar}}\frac{1}{\sqrt{\hbar m\omega}}i\hbar" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msqrt><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mstyle></msqrt><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ω</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.70)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E71"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E71.m1" class="ltx_Math" alttext="\displaystyle=i," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mi>i</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.71)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So the Hamiltonian simplifies to</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E72" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E72.m1" class="ltx_Math" alttext="\hat{H}=\frac{\hbar\omega}{2}((\hat{X}-i\hat{P})(\hat{X}+i\hat{P})+1)." display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>=</mo><mrow><mfrac><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi></mrow><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.72)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p5" class="ltx_para">
+<p class="ltx_p">Now we will define new operators to be the combination in parentheses:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx47" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch3.E73"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E73.m1" class="ltx_Math" alttext="\displaystyle\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E73.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2}}(\hat{X}+i\hat{P})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.73)</span></td>
+</tr></tbody>
+<tbody id="Ch3.E74"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch3.E74.m1" class="ltx_Math" alttext="\displaystyle\hat{A}^{\dagger}" display="inline"><msup><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>†</mo></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch3.E74.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\sqrt{2}}(\hat{X}-i\hat{P})." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mover accent="true"><mi>P</mi><mo>^</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.74)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">These operators are called the <span class="ltx_text ltx_font_bold">ladder operators</span> for reasons that will become very clear in the next section.
+If we substitute these into the Hamiltonian, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch3.E75" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch3.E75.m1" class="ltx_Math" alttext="\hat{H}=\hbar\omega\left(\hat{A}^{\dagger}\hat{A}+\frac{1}{2}\right)." display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msup><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>†</mo></msup><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3.75)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This equation looks suspiciously like equation <a href="solving-the-quantum-harmonic-oscillator.html#Ch3.E31" title="In 3.2.3 Solving for ℎ⁢(𝑦) via a Series Expansion ‣ 3.2 Solving the Quantum Harmonic Oscillator ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3.31</span></a> for the energy eigenvalues but with operators!
+This implies that the product <math id="SS1.p5.m1" class="ltx_Math" alttext="\hat{A}^{\dagger}\hat{A}" display="inline"><mrow><msup><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>†</mo></msup><mo>⁢</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover></mrow></math> is a “number operator”, it has the energy eigenstates as its eigenfunctions with their corresponding quantum number <math id="SS1.p5.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> as its eigenvalues.</p>
+</div>
+<div id="SS1.p6" class="ltx_para">
+<p class="ltx_p">But what do the operators <math id="SS1.p6.m1" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math> and <math id="SS1.p6.m2" class="ltx_Math" alttext="\hat{A}^{\dagger}" display="inline"><msup><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>†</mo></msup></math> actually do?
+Note that <math id="SS1.p6.m3" class="ltx_Math" alttext="\hat{A}^{\dagger}" display="inline"><msup><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>†</mo></msup></math> is the adjoint of <math id="SS1.p6.m4" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math>, as we can tell by the notation and because it is defined as the “complex conjugate” of <math id="SS1.p6.m5" class="ltx_Math" alttext="\hat{A}" display="inline"><mover accent="true"><mi>A</mi><mo>^</mo></mover></math>.
+Because <math id="SS1.p6.m6" class="ltx_Math" alttext="\hat{A}\neq\hat{A}^{\dagger}" display="inline"><mrow><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>≠</mo><msup><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>†</mo></msup></mrow></math>, neither of them are Hermitian and therefore they do not represent observables.
+We will look at the action of these operators on an energy eigenstate in the next section.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="energy-eigenstates.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.3 </span>Energy Eigenstates of the QHO</span></a><a href="ladder-operators.html" title="In Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.5 </span>Ladder Operators</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#factorising-the-hamiltonian" title="In 3.4 Solving the QHO with Ladder Operators ‣ Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3.4.1 </span>Factorising the Hamiltonian</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

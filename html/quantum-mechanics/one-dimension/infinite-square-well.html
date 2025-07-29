@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="gaussian-wave-packets.html" title="2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="next" href="properties-of-energy-eigenstates.html" title="2.4 Properties of Energy Eigenstates ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="free-particle.html" title="2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="gaussian-wave-packets.html" title="2.2 Gaussian Wave Packets ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="properties-of-energy-eigenstates.html" title="2.4 Properties of Energy Eigenstates ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="hermitian-operators.html" title="2.5 Hermitian Operators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="commutators.html" title="2.6 Commutators ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="section" href="conservation-laws.html" title="2.7 Conservation Laws ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="free-particle.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.1 </span>The Free Particle</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="gaussian-wave-packets.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Gaussian Wave Packets</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3 </span>The Infinite Square Well</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="properties-of-energy-eigenstates.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>Properties of Energy Eigenstates</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="hermitian-operators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.5 </span>Hermitian Operators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="commutators.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.6 </span>Commutators</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="conservation-laws.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.7 </span>Conservation Laws</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2.3 </span>The Infinite Square Well</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">We will now study the motion of a free particle that is confined to a finite region of space.
+This is known as the <span class="ltx_text ltx_font_bold">infinite square well</span> because the situation is described by an infinitely deep potential well, or sometimes it is called the <span class="ltx_text ltx_font_bold">particle in a box</span> problem.</p>
+</div>
+<section id="setting-up-the-schrodinger-equation" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3.1 </span>Setting up the Schrodinger Equation</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Our square well will go from <math id="SS1.p1.m1" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math> to <math id="SS1.p1.m2" class="ltx_Math" alttext="x=L" display="inline"><mrow><mi>x</mi><mo>=</mo><mi>L</mi></mrow></math>, then as stated above, the potential energy for this system takes the piecewise form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E53" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E53.m1" class="ltx_Math" alttext="V(x)=\begin{cases}\infty&amp;\text{for }x\leq 0\\
+0&amp;\text{for }0&lt;x&lt;L\\
+\infty&amp;\text{for }x\geq L.\end{cases}" display="block"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mi mathvariant="normal">∞</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mtext>for </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>≤</mo><mn>0</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mn>0</mn></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mtext>for </mtext><mo>⁢</mo><mn>0</mn></mrow><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mi>L</mi></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mi mathvariant="normal">∞</mi></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mtext>for </mtext><mo>⁢</mo><mi>x</mi></mrow><mo>≥</mo><mi>L</mi></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.53)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Inside the well, the TISE will therefore look just like it does for the free particle (since there are no forces acting inside the well), which is given by equation <a href="free-particle.html#Ch2.E1" title="In 2.1.1 Solving the Schrodinger Equation ‣ 2.1 The Free Particle ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.1</span></a>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E54" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E54.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{\operatorname{\mathrm{d}}\!x^{2}}=-%
+\frac{2mE}{\hbar^{2}}u(x)." display="block"><mrow><mrow><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.54)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This equation may look the same as for the free particle, but the solutions take a slightly different form because the <span class="ltx_text ltx_font_bold">boundary conditions</span> are different: equation <a href="#Ch2.E54" title="In 2.3.1 Setting up the Schrodinger Equation ‣ 2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.54</span></a> is only valid inside the well.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">Outside the well, the potential is infinite, so the wavefunction cannot exist and must be zero.</p>
+</div>
+</section>
+<section id="energy-eigenfunctions" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3.2 </span>Energy Eigenfunctions</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Equation <a href="#Ch2.E54" title="In 2.3.1 Setting up the Schrodinger Equation ‣ 2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.54</span></a> has the general solution</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E55" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E55.m1" class="ltx_Math" alttext="u(x)=A\sin(kx)+B\cos(kx)," display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.55)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where the wavenumber is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E56" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E56.m1" class="ltx_Math" alttext="k=\frac{\sqrt{2mE}}{\hbar}." display="block"><mrow><mrow><mi>k</mi><mo>=</mo><mfrac><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow></msqrt><mi mathvariant="normal">ℏ</mi></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.56)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">We could write this using complex exponentials like we did for the free particle, but using trigonometric functions simplifies things here as we will see shortly.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">We now need to take into account the boundary conditions.
+Recall from section <a href="../principles/conditions-for-valid-wavefunctions.html#smoothness" title="1.3.1 Smoothness ‣ 1.3 Conditions for Valid Wavefunctions ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.3.1</span></a>, that the wavefunction needs to be continuous over all space.
+For this to be the case, we must have that the wavefunction vanishes at the boundaries of the well.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E57" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E57.m1" class="ltx_Math" alttext="u(0)=u(L)=0." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.57)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The first condition implies that <math id="SS2.p2.m1" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> must be zero, and the second implies</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx20" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E58"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E58.m1" class="ltx_Math" alttext="\displaystyle A\sin(kL)" display="inline"><mrow><mi>A</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>k</mi><mo>⁢</mo><mi>L</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E58.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.58)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E59"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E59.m1" class="ltx_Math" alttext="\displaystyle\implies k_{n}" display="inline"><mrow><mi></mi><mo stretchy="false">⟹</mo><msub><mi>k</mi><mi>n</mi></msub></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E59.m2" class="ltx_Math" alttext="\displaystyle=\frac{n\pi}{L}," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow><mi>L</mi></mfrac></mstyle></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.59)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS2.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a positive integer (negative integers give the same solutions multiplied by <math id="SS2.p2.m3" class="ltx_Math" alttext="-1" display="inline"><mrow><mo>−</mo><mn>1</mn></mrow></math> since sine is an odd function, so we just ignore them, and <math id="SS2.p2.m4" class="ltx_Math" alttext="n=0" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow></math> makes the wavefunction zero everywhere, which is not interesting so we ignore that too).
+So the wavenumber can only take on a discrete set of values given by positive integer multiples of <math id="SS2.p2.m5" class="ltx_Math" alttext="\frac{\pi}{L}" display="inline"><mfrac><mi>π</mi><mi>L</mi></mfrac></math>, which we have labelled <math id="SS2.p2.m6" class="ltx_Math" alttext="k_{n}" display="inline"><msub><mi>k</mi><mi>n</mi></msub></math> with a subscript.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p"><math id="SS2.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the normalisation constant, which we can calculate by looking at the probability density:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E60" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E60.m1" class="ltx_Math" alttext="\int_{-\infty}^{\infty}\lvert A\sin(k_{n}x)\rvert\operatorname{\mathrm{d}}\!x=%
+\lvert A\rvert^{2}\int_{0}^{L}\sin^{2}\left(\frac{n\pi}{L}x\right)%
+\operatorname{\mathrm{d}}\!x\overset{!}{=}1." display="block"><mrow><mrow><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mrow><mrow><mo lspace="0em" stretchy="false">|</mo><mrow><mi>A</mi><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>k</mi><mi>n</mi></msub><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><msubsup><mo>∫</mo><mn>0</mn><mi>L</mi></msubsup><mrow><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow><mi>L</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mover accent="true"><mo>=</mo><mo>!</mo></mover><mo>⁢</mo><mn>1</mn></mrow></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.60)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The integral is <math id="SS2.p3.m2" class="ltx_Math" alttext="\frac{L}{2}" display="inline"><mfrac><mi>L</mi><mn>2</mn></mfrac></math>, which implies that <math id="SS2.p3.m3" class="ltx_Math" alttext="A=\sqrt{\frac{2}{L}}" display="inline"><mrow><mi>A</mi><mo>=</mo><msqrt><mfrac><mn>2</mn><mi>L</mi></mfrac></msqrt></mrow></math>.</p>
+</div>
+<div id="SS2.p4" class="ltx_para">
+<p class="ltx_p">Thus, in contrast to the particle which is free over all space, the particle confined to a finite region has a <span class="ltx_text ltx_font_bold">discrete</span> set of eigenfunctions, the spatial parts of which are given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E61" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E61.m1" class="ltx_Math" alttext="u_{n}(x)=\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi}{L}x\right),\quad n=1,2,3,\dots" display="block"><mrow><mrow><mrow><msub><mi>u</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msqrt><mfrac><mn>2</mn><mi>L</mi></mfrac></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow><mi>L</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.61)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p5" class="ltx_para">
+<p class="ltx_p">The energy eigenvalues are given by equation <a href="#Ch2.E56" title="In 2.3.2 Energy Eigenfunctions ‣ 2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.56</span></a>:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E62" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E62.m1" class="ltx_Math" alttext="E_{n}=\frac{\hbar^{2}k^{2}}{2m}=\frac{\pi^{2}\hbar^{2}}{2mL^{2}}n^{2}." display="block"><mrow><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mfrac><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>k</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mrow><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.62)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So the total energy is only allowed to be from a discrete set of values as well.</p>
+</div>
+<div id="SS2.p6" class="ltx_para">
+<p class="ltx_p">The full time-dependent energy eigenstates are</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E63" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E63.m1" class="ltx_Math" alttext="\psi_{n}(x,t)=\sqrt{\frac{2}{L}}\sin\left(\frac{n\pi}{L}x\right)e^{-\frac{\pi^%
+{2}\hbar}{2mL^{2}}n^{2}t},\quad n=1,2,3,\dots" display="block"><mrow><mrow><mrow><msub><mi>ψ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msqrt><mfrac><mn>2</mn><mi>L</mi></mfrac></msqrt><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow><mi>L</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>L</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><msup><mi>n</mi><mn>2</mn></msup><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></mrow><mo rspace="1.167em">,</mo><mrow><mi>n</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.63)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">In Dirac notation, these are written as <math id="SS2.p6.m1" class="ltx_Math" alttext="\lvert n\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>n</mi><mo stretchy="false">⟩</mo></mrow></math>.
+Although it can be ambiguous whether the wavefunction for a state <math id="SS2.p6.m2" class="ltx_Math" alttext="\lvert n\rangle" display="inline"><mrow><mo stretchy="false">|</mo><mi>n</mi><mo stretchy="false">⟩</mo></mrow></math> (i.e. <math id="SS2.p6.m3" class="ltx_Math" alttext="\langle x\mathclose{}|\mathopen{}n\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo lspace="0em" rspace="0em">|</mo><mi>n</mi><mo stretchy="false">⟩</mo></mrow></math>) is the full time-dependent eigenfunction <math id="SS2.p6.m4" class="ltx_Math" alttext="\psi_{n}" display="inline"><msub><mi>ψ</mi><mi>n</mi></msub></math> or just the spatial part <math id="SS2.p6.m5" class="ltx_Math" alttext="u_{n}" display="inline"><msub><mi>u</mi><mi>n</mi></msub></math>, it is usually either determined by context or it does not matter.</p>
+</div>
+<div id="SS2.p7" class="ltx_para">
+<p class="ltx_p">As <math id="SS2.p7.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> increases, the spacing between the energy levels gets larger.
+Also note that the more narrow the well (smaller <math id="SS2.p7.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>), the higher the energy levels.
+Note that the lowest possible energy, what we call the <span class="ltx_text ltx_font_bold">ground state</span>, is found when <math id="SS2.p7.m3" class="ltx_Math" alttext="n=1" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow></math>, so the particle can never have zero energy.
+These are manifestations of the uncertainty principle, specifically that localising a particle necessitates if having a higher momentum uncertainty as we saw in section <a href="../principles/quantum-uncertainty.html" title="1.5 Quantum Uncertainty ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.5</span></a>.
+A particle which has any localisation at all can never have zero energy, since that would imply it has zero momentum for certain.</p>
+</div>
+</section>
+<section id="probability-density" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">2.3.3 </span>Probability Density</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">As we can see from equation <a href="#Ch2.E63" title="In 2.3.2 Energy Eigenfunctions ‣ 2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2.63</span></a>, the wavefunction of the particle oscillates faster in both space and time the large <math id="SS3.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is.
+This carries over to the spatial probability density, which is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E64" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E64.m1" class="ltx_Math" alttext="\lvert\psi_{n}(x,t)\rvert^{2}=\frac{2}{L}\sin^{2}\left(\frac{n\pi}{L}x\right)." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>ψ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mfrac><mn>2</mn><mi>L</mi></mfrac><mo lspace="0.167em">⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>π</mi></mrow><mi>L</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.64)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">How does this compare to the probability density of a classical free particle in an infinite well?
+This would be like a particle sliding back and force on a frictionless surface between two walls, with elastic collisions at both ends.
+Since the particle’s speed is constant, it is equally likely to be found anywhere within the well, so we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch2.E65" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch2.E65.m1" class="ltx_Math" alttext="P_{\text{Cl}}=\frac{1}{L}." display="block"><mrow><mrow><msub><mi>P</mi><mtext>Cl</mtext></msub><mo>=</mo><mfrac><mn>1</mn><mi>L</mi></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.65)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The correspondence principle suggests that the quantum probability density would reduce to the classical probability density in the classical limit of large energy (large <math id="SS3.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>).
+This does not appear to be the case here, but we need to look at the actual probability rather than just the values of probability density.
+It is the case that as <math id="SS3.p2.m2" class="ltx_Math" alttext="n\to\infty" display="inline"><mrow><mi>n</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>, <math id="SS3.p2.m3" class="ltx_Math" alttext="\lvert\psi_{n}\rvert^{2}\Delta x" display="inline"><mrow><msup><mrow><mo stretchy="false">|</mo><msub><mi>ψ</mi><mi>n</mi></msub><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi></mrow></math> tends to <math id="SS3.p2.m4" class="ltx_Math" alttext="P_{\text{Cl}}\Delta x" display="inline"><mrow><msub><mi>P</mi><mtext>Cl</mtext></msub><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi></mrow></math> for any interval <math id="SS3.p2.m5" class="ltx_Math" alttext="\Delta x" display="inline"><mrow><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>x</mi></mrow></math>.</p>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">Why then does the quantum probability density oscillate with ever shorter wavelength for increasing <math id="SS3.p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>?
+The answer comes from looking at the expectation value of the particle’s kinetic energy.
+We saw that the kinetic energy operator was given by equation <a href="../principles/the-schrodinger-equation.html#Ch1.E12" title="In 1.2.1 The Time-Dependent Schrodinger Equation ‣ 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.12</span></a>, so the expectation value for a general wavefunction <math id="SS3.p3.m2" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx21" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E66"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E66.m1" class="ltx_Math" alttext="\displaystyle\langle\hat{T}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E66.m2" class="ltx_Math" alttext="\displaystyle=\int_{-\infty}^{\infty}\psi^{\ast}\hat{T}\psi\operatorname{%
+\mathrm{d}}\!x" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.66)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E67"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E67.m1" class="ltx_Math" alttext="\displaystyle=-\frac{\hbar^{2}}{2m}\int_{-\infty}^{\infty}\psi^{\ast}\frac{%
+\partial^{2}\psi}{\partial x^{2}}\operatorname{\mathrm{d}}\!x." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.67)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Integrating by parts and using the same argument as in section <a href="../principles/expectation-values.html#suboperators-with-continuous-eigenvalues" title="1.4.2 Operators with Continuous Eigenvalues ‣ 1.4 Expectation Values ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.4.2</span></a> to justify that the surface terms vanish, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx22" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch2.E68"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch2.E68.m1" class="ltx_Math" alttext="\displaystyle\langle\hat{T}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E68.m2" class="ltx_Math" alttext="\displaystyle=-\frac{\hbar^{2}}{2m}\left[\left.\psi^{\ast}\frac{\partial\psi}{%
+\partial x}\right|_{-\infty}^{\infty}-\int_{-\infty}^{\infty}\frac{\partial%
+\psi^{\ast}}{\partial x}\frac{\partial\psi}{\partial x}\operatorname{\mathrm{d%
+}}\!x\right]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mrow><msubsup><mrow><mrow><msup><mi>ψ</mi><mo>∗</mo></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow><mo>|</mo></mrow><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mo>−</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><msup><mi>ψ</mi><mo>∗</mo></msup></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>]</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.68)</span></td>
+</tr></tbody>
+<tbody id="Ch2.E69"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch2.E69.m1" class="ltx_Math" alttext="\displaystyle=\frac{\hbar^{2}}{2m}\int_{-\infty}^{\infty}\left|\frac{\partial%
+\psi}{\partial x}\right|^{2}\operatorname{\mathrm{d}}\!x." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mrow><mo>|</mo><mstyle displaystyle="true"><mfrac><mrow><mo rspace="0em">∂</mo><mi>ψ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle><mo>|</mo></mrow><mn>2</mn></msup><mo lspace="0.167em">⁢</mo><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2.69)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So the average kinetic energy is related to the “wiggliness” of the wavefunction.
+In particular, for the infinite square well we find that the expectation of kinetic energy for the energy eigenstates <math id="SS3.p3.m3" class="ltx_Math" alttext="\langle\hat{T}\rangle_{\psi_{n}}=E_{n}" display="inline"><mrow><msub><mrow><mo stretchy="false">⟨</mo><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo stretchy="false">⟩</mo></mrow><msub><mi>ψ</mi><mi>n</mi></msub></msub><mo>=</mo><msub><mi>E</mi><mi>n</mi></msub></mrow></math>, so as <math id="SS3.p3.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> increases the wavefunction oscillates with shorter wavelengths.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="gaussian-wave-packets.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.2 </span>Gaussian Wave Packets</span></a><a href="properties-of-energy-eigenstates.html" title="In Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.4 </span>Properties of Energy Eigenstates</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#setting-up-the-schrodinger-equation" title="In 2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3.1 </span>Setting up the Schrodinger Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#energy-eigenfunctions" title="In 2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3.2 </span>Energy Eigenfunctions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#probability-density" title="In 2.3 The Infinite Square Well ‣ Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2.3.3 </span>Probability Density</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

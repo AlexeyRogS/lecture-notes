@@ -1,0 +1,347 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="quantum-states.html" title="1.1 Quantum States ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="next" href="conditions-for-valid-wavefunctions.html" title="1.3 Conditions for Valid Wavefunctions ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="quantum-states.html" title="1.1 Quantum States ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="conditions-for-valid-wavefunctions.html" title="1.3 Conditions for Valid Wavefunctions ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="expectation-values.html" title="1.4 Expectation Values ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="quantum-uncertainty.html" title="1.5 Quantum Uncertainty ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="section" href="probability-current.html" title="1.6 Probability Current ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="quantum-states.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Quantum States</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2 </span>The Schrodinger Equation</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="conditions-for-valid-wavefunctions.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Conditions for Valid Wavefunctions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="expectation-values.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.4 </span>Expectation Values</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="quantum-uncertainty.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.5 </span>Quantum Uncertainty</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="probability-current.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.6 </span>Probability Current</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1.2 </span>The Schrodinger Equation</h1>
+
+<section id="the-time-dependent-schrodinger-equation" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2.1 </span>The Time-Dependent Schrodinger Equation</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">wavefunction</span> <math id="SS1.p1.m1" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> of a non-relativistic particle of mass <math id="SS1.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> obeys the <span class="ltx_text ltx_font_bold">time-dependent Schrodinger equation</span> (TDSE), which is a second-order partial differential equation given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E9" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E9.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\psi(x,t)}{\partial x^{2}}+V(x)\psi(x,t%
+)=i\hbar\frac{\partial\psi(x,t)}{\partial t}," display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.9)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS1.p1.m3" class="ltx_Math" alttext="\hbar" display="inline"><mi mathvariant="normal">ℏ</mi></math> is the reduced Planck constant, defined as <math id="SS1.p1.m4" class="ltx_Math" alttext="\hbar=\frac{h}{2\pi}" display="inline"><mrow><mi mathvariant="normal">ℏ</mi><mo>=</mo><mfrac><mi>h</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></mfrac></mrow></math>.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">The TDSE takes the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E10" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E10.m1" class="ltx_Math" alttext="\begin{split}(\text{kinetic energy operator})\times\psi(x,t)&amp;+(\text{potential%
+ energy operator})\times\psi(x,t)=\\
+&amp;(\text{total energy operator})\times\psi(x,t).\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mrow><mrow><mo stretchy="false">(</mo><mtext>kinetic energy operator</mtext><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>ψ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo>+</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mtext>potential energy operator</mtext><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>ψ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi></mi></mrow></mtd></mtr><mtr><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mtext>total energy operator</mtext><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>ψ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.10)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">Recall that in classical mechanics, kinetic energy is defined as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E11.m1" class="ltx_Math" alttext="K=\frac{1}{2}mv^{2}=\frac{p^{2}}{2m}." display="block"><mrow><mrow><mi>K</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup></mrow><mo>=</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.11)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">In quantum mechanics, physical quantities are represented by <span class="ltx_text ltx_font_bold">operators</span>, which are linear transformations that act on the wavefunction.
+Operators obey the same relations as their corresponding quantities in classical mechanics.
+Hence, the kinetic energy operator in quantum mechanics is defined as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E12.m1" class="ltx_Math" alttext="\hat{T}=\frac{\hat{p}^{2}}{2m}=\frac{1}{2m}\left(-i\hbar\frac{\partial}{%
+\partial x}\right)\left(-i\hbar\frac{\partial}{\partial x}\right)=-\frac{\hbar%
+^{2}}{2m}\frac{\partial^{2}}{\partial x^{2}}." display="block"><mrow><mrow><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo>=</mo><mfrac><msup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.12)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Operators act successively to the right, so the product of two derivative operators becomes a second derivative which is then applied to the wavefunction that the operator is acting on.</p>
+</div>
+<div id="SS1.p4" class="ltx_para">
+<p class="ltx_p">The total energy operator, or <span class="ltx_text ltx_font_bold">Hamiltonian operator</span> is defined as the sum of the kinetic energy and potential energy operators.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E13.m1" class="ltx_Math" alttext="\hat{H}=\hat{T}+\hat{V}=\frac{\hat{p}^{2}}{2m}+\hat{V}=-\frac{\hbar^{2}}{2m}%
+\frac{\partial^{2}}{\partial x^{2}}+V(x)." display="block"><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>=</mo><mrow><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo>+</mo><mover accent="true"><mi>V</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><mfrac><msup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mover accent="true"><mi>V</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.13)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The potential energy operator <math id="SS1.p4.m1" class="ltx_Math" alttext="\hat{V}" display="inline"><mover accent="true"><mi>V</mi><mo>^</mo></mover></math> becomes just the function <math id="SS1.p4.m2" class="ltx_Math" alttext="V(x)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> because the position operator <math id="SS1.p4.m3" class="ltx_Math" alttext="\hat{x}=x" display="inline"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>=</mo><mi>x</mi></mrow></math>.
+Note that the potential energy function <math id="SS1.p4.m4" class="ltx_Math" alttext="V(x)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is often referred to in quantum mechanics as simply “potential”, but this should not be confused with other similarly named functions such as electric potential (voltage, equal to potential energy per unit charge) and gravitational potential (potential energy per unit mass), which are physically different quantities!</p>
+</div>
+<div id="SS1.p5" class="ltx_para">
+<p class="ltx_p">The TDSE can be written more compactly using the Hamiltonian as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E14.m1" class="ltx_Math" alttext="\hat{H}\psi(x,t)=i\hbar\frac{\partial\psi(x,t)}{\partial t}." display="block"><mrow><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mrow><mo rspace="0em">∂</mo><mi>t</mi></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.14)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS1.p6" class="ltx_para">
+<p class="ltx_p">The TDSE is a <span class="ltx_text ltx_font_italic">linear</span> differential equation.
+This means the the solutions obey the principle of superposition, i.e. if <math id="SS1.p6.m1" class="ltx_Math" alttext="\psi_{1}" display="inline"><msub><mi>ψ</mi><mn>1</mn></msub></math> and <math id="SS1.p6.m2" class="ltx_Math" alttext="\psi_{2}" display="inline"><msub><mi>ψ</mi><mn>2</mn></msub></math> are solutions, then <math id="SS1.p6.m3" class="ltx_Math" alttext="A\psi_{1}+B\psi_{2}" display="inline"><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>ψ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msub><mi>ψ</mi><mn>2</mn></msub></mrow></mrow></math> is also a solution.
+This is where the superposition states in quantum mechanics come from.</p>
+</div>
+<div id="SS1.p7" class="ltx_para">
+<p class="ltx_p">It is also first-order in time, which implies that specifying the wavefunction at some time <math id="SS1.p7.m1" class="ltx_Math" alttext="t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math> uniquely specifies the wavefunction for all future times.
+Thus the wavefunction evolves deterministically according to the Schrodinger equation if the particle is left alone without measurement.</p>
+</div>
+</section>
+<section id="" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2.2 </span>The Time-Independent Schrodinger Equation</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">We can make one step towards solving the Schrodinger equation in general by separating the time evolution out of the equation.
+We will assume that the wavefunction <math id="SS2.p1.m1" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the product of a spatial part, that depends only on <math id="SS2.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and a temporal part that depends only on <math id="SS2.p1.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and describes the time evolution.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E15.m1" class="ltx_Math" alttext="\psi(x,t)=u(x)T(t)." display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.15)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This technique is known as <span class="ltx_text ltx_font_bold">separation of variables</span>.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">If we substitute this into the TDSE (equation <a href="#Ch1.E9" title="In 1.2.1 The Time-Dependent Schrodinger Equation ‣ 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.9</span></a>), we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E16" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E16.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2m}T(t)\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{%
+\operatorname{\mathrm{d}}\!x^{2}}+V(x)u(x)T(t)=i\hbar u(x)\frac{\operatorname{%
+\mathrm{d}}\!T(t)}{\operatorname{\mathrm{d}}\!t}." display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>T</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.16)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">If we divide by <math id="SS2.p2.m1" class="ltx_Math" alttext="u(x)T(t)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we can get all terms depending on <math id="SS2.p2.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> on one side and all terms depending on <math id="SS2.p2.m3" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> on the other:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E17" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E17.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2m}\frac{1}{u(x)}\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{%
+\operatorname{\mathrm{d}}\!x^{2}}+V(x)=\hbar\frac{1}{T(t)}\frac{\operatorname{%
+\mathrm{d}}\!T(t)}{\operatorname{\mathrm{d}}\!t}." display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mn>1</mn><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mn>1</mn><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>T</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.17)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Now since both sides only depend on a single variable, they must both be constant.
+This constant must have units of energy, since it must have the same units as <math id="SS2.p2.m4" class="ltx_Math" alttext="V(x)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and it must be equal to the total energy of the particle since that is what is on the left hand side.</p>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">If we set the left-hand side equal to the total energy and multiply both sides by <math id="SS2.p3.m1" class="ltx_Math" alttext="u(x)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E18" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E18.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2m}\frac{\operatorname{\mathrm{d}}\!^{2}u(x)}{\operatorname{%
+\mathrm{d}}\!x^{2}}+V(x)u(x)=Eu(x)." display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.18)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This equation is of the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E19" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E19.m1" class="ltx_Math" alttext="(\text{operator})\times u(x)=(\text{constant})\times u(x)," display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mtext>operator</mtext><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mtext>constant</mtext><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">×</mo><mi>u</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.19)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which is an <span class="ltx_text ltx_font_bold">eigenvalue equation</span>.
+This means that <math id="SS2.p3.m2" class="ltx_Math" alttext="u(x)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> represents an <span class="ltx_text ltx_font_italic">eigenfunction</span> of the Hamiltonian operator, with eigenvalue <math id="SS2.p3.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.
+This equation is known as the <span class="ltx_text ltx_font_bold">time-independent Schrodinger equation</span> (TISE).
+Note that the full time dependent separable wavefunction <math id="SS2.p3.m4" class="ltx_Math" alttext="\psi(x,t)" display="inline"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is also an eigenfunction of the Hamiltonian, since the spatial derivative does not act on the temporal part.
+These eigenfunctions, which are usually labelled with some subscript to denote the energy, are known as <span class="ltx_text ltx_font_bold">energy eigenstates</span>.</p>
+</div>
+<div id="SS2.p4" class="ltx_para">
+<p class="ltx_p">The TISE can be written more compactly using the Hamiltonian as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E20" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E20.m1" class="ltx_Math" alttext="\hat{H}\psi=E\psi." display="block"><mrow><mrow><mrow><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>⁢</mo><mi>ψ</mi></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>ψ</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.20)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p5" class="ltx_para">
+<p class="ltx_p">Note that only the energy eigenstates solve the TISE, but any superposition of energy eigenstates can solve the TDSE.</p>
+</div>
+</section>
+<section id="solving-the-temporal-part-of-the-schrodinger-equation" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">1.2.3 </span>Solving the Temporal Part of the Schrodinger Equation</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Looking at the right hand side of equation <a href="#Ch1.E17" title="In 1.2.2 The Time-Independent Schrodinger Equation ‣ 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.17</span></a>, we see that there is nothing unknown, and therefore we are able to solve it in general.
+Setting the right hand side equal to <math id="SS3.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and rearranging a bit, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E21" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E21.m1" class="ltx_Math" alttext="\frac{\operatorname{\mathrm{d}}\!T(t)}{\operatorname{\mathrm{d}}\!t}=-\frac{iE%
+}{\hbar}T(t)." display="block"><mrow><mrow><mfrac><mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>T</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>−</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi>E</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.21)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This equation has the solution</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E22.m1" class="ltx_Math" alttext="T(t)=e^{-\frac{iE}{\hbar}t}," display="block"><mrow><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi>E</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.22)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which holds for <span class="ltx_text ltx_font_italic">any</span> potential energy <math id="SS3.p1.m2" class="ltx_Math" alttext="V(x)" display="inline"><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+This is therefore the temporal part of the energy eigenstates for any problem.
+It means we do not actually need to solve the full TDSE for every problem we want to study in quantum mechanics.
+We need only solve the TISE, which is different for every problem because of the presence of the potential, to find the spatial part of the energy eigenstates, and then the full eigenfunctions are given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch1.E23" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch1.E23.m1" class="ltx_Math" alttext="\psi(x,t)=u(x)e^{-\frac{iE}{\hbar}t}," display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi>E</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1.23)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where the spatial part <math id="SS3.p1.m3" class="ltx_Math" alttext="u(x)" display="inline"><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the eigenfunction of <math id="SS3.p1.m4" class="ltx_Math" alttext="\hat{H}" display="inline"><mover accent="true"><mi>H</mi><mo>^</mo></mover></math> with eigenvalue <math id="SS3.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>.</p>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">In particular, the linearity of the TDSE implies that the time-evolution of a superposition of energy eigenstates is equal to the superposition of the time-evolution of those eigenstates.
+We will use this principle repeatedly to find the most general solutions to the TDSE.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="quantum-states.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.1 </span>Quantum States</span></a><a href="conditions-for-valid-wavefunctions.html" title="In Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.3 </span>Conditions for Valid Wavefunctions</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subthe-time-dependent-schrodinger-equation" title="In 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2.1 </span>The Time-Dependent Schrodinger Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#the-time-independent-schrodinger-equation" title="In 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2.2 </span>The Time-Independent Schrodinger Equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subsolving-the-temporal-part-of-the-schrodinger-equation" title="In 1.2 The Schrodinger Equation ‣ Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1.2.3 </span>Solving the Temporal Part of the Schrodinger Equation</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4.1 The 3D Quantum Harmonic Oscillator ‣ Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="./" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="next" href="degeneracy.html" title="4.2 Degeneracy ‣ Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="section" href="degeneracy.html" title="4.2 Degeneracy ‣ Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="../the-hydrogen-atom/index.html" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1 </span>The 3D Quantum Harmonic Oscillator</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="degeneracy.html" title="In Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2 </span>Degeneracy</span></a></li>
+</ol>
+</li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../the-hydrogen-atom/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a></li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4.1 </span>The 3D Quantum Harmonic Oscillator</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Solving the quantum harmonic oscillator in one dimension proved to be quite a slog, but we will see that in more than one dimension it is much easier!
+This is because we can use the method of separation of variables to break down the problem into copies of the one-dimensional problem, for which we already know the solution.</p>
+</div>
+<section id="schrodinger-equation-for-the-3d-qho" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1.1 </span>Schrodinger Equation for the 3D QHO</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">The first thing we need to do is write out the potential energy so that we can write down the Schrodinger equation.
+The particle is going to be under the influence of a central force <math id="SS1.p1.m1" class="ltx_Math" alttext="\boldsymbol{F}=-\sqrt{\omega/m}\boldsymbol{r}" display="inline"><mrow><mi>𝑭</mi><mo>=</mo><mrow><mo>−</mo><mrow><msqrt><mrow><mi>ω</mi><mo>/</mo><mi>m</mi></mrow></msqrt><mo>⁢</mo><mi>𝒓</mi></mrow></mrow></mrow></math>, which gives a potential energy</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E1" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E1.m1" class="ltx_Math" alttext="\hat{V}=\frac{1}{2}m\omega^{2}\hat{r}^{2}=\frac{1}{2}m\omega^{2}(\hat{x}^{2}+%
+\hat{y}^{2}+\hat{z}^{2})." display="block"><mrow><mrow><mover accent="true"><mi>V</mi><mo>^</mo></mover><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mover accent="true"><mi>r</mi><mo>^</mo></mover><mn>2</mn></msup></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>x</mi><mo>^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover accent="true"><mi>y</mi><mo>^</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover accent="true"><mi>z</mi><mo>^</mo></mover><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Note that here we are assuming that force grows in magnitude with the same rate in every direction, and therefore the natural frequency <math id="SS1.p1.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is the same in all directions.
+We call an oscillator like this <span class="ltx_text ltx_font_bold">isotropic</span>.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">For kinetic energy, we can write</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E2" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E2.m1" class="ltx_Math" alttext="\hat{T}=\frac{\hat{p}^{2}}{2m}=\frac{\hat{\boldsymbol{p}}\cdot\hat{\boldsymbol%
+{p}}}{2m}," display="block"><mrow><mrow><mover accent="true"><mi>T</mi><mo>^</mo></mover><mo>=</mo><mfrac><msup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mover accent="true"><mi>𝒑</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>𝒑</mi><mo>^</mo></mover></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.2)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS1.p2.m1" class="ltx_Math" alttext="\hat{\boldsymbol{p}}" display="inline"><mover accent="true"><mi>𝒑</mi><mo>^</mo></mover></math> is the 3D momentum operator, which components <math id="SS1.p2.m2" class="ltx_Math" alttext="\hat{\boldsymbol{p}}=(\hat{p}_{x},\hat{p}_{y},\hat{p}_{z})" display="inline"><mrow><mover accent="true"><mi>𝒑</mi><mo>^</mo></mover><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx60" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E3.m1" class="ltx_Math" alttext="\displaystyle\hat{p}_{x}" display="inline"><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E3.m2" class="ltx_Math" alttext="\displaystyle=-i\hbar\frac{\partial}{\partial x}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.3)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E4.m1" class="ltx_Math" alttext="\displaystyle\hat{p}_{y}" display="inline"><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E4.m2" class="ltx_Math" alttext="\displaystyle=-i\hbar\frac{\partial}{\partial y}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>y</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.4)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E5.m1" class="ltx_Math" alttext="\displaystyle\hat{p}_{z}" display="inline"><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E5.m2" class="ltx_Math" alttext="\displaystyle=-i\hbar\frac{\partial}{\partial z}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>z</mi></mrow></mfrac></mstyle></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.5)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Therefore, kinetic energy in 3D can be written as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx61" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E6.m1" class="ltx_Math" alttext="\displaystyle\hat{T}" display="inline"><mover accent="true"><mi>T</mi><mo>^</mo></mover></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E6.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{2m}(\hat{p}_{x}^{2}+\hat{p}_{y}^{2}+\hat{p}_{z}^{2})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.6)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E7.m1" class="ltx_Math" alttext="\displaystyle=-\frac{\hbar^{2}}{2m}\left(\frac{\partial^{2}}{\partial x^{2}}+%
+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.7)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E8"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E8.m1" class="ltx_Math" alttext="\displaystyle=-\frac{\hbar^{2}}{2m}\nabla^{2}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><msup><mo>∇</mo><mn>2</mn></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.8)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where <math id="SS1.p2.m3" class="ltx_Math" alttext="\nabla^{2}" display="inline"><msup><mo>∇</mo><mn>2</mn></msup></math> is the Laplacian operator.</p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">Putting these together, the time-independent Schrodinger equation in the position basis is</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx62" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E9.m1" class="ltx_Math" alttext="\displaystyle\left(-\frac{\hbar^{2}}{2m}\nabla^{2}+\frac{1}{2}m\omega^{2}r^{2}%
+\right)u(\boldsymbol{r})" display="inline"><mrow><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo lspace="0.167em">⁢</mo><msup><mo>∇</mo><mn>2</mn></msup></mrow></mrow><mo lspace="0em">+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>r</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒓</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E9.m2" class="ltx_Math" alttext="\displaystyle=Eu(\boldsymbol{r})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>𝒓</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.9)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E10.m1" class="ltx_Math" alttext="\displaystyle\left(-\frac{\hbar^{2}}{2m}\left(\frac{\partial^{2}}{\partial x^{%
+2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}%
+\right)+\frac{1}{2}m\omega^{2}(x^{2}+y^{2}+z^{2})\right)u(x,y,z)" display="inline"><mrow><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E10.m2" class="ltx_Math" alttext="\displaystyle=Eu(x,y,z)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.10)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The TISE is now a partial differential equation, rather than an ordinary one, as the spatial part of the wavefunction now depends on three variables: <math id="SS1.p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="SS1.p3.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and <math id="SS1.p3.m3" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>.
+As in the 1D case, the full energy eigenfunctions are obtained by multiplying the spatial part with the temporal part, so we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E11" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E11.m1" class="ltx_Math" alttext="\psi(x,y,z,t)=u(x,y,z)e^{-\frac{iEt}{\hbar}}," display="block"><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.11)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">for whatever the energy eigenvalues <math id="SS1.p3.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> happen to be.</p>
+</div>
+</section>
+<section id="solving-the-tise-by-separation-of-variables" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">4.1.2 </span>Solving the TISE by Separation of Variables</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Note that the potential energy has the form <math id="SS2.p1.m1" class="ltx_Math" alttext="V(x,y,z)=V_{x}(x)+V_{y}(y)+V_{z}(z)" display="inline"><mrow><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>V</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>V</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>V</mi><mi>z</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+For a classical oscillator with a potential like this, the motion along each dimension is unaffected by the motion along the others.
+Therefore, we assume that the eigenfunctions are separable, so they take the form</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E12" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E12.m1" class="ltx_Math" alttext="u(x,y,z)=u_{x}(x)u_{y}(y)u_{z}(z)." display="block"><mrow><mrow><mrow><mi>u</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.12)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">Inserting this form into equation <a href="#Ch4.E10" title="In 4.1.1 Schrodinger Equation for the 3D QHO ‣ 4.1 The 3D Quantum Harmonic Oscillator ‣ Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.10</span></a> gives</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E13" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E13.m1" class="ltx_Math" alttext="-\frac{\hbar^{2}}{2m}\left(u_{y}u_{z}\frac{\operatorname{\mathrm{d}}\!^{2}u_{x%
+}}{\operatorname{\mathrm{d}}\!x^{2}}+u_{x}u_{z}\frac{\operatorname{\mathrm{d}}%
+\!^{2}u_{y}}{\operatorname{\mathrm{d}}\!y^{2}}+u_{x}u_{y}\frac{\operatorname{%
+\mathrm{d}}\!^{2}u_{z}}{\operatorname{\mathrm{d}}\!z^{2}}\right)+\frac{1}{2}m%
+\omega^{2}(x^{2}+y^{2}+z^{2})u_{x}u_{y}u_{z}=Eu_{x}u_{y}u_{z}," display="block"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msub><mi>u</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>x</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>y</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>+</mo><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>z</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub></mrow></mrow><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.13)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">then dividing by <math id="SS2.p2.m1" class="ltx_Math" alttext="u_{x}u_{y}u_{z}" display="inline"><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub></mrow></math> so that each term only depends on a single variable, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E14" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E14.m1" class="ltx_Math" alttext="\begin{split}&amp;\left(-\frac{\hbar^{2}}{2m}\frac{1}{u_{x}}\frac{\operatorname{%
+\mathrm{d}}\!^{2}u_{x}}{\operatorname{\mathrm{d}}\!x^{2}}+\frac{1}{2}m\omega^{%
+2}x^{2}\right)+\left(-\frac{\hbar^{2}}{2m}\frac{1}{u_{y}}\frac{\operatorname{%
+\mathrm{d}}\!^{2}u_{y}}{\operatorname{\mathrm{d}}\!y^{2}}+\frac{1}{2}m\omega^{%
+2}y^{2}\right)\\
+&amp;+\left(-\frac{\hbar^{2}}{2m}\frac{1}{u_{z}}\frac{\operatorname{\mathrm{d}}\!^%
+{2}u_{z}}{\operatorname{\mathrm{d}}\!z^{2}}+\frac{1}{2}m\omega^{2}z^{2}\right)%
+=E\end{split}" display="block"><mtable columnspacing="0pt" displaystyle="true" rowspacing="0pt"><mtr><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mn>1</mn><msub><mi>u</mi><mi>x</mi></msub></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>x</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow><mo>+</mo><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mn>1</mn><msub><mi>u</mi><mi>y</mi></msub></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>y</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo>+</mo><mrow><mo>(</mo><mrow><mrow><mo>−</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mn>1</mn><msub><mi>u</mi><mi>z</mi></msub></mfrac><mo>⁢</mo><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>z</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mi>E</mi></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.14)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">Now, the whole left-hand side must equal the total energy <math id="SS2.p3.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, which is a constant.
+However, <math id="SS2.p3.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="SS2.p3.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and <math id="SS2.p3.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math> can all be varied completely independently.
+This means that each term in large parentheses must itself be equal to a constant.
+These constants represent the energy along each axis, so we will denote them <math id="SS2.p3.m5" class="ltx_Math" alttext="E_{x}" display="inline"><msub><mi>E</mi><mi>x</mi></msub></math>, <math id="SS2.p3.m6" class="ltx_Math" alttext="E_{y}" display="inline"><msub><mi>E</mi><mi>y</mi></msub></math>, and <math id="SS2.p3.m7" class="ltx_Math" alttext="E_{z}" display="inline"><msub><mi>E</mi><mi>z</mi></msub></math>.
+By equation <a href="#Ch4.E14" title="In 4.1.2 Solving the TISE by Separation of Variables ‣ 4.1 The 3D Quantum Harmonic Oscillator ‣ Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.14</span></a>, we have</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E15" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E15.m1" class="ltx_Math" alttext="E=E_{x}+E_{y}+E_{z}." display="block"><mrow><mrow><mi>E</mi><mo>=</mo><mrow><msub><mi>E</mi><mi>x</mi></msub><mo>+</mo><msub><mi>E</mi><mi>y</mi></msub><mo>+</mo><msub><mi>E</mi><mi>z</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.15)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">We then have three separate ordinary differential equations:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx63" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E16.m1" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\frac{\operatorname{\mathrm{d}}\!^{2}u_{x}}{%
+\operatorname{\mathrm{d}}\!x^{2}}+\frac{1}{2}m\omega^{2}x^{2}u_{x}" display="inline"><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>x</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E16.m2" class="ltx_Math" alttext="\displaystyle=E_{x}u_{x}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>E</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>x</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.16)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E17.m1" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\frac{\operatorname{\mathrm{d}}\!^{2}u_{y}}{%
+\operatorname{\mathrm{d}}\!y^{2}}+\frac{1}{2}m\omega^{2}y^{2}u_{y}" display="inline"><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>y</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E17.m2" class="ltx_Math" alttext="\displaystyle=E_{y}u_{y}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msub><mi>E</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>y</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.17)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E18.m1" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\frac{\operatorname{\mathrm{d}}\!^{2}u_{z}}{%
+\operatorname{\mathrm{d}}\!z^{2}}+\frac{1}{2}m\omega^{2}z^{2}u_{z}" display="inline"><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi mathvariant="normal">d</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><msub><mi>u</mi><mi>z</mi></msub></mrow><mrow><mi mathvariant="normal">d</mi><mo>⁡</mo><msup><mi>z</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>z</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E18.m2" class="ltx_Math" alttext="\displaystyle=E_{z}u_{z}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><msub><mi>E</mi><mi>z</mi></msub><mo>⁢</mo><msub><mi>u</mi><mi>z</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.18)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">These are three copies of the 1D quantum harmonic oscillator!
+We therefore know what the forms of <math id="SS2.p3.m8" class="ltx_Math" alttext="u_{x}" display="inline"><msub><mi>u</mi><mi>x</mi></msub></math>, <math id="SS2.p3.m9" class="ltx_Math" alttext="u_{y}" display="inline"><msub><mi>u</mi><mi>y</mi></msub></math>, and <math id="SS2.p3.m10" class="ltx_Math" alttext="u_{z}" display="inline"><msub><mi>u</mi><mi>z</mi></msub></math> will be as we have solved for them already.
+The energy eigenstates of the 3D isotropic quantum harmonic oscillator will then be products of the the one-dimensional eigenstates.</p>
+</div>
+<div id="SS2.p4" class="ltx_para">
+<p class="ltx_p">The solution for each coordinate axis will have its own quantum number to describe which energy level the particle is on along that direction.
+We call these three labels <math id="SS2.p4.m1" class="ltx_Math" alttext="n_{x}" display="inline"><msub><mi>n</mi><mi>x</mi></msub></math>, <math id="SS2.p4.m2" class="ltx_Math" alttext="n_{y}" display="inline"><msub><mi>n</mi><mi>y</mi></msub></math>, <math id="SS2.p4.m3" class="ltx_Math" alttext="n_{z}" display="inline"><msub><mi>n</mi><mi>z</mi></msub></math>.
+Then the energy eigenvalues along each axis are</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.S4.EGx64" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.E19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E19.m1" class="ltx_Math" alttext="\displaystyle E_{x}" display="inline"><msub><mi>E</mi><mi>x</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E19.m2" class="ltx_Math" alttext="\displaystyle=\hbar\omega\left(n_{x}+\frac{1}{2}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>n</mi><mi>x</mi></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.19)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E20"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E20.m1" class="ltx_Math" alttext="\displaystyle E_{y}" display="inline"><msub><mi>E</mi><mi>y</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E20.m2" class="ltx_Math" alttext="\displaystyle=\hbar\omega\left(n_{y}+\frac{1}{2}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>n</mi><mi>y</mi></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.20)</span></td>
+</tr></tbody>
+<tbody id="Ch4.E21"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.E21.m1" class="ltx_Math" alttext="\displaystyle E_{z}" display="inline"><msub><mi>E</mi><mi>z</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.E21.m2" class="ltx_Math" alttext="\displaystyle=\hbar\omega\left(n_{z}+\frac{1}{2}\right)," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>n</mi><mi>z</mi></msub><mo>+</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.21)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">just like in the one-dimensional case.</p>
+</div>
+<div id="SS2.p5" class="ltx_para">
+<p class="ltx_p">This means that the total energy has three quantum numbers which label the eigenvalues, which are given by</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch4.E22" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch4.E22.m1" class="ltx_Math" alttext="E_{n_{x}n_{y}n_{z}}=E_{x}+E_{y}+E_{z}=\hbar\omega\left(n_{x}+n_{y}+n_{z}+\frac%
+{3}{2}\right)." display="block"><mrow><mrow><msub><mi>E</mi><mrow><msub><mi>n</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>n</mi><mi>y</mi></msub><mo>⁢</mo><msub><mi>n</mi><mi>z</mi></msub></mrow></msub><mo>=</mo><mrow><msub><mi>E</mi><mi>x</mi></msub><mo>+</mo><msub><mi>E</mi><mi>y</mi></msub><mo>+</mo><msub><mi>E</mi><mi>z</mi></msub></mrow><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><msub><mi>n</mi><mi>x</mi></msub><mo>+</mo><msub><mi>n</mi><mi>y</mi></msub><mo>+</mo><msub><mi>n</mi><mi>z</mi></msub><mo>+</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4.22)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Each quantum number starts from zero, and they can all take on any value independent of each other.
+Clearly we will have some combinations of values which have the same energy, for example <math id="SS2.p5.m1" class="ltx_Math" alttext="n_{x}=n_{y}=n_{z}=1" display="inline"><mrow><msub><mi>n</mi><mi>x</mi></msub><mo>=</mo><msub><mi>n</mi><mi>y</mi></msub><mo>=</mo><msub><mi>n</mi><mi>z</mi></msub><mo>=</mo><mn>1</mn></mrow></math>, or <math id="SS2.p5.m2" class="ltx_Math" alttext="n_{x}=2" display="inline"><mrow><msub><mi>n</mi><mi>x</mi></msub><mo>=</mo><mn>2</mn></mrow></math>, <math id="SS2.p5.m3" class="ltx_Math" alttext="n_{y}=1" display="inline"><mrow><msub><mi>n</mi><mi>y</mi></msub><mo>=</mo><mn>1</mn></mrow></math>, and <math id="SS2.p5.m4" class="ltx_Math" alttext="n_{z}=0" display="inline"><mrow><msub><mi>n</mi><mi>z</mi></msub><mo>=</mo><mn>0</mn></mrow></math>, or <math id="SS2.p5.m5" class="ltx_Math" alttext="n_{x}=3" display="inline"><mrow><msub><mi>n</mi><mi>x</mi></msub><mo>=</mo><mn>3</mn></mrow></math> and <math id="SS2.p5.m6" class="ltx_Math" alttext="n_{y}=n_{z}=0" display="inline"><mrow><msub><mi>n</mi><mi>y</mi></msub><mo>=</mo><msub><mi>n</mi><mi>z</mi></msub><mo>=</mo><mn>0</mn></mrow></math>!
+We will discuss what this means in the next section.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a><a href="degeneracy.html" title="In Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.2 </span>Degeneracy</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#subschrodinger-equation-for-the-3d-qho" title="In 4.1 The 3D Quantum Harmonic Oscillator ‣ Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1.1 </span>Schrodinger Equation for the 3D QHO</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#solving-the-tise-by-separation-of-variables" title="In 4.1 The 3D Quantum Harmonic Oscillator ‣ Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4.1.2 </span>Solving the TISE by Separation of Variables</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>

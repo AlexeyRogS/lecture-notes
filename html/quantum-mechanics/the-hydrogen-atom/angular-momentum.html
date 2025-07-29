@@ -1,0 +1,654 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics</title>
+<!--Generated on Sat Jul 26 22:42:07 2025 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+
+<link rel="stylesheet" href="styles/main.css" type="text/css">
+<link rel="stylesheet" href="styles/lecture-notes.css" type="text/css">
+<script defer src="scripts/lecture-notes.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="up" href="./" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="up up" href="../index.html" title="Quantum Mechanics">
+<link rel="start" href="../index.html" title="Quantum Mechanics">
+<link rel="prev" href="energy-eigenstates.html" title="5.3 Energy Eigenstates of Hydrogen ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="next" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+<link rel="section" href="hydrogen-hamiltonian.html" title="5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="solving-the-hydrogen-atom.html" title="5.2 Solving the Hydrogen Atom ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="section" href="energy-eigenstates.html" title="5.3 Energy Eigenstates of Hydrogen ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="chapter" href="../preface/index.html" title="Preface ‣ Quantum Mechanics">
+<link rel="chapter" href="../principles/index.html" title="Chapter 1 Principles of Quantum Mechanics ‣ Quantum Mechanics">
+<link rel="chapter" href="../one-dimension/index.html" title="Chapter 2 Quantum Mechanics in One Dimension ‣ Quantum Mechanics">
+<link rel="chapter" href="../harmonic-oscillator/index.html" title="Chapter 3 The Quantum Harmonic Oscillator ‣ Quantum Mechanics">
+<link rel="chapter" href="../multiple-dimensions/index.html" title="Chapter 4 Quantum Mechanics in Multiple Dimensions ‣ Quantum Mechanics">
+<link rel="chapter" href="./" title="Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics">
+<link rel="bibliography" href="../bibliography.html" title="References ‣ Quantum Mechanics">
+</head>
+<body>
+<div id="body-wrapper">
+<nav class="ltx_page_navbar"><a href="../index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text ltx_ref_title">Quantum Mechanics</span></a><h2><a href="https://lachlan.dk/lecture-notes/">Lecture Notes</a></h2>
+<h3>by <a class="external-link" href="https://lachlan.dk">Lachlan Dufort-Kennett</a>
+</h3>
+<nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../preface/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title">Preface</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../principles/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Principles of Quantum Mechanics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../one-dimension/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Quantum Mechanics in One Dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../harmonic-oscillator/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Quantum Harmonic Oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter"><a href="../multiple-dimensions/index.html" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Quantum Mechanics in Multiple Dimensions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_chapter">
+<a href="./" title="In Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>The Hydrogen Atom</span></a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="hydrogen-hamiltonian.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.1 </span>The Hydrogen Hamiltonian</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="solving-the-hydrogen-atom.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.2 </span>Solving the Hydrogen Atom</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="energy-eigenstates.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Energy Eigenstates of Hydrogen</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section ltx_ref_self">
+<span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4 </span>Angular Momentum</span></span>
+<ol class="ltx_toclist ltx_toclist_section">
+</ol>
+</li>
+</ol>
+</li>
+</ol></nav>
+</nav>
+<main>
+<div class="ltx_page_main">
+<header class="ltx_page_header"></header>
+<div class="ltx_page_content">
+<section class="ltx_section ltx_authors_1line" lang="en">
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5.4 </span>Angular Momentum</h1>
+
+<section id="quantum-mechanical-definition" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.4.1 </span>Quantum Mechanical Definition of Angular Momentum</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Classically, angular momentum is defined as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E69" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E69.m1" class="ltx_Math" alttext="\boldsymbol{L}=\boldsymbol{r}\times\boldsymbol{p}." display="block"><mrow><mrow><mi>𝑳</mi><mo>=</mo><mrow><mi>𝒓</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>𝒑</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.69)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">It is a useful quantity to study in classical mechanics because it is conserved for any particle under the influence of a central force such that the Coulomb force.
+We should therefore expect that angular momentum is conserved for the electron in hydrogen as well, so let’s investigate.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">Quantum mechanically, we define angular momentum in the same way it is defined classically, except using (vector) <span class="ltx_text ltx_font_italic">operators</span> instead of just vectors.</p>
+</div>
+<div id="Ch5.Thmdefinition1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition 5.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Ch5.Thmdefinition1.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_bold">angular momentum operator</span> is defined in terms of the position and momentum operators as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E70" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E70.m1" class="ltx_Math" alttext="\hat{\boldsymbol{L}}=\hat{\boldsymbol{r}}\times\hat{\boldsymbol{p}}." display="block"><mrow><mrow><mover accent="true"><mi>𝑳</mi><mo>^</mo></mover><mo>=</mo><mrow><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">×</mo><mover accent="true"><mi>𝒑</mi><mo>^</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.70)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="Ch5.Thmdefinition1.p2" class="ltx_para">
+<p class="ltx_p">Writing out the cross product, we see that the components of the angular momentum operator are</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx79" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E71"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E71.m1" class="ltx_Math" alttext="\displaystyle\hat{L}_{x}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E71.m2" class="ltx_Math" alttext="\displaystyle=\hat{y}\hat{p}_{z}-\hat{z}\hat{p}_{y}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo>−</mo><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.71)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E72"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E72.m1" class="ltx_Math" alttext="\displaystyle\hat{L}_{y}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E72.m2" class="ltx_Math" alttext="\displaystyle=\hat{z}\hat{p}_{x}-\hat{x}\hat{p}_{z}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow><mo>−</mo><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.72)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E73"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E73.m1" class="ltx_Math" alttext="\displaystyle\hat{L}_{z}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E73.m2" class="ltx_Math" alttext="\displaystyle=\hat{x}\hat{p}_{y}-\hat{y}\hat{p}_{x}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo>−</mo><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.73)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">Recall that <math id="SS1.p3.m1" class="ltx_Math" alttext="\hat{r}_{i}\hat{p}_{j}" display="inline"><mrow><msub><mover accent="true"><mi>r</mi><mo>^</mo></mover><mi>i</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>j</mi></msub></mrow></math> commute as long as <math id="SS1.p3.m2" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math>, so the ordering does not matter when writing out the components.
+However, given that we cannot know all components of <math id="SS1.p3.m3" class="ltx_Math" alttext="\hat{\boldsymbol{r}}" display="inline"><mover accent="true"><mi>𝒓</mi><mo>^</mo></mover></math> and <math id="SS1.p3.m4" class="ltx_Math" alttext="\hat{\boldsymbol{p}}" display="inline"><mover accent="true"><mi>𝒑</mi><mo>^</mo></mover></math> simultaneously due to the uncertainty principle, it seems like we will not be able to know all components of angular momentum simultaneously either.</p>
+</div>
+</section>
+<section id="commutation-relations" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.4.2 </span>Commutation Relations</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Let us test this out by finding some commutators.
+Note that as a general tip for calculating commutators, it is almost always useful to use standard commutator identities to simplify as much as possible before expanding the commutators themselves.
+For example, when finding the commutator of <math id="SS2.p1.m1" class="ltx_Math" alttext="\hat{L}_{x}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub></math> and <math id="SS2.p1.m2" class="ltx_Math" alttext="\hat{L}_{y}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></math>, we use the fact that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E74" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E74.m1" class="ltx_Math" alttext="[\hat{A},\hat{B}+\hat{C}]=[\hat{A},\hat{B}]+[\hat{A},\hat{C}]," display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>+</mo><mover accent="true"><mi>C</mi><mo>^</mo></mover></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>C</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.74)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">to write</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx80" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E75"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E75.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{x},\hat{L}_{y}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E75.m2" class="ltx_Math" alttext="\displaystyle=[\hat{y}\hat{p}_{z}-\hat{z}\hat{p}_{y},\hat{z}\hat{p}_{x}-\hat{x%
+}\hat{p}_{z}]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mrow><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo>−</mo><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></mrow></mrow><mo>,</mo><mrow><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow><mo>−</mo><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.75)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E76"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E76.m1" class="ltx_Math" alttext="\displaystyle=[\hat{y}\hat{p}_{z},\hat{z}\hat{p}_{x}]+[\hat{z}\hat{p}_{y},\hat%
+{x}\hat{p}_{z}]-[\hat{y}\hat{p}_{z},\hat{x}\hat{p}_{z}]-[\hat{z}\hat{p}_{y},%
+\hat{z}\hat{p}_{x}]." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo>,</mo><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo>,</mo><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>−</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo>,</mo><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo stretchy="false">]</mo></mrow><mo>−</mo><mrow><mo stretchy="false">[</mo><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo>,</mo><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.76)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The last two terms contain only things that all commute with each other, so they must be zero.
+Similarly, in the first two terms involving <math id="SS2.p1.m3" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> and <math id="SS2.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> commute with everything else in their commutators, so we can pull them out as constants:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E77" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E77.m1" class="ltx_Math" alttext="[\hat{L}_{x},\hat{L}_{y}]=\hat{y}[\hat{p}_{z},\hat{z}]\hat{p}_{x}+\hat{p}_{y}[%
+\hat{z},\hat{p}_{z}]\hat{x}." display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub><mo>,</mo><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow><mo>+</mo><mrow><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>,</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.77)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Now we can insert the value of the commutator that we know, <math id="SS2.p1.m5" class="ltx_Math" alttext="[\hat{z},\hat{p}_{z}]=i\hbar" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>,</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow></math>, to get</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx81" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E78"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E78.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{x},\hat{L}_{y}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E78.m2" class="ltx_Math" alttext="\displaystyle=-i\hbar\hat{y}\hat{p}_{x}+i\hbar\hat{p}_{y}\hat{x}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>^</mo></mover></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.78)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E79"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E79.m1" class="ltx_Math" alttext="\displaystyle=i\hbar(\hat{x}\hat{p}_{y}-\hat{y}\hat{p}_{x})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo>−</mo><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>x</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.79)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E80"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E80.m1" class="ltx_Math" alttext="\displaystyle=i\hbar\hat{L}_{z}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.80)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Hence the <math id="SS2.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="SS2.p1.m7" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> components of angular momentum do not commute and we cannot know them both simultaneously.
+Calculating the commutators between the other components, we find the same outcome.
+The values are</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx82" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E81"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E81.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{y},\hat{L}_{z}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E81.m2" class="ltx_Math" alttext="\displaystyle=i\hbar\hat{L}_{x}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.81)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E82"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E82.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{z},\hat{L}_{x}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E82.m2" class="ltx_Math" alttext="\displaystyle=i\hbar\hat{L}_{y}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.82)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Notice that these commutators follow a cyclic pattern under the exchange of labels <math id="SS2.p1.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, <math id="SS2.p1.m9" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, and <math id="SS2.p1.m10" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>.
+This is just a consequence of the definition of <math id="SS2.p1.m11" class="ltx_Math" alttext="\boldsymbol{\hat{L}}" display="inline"><mover accent="true"><mi>𝑳</mi><mo class="ltx_mathvariant_bold" mathvariant="bold">^</mo></mover></math> as a cross product.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">What properties can be know about the electron’s angular momentum simultaneously?
+What about one of the components and the total magnitude?
+To try this, we calculate the commutator of one of the components with the operator <math id="SS2.p2.m1" class="ltx_Math" alttext="\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math>, which is defined as</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E83" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E83.m1" class="ltx_Math" alttext="\hat{L}^{2}=\hat{\boldsymbol{L}}\cdot\hat{\boldsymbol{L}}=\hat{L}_{x}^{2}+\hat%
+{L}_{y}^{2}+\hat{L}_{z}^{2}." display="block"><mrow><mrow><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo>=</mo><mrow><mover accent="true"><mi>𝑳</mi><mo>^</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>𝑳</mi><mo>^</mo></mover></mrow><mo>=</mo><mrow><msubsup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi><mn>2</mn></msubsup></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.83)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So the commutator between <math id="SS2.p2.m2" class="ltx_Math" alttext="\hat{L}_{x}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub></math> and <math id="SS2.p2.m3" class="ltx_Math" alttext="\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math> is</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx83" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E84"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E84.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{x},\hat{L}^{2}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E84.m2" class="ltx_Math" alttext="\displaystyle=[\hat{L}_{x},\hat{L}_{x}^{2}+\hat{L}_{y}^{2}+\hat{L}_{z}^{2}]" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><mrow><msubsup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">]</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.84)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E85"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E85.m1" class="ltx_Math" alttext="\displaystyle=[\hat{L}_{x},\hat{L}_{x}\hat{L}_{x}]+[\hat{L}_{x},\hat{L}_{y}%
+\hat{L}_{y}]+[\hat{L}_{x},\hat{L}_{z}\hat{L}_{z}]." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo stretchy="false">]</mo></mrow><mo>+</mo><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo stretchy="false">]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.85)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The first term will be zero, and using the identity</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E86" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E86.m1" class="ltx_Math" alttext="[\hat{A},\hat{B}\hat{C}]=\hat{B}[\hat{A},\hat{C}]+[\hat{A},\hat{B}]\hat{C}," display="block"><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mover accent="true"><mi>C</mi><mo>^</mo></mover></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mrow><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>C</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>A</mi><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>B</mi><mo>^</mo></mover><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mover accent="true"><mi>C</mi><mo>^</mo></mover></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.86)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">the second and third terms can be written as</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx84" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E87"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E87.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{x},\hat{L}^{2}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E87.m2" class="ltx_Math" alttext="\displaystyle=\hat{L}_{y}[\hat{L}_{x},\hat{L}_{y}]+[\hat{L}_{x},\hat{L}_{y}]%
+\hat{L}_{y}+\hat{L}_{z}[\hat{L}_{x},\hat{L}_{z}]+[\hat{L}_{x},\hat{L}_{z}]\hat%
+{L}_{z}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo>+</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.87)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E88"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E88.m1" class="ltx_Math" alttext="\displaystyle=\hat{L}_{y}(i\hbar\hat{L}_{z})+i\hbar\hat{L}_{z}\hat{L}_{y}+\hat%
+{L}_{z}(-i\hbar\hat{L}_{y})+(-i\hbar\hat{L}_{y})\hat{L}_{z}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo>+</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.88)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E89"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E89.m1" class="ltx_Math" alttext="\displaystyle=i\hbar(\hat{L}_{y}\hat{L}_{z}+\hat{L}_{z}\hat{L}_{y}-\hat{L}_{z}%
+\hat{L}_{y}-\hat{L}_{y}\hat{L}_{z})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo>+</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow></mrow><mo>−</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></mrow><mo>−</mo><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.89)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E90"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E90.m1" class="ltx_Math" alttext="\displaystyle=0." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.90)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Hence we can know the total magnitude of angular momentum and one of its components simultaneously, as one can show similarly that</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx85" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E91"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E91.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{y},\hat{L}^{2}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo>,</mo><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E91.m2" class="ltx_Math" alttext="\displaystyle=0" display="inline"><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.91)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E92"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E92.m1" class="ltx_Math" alttext="\displaystyle[\hat{L}_{z},\hat{L}^{2}]" display="inline"><mrow><mo stretchy="false">[</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>,</mo><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo stretchy="false">]</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E92.m2" class="ltx_Math" alttext="\displaystyle=0." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.92)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">It can also be shown that <math id="SS2.p3.m1" class="ltx_Math" alttext="\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math> and the components of angular momentum also all commute with the Hamiltonian:</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx86" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E93"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E93.m1" class="ltx_Math" alttext="\displaystyle[\hat{H},\hat{L}^{2}]=[\hat{H},\hat{L}_{x}]=[\hat{H},\hat{L}_{y}]%
+=[\hat{H},\hat{L}_{z}]=0," display="inline"><mrow><mrow><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>,</mo><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">[</mo><mover accent="true"><mi>H</mi><mo>^</mo></mover><mo>,</mo><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.93)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">meaning that the eigenfunctions of <math id="SS2.p3.m2" class="ltx_Math" alttext="\hat{H}" display="inline"><mover accent="true"><mi>H</mi><mo>^</mo></mover></math> are also simultaneously eigenfunctions of <math id="SS2.p3.m3" class="ltx_Math" alttext="\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math> and <span class="ltx_text ltx_font_italic">one</span> component of angular momentum, conventionally taken to be <math id="SS2.p3.m4" class="ltx_Math" alttext="\hat{L}_{z}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></math>.
+This is a <span class="ltx_text ltx_font_bold">maximal set of mutually commuting operators</span>, a set of operators where each one commutes with all others.</p>
+</div>
+</section>
+<section id="eigenvalues" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.4.3 </span>Eigenvalues of Angular Momentum</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Let us find the eigenvalues of the <math id="SS3.p1.m1" class="ltx_Math" alttext="\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math> and <math id="SS3.p1.m2" class="ltx_Math" alttext="\hat{L}_{z}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></math> operators.
+Given that angular momentum is a quantity relating to rotations, it is reasonable to assume that it will act on the angular part of the wavefunction.
+For this reason, we will write out the angular momentum operators explicitly in terms of angular position coordinates.</p>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">In the position basis, we can write</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E94" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E94.m1" class="ltx_Math" alttext="\hat{L}_{x}=\hat{y}\hat{p}_{z}-\hat{z}\hat{p}_{y}=-i\hbar\left(y\frac{\partial%
+}{\partial z}-z\frac{\partial}{\partial y}\right)," display="block"><mrow><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub><mo>=</mo><mrow><mrow><mover accent="true"><mi>y</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>z</mi></msub></mrow><mo>−</mo><mrow><mover accent="true"><mi>z</mi><mo>^</mo></mover><mo>⁢</mo><msub><mover accent="true"><mi>p</mi><mo>^</mo></mover><mi>y</mi></msub></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>y</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>z</mi></mrow></mfrac></mrow><mo>−</mo><mrow><mi>z</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>y</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.94)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">with similar results for <math id="SS3.p2.m1" class="ltx_Math" alttext="\hat{L}_{y}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></math> and <math id="SS3.p2.m2" class="ltx_Math" alttext="\hat{L}_{z}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></math>.
+Using these and the chain rule, e.g.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E95" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E95.m1" class="ltx_Math" alttext="\frac{\partial}{\partial z}=\frac{\partial}{\partial r}\frac{\partial r}{%
+\partial z}+\frac{\partial}{\partial\theta}\frac{\partial\theta}{\partial z}+%
+\frac{\partial}{\partial\phi}\frac{\partial\phi}{\partial z}," display="block"><mrow><mrow><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>z</mi></mrow></mfrac><mo>=</mo><mrow><mrow><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>r</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mi>r</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>z</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>z</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow><mrow><mo rspace="0em">∂</mo><mi>z</mi></mrow></mfrac></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.95)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">we get the following results for angular momentum operators in the position basis:</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx87" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E96"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E96.m1" class="ltx_Math" alttext="\displaystyle\hat{L}_{x}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>x</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E96.m2" class="ltx_Math" alttext="\displaystyle=i\hbar\left(\sin\phi\frac{\partial}{\partial\theta}+\cot\theta%
+\cos\phi\frac{\partial}{\partial\phi}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></mrow><mo>+</mo><mrow><mrow><mi>cot</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.96)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E97"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E97.m1" class="ltx_Math" alttext="\displaystyle\hat{L}_{y}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>y</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E97.m2" class="ltx_Math" alttext="\displaystyle=i\hbar\left(-\cos\phi\frac{\partial}{\partial\theta}+\cot\theta%
+\sin\phi\frac{\partial}{\partial\phi}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mo rspace="0.167em">−</mo><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mi>cot</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo lspace="0.167em">⁢</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.97)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E98"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E98.m1" class="ltx_Math" alttext="\displaystyle\hat{L}_{z}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E98.m2" class="ltx_Math" alttext="\displaystyle=-i\hbar\frac{\partial}{\partial\phi}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow></mfrac></mstyle></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.98)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E99"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E99.m1" class="ltx_Math" alttext="\displaystyle\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E99.m2" class="ltx_Math" alttext="\displaystyle=-\hbar^{2}\left(\frac{1}{\sin\theta}\frac{\partial}{\partial%
+\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^{2%
+}\theta}\frac{\partial^{2}}{\partial\phi^{2}}\right)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.99)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So we were right to assume that no derivatives of <math id="SS3.p2.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math> would appear in these operators.</p>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">Notice that equation <a href="#Ch5.E99" title="In 5.4.3 Eigenvalues of Angular Momentum ‣ 5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.99</span></a> looks very similar to the angular equation for the hydrogen atom electron (equation <a href="hydrogen-hamiltonian.html#Ch5.E11" title="In 5.1.2 Separating and Solving ‣ 5.1 The Hydrogen Hamiltonian ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.11</span></a>).
+In fact, if we take the angular equation and multiply it by <math id="SS3.p3.m1" class="ltx_Math" alttext="-\hbar^{2}Y_{\ell}^{m}(\theta,\phi)" display="inline"><mrow><mo>−</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, bearing in mind that <math id="SS3.p3.m2" class="ltx_Math" alttext="Y_{\ell}^{m}(\theta,\phi)=\Theta(\theta)\Phi(\phi)" display="inline"><mrow><mrow><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> since the spherical harmonics were the solution to the angular equation, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E100" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E100.m1" class="ltx_Math" alttext="-\hbar^{2}\left(\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin%
+\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^{2}\theta}\frac{%
+\partial^{2}}{\partial\phi^{2}}\right)Y_{\ell}^{m}(\theta,\phi)=\hbar^{2}\ell(%
+\ell+1)Y_{\ell}^{m}(\theta,\phi)," display="block"><mrow><mrow><mrow><mo>−</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.100)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">where we have substituted <math id="SS3.p3.m3" class="ltx_Math" alttext="\lambda^{2}" display="inline"><msup><mi>λ</mi><mn>2</mn></msup></math> for <math id="SS3.p3.m4" class="ltx_Math" alttext="\ell(\ell+1)" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.
+This looks like an eigenvalue equation, and in fact it looks exactly like what we would get if we acted <math id="SS3.p3.m5" class="ltx_Math" alttext="\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math> on a wavefunction:</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E101" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E101.m1" class="ltx_Math" alttext="\hat{L}^{2}\psi=-\hbar^{2}\left(\frac{1}{\sin\theta}\frac{\partial}{\partial%
+\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^{2%
+}\theta}\frac{\partial^{2}}{\partial\phi^{2}}\right)\psi," display="block"><mrow><mrow><mrow><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo>⁢</mo><mi>ψ</mi></mrow><mo>=</mo><mrow><mo>−</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>sin</mi><mo lspace="0.167em">⁡</mo><mrow><mi>θ</mi><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>θ</mi></mrow></mfrac></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow></mfrac><mo>⁢</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo rspace="0em">∂</mo><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>ψ</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.101)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">therefore the eigenfunctions of <math id="SS3.p3.m6" class="ltx_Math" alttext="\hat{L}^{2}" display="inline"><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup></math> must be the spherical harmonics, which makes sense since they are the angular part of the eigenfunctions of the hydrogen Hamiltonian, and their eigenvalues are <math id="SS3.p3.m7" class="ltx_Math" alttext="\hbar^{2}\ell(\ell+1)" display="inline"><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E102" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E102.m1" class="ltx_Math" alttext="\hat{L}^{2}Y_{\ell}^{m}(\theta,\phi)=\hbar^{2}\ell(\ell+1)Y_{\ell}^{m}(\theta,%
+\phi)." display="block"><mrow><mrow><mrow><msup><mover accent="true"><mi>L</mi><mo>^</mo></mover><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.102)</span></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS3.p4" class="ltx_para">
+<p class="ltx_p">This finally explains why <math id="SS3.p4.m1" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> is called the orbital angular momentum quantum number, as it determines the magnitude of the angular momemtum of an electron in a certain orbital.
+An electron in a state with a given <math id="SS3.p4.m2" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> will have orbital angular momentum with magnitude</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E103" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E103.m1" class="ltx_Math" alttext="L=\hbar\sqrt{\ell(\ell+1)}." display="block"><mrow><mrow><mi>L</mi><mo>=</mo><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msqrt><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.103)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This implies that the angular momentum of the electron is forced to be <span class="ltx_text ltx_font_italic">quantised</span>.
+Depending on the total energy the electron has, which is determined by the principal quantum number <math id="SS3.p4.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, the angular momentum can only have a magnitude given by the eigenvalue equation above for the allowed values of <math id="SS3.p4.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>.
+For example, if an electron is sitting in the 2<sup class="ltx_sup">nd</sup> excited state (<math id="SS3.p4.m5" class="ltx_Math" alttext="n=3" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow></math>), then the magnitude of its angular momentum can either be <math id="SS3.p4.m6" class="ltx_Math" alttext="\hbar" display="inline"><mi mathvariant="normal">ℏ</mi></math>, <math id="SS3.p4.m7" class="ltx_Math" alttext="\sqrt{2}\hbar" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></math>, or <math id="SS3.p4.m8" class="ltx_Math" alttext="\sqrt{6}\hbar" display="inline"><mrow><msqrt><mn>6</mn></msqrt><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></math>.</p>
+</div>
+<div id="SS3.p5" class="ltx_para">
+<p class="ltx_p">The spherical harmonics are also eigenfunctions of <math id="SS3.p5.m1" class="ltx_Math" alttext="\hat{L}_{z}" display="inline"><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub></math>, which we can calculate explicitly by writing</p>
+<div class="ltx_equation_wrapper">
+<table id="EGx88" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch5.E104"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch5.E104.m1" class="ltx_Math" alttext="\displaystyle\hat{L}_{z}Y_{\ell}^{m}(\theta,\phi)" display="inline"><mrow><msub><mover accent="true"><mi>L</mi><mo>^</mo></mover><mi>z</mi></msub><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E104.m2" class="ltx_Math" alttext="\displaystyle=-i\hbar\frac{\partial}{\partial\phi}Y_{\ell}^{m}(\theta,\phi)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow></mfrac></mstyle><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.104)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E105"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E105.m1" class="ltx_Math" alttext="\displaystyle=-i\hbar\frac{\Theta(\theta)}{\sqrt{2\pi}}\frac{\partial}{%
+\partial\phi}\left(e^{im\phi}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>−</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo rspace="0em">∂</mo><mi>ϕ</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup><mo>)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.105)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E106"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E106.m1" class="ltx_Math" alttext="\displaystyle=m\hbar\frac{\Theta(\theta)}{\sqrt{2\pi}}e^{im\phi}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi mathvariant="normal">Θ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>ϕ</mi></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.106)</span></td>
+</tr></tbody>
+<tbody id="Ch5.E107"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch5.E107.m1" class="ltx_Math" alttext="\displaystyle=m\hbar Y_{\ell}^{m}(\theta,\phi)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msubsup><mi>Y</mi><mi mathvariant="normal">ℓ</mi><mi>m</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.107)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">So the allowed values of the <math id="SS3.p5.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-component of angular momentum are</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E108" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E108.m1" class="ltx_Math" alttext="L_{z}=m\hbar." display="block"><mrow><mrow><msub><mi>L</mi><mi>z</mi></msub><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.108)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">If we consider again the electron in the 2<sup class="ltx_sup">nd</sup> excited state and suppose it has <math id="SS3.p5.m3" class="ltx_Math" alttext="\ell=2" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo>=</mo><mn>2</mn></mrow></math>, the allowed values for the <math id="SS3.p5.m4" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-component of its angular momentum are <math id="SS3.p5.m5" class="ltx_Math" alttext="-2\hbar" display="inline"><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></mrow></math>, <math id="SS3.p5.m6" class="ltx_Math" alttext="-\hbar" display="inline"><mrow><mo>−</mo><mi mathvariant="normal">ℏ</mi></mrow></math>, <math id="SS3.p5.m7" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, <math id="SS3.p5.m8" class="ltx_Math" alttext="\hbar" display="inline"><mi mathvariant="normal">ℏ</mi></math>, and <math id="SS3.p5.m9" class="ltx_Math" alttext="2\hbar" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow></math>.
+So the magnetic quantum number <math id="SS3.p5.m10" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> determines the alignment of the electron’s angular momentum with the <math id="SS3.p5.m11" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis, the larger the magnitude of <math id="SS3.p5.m12" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math>, the more aligned they are.
+Note that <math id="SS3.p5.m13" class="ltx_Math" alttext="L_{z}" display="inline"><msub><mi>L</mi><mi>z</mi></msub></math> can never be as large as the total magnitude of angular momentum, i.e. the angular momentum can never point exactly along <math id="SS3.p5.m14" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>.
+This is because if <math id="SS3.p5.m15" class="ltx_Math" alttext="L_{z}=L" display="inline"><mrow><msub><mi>L</mi><mi>z</mi></msub><mo>=</mo><mi>L</mi></mrow></math>, then we know that <math id="SS3.p5.m16" class="ltx_Math" alttext="L_{x}=L_{y}=0" display="inline"><mrow><msub><mi>L</mi><mi>x</mi></msub><mo>=</mo><msub><mi>L</mi><mi>y</mi></msub><mo>=</mo><mn>0</mn></mrow></math>, which is not allowed!
+However, as <math id="SS3.p5.m17" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math> gets larger, the maximum allowed value of <math id="SS3.p5.m18" class="ltx_Math" alttext="L_{z}" display="inline"><msub><mi>L</mi><mi>z</mi></msub></math> gets closer and closer to <math id="SS3.p5.m19" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>.</p>
+</div>
+</section>
+<section id="visualising-the-allowed-values" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.4.4 </span>Visualising the Allowed Values of Angular Momentum</h2>
+
+<div id="SS4.p1" class="ltx_para">
+<p class="ltx_p">We can visualise the allowed values of angular momentum for a given state in the 3D space of angular momentum with <math id="SS4.p1.m1" class="ltx_Math" alttext="L_{x}" display="inline"><msub><mi>L</mi><mi>x</mi></msub></math>, <math id="SS4.p1.m2" class="ltx_Math" alttext="L_{y}" display="inline"><msub><mi>L</mi><mi>y</mi></msub></math>, and <math id="SS4.p1.m3" class="ltx_Math" alttext="L_{z}" display="inline"><msub><mi>L</mi><mi>z</mi></msub></math> each on their own axis.
+The angular momentum vector has a fixed length determined by <math id="SS4.p1.m4" class="ltx_Math" alttext="\ell" display="inline"><mi mathvariant="normal">ℓ</mi></math>, and the different allowed values of <math id="SS4.p1.m5" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> sweep out cones around the <math id="SS4.p1.m6" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis since the values of <math id="SS4.p1.m7" class="ltx_Math" alttext="L_{x}" display="inline"><msub><mi>L</mi><mi>x</mi></msub></math> and <math id="SS4.p1.m8" class="ltx_Math" alttext="L_{y}" display="inline"><msub><mi>L</mi><mi>y</mi></msub></math> are unknown.</p>
+</div>
+<div id="SS4.p2" class="ltx_para">
+<p class="ltx_p">Note that this does <span class="ltx_text ltx_font_italic">not</span> imply that <math id="SS4.p2.m1" class="ltx_Math" alttext="L_{x}" display="inline"><msub><mi>L</mi><mi>x</mi></msub></math> and <math id="SS4.p2.m2" class="ltx_Math" alttext="L_{y}" display="inline"><msub><mi>L</mi><mi>y</mi></msub></math> are allowed to take on a continuous set of values, they are also quantised.
+The cones are simply a visual aid which denotes that the values of <math id="SS4.p2.m3" class="ltx_Math" alttext="L_{x}" display="inline"><msub><mi>L</mi><mi>x</mi></msub></math> and <math id="SS4.p2.m4" class="ltx_Math" alttext="L_{y}" display="inline"><msub><mi>L</mi><mi>y</mi></msub></math> are unknown.</p>
+</div>
+<div id="SS4.p3" class="ltx_para">
+<p class="ltx_p">The angle between <math id="SS4.p3.m1" class="ltx_Math" alttext="\boldsymbol{L}" display="inline"><mi>𝑳</mi></math> and the <math id="SS4.p3.m2" class="ltx_Math" alttext="z" display="inline"><mi>z</mi></math>-axis in this diagram can be written</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E109" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E109.m1" class="ltx_Math" alttext="\cos\theta=\frac{L_{z}}{L}=\frac{m\hbar}{\hbar\sqrt{\ell(\ell+1)}}=\frac{m}{%
+\sqrt{\ell(\ell+1)}}." display="block"><mrow><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><mi>θ</mi></mrow><mo>=</mo><mfrac><msub><mi>L</mi><mi>z</mi></msub><mi>L</mi></mfrac><mo>=</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msqrt><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mrow></mfrac><mo>=</mo><mfrac><mi>m</mi><msqrt><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mfrac></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.109)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">The minimal angle occurs for maximal <math id="SS4.p3.m3" class="ltx_Math" alttext="L_{z}" display="inline"><msub><mi>L</mi><mi>z</mi></msub></math>, which occurs when <math id="SS4.p3.m4" class="ltx_Math" alttext="\lvert m\rvert=\ell" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>m</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mi mathvariant="normal">ℓ</mi></mrow></math>.</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E110" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E110.m1" class="ltx_Math" alttext="\cos\theta_{\text{min}}=\frac{\ell}{\sqrt{\ell(\ell+1)}}&lt;1." display="block"><mrow><mrow><mrow><mi>cos</mi><mo lspace="0.167em">⁡</mo><msub><mi>θ</mi><mtext>min</mtext></msub></mrow><mo>=</mo><mfrac><mi mathvariant="normal">ℓ</mi><msqrt><mrow><mi mathvariant="normal">ℓ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></msqrt></mfrac><mo>&lt;</mo><mn>1</mn></mrow><mo lspace="0em">.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.110)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">This implies that</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E111" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E111.m1" class="ltx_Math" alttext="\theta_{\text{min}}&gt;0," display="block"><mrow><mrow><msub><mi>θ</mi><mtext>min</mtext></msub><mo>&gt;</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.111)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">as we have seen, however as <math id="SS4.p3.m5" class="ltx_Math" alttext="\ell\to\infty" display="inline"><mrow><mi mathvariant="normal">ℓ</mi><mo stretchy="false">→</mo><mi mathvariant="normal">∞</mi></mrow></math>, we get</p>
+<div class="ltx_equation_wrapper">
+<table id="Ch5.E112" class="ltx_equation ltx_eqn_table">
+
+<tbody><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="Ch5.E112.m1" class="ltx_math_unparsed" alttext="\cos\theta_{\text{min}}\to 1\quad\implies\theta_{\text{min}}\to 0," display="block"><mrow><mi>cos</mi><msub><mi>θ</mi><mtext>min</mtext></msub><mo stretchy="false">→</mo><mn>1</mn><mspace width="1em"></mspace><mo stretchy="false">⟹</mo><msub><mi>θ</mi><mtext>min</mtext></msub><mo stretchy="false">→</mo><mn>0</mn><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5.112)</span></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">which is what we expect from classical physics.</p>
+</div>
+</section>
+</section>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_align_center">
+<a href="energy-eigenstates.html" title="In Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref" rel="prev"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.3 </span>Energy Eigenstates of Hydrogen</span></a><a href="../bibliography.html" title="In Quantum Mechanics" class="ltx_ref" rel="next"><span class="ltx_text ltx_ref_title">References</span></a>
+</div>
+<div class="ltx_page_logo">Generated  on Sat Jul 26 22:42:07 2025 by <a href="http://dlmf.nist.gov/LaTeXML/" class="ltx_LaTeXML_logo"><span style="letter-spacing:-0.2em; margin-right:0.1em;">L<span class="ltx_font_smallcaps" style="position:relative; bottom:2.2pt;">a</span>T<span class="ltx_font_smallcaps" style="font-size:120%;position:relative; bottom:-0.2ex;">e</span></span><span style="font-size:90%; position:relative; bottom:-0.2ex;">XML</span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="Mascot Sammy"></a>
+</div></footer>
+</div>
+<nav class="ltx_in_page_navbar">
+<span class="ltx_text ltx_ref_title"><h2>On this page</h2></span><nav class="ltx_TOC">
+<ol class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#quantum-mechanical-definition" title="In 5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4.1 </span>Quantum Mechanical Definition of Angular Momentum</span></a></li>
+<ol class="ltx_toclist ltx_toclist_subsection"><li class="ltx_tocentry ltx_tocentry_subsubsection"><a class="ltx_ref" href="#Ch5.Thmdefinition1" title=""><span class="ltx_text ltx_ref_title">Definition 5.1</span></a></li></ol>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#commutation-relations" title="In 5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4.2 </span>Commutation Relations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#eigenvalues" title="In 5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4.3 </span>Eigenvalues of Angular Momentum</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_subsection"><a href="#visualising-the-allowed-values" title="In 5.4 Angular Momentum ‣ Chapter 5 The Hydrogen Atom ‣ Quantum Mechanics" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5.4.4 </span>Visualising the Allowed Values of Angular Momentum</span></a></li>
+</ol></nav>
+<footer>Website designed by me. Copyright &copy;<span id="copyright-date"></span> Lachlan Dufort-Kennett</footer></nav></main>
+</div>
+</body>
+</html>
