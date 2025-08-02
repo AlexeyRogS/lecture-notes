@@ -86,7 +86,7 @@
                             <xsl:when test="contains(@href,'thm:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'thm:'),@idref),'chap_',''),'sec_',''))"/></xsl:when>
                             <xsl:when test="contains(@href,'ex:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'ex:'),@idref),'chap_',''),'sec_',''))"/></xsl:when>
                             <xsl:when test="contains(@href,'def:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'def:'),@idref),'chap_',''),'sec_',''))"/></xsl:when>
-                            <xsl:when test="contains(@href,'subsec:') and contains(@href,'sec:')"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'sec:'),substring-after(@href,'subsec:')),'chap_',''),'sec_',''))"/></xsl:when>
+                            <xsl:when test="contains(@href,'subsec:') and (contains(@href,':sec:') or starts-with(@href,'sec:'))"><xsl:value-of select="f:url(f:subst(f:subst(concat(substring-before(@href,'sec:'),substring-after(@href,'subsec:')),'chap_',''),'sec_',''))"/></xsl:when>
                             <xsl:when test="contains(@href,'subsec:')"><xsl:value-of select="f:url(f:subst(f:subst(f:subst(@href,'subsec:',''),'chap_',''),'sec_',''))"/></xsl:when>
                             <xsl:when test="contains(@href,'chap_') or contains(@href,'sec_')"><xsl:value-of select="f:url(f:subst(f:subst(@href,'chap_',''),'sec_',''))"/></xsl:when>
                         </xsl:choose>
